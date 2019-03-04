@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527632030440.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1921248284",
+    "id" : "A612E648",
+    "lastKnownWriteTime" : 1527632064,
+    "last_content_update" : 1527632064338,
+    "path" : "~/Griffin_lab_work/functional_taxonomic_quant/anoxic_lake/results_analysis.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "32,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

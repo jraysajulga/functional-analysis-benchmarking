@@ -1,0 +1,240 @@
+---
+title: "Top 10"
+author: "Caleb Easterly"
+date: "April 26, 2018"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The goal here is to estimate the top 10 'things' that are changing across WS and NS, by fold change. The fold change is calculated by the sum of the spectral counts attributed to each 'thing' - in eggNOG mapper and BLAST, the counts are aggregated by protein; in MEGAN, they are aggregated by eggNOG orthologous group; and in metaGOmics and Unipept, they are assigned to GO terms. In all cases, the Laplace correction is made, which is just adding 1 to all observed counts. This prevents division by zero, and allows for fold change estimation when one 'thing' was seen in one sample but not in another. 
+
+# Reading in data
+Necessary packages:
+```{r message=FALSE}
+library(dplyr)
+library(kableExtra)
+```
+
+## Peptides
+
+These are the counts used in eggNOG-mapper and BLAST results interpretation. 
+
+```{r}
+peptidesNS <- read.delim("peptide_shaker_outputs/737NS_Peptide_Shaker_Peptide_Report.tabular",
+                         stringsAsFactors = FALSE) %>%
+    select(peptide = Sequence, countNS = "X.Validated.PSMs")
+
+peptidesWS <- read.delim("peptide_shaker_outputs/737WS_Peptide_Shaker_Peptide_Report.tabular",
+                         stringsAsFactors = FALSE) %>%
+    select(peptide = Sequence, countWS = "X.Validated.PSMs") 
+
+peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
+peptides_all[is.na(peptides_all)] <- 0
+```
+
+## eggNOG mapper results
+
+Join peptides to counts, and calculate ratios.
+
+```{r}
+eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
+                     stringsAsFactors = FALSE,
+                     header = FALSE) %>% 
+    select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
+
+eggnog_w_counts <- left_join(eggnog,
+                             peptides_all,
+                             by = "peptide") %>%
+    group_by(protein, desc, gene) %>%
+    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    arrange(-log2ratio) %>%
+    select(protein, gene, sumCountWS, sumCountNS, log2ratio, desc)
+```
+
+Top 10:
+```{r echo=FALSE, results='asis'}
+library(knitr)
+kable(head(eggnog_w_counts, 10), caption = "eggNOG-mapper: top 10 fold changes")
+```
+
+The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
+
+## Blast
+```{r}
+blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
+                    stringsAsFactors = FALSE,
+                    header = FALSE) %>%
+    select(peptide = V1, protein = V2, desc = V25)
+
+blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
+    group_by(protein, desc) %>%
+    filter(!is.na(countWS) & !is.na(countNS)) %>%
+    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    arrange(-log2ratio)
+```
+
+Print results:
+```{r echo=FALSE, results='asis'}
+kable(head(blast_counts, 10), caption = "BLAST: Top 10 fold changes")
+```
+
+## metaGOmics
+
+We take the top 10 results that have a FDR-corrected $q$ value less than 0.05. 
+
+```{r}
+metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
+                         comment.char = "#") %>%
+    select(go = GO.acc,
+           name = GO.name,
+           log2ratio =  Laplace.corr..Log.2..fold.change,
+           p = Laplace.corr..q.value)
+
+metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
+    arrange(-log2ratio)
+```
+
+Top 10 results:
+```{r echo=FALSE, results='asis'}
+kable(head(metagomics_filt, 10), caption = "MetaGOmics: Top 10 fold changes")
+```
+
+## MEGAN
+
+```{r}
+megan <- read.delim("MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
+    select(og = X.Datasets, countNS = X737_NS_BLASTOutput_2StepCombined,
+           countWS = X737_WS_BLASTOutput_2StepCombined) %>%
+    mutate(corrWS = countWS + 1,
+           corrNS = countNS + 1,
+           log2ratio = log2(corrWS/corrNS)) %>%
+    arrange(-log2ratio)
+```
+
+Top 10 results:
+```{r echo=FALSE, results='asis'}
+kable(head(megan, 10), caption = "MEGAN: Top 10 fold changes")
+```
+
+Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a beta-hexosaminidase and <a href="http://eggnogdb.embl.de/#/app/results?target_nogs=ENOG410YESU">ENOG410YESU</a> is involved in cell wall/membrane/envelope biogenesis.
+
+## Unipept
+
+```{r}
+unipept_results_NS <- paste('unipept_results/',
+                               list.files("unipept_results/", pattern = "^737NS.*\\.csv"),
+                               sep = "")
+unipept_results_WS <- paste('unipept_results/',
+                               list.files("unipept_results/", pattern = "^737WS.*\\.csv"),
+                               sep = "")
+unipeptNS <- lapply(unipept_results_NS, function(i) {
+        read.delim(i, sep = ',', as.is = TRUE)}) %>%
+    bind_rows() %>%
+    select(-X) %>%
+    rename(peptides = X.peptides)
+unipeptWS <- lapply(unipept_results_WS, function(i) {
+    read.delim(i, sep = ',', as.is = TRUE)}) %>%
+    bind_rows() %>%
+    select(-X) %>%
+    rename(peptides = X.peptides)
+
+unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
+    mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
+           log2ratio = log(lapCountWS/lapCountNS)) %>%
+    select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
+    arrange(-log2ratio)
+```
+
+Top 10:
+```{r echo=FALSE, results='asis'}
+kable(head(unipept_all, 10), caption = "Unipept: top 10 Fold Changes")
+```
+
+
+## MetaProteomeAnalyzer
+
+```{r}
+ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
+pNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
+    group_by(Protein.Accession, Protein.Description) %>%
+    summarize("SpecCount" = sum(Spectral.Count))
+ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
+pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
+    group_by(Protein.Accession, Protein.Description) %>%
+    summarize("SpecCount" = sum(Spectral.Count))
+
+pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>%
+    mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
+           log2ratio = log2(wsCount/nsCount)) %>%
+    arrange(-log2ratio)
+
+```
+
+Top 10:
+```{r echo=FALSE, results='asis'}
+kable(head(pAll, 10), caption = "MetaProteomeAnalyzer: top 10 Fold Changes")
+```
+
+
+## Unipept and MetaGOmics
+
+This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
+
+```{r}
+um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
+png("um_cor.png", res = 700, width = 4, height = 4, units = "in")
+plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3,
+     xlab = "Unipept: Log2 Ratio",
+     ylab = "MetaGOmics: Log2 Ratio")
+mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+abline(0, 1, col = "red", lty = 2)
+abline(coef(mod))
+grid()
+dev.off()
+cor.test(um$log2ratio.x, um$log2ratio.y,
+         method = "pearson", alternative = "two.sided")
+```
+
+### Rank comparison
+
+How do metaGOmics and Unipept rankings compare? 
+
+```{r}
+top5_meta <- metagomics_filt$go[1:5]
+m2u_ranks <- rep(0, 5)
+u2m_ranks <- rep(0, 5)
+top5_uni <- unipept_all$GO.term[1:5]
+for (i in 1:5){
+    m2u_rank <- which(unipept_all$GO.term == top5_meta[i])
+    u2m_rank <- which(metagomics_filt$go == top5_uni[i])
+    m2u_ranks[i] <- ifelse(length(m2u_rank) == 1, m2u_rank, NA)
+    u2m_ranks[i] <- ifelse(length(u2m_rank) == 1, u2m_rank, NA)
+}
+
+m2u <- data.frame("go_term" = top5_meta,
+                  "rank_in_metagomics" = 1:5,
+                  "rank_in_unipept" = m2u_ranks)
+
+u2m <- data.frame("go_term" = top5_uni,
+                  "rank_in_unipept" = 1:5,
+                  "rank_in_metagomics" = u2m_ranks)
+
+```
+
+### How Unipept Ranks MetaGOmics' top 5
+```{r echo=FALSE, results='asis'}
+kable(m2u)
+```
+
+### How MetaGOmics ranks Unipept's top 5
+```{r echo=FALSE, results='asis'}
+kable(u2m)
+```

@@ -1,0 +1,176 @@
+---
+title: "Anoxic Lake Analysis"
+author: "Caleb Easterly"
+date: "May 23, 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+## Function
+
+<!-- ### Full GO -->
+<!-- ```{r include=FALSE} -->
+<!-- f1 <- read.delim("anoxic_function1_out.tabular") -->
+<!-- f2 <- read.delim("anoxic_function2_out.tabular") -->
+<!-- f_all <- inner_join(f1, f2, by = c("id", "name", "namespace", "sz9_1", "sz9_2", "sz9_3", "mean1")) %>% -->
+<!--     rename("mean_sz9" = mean1, "mean_sz10" = mean2.x, "mean_sz11" = mean2.y) %>% -->
+<!--     select(id, name, namespace, starts_with("mean")) %>% -->
+<!--     mutate(all_mean = rowMeans(cbind(mean_sz9, mean_sz10, mean_sz11))) %>% -->
+<!--     select(id, name, namespace, all_mean) %>% -->
+<!--     arrange(namespace, -all_mean) -->
+<!-- ``` -->
+
+### Slim GO
+```{r, fig.height = 8, fig.width = 14, echo=FALSE}
+slim1 <- read.delim("anoxic_lake_function_out1_goslim.tabular")
+slim2 <- read.delim("anoxic_lake_function_out2_goslim.tabular")
+fslim_all <- inner_join(slim1, slim2,
+                                 by = c("id", "name", "namespace", "sz9_1", "sz9_2", "sz9_3", "mean1")) %>%
+    rename("mean_sz9" = mean1, "mean_sz10" = mean2.x, "mean_sz11" = mean2.y) %>%
+    select(id, name, namespace, starts_with("mean")) %>%
+    mutate(all_mean = rowMeans(cbind(mean_sz9, mean_sz10, mean_sz11))) %>%
+    select(id, name, namespace, all_mean, mean_sz9, mean_sz10, mean_sz11) %>%
+    arrange(namespace, -all_mean)
+
+ggplot(filter(fslim_all, all_mean > 1e-2 & namespace == "biological_process" & name != "biological_process")) +
+    geom_line(aes(x = reorder(name, -all_mean),
+                  y = mean_sz9*100, color = "sz9", group = 1))+
+    geom_line(aes(x = reorder(name, -all_mean),
+                  y = mean_sz10*100,
+                  color = "sz10"), group = 1) +
+    geom_line(aes(x = reorder(name, -all_mean),
+              y = mean_sz11*100,
+              color = "sz11"), group = 1) +
+    theme_bw(base_size = 17) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    labs(x = "Name of GO Term", y = "Normalized\nMS1 Intensity") +
+    scale_color_discrete(name="Bioreactor") +
+    scale_y_continuous(limits = c(0, 50))
+ggsave("goslim_anoxic.png", dpi = 500, height = 8, width = 10, units = "in")
+```
+
+## Taxonomy
+```{r echo=FALSE}
+t1 <- read.delim("anoxic_lake_taxonomy_maxquant_out1.tabular")
+t2 <- read.delim("anoxic_lake_taxonomy_maxquant_out2.tabular")
+tall <- full_join(t1, t2, by = c("id", "mean1", "rank", "sz9_1", "sz9_2", "sz9_3")) %>%
+    rename("mean_sz9" = mean1, "mean_sz10" = mean2.x, "mean_sz11" = mean2.y) %>%
+    select(id, rank, starts_with("mean")) %>%
+    mutate(all_mean = rowMeans(cbind(mean_sz9, mean_sz10, mean_sz11))) %>%
+    select(id, rank, all_mean, mean_sz9, mean_sz10, mean_sz11) %>%
+    arrange(rank, -all_mean)
+
+tax_all_class <- filter(tall, rank == "class" & id != "unknown") %>%
+    mutate(mean_sz9 = mean_sz9 / sum(mean_sz9),
+           mean_sz10 = mean_sz10 / sum(mean_sz10),
+           mean_sz11 = mean_sz11 / sum(mean_sz11),
+           all_mean = all_mean / sum(all_mean)) %>%
+    arrange(-all_mean)
+
+
+ggplot(filter(tax_all_class, rank == "class" & all_mean > 1e-3)) +
+    geom_line(aes(x = reorder(id, -all_mean), y = mean_sz9*100, color = "sz9", group = 1))+
+    geom_line(aes(x = reorder(id, -all_mean),
+                  y = mean_sz10*100,
+                  color = "sz10"), group = 1) +
+    geom_line(aes(x = reorder(id, -all_mean),
+              y = mean_sz11*100,
+              color = "sz11"), group = 1) +
+    theme_bw(base_size = 16) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    labs(x = "Class", y = "Relative Abundance") +
+    scale_color_discrete(name="Bioreactor") +
+    scale_y_continuous(limits = c(0, 100))
+ggsave("tax_anoxic.png", dpi = 500)
+```
+
+```{r include=FALSE,results="asis"}
+knitr::kable(tax_all_class)
+```
+
+
+## Heatmaps
+
+```{r echo=FALSE}
+cor.dist <- function(x){
+    as.dist(1- abs(cor(t(x),
+                       use="complete.obs")))
+    
+}
+hclust.ward <- function(x) {
+    hclust(x,method="ward.D")
+}
+
+impute <- function(mat) {
+    mat[mat == 0] <- NA
+    mat[is.na(mat)] <- min(mat, na.rm = TRUE) * 1e-3
+    mat
+}
+```
+
+
+### Taxonomy
+```{r, fig.height = 20, fig.width = 14, echo=FALSE}
+# heatmap, tax
+tax <- full_join(t1, t2, by = c("id", "mean1", "rank", "sz9_1", "sz9_2", "sz9_3")) %>%
+    rename("mean_sz9" = mean1, "mean_sz10" = mean2.x, "mean_sz11" = mean2.y)
+sz_ind <-  c(5:10, 12:14)
+taxmat <- impute(data.matrix(tax[,sz_ind]))
+
+datmat.scale <- t(apply(taxmat, 1, scale))
+rownames(datmat.scale) <- tax$id
+colnames(datmat.scale) <- colnames(tax[, sz_ind])
+par(mar = rep(5, 4))
+feature.dend <- as.dendrogram(hclust.ward(cor.dist(datmat.scale)))
+sample.dend <- as.dendrogram(hclust.ward(cor.dist(t(datmat.scale))))
+png(file="tax_heatmap.png", width=8, height = 15, units = "in", res=300)
+library(gplots)
+heatmap.2(datmat.scale,
+          Colv = sample.dend,
+          Rowv = feature.dend,
+          distfun = cor.dist,
+          hclustfun = hclust.ward,
+          trace="none",
+          margins = c(10, 10),
+          cexRow = 0.2,
+          ColSideColors = rep(c("green", "blue", "red"), each = 3),
+          density.info = "none")
+dev.off()
+```
+
+### Function
+```{r, fig.height = 20, fig.width = 14, echo=FALSE}
+# heatmap, tax
+fslim_all <-inner_join(slim1, slim2,
+                                 by = c("id", "name", "namespace", "sz9_1", "sz9_2", "sz9_3", "mean1")) %>%
+    rename("mean_sz9" = mean1, "mean_sz10" = mean2.x, "mean_sz11" = mean2.y) %>%
+    filter(name != "biological_process" & name != "molecular_function" & name != "cellular_component")
+sz_ind <-  c(6:11, 13:15)
+funcmat <- impute(data.matrix(fslim_all[,sz_ind]))
+
+datmat.scale <- t(apply(funcmat, 1, scale))
+rownames(datmat.scale) <- fslim_all$name
+colnames(datmat.scale) <- colnames(fslim_all[, sz_ind])
+par(mar = rep(5, 4))
+feature.dend <- as.dendrogram(hclust.ward(cor.dist(datmat.scale)))
+sample.dend <- as.dendrogram(hclust.ward(cor.dist(t(datmat.scale))))
+png(file="func_heatmap.png", width=8, height = 15, units = "in", res=300)
+heatmap.2(datmat.scale,
+          Colv = sample.dend,
+          Rowv = feature.dend,
+          distfun = cor.dist,
+          hclustfun = hclust.ward,
+          trace="none",
+          margins = c(10, 10),
+          cexRow = 0.3,
+          ColSideColors = rep(c("green", "blue", "red"), each = 3),
+          density.info = "none")
+dev.off()
+```
