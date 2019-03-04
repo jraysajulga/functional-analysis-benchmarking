@@ -1,5 +1,5 @@
 ---
-title: "Top 10"
+title: "Top N"
 author: "Caleb Easterly"
 date: "April 26, 2018"
 output:
@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The goal here is to estimate the top 10 'things' that are changing across WS and NS, by fold change. The fold change is calculated by the sum of the spectral counts attributed to each 'thing' - in eggNOG mapper and BLAST, the counts are aggregated by protein; in MEGAN, they are aggregated by eggNOG orthologous group; and in metaGOmics and Unipept, they are assigned to GO terms. In all cases, the Laplace correction is made, which is just adding 1 to all observed counts. This prevents division by zero, and allows for fold change estimation when one 'thing' was seen in one sample but not in another. 
+The goal here is to estimate the top *n* 'things' that are changing across WS and NS, by fold change. The fold change is calculated by the sum of the spectral counts attributed to each 'thing' - in eggNOG mapper and BLAST, the counts are aggregated by protein; in MEGAN, they are aggregated by eggNOG orthologous group; and in metaGOmics and Unipept, they are assigned to GO terms. In all cases, the Laplace correction is made, which is just adding 1 to all observed counts. This prevents division by zero, and allows for fold change estimation when one 'thing' was seen in one sample but not in another. 
 
 # Reading in data
 Necessary packages:
@@ -58,10 +58,11 @@ eggnog_w_counts <- left_join(eggnog,
     select(protein, gene, sumCountWS, sumCountNS, log2ratio, desc)
 ```
 
-Top 10:
+Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
-kable(head(eggnog_w_counts, 10), caption = "eggNOG-mapper: top 10 fold changes")
+n <- 10
+kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold changes"))
 ```
 
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
@@ -83,12 +84,12 @@ blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
 
 Print results:
 ```{r echo=FALSE, results='asis'}
-kable(head(blast_counts, 10), caption = "BLAST: Top 10 fold changes")
+kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 ```
 
 ## metaGOmics
 
-We take the top 10 results that have a FDR-corrected $q$ value less than 0.05. 
+We take the top *n* results that have a FDR-corrected $q$ value less than 0.05. 
 
 ```{r}
 metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
@@ -102,9 +103,9 @@ metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
     arrange(-log2ratio)
 ```
 
-Top 10 results:
+Top *n* results:
 ```{r echo=FALSE, results='asis'}
-kable(head(metagomics_filt, 10), caption = "MetaGOmics: Top 10 fold changes")
+kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold changes"))
 ```
 
 ## MEGAN
@@ -119,9 +120,9 @@ megan <- read.delim("MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
     arrange(-log2ratio)
 ```
 
-Top 10 results:
+Top *n* results:
 ```{r echo=FALSE, results='asis'}
-kable(head(megan, 10), caption = "MEGAN: Top 10 fold changes")
+kable(head(megan, n), caption = paste("MEGAN: Top", n, "fold changes"))
 ```
 
 Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a beta-hexosaminidase and <a href="http://eggnogdb.embl.de/#/app/results?target_nogs=ENOG410YESU">ENOG410YESU</a> is involved in cell wall/membrane/envelope biogenesis.
@@ -153,9 +154,9 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     arrange(-log2ratio)
 ```
 
-Top 10:
+Top *n*:
 ```{r echo=FALSE, results='asis'}
-kable(head(unipept_all, 10), caption = "Unipept: top 10 Fold Changes")
+kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ```
 
 
@@ -178,9 +179,9 @@ pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>
 
 ```
 
-Top 10:
+Top *n*:
 ```{r echo=FALSE, results='asis'}
-kable(head(pAll, 10), caption = "MetaProteomeAnalyzer: top 10 Fold Changes")
+kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
 
 
