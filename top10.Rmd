@@ -61,7 +61,7 @@ eggnog_w_counts <- left_join(eggnog,
 Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
-n <- 10
+n <- 100
 kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold changes"))
 ```
 
@@ -239,3 +239,17 @@ kable(m2u)
 ```{r echo=FALSE, results='asis'}
 kable(u2m)
 ```
+
+## Top n Table
+```{r}
+rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
+                          MEGAN = head(megan$og, n),
+                     metaGOmics = head(metagomics_filt$name, n),
+                            MPA = head(pAll$Protein.Description, n),
+                        Unipept = head(unipept_all$Name, n))
+
+# Remove extra text
+rank_table$MPA <- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
+rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)','\\1', x) })
+```
+
