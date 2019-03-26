@@ -11900,7 +11900,7 @@ rank_in_metagomics
 rank_table$MPA &lt;- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
 rank_table$MEGAN &lt;-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)','\\1', x) })
 
-write.table(rank_table, &quot;top100.tabular&quot;, sep=&quot;\t&quot;)</code></pre>
+write.table(rank_table, &quot;top100.tabular&quot;, sep=&quot;\t&quot;, quote = FALSE)</code></pre>
 </div>
 </div>
 

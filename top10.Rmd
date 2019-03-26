@@ -252,7 +252,7 @@ rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
 rank_table$MPA <- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
 rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)','\\1', x) })
 
-write.table(rank_table, "top100.tabular", sep="\t")
+write.table(rank_table, "top100.tabular", sep="\t", quote = FALSE)
 ```
 
 
