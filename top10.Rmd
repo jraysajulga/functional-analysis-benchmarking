@@ -268,29 +268,41 @@ node_groups[nrow(nodes)/3 + 1:nrow(nodes)*2/3] <- "b"
 node_groups
 ```
 ```{r}
-functool1 <- as.character(rank_table[21:37,1])
-functool2 <- as.character(rank_table[21:37,2])
-functool3 <- rank_table[21:37,3]
+n <- 100
+functool1 <- as.character(rank_table[1:n,1])
+functool2 <- as.character(rank_table[1:n,2])
+functool3 <- as.character(rank_table[1:n,3])
+functool4 <- as.character(rank_table[1:n,4])
+functool5 <- as.character(rank_table[1:n,5])
 
 removeIntraduplicates <- function(col){
     while(length(col[duplicated(col)]) > 0){
-        col[duplicated(col)] <- as.character(paste(col[duplicated(col)], "*"))
+        col[duplicated(col)] <- as.character(paste(col[duplicated(col)], " "))
     }
     col
 }
 
 removeInterduplicates <- function(col1, col2){
-    sapply(col2, function(x) ifelse(x %in% col1, "yo", x))
+    as.character(sapply(col2, function(x) ifelse(x %in% col1, paste(x, "^"), x)))
 }
 
 
 functool1 <- removeIntraduplicates(functool1)
 functool2 <- removeIntraduplicates(functool2)
 functool3 <- removeIntraduplicates(functool3)
-functool2 <- removeInterduplicates(functool1, functool2)
+functool4 <- removeIntraduplicates(functool4)
+functool5 <- removeIntraduplicates(functool5)
 
-functool1[1]
-functool2
+functool2 <- removeInterduplicates(functool1, functool2)
+functool3 <- removeInterduplicates(functool1, functool3)
+functool3 <- removeInterduplicates(functool2, functool3)
+functool4 <- removeInterduplicates(functool1, functool4)
+functool4 <- removeInterduplicates(functool2, functool4)
+functool4 <- removeInterduplicates(functool3, functool4)
+functool5 <- removeInterduplicates(functool1, functool5)
+functool5 <- removeInterduplicates(functool2, functool5)
+functool5 <- removeInterduplicates(functool3, functool5)
+functool5 <- removeInterduplicates(functool4, functool5)
 ```
 
 
@@ -301,8 +313,8 @@ library(tidyverse)
  
 # Make a connection data frame
 links=data.frame(
-    source=c(as.character(functool1),as.character(functool2)),
-    target=c(as.character(functool2),as.character(functool3)),
+    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4)),
+    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5)),
     value= c(1))
 # A3, D2, .5
  
@@ -326,7 +338,7 @@ node_groups <- c()
 #node_groups[1:length(nodes)/3] <-
 nodes$group = as.factor(c("a"))
 
-my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["pink", "green", "grey", "blue"])'
+my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["white", "green", "grey", "blue"])'
  
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget", Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group")
