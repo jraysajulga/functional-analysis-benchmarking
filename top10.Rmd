@@ -321,8 +321,21 @@ getMatches <- function(col1, col2){
     links[links$source != FALSE,]
 }
 
-matches <- getMatches(functool3, functool5)
-matches
+matches <- rbind(
+    getMatches(functool1, functool2),
+    getMatches(functool1, functool3),
+    getMatches(functool2, functool3),
+    getMatches(functool1, functool4),
+    getMatches(functool2, functool4),
+    getMatches(functool3, functool4),
+    getMatches(functool1, functool4),
+    getMatches(functool2, functool4),
+    getMatches(functool3, functool4),
+    getMatches(functool1, functool5),
+    getMatches(functool2, functool5),
+    getMatches(functool3, functool5),
+    getMatches(functool4, functool5)
+)
 ```
 
 
