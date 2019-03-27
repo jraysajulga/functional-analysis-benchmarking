@@ -330,15 +330,17 @@ matches
 ```{r}
 library(networkD3)
 library(tidyverse)
- 
+
 values <- c()
 values[1:(length(functool1) * 4)] <- 1
+values[(length(functool1) * 4 + 1):(length(functool1) * 4 + nrow(matches))] <- .1
+#values <- "1"
 
 # Make a connection data frame
 links=data.frame(
-    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source[1])),
-    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target[1])),
-    value= c(values, .1))
+    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source)),
+    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target)),
+    value= c(values))
 # A3, D2, .5
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
@@ -353,18 +355,21 @@ links$IDtarget=match(links$target, nodes$name)-1
 my_color <- 'd3.scaleOrdinal() .domain(["group_A", "group_B","group_C", "group_D", "group_E", "group_F", "group_G", "group_H"]) .range(["blue", "blue" , "blue", "red", "red", "yellow", "purple", "purple"])'
 
 link_groups <- c()
-link_groups[1:nrow(links)-1] <- "type_a"
-link_groups[nrow(links)] <- "type_b"
+link_groups[1:(nrow(links)-nrow(matches))] <- "type_a"
+link_groups[(nrow(links)-nrow(matches)+1):nrow(links)] <- "type_b"
+#link_groups[1:nrow(links)] <- "type_a"
 links$group=as.factor(link_groups)
 
 node_groups <- c()
 #node_groups[1:length(nodes)/3] <-
 nodes$group = as.factor(c("a"))
 
-my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["white", "green", "grey", "blue"])'
+my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["white", "blue", "grey", "blue"])'
  
 # Make the Network. I call my colour scale with the colourScale argument
-n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget", Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group")
+n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
+                   Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
+                   iterations = 0)
 n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
