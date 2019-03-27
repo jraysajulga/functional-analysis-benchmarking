@@ -255,4 +255,95 @@ rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)
 write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 ```
 
+```{r}
+test <- c()
+test[1:10] <-"a"
+test[11:20] <- "b"
+node_groups <- c()
+
+nrow(nodes)
+node_groups[1:nrow(nodes)/3] <- "a"
+node_groups[nrow(nodes)/3 + 1:nrow(nodes)*2/3] <- "b"
+node_groups[nrow(nodes)/3 + 1:nrow(nodes)*2/3] <- "b"
+node_groups
+```
+```{r}
+functool1 <- as.character(rank_table[21:37,1])
+functool2 <- as.character(rank_table[21:37,2])
+functool3 <- rank_table[21:37,3]
+
+#functool1
+removeDuplicates <- function(col){
+    while(length(col[duplicated(col)]) > 0){
+        col[duplicated(col)] <- as.character(paste(col[duplicated(col)], "*"))
+    }
+    col
+}
+functool1 <- removeDuplicates(functool1)
+functool2
+functool2 <- removeDuplicates(functool2)
+functool2
+functool3 <- removeDuplicates(functool3)
+#functool1[duplicated(functool1)] <- as.character(paste(functool1[duplicated(functool1)], "<1>", simplify=TRUE))
+#functool1
+#g <- sapply(functool1, function(x) sapply(functool2, function(y) ifelse(x==y, as.character(x) , "NA")))
+
+#sapply(functool1,)
+#functool1[1]
+
+#functool2[functool2 == functool1[1]] <- "g"
+#functool2
+#apply(functool1)
+#functool1
+#g
+
+#g[g != "NA"]
+
+
+
+#c(as.character(functool1),as.character(functool2))
+#c(as.character(functool2),as.character(functool3))
+```
+
+
+
+```{r}
+library(networkD3)
+library(tidyverse)
+ 
+# Make a connection data frame
+links=data.frame(
+    source=c(as.character(functool1),as.character(functool2)),
+    target=c(as.character(functool2),as.character(functool3)),
+    value= c(1))
+# A3, D2, .5
+ 
+# From these flows we need to create a node data frame: it lists every entities involved in the flow
+nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
+links$IDsource=match(links$source, nodes$name)-1 
+links$IDtarget=match(links$target, nodes$name)-1
+
+
+#nodes$group=as.factor(c("a","a","a","a","a","b","b","b"))
+ 
+# prepare color scale: I give one specific color for each node.
+my_color <- 'd3.scaleOrdinal() .domain(["group_A", "group_B","group_C", "group_D", "group_E", "group_F", "group_G", "group_H"]) .range(["blue", "blue" , "blue", "red", "red", "yellow", "purple", "purple"])'
+
+link_groups <- c()
+link_groups[1:nrow(links)-1] <- "type_a"
+link_groups[nrow(links)] <- "type_b"
+links$group=as.factor(link_groups)
+
+node_groups <- c()
+#node_groups[1:length(nodes)/3] <-
+nodes$group = as.factor(c("a"))
+
+my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["pink", "green", "grey", "blue"])'
+ 
+# Make the Network. I call my colour scale with the colourScale argument
+n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget", Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group")
+n
+saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
+```
+
 
