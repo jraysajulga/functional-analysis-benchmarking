@@ -255,18 +255,7 @@ rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)
 write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 ```
 
-```{r}
-test <- c()
-test[1:10] <-"a"
-test[11:20] <- "b"
-node_groups <- c()
 
-nrow(nodes)
-node_groups[1:nrow(nodes)/3] <- "a"
-node_groups[nrow(nodes)/3 + 1:nrow(nodes)*2/3] <- "b"
-node_groups[nrow(nodes)/3 + 1:nrow(nodes)*2/3] <- "b"
-node_groups
-```
 ```{r}
 n <- 100
 functool1 <- as.character(rank_table[1:n,1])
@@ -286,7 +275,6 @@ removeInterduplicates <- function(col1, col2){
     as.character(sapply(col2, function(x) ifelse(x %in% col1, paste(x, "  "), x)))
 }
 
-
 functool1 <- removeIntraduplicates(functool1)
 functool2 <- removeIntraduplicates(functool2)
 functool3 <- removeIntraduplicates(functool3)
@@ -304,22 +292,37 @@ functool5 <- removeInterduplicates(functool2, functool5)
 functool5 <- removeInterduplicates(functool3, functool5)
 functool5 <- removeInterduplicates(functool4, functool5)
 
-#functool5[grepl("\\^$", functool5)]
-#functool3[grepl("\\^$", functool3)]
-#functool3[29]
-#functool3[29] %in% functool5
-#functool3
-
 getMatches <- function(col1, col2){
     matches_col1 <- as.character(sapply(col2, function (x){
-        ifelse(gsub("\\s+$","", x) %in% lapply(col1, function (x) gsub("\\s+$","", x)),
-        col1[gsub("\\s+$","", x) == lapply(col1, function (x) gsub("\\s+$","", x))],
-       FALSE)
+        trimmed_GO <- gsub("\\s+$","", x)
+        trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
+        ifelse(trimmed_GO %in% trimmed_col1,
+               col1[trimmed_GO == trimmed_col1],
+               FALSE)
     }))
     links <- data.frame("source" = matches_col1,
                         "target" = col2)
     links[links$source != FALSE,]
 }
+
+getPseudomatches <- function(col1, col2){
+    matches_col1 <- as.character(sapply(col2, function (x){
+        trimmed_GO <- gsub("\\s+$","", x)
+        trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
+        forward_pseudomatch <- grepl(tolower(trimmed_GO), tolower(trimmed_col1), fixed = TRUE)
+        reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(x, trimmed_GO))
+        ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch)
+               & !trimmed_GO %in% trimmed_col1,
+               ifelse(TRUE %in% forward_pseudomatch,
+                      col1[forward_pseudomatch],
+                      ifelse(col1[reverse_pseudomatch] == "", FALSE, col1[reverse_pseudomatch])),
+               FALSE)
+    }))
+    links <- data.frame("source" = matches_col1,
+                        "target" = col2)
+    links[links$source != FALSE,]
+}
+
 
 matches <- rbind(
     getMatches(functool1, functool2),
@@ -336,6 +339,22 @@ matches <- rbind(
     getMatches(functool3, functool5),
     getMatches(functool4, functool5)
 )
+
+pseudoMatches <- rbind(
+    getPseudomatches(functool1, functool2),
+    getPseudomatches(functool1, functool3),
+    getPseudomatches(functool2, functool3),
+    getPseudomatches(functool1, functool4),
+    getPseudomatches(functool2, functool4),
+    getPseudomatches(functool3, functool4),
+    getPseudomatches(functool1, functool4),
+    getPseudomatches(functool2, functool4),
+    getPseudomatches(functool3, functool4),
+    getPseudomatches(functool1, functool5),
+    getPseudomatches(functool2, functool5),
+    getPseudomatches(functool3, functool5),
+    getPseudomatches(functool4, functool5)
+)
 ```
 
 
@@ -346,38 +365,30 @@ library(tidyverse)
 
 values <- c()
 values[1:(length(functool1) * 4)] <- 1
-values[(length(functool1) * 4 + 1):(length(functool1) * 4 + nrow(matches))] <- .1
+values[(length(functool1) * 4 + 1):(length(functool1) * 4 + nrow(matches) + nrow(pseudoMatches))] <- .1
 #values <- "1"
 
 # Make a connection data frame
 links=data.frame(
-    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source)),
-    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target)),
+    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source), as.character(pseudoMatches$source)),
+    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target), as.character(pseudoMatches$target)),
+    group=as.factor(c(rep("invisible", length(functool1) * 4), rep("matches", nrow(matches)), rep("pseudomatches", nrow(pseudoMatches)))),
     value= c(values))
 # A3, D2, .5
+links
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
 nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
+nodes$group = as.factor(c(rep("tool1", length(functool1)),
+                          rep("tool2", length(functool2)),
+                          rep("tool3", length(functool3)),
+                          rep("tool4", length(functool4)),
+                          rep("tool5", length(functool5))))
 
-#nodes$group=as.factor(c("a","a","a","a","a","b","b","b"))
- 
-# prepare color scale: I give one specific color for each node.
-my_color <- 'd3.scaleOrdinal() .domain(["group_A", "group_B","group_C", "group_D", "group_E", "group_F", "group_G", "group_H"]) .range(["blue", "blue" , "blue", "red", "red", "yellow", "purple", "purple"])'
-
-link_groups <- c()
-link_groups[1:(nrow(links)-nrow(matches))] <- "type_a"
-link_groups[(nrow(links)-nrow(matches)+1):nrow(links)] <- "type_b"
-#link_groups[1:nrow(links)] <- "type_a"
-links$group=as.factor(link_groups)
-
-node_groups <- c()
-#node_groups[1:length(nodes)/3] <-
-nodes$group = as.factor(c("a"))
-
-my_color <- 'd3.scaleOrdinal() .domain(["type_a", "type_b", "a", "b"]) .range(["white", "blue", "grey", "blue"])'
+my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
  
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
@@ -385,6 +396,9 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
                    iterations = 0)
 n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
+```
+```{r}
+rep("D", 5)
 ```
 
 
