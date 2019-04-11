@@ -179,10 +179,10 @@ def slim_down(infile, outfile):
     
     slims = set()
     for i in gos:
-		if i in go.keys():
-			slims.update(mapslim.mapslim(i, go, goslim)[1])
-		else:
-			print(i + " not found")
+        if i in go.keys():
+            slims.update(mapslim.mapslim(i, go, goslim)[1])
+        else:
+            print(i + " not found")
     
     with open(outfile, 'w') as outf:
         for x in slims:
@@ -193,7 +193,7 @@ for i in ['eggnog', 'megan', 'metagomics', 'unipept', 'mpa']:
     outfile = 'go_lists/' + i + '_parents.tab'
     outslim = 'go_lists/' + i + '_slim.tab'
     get_all_ancestors(infile, outfile)
-    print i
+    print(i)
     slim_down(infile, outslim)
 ```
 
