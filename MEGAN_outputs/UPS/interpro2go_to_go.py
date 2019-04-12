@@ -2,30 +2,31 @@ import urllib.request
 import re
 import xlrd
 
-response = urllib.request.urlopen('http://current.geneontology.org/ontology/external2go/interpro2go')
-
-def interpro2GO(i2go):
+# Writes GO terms to go_terms.txt output alongside the interproteins
+def interpro2GO(interproteins):
     response = urllib.request.urlopen('http://current.geneontology.org/ontology/external2go/interpro2go')
-    go_regex = re.compile('GO:\d+')
-    GO_terms = [];
-    for line in response.read().decode('utf-8').split('\n'):
-        if i2go in line:
-            GO_terms.append(go_regex.search(line)[0])
-    return GO_terms
+    i2go_map = response.read().decode('utf-8').split('\n')
+    go_regex = re.compile('GO:\d{7}')
+    with open('go_terms.txt', 'w') as outfile:
+        outfile.write('interpro2go' + '\t' + 'go' + '\n')
+        for prot in interproteins:
+            GO_terms = [];
+            for line in i2go_map:
+                if prot in line:
+                    GO_terms.append(go_regex.search(line)[0])
+            outfile.write(prot + '\t' + ','.join(GO_terms) + '\n')
 
-#print(f.readline())
-#interpro2GO(interpro2GO_map, term)
+def extractProteins(filename):
+    workbook = xlrd.open_workbook(filename)
+    worksheet = workbook.sheet_by_index(0)
+    interproteins = []
+    for row in range(worksheet.nrows):
+        value = worksheet.cell_value(row, 1).replace('"','').strip()
+        if value != "No hits":
+            interproteins.append(value)
+    return interproteins
 
-workbook = xlrd.open_workbook('UPS1_03_reads to IP2G.xlsx', 'UPS1_03-ex.txt')
-worksheet = workbook.sheet_by_index(0)
+all_proteins = extractProteins('UPS1_03_reads to IP2G.xlsx') + extractProteins('UPS2_03_reads to IP2G.xlsx')
+unique_proteins = set(all_proteins)
 
-print(interpro2GO('IPR001782 Flagellar P-ring protein'))
-test = worksheet.cell_value(0,1).replace('"','').strip()
-print(test)
-print(interpro2GO(test))
-
-#for row in range(worksheet.nrows):
-    #print(interpro2GO(worksheet.cell_value(row, 1).replace('"','').strip()))
-
-#    interpro2GO(worksheet.cell_value(row, 1))
-    #print(interpro2GO(worksheet.cell_value(row, 1)))
+interpro2GO(unique_proteins)
