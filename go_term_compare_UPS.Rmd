@@ -278,7 +278,7 @@ names(ex) <- names(gos)
 methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa')
 gos_slims <- lapply(methods,
     function(f) {
-        "go" = read.delim(paste("go_lists/", f, '_slim.tab', sep = ""),
+        "go" = read.delim(paste("go_lists/UPS/", f, '_slim.tab', sep = ""),
                               header = FALSE,
                               stringsAsFactors=FALSE)$V1
     }
@@ -344,5 +344,5 @@ ggplot(jac_melt_all)+
     theme_minimal(base_size = 14) +
     theme(aspect.ratio = 1) +
     labs(x = NULL, y = NULL)
-ggsave("jaccard.png", height = 5, width = 12, units = "in", dpi = 700)
+ggsave("jaccard_UPS.png", height = 5, width = 12, units = "in", dpi = 700)
 ```
