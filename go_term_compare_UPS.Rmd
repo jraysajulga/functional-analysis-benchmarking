@@ -128,17 +128,15 @@ clean_write(unipept_gos_clean, file="go_lists/UPS/unipept.tab")
 Here, we get the Uniprot IDs from all of the files, then upload them to the UniProt "Retrieve/ID Mapping" service (https://www.uniprot.org/uploadlists/).  
 
 ```{r}
+require(gdata)
+
 # get all uniprot ids
-ns_files <- list.files('mpa_results/UPS', pattern = "_Analysis.xlsx", full.names = TRUE)
-protNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    select("prot" = Protein.Accession) %>% unique()
-protNS <- read.delim()
-
-ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
-protWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
+protNS <- read.xls("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
     select("prot" = Protein.Accession) %>% unique()
 
-protNS
+protWS <- read.xls("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
+    select("prot" = Protein.Accession) %>% unique()
+
 protAll <- rbind(protNS, protWS) %>% unique()
 
 # write for use on uniprot
