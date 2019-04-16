@@ -69,7 +69,7 @@ These go terms come from querying the eggNOG database with the orthologous group
 megan <- read.delim("MEGAN_outputs/UPS/go_terms.txt",
                         header = TRUE,
                         stringsAsFactors = FALSE)
-megan_go_lists <- megan$gos
+megan_go_lists <- megan$go
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
 clean_write(megan_gos_clean, file="go_lists/UPS/megan.tab")
@@ -142,13 +142,16 @@ protAll <- rbind(protNS, protWS) %>% unique()
 # write for use on uniprot
 clean_write(protAll, file="mpa_results/UPS/all_proteins.tab")
 
-# these are the uniprot results from the above file
-#mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
-#mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
-#mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
-
-#clean_write(mpa_gos_clean, file="go_lists/UPS/mpa.tab")
 ```
+```{r}
+# these are the uniprot results from the above file
+mpa_uniprot <- read.delim('mpa_results/UPS/uniprot_protein_results.tab', stringsAsFactors = FALSE)
+mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
+mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
+
+clean_write(mpa_gos_clean, file="go_lists/UPS/mpa.tab")
+```
+
 
 ```{r}
 prophane <- read.delim("prophane_results/NS_summary.tsv",
@@ -164,7 +167,6 @@ gos <- list('megan' = megan_gos_clean,
             'unipept' = unipept_gos_clean,
             'eggnog' = eggnog_gos_clean,
             'mpa' = mpa_gos_clean)
-gos
 ```
 
 # GO terms: all parents
@@ -222,9 +224,9 @@ def slim_down(infile, outfile):
             outf.write(x + '\n')
             
 for i in ['eggnog', 'megan', 'metagomics', 'unipept', 'mpa']:
-    infile = 'go_lists/' + i + '.tab'
-    outfile = 'go_lists/' + i + '_parents.tab'
-    outslim = 'go_lists/' + i + '_slim.tab'
+    infile = 'go_lists/UPS/' + i + '.tab'
+    outfile = 'go_lists/UPS/' + i + '_parents.tab'
+    outslim = 'go_lists/UPS/' + i + '_slim.tab'
     get_all_ancestors(infile, outfile)
     print(i)
     slim_down(infile, outslim)
@@ -236,7 +238,7 @@ Read ancestors into R.
 methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa')
 gos_ancestors <- lapply(methods,
     function(f) {
-        "go" = read.delim(paste("go_lists/", f, '_parents.tab', sep = ""),
+        "go" = read.delim(paste("go_lists/UPS/", f, '_parents.tab', sep = ""),
                               header = FALSE,
                               stringsAsFactors=FALSE)$V1
     }
