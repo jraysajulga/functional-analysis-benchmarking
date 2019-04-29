@@ -148,15 +148,20 @@ clean_write(protAll, file="mpa_results/UPS/all_proteins.tab")
 mpa_uniprot <- read.delim('mpa_results/UPS/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
 mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
-
 clean_write(mpa_gos_clean, file="go_lists/UPS/mpa.tab")
 ```
 
 
 ```{r}
-prophane <- read.delim("prophane_results/NS_summary.tsv",
+prophane <- read.delim("prophane_results/summary_UPS.txt", sep = "\t",
                              stringsAsFactors = FALSE)
-prophane
+prophane_gos <- c(prophane$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+    prophane$task_7..fun_from_PFAMs_32..pfam2GO,
+  prophane$task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
+prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
+prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
+clean_write(prophane_gos_clean, file="go_lists/UPS/prophane.tab")
 ```
 
 
