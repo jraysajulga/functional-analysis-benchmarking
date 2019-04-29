@@ -125,6 +125,24 @@ mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
 clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
 ```
 
+```{r}
+prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_ns <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ws$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ws$task_8..fun_from_eggNog_4.5.1..og2GO,
+                  prophane_ns$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ns$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ns$task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
+prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
+prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
+clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
+```
+
+
 ## Euler Diagram of Results
 ```{r}
 gos <- list('megan' = megan_gos_clean,
@@ -132,6 +150,7 @@ gos <- list('megan' = megan_gos_clean,
             'unipept' = unipept_gos_clean,
             'eggnog' = eggnog_gos_clean,
             'mpa' = mpa_gos_clean)
+gos
 ```
 
 # GO terms: all parents
