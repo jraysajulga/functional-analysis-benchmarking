@@ -108,7 +108,7 @@ clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 unipept_UPS1 <- read.delim('unipept_results/UPS/UPS1_Galaxy19-[Unipept_pept2go_on_data_16_GO_tsv].tabular', sep = '\t', as.is = TRUE)
 unipept_UPS2 <- read.delim('unipept_results/UPS/UPS2_Galaxy23-[Unipept_pept2go_on_data_17_GO_tsv].tabular', sep = '\t', as.is = TRUE)
 
-unipept_gos <- c(unique(unipept_UPS1[,3]),unique(unipept_UPS2[,3]))
+unipept_gos <- c(unipept_UPS1[,3],unipept_UPS2[,3]) %>% unique()
 
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
 clean_write(unipept_gos_clean, file="go_lists/UPS/unipept.tab")
