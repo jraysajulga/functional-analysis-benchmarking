@@ -28,11 +28,11 @@ These are the counts used in eggNOG-mapper and BLAST results interpretation.
 ```{r}
 peptidesUPS1 <- read.delim("peptide_shaker_outputs/UPS/UPS1_03_[Peptide_Shaker_on_data_21__Peptide_Report].tabular",
                          stringsAsFactors = FALSE) %>%
-    select(peptide = Sequence, countNS = "X.Validated.PSMs")
+    select(peptide = Sequence, countUPS1 = "X.Validated.PSMs")
 
 peptidesUPS2 <- read.delim("peptide_shaker_outputs/UPS/UPS2_03_[Peptide_Shaker_on_data_25__Peptide_Report].tabular",
                          stringsAsFactors = FALSE) %>%
-    select(peptide = Sequence, countWS = "X.Validated.PSMs") 
+    select(peptide = Sequence, countUPS2 = "X.Validated.PSMs") 
 
 peptides_all <- full_join(peptidesUPS1, peptidesUPS2, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
@@ -47,15 +47,15 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE) %>% 
     select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
-
+eggnog
 eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
     group_by(protein, desc, gene) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    summarize(sumCountUPS2 = sum(countUPS2) + 1, sumCountUPS1 = sum(countUPS1) + 1) %>%
+    mutate(log2ratio = log2(sumCountUPS2/sumCountUPS1)) %>%
     arrange(-log2ratio) %>%
-    select(protein, gene, sumCountWS, sumCountNS, log2ratio, desc)
+    select(protein, gene, sumCountUPS2, sumCountUPS1, log2ratio, desc)
 ```
 
 Top *N*:
