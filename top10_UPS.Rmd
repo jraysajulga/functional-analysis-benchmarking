@@ -92,7 +92,7 @@ kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 We take the top *n* results that have a FDR-corrected $q$ value less than 0.05. 
 
 ```{r}
-metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
+metagomics <- read.delim("metaGOmics_results/UPS/MetaGOmics_Compare_UPS2_UPS1.txt",
                          comment.char = "#") %>%
     select(go = GO.acc,
            name = GO.name,
