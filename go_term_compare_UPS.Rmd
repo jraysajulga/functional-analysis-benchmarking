@@ -28,10 +28,8 @@ eggnog2 <- read.delim("eggnogmap_results/UPS/UPS2_03_eggNOG_Mapper_on_data_26__d
                      header = FALSE)
 
 # get all unique go terms from all peptides
-eggnog_gos1 <- unlist(str_split(eggnog1$V6, ",")) %>% unique()
-eggnog_gos2 <- unlist(str_split(eggnog2$V6, ",")) %>% unique()
-
-eggnog_gos <- c(eggnog_gos1, eggnog_gos2)
+eggnog_gos <- c(unlist(str_split(eggnog1$V6, ",")),
+                unlist(str_split(eggnog2$V6, ","))) %>% unique()
 
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
