@@ -26,15 +26,15 @@ library(kableExtra)
 These are the counts used in eggNOG-mapper and BLAST results interpretation. 
 
 ```{r}
-peptidesNS <- read.delim("peptide_shaker_outputs/737NS_Peptide_Shaker_Peptide_Report.tabular",
+peptidesUPS1 <- read.delim("peptide_shaker_outputs/UPS/UPS1_03_[Peptide_Shaker_on_data_21__Peptide_Report].tabular",
                          stringsAsFactors = FALSE) %>%
     select(peptide = Sequence, countNS = "X.Validated.PSMs")
 
-peptidesWS <- read.delim("peptide_shaker_outputs/737WS_Peptide_Shaker_Peptide_Report.tabular",
+peptidesUPS2 <- read.delim("peptide_shaker_outputs/UPS/UPS2_03_[Peptide_Shaker_on_data_25__Peptide_Report].tabular",
                          stringsAsFactors = FALSE) %>%
     select(peptide = Sequence, countWS = "X.Validated.PSMs") 
 
-peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
+peptides_all <- full_join(peptidesUPS1, peptidesUPS2, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
 ```
 
