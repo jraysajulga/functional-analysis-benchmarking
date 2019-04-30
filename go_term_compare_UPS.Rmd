@@ -105,16 +105,10 @@ clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 ```
 
 ```{r}
-unipept_results_NS <- paste('unipept_results/UPS/',
-                               list.files("unipept_results/UPS/", pattern = "^737NS.*\\.tabular"),
-                               sep = "")
-unipept_results_WS <- paste('unipept_results/UPS/',
-                               list.files("unipept_results/UPS/", pattern = "^737WS.*\\.tabular"),
-                               sep = "")
-unipeptNS <- read.delim('unipept_results/UPS/737WS_Galaxy8-[Unipept_pept2go_on_data_2_GO_tsv].tabular', sep = '\t', as.is = TRUE)
-unipeptWS <- read.delim('unipept_results/UPS/737NS_Galaxy5-[Unipept_pept2go_on_data_1_GO_tsv].tabular', sep = '\t', as.is = TRUE)
+unipept_UPS1 <- read.delim('unipept_results/UPS/UPS1_Galaxy19-[Unipept_pept2go_on_data_16_GO_tsv].tabular', sep = '\t', as.is = TRUE)
+unipept_UPS2 <- read.delim('unipept_results/UPS/UPS2_Galaxy23-[Unipept_pept2go_on_data_17_GO_tsv].tabular', sep = '\t', as.is = TRUE)
 
-unipept_gos <- c(unique(unipeptNS[,3]),unique(unipeptWS[,3]))
+unipept_gos <- c(unique(unipept_UPS1[,3]),unique(unipept_UPS2[,3]))
 
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
 clean_write(unipept_gos_clean, file="go_lists/UPS/unipept.tab")
@@ -129,13 +123,13 @@ Here, we get the Uniprot IDs from all of the files, then upload them to the UniP
 require(gdata)
 
 # get all uniprot ids
-protNS <- read.xls("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
-    select("prot" = Protein.Accession) %>% unique()
+protUPS1 <- read.xls("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
+    select("prot" = Protein.Accession)
 
-protWS <- read.xls("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
-    select("prot" = Protein.Accession) %>% unique()
+protUPS2 <- read.xls("mpa_results/UPS/UPS2_03_MPA_Analysis.xlsx", sheet = "Proteins", header = TRUE) %>%
+    select("prot" = Protein.Accession)
 
-protAll <- rbind(protNS, protWS) %>% unique()
+protAll <- rbind(protUPS1, protUPS2) %>% unique()
 
 # write for use on uniprot
 clean_write(protAll, file="mpa_results/UPS/all_proteins.tab")
