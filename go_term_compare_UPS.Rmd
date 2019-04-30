@@ -20,16 +20,12 @@ library(stringr)
 
 ## eggNOG
 ```{r}
-eggnog1 <- read.delim("eggnogmap_results/UPS/UPS1_03_eggNOG_Mapper_on_data_25__diamond.annotations.tabular",
-                     stringsAsFactors = FALSE,
-                     header = FALSE)
-eggnog2 <- read.delim("eggnogmap_results/UPS/UPS2_03_eggNOG_Mapper_on_data_26__diamond.annotations.tabular",
+eggnog <- read.delim("eggnogmap_results/UPS/Galaxy14-[eggNOG_Mapper_on_data_12__diamond.annotations].tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE)
 
 # get all unique go terms from all peptides
-eggnog_gos <- c(unlist(str_split(eggnog1$V6, ",")),
-                unlist(str_split(eggnog2$V6, ","))) %>% unique()
+eggnog_gos <- unlist(str_split(eggnog$V6, ",")) %>% unique()
 
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
