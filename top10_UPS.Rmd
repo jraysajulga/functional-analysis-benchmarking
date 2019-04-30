@@ -136,11 +136,13 @@ unipept_results_NS <- paste('unipept_results/',
 unipept_results_WS <- paste('unipept_results/',
                                list.files("unipept_results/", pattern = "^737WS.*\\.csv"),
                                sep = "")
+
 unipeptNS <- lapply(unipept_results_NS, function(i) {
         read.delim(i, sep = ',', as.is = TRUE)}) %>%
     bind_rows() %>%
     select(-X) %>%
     rename(peptides = X.peptides)
+
 unipeptWS <- lapply(unipept_results_WS, function(i) {
     read.delim(i, sep = ',', as.is = TRUE)}) %>%
     bind_rows() %>%
