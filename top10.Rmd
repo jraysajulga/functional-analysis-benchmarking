@@ -397,8 +397,5 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
 n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
-```{r}
-rep("D", 5)
-```
 
 
