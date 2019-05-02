@@ -246,20 +246,21 @@ sapply(gos_ancestors, length)
 
 Unique to each tool
 ```{r}
-ex <- rep(0, 5)
-for (i in 1:5){
-    all <- 1:5
+ex <- rep(0, 6)
+for (i in 1:6){
+    all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos[other_ind])))
     ex[i] <- length(setdiff(gos[[i]], others))
 }
 names(ex) <- names(gos)
+ex
 ```
 
 ## GO terms in GOslim
 
 ```{r}
-methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa')
+methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa', 'prophane')
 gos_slims <- lapply(methods,
     function(f) {
         "go" = read.delim(paste("go_lists/", f, '_slim.tab', sep = ""),
@@ -269,14 +270,15 @@ gos_slims <- lapply(methods,
 )
 names(gos_slims) <- methods
 
-exslim <- rep(0, 5)
-for (i in 1:5){
-    all <- 1:5
+exslim <- rep(0, 6)
+for (i in 1:6){
+    all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos_slims[other_ind])))
     exslim[i] <- length(setdiff(gos_slims[[i]], others))
 }
 names(exslim) <- methods
+exslim
 ```
 
 ## Jaccard distance 
@@ -289,18 +291,18 @@ jaccard <- function(vec1, vec2){
     (int) / (c1 + c2 - int)
 }
 
-jacmat <- matrix(0, nrow = 5, ncol = 5)
-for (i in 1:5){
-    for (j in 1:5){
+jacmat <- matrix(0, nrow = 6, ncol = 6)
+for (i in 1:6){
+    for (j in 1:6){
         jacmat[i, j] <- jaccard(gos[[i]], gos[[j]])
     }
 }
 dimnames(jacmat) <- list(names(gos), names(gos))
 jacmat
 
-jacslim <- matrix(0, nrow = 5, ncol = 5)
-for (i in 1:5){
-    for (j in 1:5){
+jacslim <- matrix(0, nrow = 6, ncol = 6)
+for (i in 1:6){
+    for (j in 1:6){
         jacslim[i, j] <- jaccard(gos_slims[[i]], gos_slims[[j]])
     }
 }
