@@ -210,8 +210,10 @@ prophane_NS
 prophane_WS
 inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
-    mutate(fc = as.double(ws)/as.double(ns)) %>%
-    arrange(desc(fc))
+    mutate(fc = as.double(ws)/as.double(ns),
+           gos = gsub("-;?", "", paste(unique(ns_go1,ns_go2), collapse=';'))) %>%
+    arrange(desc(fc)) %>%
+    select(gos, ns_go1, ns_go2)
 ```
 
 
