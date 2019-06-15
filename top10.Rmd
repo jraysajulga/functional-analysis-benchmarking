@@ -208,12 +208,14 @@ prophane_NS <- prophane_NS %>% select(members_identifier,
 ```{r}
 prophane_NS
 prophane_WS
-inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
+dat <- inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
     mutate(fc = as.double(ws)/as.double(ns),
-           gos = gsub("-;?", "", paste(unique(ns_go1,ns_go2), collapse=';'))) %>%
+           gos = gsub(",?-,?", "", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
+    filter(gos != "") %>%
     arrange(desc(fc)) %>%
-    select(gos, ns_go1, ns_go2)
+    select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3)
+dat
 ```
 
 
