@@ -206,17 +206,21 @@ prophane_NS <- prophane_NS %>% select(members_identifier,
                        ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 ```
 ```{r}
-prophane_NS
-prophane_WS
+#prophane_NS
+#prophane_WS
 dat <- inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
     mutate(fc = log2(as.double(ws)/as.double(ns)),
-           gos = gsub(" ","",gsub(",?-,?", "", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=",")))) %>%
+           gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
     arrange(-fc) %>%
     select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3)
 #paste(unique(strsplit(dat$gos[1:2],",")),  sep=",")
+#sapply(strsplit(dat$gos[1:2], ","), function(x) paste(unique(x), collapse = ","))
+#dat$gos[1:3]
+dat$gos <- sapply(strsplit(dat$gos,","), function(x) {paste(unique(x[x != "-"]), collapse = ",")})
 dat
+#strsplit(dat$gos[1:3],",")
 ```
 
 
