@@ -149,7 +149,7 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
-           log2ratio = log(lapCountWS/lapCountNS)) %>%
+           log2ratio = log2(lapCountWS/lapCountNS)) %>%
     select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
     arrange(-log2ratio)
 ```
