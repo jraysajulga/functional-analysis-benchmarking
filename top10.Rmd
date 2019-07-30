@@ -218,34 +218,10 @@ dat <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifie
 dat$gos <- sapply(strsplit(dat$gos,","), function(x) {paste(unique(x[x != "-"]), collapse = ",")})
 dat <- dat[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
 dat$names <- Term(dat$gos)
+dat <- dat %>% group_by_at(vars(fc)) %>%
+    summarize_all(paste, collapse="; ")
 ```
 
-```{r}
-set.seed(1)
-df = data.frame( pep = replicate( 3 , paste( sample(999,3) , collapse=";") ) , pro = sample(3) , stringsAsFactors = FALSE )
-require(data.table)
-#hello
-#  Turn data.frame into data.table, which looks like..
-dt <- data.table(df)
-#           pep pro
-#1: 266;372;572   1
-#2: 908;202;896   3
-#3: 944;660;628   2
-dt
-
-# Transform it in one line like this...
-dt[ , list( pep = unlist( strsplit( pep , ";" ) ) ) , by = pro ]
-#   pro pep
-#1:   1 266
-#2:   1 372
-#3:   1 572
-#4:   3 908
-#5:   3 202
-#6:   3 896
-#7:   2 944
-#8:   2 660
-#9:   2 628
-```
 
 ## Unipept and MetaGOmics
 
