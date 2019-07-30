@@ -19,6 +19,7 @@ Necessary packages:
 ```{r message=FALSE}
 library(dplyr)
 library(kableExtra)
+library(data.table)
 ```
 
 ## Peptides
@@ -176,7 +177,6 @@ pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>
     mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
            log2ratio = log2(wsCount/nsCount)) %>%
     arrange(-log2ratio)
-
 ```
 
 Top *n*:
@@ -216,15 +216,15 @@ dat <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifie
     arrange(-fc) %>%
     select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 dat$gos <- sapply(strsplit(dat$gos,","), function(x) {paste(unique(x[x != "-"]), collapse = ",")})
-dat
-dat[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
+dat <- dat[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
+dat$names <- Term(dat$gos)
 ```
 
 ```{r}
 set.seed(1)
 df = data.frame( pep = replicate( 3 , paste( sample(999,3) , collapse=";") ) , pro = sample(3) , stringsAsFactors = FALSE )
 require(data.table)
-
+#hello
 #  Turn data.frame into data.table, which looks like..
 dt <- data.table(df)
 #           pep pro
