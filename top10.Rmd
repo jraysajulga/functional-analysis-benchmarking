@@ -282,7 +282,8 @@ rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
                             MPA = head(pAll$Protein.Description, n),
-                        Unipept = head(unipept_all$Name, n))
+                        Unipept = head(unipept_all$Name, n),
+                       Prophane = head(prophane$names, n))
 
 # Remove extra text
 rank_table$MPA <- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
@@ -299,6 +300,7 @@ functool2 <- as.character(rank_table[1:n,2])
 functool3 <- as.character(rank_table[1:n,3])
 functool4 <- as.character(rank_table[1:n,4])
 functool5 <- as.character(rank_table[1:n,5])
+functool6 <- as.character(rank_table[1:n,6])
 
 removeIntraduplicates <- function(col){
     while(length(col[duplicated(col)]) > 0){
@@ -316,6 +318,7 @@ functool2 <- removeIntraduplicates(functool2)
 functool3 <- removeIntraduplicates(functool3)
 functool4 <- removeIntraduplicates(functool4)
 functool5 <- removeIntraduplicates(functool5)
+functool6 <- removeIntraduplicates(functool6)
 
 functool2 <- removeInterduplicates(functool1, functool2)
 functool3 <- removeInterduplicates(functool1, functool3)
@@ -327,6 +330,11 @@ functool5 <- removeInterduplicates(functool1, functool5)
 functool5 <- removeInterduplicates(functool2, functool5)
 functool5 <- removeInterduplicates(functool3, functool5)
 functool5 <- removeInterduplicates(functool4, functool5)
+functool6 <- removeInterduplicates(functool1, functool6)
+functool6 <- removeInterduplicates(functool2, functool6)
+functool6 <- removeInterduplicates(functool3, functool6)
+functool6 <- removeInterduplicates(functool4, functool6)
+functool6 <- removeInterduplicates(functool5, functool6)
 
 getMatches <- function(col1, col2){
     matches_col1 <- as.character(sapply(col2, function (x){
@@ -373,7 +381,12 @@ matches <- rbind(
     getMatches(functool1, functool5),
     getMatches(functool2, functool5),
     getMatches(functool3, functool5),
-    getMatches(functool4, functool5)
+    getMatches(functool4, functool5),
+    getMatches(functool1, functool6),
+    getMatches(functool2, functool6),
+    getMatches(functool3, functool6),
+    getMatches(functool4, functool6),
+    getMatches(functool5, functool6)
 )
 
 pseudoMatches <- rbind(
@@ -389,7 +402,12 @@ pseudoMatches <- rbind(
     getPseudomatches(functool1, functool5),
     getPseudomatches(functool2, functool5),
     getPseudomatches(functool3, functool5),
-    getPseudomatches(functool4, functool5)
+    getPseudomatches(functool4, functool5),
+    getPseudomatches(functool1, functool6),
+    getPseudomatches(functool2, functool6),
+    getPseudomatches(functool3, functool6),
+    getPseudomatches(functool4, functool6),
+    getPseudomatches(functool5, functool6)
 )
 ```
 
