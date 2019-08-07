@@ -125,6 +125,8 @@ mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
 clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
 ```
 
+## Prophane
+
 ```{r}
 prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
                              stringsAsFactors = FALSE)
@@ -165,7 +167,7 @@ wget http://www.geneontology.org/ontology/subsets/goslim_generic.obo -O GO_files
 
 Run python to get the list of all ancestors:
 
-```{python engine.path='~/miniconda3/bin/python'}
+```{python engine.path='~/anaconda3/bin/python'}
 from goatools import obo_parser
 from goatools import mapslim
 import sys
