@@ -25,6 +25,7 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      header = FALSE)
 # get all unique go terms from all peptides
 eggnog_gos <- unlist(str_split(eggnog$V6, ",")) %>% unique()
+length(unique(eggnog$V2)) # Total number of terms
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
 ```
@@ -51,6 +52,8 @@ metagomics_gos <- metagomics$GO.acc %>%  unique()
 # takes out "unknownprc", "unknowncmp", "unknownfun"
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
 clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
+nrow(metagomics) # total number of terms
+nrow(metagomics %>% filter(Laplace.corr..q.value < 0.05)) #significant at FDR < 5%
 ```
 
 ## MEGAN6
