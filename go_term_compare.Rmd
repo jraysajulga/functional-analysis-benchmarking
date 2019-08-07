@@ -145,6 +145,7 @@ prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
 prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
 prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
 clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
+length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
 ```
 
 
