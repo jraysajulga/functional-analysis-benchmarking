@@ -224,7 +224,7 @@ for i in ['eggnog', 'megan', 'metagomics', 'unipept', 'mpa', 'prophane']:
 Read ancestors into R. 
 
 ```{r}
-methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa')
+methods <- c("eggnog", "megan", "metagomics", "mpa", "prophane", "unipept")
 gos_ancestors <- lapply(methods,
     function(f) {
         "go" = read.delim(paste("go_lists/", f, '_parents.tab', sep = ""),
@@ -252,12 +252,16 @@ sapply(gos_ancestors, length)
 Unique to each tool
 ```{r}
 ex <- rep(0, 6)
+tot <- rep(0, 5)
 for (i in 1:6){
     all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos[other_ind])))
     ex[i] <- length(setdiff(gos[[i]], others))
+    tot[i] <- length(gos[[i]])
 }
+names(tot) <- names(gos)
+tot
 names(ex) <- names(gos)
 ex
 ```
@@ -276,12 +280,16 @@ gos_slims <- lapply(methods,
 names(gos_slims) <- methods
 
 exslim <- rep(0, 6)
+tot <- rep(0, 5)
 for (i in 1:6){
     all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos_slims[other_ind])))
     exslim[i] <- length(setdiff(gos_slims[[i]], others))
+    tot[i] <- length(gos_slims[[i]])
 }
+names(tot) <- names(gos)
+tot
 names(exslim) <- methods
 exslim
 ```
