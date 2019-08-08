@@ -24,9 +24,9 @@ The goal here is to estimate the top *n* 'things' that are changing across WS an
 Necessary packages:
 ```{r message=FALSE}
 library(GO.db)
+library(data.table)
 library(dplyr)
 library(kableExtra)
-library(data.table)
 ```
 
 ## Peptides
