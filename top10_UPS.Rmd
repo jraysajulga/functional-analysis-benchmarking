@@ -448,13 +448,13 @@ pseudoMatches <- rbind(
 )
 ```
 ```{r}
-A <- "Talking; Halo; But"
-B <- c("Talk; People", 
+trimmed_GO <- "Talking; Halo; But"
+trimmed_col1 <- c("Talk; People", 
        "Halos",
        "BUT WHOM")
 #unlist(strsplit(A, "; "))
-C <- sapply(unlist(strsplit(A, "; ")), function( x ) { grepl(tolower(x), tolower(B), fixed = TRUE)})
-sapply(split(C, seq(nrow(C))), function ( x ) {"TRUE" %in% x})
+delimited_matches <- sapply(unlist(strsplit(trimmed_GO, "; ")), function( x ) { grepl(tolower(x), tolower(trimmed_col1), fixed = TRUE)})
+sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x})
 #grepl(A, B, fixed = TRUE)
 ```
 
