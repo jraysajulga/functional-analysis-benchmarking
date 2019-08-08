@@ -93,22 +93,22 @@ ups <- ups[!ups$Entry %in% c("P62987","P62979","P0CG48"),]
 
 ## Blast
 ```{r}
-blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
-                    stringsAsFactors = FALSE,
-                    header = FALSE) %>%
-    select(peptide = V1, protein = V2, desc = V25)
-
-blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
-    group_by(protein, desc) %>%
-    filter(!is.na(countWS) & !is.na(countNS)) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
-    arrange(-log2ratio)
+# blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
+#                     stringsAsFactors = FALSE,
+#                     header = FALSE) %>%
+#     select(peptide = V1, protein = V2, desc = V25)
+# 
+# blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
+#     group_by(protein, desc) %>%
+#     filter(!is.na(countWS) & !is.na(countNS)) %>%
+#     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+#     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+#     arrange(-log2ratio)
 ```
 
 Print results:
 ```{r echo=FALSE, results='asis'}
-kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
+#kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 ```
 
 ## metaGOmics
@@ -318,6 +318,7 @@ kable(u2m)
 rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
+                            ups = head(ups$name, n),
                             MPA = head(pAll$Protein.Description, n),
                         Unipept = head(unipept_all$Name, n))
 
