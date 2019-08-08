@@ -14,9 +14,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The goal here is to estimate the top *n* 'things' that are changing across WS and NS, by fold change. The fold change is calculated by the sum of the spectral counts attributed to each 'thing' - in eggNOG mapper and BLAST, the counts are aggregated by protein; in MEGAN, they are aggregated by eggNOG orthologous group; and in metaGOmics and Unipept, they are assigned to GO terms. In all cases, the Laplace correction is made, which is just adding 1 to all observed counts. This prevents division by zero, and allows for fold change estimation when one 'thing' was seen in one sample but not in another. 
 
+```{r}
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+#BiocManager::install("GO.db")
+```
+
 # Reading in data
 Necessary packages:
 ```{r message=FALSE}
+library(GO.db)
 library(dplyr)
 library(kableExtra)
 ```
@@ -155,6 +162,23 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
            log2ratio = log(lapCountWS/lapCountNS)) %>%
     select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
     arrange(-log2ratio)
+```
+```{r}
+unipeptUPS1 <- read.delim("unipept_results/UPS/UPS1_Galaxy19-[Unipept_pept2go_on_data_16_GO_tsv].tabular", header=FALSE) %>%
+    select(GO.term = V3) %>%
+    group_by(GO.term) %>%
+    count()
+unipeptUPS2 <- read.delim("unipept_results/UPS/UPS2_Galaxy23-[Unipept_pept2go_on_data_17_GO_tsv].tabular", header=FALSE) %>%
+    select(GO.term = V3) %>%
+    group_by(GO.term) %>%
+    count()
+unipept_all <- inner_join(unipeptUPS1, unipeptUPS2, by = "GO.term") %>%
+    mutate(lapCountUPS1 = n.x + 1, lapCountUPS2 = n.y + 1,
+           log2ratio = log(lapCountUPS2/lapCountUPS1)) %>%
+    select(GO.term, lapCountUPS2, lapCountUPS1, log2ratio) %>%
+    arrange(-log2ratio)
+unipept_all$Name <- Term(unipept_all$GO.term)
+unipept_all
 ```
 
 Top *n*:
