@@ -458,13 +458,13 @@ pseudoMatches <- rbind(
 library(networkD3)
 library(tidyverse)
 
-ncols <- 4
+ncols <- 5
 
 
 # Make a connection data frame
 nodes=data.frame(
-    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4)),
-    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5)),
+    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5)),
+    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(functool6)),
     group=as.factor(c(rep("invisible", length(functool1) * ncols))),
     value= rep(1, length(functool1) * ncols))
 nodes
@@ -488,7 +488,8 @@ nodes$group = as.factor(c(rep("tool1", length(functool1)),
                           rep("tool2", length(functool2)),
                           rep("tool3", length(functool3)),
                           rep("tool4", length(functool4)),
-                          rep("tool5", length(functool5))))
+                          rep("tool5", length(functool5)),
+                          rep("tool6", length(functool6))))
 
 my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
  
