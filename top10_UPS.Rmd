@@ -458,18 +458,25 @@ pseudoMatches <- rbind(
 library(networkD3)
 library(tidyverse)
 
-values <- c()
-values[1:(length(functool1) * 4)] <- 1
-values[(length(functool1) * 4 + 1):(length(functool1) * 4 + nrow(matches) + nrow(pseudoMatches))] <- .1
-#values <- "1"
+ncols <- 4
+
 
 # Make a connection data frame
-links=data.frame(
-    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source), as.character(pseudoMatches$source)),
-    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target), as.character(pseudoMatches$target)),
-    group=as.factor(c(rep("invisible", length(functool1) * 4), rep("matches", nrow(matches)), rep("pseudomatches", nrow(pseudoMatches)))),
-    value= c(values))
+nodes=data.frame(
+    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4)),
+    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5)),
+    group=as.factor(c(rep("invisible", length(functool1) * ncols))),
+    value= rep(1, length(functool1) * ncols))
+nodes
 # A3, D2, .5
+
+links <- rbind(nodes, data.frame(
+    source = as.character(pseudoMatches$source),
+    target = as.character(pseudoMatches$target),
+    group = as.factor(rep("pseudomatches", nrow(pseudoMatches))),
+    value = rep(0.1, length(pseudoMatches))
+))
+
 links
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
