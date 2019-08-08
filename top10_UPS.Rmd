@@ -447,16 +447,14 @@ pseudoMatches <- rbind(
     getPseudomatches(functool5, functool6)
 )
 ```
+
+
 ```{r}
-trimmed_GO <- "[Talk]ing; Halo; But"
-trimmed_col1 <- c("[Talk]; People", 
-       "Halo-s",
-       "BUT WHOM")
+trimmed_GO <- functool4[1]
+trimmed_col1 <- functool4
 #unlist(strsplit(A, "; "))
 
-format <- function ( term ){
-    gsub("\\]","\\\\]", gsub("\\[","\\\\[",tolower(term)))
-}
+
 
 delimited_matches <- sapply(unlist(strsplit(trimmed_GO, "; ")), function( x ) { grepl(format(x), tolower(trimmed_col1))})
 forward_pseudomatch<- sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x})
@@ -471,22 +469,72 @@ forward_pseudomatch
 reverse_pseudomatch <-sapply(trimmed_col1, function (x) {
     "TRUE" %in% sapply(unlist(strsplit(x, "; ")), function( y ) { grepl(format(y), tolower(trimmed_GO))})
 })
-
 #trimmed_col1
 #grepl(A, B, fixed = TRUE)
 ```
 ```{r}
-grepl("\\[talk\\]", "[talk]ing; halo; but")
+test1 <- c("arylesterase activity; carbonate dehydratase activity",
+           "activation of MAPK activity; in utero embryonic development; endopeptidase inhibitor activity",
+           "carbonate",
+           "kidney",
+           "kid",
+           "development")
+test2 <-  c("kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity",
+           "endopeptidase; oxygen carrier activity; extracellular region; extracellular space; development",
+           "arylesterase; kid",
+           "utero",
+           "activity",
+           "ney")
+# "arylesterase activity; carbonate dehydratase activity"   <->   "kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity"
+# "arylesterase activity; carbonate dehydratase activity"   <-> "arylesterase; kid"
+# "arylesterase activity; carbonate dehydratase activity"   <->  "activity"
+# "activation of MAPK activity; in utero embryonic development; endopeptidase inhibitor activity"   <-> "activity"
+# "activation of MAPK activity; in utero embryonic development; endopeptidase inhibitor activity"   <-> "utero"
+# "activation of MAPK activity; in utero embryonic development; endopeptidase inhibitor activity"   <-> "endopeptidase; oxygen carrier activity; extracellular region; extracellular space; development"
+# "carbonate" <-> "kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity"
+# "kidney" <-> "kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity"
+# "kidney" <-> "kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity"
+# "kid" <-> "ney"
+# "kid" <-> "arylesterase; kid"
+# "development" <-> "kidney development; morphogenesis of an epithelium; arylesterase activity; carbonate dehydratase activity"
+# "development" <-> "endopeptidase; oxygen carrier activity; extracellular region; extracellular space; development"
 ```
 
 ```{r}
 getPseudomatches <- function(col1, col2){
     matches_col1 <- as.character(sapply(col2, function (x){
+        format <- function ( term ){
+            gsub("\\]","\\\\]", gsub("\\[","\\\\[",tolower(term)))
+        }
         trimmed_GO <- gsub("\\s+$","", x) # Remove trailing spaces
         trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
-        #print(strsplit(trimmed_col1, "; "))
+        delimited_matches <- sapply(unlist(strsplit(trimmed_GO, "; ")), function( x ) { grepl(format(x), tolower(trimmed_col1))})
+        forward_pseudomatch<- as.vector(sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x}))
+        reverse_pseudomatch <- as.vector(sapply(trimmed_col1, function (x) {
+            "TRUE" %in% sapply(unlist(strsplit(x, "; ")), function( y ) { grepl(format(y), tolower(trimmed_GO))})
+        }))
+        print(x)
+        print(forward_pseudomatch)
+        ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch),
+               ifelse(TRUE %in% forward_pseudomatch,
+                      col1[forward_pseudomatch],
+                      ifelse(col1[reverse_pseudomatch] == "", FALSE, col1[reverse_pseudomatch])),
+               FALSE)
+    }))
+    links <- data.frame("source" = matches_col1,
+                        "target" = col2)
+    links[links$source != FALSE,]
+}
+test<-getPseudomatches(test1,test2)
+test
+```
+```{r}
+getPseudomatches <- function(col1, col2){
+    matches_col1 <- as.character(sapply(col2, function (x){
+        trimmed_GO <- gsub("\\s+$","", x)
+        trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
         forward_pseudomatch <- grepl(tolower(trimmed_GO), tolower(trimmed_col1), fixed = TRUE)
-        #print(forward_pseudomatch)
+        print(forward_pseudomatch)
         reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(gsub("\\]","\\\\]", gsub("\\[","\\\\[",x)), trimmed_GO) )
         print(reverse_pseudomatch)
         ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch)
@@ -499,9 +547,8 @@ getPseudomatches <- function(col1, col2){
     links <- data.frame("source" = matches_col1,
                         "target" = col2)
     links[links$source != FALSE,]
-    #print(links)
 }
-getPseudomatches(functool4,functool4)
+test <- getPseudomatches(functool4, functool4)
 ```
 
 
