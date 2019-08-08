@@ -43,7 +43,7 @@ peptides_all[is.na(peptides_all)] <- 0
 Join peptides to counts, and calculate ratios.
 
 ```{r}
-eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
+eggnog <- read.delim("eggnogmap_results/UPS/Galaxy14-[eggNOG_Mapper_on_data_12__diamond.annotations].tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE) %>% 
     select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
@@ -57,6 +57,7 @@ eggnog_w_counts <- left_join(eggnog,
     arrange(-log2ratio) %>%
     select(protein, gene, sumCountUPS2, sumCountUPS1, log2ratio, desc)
 ```
+
 
 Top *N*:
 ```{r echo=FALSE, results='asis'}
@@ -262,7 +263,7 @@ rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
 rank_table$MPA <- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
 rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)','\\1', x) })
 
-write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
+write.table(rank_table, "top100-UPS.tabular", sep="\t", quote = TRUE)
 ```
 
 
@@ -386,6 +387,7 @@ links=data.frame(
     value= c(values))
 # A3, D2, .5
 links
+functool1
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
 nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
@@ -405,7 +407,7 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
                    Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
                    iterations = 0)
 n
-saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
+saveNetwork(n, "top100sankeyR-UPS.html", selfcontained = TRUE)
 ```
 ```{r}
 rep("D", 5)
