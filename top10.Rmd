@@ -187,25 +187,18 @@ kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Chang
 ## Prophane
 
 ```{r}
-prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
 prophane_WS <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
-prophane_NS
-```
-```{r}
-prophane_WS <- prophane_WS %>% select(members_identifier,
-                       ws = quant..sample_737..mean.,
-                       ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                       ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
-                       ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane_NS <- prophane_NS %>% select(members_identifier,
-                       ns = quant..sample_737..mean.,
-                       ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                       ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
-                       ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-```
-```{r}
+                          stringsAsFactors = FALSE) %>% select(members_identifier,
+                                                               ws = quant..sample_737..mean.,
+                                                               ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                                                               ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
+                                                               ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
+                          stringsAsFactors = FALSE) %>% select(members_identifier,
+                                                               ns = quant..sample_737..mean.,
+                                                               ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                                                               ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
+                                                               ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
     mutate(fc = log2(as.double(ws)/as.double(ns)),
