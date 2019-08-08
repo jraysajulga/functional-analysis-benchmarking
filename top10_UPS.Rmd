@@ -80,9 +80,14 @@ The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the Ya
 ```{r}
 ups <- read.delim('uniprot-UPS-go-terms.tab',
                   stringsAsFactors = FALSE) %>%
-    select(GO.terms = Gene.ontology.IDs)
-ups$GO.terms <- sapply(ups$GO.terms, function( x ) { paste(Term(unlist(strsplit(x, '; '))), collapse = "; ") })
-ups
+    select(Entry, GO.terms = Gene.ontology.IDs)
+# Need to combine these secondary entries since P62988 has become obselete since 8/10/10
+ups[ups$Entry == "P0CG47", ] <- paste(ups[ups$Entry == "P0CG47", ], 
+                                      ups[ups$Entry == "P62987", ], 
+                                      ups[ups$Entry == "P62979", ], 
+                                      ups[ups$Entry == "P0CG48", ], sep="; ")
+ups$GO.terms <- sapply(ups$GO.terms, function( x ) { paste(Term(unique(unlist(strsplit(x, '; ')))), collapse = "; ") })
+ups <- ups[!ups$Entry %in% c("P62987","P62979","P0CG48"),]
 ```
 
 
