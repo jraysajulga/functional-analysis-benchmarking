@@ -70,7 +70,7 @@ eggnog_w_counts <- left_join(eggnog,
 Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
-n <- 100
+n <- 48
 kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold changes"))
 ```
 
@@ -86,7 +86,7 @@ ups[ups$Entry == "P0CG47", ] <- paste(ups[ups$Entry == "P0CG47", ],
                                       ups[ups$Entry == "P62987", ], 
                                       ups[ups$Entry == "P62979", ], 
                                       ups[ups$Entry == "P0CG48", ], sep="; ")
-ups$GO.terms <- sapply(ups$GO.terms, function( x ) { paste(Term(unique(unlist(strsplit(x, '; ')))), collapse = "; ") })
+ups$Names <- sapply(ups$GO.terms, function( x ) { paste(Term(unique(unlist(strsplit(x, '; ')))), collapse = "; ") })
 ups <- ups[!ups$Entry %in% c("P62987","P62979","P0CG48"),]
 ```
 
@@ -318,7 +318,7 @@ kable(u2m)
 rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
-                            ups = head(ups$name, n),
+                            ups = head(ups$Names, n),
                             MPA = head(pAll$Protein.Description, n),
                         Unipept = head(unipept_all$Name, n))
 
@@ -331,12 +331,12 @@ write.table(rank_table, "top100-UPS.tabular", sep="\t", quote = TRUE)
 
 
 ```{r}
-n <- 100
 functool1 <- as.character(rank_table[1:n,1])
 functool2 <- as.character(rank_table[1:n,2])
 functool3 <- as.character(rank_table[1:n,3])
 functool4 <- as.character(rank_table[1:n,4])
 functool5 <- as.character(rank_table[1:n,5])
+functool6 <- as.character(rank_table[1:n,6])
 
 removeIntraduplicates <- function(col){
     while(length(col[duplicated(col)]) > 0){
@@ -354,6 +354,7 @@ functool2 <- removeIntraduplicates(functool2)
 functool3 <- removeIntraduplicates(functool3)
 functool4 <- removeIntraduplicates(functool4)
 functool5 <- removeIntraduplicates(functool5)
+functool6 <- removeIntraduplicates(functool6)
 
 functool2 <- removeInterduplicates(functool1, functool2)
 functool3 <- removeInterduplicates(functool1, functool3)
@@ -365,6 +366,11 @@ functool5 <- removeInterduplicates(functool1, functool5)
 functool5 <- removeInterduplicates(functool2, functool5)
 functool5 <- removeInterduplicates(functool3, functool5)
 functool5 <- removeInterduplicates(functool4, functool5)
+functool6 <- removeInterduplicates(functool1, functool6)
+functool6 <- removeInterduplicates(functool2, functool6)
+functool6 <- removeInterduplicates(functool3, functool6)
+functool6 <- removeInterduplicates(functool4, functool6)
+functool6 <- removeInterduplicates(functool5, functool6)
 
 getMatches <- function(col1, col2){
     matches_col1 <- as.character(sapply(col2, function (x){
@@ -384,7 +390,7 @@ getPseudomatches <- function(col1, col2){
         trimmed_GO <- gsub("\\s+$","", x)
         trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
         forward_pseudomatch <- grepl(tolower(trimmed_GO), tolower(trimmed_col1), fixed = TRUE)
-        reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(x, trimmed_GO))
+        reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(gsub("\\]","\\\\]", gsub("\\[","\\\\[",x)), trimmed_GO) )
         ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch)
                & !trimmed_GO %in% trimmed_col1,
                ifelse(TRUE %in% forward_pseudomatch,
@@ -411,7 +417,12 @@ matches <- rbind(
     getMatches(functool1, functool5),
     getMatches(functool2, functool5),
     getMatches(functool3, functool5),
-    getMatches(functool4, functool5)
+    getMatches(functool4, functool5),
+    getMatches(functool1, functool6),
+    getMatches(functool2, functool6),
+    getMatches(functool3, functool6),
+    getMatches(functool4, functool6),
+    getMatches(functool5, functool6)
 )
 
 pseudoMatches <- rbind(
@@ -427,7 +438,12 @@ pseudoMatches <- rbind(
     getPseudomatches(functool1, functool5),
     getPseudomatches(functool2, functool5),
     getPseudomatches(functool3, functool5),
-    getPseudomatches(functool4, functool5)
+    getPseudomatches(functool4, functool5),
+    getPseudomatches(functool1, functool6),
+    getPseudomatches(functool2, functool6),
+    getPseudomatches(functool3, functool6),
+    getPseudomatches(functool4, functool6),
+    getPseudomatches(functool5, functool6)
 )
 ```
 
@@ -450,7 +466,6 @@ links=data.frame(
     value= c(values))
 # A3, D2, .5
 links
-functool1
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
 nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
@@ -472,8 +487,6 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
 n
 saveNetwork(n, "top100sankeyR-UPS.html", selfcontained = TRUE)
 ```
-```{r}
-rep("D", 5)
-```
+
 
 
