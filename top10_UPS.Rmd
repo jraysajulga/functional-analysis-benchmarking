@@ -448,14 +448,35 @@ pseudoMatches <- rbind(
 )
 ```
 ```{r}
-trimmed_GO <- "Talking; Halo; But"
-trimmed_col1 <- c("Talk; People", 
-       "Halos",
+trimmed_GO <- "[Talk]ing; Halo; But"
+trimmed_col1 <- c("[Talk]; People", 
+       "Halo-s",
        "BUT WHOM")
 #unlist(strsplit(A, "; "))
-delimited_matches <- sapply(unlist(strsplit(trimmed_GO, "; ")), function( x ) { grepl(tolower(x), tolower(trimmed_col1), fixed = TRUE)})
-sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x})
+
+format <- function ( term ){
+    gsub("\\]","\\\\]", gsub("\\[","\\\\[",tolower(term)))
+}
+
+delimited_matches <- sapply(unlist(strsplit(trimmed_GO, "; ")), function( x ) { grepl(format(x), tolower(trimmed_col1))})
+forward_pseudomatch<- sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x})
+
+# A - one term
+# B - column of terms
+#match <- function (A, B){
+#    delimited_matches <- sapply(unlist(strsplit(A, "; ")), function( x ) { grepl(tolower(x), tolower(B), fixed = TRUE)})
+#    sapply(split(delimited_matches, seq(nrow(delimited_matches))), function ( x ) {"TRUE" %in% x})
+#}
+forward_pseudomatch
+reverse_pseudomatch <-sapply(trimmed_col1, function (x) {
+    "TRUE" %in% sapply(unlist(strsplit(x, "; ")), function( y ) { grepl(format(y), tolower(trimmed_GO))})
+})
+
+#trimmed_col1
 #grepl(A, B, fixed = TRUE)
+```
+```{r}
+grepl("\\[talk\\]", "[talk]ing; halo; but")
 ```
 
 ```{r}
@@ -464,13 +485,10 @@ getPseudomatches <- function(col1, col2){
         trimmed_GO <- gsub("\\s+$","", x) # Remove trailing spaces
         trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
         #print(strsplit(trimmed_col1, "; "))
-        print("A: ")
-        print(trimmed_GO)
-        print("B: ")
-        print(trimmed_col1)
         forward_pseudomatch <- grepl(tolower(trimmed_GO), tolower(trimmed_col1), fixed = TRUE)
-        print(forward_pseudomatch)
+        #print(forward_pseudomatch)
         reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(gsub("\\]","\\\\]", gsub("\\[","\\\\[",x)), trimmed_GO) )
+        print(reverse_pseudomatch)
         ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch)
                & !trimmed_GO %in% trimmed_col1,
                ifelse(TRUE %in% forward_pseudomatch,
@@ -483,6 +501,7 @@ getPseudomatches <- function(col1, col2){
     links[links$source != FALSE,]
     #print(links)
 }
+getPseudomatches(functool4,functool4)
 ```
 
 
