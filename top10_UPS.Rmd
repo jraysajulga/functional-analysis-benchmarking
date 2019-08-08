@@ -331,6 +331,7 @@ write.table(rank_table, "top100-UPS.tabular", sep="\t", quote = TRUE)
 
 
 ```{r}
+n <-5
 functool1 <- as.character(rank_table[1:n,1])
 functool2 <- as.character(rank_table[1:n,2])
 functool3 <- as.character(rank_table[1:n,3])
@@ -446,7 +447,43 @@ pseudoMatches <- rbind(
     getPseudomatches(functool5, functool6)
 )
 ```
+```{r}
+A <- "Talking; Halo; But"
+B <- c("Talk; People", 
+       "Halos",
+       "BUT WHOM")
+#unlist(strsplit(A, "; "))
+C <- sapply(unlist(strsplit(A, "; ")), function( x ) { grepl(tolower(x), tolower(B), fixed = TRUE)})
+sapply(split(C, seq(nrow(C))), function ( x ) {"TRUE" %in% x})
+#grepl(A, B, fixed = TRUE)
+```
 
+```{r}
+getPseudomatches <- function(col1, col2){
+    matches_col1 <- as.character(sapply(col2, function (x){
+        trimmed_GO <- gsub("\\s+$","", x) # Remove trailing spaces
+        trimmed_col1 <- lapply(col1, function (x) gsub("\\s+$","", x))
+        #print(strsplit(trimmed_col1, "; "))
+        print("A: ")
+        print(trimmed_GO)
+        print("B: ")
+        print(trimmed_col1)
+        forward_pseudomatch <- grepl(tolower(trimmed_GO), tolower(trimmed_col1), fixed = TRUE)
+        print(forward_pseudomatch)
+        reverse_pseudomatch <- sapply(trimmed_col1, function (x) grepl(gsub("\\]","\\\\]", gsub("\\[","\\\\[",x)), trimmed_GO) )
+        ifelse((TRUE %in% forward_pseudomatch | TRUE %in% reverse_pseudomatch)
+               & !trimmed_GO %in% trimmed_col1,
+               ifelse(TRUE %in% forward_pseudomatch,
+                      col1[forward_pseudomatch],
+                      ifelse(col1[reverse_pseudomatch] == "", FALSE, col1[reverse_pseudomatch])),
+               FALSE)
+    }))
+    links <- data.frame("source" = matches_col1,
+                        "target" = col2)
+    links[links$source != FALSE,]
+    #print(links)
+}
+```
 
 
 ```{r}
