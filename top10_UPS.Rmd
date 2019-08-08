@@ -76,6 +76,16 @@ kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold c
 
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
+## UPS
+```{r}
+ups <- read.delim('uniprot-UPS-go-terms.tab',
+                  stringsAsFactors = FALSE) %>%
+    select(GO.terms = Gene.ontology.IDs)
+ups$GO.terms <- sapply(ups$GO.terms, function( x ) { paste(Term(unlist(strsplit(x, '; '))), collapse = "; ") })
+ups
+```
+
+
 ## Blast
 ```{r}
 blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
