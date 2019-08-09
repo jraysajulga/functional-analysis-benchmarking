@@ -497,11 +497,17 @@ links$IDtarget=match(links$target, nodes$name)-1
 nodes$group = as.factor(c(rep("tool1", length(functool1)),
                           rep("tool2", length(functool2)),
                           rep("tool3", length(functool3)),
-                          rep("tool4", length(functool4)),
+                          rep("tool4A", 8),
+                          rep("tool4B", 8),
+                          rep("tool4C", 8),
+                          rep("tool4D", 8),
+                          rep("tool4E", 8),
+                          rep("tool4F", 8),
                           rep("tool5", length(functool5)),
                           rep("tool6", length(functool6))))
 
-my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
+my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4A", "tool4B", "tool4C", "tool4D", "tool4E", "tool4F", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "orange", "yellow", "orange", "yellow", "orange", "black"])'
+ 
  
 # Make the Network. I call my colour scale with the colourScale argument
 nwrk <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
