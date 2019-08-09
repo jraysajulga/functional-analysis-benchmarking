@@ -154,32 +154,6 @@ Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a b
 ## Unipept
 
 ```{r}
-unipept_results_NS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737NS.*\\.csv"),
-                               sep = "")
-unipept_results_WS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737WS.*\\.csv"),
-                               sep = "")
-
-unipeptNS <- lapply(unipept_results_NS, function(i) {
-        read.delim(i, sep = ',', as.is = TRUE)}) %>%
-    bind_rows() %>%
-    select(-X) %>%
-    rename(peptides = X.peptides)
-
-unipeptWS <- lapply(unipept_results_WS, function(i) {
-    read.delim(i, sep = ',', as.is = TRUE)}) %>%
-    bind_rows() %>%
-    select(-X) %>%
-    rename(peptides = X.peptides)
-
-unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
-    mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
-           log2ratio = log(lapCountWS/lapCountNS)) %>%
-    select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
-    arrange(-log2ratio)
-```
-```{r}
 unipeptUPS1 <- read.delim("unipept_results/UPS/UPS1_Galaxy19-[Unipept_pept2go_on_data_16_GO_tsv].tabular", header=FALSE) %>%
     select(GO.term = V3) %>%
     group_by(GO.term) %>%
