@@ -385,7 +385,7 @@ getMatches <- function(col1, col2){
     links[links$source != FALSE,]
 }
 
-getPseudomatches <- function(col1, col2){
+getPseudomatches <- function(col1, col2, type){
     if(col1[1] == ups$Entry[1]){ #&& col1[23] == ups$Entry[23]){
         col1 <- ups$Name
     }
@@ -418,6 +418,7 @@ getPseudomatches <- function(col1, col2){
     if (length(connections) > 0){
         colnames(connections) <- c("source", "target")
     }
+    connections$type <- as.factor(rep(type, nrow(connections)))
     connections
 }
 
@@ -447,17 +448,17 @@ pseudoMatches <- rbind(
     #getPseudomatches(functool1, functool2),
     #getPseudomatches(functool1, functool3),
     #getPseudomatches(functool2, functool3),
-    getPseudomatches(functool1, functool4),
-    getPseudomatches(functool2, functool4),
-    getPseudomatches(functool3, functool4),
+    getPseudomatches(functool1, functool4, "tool1"),
+    getPseudomatches(functool2, functool4, "tool2"),
+    getPseudomatches(functool3, functool4, "tool3"),
     #getPseudomatches(functool1, functool5),
     #getPseudomatches(functool2, functool5),
     #getPseudomatches(functool3, functool5),
-    getPseudomatches(functool4, functool5),
+    getPseudomatches(functool4, functool5, "tool5"),
     #getPseudomatches(functool1, functool6),
     #getPseudomatches(functool2, functool6),
     #getPseudomatches(functool3, functool6),
-    getPseudomatches(functool4, functool6)
+    getPseudomatches(functool4, functool6, "tool6")
     #getPseudomatches(functool5, functool6)
 )
 ```
@@ -483,8 +484,8 @@ nodes
 links <- rbind(nodes, data.frame(
     source = as.character(pseudoMatches$source),
     target = as.character(pseudoMatches$target),
-    group = as.factor(rep("pseudomatches", nrow(pseudoMatches))),
-    value = rep(0.1, length(pseudoMatches))
+    group = as.character(pseudoMatches$type),
+    value = rep(0.1, nrow(pseudoMatches))
 ))
 
 links
@@ -506,7 +507,7 @@ nodes$group = as.factor(c(rep("tool1", length(functool1)),
                           rep("tool5", length(functool5)),
                           rep("tool6", length(functool6))))
 
-my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4A", "tool4B", "tool4C", "tool4D", "tool4E", "tool4F", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "orange", "yellow", "orange", "yellow", "orange", "black"])'
+my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4A", "tool4B", "tool4C", "tool4D", "tool4E", "tool4F", "tool5", "tool6"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "orange", "yellow", "orange", "yellow", "orange", "orange", "pink"])'
  
  
 # Make the Network. I call my colour scale with the colourScale argument
