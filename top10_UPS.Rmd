@@ -318,7 +318,7 @@ kable(u2m)
 rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
-                            ups = head(ups$Names, n),
+                            ups = head(ups$Entry, n),
                             MPA = head(pAll$Protein.Description, n),
                         Unipept = head(unipept_all$Name, n))
 
@@ -386,6 +386,12 @@ getMatches <- function(col1, col2){
 }
 
 getPseudomatches <- function(col1, col2){
+    if(col1[1] == ups$Entry[1]){ #&& col1[23] == ups$Entry[23]){
+        col1 <- ups$Name
+    }
+    if(col2[1] == ups$Entry[1]){ #&& col2[23] == ups$Entry[23]){
+        col2 <- ups$Name
+    }
     matches_col1 <- lapply(col2, function (go_col2){
         format <- function ( term ){
             gsub("\\]","\\\\]", gsub("\\[","\\\\[",tolower(term)))
@@ -399,7 +405,14 @@ getPseudomatches <- function(col1, col2){
         }))
         as.data.frame(t(sapply(
             col1[Reduce("|", data.frame(forward_pseudomatch, reverse_pseudomatch))],
-            function(go_col1){ c(go_col1, go_col2) })))
+            function(go_col1){
+                if (go_col1 %in% ups$Name){
+                    go_col1 <- ups[ups$Name == go_col1,]$Entry
+                }
+                if (go_col2 %in% ups$Name){
+                    go_col2 <- ups[ups$Name == go_col2,]$Entry
+                }
+                c(go_col1, go_col2) })))
     })
     connections <- do.call(rbind, matches_col1)
     if (length(connections) > 0){
@@ -431,24 +444,21 @@ matches <- rbind(
 )
 
 pseudoMatches <- rbind(
-    getPseudomatches(functool1, functool2),
-    getPseudomatches(functool1, functool3),
-    getPseudomatches(functool2, functool3),
+    #getPseudomatches(functool1, functool2),
+    #getPseudomatches(functool1, functool3),
+    #getPseudomatches(functool2, functool3),
     getPseudomatches(functool1, functool4),
     getPseudomatches(functool2, functool4),
     getPseudomatches(functool3, functool4),
-    getPseudomatches(functool1, functool4),
-    getPseudomatches(functool2, functool4),
-    getPseudomatches(functool3, functool4),
-    getPseudomatches(functool1, functool5),
-    getPseudomatches(functool2, functool5),
-    getPseudomatches(functool3, functool5),
+    #getPseudomatches(functool1, functool5),
+    #getPseudomatches(functool2, functool5),
+    #getPseudomatches(functool3, functool5),
     getPseudomatches(functool4, functool5),
-    getPseudomatches(functool1, functool6),
-    getPseudomatches(functool2, functool6),
-    getPseudomatches(functool3, functool6),
-    getPseudomatches(functool4, functool6),
-    getPseudomatches(functool5, functool6)
+    #getPseudomatches(functool1, functool6),
+    #getPseudomatches(functool2, functool6),
+    #getPseudomatches(functool3, functool6),
+    getPseudomatches(functool4, functool6)
+    #getPseudomatches(functool5, functool6)
 )
 ```
 
@@ -494,11 +504,11 @@ nodes$group = as.factor(c(rep("tool1", length(functool1)),
 my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
  
 # Make the Network. I call my colour scale with the colourScale argument
-n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
+nwrk <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
                    Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
                    iterations = 0)
-n
-saveNetwork(n, "top100sankeyR-UPS.html", selfcontained = TRUE)
+nwrk
+saveNetwork(nwrk, "top100sankeyR-UPS.html", selfcontained = TRUE)
 ```
 
 
