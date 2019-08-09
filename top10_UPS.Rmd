@@ -27,6 +27,7 @@ library(GO.db)
 library(data.table)
 library(dplyr)
 library(kableExtra)
+library("readxl")
 ```
 
 ## Peptides
@@ -180,21 +181,17 @@ kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ## MetaProteomeAnalyzer
 
 ```{r}
-ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
-pNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    group_by(Protein.Accession, Protein.Description) %>%
-    summarize("SpecCount" = sum(Spectral.Count))
-ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
-pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    group_by(Protein.Accession, Protein.Description) %>%
-    summarize("SpecCount" = sum(Spectral.Count))
-
-pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>%
-    mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
-           log2ratio = log2(wsCount/nsCount)) %>%
+mpa_ups1 <- read_excel("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins") %>%
+    select(protein = "Protein Accession", count = "Spectral Count")
+mpa_ups2 <- read_excel("mpa_results/UPS/UPS2_03_MPA_Analysis.xlsx", sheet = "Proteins") %>%
+    select(protein = "Protein Accession", count = "Spectral Count")
+mpa_ups <- full_join(mpa_ups1, mpa_ups2, by="protein") %>%
+    mutate(ups1_count = count.x + 1, ups2_count = count.y + 1,
+           log2ratio = log2(ups2_count/ups1_count)) %>%
     arrange(-log2ratio)
-
+mpa_ups
 ```
+
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
