@@ -27,6 +27,7 @@ library(GO.db)
 library(data.table)
 library(dplyr)
 library(kableExtra)
+library("readxl")
 ```
 
 ## Peptides
@@ -154,32 +155,6 @@ Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a b
 ## Unipept
 
 ```{r}
-unipept_results_NS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737NS.*\\.csv"),
-                               sep = "")
-unipept_results_WS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737WS.*\\.csv"),
-                               sep = "")
-
-unipeptNS <- lapply(unipept_results_NS, function(i) {
-        read.delim(i, sep = ',', as.is = TRUE)}) %>%
-    bind_rows() %>%
-    select(-X) %>%
-    rename(peptides = X.peptides)
-
-unipeptWS <- lapply(unipept_results_WS, function(i) {
-    read.delim(i, sep = ',', as.is = TRUE)}) %>%
-    bind_rows() %>%
-    select(-X) %>%
-    rename(peptides = X.peptides)
-
-unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
-    mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
-           log2ratio = log(lapCountWS/lapCountNS)) %>%
-    select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
-    arrange(-log2ratio)
-```
-```{r}
 unipeptUPS1 <- read.delim("unipept_results/UPS/UPS1_Galaxy19-[Unipept_pept2go_on_data_16_GO_tsv].tabular", header=FALSE) %>%
     select(GO.term = V3) %>%
     group_by(GO.term) %>%
@@ -206,25 +181,21 @@ kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ## MetaProteomeAnalyzer
 
 ```{r}
-ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
-pNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    group_by(Protein.Accession, Protein.Description) %>%
-    summarize("SpecCount" = sum(Spectral.Count))
-ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
-pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    group_by(Protein.Accession, Protein.Description) %>%
-    summarize("SpecCount" = sum(Spectral.Count))
-
-pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>%
-    mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
-           log2ratio = log2(wsCount/nsCount)) %>%
+mpa_ups1 <- read_excel("mpa_results/UPS/UPS1_03_MPA_Analysis.xlsx", sheet = "Proteins") %>%
+    select(protein = "Protein Accession", count = "Spectral Count")
+mpa_ups2 <- read_excel("mpa_results/UPS/UPS2_03_MPA_Analysis.xlsx", sheet = "Proteins") %>%
+    select(protein = "Protein Accession", count = "Spectral Count")
+mpa_ups <- full_join(mpa_ups1, mpa_ups2, by="protein") %>%
+    mutate(ups1_count = count.x + 1, ups2_count = count.y + 1,
+           log2ratio = log2(ups2_count/ups1_count)) %>%
     arrange(-log2ratio)
-
+mpa_ups
 ```
+
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
-kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
+kable(head(mpa_ups, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
 
 
@@ -264,7 +235,7 @@ This is comparing the estimated fold changes for GO terms for the two tools that
 
 ```{r}
 um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
-png("um_cor.png", res = 700, width = 4, height = 4, units = "in")
+png("um_cor-UPS.png", res = 700, width = 4, height = 4, units = "in")
 plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3,
      xlab = "Unipept: Log2 Ratio",
      ylab = "MetaGOmics: Log2 Ratio")
@@ -318,8 +289,8 @@ kable(u2m)
 rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
-                            ups = head(ups$Names, n),
-                            MPA = head(pAll$Protein.Description, n),
+                            ups = head(ups$Entry, n),
+                            MPA = head(mpa_ups$protein, n),
                         Unipept = head(unipept_all$Name, n))
 
 # Remove extra text
@@ -385,7 +356,13 @@ getMatches <- function(col1, col2){
     links[links$source != FALSE,]
 }
 
-getPseudomatches <- function(col1, col2){
+getPseudomatches <- function(col1, col2, type){
+    if(col1[1] == ups$Entry[1]){ #&& col1[23] == ups$Entry[23]){
+        col1 <- ups$Name
+    }
+    if(col2[1] == ups$Entry[1]){ #&& col2[23] == ups$Entry[23]){
+        col2 <- ups$Name
+    }
     matches_col1 <- lapply(col2, function (go_col2){
         format <- function ( term ){
             gsub("\\]","\\\\]", gsub("\\[","\\\\[",tolower(term)))
@@ -399,12 +376,20 @@ getPseudomatches <- function(col1, col2){
         }))
         as.data.frame(t(sapply(
             col1[Reduce("|", data.frame(forward_pseudomatch, reverse_pseudomatch))],
-            function(go_col1){ c(go_col1, go_col2) })))
+            function(go_col1){
+                if (go_col1 %in% ups$Name){
+                    go_col1 <- ups[ups$Name == go_col1,]$Entry
+                }
+                if (go_col2 %in% ups$Name){
+                    go_col2 <- ups[ups$Name == go_col2,]$Entry
+                }
+                c(go_col1, go_col2) })))
     })
     connections <- do.call(rbind, matches_col1)
     if (length(connections) > 0){
         colnames(connections) <- c("source", "target")
     }
+    connections$type <- as.factor(rep(type, nrow(connections)))
     connections
 }
 
@@ -431,24 +416,21 @@ matches <- rbind(
 )
 
 pseudoMatches <- rbind(
-    getPseudomatches(functool1, functool2),
-    getPseudomatches(functool1, functool3),
-    getPseudomatches(functool2, functool3),
-    getPseudomatches(functool1, functool4),
-    getPseudomatches(functool2, functool4),
-    getPseudomatches(functool3, functool4),
-    getPseudomatches(functool1, functool4),
-    getPseudomatches(functool2, functool4),
-    getPseudomatches(functool3, functool4),
-    getPseudomatches(functool1, functool5),
-    getPseudomatches(functool2, functool5),
-    getPseudomatches(functool3, functool5),
-    getPseudomatches(functool4, functool5),
-    getPseudomatches(functool1, functool6),
-    getPseudomatches(functool2, functool6),
-    getPseudomatches(functool3, functool6),
-    getPseudomatches(functool4, functool6),
-    getPseudomatches(functool5, functool6)
+    #getPseudomatches(functool1, functool2),
+    #getPseudomatches(functool1, functool3),
+    #getPseudomatches(functool2, functool3),
+    getPseudomatches(functool1, functool4, "tool1"),
+    getPseudomatches(functool2, functool4, "tool2"),
+    getPseudomatches(functool3, functool4, "tool3"),
+    #getPseudomatches(functool1, functool5),
+    #getPseudomatches(functool2, functool5),
+    #getPseudomatches(functool3, functool5),
+    getPseudomatches(functool4, functool5, "tool5"),
+    #getPseudomatches(functool1, functool6),
+    #getPseudomatches(functool2, functool6),
+    #getPseudomatches(functool3, functool6),
+    getPseudomatches(functool4, functool6, "tool6")
+    #getPseudomatches(functool5, functool6)
 )
 ```
 
@@ -473,8 +455,8 @@ nodes
 links <- rbind(nodes, data.frame(
     source = as.character(pseudoMatches$source),
     target = as.character(pseudoMatches$target),
-    group = as.factor(rep("pseudomatches", nrow(pseudoMatches))),
-    value = rep(0.1, length(pseudoMatches))
+    group = as.character(pseudoMatches$type),
+    value = rep(0.1, nrow(pseudoMatches))
 ))
 
 links
@@ -487,18 +469,24 @@ links$IDtarget=match(links$target, nodes$name)-1
 nodes$group = as.factor(c(rep("tool1", length(functool1)),
                           rep("tool2", length(functool2)),
                           rep("tool3", length(functool3)),
-                          rep("tool4", length(functool4)),
+                          rep("tool4A", 8),
+                          rep("tool4B", 8),
+                          rep("tool4C", 8),
+                          rep("tool4D", 8),
+                          rep("tool4E", 8),
+                          rep("tool4F", 8),
                           rep("tool5", length(functool5)),
                           rep("tool6", length(functool6))))
 
-my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
+my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4A", "tool4B", "tool4C", "tool4D", "tool4E", "tool4F", "tool5", "tool6"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "orange", "yellow", "orange", "yellow", "orange", "orange", "pink"])'
+ 
  
 # Make the Network. I call my colour scale with the colourScale argument
-n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
+nwrk <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
                    Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
                    iterations = 0)
-n
-saveNetwork(n, "top100sankeyR-UPS.html", selfcontained = TRUE)
+nwrk
+saveNetwork(nwrk, "top100sankeyR-UPS.html", selfcontained = TRUE)
 ```
 
 

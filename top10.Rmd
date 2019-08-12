@@ -17,9 +17,10 @@ The goal here is to estimate the top *n* 'things' that are changing across WS an
 # Reading in data
 Necessary packages:
 ```{r message=FALSE}
-library(dplyr)
-library(kableExtra)
 library(data.table)
+library(GO.db)
+library(kableExtra)
+library(dplyr)
 ```
 
 ## Peptides
