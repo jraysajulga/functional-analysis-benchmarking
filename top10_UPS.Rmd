@@ -235,7 +235,7 @@ This is comparing the estimated fold changes for GO terms for the two tools that
 
 ```{r}
 um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
-png("um_cor.png", res = 700, width = 4, height = 4, units = "in")
+png("um_cor-UPS.png", res = 700, width = 4, height = 4, units = "in")
 plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3,
      xlab = "Unipept: Log2 Ratio",
      ylab = "MetaGOmics: Log2 Ratio")
@@ -290,7 +290,7 @@ rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
                             ups = head(ups$Entry, n),
-                            MPA = head(pAll$Protein.Description, n),
+                            MPA = head(mpa_ups$Protein.Description, n),
                         Unipept = head(unipept_all$Name, n))
 
 # Remove extra text
