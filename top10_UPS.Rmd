@@ -195,7 +195,7 @@ mpa_ups
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
-kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
+kable(head(mpa_ups, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
 
 
@@ -290,7 +290,7 @@ rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
                           MEGAN = head(megan$og, n),
                      metaGOmics = head(metagomics_filt$name, n),
                             ups = head(ups$Entry, n),
-                            MPA = head(mpa_ups$Protein.Description, n),
+                            MPA = head(mpa_ups$protein, n),
                         Unipept = head(unipept_all$Name, n))
 
 # Remove extra text
