@@ -284,6 +284,20 @@ kable(m2u)
 kable(u2m)
 ```
 
+```{r}
+ups_ranks <- data.frame(ups$Entry)
+ups_ranks$mpa <- sapply(ups_ranks$ups.Entry, function ( x ) {
+    paste(which(grepl(x, mpa_ups$protein)), collapse="; ")
+    })
+
+ups_ranks$unipept <- sapply(ups$GO.terms, function ( x ) {
+    ceiling(mean(which(sapply(unipept_all$GO.term, function ( y ) { grepl(y, x) }))))
+})
+ups_ranks
+#ups_ranks$mpa <- sapply(ups_ranks$Entry, function ( x ) {which(grepl(x, mpa_ups$protein))})
+```
+
+
 ## Top n Table
 ```{r}
 rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
