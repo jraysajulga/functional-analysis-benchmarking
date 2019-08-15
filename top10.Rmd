@@ -122,6 +122,14 @@ megan <- read.delim("MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
            corrNS = countNS + 1,
            log2ratio = log2(corrWS/corrNS)) %>%
     arrange(-log2ratio)
+megan_go <- read.delim("MEGAN_outputs/go_terms.txt",
+                        header = TRUE,
+                        stringsAsFactors = FALSE)
+# Double check that GO terms are in order (randomly check ten times for parity)
+sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
+    grepl(megan_go[n, "og"], megan[n, "og"])
+})
+megan$name <- sapply(strsplit(megan_go$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 ```
 
 Top *n* results:
