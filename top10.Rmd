@@ -17,10 +17,10 @@ The goal here is to estimate the top *n* 'things' that are changing across WS an
 # Reading in data
 Necessary packages:
 ```{r message=FALSE}
-library(data.table)
 library(GO.db)
-library(kableExtra)
+library(data.table)
 library(dplyr)
+library(kableExtra)
 ```
 
 ## Peptides
@@ -49,16 +49,18 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE) %>% 
     select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
-
+eggnog
 eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
-    group_by(protein, desc, gene) %>%
+    group_by(protein, desc, gene, go) %>%
     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
     arrange(-log2ratio) %>%
-    select(protein, gene, sumCountWS, sumCountNS, log2ratio, desc)
+    select(protein, go, gene, sumCountWS, sumCountNS, log2ratio, desc)
+eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 ```
+
 
 Top *N*:
 ```{r echo=FALSE, results='asis'}
@@ -291,8 +293,12 @@ write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 ### Top Unipept terms
 ```{r}
 getMatch <- function(gos1, gos2){
-    gos1 <- unique(unlist(strsplit(as.character(gos1), "; ")))
-    gos2 <- unique(unlist(strsplit(as.character(gos2), "; ")))
+    delimiter <- "; "
+    if (grepl(",",gos1) || grepl(",", gos2)){
+        delimiter <- ","
+    }
+    gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter)))
+    gos2 <- unique(unlist(strsplit(as.character(gos2), delimiter)))
     gos1 <- gos1[gos1 != "NA"]
     gos2 <- gos2[gos2 != "NA"]
     matched <- sapply(gos1, function ( go1 ) { 
@@ -302,36 +308,27 @@ getMatch <- function(gos1, gos2){
 }
 
 getMatches <- function(col_gos1, col_gos2){
-    matches <- as.data.frame(sapply(col_gos1, function ( gos1 ){
-        test1 <- lapply(col_gos2, function ( gos2){
+    matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){
+        ranks <- lapply(col_gos2, function ( gos2){
             getMatch(gos1, gos2)
         })
-        paste(which(test1 != ""), collapse=", ")
-    }))
-    colnames(matches) = "Ranks"
+        ranks <- paste(which(ranks != ""), collapse=", ")
+        if (ranks == "") { ranks = 0 }
+    })))
+    colnames(matches) <- "Ranks"
+    matches$name <- rownames(matches)
     matches
 }
 
 unipept_topn <- unipept_all$Name[1:10]
-#getMatches(eggnog_topn, megan$og)
-getMatches(unipept_topn, metagomics_filt$name)
-#megan$og
-#metagomics_filt$name
-#pAll$Protein.Description
-#unipept_all$Name
-#prophane$names
-#hello
-	# ups_ranks <- data.frame(ups$Entry)
-	# ups_ranks$mpa <- sapply(ups_ranks$ups.Entry, function ( x ) {
-	#     paste(which(grepl(x, mpa_ups$protein)), collapse="; ")
-	#     })
-	# 
-	# ups_ranks$unipept <- sapply(ups$GO.terms, function ( x ) {
-	#     ceiling(mean(which(sapply(unipept_all$GO.term, function ( y ) { grepl(y, x) }))))
-	# })
-	# ups_ranks
-	#ups_ranks$mpa <- sapply(ups_ranks$Entry, function ( x ) {which(grepl(x, mpa_ups$protein))})
+getMatches(unipept_topn, eggnog_w_counts$name[1:10])
+unipept_top_matches <- c(getMatches(unipept_topn, eggnog_w_counts$name[1:10]),
+                         #getMatches(unipept_topn, megan$og)
+                         getMatches(unipept_topn, metagomics_filt$name[1:10]),
+                         #getMatches(unipept_topn, pAll$Protein.Description)
+                         getMatches(unipept_topn, prophane$names[1:10]))
 ```
+
 	
 
 ```{r}
