@@ -338,7 +338,7 @@ unipept_top_matches <- plyr::join_all(
     list(getMatches(unipept_topn, eggnog_w_counts$name, "EggNOG"),
          getMatches(unipept_topn, megan$name, "MEGAN"),
          getMatches(unipept_topn, metagomics_filt$name, "MetaGOmics"),
-         #getMatches(unipept_topn, pAll$Protein.Description)
+         getMatches(unipept_topn, pAll$name, "MPA"),
          getMatches(unipept_topn, prophane$names, "Prophane")),
     by="name")
 unipept_top_matches
