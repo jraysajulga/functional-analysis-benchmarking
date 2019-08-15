@@ -21,6 +21,7 @@ library(GO.db)
 library(data.table)
 library(dplyr)
 library(kableExtra)
+library(stringr)
 ```
 
 ## Peptides
@@ -188,6 +189,10 @@ pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>
     mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
            log2ratio = log2(wsCount/nsCount)) %>%
     arrange(-log2ratio)
+pAll$name <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
+    goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
+    sapply(strsplit(goids, "; "), function ( x ) { paste(Term(x), collapse="; ")})
+}))
 ```
 
 Top *n*:
