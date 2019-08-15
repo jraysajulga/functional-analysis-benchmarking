@@ -286,6 +286,65 @@ rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)
 write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 ```
 
+## Let's look at how the top terms are ranked in other tools
+
+### Top Unipept terms
+```{r}
+unipept_topn <- unipept_all$Name[1:10]
+#getMatches(eggnog_topn, megan$og)
+getMatches(unipept_topn, prophane$names)
+#megan$og
+#metagomics_filt$name
+#pAll$Protein.Description
+#unipept_all$Name
+#prophane$names
+#hello
+	# ups_ranks <- data.frame(ups$Entry)
+	# ups_ranks$mpa <- sapply(ups_ranks$ups.Entry, function ( x ) {
+	#     paste(which(grepl(x, mpa_ups$protein)), collapse="; ")
+	#     })
+	# 
+	# ups_ranks$unipept <- sapply(ups$GO.terms, function ( x ) {
+	#     ceiling(mean(which(sapply(unipept_all$GO.term, function ( y ) { grepl(y, x) }))))
+	# })
+	# ups_ranks
+	#ups_ranks$mpa <- sapply(ups_ranks$Entry, function ( x ) {which(grepl(x, mpa_ups$protein))})
+```
+```{r}
+#prophane$names[1]
+#prophane$names[3]
+
+getMatch <- function(gos1, gos2){
+    gos1 <- unique(unlist(strsplit(gos1, "; ")))
+    gos2 <- unique(unlist(strsplit(gos2, "; ")))
+    gos1 <- gos1[gos1 != "NA"]
+    gos2 <- gos2[gos2 != "NA"]
+    matched <- sapply(gos1, function ( go1 ) { 
+        if(go1 %in% gos2){ go1 }
+    })
+    paste(unlist(matched), collapse="; ")
+}
+
+getMatches <- function(col_gos1, col_gos2){
+    matches <- as.data.frame(sapply(col_gos1, function ( gos1 ){
+        test1 <- lapply(col_gos2, function ( gos2){
+            getMatch(gos1, gos2)
+        })
+        paste(which(test1 != ""), collapse=", ")
+    }))
+    colnames(matches) = "Ranks"
+    matches
+}
+col1 <- prophane$names[1:2]
+col2 <- prophane$names[3:10]
+col1[1] <- paste("<1A>", col1[1], collapse=" ")
+col1[2] <- paste("<1B>", col1[2], collapse=" ")
+col2[1] <- paste("<2A>", col2[1], collapse=" ")
+col2[2] <- paste("<2B>", col2[2], collapse=" ")
+test <- getMatches(col1, col2)
+test
+```
+	
 
 ```{r}
 n <- 100
