@@ -337,7 +337,7 @@ unipept_top_matches <- plyr::join_all(
          getMatches(unipept_topn, prophane$names, "Prophane")),
     by="name")
 unipept_top_matches
-write.table(unipept_top_matches, "unipept_top_matches.tabular", sep="\t", quote = TRUE)
+write.table(unipept_top_matches, "unipept_top_matches.tabular", sep="\t", quote = FALSE)
 ```
 
 
