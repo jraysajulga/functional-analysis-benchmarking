@@ -325,7 +325,9 @@ getMatches <- function(col_gos1, col_gos2, name){
         ranks <- lapply(col_gos2, function ( gos2){
             getMatch(gos1, gos2)
         })
-        paste(which(ranks != ""), collapse=", ")
+        paste(as.character(sapply(which(ranks != ""),
+                     function ( rank ){ ceiling(rank / length(col_gos2) * 100) })),
+              collapse=", ")
     })))
     colnames(matches) <- name
     matches$name <- rownames(matches)
