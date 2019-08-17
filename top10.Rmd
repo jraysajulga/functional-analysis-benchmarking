@@ -420,6 +420,7 @@ unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( i
 }))
 colnames(unipept_nodes_final) <- colnames(unipept_nodes)
 unipept_nodes_final$header <- c(unipept_topn, 1:100)
+unipept_nodes_final <- unipept_nodes_final[,c(6,1,2,3,4,5)]
 
 # Make each path unique by adding spaces after each one 
 unipept_paths_final <- data.frame(unipept_paths)
