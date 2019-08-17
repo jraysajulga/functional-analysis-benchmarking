@@ -389,9 +389,19 @@ unipept_paths <- rbind(tool1$paths,
                        tool3$paths,
                        tool4$paths,
                        tool5$paths)
-tool1$nodes
-#unipept_paths
+unipept_nodes <- data.frame("EggNOG" = tool1$nodes,
+                            "MEGAN" = tool2$nodes,
+                            "MetaGOmics" = tool3$nodes,
+                            "MPA" = tool4$nodes,
+                            "Prophane" = tool5$nodes)
+unipept_nodes
 unipept_top_matches
+```
+```{r}
+# Make each node unique by adding spaces after each one
+unipept_nodes_unique <- sapply(1:length(unipept_nodes), function( index ) { 
+    sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",110 * (index - 1)), collapse=""), collapse="")})
+})
 ```
 
 
