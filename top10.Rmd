@@ -321,6 +321,10 @@ getMatch <- function(gos1, gos2){
 }
 
 getMatches <- function(col_gos1, col_gos2, name){
+    paths <- data.frame(Source = character(),
+                        Target = character(),
+                        Group = character(),
+                        Value = numeric())
     matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){
         ranks <- lapply(col_gos2, function ( gos2){
             getMatch(gos1, gos2)
@@ -337,6 +341,13 @@ getMatches <- function(col_gos1, col_gos2, name){
             rank_list <- consolidator$rank_list
             perc_list <- consolidator$perc_list
             
+            # Extract pathing information
+            path <- consolidator %>% mutate(Source = gos1,
+                                            Group = name,
+                                            Value = str_count(rank_list, "/") + 1) %>%
+                select(Source, Target = perc_list, Value, Group)
+            paths <<- rbind(paths, path)
+            
             paste(paste(rank_list, collapse=", "), 
                   " (",
                   paste(perc_list, collapse=", "),
@@ -347,24 +358,29 @@ getMatches <- function(col_gos1, col_gos2, name){
     })))
     colnames(matches) <- name
     matches$name <- rownames(matches)
-    matches[,c(2,1)]
+    out <- list()
+    out$matches <- matches[,c(2,1)]
+    out$paths <- paths
+    return(out)
 }
 
 unipept_topn <- unipept_all$Name[1:10]
 
+tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], "EggNOG")
+print(tool1$matches)
+tool2 <- getMatches(unipept_topn, megan$name[1:200], "MEGAN")
+tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], "MetaGOmics")
+tool4 <- getMatches(unipept_topn, pAll$name[1:200], "MPA")
+tool5 <- getMatches(unipept_topn, prophane$names[1:200], "Prophane")
 unipept_top_matches <- plyr::join_all(
-    list(getMatches(unipept_topn, eggnog_w_counts$name, "EggNOG"),
-         getMatches(unipept_topn, megan$name, "MEGAN"),
-         getMatches(unipept_topn, metagomics_filt$name, "MetaGOmics"),
-         getMatches(unipept_topn, pAll$name, "MPA"),
-         getMatches(unipept_topn, prophane$names, "Prophane")),
+        list(tool1$matches,
+             tool2$matches,
+            tool3$matches,
+            tool4$matches,
+            tool5$matches),
     by="name")
+tool1$paths
 unipept_top_matches
-```
-```{r}
-
-# Assign ranks to percentile slots in 100-frame
-
 ```
 
 
