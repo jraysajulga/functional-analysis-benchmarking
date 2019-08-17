@@ -325,12 +325,22 @@ getMatches <- function(col_gos1, col_gos2, name){
         ranks <- lapply(col_gos2, function ( gos2){
             getMatch(gos1, gos2)
         })
-        rank_list <- paste(which(ranks != ""), collapse=", ")
-        perc_list <- paste(as.character(sapply(which(ranks != ""),
-                                               function ( rank ){ ceiling(rank / length(col_gos2) * 100) })),
-                           collapse=", ")
-        if (rank_list != "") {
-            paste(rank_list, " (", perc_list, ")", sep="")
+        rank_list <- which(ranks != "")
+        perc_list <- as.character(sapply(which(ranks != ""),
+                                               function ( rank ){ ceiling(rank / length(col_gos2) * 100) }))
+        if (length(rank_list) != 0) {
+            # Consolidate ranks with same percentile 
+            consolidator <- data.frame(rank_list,
+                                       perc_list) %>%
+                group_by(perc_list) %>%
+                summarise_all(function ( x ) { paste(x, collapse=" / ") })
+            rank_list <- consolidator$rank_list
+            perc_list <- consolidator$perc_list
+            
+            paste(paste(rank_list, collapse=", "), 
+                  " (",
+                  paste(perc_list, collapse=", "),
+                  ")", sep="")
         } else {
             ""
         }
@@ -350,6 +360,11 @@ unipept_top_matches <- plyr::join_all(
          getMatches(unipept_topn, prophane$names, "Prophane")),
     by="name")
 unipept_top_matches
+```
+```{r}
+
+# Assign ranks to percentile slots in 100-frame
+
 ```
 
 
