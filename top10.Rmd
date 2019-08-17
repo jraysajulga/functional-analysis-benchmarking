@@ -333,7 +333,18 @@ getMatches <- function(col_gos1, col_gos2, name){
         })
         rank_list <- which(ranks != "")
         top_list <- rank_list[as.numeric(rank_list) <= 10]
-        nodes[top_list] <<- as.character(top_list)
+        
+        # Set up nodes and paths from top 10 matches
+        if (length(top_list) != 0){
+            nodes[top_list] <<- as.character(top_list)
+            path <- data.frame(Target = as.character(top_list)) %>%
+                mutate(Source = gos1,
+                       Value = 1,
+                       Group = name) %>%
+                select(Source, Target, Value, Group)
+            paths <<- rbind(paths, path)
+        }
+        
         rank_list <- rank_list[as.numeric(rank_list) > 10]
         perc_list <- as.character(sapply(which(ranks != ""),
                                                function ( rank ){ ceiling(rank / length(col_gos2) * 100) }))
@@ -415,6 +426,10 @@ unipept_paths_unique$Target <- sapply(1:nrow(unipept_paths), function ( x ) {
     paste(unipept_paths[x,]$Target, paste(rep(" ",110 * (index - 1)), collapse=""), sep="") } )
 ```
 
+```{r}
+unipept_nodes_unique
+unipept_paths_unique
+```
 
 ```{r}
 library(networkD3)
