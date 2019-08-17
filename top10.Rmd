@@ -339,7 +339,7 @@ getMatches <- function(col_gos1, col_gos2, name){
             nodes[top_list] <<- as.character(top_list)
             path <- data.frame(Target = as.character(top_list)) %>%
                 mutate(Source = gos1,
-                       Value = 1,
+                       Value = 0.1,
                        Group = name) %>%
                 select(Source, Target, Value, Group)
             paths <<- rbind(paths, path)
@@ -360,7 +360,7 @@ getMatches <- function(col_gos1, col_gos2, name){
             # Extract pathing information
             path <- consolidator %>% mutate(Source = gos1,
                                             Group = name,
-                                            Value = str_count(rank_list, "/") + 1) %>%
+                                            Value = (str_count(rank_list, "/") + 1) * 0.1) %>%
                 select(Source, Target = perc_list, Value, Group)
             paths <<- rbind(paths, path)
             
@@ -415,20 +415,22 @@ unipept_top_matches
 
 ```{r}
 # Make each node unique by adding spaces after each one
-unipept_nodes_unique <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
+unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
     sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",110 * (index - 1)), collapse=""), sep="")})
 }))
-colnames(unipept_nodes_unique) <- colnames(unipept_nodes)
+colnames(unipept_nodes_final) <- colnames(unipept_nodes)
+unipept_nodes_final$header <- c(unipept_topn, 1:100)
 
 # Make each path unique by adding spaces after each one 
-unipept_paths_unique$Target <- sapply(1:nrow(unipept_paths), function ( x ) { 
+unipept_paths_final <- data.frame(unipept_paths)
+unipept_paths_final$Target <- sapply(1:nrow(unipept_paths), function ( x ) { 
     index <- which(colnames(unipept_nodes) == unipept_paths[x,]$Group)
     paste(unipept_paths[x,]$Target, paste(rep(" ",110 * (index - 1)), collapse=""), sep="") } )
 ```
 
 ```{r}
-unipept_nodes_unique
-unipept_paths_unique
+unipept_nodes_final
+unipept_paths_final
 ```
 
 ```{r}
