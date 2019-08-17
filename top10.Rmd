@@ -379,7 +379,12 @@ unipept_top_matches <- plyr::join_all(
             tool4$matches,
             tool5$matches),
     by="name")
-tool1$paths
+unipept_paths <- rbind(tool1$paths,
+                       tool2$paths,
+                       tool3$paths,
+                       tool4$paths,
+                       tool5$paths)
+unipept_paths
 unipept_top_matches
 ```
 
