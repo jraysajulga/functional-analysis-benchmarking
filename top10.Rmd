@@ -22,6 +22,8 @@ library(data.table)
 library(dplyr)
 library(kableExtra)
 library(stringr)
+library(networkD3)
+library(tidyverse)
 ```
 
 ## Peptides
@@ -440,36 +442,28 @@ sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
                                    value = 1))
 })
 framework
+unipept_paths_final
+```
+```{r}
+#c(framework$source, unipept_nodes_final[, length(unipept_nodes_final)])
+
 ```
 
 ```{r}
-library(networkD3)
-library(tidyverse)
-
-values <- c()
-values[1:(length(functool1) * 4)] <- 1
-values[(length(functool1) * 4 + 1):(length(functool1) * 4 + nrow(matches) + nrow(pseudoMatches))] <- .1
-#values <- "1"
-
 # Make a connection data frame
-links=data.frame(
-    source=c(as.character(functool1), as.character(functool2), as.character(functool3), as.character(functool4), as.character(matches$source), as.character(pseudoMatches$source)),
-    target=c(as.character(functool2), as.character(functool3), as.character(functool4), as.character(functool5), as.character(matches$target), as.character(pseudoMatches$target)),
-    group=as.factor(c(rep("invisible", length(functool1) * 4), rep("matches", nrow(matches)), rep("pseudomatches", nrow(pseudoMatches)))),
-    value= c(values))
-# A3, D2, .5
-links
+links <- rbind(framework, unipept_paths_final)
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
 nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
-nodes$group = as.factor(c(rep("tool1", length(functool1)),
-                          rep("tool2", length(functool2)),
-                          rep("tool3", length(functool3)),
-                          rep("tool4", length(functool4)),
-                          rep("tool5", length(functool5))))
+nodes <- nodes %>% mutate(group = ifelse(gsub(" ", "", name) == "", "invisible", "block"))
+#nodes$group = as.factor(c(rep("topn", 10),
+ #                         rep("labels", 100),
+  #                        rep("tool3", length(functool3)),
+   #                       rep("tool4", length(functool4)),
+    #                      rep("tool5", length(functool5))))
 
 my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
  
@@ -479,6 +473,13 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
                    iterations = 0)
 n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
+```
+```{r}
+a <- "     "
+b <- "   d  "
+c <- "   f"
+gsub(" ", "", c(a,b,c))
+ifelse(FALSE, 4, 2)
 ```
 
 
