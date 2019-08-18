@@ -418,7 +418,7 @@ unipept_top_matches
 ```{r}
 # Make each node unique by adding spaces after each one
 unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
-    sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",110 * (index - 1)), collapse=""), sep="")})
+    sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",110 * index), collapse=""), sep="")})
 }))
 colnames(unipept_nodes_final) <- colnames(unipept_nodes)
 unipept_nodes_final$header <- c(unipept_topn, 1:100)
@@ -428,7 +428,8 @@ unipept_nodes_final <- unipept_nodes_final[,c(6,1,2,3,4,5)]
 unipept_paths_final <- data.frame(unipept_paths)
 unipept_paths_final$target <- sapply(1:nrow(unipept_paths), function ( x ) { 
     index <- which(colnames(unipept_nodes) == unipept_paths[x,]$group)
-    paste(unipept_paths[x,]$target, paste(rep(" ",110 * (index - 1)), collapse=""), sep="") } )
+    paste(unipept_paths[x,]$target, paste(rep(" ",110 * index), collapse=""), sep="") } )
+unipept_nodes_final
 ```
 
 ```{r}
@@ -441,13 +442,9 @@ sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
                                    group = "invisible",
                                    value = 1))
 })
-framework
 unipept_paths_final
 ```
-```{r}
-#c(framework$source, unipept_nodes_final[, length(unipept_nodes_final)])
 
-```
 
 ```{r}
 # Make a connection data frame
@@ -465,7 +462,7 @@ nodes <- nodes %>% mutate(group = ifelse(gsub(" ", "", name) == "", "invisible",
    #                       rep("tool4", length(functool4)),
     #                      rep("tool5", length(functool5))))
 
-my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
+my_color <- 'd3.scaleOrdinal() .domain(["invisible", "matches", "pseudomatches", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["gray", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
  
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
