@@ -470,7 +470,7 @@ links <- rbind(framework, unipept_paths_final)
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
 nodes=data.frame(name=c(as.character(framework$source),
-                        as.character(nodes$name[(nrow(framework) + 1):nrow(nodes)])) %>% unique())
+                        as.character(unipept_nodes_final[,length(unipept_nodes_final)])))
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
