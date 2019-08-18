@@ -504,7 +504,7 @@ my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "top", "',
                   tool2_label, '", "',
                   tool3_label, '", "',
                   tool4_label, '", "',
-                  tool5_label, '"]) .range(["white", "black", "yellow", "red", "blue", "green", "orange", "purple"])', sep="")
+                  tool5_label, '"]) .range(["white", "black", "#ffe070", "red", "blue", "green", "orange", "purple"])', sep="")
 
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
