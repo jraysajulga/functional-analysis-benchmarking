@@ -388,11 +388,17 @@ getMatches <- function(col_gos1, col_gos2, name){
 
 unipept_topn <- unipept_all$Name[1:10]
 
-tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, "EggNOG")
-tool2 <- getMatches(unipept_topn, megan$name, "MEGAN")
-tool3 <- getMatches(unipept_topn, metagomics_filt$name, "MetaGOmics")
-tool4 <- getMatches(unipept_topn, pAll$name, "MPA")
-tool5 <- getMatches(unipept_topn, prophane$names, "Prophane")
+tool1_label <- "EggNOG"
+tool2_label <- "MEGAN"
+tool3_label <- "MetaGOmics"
+tool4_label <- "MPA"
+tool5_label <- "Prophane"
+
+tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
+tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
+tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], tool3_label)
+tool4 <- getMatches(unipept_topn, pAll$name[1:200], tool4_label)
+tool5 <- getMatches(unipept_topn, prophane$names[1:200], tool5_label)
 unipept_top_matches <- plyr::join_all(
         list(tool1$matches,
              tool2$matches,
@@ -405,11 +411,16 @@ unipept_paths <- rbind(tool1$paths,
                        tool3$paths,
                        tool4$paths,
                        tool5$paths)
-unipept_nodes <- data.frame("EggNOG" = tool1$nodes,
-                            "MEGAN" = tool2$nodes,
-                            "MetaGOmics" = tool3$nodes,
-                            "MPA" = tool4$nodes,
-                            "Prophane" = tool5$nodes)
+unipept_nodes <- data.frame(tool1$nodes,
+                            tool2$nodes,
+                            tool3$nodes,
+                            tool4$nodes,
+                            tool5$nodes)
+colnames(unipept_nodes) <- c(tool1_label,
+                             tool2_label,
+                             tool3_label,
+                             tool4_label,
+                             tool5_label)
 unipept_nodes
 unipept_top_matches
 ```
@@ -463,8 +474,8 @@ nodes <- nodes %>% mutate(group = ifelse(gsub(" ", "", name) == "", "invisible",
    #                       rep("tool4", length(functool4)),
     #                      rep("tool5", length(functool5))))
 
-my_color <- 'd3.scaleOrdinal() .domain(["invisible", "tool1", "tool2", "tool3", "tool4", "tool5"]) .range(["white", "blue", "orange", "green", "purple", "red", "yellow", "black"])'
- 
+my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "', tool1_label, '", "', tool2_label, '", "', tool3_label, '", "', tool4_label, '", "', tool5_label, '"]) .range(["white", "black", "red", "orange", "yellow", "purple", "blue"])', sep="")
+my_color
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
                    Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
