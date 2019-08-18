@@ -341,7 +341,7 @@ getMatches <- function(col_gos1, col_gos2, name){
             nodes[top_list] <<- as.character(top_list)
             path <- data.frame(target = as.character(top_list)) %>%
                 mutate(source = gos1,
-                       value = 0.1,
+                       value = 0.01,
                        group = name) %>%
                 select(source, target, value, group)
             paths <<- rbind(paths, path)
@@ -513,29 +513,3 @@ n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "
 n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
-
-```{r}
-for (source in unipept_paths_final$source){
-    print(source)
-    paths <- links[links$source == source,] %>% filter (group != "invisible")
-    print(paths)
-    print(sum(paths$value))
-    links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
-}
-```
-
-```{r}
-unipept_paths_final
-for (source in unipept_paths_final$source){
-    paths <- links[links$source == term,] %>% filter (group != "invisible")
-    links[links$source == source & links$group == "invisible",]$value =
-        links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
-}
-for (target in unipept_paths_final$target){
-    paths <- links[links$target == term,] %>% filter (group != "invisible")
-    links[links$target == source & links$group == "invisible",]$value =
-        links[links$target == target & links$group == "invisible",]$value - sum(paths$value)
-}
-````
-
-
