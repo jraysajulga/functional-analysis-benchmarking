@@ -327,7 +327,7 @@ getMatches <- function(col_gos1, col_gos2, name){
                         target = character(),
                         group = character(),
                         value = numeric())
-    nodes <- sapply(1:110, function ( x ) { paste(rep(" ", x), collapse="") })
+    nodes <- sapply(1:20, function ( x ) { paste(rep(" ", x), collapse="") })
     
     matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){
         ranks <- lapply(col_gos2, function ( gos2){
@@ -349,7 +349,7 @@ getMatches <- function(col_gos1, col_gos2, name){
         
         rank_list <- rank_list[as.numeric(rank_list) > 10]
         perc_list <- as.character(sapply(which(ranks != ""),
-                                               function ( rank ){ ceiling(rank / length(col_gos2) * 100) }))
+                                               function ( rank ){ ceiling(rank / length(col_gos2) * 10) }))
         if (length(rank_list) != 0) {
             # Consolidate ranks with same percentile 
             consolidator <- data.frame(rank_list,
@@ -363,11 +363,11 @@ getMatches <- function(col_gos1, col_gos2, name){
             path <- consolidator %>% mutate(source = gos1,
                                             group = name,
                                             value = (str_count(rank_list, "/") + 1) * 0.1) %>%
-                select(source, target = rank_list, value, group)
+                select(source, target = perc_list, value, group)
             paths <<- rbind(paths, path)
             
             # Set up node information
-            nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(rank_list)
+            nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(perc_list)
             
             paste(paste(rank_list, collapse=", "), 
                   " (",
@@ -429,17 +429,17 @@ unipept_top_matches
 ```{r}
 # Make each node unique by adding spaces after each one
 unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
-    sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",110 * index), collapse=""), sep="")})
+    sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
 }))
 colnames(unipept_nodes_final) <- colnames(unipept_nodes)
-unipept_nodes_final$header <- c(unipept_topn, 1:100)
+unipept_nodes_final$header <- c(unipept_topn, 1:10)
 unipept_nodes_final <- unipept_nodes_final[,c(6,1,2,3,4,5)]
 
 # Make each path unique by adding spaces after each one 
 unipept_paths_final <- data.frame(unipept_paths)
 unipept_paths_final$target <- sapply(1:nrow(unipept_paths), function ( x ) { 
     index <- which(colnames(unipept_nodes) == unipept_paths[x,]$group)
-    paste(unipept_paths[x,]$target, paste(rep(" ",110 * index), collapse=""), sep="") } )
+    paste(unipept_paths[x,]$target, paste(rep(" ",20 * index), collapse=""), sep="") } )
 unipept_nodes_final
 unipept_paths_final
 ```
