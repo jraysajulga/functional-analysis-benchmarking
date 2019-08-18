@@ -399,6 +399,11 @@ tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
 tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], tool3_label)
 tool4 <- getMatches(unipept_topn, pAll$name[1:200], tool4_label)
 tool5 <- getMatches(unipept_topn, prophane$names[1:200], tool5_label)
+# tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
+# tool2 <- getMatches(unipept_topn, megan$name, tool2_label)
+# tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
+# tool4 <- getMatches(unipept_topn, pAll$name, tool4_label)
+# tool5 <- getMatches(unipept_topn, prophane$names, tool5_label)
 unipept_top_matches <- plyr::join_all(
         list(tool1$matches,
              tool2$matches,
@@ -457,13 +462,13 @@ sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
 unipept_paths_final
 ```
 
-
 ```{r}
 # Make a connection data frame
 links <- rbind(framework, unipept_paths_final)
  
 # From these flows we need to create a node data frame: it lists every entities involved in the flow
-nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) %>% unique())
+nodes=data.frame(name=c(as.character(framework$source),
+                        as.character(nodes$name[(nrow(framework) + 1):nrow(nodes)])) %>% unique())
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
@@ -480,11 +485,6 @@ nodes <- nodes %>% mutate(group = c(rep("block", 10),
                                     rep("top", 10),
                                     ifelse(gsub(" ", "", as.character(name[111:120])) == "", "invisible", tool5_label)))
 nodes
-#nodes$group = as.factor(c(rep("topn", 10),
- #                         rep("labels", 100),
-  #                        rep("tool3", length(functool3)),
-   #                       rep("tool4", length(functool4)),
-    #                      rep("tool5", length(functool5))))
 
 my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "top", "',
                   tool1_label, '", "',
@@ -501,13 +501,8 @@ n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
 ```{r}
-rep(5,20)
-a <- "     "
-b <- "   d  "
-c <- "   f"
-grepl("\\w", c(a,b,c))
-#gsub(" ", "", c(a,b,c))
-#ifelse(FALSE, 4, 2)
+#links[links$source == "peptide deformylase activity",]
+#links[links$ == "peptide deformylase activity",]
 ```
 
 
