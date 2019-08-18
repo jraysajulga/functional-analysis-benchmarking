@@ -191,6 +191,7 @@ pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>
     mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
            log2ratio = log2(wsCount/nsCount)) %>%
     arrange(-log2ratio)
+mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 pAll$name <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
     goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
     sapply(strsplit(goids, "; "), function ( x ) { paste(Term(x), collapse="; ")})
@@ -394,11 +395,12 @@ tool3_label <- "MetaGOmics"
 tool4_label <- "MPA"
 tool5_label <- "Prophane"
 
-tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
-tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
-tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], tool3_label)
-tool4 <- getMatches(unipept_topn, pAll$name[1:200], tool4_label)
-tool5 <- getMatches(unipept_topn, prophane$names[1:200], tool5_label)
+tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
+tool2 <- getMatches(unipept_topn, megan$name, tool2_label)
+tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
+tool4 <- getMatches(unipept_topn, pAll$name, tool4_label)
+tool5 <- getMatches(unipept_topn, prophane$names, tool5_label)
+
 # tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
 # tool2 <- getMatches(unipept_topn, megan$name, tool2_label)
 # tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
