@@ -474,7 +474,7 @@ nodes <- nodes %>% mutate(group = ifelse(gsub(" ", "", name) == "", "invisible",
    #                       rep("tool4", length(functool4)),
     #                      rep("tool5", length(functool5))))
 
-my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "', tool1_label, '", "', tool2_label, '", "', tool3_label, '", "', tool4_label, '", "', tool5_label, '"]) .range(["white", "black", "red", "orange", "yellow", "purple", "blue"])', sep="")
+my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "', tool1_label, '", "', tool2_label, '", "', tool3_label, '", "', tool4_label, '", "', tool5_label, '"]) .range(["white", "black", "red", "blue", "green", "orange", "purple"])', sep="")
 my_color
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
