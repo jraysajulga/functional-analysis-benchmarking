@@ -321,10 +321,10 @@ getMatch <- function(gos1, gos2){
 }
 
 getMatches <- function(col_gos1, col_gos2, name){
-    paths <- data.frame(Source = character(),
-                        Target = character(),
-                        Group = character(),
-                        Value = numeric())
+    paths <- data.frame(source = character(),
+                        target = character(),
+                        group = character(),
+                        value = numeric())
     nodes <- sapply(1:110, function ( x ) { paste(rep(" ", x), collapse="") })
     
     matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){
@@ -337,11 +337,11 @@ getMatches <- function(col_gos1, col_gos2, name){
         # Set up nodes and paths from top 10 matches
         if (length(top_list) != 0){
             nodes[top_list] <<- as.character(top_list)
-            path <- data.frame(Target = as.character(top_list)) %>%
-                mutate(Source = gos1,
-                       Value = 0.1,
-                       Group = name) %>%
-                select(Source, Target, Value, Group)
+            path <- data.frame(target = as.character(top_list)) %>%
+                mutate(source = gos1,
+                       value = 0.1,
+                       group = name) %>%
+                select(source, target, value, group)
             paths <<- rbind(paths, path)
         }
         
@@ -358,10 +358,10 @@ getMatches <- function(col_gos1, col_gos2, name){
             perc_list <- consolidator$perc_list
             
             # Extract pathing information
-            path <- consolidator %>% mutate(Source = gos1,
-                                            Group = name,
-                                            Value = (str_count(rank_list, "/") + 1) * 0.1) %>%
-                select(Source, Target = perc_list, Value, Group)
+            path <- consolidator %>% mutate(source = gos1,
+                                            group = name,
+                                            value = (str_count(rank_list, "/") + 1) * 0.1) %>%
+                select(source, target = perc_list, value, group)
             paths <<- rbind(paths, path)
             
             # Set up node information
@@ -424,9 +424,9 @@ unipept_nodes_final <- unipept_nodes_final[,c(6,1,2,3,4,5)]
 
 # Make each path unique by adding spaces after each one 
 unipept_paths_final <- data.frame(unipept_paths)
-unipept_paths_final$Target <- sapply(1:nrow(unipept_paths), function ( x ) { 
-    index <- which(colnames(unipept_nodes) == unipept_paths[x,]$Group)
-    paste(unipept_paths[x,]$Target, paste(rep(" ",110 * (index - 1)), collapse=""), sep="") } )
+unipept_paths_final$target <- sapply(1:nrow(unipept_paths), function ( x ) { 
+    index <- which(colnames(unipept_nodes) == unipept_paths[x,]$group)
+    paste(unipept_paths[x,]$target, paste(rep(" ",110 * (index - 1)), collapse=""), sep="") } )
 ```
 
 ```{r}
