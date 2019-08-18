@@ -430,8 +430,16 @@ unipept_paths_final$Target <- sapply(1:nrow(unipept_paths), function ( x ) {
 ```
 
 ```{r}
-unipept_nodes_final
-unipept_paths_final
+# Set up node framework
+framework <- data.frame()
+sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
+    framework <<- rbind(framework, 
+                        data.frame(source = unipept_nodes_final[,i],
+                                   target = unipept_nodes_final[,i + 1],
+                                   group = "invisible",
+                                   value = 1))
+})
+framework
 ```
 
 ```{r}
