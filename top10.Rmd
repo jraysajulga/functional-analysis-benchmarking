@@ -362,7 +362,7 @@ getMatches <- function(col_gos1, col_gos2, name){
             # Extract pathing information
             path <- consolidator %>% mutate(source = gos1,
                                             group = name,
-                                            value = (str_count(rank_list, "/") + 1) * 0.1) %>%
+                                            value = (str_count(rank_list, "/") + 1) * 0.01) %>%
                 select(source, target = perc_list, value, group)
             paths <<- rbind(paths, path)
             
@@ -467,15 +467,32 @@ nodes=data.frame(name=c(as.character(links$source), as.character(links$target)) 
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
-nodes <- nodes %>% mutate(group = ifelse(gsub(" ", "", name) == "", "invisible", "block"))
+nodes <- nodes %>% mutate(group = c(rep("block", 10),
+                                    rep("invisible", 10),
+                                    rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[31:40])) == "", "invisible", tool1_label),
+                                    rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[51:60])) == "", "invisible", tool2_label),
+                                    rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[71:80])) == "", "invisible", tool3_label),
+                                    rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[91:100])) == "", "invisible", tool4_label),
+                                    rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[111:120])) == "", "invisible", tool5_label)))
+nodes
 #nodes$group = as.factor(c(rep("topn", 10),
  #                         rep("labels", 100),
   #                        rep("tool3", length(functool3)),
    #                       rep("tool4", length(functool4)),
     #                      rep("tool5", length(functool5))))
 
-my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "', tool1_label, '", "', tool2_label, '", "', tool3_label, '", "', tool4_label, '", "', tool5_label, '"]) .range(["white", "black", "red", "blue", "green", "orange", "purple"])', sep="")
-my_color
+my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "top", "',
+                  tool1_label, '", "',
+                  tool2_label, '", "',
+                  tool3_label, '", "',
+                  tool4_label, '", "',
+                  tool5_label, '"]) .range(["white", "black", "yellow", "red", "blue", "green", "orange", "purple"])', sep="")
+
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
                    Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
@@ -484,11 +501,13 @@ n
 saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
 ```{r}
+rep(5,20)
 a <- "     "
 b <- "   d  "
 c <- "   f"
-gsub(" ", "", c(a,b,c))
-ifelse(FALSE, 4, 2)
+grepl("\\w", c(a,b,c))
+#gsub(" ", "", c(a,b,c))
+#ifelse(FALSE, 4, 2)
 ```
 
 
