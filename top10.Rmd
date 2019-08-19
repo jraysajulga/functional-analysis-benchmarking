@@ -350,7 +350,7 @@ getMatches <- function(col_gos1, col_gos2, name){
         }
         
         rank_list <- rank_list[as.numeric(rank_list) > 10]
-        perc_list <- as.character(sapply(which(ranks != ""),
+        perc_list <- as.character(sapply(rank_list,
                                                function ( rank ){ ceiling(rank / length(col_gos2) * 10) }))
         if (length(rank_list) != 0) {
             # Consolidate ranks with same percentile 
@@ -388,19 +388,19 @@ getMatches <- function(col_gos1, col_gos2, name){
     return(out)
 }
 
-unipept_topn <- unipept_all$Name[1:10]
+unipept_topn <- megan$name[1:10]
 
 tool1_label <- "EggNOG"
-tool2_label <- "MEGAN"
-tool3_label <- "MetaGOmics"
-tool4_label <- "MPA"
-tool5_label <- "Prophane"
+tool2_label <- "MetaGOmics"
+tool3_label <- "MPA"
+tool4_label <- "Prophane"
+tool5_label <- "Unipept"
 
 tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
-tool2 <- getMatches(unipept_topn, megan$name, tool2_label)
-tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
-tool4 <- getMatches(unipept_topn, pAll$name, tool4_label)
-tool5 <- getMatches(unipept_topn, prophane$names, tool5_label)
+tool2 <- getMatches(unipept_topn, metagomics_filt$name, tool2_label)
+tool3 <- getMatches(unipept_topn, pAll$name, tool3_label)
+tool4 <- getMatches(unipept_topn, prophane$names, tool4_label)
+tool5 <- getMatches(unipept_topn, unipept_all$Name, tool5_label)
 
 # tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
 # tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
