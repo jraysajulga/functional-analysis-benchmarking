@@ -310,7 +310,8 @@ write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 ```{r}
 getMatch <- function(gos1, gos2){
     delimiter <- "; "
-    if (grepl(",",gos1) || grepl(",", gos2)){
+    if ((grepl(",", gos1) & !grepl(";", gos1)) ||
+        (grepl(",", gos2) & !grepl(";", gos2))){
         delimiter <- ","
     }
     gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter)))
@@ -364,7 +365,8 @@ getMatches <- function(col_gos1, col_gos2, name){
             # Extract pathing information
             path <- consolidator %>% mutate(source = gos1,
                                             group = name,
-                                            value = (str_count(rank_list, "/") + 1) * 0.01) %>%
+                                            #value = (str_count(rank_list, "/") + 1) * 0.01) %>%
+                                            value = .01) %>%
                 select(source, target = perc_list, value, group)
             paths <<- rbind(paths, path)
             
@@ -388,7 +390,16 @@ getMatches <- function(col_gos1, col_gos2, name){
     return(out)
 }
 
-unipept_topn <- megan$name[1:10]
+unipept_topn <- c("acetolactate synthase activity", # COG0028
+                  "2-isopropylmalate synthase activity", #COG0119
+                  "beta-N-acetylhexosaminidase activity", # ec 3.2.1.52
+                  "cysteine-type endopeptidase activity; cysteine-type peptidase activity", # COG3579 aminopeptidase c
+                  "ethanolamine kinase activity", # COG0510
+                  "choline-phosphate cytidylyltransferase activity; cytidylyltransferase activity", # COG4750
+                  "alcohol dehydrogenase (NAD) activity", # COG1979
+                  "6-phosphogluconolactonase activity", # COG2706 6-phosphogluconolactonase
+                  "7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase activity", # COG1060
+                  "sulfuric ester hydrolase activity") # COG1368
 
 tool1_label <- "EggNOG"
 tool2_label <- "MetaGOmics"
@@ -432,7 +443,6 @@ colnames(unipept_nodes) <- c(tool1_label,
 unipept_nodes
 unipept_top_matches
 ```
-
 
 ```{r}
 # Make each node unique by adding spaces after each one
