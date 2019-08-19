@@ -339,8 +339,9 @@ getMatches <- function(col_gos1, col_gos2, name){
         
         # Set up nodes and paths from top 10 matches
         if (length(top_list) != 0){
-            nodes[top_list] <<- as.character(top_list)
-            path <- data.frame(target = as.character(top_list)) %>%
+            topn <- paste("[", as.character(top_list), "]", sep="")
+            nodes[top_list] <<- topn
+            path <- data.frame(target = topn) %>%
                 mutate(source = gos1,
                        value = 0.01,
                        group = name) %>%
@@ -401,11 +402,11 @@ tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
 tool4 <- getMatches(unipept_topn, pAll$name, tool4_label)
 tool5 <- getMatches(unipept_topn, prophane$names, tool5_label)
 
-# tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
-# tool2 <- getMatches(unipept_topn, megan$name, tool2_label)
-# tool3 <- getMatches(unipept_topn, metagomics_filt$name, tool3_label)
-# tool4 <- getMatches(unipept_topn, pAll$name, tool4_label)
-# tool5 <- getMatches(unipept_topn, prophane$names, tool5_label)
+# tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
+# tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
+# tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], tool3_label)
+# tool4 <- getMatches(unipept_topn, pAll$name[1:200], tool4_label)
+# tool5 <- getMatches(unipept_topn, prophane$names[1:200], tool5_label)
 unipept_top_matches <- plyr::join_all(
         list(tool1$matches,
              tool2$matches,
