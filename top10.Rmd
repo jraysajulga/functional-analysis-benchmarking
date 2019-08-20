@@ -425,122 +425,119 @@ tools$go_list <- c(list(eggnog_gos),
 
 ```{r}
 for (label in tools$label){
+    
+    index <- which(label == tools$label)
+    go_lists <- tools$go_list[1:6 != index]
+    tool_topn <- tools$go_list[index][[1]][1:10]
+    
+    
+    labels <- tools$label[1:6 != index]
+    
+    tool1 <- getMatches(tool_topn, go_lists[1][[1]], labels[1])
+    tool2 <- getMatches(tool_topn, go_lists[2][[1]], labels[2])
+    tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3])
+    tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4])
+    tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5])
+    
+    top_matches <- plyr::join_all(
+        list(tool1$matches,
+             tool2$matches,
+             tool3$matches,
+             tool4$matches,
+             tool5$matches),
+        by="name")
+    
+    sankey_paths <- rbind(tool1$paths,
+                          tool2$paths,
+                          tool3$paths,
+                          tool4$paths,
+                          tool5$paths)
+    sankey_nodes <- data.frame(tool1$nodes,
+                               tool2$nodes,
+                               tool3$nodes,
+                               tool4$nodes,
+                               tool5$nodes)
+    colnames(sankey_nodes) <- c(labels[1],
+                                labels[2],
+                                labels[3],
+                                labels[4],
+                                labels[5])
+    
+    # Make each node unique by adding spaces after each one
+    sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) { 
+        sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
+    }))
+    colnames(sankey_nodes_final) <- colnames(sankey_nodes)
+    sankey_nodes_final$Term <- c(tool_topn, 1:10)
+    sankey_nodes_final <- sankey_nodes_final[,c(6,1,2,3,4,5)]
+    sankey_nodes_final <- rbind(df, setNames(sankey_nodes_final, names(df)))
+    
+    # Make each path unique by adding spaces after each one 
+    sankey_paths_final <- data.frame(sankey_paths)
+    sankey_paths_final$target <- sapply(1:nrow(sankey_paths), function ( x ) { 
+        index <- which(colnames(sankey_nodes) == sankey_paths[x,]$group)
+        paste(sankey_paths[x,]$target, paste(rep(" ",20 * index), collapse=""), sep="") } )
+    
+    # Set up node framework
+    framework <- data.frame()
+    sapply(1:(length(sankey_nodes_final) - 1), function ( i ) {
+        framework <<- rbind(framework, 
+                            data.frame(source = sankey_nodes_final[,i],
+                                       target = sankey_nodes_final[,i + 1],
+                                       group = "invisible",
+                                       value = 1))
+    })
+    
+    # Make a connection data frame
+    links <- rbind(framework, sankey_paths_final)
+    
+    # From these flows we need to create a node data frame: it lists every entities involved in the flow
+    nodes=data.frame(name=c(as.character(framework$source),
+                            as.character(sankey_nodes_final[,length(sankey_nodes_final)])))
+    links$IDsource=match(links$source, nodes$name)-1 
+    links$IDtarget=match(links$target, nodes$name)-1
+    
+    nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
+                                        rep("invisible", 10),
+                                        "header", 
+                                        ifelse(gsub(" ", "", as.character(name[(21 + 2):(30 + 2)])) == "", "top", labels[1]),
+                                        ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
+                                        "header", 
+                                        ifelse(gsub(" ", "", as.character(name[(41 + 3):(50 + 3)])) == "", "top", labels[2]),
+                                        ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
+                                        "header",
+                                        ifelse(gsub(" ", "", as.character(name[(61 + 4):(70 + 4)])) == "", "top", labels[3]),
+                                        ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
+                                        "header",
+                                        ifelse(gsub(" ", "", as.character(name[(81 + 5):(90 + 5)])) == "", "top", labels[4]),
+                                        ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
+                                        "header",
+                                        ifelse(gsub(" ", "", as.character(name[(101 + 6):(110 + 6)])) == "", "top", labels[5]),
+                                        ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
+    
+    # Normalize values
+    for (source in unique(sankey_paths_final$source)){
+        paths <- links[links$source == source,] %>% filter (group != "invisible")
+        links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
+    }
+    for (target in unique(sankey_paths_final$target)){
+        paths <- links[links$target == target,] %>% filter (group != "invisible")
+        links[links$target == target & links$group == "invisible",]$value <- links[links$target == target & links$group == "invisible",]$value - sum(paths$value)
+    }
+    
+    my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "header", "top", "',
+                      tools$label[1], '", "',
+                      tools$label[2], '", "',
+                      tools$label[3], '", "',
+                      tools$label[4], '", "',
+                      tools$label[5], '", "',
+                      tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
+    
+    # Make the Network. I call my colour scale with the colourScale argument
+    n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
+                       Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
+                       iterations = 0)
+    n
+    saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
 }
-
-label <- "Unipept"
-
-index <- which(label == tools$label)
-go_lists <- tools$go_list[1:6 != index]
-tool_topn <- tools$go_list[index][[1]][1:10]
-
-
-labels <- tools$label[1:6 != index]
-
-tool1 <- getMatches(tool_topn, go_lists[1][[1]], labels[1])
-tool2 <- getMatches(tool_topn, go_lists[2][[1]], labels[2])
-tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3])
-tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4])
-tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5])
-
-top_matches <- plyr::join_all(
-    list(tool1$matches,
-         tool2$matches,
-         tool3$matches,
-         tool4$matches,
-         tool5$matches),
-    by="name")
-
-sankey_paths <- rbind(tool1$paths,
-                       tool2$paths,
-                       tool3$paths,
-                       tool4$paths,
-                       tool5$paths)
-sankey_nodes <- data.frame(tool1$nodes,
-                            tool2$nodes,
-                            tool3$nodes,
-                            tool4$nodes,
-                            tool5$nodes)
-colnames(sankey_nodes) <- c(labels[1],
-                             labels[2],
-                             labels[3],
-                             labels[4],
-                             labels[5])
-
-# Make each node unique by adding spaces after each one
-sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) { 
-    sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
-}))
-colnames(sankey_nodes_final) <- colnames(sankey_nodes)
-sankey_nodes_final$Term <- c(tool_topn, 1:10)
-sankey_nodes_final <- sankey_nodes_final[,c(6,1,2,3,4,5)]
-sankey_nodes_final <- rbind(df, setNames(sankey_nodes_final, names(df)))
-
-# Make each path unique by adding spaces after each one 
-sankey_paths_final <- data.frame(sankey_paths)
-sankey_paths_final$target <- sapply(1:nrow(sankey_paths), function ( x ) { 
-    index <- which(colnames(sankey_nodes) == sankey_paths[x,]$group)
-    paste(sankey_paths[x,]$target, paste(rep(" ",20 * index), collapse=""), sep="") } )
-
-# Set up node framework
-framework <- data.frame()
-sapply(1:(length(sankey_nodes_final) - 1), function ( i ) {
-    framework <<- rbind(framework, 
-                        data.frame(source = sankey_nodes_final[,i],
-                                   target = sankey_nodes_final[,i + 1],
-                                   group = "invisible",
-                                   value = 1))
-})
-
-# Make a connection data frame
-links <- rbind(framework, sankey_paths_final)
- 
-# From these flows we need to create a node data frame: it lists every entities involved in the flow
-nodes=data.frame(name=c(as.character(framework$source),
-                        as.character(sankey_nodes_final[,length(sankey_nodes_final)])))
-links$IDsource=match(links$source, nodes$name)-1 
-links$IDtarget=match(links$target, nodes$name)-1
-
-nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
-                                    rep("invisible", 10),
-                                    "header", 
-                                    ifelse(gsub(" ", "", as.character(name[(21 + 2):(30 + 2)])) == "", "top", labels[1]),
-                                    ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
-                                    "header", 
-                                    ifelse(gsub(" ", "", as.character(name[(41 + 3):(50 + 3)])) == "", "top", labels[2]),
-                                    ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
-                                    "header",
-                                    ifelse(gsub(" ", "", as.character(name[(61 + 4):(70 + 4)])) == "", "top", labels[3]),
-                                    ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
-                                    "header",
-                                    ifelse(gsub(" ", "", as.character(name[(81 + 5):(90 + 5)])) == "", "top", labels[4]),
-                                    ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
-                                    "header",
-                                    ifelse(gsub(" ", "", as.character(name[(101 + 6):(110 + 6)])) == "", "top", labels[5]),
-                                    ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
-
-# Normalize values
-for (source in unique(sankey_paths_final$source)){
-    paths <- links[links$source == source,] %>% filter (group != "invisible")
-    links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
-    print(links[links$source == source & links$group == "invisible",]$value)
-}
-for (target in unique(sankey_paths_final$target)){
-    paths <- links[links$target == target,] %>% filter (group != "invisible")
-    links[links$target == target & links$group == "invisible",]$value <- links[links$target == target & links$group == "invisible",]$value - sum(paths$value)
-}
-
-my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "header", "top", "',
-                  tools$label[1], '", "',
-                  tools$label[2], '", "',
-                  tools$label[3], '", "',
-                  tools$label[4], '", "',
-                  tools$label[5], '", "',
-                  tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
-
-# Make the Network. I call my colour scale with the colourScale argument
-n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
-                   Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
-                   iterations = 0)
-n
-saveNetwork(n, "top100sankeyR.html", selfcontained = TRUE)
 ```
