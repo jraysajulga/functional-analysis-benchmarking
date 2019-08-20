@@ -389,7 +389,32 @@ getMatches <- function(col_gos1, col_gos2, name){
     out$nodes <- nodes
     return(out)
 }
+```
 
+
+```{r}
+#eggnog_gos <- eggnog_w_counts$name
+#eggnog_all_gos <- unlist(str_split(eggnog_gos[1:10], "; "))
+# eggnog_uniques <- eggnog_all_gos[!eggnog_all_gos %in% unique(eggnog_all_gos[duplicated(eggnog_all_gos)])]
+# eggnog_uniques
+# #eggnog_all_gos
+# sapply(str_split(eggnog_gos[1:10], "; "), function ( go_list ) { paste(go_list[go_list %in% eggnog_uniques], collapse="; ")})
+
+# Removes both original and duplicates
+removeDuplicates <- function(go_col){
+    all_gos <- unlist(str_split(go_col, "; "))
+    uniques <- all_gos[!all_gos %in% unique(all_gos[duplicated(all_gos)])]
+    
+    sapply(str_split(eggnog_gos[1:10], "; "), function ( go_list ) {
+        paste(go_list[go_list %in% eggnog_uniques], collapse="; ")})
+}
+
+eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
+eggnog_gos
+```
+
+
+```{r}
 unipept_topn <- c("acetolactate synthase activity", # COG0028
                   "2-isopropylmalate synthase activity", #COG0119
                   "beta-N-acetylhexosaminidase activity", # ec 3.2.1.52
