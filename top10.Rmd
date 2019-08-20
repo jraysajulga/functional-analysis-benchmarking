@@ -420,14 +420,17 @@ unipept_topn <- c("acetolactate synthase activity", # COG0028
                   "7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase activity", # COG1060
                   "sulfuric ester hydrolase activity") # COG1368
 
+
 tool1_label <- "EggNOG"
 tool2_label <- "MetaGOmics"
 tool3_label <- "MPA"
 tool4_label <- "Prophane"
 tool5_label <- "Unipept"
 
+unipept_topn <- metagomics_gos[1:10]
+
 tool1 <- getMatches(unipept_topn, eggnog_gos, tool1_label)
-tool2 <- getMatches(unipept_topn, metagomics_gos, tool2_label)
+tool2 <- getMatches(unipept_topn, megan_gos, tool2_label)
 tool3 <- getMatches(unipept_topn, mpa_gos, tool3_label)
 tool4 <- getMatches(unipept_topn, prophane_gos, tool4_label)
 tool5 <- getMatches(unipept_topn, unipept_gos, tool5_label)
@@ -459,11 +462,7 @@ colnames(unipept_nodes) <- c(tool1_label,
                              tool3_label,
                              tool4_label,
                              tool5_label)
-unipept_nodes
-unipept_top_matches
-```
 
-```{r}
 # Make each node unique by adding spaces after each one
 unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
     sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
@@ -477,11 +476,7 @@ unipept_paths_final <- data.frame(unipept_paths)
 unipept_paths_final$target <- sapply(1:nrow(unipept_paths), function ( x ) { 
     index <- which(colnames(unipept_nodes) == unipept_paths[x,]$group)
     paste(unipept_paths[x,]$target, paste(rep(" ",20 * index), collapse=""), sep="") } )
-unipept_nodes_final
-unipept_paths_final
-```
 
-```{r}
 # Set up node framework
 framework <- data.frame()
 sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
@@ -491,10 +486,7 @@ sapply(1:(length(unipept_nodes_final) - 1), function ( i ) {
                                    group = "invisible",
                                    value = 1))
 })
-unipept_paths_final
-```
 
-```{r}
 # Make a connection data frame
 links <- rbind(framework, unipept_paths_final)
  
