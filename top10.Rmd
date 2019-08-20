@@ -507,15 +507,20 @@ links$IDtarget=match(links$target, nodes$name)-1
 
 nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
                                     rep("invisible", 10),
-                                    "header", rep("top", 10),
+                                    "header", 
+                                    ifelse(gsub(" ", "", as.character(name[(21 + 2):(30 + 2)])) == "", "top", labels[1]),
                                     ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
-                                    "header", rep("top", 10),
+                                    "header", 
+                                    ifelse(gsub(" ", "", as.character(name[(41 + 3):(50 + 3)])) == "", "top", labels[2]),
                                     ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
-                                    "header", rep("top", 10),
+                                    "header",
+                                    ifelse(gsub(" ", "", as.character(name[(61 + 4):(70 + 4)])) == "", "top", labels[3]),
                                     ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
-                                    "header", rep("top", 10),
+                                    "header",
+                                    ifelse(gsub(" ", "", as.character(name[(81 + 5):(90 + 5)])) == "", "top", labels[4]),
                                     ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
-                                    "header", rep("top", 10),
+                                    "header",
+                                    ifelse(gsub(" ", "", as.character(name[(101 + 6):(110 + 6)])) == "", "top", labels[5]),
                                     ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
 
 # Normalize values
