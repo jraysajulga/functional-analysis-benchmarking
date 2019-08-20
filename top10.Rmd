@@ -389,30 +389,24 @@ getMatches <- function(col_gos1, col_gos2, name){
     out$nodes <- nodes
     return(out)
 }
-```
-
-
-```{r}
-#eggnog_gos <- eggnog_w_counts$name
-#eggnog_all_gos <- unlist(str_split(eggnog_gos[1:10], "; "))
-# eggnog_uniques <- eggnog_all_gos[!eggnog_all_gos %in% unique(eggnog_all_gos[duplicated(eggnog_all_gos)])]
-# eggnog_uniques
-# #eggnog_all_gos
-# sapply(str_split(eggnog_gos[1:10], "; "), function ( go_list ) { paste(go_list[go_list %in% eggnog_uniques], collapse="; ")})
 
 # Removes both original and duplicates
 removeDuplicates <- function(go_col){
     all_gos <- unlist(str_split(go_col, "; "))
     uniques <- all_gos[!all_gos %in% unique(all_gos[duplicated(all_gos)])]
     
-    sapply(str_split(eggnog_gos[1:10], "; "), function ( go_list ) {
-        paste(go_list[go_list %in% eggnog_uniques], collapse="; ")})
+    unique_col <- sapply(str_split(go_col, "; "), function ( go_list ) {
+        paste(go_list[go_list %in% uniques], collapse="; ")})
+    unique_col[unique_col != ""]
 }
 
 eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
-eggnog_gos
+megan_gos <- removeDuplicates(megan$name)
+metagomics_gos <- removeDuplicates(metagomics_filt$name)
+mpa_gos <- removeDuplicates(pAll$name)
+prophane_gos <- removeDuplicates(prophane$names)
+unipept_gos <- removeDuplicates(unipept_all$Name)
 ```
-
 
 ```{r}
 unipept_topn <- c("acetolactate synthase activity", # COG0028
@@ -432,11 +426,11 @@ tool3_label <- "MPA"
 tool4_label <- "Prophane"
 tool5_label <- "Unipept"
 
-tool1 <- getMatches(unipept_topn, eggnog_w_counts$name, tool1_label)
-tool2 <- getMatches(unipept_topn, metagomics_filt$name, tool2_label)
-tool3 <- getMatches(unipept_topn, pAll$name, tool3_label)
-tool4 <- getMatches(unipept_topn, prophane$names, tool4_label)
-tool5 <- getMatches(unipept_topn, unipept_all$Name, tool5_label)
+tool1 <- getMatches(unipept_topn, eggnog_gos, tool1_label)
+tool2 <- getMatches(unipept_topn, metagomics_gos, tool2_label)
+tool3 <- getMatches(unipept_topn, mpa_gos, tool3_label)
+tool4 <- getMatches(unipept_topn, prophane_gos, tool4_label)
+tool5 <- getMatches(unipept_topn, unipept_gos, tool5_label)
 
 # tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
 # tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
