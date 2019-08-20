@@ -408,15 +408,15 @@ unipept_gos <- removeDuplicates(unipept_all$Name)
 
 tools <- list()
 tools$label <- c("EggNOG",
-                 "MetaGOmics",
                  "MEGAN",
+                 "MetaGOmics",
                  "MPA",
                  "Prophane",
                  "Unipept")
                     
 tools$go_list <- c(list(eggnog_gos),
-                   list(megan_gos),
                    list(metagomics_gos),
+                   list(megan_gos),
                    list(mpa_gos),
                    list(prophane_gos),
                    list(unipept_gos))
@@ -425,6 +425,7 @@ tools$go_list <- c(list(eggnog_gos),
 
 ```{r}
 for (label in tools$label){
+    print(label)
     
     index <- which(label == tools$label)
     go_lists <- tools$go_list[1:6 != index]
@@ -470,7 +471,8 @@ for (label in tools$label){
     colnames(sankey_nodes_final) <- colnames(sankey_nodes)
     sankey_nodes_final$Term <- c(tool_topn, 1:10)
     sankey_nodes_final <- sankey_nodes_final[,c(6,1,2,3,4,5)]
-    sankey_nodes_final <- rbind(df, setNames(sankey_nodes_final, names(df)))
+    label_df <- data.frame(t(c("Term", labels)))
+    sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df)))
     
     # Make each path unique by adding spaces after each one 
     sankey_paths_final <- data.frame(sankey_paths)
@@ -497,21 +499,21 @@ for (label in tools$label){
     links$IDsource=match(links$source, nodes$name)-1 
     links$IDtarget=match(links$target, nodes$name)-1
     
-    nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
+    nodes <- nodes %>% mutate(group = c("header", rep(label, 10),
                                         rep("invisible", 10),
-                                        "header", 
+                                        labels[1], 
                                         ifelse(gsub(" ", "", as.character(name[(21 + 2):(30 + 2)])) == "", "top", labels[1]),
                                         ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
-                                        "header", 
+                                        labels[2], 
                                         ifelse(gsub(" ", "", as.character(name[(41 + 3):(50 + 3)])) == "", "top", labels[2]),
                                         ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
-                                        "header",
+                                        labels[3],
                                         ifelse(gsub(" ", "", as.character(name[(61 + 4):(70 + 4)])) == "", "top", labels[3]),
                                         ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
-                                        "header",
+                                        labels[4],
                                         ifelse(gsub(" ", "", as.character(name[(81 + 5):(90 + 5)])) == "", "top", labels[4]),
                                         ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
-                                        "header",
+                                        labels[5],
                                         ifelse(gsub(" ", "", as.character(name[(101 + 6):(110 + 6)])) == "", "top", labels[5]),
                                         ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
     
@@ -537,7 +539,8 @@ for (label in tools$label){
     n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
                        Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
                        iterations = 0)
-    n
+    print(n)
     saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
 }
 ```
+
