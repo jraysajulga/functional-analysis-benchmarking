@@ -415,8 +415,8 @@ tools$label <- c("EggNOG",
                  "Unipept")
                     
 tools$go_list <- c(list(eggnog_gos),
-                   list(metagomics_gos),
                    list(megan_gos),
+                   list(metagomics_gos),
                    list(mpa_gos),
                    list(prophane_gos),
                    list(unipept_gos))
@@ -424,7 +424,9 @@ tools$go_list <- c(list(eggnog_gos),
 
 
 ```{r}
-for (label in tools$label){
+labels <- tools$label
+#labels <- tools$label[6]
+for (label in labels){
     print(label)
     
     index <- which(label == tools$label)
