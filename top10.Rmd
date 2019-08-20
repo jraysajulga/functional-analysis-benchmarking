@@ -306,7 +306,6 @@ write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
 
 ## Let's look at how the top terms are ranked in other tools
 
-### Top Unipept terms
 ```{r}
 getMatch <- function(gos1, gos2){
     delimiter <- "; "
@@ -344,7 +343,7 @@ getMatches <- function(col_gos1, col_gos2, name){
             nodes[top_list] <<- topn
             path <- data.frame(target = topn) %>%
                 mutate(source = gos1,
-                       value = 0.01,
+                       value = 0.1,
                        group = name) %>%
                 select(source, target, value, group)
             paths <<- rbind(paths, path)
@@ -365,8 +364,8 @@ getMatches <- function(col_gos1, col_gos2, name){
             # Extract pathing information
             path <- consolidator %>% mutate(source = gos1,
                                             group = name,
-                                            #value = (str_count(rank_list, "/") + 1) * 0.01) %>%
-                                            value = .01) %>%
+                                            value = (str_count(rank_list, "/") + 1) * 0.1) %>%
+                                            #value = .01) %>%
                 select(source, target = perc_list, value, group)
             paths <<- rbind(paths, path)
             
@@ -406,9 +405,7 @@ metagomics_gos <- removeDuplicates(metagomics_filt$name)
 mpa_gos <- removeDuplicates(pAll$name)
 prophane_gos <- removeDuplicates(prophane$names)
 unipept_gos <- removeDuplicates(unipept_all$Name)
-```
 
-```{r}
 tools <- list()
 tools$label <- c("EggNOG",
                  "MetaGOmics",
@@ -445,13 +442,14 @@ tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3])
 tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4])
 tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5])
 
-unipept_top_matches <- plyr::join_all(
-        list(tool1$matches,
-             tool2$matches,
-            tool3$matches,
-            tool4$matches,
-            tool5$matches),
+top_matches <- plyr::join_all(
+    list(tool1$matches,
+         tool2$matches,
+         tool3$matches,
+         tool4$matches,
+         tool5$matches),
     by="name")
+
 sankey_paths <- rbind(tool1$paths,
                        tool2$paths,
                        tool3$paths,
@@ -467,10 +465,7 @@ colnames(sankey_nodes) <- c(labels[1],
                              labels[3],
                              labels[4],
                              labels[5])
-sankey_nodes
-```
 
-```{r}
 # Make each node unique by adding spaces after each one
 sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) { 
     sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
@@ -526,9 +521,6 @@ nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
 # Normalize values
 for (source in unique(sankey_paths_final$source)){
     paths <- links[links$source == source,] %>% filter (group != "invisible")
-    print(source)
-    #print(links[links$source == source & links$group == "invisible",])
-    #print(links[links$source == source & links$group == "invisible",]$value)
     links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
     print(links[links$source == source & links$group == "invisible",]$value)
 }
