@@ -476,8 +476,9 @@ sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( ind
     sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
 }))
 colnames(sankey_nodes_final) <- colnames(sankey_nodes)
-sankey_nodes_final$header <- c(tool_topn, 1:10)
+sankey_nodes_final$Term <- c(tool_topn, 1:10)
 sankey_nodes_final <- sankey_nodes_final[,c(6,1,2,3,4,5)]
+sankey_nodes_final <- rbind(df, setNames(sankey_nodes_final, names(df)))
 
 # Make each path unique by adding spaces after each one 
 sankey_paths_final <- data.frame(sankey_paths)
@@ -504,18 +505,18 @@ nodes=data.frame(name=c(as.character(framework$source),
 links$IDsource=match(links$source, nodes$name)-1 
 links$IDtarget=match(links$target, nodes$name)-1
 
-nodes <- nodes %>% mutate(group = c(rep("block", 10),
+nodes <- nodes %>% mutate(group = c("header", rep("block", 10),
                                     rep("invisible", 10),
-                                    rep("top", 10),
-                                    ifelse(gsub(" ", "", as.character(name[31:40])) == "", "invisible", labels[1]),
-                                    rep("top", 10),
-                                    ifelse(gsub(" ", "", as.character(name[51:60])) == "", "invisible", labels[2]),
-                                    rep("top", 10),
-                                    ifelse(gsub(" ", "", as.character(name[71:80])) == "", "invisible", labels[3]),
-                                    rep("top", 10),
-                                    ifelse(gsub(" ", "", as.character(name[91:100])) == "", "invisible", labels[4]),
-                                    rep("top", 10),
-                                    ifelse(gsub(" ", "", as.character(name[111:120])) == "", "invisible", labels[5])))
+                                    "header", rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
+                                    "header", rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
+                                    "header", rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
+                                    "header", rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
+                                    "header", rep("top", 10),
+                                    ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
 
 # Normalize values
 for (source in unique(sankey_paths_final$source)){
@@ -531,13 +532,13 @@ for (target in unique(sankey_paths_final$target)){
     links[links$target == target & links$group == "invisible",]$value <- links[links$target == target & links$group == "invisible",]$value - sum(paths$value)
 }
 
-my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "top", "',
+my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "header", "top", "',
                   tools$label[1], '", "',
                   tools$label[2], '", "',
                   tools$label[3], '", "',
                   tools$label[4], '", "',
                   tools$label[5], '", "',
-                  tools$label[6], '"]) .range(["white", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
+                  tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
 
 # Make the Network. I call my colour scale with the colourScale argument
 n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
