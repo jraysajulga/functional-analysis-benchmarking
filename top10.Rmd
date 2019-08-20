@@ -409,37 +409,40 @@ unipept_gos <- removeDuplicates(unipept_all$Name)
 ```
 
 ```{r}
-unipept_topn <- c("acetolactate synthase activity", # COG0028
-                  "2-isopropylmalate synthase activity", #COG0119
-                  "beta-N-acetylhexosaminidase activity", # ec 3.2.1.52
-                  "cysteine-type endopeptidase activity; cysteine-type peptidase activity", # COG3579 aminopeptidase c
-                  "ethanolamine kinase activity", # COG0510
-                  "choline-phosphate cytidylyltransferase activity; cytidylyltransferase activity", # COG4750
-                  "alcohol dehydrogenase (NAD) activity", # COG1979
-                  "6-phosphogluconolactonase activity", # COG2706 6-phosphogluconolactonase
-                  "7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase activity", # COG1060
-                  "sulfuric ester hydrolase activity") # COG1368
+tools <- list()
+tools$label <- c("EggNOG",
+                 "MetaGOmics",
+                 "MEGAN",
+                 "MPA",
+                 "Prophane",
+                 "Unipept")
+                    
+tools$go_list <- c(list(eggnog_gos),
+                   list(megan_gos),
+                   list(metagomics_gos),
+                   list(mpa_gos),
+                   list(prophane_gos),
+                   list(unipept_gos))
+```
+
+```{r}
+for (label in tools$label){
+}
+
+label <- "EggNOG"
+
+go_lists <- tools$go_list
+index <- which(label == tools$label)
+tool_topn <- go_lists[index][[1]][1:10]
 
 
-tool1_label <- "EggNOG"
-tool2_label <- "MetaGOmics"
-tool3_label <- "MPA"
-tool4_label <- "Prophane"
-tool5_label <- "Unipept"
+labels <- tools$label[tools$label != label]
+tool1 <- getMatches(tool_topn, go_lists[1][[1]], labels[1])
+tool2 <- getMatches(tool_topn, go_lists[2][[1]], labels[2])
+tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3])
+tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4])
+tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5])
 
-unipept_topn <- metagomics_gos[1:10]
-
-tool1 <- getMatches(unipept_topn, eggnog_gos, tool1_label)
-tool2 <- getMatches(unipept_topn, megan_gos, tool2_label)
-tool3 <- getMatches(unipept_topn, mpa_gos, tool3_label)
-tool4 <- getMatches(unipept_topn, prophane_gos, tool4_label)
-tool5 <- getMatches(unipept_topn, unipept_gos, tool5_label)
-
-# tool1 <- getMatches(unipept_topn, eggnog_w_counts$name[1:200], tool1_label)
-# tool2 <- getMatches(unipept_topn, megan$name[1:200], tool2_label)
-# tool3 <- getMatches(unipept_topn, metagomics_filt$name[1:200], tool3_label)
-# tool4 <- getMatches(unipept_topn, pAll$name[1:200], tool4_label)
-# tool5 <- getMatches(unipept_topn, prophane$names[1:200], tool5_label)
 unipept_top_matches <- plyr::join_all(
         list(tool1$matches,
              tool2$matches,
@@ -462,13 +465,16 @@ colnames(unipept_nodes) <- c(tool1_label,
                              tool3_label,
                              tool4_label,
                              tool5_label)
+unipept_nodes
+```
 
+```{r}
 # Make each node unique by adding spaces after each one
 unipept_nodes_final <- as.data.frame(sapply(1:length(unipept_nodes), function( index ) { 
     sapply(unipept_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
 }))
 colnames(unipept_nodes_final) <- colnames(unipept_nodes)
-unipept_nodes_final$header <- c(unipept_topn, 1:10)
+unipept_nodes_final$header <- c(tool_topn, 1:10)
 unipept_nodes_final <- unipept_nodes_final[,c(6,1,2,3,4,5)]
 
 # Make each path unique by adding spaces after each one 
