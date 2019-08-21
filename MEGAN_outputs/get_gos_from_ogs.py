@@ -26,7 +26,9 @@ def get_gos(ogs):
                 # may not have any go terms
                 go_lists = [top_dict[k] for k in top_dict.keys()]
                 if len(go_lists) > 0:
-                    go_list2 = go_lists[0]
+                    go_list2 = []
+                    for go_list in go_lists:
+                        go_list2 += go_list
                     go_to_write = ','.join([entry[0] for entry in go_list2])
                 else:
                     go_to_write = "NA"
