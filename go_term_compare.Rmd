@@ -199,7 +199,7 @@ def get_all_ancestors(infile, outfile):
     gos_with_ancestors = set_of_all_ancestors(gos)
     
     with open(outfile, 'w') as outf:
-        for x in gos_with_ancestors:
+        for x in sorted(gos_with_ancestors):
             outf.write(x + '\n')
 
 def slim_down(infile, outfile):
@@ -215,7 +215,7 @@ def slim_down(infile, outfile):
             print(i + " not found")
     
     with open(outfile, 'w') as outf:
-        for x in slims:
+        for x in sorted(slims):
             outf.write(x + '\n')
             
 for i in ['eggnog', 'megan', 'metagomics', 'mpa', 'prophane', 'unipept']:
