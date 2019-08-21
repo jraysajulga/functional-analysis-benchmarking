@@ -151,12 +151,12 @@ length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('megan' = megan_gos_clean,
+gos <- list('eggnog' = eggnog_gos_clean,
+            'megan' = megan_gos_clean,
             'metagomics' = metagomics_gos_clean,
-            'unipept' = unipept_gos_clean,
-            'eggnog' = eggnog_gos_clean,
             'mpa' = mpa_gos_clean,
-            'prophane' = prophane_gos_clean)
+            'prophane' = prophane_gos_clean,
+            'unipept' = unipept_gos_clean)
 ```
 
 # GO terms: all parents
@@ -213,7 +213,7 @@ def slim_down(infile, outfile):
         for x in slims:
             outf.write(x + '\n')
             
-for i in ['eggnog', 'megan', 'metagomics', 'unipept', 'mpa', 'prophane']:
+for i in ['eggnog', 'megan', 'metagomics', 'mpa', 'prophane', 'unipept']:
     infile = 'go_lists/' + i + '.tab'
     outfile = 'go_lists/' + i + '_parents.tab'
     outslim = 'go_lists/' + i + '_slim.tab'
@@ -270,7 +270,7 @@ ex
 ## GO terms in GOslim
 
 ```{r}
-methods <- c("megan", "metagomics", "unipept", "eggnog", 'mpa', 'prophane')
+methods <- c("eggnog", "megan", "metagomics", 'mpa', 'prophane', "unipept")
 gos_slims <- lapply(methods,
     function(f) {
         "go" = read.delim(paste("go_lists/", f, '_slim.tab', sep = ""),
