@@ -12,8 +12,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Necessary packages:
 
 ```{r message=FALSE}
+library(GO.db)
+library(data.table)
 library(dplyr)
 library(stringr)
+```
+
+# Filter ontologies based on molecular function, biological process, or cellular component
+```{r}
+library(GO.db)
+filterOntology <- function(go_list, ontology){
+    if (ontology == "all") { return(go_list) }
+    onts <- Ontology(go_list)
+    return(go_list[onts == ontology & !is.na(onts)])
+}
+ontology <- "MF"
 ```
 
 # GO terms, direct from tools
@@ -28,6 +41,9 @@ eggnog_gos <- unlist(str_split(eggnog$V6, ",")) %>% unique()
 length(unique(eggnog$V2)) # Total number of terms
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
+length(eggnog_gos_clean)
+eggnog_gos_clean <- filterOntology(eggnog_gos_clean, ontology)
+length(eggnog_gos_clean)
 ```
 
 We are going to write the lists to file, for later use in Python. First, I define a function `clean_write()` which writes a list without all the quotes and stuff:
@@ -51,6 +67,7 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
 metagomics_gos <- metagomics$GO.acc %>%  unique()
 # takes out "unknownprc", "unknowncmp", "unknownfun"
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
+metagomics_gos_clean <- filterOntology(metagomics_gos_clean, ontology)
 clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
 nrow(metagomics) # total number of terms
 length(metagomics_gos_clean) # Number of translated GO terms
@@ -68,6 +85,7 @@ megan <- read.delim("MEGAN_outputs/go_terms.txt",
 megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
+megan_gos_clean <- filterOntology(megan_gos_clean, ontology)
 clean_write(megan_gos_clean, file="go_lists/megan.tab")
 nrow(megan)
 length(megan_gos_clean)
@@ -101,6 +119,7 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
 
 unipept_gos <- unipept_all$GO.term %>% unique()
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
+unipept_gos_clean <- filterOntology(unipept_gos_clean, ontology)
 clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 length(unipept_gos_clean)
 ```
@@ -128,6 +147,7 @@ clean_write(protAll, file="mpa_results/all_proteins.tab")
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
 mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
+mpa_gos_clean <- filterOntology(mpa_gos_clean, ontology)
 
 clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
 length(mpa_gos_clean)
@@ -149,6 +169,7 @@ prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
 prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
 prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
 prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
+prophane_gos_clean <- filterOntology(prophane_gos_clean, ontology)
 clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
 length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
 ```
