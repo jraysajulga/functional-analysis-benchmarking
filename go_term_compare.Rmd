@@ -53,6 +53,7 @@ metagomics_gos <- metagomics$GO.acc %>%  unique()
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
 clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
 nrow(metagomics) # total number of terms
+length(metagomics_gos_clean) # Number of translated GO terms
 nrow(metagomics %>% filter(Laplace.corr..q.value < 0.05)) #significant at FDR < 5%
 ```
 
@@ -68,6 +69,8 @@ megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
 clean_write(megan_gos_clean, file="go_lists/megan.tab")
+nrow(megan)
+length(megan_gos_clean)
 ```
 
 ## Unipept
@@ -99,6 +102,7 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
 unipept_gos <- unipept_all$GO.term %>% unique()
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
 clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
+length(unipept_gos_clean)
 ```
 
 ## MetaProteomeAnalyzer
@@ -126,6 +130,7 @@ mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
 mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
 
 clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
+length(mpa_gos_clean)
 ```
 
 ## Prophane
