@@ -26,7 +26,7 @@ filterOntology <- function(go_list, ontology){
     onts <- Ontology(go_list)
     return(go_list[onts == ontology & !is.na(onts)])
 }
-ontology <- "MF"
+ontology <- "BP"
 ```
 
 # GO terms, direct from tools
@@ -279,7 +279,7 @@ sapply(gos_ancestors, length)
 Unique to each tool
 ```{r}
 ex <- rep(0, 6)
-tot <- rep(0, 5)
+tot <- rep(0, 6)
 for (i in 1:6){
     all <- 1:6
     other_ind <- all[-i]
