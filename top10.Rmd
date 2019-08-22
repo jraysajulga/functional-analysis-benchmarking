@@ -43,6 +43,20 @@ peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
 ```
 
+## Filter ontologies based on molecular function, biological process, or cellular component
+```{r}
+ontology <- "MF"
+filterOntology <- function(go_list, ontology){
+    if (ontology == "all") { return(go_list) }
+    sapply(go_list, function (go_cell) {
+        go_list <- strsplit(go_cell, ",")[[1]]
+        onts <- Ontology(go_list)
+        filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
+        return(paste(filtered_gos, collapse = ","))
+    })
+}
+```
+
 ## eggNOG mapper results
 
 Join peptides to counts, and calculate ratios.
@@ -52,7 +66,6 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE) %>% 
     select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
-eggnog
 eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
@@ -61,38 +74,40 @@ eggnog_w_counts <- left_join(eggnog,
     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
     arrange(-log2ratio) %>%
     select(protein, go, gene, sumCountWS, sumCountNS, log2ratio, desc)
+eggnog_w_counts$go <- filterOntology(eggnog_w_counts$go, ontology)
 eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+eggnog_w_counts
 ```
 
 
 Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
-n <- 100
+n <- 10
 kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold changes"))
 ```
 
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
 ## Blast
-```{r}
-blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
-                    stringsAsFactors = FALSE,
-                    header = FALSE) %>%
-    select(peptide = V1, protein = V2, desc = V25)
-
-blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
-    group_by(protein, desc) %>%
-    filter(!is.na(countWS) & !is.na(countNS)) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
-    arrange(-log2ratio)
-```
-
-Print results:
-```{r echo=FALSE, results='asis'}
-kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
-```
+# ```{r}
+# blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
+#                     stringsAsFactors = FALSE,
+#                     header = FALSE) %>%
+#     select(peptide = V1, protein = V2, desc = V25)
+# 
+# blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
+#     group_by(protein, desc) %>%
+#     filter(!is.na(countWS) & !is.na(countNS)) %>%
+#     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+#     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+#     arrange(-log2ratio)
+# ```
+# 
+# Print results:
+# ```{r echo=FALSE, results='asis'}
+# kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
+# ```
 
 ## metaGOmics
 
@@ -104,10 +119,12 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
     select(go = GO.acc,
            name = GO.name,
            log2ratio =  Laplace.corr..Log.2..fold.change,
-           p = Laplace.corr..q.value)
+           p = Laplace.corr..q.value) %>%
+    filter(Ontology(as.character(go)) == ontology)
 
 metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
     arrange(-log2ratio)
+metagomics_filt
 ```
 
 Top *n* results:
@@ -132,7 +149,8 @@ megan_go <- read.delim("MEGAN_outputs/go_terms.txt",
 sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
     grepl(megan_go[n, "og"], megan[n, "og"])
 })
-megan$name <- sapply(strsplit(megan_go$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+megan$go <- filterOntology(megan_go$go, ontology)
+megan$name <- sapply(strsplit(megan$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 ```
 
 Top *n* results:
@@ -166,7 +184,9 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
            log2ratio = log2(lapCountWS/lapCountNS)) %>%
     select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
+    filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
+unipept_all
 ```
 
 Top *n*:
@@ -193,9 +213,17 @@ pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>
     arrange(-log2ratio)
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 pAll$name <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
-    goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
-    sapply(strsplit(goids, "; "), function ( x ) { paste(Term(x), collapse="; ")})
+    goids <- strsplit(mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs, "; ")
+    sapply(goids, function ( go_list ) { 
+        if (length(go_list) > 1){
+            names <- Term(filterOntology(go_list, ontology))
+            paste(names[!is.na(names)], collapse="; ")
+        } else {
+            ""
+        }
+    })
 }))
+pAll
 ```
 
 Top *n*:
@@ -223,15 +251,18 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
     mutate(fc = log2(as.double(ws)/as.double(ns)),
            gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    arrange(-fc) %>%
     select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
-prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {paste(unique(x[x != "-"]), collapse = ",")})
+prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
+    terms <- filterOntology(unique(x[x != "-"]), ontology)
+    paste(terms[terms != ""], collapse = ",")
+})
 prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
 prophane$names <- Term(prophane$gos)
 prophane <- prophane %>% group_by_at(vars(fc)) %>%
-    summarize_all(paste, collapse="; ")
+    summarize_all(paste, collapse="; ") %>%
+    arrange(-fc)
+prophane
 ```
-
 
 ## Unipept and MetaGOmics
 
@@ -250,6 +281,9 @@ grid()
 dev.off()
 cor.test(um$log2ratio.x, um$log2ratio.y,
          method = "pearson", alternative = "two.sided")
+nrow(um)
+nrow(unipept_all)
+nrow(metagomics)
 ```
 
 ### Rank comparison
