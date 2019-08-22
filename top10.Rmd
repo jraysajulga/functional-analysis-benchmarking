@@ -180,14 +180,12 @@ unipeptNS <- lapply(unipept_results_NS, function(i) {
     bind_rows() %>%
     select(-X) %>%
     rename(peptides = X.peptides)
+unipeptNS$peptides = unipeptNS$peptides * norm_ratio
 unipeptWS <- lapply(unipept_results_WS, function(i) {
     read.delim(i, sep = ',', as.is = TRUE)}) %>%
     bind_rows() %>%
     select(-X) %>%
     rename(peptides = X.peptides)
-unipeptNS
-unipeptWS
-sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
