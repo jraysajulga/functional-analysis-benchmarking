@@ -39,9 +39,11 @@ peptidesWS <- read.delim("peptide_shaker_outputs/737WS_Peptide_Shaker_Peptide_Re
                          stringsAsFactors = FALSE) %>%
     select(peptide = Sequence, countWS = "X.Validated.PSMs") 
 
+norm_ratio <- sum(peptidesWS$countWS) / sum(peptidesNS$countNS)
+peptidesNS$countNS <- peptidesNS$countNS * sum(peptidesWS$countWS) / sum(peptidesNS$countNS)
 peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
-peptidesNS$countNS <- peptidesNS$countNS * sum(peptidesWS$countWS) / sum(peptidesNS$countNS)
+peptides_all
 ```
 
 ## Filter ontologies based on molecular function, biological process, or cellular component
@@ -153,6 +155,9 @@ sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
 megan$go <- filterOntology(megan_go$go, ontology)
 megan$name <- sapply(strsplit(megan$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 ```
+```{r}
+sum(megan$countWS) / sum(megan$countNS)
+```
 
 Top *n* results:
 ```{r echo=FALSE, results='asis'}
@@ -180,6 +185,9 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     bind_rows() %>%
     select(-X) %>%
     rename(peptides = X.peptides)
+unipeptNS
+unipeptWS
+sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
@@ -225,6 +233,20 @@ pAll$name <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
     })
 }))
 pAll
+```
+```{r}
+#nrow(pAll)
+ns <- pAll$SpecCount.x
+ws <- pAll$SpecCount.y
+sum(ns[!is.na(ns)])
+sum(ws[!is.na(ws)])
+sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
+
+ns <- pAll$nsCount
+ws <- pAll$wsCount
+sum(ns[!is.na(ns)])
+sum(ws[!is.na(ws)])
+sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 ```
 
 Top *n*:
