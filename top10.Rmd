@@ -152,11 +152,15 @@ megan_go <- read.delim("MEGAN_outputs/go_terms.txt",
 sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
     grepl(megan_go[n, "og"], megan[n, "og"])
 })
+megan$countNS <- megan$countNS * norm_ratio
 megan$go <- filterOntology(megan_go$go, ontology)
 megan$name <- sapply(strsplit(megan$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 ```
 ```{r}
+sum(megan$countWS)
+sum(megan$countNS)
 sum(megan$countWS) / sum(megan$countNS)
+norm_ratio
 ```
 
 Top *n* results:
@@ -195,6 +199,12 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     arrange(-log2ratio)
 unipept_all
 ```
+```{r}
+sum(unipeptWS$peptides)
+sum(unipeptNS$peptides) 
+sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
+```
+
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
