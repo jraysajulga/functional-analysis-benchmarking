@@ -223,25 +223,22 @@ ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names =
 pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
     group_by(Protein.Accession, Protein.Description) %>%
     summarize("SpecCount" = sum(Spectral.Count))
-
-pAll <- full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")) %>%
+pAll <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")))
+mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
+pAll$gos <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
+    goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
+}))
+pAll[is.na(pAll)] <- 0
+pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
+pAll <- pAll %>% group_by(gos) %>%
+    summarize_all(sum) %>%
     mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
            log2ratio = log2(wsCount/nsCount)) %>%
     arrange(-log2ratio)
-mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
-pAll$name <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
-    goids <- strsplit(mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs, "; ")
-    sapply(goids, function ( go_list ) { 
-        if (length(go_list) > 1){
-            names <- Term(filterOntology(go_list, ontology))
-            paste(names[!is.na(names)], collapse="; ")
-        } else {
-            ""
-        }
-    })
-}))
 pAll
 ```
+
+
 ```{r}
 #nrow(pAll)
 ns <- pAll$SpecCount.x
