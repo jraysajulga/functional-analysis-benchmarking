@@ -239,7 +239,8 @@ pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCo
 pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
-    mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
+    mutate(name = Term(gsub(" ", "", gos)),
+           nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
            log2ratio = log2(wsCount/nsCount)) %>%
     arrange(-log2ratio)
 pAll
@@ -467,7 +468,6 @@ tools$go_list <- c(list(eggnog_gos),
                    list(prophane_gos),
                    list(unipept_gos))
 ```
-
 
 ```{r}
 labels <- tools$label
