@@ -350,22 +350,6 @@ kable(m2u)
 kable(u2m)
 ```
 
-## Top n Table
-```{r}
-rank_table <- data.frame(eggNOG = head(eggnog_w_counts$desc, n),
-                          MEGAN = head(megan$og, n),
-                     metaGOmics = head(metagomics_filt$name, n),
-                            MPA = head(pAll$Protein.Description, n),
-                        Unipept = head(unipept_all$Name, n),
-                       Prophane = head(prophane$names, n))
-
-# Remove extra text
-rank_table$MPA <- sapply(rank_table$MPA, function( x ) { gsub('[A-Z0-9_]+ (.+) OS.+','\\1', x) })
-rank_table$MEGAN <-sapply(rank_table$MEGAN, function( x ) { gsub('[A-Z0-9]+ (.+)','\\1', x) })
-
-write.table(rank_table, "top100.tabular", sep="\t", quote = TRUE)
-```
-
 ## Let's look at how the top terms are ranked in other tools
 
 ```{r}
