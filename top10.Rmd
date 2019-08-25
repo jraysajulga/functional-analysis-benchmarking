@@ -228,8 +228,15 @@ mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFa
 pAll$gos <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
     goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
 }))
+
+# Normalization ratio
+ns <- pAll$SpecCount.x
+ws <- pAll$SpecCount.y
+mpa_norm <- sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
+
 pAll[is.na(pAll)] <- 0
 pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
+pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
     mutate(nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
@@ -238,21 +245,14 @@ pAll <- pAll %>% group_by(gos) %>%
 pAll
 ```
 
-
 ```{r}
-#nrow(pAll)
 ns <- pAll$SpecCount.x
 ws <- pAll$SpecCount.y
 sum(ns[!is.na(ns)])
 sum(ws[!is.na(ws)])
 sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
-
-ns <- pAll$nsCount
-ws <- pAll$wsCount
-sum(ns[!is.na(ns)])
-sum(ws[!is.na(ws)])
-sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 ```
+
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
