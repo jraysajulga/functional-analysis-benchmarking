@@ -356,10 +356,7 @@ kable(u2m)
 ```{r}
 getMatch <- function(gos1, gos2){
     delimiter <- "; "
-    if ((grepl(",", gos1) & !grepl(";", gos1)) ||
-        (grepl(",", gos2) & !grepl(";", gos2))){
-        delimiter <- ","
-    }
+    
     gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter)))
     gos2 <- unique(unlist(strsplit(as.character(gos2), delimiter)))
     gos1 <- gos1[gos1 != "NA"]
