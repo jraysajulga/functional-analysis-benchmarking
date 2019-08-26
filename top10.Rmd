@@ -514,7 +514,7 @@ for (label in labels){
         sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
     }))
     colnames(sankey_nodes_final) <- colnames(sankey_nodes)
-    sankey_nodes_final$Term <- c(tool_topn, seq(10, 100, by=10))
+    sankey_nodes_final$Term <- c(tool_topn, paste(seq(0, 90, by=10), " - ", seq(10, 100, by=10), "%", sep=""))
     sankey_nodes_final <- sankey_nodes_final[,c(6,1,2,3,4,5)]
     label_df <- data.frame(t(c(label, labels)))
     sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df)))
