@@ -410,11 +410,11 @@ getMatches <- function(col_gos1, col_gos2, name){
                                             group = name,
                                             value = (str_count(rank_list, "/") + 1) * 0.1) %>%
                                             #value = .01) %>%
-                select(source, target = perc_list, value, group)
+                select(source, target = rank_list, percent = perc_list, value, group)
             paths <<- rbind(paths, path)
             
             # Set up node information
-            nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(perc_list)
+            nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(rank_list)
             
             paste(paste(rank_list, collapse=", "), 
                   " (",
@@ -468,7 +468,7 @@ tools$go_list <- c(list(eggnog_gos),
 
 ```{r}
 labels <- tools$label
-#labels <- tools$label[6]
+labels <- tools$label[1]
 for (label in labels){
     print(label)
     
@@ -498,11 +498,13 @@ for (label in labels){
                           tool3$paths,
                           tool4$paths,
                           tool5$paths)
+    print(sankey_paths)
     sankey_nodes <- data.frame(tool1$nodes,
                                tool2$nodes,
                                tool3$nodes,
                                tool4$nodes,
                                tool5$nodes)
+    print(sankey_nodes)
     colnames(sankey_nodes) <- c(labels[1],
                                 labels[2],
                                 labels[3],
@@ -587,5 +589,29 @@ for (label in labels){
     print(n)
     saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
 }
+```
+
+```{r}
+ambiguous_paths <- sankey_paths[duplicated(sankey_paths[,c(3,5)]),]
+ambiguous_paths <- unique(ambiguous_paths[,c(3,5)])
+
+#ambiguous_paths
+ambiguous_path <- ambiguous_paths[1,]
+
+#paste(sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+               #sankey_paths$group == ambiguous_path$group,]$target
+
+for (index in 1:nrow(ambiguous_paths)){
+    ambiguous_path <- ambiguous_paths[index,]
+    total_gos <- length(go_lists[[which(ambiguous_path$group == tools$label)]])
+    percent <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent] / 10
+    range <- paste(ceiling(total_gos * percent), "-", ceiling(total_gos * (percent - 0.1)))
+    
+    sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+                     sankey_paths$group == ambiguous_path$group,]
+    sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+                     sankey_paths$group == ambiguous_path$group,]$target <- range
+}
+sankey_paths
 ```
 
