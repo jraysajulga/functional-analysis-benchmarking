@@ -503,7 +503,7 @@ for (label in labels){
                                tool2$nodes,
                                tool3$nodes,
                                tool4$nodes,
-                               tool5$nodes)
+                               tool5$nodes, stringsAsFactors = FALSE)
     print(sankey_nodes)
     colnames(sankey_nodes) <- c(labels[1],
                                 labels[2],
@@ -592,26 +592,38 @@ for (label in labels){
 ```
 
 ```{r}
+
 ambiguous_paths <- sankey_paths[duplicated(sankey_paths[,c(3,5)]),]
 ambiguous_paths <- unique(ambiguous_paths[,c(3,5)])
 
-#ambiguous_paths
-ambiguous_path <- ambiguous_paths[1,]
-
 #paste(sankey_paths[sankey_paths$percent == ambiguous_path$percent &
                #sankey_paths$group == ambiguous_path$group,]$target
-
+test1 <- data.frame(sankey_paths, stringsAsFactors = FALSE)
+test2 <- data.frame(sankey_nodes, stringsAsFactors = FALSE)
 for (index in 1:nrow(ambiguous_paths)){
     ambiguous_path <- ambiguous_paths[index,]
-    total_gos <- length(go_lists[[which(ambiguous_path$group == tools$label)]])
-    percent <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent] / 10
-    range <- paste(ceiling(total_gos * percent), "-", ceiling(total_gos * (percent - 0.1)))
+    paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+                              sankey_paths$group == ambiguous_path$group,]
+    range <- paste(min(sapply(paths$target, function ( x ) { min(strsplit(x, " / ")[[1]]) } )),
+                   "-", max(paths$target))
+    #total_gos <- length(tools$go_list[[which(ambiguous_path$group == tools$label)]])
+    #percent <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent] / 10
+    #range <- paste(ceiling(total_gos * percent), "-", ceiling(total_gos * (percent - 0.1)))
+    #sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+    #                 sankey_paths$group == ambiguous_path$group,]
     
-    sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                     sankey_paths$group == ambiguous_path$group,]
-    sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                     sankey_paths$group == ambiguous_path$group,]$target <- range
+    # Update path and node
+    test1[sankey_paths$percent == ambiguous_path$percent &
+                    sankey_paths$group == ambiguous_path$group,]$target <- range
+    #print(test2[decile + 10, ambiguous_path$group])
+    #print(range)
+    decile <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent]
+    #print(test2[decile + 10, ambiguous_path$group])
+    test2[decile + 10, ambiguous_path$group] <- range
+    #test2[19, ambiguous_path$group] <- "decile"
 }
-sankey_paths
+
+#sankey_nodes
+#sankey_paths
 ```
 
