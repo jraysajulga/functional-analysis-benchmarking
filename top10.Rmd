@@ -530,21 +530,25 @@ for (label in labels){
     
     # Make each node unique by adding spaces after each one
     sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) { 
-        sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * index), collapse=""), sep="")})
+        sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * (index + 1)), collapse=""), sep="")})
     }), stringsAsFactors = FALSE)
     colnames(sankey_nodes_final) <- colnames(sankey_nodes)
     
-    # Add top ten terms and decile labels
-    sankey_nodes_final <- cbind(data.frame(Term = c(tool_topn, paste(seq(0, 90, by=10), " - ", seq(10, 100, by=10), "%", sep=""))),
+    print(sankey_nodes_final)
+    # Add placeholders, top ten terms, and decile labels
+    sankey_nodes_final <- cbind(
+        data.frame(sapply(1:20, function ( x ) { paste(rep(" ", x + 1), collapse="") })),
+        data.frame(Term = c(tool_topn, paste(seq(0, 90, by=10), " - ", seq(10, 100, by=10), "%", sep=""))),
                                 sankey_nodes_final)
-    label_df <- data.frame(t(c(label, labels)))
+    label_df <- data.frame(t(c(" ", label, labels)))
     sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df)))
+    print(sankey_nodes_final)
     
     # Make each path unique by adding spaces after each one 
     sankey_paths_final <- data.frame(sankey_paths)
     sankey_paths_final$target <- sapply(1:nrow(sankey_paths), function ( x ) { 
         index <- which(colnames(sankey_nodes) == sankey_paths[x,]$group)
-        paste(sankey_paths[x,]$target, paste(rep(" ",20 * index), collapse=""), sep="") } )
+        paste(sankey_paths[x,]$target, paste(rep(" ",20 * (index + 1)), collapse=""), sep="") } )
     
     # Set up node framework
     framework <- data.frame(stringsAsFactors = FALSE)
@@ -565,23 +569,25 @@ for (label in labels){
     links$IDsource=match(links$source, nodes$name)-1 
     links$IDtarget=match(links$target, nodes$name)-1
     
-    nodes <- nodes %>% mutate(group = c("header", rep(label, 10),
+    offset <- 21
+    nodes <- nodes %>% mutate(group = c(rep("invisible", 21),
+                                        "header", rep(label, 10),
                                         rep("invisible", 10),
                                         labels[1], 
-                                        ifelse(gsub(" ", "", as.character(name[(21 + 2):(30 + 2)])) == "", "top", labels[1]),
-                                        ifelse(gsub(" ", "", as.character(name[(31 + 2):(40 + 2)])) == "", "invisible", labels[1]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 21 + 2):(offset + 30 + 2)])) == "", "top", labels[1]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 31 + 2):(offset + 40 + 2)])) == "", "invisible", labels[1]),
                                         labels[2], 
-                                        ifelse(gsub(" ", "", as.character(name[(41 + 3):(50 + 3)])) == "", "top", labels[2]),
-                                        ifelse(gsub(" ", "", as.character(name[(51 + 3):(60 + 3)])) == "", "invisible", labels[2]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 41 + 3):(offset + 50 + 3)])) == "", "top", labels[2]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 51 + 3):(offset + 60 + 3)])) == "", "invisible", labels[2]),
                                         labels[3],
-                                        ifelse(gsub(" ", "", as.character(name[(61 + 4):(70 + 4)])) == "", "top", labels[3]),
-                                        ifelse(gsub(" ", "", as.character(name[(71 + 4):(80 + 4)])) == "", "invisible", labels[3]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 61 + 4):(offset + 70 + 4)])) == "", "top", labels[3]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 71 + 4):(offset + 80 + 4)])) == "", "invisible", labels[3]),
                                         labels[4],
-                                        ifelse(gsub(" ", "", as.character(name[(81 + 5):(90 + 5)])) == "", "top", labels[4]),
-                                        ifelse(gsub(" ", "", as.character(name[(91 + 5):(100 + 5)])) == "", "invisible", labels[4]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 81 + 5):(offset + 90 + 5)])) == "", "top", labels[4]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 91 + 5):(offset + 100 + 5)])) == "", "invisible", labels[4]),
                                         labels[5],
-                                        ifelse(gsub(" ", "", as.character(name[(101 + 6):(110 + 6)])) == "", "top", labels[5]),
-                                        ifelse(gsub(" ", "", as.character(name[(111 + 6):(120 + 6)])) == "", "invisible", labels[5])))
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 101 + 6):(offset + 110 + 6)])) == "", "top", labels[5]),
+                                        ifelse(gsub(" ", "", as.character(name[(offset + 111 + 6):(offset + 120 + 6)])) == "", "invisible", labels[5])))
     
     # Normalize values
     for (source in unique(sankey_paths_final$source)){
@@ -599,7 +605,7 @@ for (label in labels){
                       tools$label[3], '", "',
                       tools$label[4], '", "',
                       tools$label[5], '", "',
-                      tools$label[6], '"]) .range(["grey", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
+                      tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
     
     # Make the Network. I call my colour scale with the colourScale argument
     n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
