@@ -388,8 +388,9 @@ getMatches <- function(col_gos1, col_gos2, name){
             path <- data.frame(target = topn) %>%
                 mutate(source = gos1,
                        value = 0.1,
+                       percent = "NA",
                        group = name) %>%
-                select(source, target, value, group)
+                select(source, target, percent, value, group)
             paths <<- rbind(paths, path)
         }
         
@@ -468,7 +469,7 @@ tools$go_list <- c(list(eggnog_gos),
 
 ```{r}
 labels <- tools$label
-labels <- tools$label[1]
+#labels <- tools$label[1]
 for (label in labels){
     print(label)
     
@@ -511,19 +512,21 @@ for (label in labels){
     
     # Collapse intersecting paths on same decile to contain same node name (range label with min and max rank)
     ambiguous_paths <- sankey_paths[duplicated(sankey_paths[,c(3,5)]),]
-    ambiguous_paths <- unique(ambiguous_paths[,c(3,5)])
-    for (index in 1:nrow(ambiguous_paths)){
-        ambiguous_path <- ambiguous_paths[index,]
-        paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                                  sankey_paths$group == ambiguous_path$group,]
-        range <- paste(min(sapply(paths$target, function ( x ) { min(strsplit(x, " / ")[[1]]) } )),
-                       "-", max(paths$target))
-        
-        # Update path and node
-        sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                         sankey_paths$group == ambiguous_path$group,]$target <- range
-        decile <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent]
-        sankey_nodes[decile + 10, ambiguous_path$group] <- range
+    ambiguous_paths <- unique(ambiguous_paths[,c(3,5)]) %>% filter(percent != "NA")
+    if (nrow(ambiguous_paths) > 0){
+        for (index in 1:nrow(ambiguous_paths)){
+            ambiguous_path <- ambiguous_paths[index,]
+            paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+                                      sankey_paths$group == ambiguous_path$group,]
+            range <- paste(min(sapply(paths$target, function ( x ) { min(strsplit(x, " / ")[[1]]) } )),
+                           "-", max(paths$target))
+            
+            # Update path and node
+            sankey_paths[sankey_paths$percent == ambiguous_path$percent &
+                             sankey_paths$group == ambiguous_path$group,]$target <- range
+            decile <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent]
+            sankey_nodes[decile + 10, ambiguous_path$group] <- range
+        }
     }
     # Remove percent column 
     sankey_paths <- subset(sankey_paths, select = -percent)
@@ -534,7 +537,6 @@ for (label in labels){
     }), stringsAsFactors = FALSE)
     colnames(sankey_nodes_final) <- colnames(sankey_nodes)
     
-    print(sankey_nodes_final)
     # Add placeholders, top ten terms, and decile labels
     sankey_nodes_final <- cbind(
         data.frame(sapply(1:20, function ( x ) { paste(rep(" ", x + 1), collapse="") })),
@@ -542,7 +544,6 @@ for (label in labels){
                                 sankey_nodes_final)
     label_df <- data.frame(t(c(" ", label, labels)))
     sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df)))
-    print(sankey_nodes_final)
     
     # Make each path unique by adding spaces after each one 
     sankey_paths_final <- data.frame(sankey_paths)
