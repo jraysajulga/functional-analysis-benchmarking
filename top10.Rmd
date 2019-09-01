@@ -518,8 +518,7 @@ for (label in labels){
             ambiguous_path <- ambiguous_paths[index,]
             paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
                                       sankey_paths$group == ambiguous_path$group,]
-            range <- paste(min(sapply(paths$target, function ( x ) { min(strsplit(x, " / ")[[1]]) } )),
-                           "-", max(paths$target))
+            range <- paste(sort(unlist(sapply(paths$target, function ( x ) { strsplit(x, " / ")[[1]] } ))), collapse=", ")
             
             # Update path and node
             sankey_paths[sankey_paths$percent == ambiguous_path$percent &
