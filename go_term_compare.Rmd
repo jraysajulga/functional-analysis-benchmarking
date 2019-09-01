@@ -71,7 +71,7 @@ metagomics_gos_clean <- filterOntology(metagomics_gos_clean, ontology)
 clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
 nrow(metagomics) # total number of terms
 length(metagomics_gos_clean) # Number of translated GO terms
-nrow(metagomics %>% filter(Laplace.corr..q.value < 0.05)) #significant at FDR < 5%
+length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
 ```
 
 ## MEGAN6
