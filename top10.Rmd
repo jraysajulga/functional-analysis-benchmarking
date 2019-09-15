@@ -44,6 +44,8 @@ peptidesNS$countNS <- peptidesNS$countNS * sum(peptidesWS$countWS) / sum(peptide
 peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
 peptides_all
+write.table(peptides_all$peptide, file="peptide_shaker_outputs/peptides_all.txt",
+            quote = FALSE, row.names = FALSE, col.names = FALSE)
 ```
 
 ## Filter ontologies based on molecular function, biological process, or cellular component
