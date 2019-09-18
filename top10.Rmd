@@ -618,3 +618,26 @@ for (label in labels){
 }
 ```
 
+
+## Extract peptides related to peptide deformylase activity
+
+```{r}
+unipept <- read.csv(file = "unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular", sep="\t",
+                    header = TRUE, stringsAsFactors = FALSE)
+
+# Write peptides out for feeding into metaGOmics and BLAST
+unipeptides <- unipept[grepl("peptide deformylase activity", unipept$go_names),]$X.peptide
+for (peptide in unipeptides) {
+    write.table(paste(peptide, "10", sep="\t"),
+                file= paste("peptide_deformylase_peptides_unipept/",peptide, ".tab", sep=""), 
+                quote = FALSE, row.names = FALSE, col.names = FALSE) 
+}
+```
+```{r}
+eggnog
+eggnog$names <- sapply(strsplit(eggnog$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+eggnog[grepl("peptide deformylase activity", eggnog$names),]
+```
+```{r}
+```
+
