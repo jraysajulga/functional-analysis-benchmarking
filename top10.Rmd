@@ -622,22 +622,33 @@ for (label in labels){
 ## Extract peptides related to peptide deformylase activity
 
 ```{r}
-unipept <- read.csv(file = "unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular", sep="\t",
-                    header = TRUE, stringsAsFactors = FALSE)
-
-# Write peptides out for feeding into metaGOmics and BLAST
-unipeptides <- unipept[grepl("peptide deformylase activity", unipept$go_names),]$X.peptide
+cov_pat <- "\ \\(.{2,4}\\)"
+uni <- read.csv('unipept_results/mpa_result-all-peptides.csv',
+                stringsAsFactors = FALSE) %>%
+    select(peptide,
+           #uni_go_bp = GO..biological.process.,
+           uni_go_mf = GO..molecular.function.
+           #uni_go_cc = GO..cellular.component.
+           ) %>%
+    #filter(peptide %in% fivepep) %>%
+    mutate(#uni_go_bp = str_replace_all(string = uni_go_bp, pattern = cov_pat, replacement = ""),
+           uni_go_mf = str_replace_all(string = uni_go_mf, pattern = cov_pat, replacement = "")
+           #uni_go_cc = str_replace_all(string = uni_go_cc, pattern = cov_pat, replacement = "")
+           )
+uni$uni_go_names <- sapply(strsplit(uni$uni_go_mf, ";"), function ( x ) { paste(Term(x), collapse="; ")})
+uni
+unipeptides <- uni[grepl("peptide deformylase activity", uni$uni_go_names),]$peptide
+write.table(unipeptides, file="peptide_deformylase_peptides_unipept/peptides.tab",
+            quote = FALSE, row.names = FALSE, col.names = FALSE)
 for (peptide in unipeptides) {
     write.table(paste(peptide, "10", sep="\t"),
-                file= paste("peptide_deformylase_peptides_unipept/",peptide, ".tab", sep=""), 
+                file= paste("peptide_deformylase_peptides_unipept/peptides/",peptide, ".tab", sep=""), 
                 quote = FALSE, row.names = FALSE, col.names = FALSE) 
 }
 ```
+
 ```{r}
 eggnog
 eggnog$names <- sapply(strsplit(eggnog$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 eggnog[grepl("peptide deformylase activity", eggnog$names),]
 ```
-```{r}
-```
-
