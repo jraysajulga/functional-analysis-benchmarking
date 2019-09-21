@@ -638,7 +638,7 @@ uni <- read.csv('unipept_results/mpa_result-all-peptides.csv',
 uni$uni_go_names <- sapply(strsplit(uni$uni_go_mf, ";"), function ( x ) { paste(Term(x), collapse="; ")})
 uni
 unipeptides <- uni[grepl("peptide deformylase activity", uni$uni_go_names),]$peptide
-write.table(unipeptides, file="peptide_deformylase_peptides_unipept/peptides.tab",
+write.table(sort(unique(unipeptides)), file="peptide_deformylase_peptides_unipept/peptides.tab",
             quote = FALSE, row.names = FALSE, col.names = FALSE)
 for (peptide in unipeptides) {
     write.table(paste(peptide, "10", sep="\t"),
