@@ -26,7 +26,7 @@ filterOntology <- function(go_list, ontology){
     onts <- Ontology(go_list)
     return(go_list[onts == ontology & !is.na(onts)])
 }
-ontology <- "CC"
+ontology <- "MF"
 ```
 
 # GO terms, direct from tools
@@ -197,7 +197,7 @@ wget http://www.geneontology.org/ontology/subsets/goslim_generic.obo -O GO_files
 
 Run python to get the list of all ancestors:
 
-```{python engine.path='~/anaconda3/bin/python'}
+```{python engine.path='~/miniconda3/bin/python'}
 from goatools import obo_parser
 from goatools import mapslim
 import sys
@@ -238,7 +238,7 @@ def slim_down(infile, outfile):
     with open(outfile, 'w') as outf:
         for x in sorted(slims):
             outf.write(x + '\n')
-            
+
 for i in ['eggnog', 'megan', 'metagomics', 'mpa', 'prophane', 'unipept']:
     infile = 'go_lists/' + i + '.tab'
     outfile = 'go_lists/' + i + '_parents.tab'
