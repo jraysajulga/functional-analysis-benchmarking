@@ -83,6 +83,13 @@ eggnog_w_counts$go <- filterOntology(eggnog_w_counts$go, ontology)
 eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 eggnog_w_counts
 ```
+Get the number of peptides (non-unique) at a peptide deformylase activity and spectral counts
+```{r}
+eggnog_w_counts[grepl("peptide deformylase activity", eggnog_w_counts$name),]
+nrow(eggnog_w_counts[grepl("peptide deformylase activity", eggnog_w_counts$name),])
+eggnog_w_counts[grepl("peptide deformylase activity", eggnog_w_counts$name),]$sumCountWS - 1
+eggnog_w_counts[grepl("peptide deformylase activity", eggnog_w_counts$name),]$sumCountNS - 1
+```
 
 
 Top *N*:
@@ -124,12 +131,20 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
     select(go = GO.acc,
            name = GO.name,
            log2ratio =  Laplace.corr..Log.2..fold.change,
-           p = Laplace.corr..q.value) %>%
+           p = Laplace.corr..q.value,
+           count_ns = Run.1.PSM.count,
+           count_ws = Run.2.PSM.count) %>%
     filter(Ontology(as.character(go)) == ontology)
 
 metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
     arrange(-log2ratio)
 metagomics_filt
+```
+Get the number of peptides (non-unique) at a peptide deformylase activity and spectral counts
+```{r}
+metagomics_filt[metagomics_filt$name == "peptide deformylase activity",]
+metagomics_filt[metagomics_filt$name == "peptide deformylase activity",]$count_ws
+metagomics_filt[metagomics_filt$name == "peptide deformylase activity",]$count_ns
 ```
 
 Top *n* results:
@@ -192,7 +207,8 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     bind_rows() %>%
     select(-X) %>%
     rename(peptides = X.peptides)
-
+unipeptNS
+unipeptWS
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
            log2ratio = log2(lapCountWS/lapCountNS)) %>%
@@ -201,11 +217,19 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     arrange(-log2ratio)
 unipept_all
 ```
+Get the number of peptides (non-unique) at a peptide deformylase activity and spectral counts
+```{r}
+unipept_all[unipept_all$Name == "peptide deformylase activity",]
+unipept_all[unipept_all$Name == "peptide deformylase activity",]$lapCountWS - 1
+unipept_all[unipept_all$Name == "peptide deformylase activity",]$lapCountNS - 1
+```
+
 ```{r}
 sum(unipeptWS$peptides)
 sum(unipeptNS$peptides) 
 sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
 ```
+
 
 
 Top *n*:
@@ -620,6 +644,11 @@ for (label in labels){
 
 
 ## Extract peptides related to peptide deformylase activity
+```{r}
+uni <- read.csv('unipept_results/mpa_result-all-peptides.csv',
+                stringsAsFactors = FALSE) 
+uni
+```
 
 ```{r}
 cov_pat <- "\ \\(.{2,4}\\)"
