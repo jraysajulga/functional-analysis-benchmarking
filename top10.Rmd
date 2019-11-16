@@ -237,7 +237,9 @@ ws <- pAll$SpecCount.y
 mpa_norm <- sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 
 pAll[is.na(pAll)] <- 0
+pAll
 pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
+pAll
 pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
@@ -282,16 +284,21 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
     mutate(fc = log2(as.double(ws)/as.double(ns)),
            gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+    select(fc, ws, ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
     terms <- filterOntology(unique(x[x != "-"]), ontology)
     paste(terms[terms != ""], collapse = ",")
 })
-prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
+
+# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
+prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(fc, ws, ns) ]
 prophane$names <- Term(prophane$gos)
-prophane <- prophane %>% group_by_at(vars(fc)) %>%
+
+# Collapse GO terms based on fold change values.
+prophane <- prophane %>% group_by_at(vars(fc, ws, ns)) %>%
     summarize_all(paste, collapse="; ") %>%
     arrange(-fc)
+
 prophane
 ```
 
@@ -468,6 +475,7 @@ tools$go_list <- c(list(eggnog_gos),
                    list(prophane_gos),
                    list(unipept_gos))
 ```
+
 
 ```{r}
 labels <- tools$label
