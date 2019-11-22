@@ -75,10 +75,10 @@ eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
     group_by(protein, desc, gene, go) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    summarize(countWS = sum(countWS), countNS = sum(countNS)) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio) %>%
-    select(protein, go, gene, sumCountWS, sumCountNS, log2ratio, desc)
+    select(protein, go, gene, countWS, countNS, log2ratio, desc)
 eggnog_w_counts$go <- filterOntology(eggnog_w_counts$go, ontology)
 eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 eggnog_w_counts
