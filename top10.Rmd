@@ -308,8 +308,8 @@ This is comparing the estimated fold changes for GO terms for the two tools that
 
 ```{r}
 um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
-png("um_cor.png", res = 700, width = 4, height = 4, units = "in")
-plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3,
+png("um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
+plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
      xlab = "Unipept: Log2 Ratio",
      ylab = "MetaGOmics: Log2 Ratio")
 mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
