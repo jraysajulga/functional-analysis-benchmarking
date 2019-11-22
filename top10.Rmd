@@ -194,9 +194,9 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     rename(peptides = X.peptides)
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
-    mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
-           log2ratio = log2(lapCountWS/lapCountNS)) %>%
-    select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
+    mutate(countNS = peptides.x, countWS = peptides.y,
+           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    select(GO.term, Name, countWS, countNS, log2ratio) %>%
     filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
 unipept_all
@@ -236,18 +236,18 @@ ns <- pAll$SpecCount.x
 ws <- pAll$SpecCount.y
 mpa_norm <- sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 
+# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
 pAll[is.na(pAll)] <- 0
-pAll
 pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
-pAll
+
+# Collapse GO terms based on fold change values.
 pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
+    select(nsCount = SpecCount.x, wsCount = SpecCount.y, gos) %>%
     mutate(name = Term(gsub(" ", "", gos)),
-           nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
-           log2ratio = log2(wsCount/nsCount)) %>%
+           log2ratio = log2((wsCount + 1)/(nsCount + 1))) %>%
     arrange(-log2ratio)
-pAll
 ```
 
 ```{r}
