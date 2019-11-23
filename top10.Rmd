@@ -292,7 +292,7 @@ prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
 
 # Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
 prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(fc, ws, ns) ]
-prophane$names <- Term(prophane$gos)
+prophane$name <- Term(prophane$gos)
 
 # Collapse GO terms based on fold change values.
 prophane <- prophane %>% group_by_at(vars(fc, ws, ns)) %>%
