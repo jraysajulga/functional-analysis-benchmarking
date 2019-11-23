@@ -443,17 +443,22 @@ getMatches <- function(col_gos1, col_gos2, name){
     return(out)
 }
 
-# Removes both original and duplicates
+# Retains the first copy
 removeDuplicates <- function(go_col){
-    all_gos <- unlist(str_split(go_col, "; "))
-    uniques <- all_gos[!all_gos %in% unique(all_gos[duplicated(all_gos)])]
-    
-    unique_col <- sapply(str_split(go_col, "; "), function ( go_list ) {
-        paste(go_list[go_list %in% uniques], collapse="; ")})
-    unique_col[unique_col != ""]
+    all_gos <- unique(unlist(str_split(go_col, "; ")))
+    all_gos <- all_gos[all_gos != ""]
+    filtered <- sapply(str_split(go_col, "; "), function ( go_list ) {
+        output <- paste(go_list[go_list %in% all_gos], collapse="; ");
+        all_gos <<- setdiff(all_gos, go_list)
+        output
+    })
+    filtered <- filtered[filtered != ""]
+    filtered[!is.na(filtered)]
+    filtered
 }
 
 eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
+# eggnog_gos <- eggnog_gos[!is.na(eggnog_gos)]
 megan_gos <- removeDuplicates(megan$name)
 metagomics_gos <- removeDuplicates(metagomics_filt$name)
 mpa_gos <- removeDuplicates(pAll$name)
@@ -625,7 +630,6 @@ for (label in labels){
     saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
 }
 ```
-
 
 ## Extract peptides related to peptide deformylase activity
 
