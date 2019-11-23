@@ -196,7 +196,7 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(countNS = peptides.x, countWS = peptides.y,
            log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    select(GO.term, Name, countWS, countNS, log2ratio) %>%
+    select(GO.term, name = Name, countWS, countNS, log2ratio) %>%
     filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
 unipept_all
@@ -463,7 +463,7 @@ megan_gos <- removeDuplicates(megan$name)
 metagomics_gos <- removeDuplicates(metagomics_filt$name)
 mpa_gos <- removeDuplicates(pAll$name)
 prophane_gos <- removeDuplicates(prophane$names)
-unipept_gos <- removeDuplicates(unipept_all$Name)
+unipept_gos <- removeDuplicates(unipept_all$name)
 
 tools <- list()
 tools$label <- c("EggNOG",
@@ -481,6 +481,36 @@ tools$go_list <- c(list(eggnog_gos),
                    list(unipept_gos))
 ```
 
+```{r}
+
+get_rank_table <- function(tool_topn, tools, labels){
+    rank_table <- data.frame(names = tool_topn)
+    for (i in 1:length(tools)){
+        #print(labels[i])
+        rank_table[,labels[i]] <- sapply(tool_topn, function(topn){
+            tool <- tools[i][[1]]
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))
+            match <- tool[grepl(topn, tool$name, fixed=TRUE),]
+            matches <- sapply(1:nrow(match), function(row){
+                if (row){
+                    if (!is.na(rank[row])){
+                        rank[row]
+                    }
+                }
+            })
+            paste(matches, collapse=", ")
+        })
+    }
+    rank_table
+    # rank_table[,c(1,7,2,3,4,5,6)]
+}
+
+# tool_topn
+get_rank_table(unipept_all$name[1:10],
+               list(unipept_all, eggnog_w_counts, megan, metagomics_filt, pAll, prophane),
+               c("Unipept", "EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane"))
+
+```
 
 ```{r}
 labels <- tools$label
