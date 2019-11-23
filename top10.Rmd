@@ -484,33 +484,35 @@ tools$go_list <- c(list(eggnog_gos),
 ```{r}
 
 get_rank_table <- function(tool_topn, tools, labels){
-    rank_table <- data.frame(names = tool_topn)
+    rank_table <- data.frame(names = unlist(lapply(test, function(a) { rep(a, 3)})))
     for (i in 1:length(tools)){
         #print(labels[i])
-        rank_table[,labels[i]] <- sapply(tool_topn, function(topn){
+        output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
             rank <- which(grepl(topn, tool$name, fixed=TRUE))
             match <- tool[grepl(topn, tool$name, fixed=TRUE),]
-            matches <- sapply(1:nrow(match), function(row){
+            output1 <- output2 <- output3 <- ""
+            sapply(1:nrow(match), function(row){
                 if (row){
                     if (!is.na(rank[row])){
                         term <- match[row,]
-                        paste(rank[row],
-                              ' (',
-                              ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                     '',
-                                     paste(round(as.numeric(term$countWS), digits=2), '/',
-                                           round(as.numeric(term$countNS), digits=2), ' → ', sep='')),
-                              round(as.numeric(term$log2ratio), digits=2),
-                              ')',
-                              sep="")
+                        output1 <<- paste(output1, rank[row])
+                        output2 <<- paste(output2,
+                                         ifelse(is.null(term$countWS) && is.null(term$countNS),
+                                                '',
+                                                paste(round(as.numeric(term$countWS), digits=2), '/',
+                                                      round(as.numeric(term$countNS), digits=2),
+                                                      sep='')))
+                        output3 <<- paste(output3, round(as.numeric(term$log2ratio), digits=2))
                     }
                 }
             })
-            matches <- paste(matches, collapse=", ")
-            matches[grepl('NULL', matches)] <- ''
-            matches
+            # matches <- paste(matches, collapse=", ")
+            # matches[grepl('NULL', matches)] <- ''
+            # matches
+            list(output1, output2, output3)
         })
+        rank_table[,labels[i]] <- unlist(output)
     }
     rank_table
 }
@@ -520,6 +522,7 @@ rank_table <- get_rank_table(unipept_all$name[1:10],
                list(unipept_all, eggnog_w_counts, megan, metagomics_filt, pAll, prophane),
                c("Unipept", "EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane"))
 rank_table
+write.table(rank_table, file="rank_table.tabular", sep='\t', quote=FALSE, row.names=FALSE)
 ```
 
 ```{r}
