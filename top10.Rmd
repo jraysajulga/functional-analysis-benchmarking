@@ -244,9 +244,9 @@ pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCo
 pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
-    select(nsCount = SpecCount.x, wsCount = SpecCount.y, gos) %>%
+    select(countNS = SpecCount.x, countWS = SpecCount.y, gos) %>%
     mutate(name = Term(gsub(" ", "", gos)),
-           log2ratio = log2((wsCount + 1)/(nsCount + 1))) %>%
+           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
 
@@ -494,22 +494,32 @@ get_rank_table <- function(tool_topn, tools, labels){
             matches <- sapply(1:nrow(match), function(row){
                 if (row){
                     if (!is.na(rank[row])){
-                        rank[row]
+                        term <- match[row,]
+                        paste(rank[row],
+                              ' (',
+                              ifelse(is.null(term$countWS) && is.null(term$countNS),
+                                     '',
+                                     paste(round(as.numeric(term$countWS), digits=2), '/',
+                                           round(as.numeric(term$countNS), digits=2), ' → ', sep='')),
+                              round(as.numeric(term$log2ratio), digits=2),
+                              ')',
+                              sep="")
                     }
                 }
             })
-            paste(matches, collapse=", ")
+            matches <- paste(matches, collapse=", ")
+            matches[grepl('NULL', matches)] <- ''
+            matches
         })
     }
     rank_table
-    # rank_table[,c(1,7,2,3,4,5,6)]
 }
 
 # tool_topn
-get_rank_table(unipept_all$name[1:10],
+rank_table <- get_rank_table(unipept_all$name[1:10],
                list(unipept_all, eggnog_w_counts, megan, metagomics_filt, pAll, prophane),
                c("Unipept", "EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane"))
-
+rank_table
 ```
 
 ```{r}
