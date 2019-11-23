@@ -75,10 +75,10 @@ eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
     group_by(protein, desc, gene, go) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    summarize(countWS = sum(countWS), countNS = sum(countNS)) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio) %>%
-    select(protein, go, gene, sumCountWS, sumCountNS, log2ratio, desc)
+    select(protein, go, gene, countWS, countNS, log2ratio, desc)
 eggnog_w_counts$go <- filterOntology(eggnog_w_counts$go, ontology)
 eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
 eggnog_w_counts
@@ -194,9 +194,9 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     rename(peptides = X.peptides)
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
-    mutate(lapCountNS = peptides.x + 1, lapCountWS = peptides.y + 1,
-           log2ratio = log2(lapCountWS/lapCountNS)) %>%
-    select(GO.term, Name, lapCountWS, lapCountNS, log2ratio) %>%
+    mutate(countNS = peptides.x, countWS = peptides.y,
+           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    select(GO.term, name = Name, countWS, countNS, log2ratio) %>%
     filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
 unipept_all
@@ -236,16 +236,18 @@ ns <- pAll$SpecCount.x
 ws <- pAll$SpecCount.y
 mpa_norm <- sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 
+# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
 pAll[is.na(pAll)] <- 0
 pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
+
+# Collapse GO terms based on fold change values.
 pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
 pAll <- pAll %>% group_by(gos) %>%
     summarize_all(sum) %>%
+    select(countNS = SpecCount.x, countWS = SpecCount.y, gos) %>%
     mutate(name = Term(gsub(" ", "", gos)),
-           nsCount = SpecCount.x + 1, wsCount = SpecCount.y + 1,
-           log2ratio = log2(wsCount/nsCount)) %>%
+           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
-pAll
 ```
 
 ```{r}
@@ -282,16 +284,21 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
     mutate(fc = log2(as.double(ws)/as.double(ns)),
            gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(fc, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+    select(fc, ws, ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
     terms <- filterOntology(unique(x[x != "-"]), ontology)
     paste(terms[terms != ""], collapse = ",")
 })
-prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = fc ]
-prophane$names <- Term(prophane$gos)
-prophane <- prophane %>% group_by_at(vars(fc)) %>%
+
+# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
+prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(fc, ws, ns) ]
+prophane$name <- Term(prophane$gos)
+
+# Collapse GO terms based on fold change values.
+prophane <- prophane %>% group_by_at(vars(fc, ws, ns)) %>%
     summarize_all(paste, collapse="; ") %>%
     arrange(-fc)
+
 prophane
 ```
 
@@ -301,8 +308,8 @@ This is comparing the estimated fold changes for GO terms for the two tools that
 
 ```{r}
 um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
-png("um_cor.png", res = 700, width = 4, height = 4, units = "in")
-plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3,
+png("um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
+plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
      xlab = "Unipept: Log2 Ratio",
      ylab = "MetaGOmics: Log2 Ratio")
 mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
@@ -436,22 +443,27 @@ getMatches <- function(col_gos1, col_gos2, name){
     return(out)
 }
 
-# Removes both original and duplicates
+# Retains the first copy
 removeDuplicates <- function(go_col){
-    all_gos <- unlist(str_split(go_col, "; "))
-    uniques <- all_gos[!all_gos %in% unique(all_gos[duplicated(all_gos)])]
-    
-    unique_col <- sapply(str_split(go_col, "; "), function ( go_list ) {
-        paste(go_list[go_list %in% uniques], collapse="; ")})
-    unique_col[unique_col != ""]
+    all_gos <- unique(unlist(str_split(go_col, "; ")))
+    all_gos <- all_gos[all_gos != ""]
+    filtered <- sapply(str_split(go_col, "; "), function ( go_list ) {
+        output <- paste(go_list[go_list %in% all_gos], collapse="; ");
+        all_gos <<- setdiff(all_gos, go_list)
+        output
+    })
+    filtered <- filtered[filtered != ""]
+    filtered <- filtered[filtered != "NA"]
+    filtered[!is.na(filtered)]
 }
 
 eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
+# eggnog_gos <- eggnog_gos[!is.na(eggnog_gos)]
 megan_gos <- removeDuplicates(megan$name)
 metagomics_gos <- removeDuplicates(metagomics_filt$name)
 mpa_gos <- removeDuplicates(pAll$name)
 prophane_gos <- removeDuplicates(prophane$names)
-unipept_gos <- removeDuplicates(unipept_all$Name)
+unipept_gos <- removeDuplicates(unipept_all$name)
 
 tools <- list()
 tools$label <- c("EggNOG",
@@ -467,6 +479,50 @@ tools$go_list <- c(list(eggnog_gos),
                    list(mpa_gos),
                    list(prophane_gos),
                    list(unipept_gos))
+```
+
+```{r}
+
+get_rank_table <- function(tool_topn, tools, labels){
+    rank_table <- data.frame(names = unlist(lapply(test, function(a) { rep(a, 3)})))
+    for (i in 1:length(tools)){
+        #print(labels[i])
+        output <- sapply(tool_topn, function(topn){
+            tool <- tools[i][[1]]
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))
+            match <- tool[grepl(topn, tool$name, fixed=TRUE),]
+            output1 <- output2 <- output3 <- ""
+            sapply(1:nrow(match), function(row){
+                if (row){
+                    if (!is.na(rank[row])){
+                        term <- match[row,]
+                        output1 <<- paste(output1, rank[row])
+                        output2 <<- paste(output2,
+                                         ifelse(is.null(term$countWS) && is.null(term$countNS),
+                                                '',
+                                                paste(round(as.numeric(term$countWS), digits=2), '/',
+                                                      round(as.numeric(term$countNS), digits=2),
+                                                      sep='')))
+                        output3 <<- paste(output3, round(as.numeric(term$log2ratio), digits=2))
+                    }
+                }
+            })
+            # matches <- paste(matches, collapse=", ")
+            # matches[grepl('NULL', matches)] <- ''
+            # matches
+            list(output1, output2, output3)
+        })
+        rank_table[,labels[i]] <- unlist(output)
+    }
+    rank_table
+}
+
+# tool_topn
+rank_table <- get_rank_table(unipept_all$name[1:10],
+               list(unipept_all, eggnog_w_counts, megan, metagomics_filt, pAll, prophane),
+               c("Unipept", "EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane"))
+rank_table
+write.table(rank_table, file="rank_table.tabular", sep='\t', quote=FALSE, row.names=FALSE)
 ```
 
 ```{r}
@@ -520,12 +576,12 @@ for (label in labels){
             ambiguous_path <- ambiguous_paths[index,]
             paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
                                       sankey_paths$group == ambiguous_path$group,]
-            range <- paste(sort(unlist(sapply(paths$target, function ( x ) { strsplit(x, " / ")[[1]] } ))), collapse=", ")
+            range <- paste(sort(unlist(sapply(paths$target, function ( x ) { strsplit(as.character(x), " / ")[[1]] } ))), collapse=", ")
             
             # Update path and node
             sankey_paths[sankey_paths$percent == ambiguous_path$percent &
                              sankey_paths$group == ambiguous_path$group,]$target <- range
-            decile <- as.numeric(levels(ambiguous_path$percent))[ambiguous_path$percent]
+            decile <- as.numeric(ambiguous_path$percent)
             sankey_nodes[decile + 10, ambiguous_path$group] <- range
         }
     }
@@ -617,7 +673,6 @@ for (label in labels){
     saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
 }
 ```
-
 
 ## Extract peptides related to peptide deformylase activity
 
