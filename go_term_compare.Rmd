@@ -191,8 +191,8 @@ Each of the tools produces a list of GO terms, but we don't necessarily know how
 
 Download the current GO ontology:
 ```{bash results='hide'}
-wget http://purl.obolibrary.org/obo/go/go-basic.obo -O GO_files/go-basic.obo
-wget http://www.geneontology.org/ontology/subsets/goslim_generic.obo -O GO_files/go-slim.obo
+curl http://current.geneontology.org/ontology/go-basic.obo -o GO_files/go-basic.obo
+curl http://geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
 ```
 
 Run python to get the list of all ancestors:
