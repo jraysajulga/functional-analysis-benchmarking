@@ -26,7 +26,7 @@ filterOntology <- function(go_list, ontology){
     onts <- Ontology(go_list)
     return(go_list[onts == ontology & !is.na(onts)])
 }
-ontology <- "MF"
+ontology <- "CC"
 ```
 
 # GO terms, direct from tools
