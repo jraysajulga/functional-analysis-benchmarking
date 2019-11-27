@@ -489,8 +489,8 @@ get_rank_table <- function(name, tools){
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            rank <- which(grepl(topn, tool$name, fixed=TRUE))
-            match <- tool[grepl(topn, tool$name, fixed=TRUE),]
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))[[1]]
+            match <- tool[grepl(topn, tool$name, fixed=TRUE)[[1]],]
             output1 <- output2 <- output3 <- ""
             sapply(1:nrow(match), function(row){
                 if (row){
