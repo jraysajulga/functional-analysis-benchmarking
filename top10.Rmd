@@ -281,23 +281,23 @@ prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
                                                                ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
-    mutate(fc = log2(as.double(ws)/as.double(ns)),
+    mutate(log2ratio = log2(as.double(ws)/as.double(ns)),
            gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(fc, ws, ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+    select(log2ratio, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
     terms <- filterOntology(unique(x[x != "-"]), ontology)
     paste(terms[terms != ""], collapse = ",")
 })
 
 # Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
-prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(fc, ws, ns) ]
+prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(log2ratio, countWS, countNS) ]
 prophane$name <- Term(prophane$gos)
 
 # Collapse GO terms based on fold change values.
-prophane <- prophane %>% group_by_at(vars(fc, ws, ns)) %>%
+prophane <- prophane %>% group_by_at(vars(log2ratio, countWS, countNS)) %>%
     summarize_all(paste, collapse="; ") %>%
-    arrange(-fc)
+    arrange(-log2ratio)
 
 prophane
 ```
@@ -482,15 +482,15 @@ tools$go_list <- c(list(eggnog_gos),
 ```
 
 ```{r}
-
-get_rank_table <- function(tool_topn, tools, labels){
-    rank_table <- data.frame(names = unlist(lapply(test, function(a) { rep(a, 3)})))
+get_rank_table <- function(name, tools){
+    labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
+    tool_topn <- tools[which(labels == name)][[1]]$name[1:10]
+    rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { rep(a, 2)})))
     for (i in 1:length(tools)){
-        #print(labels[i])
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            rank <- which(grepl(topn, tool$name, fixed=TRUE))
-            match <- tool[grepl(topn, tool$name, fixed=TRUE),]
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))[[1]]
+            match <- tool[grepl(topn, tool$name, fixed=TRUE)[[1]],]
             output1 <- output2 <- output3 <- ""
             sapply(1:nrow(match), function(row){
                 if (row){
@@ -501,209 +501,217 @@ get_rank_table <- function(tool_topn, tools, labels){
                                          ifelse(is.null(term$countWS) && is.null(term$countNS),
                                                 '',
                                                 paste(round(as.numeric(term$countWS), digits=2), '/',
-                                                      round(as.numeric(term$countNS), digits=2),
+                                                      round(as.numeric(term$countNS), digits=2), ' (',
+                                                      round(as.numeric(term$log2ratio), digits=2), ')',
                                                       sep='')))
-                        output3 <<- paste(output3, round(as.numeric(term$log2ratio), digits=2))
                     }
                 }
             })
-            # matches <- paste(matches, collapse=", ")
-            # matches[grepl('NULL', matches)] <- ''
-            # matches
-            list(output1, output2, output3)
+            list(output1, output2)
         })
         rank_table[,labels[i]] <- unlist(output)
     }
-    rank_table
+    rank_table <- rank_table %>% select(names, name, everything())
+    write.table(rank_table, file=paste("rank_tables/",name,"-rank_table.tabular", sep=""), sep='\t', quote=FALSE, row.names=FALSE)
 }
 
 # tool_topn
-rank_table <- get_rank_table(unipept_all$name[1:10],
-               list(unipept_all, eggnog_w_counts, megan, metagomics_filt, pAll, prophane),
-               c("Unipept", "EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane"))
-rank_table
-write.table(rank_table, file="rank_table.tabular", sep='\t', quote=FALSE, row.names=FALSE)
-```
-
-```{r}
-labels <- tools$label
-#labels <- tools$label[1]
-for (label in labels){
-    print(label)
-    
-    index <- which(label == tools$label)
-    go_lists <- tools$go_list[1:6 != index]
-    tool_topn <- tools$go_list[index][[1]][1:10]
-    
-    
-    labels <- tools$label[1:6 != index]
-    
-    tool1 <- getMatches(tool_topn, go_lists[1][[1]], labels[1])
-    tool2 <- getMatches(tool_topn, go_lists[2][[1]], labels[2])
-    tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3])
-    tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4])
-    tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5])
-    
-    top_matches <- plyr::join_all(
-        list(tool1$matches,
-             tool2$matches,
-             tool3$matches,
-             tool4$matches,
-             tool5$matches),
-        by="name")
-    
-    sankey_paths <- rbind(tool1$paths,
-                          tool2$paths,
-                          tool3$paths,
-                          tool4$paths,
-                          tool5$paths)
-    sankey_nodes <- data.frame(tool1$nodes,
-                               tool2$nodes,
-                               tool3$nodes,
-                               tool4$nodes,
-                               tool5$nodes, stringsAsFactors = FALSE)
-    colnames(sankey_nodes) <- c(labels[1],
-                                labels[2],
-                                labels[3],
-                                labels[4],
-                                labels[5])
-    
-    # Collapse intersecting paths on same decile to contain same node name (range label with min and max rank)
-    ambiguous_paths <- sankey_paths[duplicated(sankey_paths[,c(3,5)]),]
-    ambiguous_paths <- unique(ambiguous_paths[,c(3,5)]) %>% filter(percent != "NA")
-    if (nrow(ambiguous_paths) > 0){
-        for (index in 1:nrow(ambiguous_paths)){
-            ambiguous_path <- ambiguous_paths[index,]
-            paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                                      sankey_paths$group == ambiguous_path$group,]
-            range <- paste(sort(unlist(sapply(paths$target, function ( x ) { strsplit(as.character(x), " / ")[[1]] } ))), collapse=", ")
-            
-            # Update path and node
-            sankey_paths[sankey_paths$percent == ambiguous_path$percent &
-                             sankey_paths$group == ambiguous_path$group,]$target <- range
-            decile <- as.numeric(ambiguous_path$percent)
-            sankey_nodes[decile + 10, ambiguous_path$group] <- range
-        }
-    }
-    # Remove percent column 
-    sankey_paths <- subset(sankey_paths, select = -percent)
-    
-    # Make each node unique by adding spaces after each one
-    sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) { 
-        sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * (index + 1)), collapse=""), sep="")})
-    }), stringsAsFactors = FALSE)
-    colnames(sankey_nodes_final) <- colnames(sankey_nodes)
-    
-    # Add placeholders, top ten terms, and decile labels
-    sankey_nodes_final <- cbind(
-        data.frame(sapply(1:20, function ( x ) { paste(rep(" ", x + 1), collapse="") })),
-        data.frame(Term = c(tool_topn, paste(seq(0, 90, by=10), " - ", seq(10, 100, by=10), "%", sep=""))),
-                                sankey_nodes_final)
-    label_df <- data.frame(t(c(" ", label, labels)))
-    sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df)))
-    
-    # Make each path unique by adding spaces after each one 
-    sankey_paths_final <- data.frame(sankey_paths)
-    sankey_paths_final$target <- sapply(1:nrow(sankey_paths), function ( x ) { 
-        index <- which(colnames(sankey_nodes) == sankey_paths[x,]$group)
-        paste(sankey_paths[x,]$target, paste(rep(" ",20 * (index + 1)), collapse=""), sep="") } )
-    
-    # Set up node framework
-    framework <- data.frame(stringsAsFactors = FALSE)
-    sapply(1:(length(sankey_nodes_final) - 1), function ( i ) {
-        framework <<- rbind(framework, 
-                            data.frame(source = sankey_nodes_final[,i],
-                                       target = sankey_nodes_final[,i + 1],
-                                       group = "invisible",
-                                       value = 1, stringsAsFactors = FALSE))
-    })
-    
-    # Make a connection data frame
-    links <- rbind(framework, sankey_paths_final)
-    
-    # From these flows we need to create a node data frame: it lists every entities involved in the flow
-    nodes=data.frame(name=c(as.character(framework$source),
-                            as.character(sankey_nodes_final[,length(sankey_nodes_final)])))
-    links$IDsource=match(links$source, nodes$name)-1 
-    links$IDtarget=match(links$target, nodes$name)-1
-    
-    offset <- 21
-    nodes <- nodes %>% mutate(group = c(rep("invisible", 21),
-                                        "header", rep(label, 10),
-                                        rep("invisible", 10),
-                                        labels[1], 
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 21 + 2):(offset + 30 + 2)])) == "", "top", labels[1]),
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 31 + 2):(offset + 40 + 2)])) == "", "invisible", labels[1]),
-                                        labels[2], 
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 41 + 3):(offset + 50 + 3)])) == "", "top", labels[2]),
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 51 + 3):(offset + 60 + 3)])) == "", "invisible", labels[2]),
-                                        labels[3],
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 61 + 4):(offset + 70 + 4)])) == "", "top", labels[3]),
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 71 + 4):(offset + 80 + 4)])) == "", "invisible", labels[3]),
-                                        labels[4],
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 81 + 5):(offset + 90 + 5)])) == "", "top", labels[4]),
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 91 + 5):(offset + 100 + 5)])) == "", "invisible", labels[4]),
-                                        labels[5],
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 101 + 6):(offset + 110 + 6)])) == "", "top", labels[5]),
-                                        ifelse(gsub(" ", "", as.character(name[(offset + 111 + 6):(offset + 120 + 6)])) == "", "invisible", labels[5])))
-    
-    # Normalize values
-    for (source in unique(sankey_paths_final$source)){
-        paths <- links[links$source == source,] %>% filter (group != "invisible")
-        links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value)
-    }
-    for (target in unique(sankey_paths_final$target)){
-        paths <- links[links$target == target,] %>% filter (group != "invisible")
-        links[links$target == target & links$group == "invisible",]$value <- links[links$target == target & links$group == "invisible",]$value - sum(paths$value)
-    }
-    
-    my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "header", "top", "',
-                      tools$label[1], '", "',
-                      tools$label[2], '", "',
-                      tools$label[3], '", "',
-                      tools$label[4], '", "',
-                      tools$label[5], '", "',
-                      tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="")
-    
-    # Make the Network. I call my colour scale with the colourScale argument
-    n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget",
-                       Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group",
-                       iterations = 0)
-    print(n)
-    saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE)
+remove_blanks <- function(go_list){
+    go_list[go_list$name != "",]
 }
+tools <- list(remove_blanks(eggnog_w_counts),
+              remove_blanks(megan),
+              remove_blanks(metagomics_filt),
+              remove_blanks(pAll),
+              remove_blanks(prophane),
+              remove_blanks(unipept_all))
+get_rank_table("Unipept", tools)
+get_rank_table("EggNOG", tools)
+get_rank_table("MEGAN", tools)
+get_rank_table("MetaGOmics", tools)
+get_rank_table("MPA", tools)
+get_rank_table("Prophane", tools)
 ```
 
-## Extract peptides related to peptide deformylase activity
+<!-- ```{r} -->
+<!-- labels <- tools$label -->
+<!-- #labels <- tools$label[1] -->
+<!-- for (label in labels){ -->
+<!--     print(label) -->
 
-```{r}
-cov_pat <- "\ \\(.{2,4}\\)"
-uni <- read.csv('unipept_results/mpa_result-all-peptides.csv',
-                stringsAsFactors = FALSE) %>%
-    select(peptide,
-           #uni_go_bp = GO..biological.process.,
-           uni_go_mf = GO..molecular.function.
-           #uni_go_cc = GO..cellular.component.
-           ) %>%
-    #filter(peptide %in% fivepep) %>%
-    mutate(#uni_go_bp = str_replace_all(string = uni_go_bp, pattern = cov_pat, replacement = ""),
-           uni_go_mf = str_replace_all(string = uni_go_mf, pattern = cov_pat, replacement = "")
-           #uni_go_cc = str_replace_all(string = uni_go_cc, pattern = cov_pat, replacement = "")
-           )
-uni$uni_go_names <- sapply(strsplit(uni$uni_go_mf, ";"), function ( x ) { paste(Term(x), collapse="; ")})
-uni
-unipeptides <- uni[grepl("peptide deformylase activity", uni$uni_go_names),]$peptide
-write.table(sort(unique(unipeptides)), file="peptide_deformylase_peptides_unipept/peptides.tab",
-            quote = FALSE, row.names = FALSE, col.names = FALSE)
-for (peptide in unipeptides) {
-    write.table(paste(peptide, "10", sep="\t"),
-                file= paste("peptide_deformylase_peptides_unipept/peptides/",peptide, ".tab", sep=""), 
-                quote = FALSE, row.names = FALSE, col.names = FALSE) 
-}
-```
+<!--     index <- which(label == tools$label) -->
+<!--     go_lists <- tools$go_list[1:6 != index] -->
+<!--     tool_topn <- tools$go_list[index][[1]][1:10] -->
 
-```{r}
-eggnog
-eggnog$names <- sapply(strsplit(eggnog$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
-eggnog[grepl("peptide deformylase activity", eggnog$names),]
-```
+
+<!--     labels <- tools$label[1:6 != index] -->
+
+<!--     tool1 <- getMatches(tool_topn, go_lists[1][[1]], labels[1]) -->
+<!--     tool2 <- getMatches(tool_topn, go_lists[2][[1]], labels[2]) -->
+<!--     tool3 <- getMatches(tool_topn, go_lists[3][[1]], labels[3]) -->
+<!--     tool4 <- getMatches(tool_topn, go_lists[4][[1]], labels[4]) -->
+<!--     tool5 <- getMatches(tool_topn, go_lists[5][[1]], labels[5]) -->
+
+<!--     top_matches <- plyr::join_all( -->
+<!--         list(tool1$matches, -->
+<!--              tool2$matches, -->
+<!--              tool3$matches, -->
+<!--              tool4$matches, -->
+<!--              tool5$matches), -->
+<!--         by="name") -->
+
+<!--     sankey_paths <- rbind(tool1$paths, -->
+<!--                           tool2$paths, -->
+<!--                           tool3$paths, -->
+<!--                           tool4$paths, -->
+<!--                           tool5$paths) -->
+<!--     sankey_nodes <- data.frame(tool1$nodes, -->
+<!--                                tool2$nodes, -->
+<!--                                tool3$nodes, -->
+<!--                                tool4$nodes, -->
+<!--                                tool5$nodes, stringsAsFactors = FALSE) -->
+<!--     colnames(sankey_nodes) <- c(labels[1], -->
+<!--                                 labels[2], -->
+<!--                                 labels[3], -->
+<!--                                 labels[4], -->
+<!--                                 labels[5]) -->
+
+<!--     # Collapse intersecting paths on same decile to contain same node name (range label with min and max rank) -->
+<!--     ambiguous_paths <- sankey_paths[duplicated(sankey_paths[,c(3,5)]),] -->
+<!--     ambiguous_paths <- unique(ambiguous_paths[,c(3,5)]) %>% filter(percent != "NA") -->
+<!--     if (nrow(ambiguous_paths) > 0){ -->
+<!--         for (index in 1:nrow(ambiguous_paths)){ -->
+<!--             ambiguous_path <- ambiguous_paths[index,] -->
+<!--             paths <- sankey_paths[sankey_paths$percent == ambiguous_path$percent & -->
+<!--                                       sankey_paths$group == ambiguous_path$group,] -->
+<!--             range <- paste(sort(unlist(sapply(paths$target, function ( x ) { strsplit(as.character(x), " / ")[[1]] } ))), collapse=", ") -->
+
+<!--             # Update path and node -->
+<!--             sankey_paths[sankey_paths$percent == ambiguous_path$percent & -->
+<!--                              sankey_paths$group == ambiguous_path$group,]$target <- range -->
+<!--             decile <- as.numeric(ambiguous_path$percent) -->
+<!--             sankey_nodes[decile + 10, ambiguous_path$group] <- range -->
+<!--         } -->
+<!--     } -->
+<!--     # Remove percent column  -->
+<!--     sankey_paths <- subset(sankey_paths, select = -percent) -->
+
+<!--     # Make each node unique by adding spaces after each one -->
+<!--     sankey_nodes_final <- as.data.frame(sapply(1:length(sankey_nodes), function( index ) {  -->
+<!--         sapply(sankey_nodes[,index], function ( row ) { paste(row, paste(rep(" ",20 * (index + 1)), collapse=""), sep="")}) -->
+<!--     }), stringsAsFactors = FALSE) -->
+<!--     colnames(sankey_nodes_final) <- colnames(sankey_nodes) -->
+
+<!--     # Add placeholders, top ten terms, and decile labels -->
+<!--     sankey_nodes_final <- cbind( -->
+<!--         data.frame(sapply(1:20, function ( x ) { paste(rep(" ", x + 1), collapse="") })), -->
+<!--         data.frame(Term = c(tool_topn, paste(seq(0, 90, by=10), " - ", seq(10, 100, by=10), "%", sep=""))), -->
+<!--                                 sankey_nodes_final) -->
+<!--     label_df <- data.frame(t(c(" ", label, labels))) -->
+<!--     sankey_nodes_final <- rbind(label_df, setNames(sankey_nodes_final, names(label_df))) -->
+
+<!--     # Make each path unique by adding spaces after each one  -->
+<!--     sankey_paths_final <- data.frame(sankey_paths) -->
+<!--     sankey_paths_final$target <- sapply(1:nrow(sankey_paths), function ( x ) {  -->
+<!--         index <- which(colnames(sankey_nodes) == sankey_paths[x,]$group) -->
+<!--         paste(sankey_paths[x,]$target, paste(rep(" ",20 * (index + 1)), collapse=""), sep="") } ) -->
+
+<!--     # Set up node framework -->
+<!--     framework <- data.frame(stringsAsFactors = FALSE) -->
+<!--     sapply(1:(length(sankey_nodes_final) - 1), function ( i ) { -->
+<!--         framework <<- rbind(framework,  -->
+<!--                             data.frame(source = sankey_nodes_final[,i], -->
+<!--                                        target = sankey_nodes_final[,i + 1], -->
+<!--                                        group = "invisible", -->
+<!--                                        value = 1, stringsAsFactors = FALSE)) -->
+<!--     }) -->
+
+<!--     # Make a connection data frame -->
+<!--     links <- rbind(framework, sankey_paths_final) -->
+
+<!--     # From these flows we need to create a node data frame: it lists every entities involved in the flow -->
+<!--     nodes=data.frame(name=c(as.character(framework$source), -->
+<!--                             as.character(sankey_nodes_final[,length(sankey_nodes_final)]))) -->
+<!--     links$IDsource=match(links$source, nodes$name)-1  -->
+<!--     links$IDtarget=match(links$target, nodes$name)-1 -->
+
+<!--     offset <- 21 -->
+<!--     nodes <- nodes %>% mutate(group = c(rep("invisible", 21), -->
+<!--                                         "header", rep(label, 10), -->
+<!--                                         rep("invisible", 10), -->
+<!--                                         labels[1],  -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 21 + 2):(offset + 30 + 2)])) == "", "top", labels[1]), -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 31 + 2):(offset + 40 + 2)])) == "", "invisible", labels[1]), -->
+<!--                                         labels[2],  -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 41 + 3):(offset + 50 + 3)])) == "", "top", labels[2]), -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 51 + 3):(offset + 60 + 3)])) == "", "invisible", labels[2]), -->
+<!--                                         labels[3], -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 61 + 4):(offset + 70 + 4)])) == "", "top", labels[3]), -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 71 + 4):(offset + 80 + 4)])) == "", "invisible", labels[3]), -->
+<!--                                         labels[4], -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 81 + 5):(offset + 90 + 5)])) == "", "top", labels[4]), -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 91 + 5):(offset + 100 + 5)])) == "", "invisible", labels[4]), -->
+<!--                                         labels[5], -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 101 + 6):(offset + 110 + 6)])) == "", "top", labels[5]), -->
+<!--                                         ifelse(gsub(" ", "", as.character(name[(offset + 111 + 6):(offset + 120 + 6)])) == "", "invisible", labels[5]))) -->
+
+<!--     # Normalize values -->
+<!--     for (source in unique(sankey_paths_final$source)){ -->
+<!--         paths <- links[links$source == source,] %>% filter (group != "invisible") -->
+<!--         links[links$source == source & links$group == "invisible",]$value <- links[links$source == source & links$group == "invisible",]$value - sum(paths$value) -->
+<!--     } -->
+<!--     for (target in unique(sankey_paths_final$target)){ -->
+<!--         paths <- links[links$target == target,] %>% filter (group != "invisible") -->
+<!--         links[links$target == target & links$group == "invisible",]$value <- links[links$target == target & links$group == "invisible",]$value - sum(paths$value) -->
+<!--     } -->
+
+<!--     my_color <- paste('d3.scaleOrdinal() .domain(["invisible", "block", "header", "top", "', -->
+<!--                       tools$label[1], '", "', -->
+<!--                       tools$label[2], '", "', -->
+<!--                       tools$label[3], '", "', -->
+<!--                       tools$label[4], '", "', -->
+<!--                       tools$label[5], '", "', -->
+<!--                       tools$label[6], '"]) .range(["white", "black", "black", "#ffe070", "red", "blue", "green", "orange", "purple", "pink"])', sep="") -->
+
+<!--     # Make the Network. I call my colour scale with the colourScale argument -->
+<!--     n <- sankeyNetwork(Links = links, Nodes = nodes, Source = "IDsource", Target = "IDtarget", -->
+<!--                        Value = "value", NodeID = "name", colourScale=my_color, LinkGroup="group", NodeGroup="group", -->
+<!--                        iterations = 0) -->
+<!--     print(n) -->
+<!--     saveNetwork(n, paste("top100sankeyR-", label, ".html", sep=""), selfcontained = TRUE) -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- ## Extract peptides related to peptide deformylase activity -->
+
+<!-- ```{r} -->
+<!-- cov_pat <- "\ \\(.{2,4}\\)" -->
+<!-- uni <- read.csv('unipept_results/mpa_result-all-peptides.csv', -->
+<!--                 stringsAsFactors = FALSE) %>% -->
+<!--     select(peptide, -->
+<!--            #uni_go_bp = GO..biological.process., -->
+<!--            uni_go_mf = GO..molecular.function. -->
+<!--            #uni_go_cc = GO..cellular.component. -->
+<!--            ) %>% -->
+<!--     #filter(peptide %in% fivepep) %>% -->
+<!--     mutate(#uni_go_bp = str_replace_all(string = uni_go_bp, pattern = cov_pat, replacement = ""), -->
+<!--            uni_go_mf = str_replace_all(string = uni_go_mf, pattern = cov_pat, replacement = "") -->
+<!--            #uni_go_cc = str_replace_all(string = uni_go_cc, pattern = cov_pat, replacement = "") -->
+<!--            ) -->
+<!-- uni$uni_go_names <- sapply(strsplit(uni$uni_go_mf, ";"), function ( x ) { paste(Term(x), collapse="; ")}) -->
+<!-- uni -->
+<!-- unipeptides <- uni[grepl("peptide deformylase activity", uni$uni_go_names),]$peptide -->
+<!-- write.table(sort(unique(unipeptides)), file="peptide_deformylase_peptides_unipept/peptides.tab", -->
+<!--             quote = FALSE, row.names = FALSE, col.names = FALSE) -->
+<!-- for (peptide in unipeptides) { -->
+<!--     write.table(paste(peptide, "10", sep="\t"), -->
+<!--                 file= paste("peptide_deformylase_peptides_unipept/peptides/",peptide, ".tab", sep=""),  -->
+<!--                 quote = FALSE, row.names = FALSE, col.names = FALSE)  -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- eggnog -->
+<!-- eggnog$names <- sapply(strsplit(eggnog$go, ","), function ( x ) { paste(Term(x), collapse="; ")}) -->
+<!-- eggnog[grepl("peptide deformylase activity", eggnog$names),] -->
+<!-- ``` -->
