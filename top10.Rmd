@@ -516,7 +516,15 @@ get_rank_table <- function(name, tools){
 }
 
 # tool_topn
-tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
+remove_blanks <- function(go_list){
+    go_list[go_list$name != "",]
+}
+tools <- list(remove_blanks(eggnog_w_counts),
+              remove_blanks(megan),
+              remove_blanks(metagomics_filt),
+              remove_blanks(pAll),
+              remove_blanks(prophane),
+              remove_blanks(unipept_all))
 get_rank_table("Unipept", tools)
 get_rank_table("EggNOG", tools)
 get_rank_table("MEGAN", tools)
