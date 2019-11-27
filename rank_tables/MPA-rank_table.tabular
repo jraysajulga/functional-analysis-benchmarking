@@ -1,0 +1,21 @@
+names	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
+biotin binding	 1	 7179 9926 12646 13534		 51		 5
+biotin binding	 122.11/0 (6.94)	 1/0 (1) 1/0.94 (0.05) 0/0.94 (-0.95) 0/0.94 (-0.95)		 		 165/9.37 (4)
+ferroxidase activity	 2	 10527 10663 14115 14117 14172 14265 15482 15618 15637 16362 16637 16795 17065 17291 17435	 1510	 104	 395 437	 96
+ferroxidase activity	 224.89/2 (6.23)	 1/1.87 (-0.52) 2/3.75 (-0.66) 4/10.3 (-1.18) 4/10.3 (-1.18) 3/9.37 (-1.37) 0/1.87 (-1.52) 0/1.87 (-1.52) 0/1.87 (-1.52) 3/11.24 (-1.61) 1/7.49 (-2.09) 0/3.75 (-2.25) 2/14.05 (-2.33) 0/4.68 (-2.51) 0/6.56 (-2.92) 0/6.56 (-2.92)	 17/86.16 (-2.37)	 	 0/0 (-0.93) 0/0 (-1.93)	 310/81.48 (1.91)
+nitrogen compound metabolic process	 3 970					
+nitrogen compound metabolic process	 65.01/0 (6.04) 0/6 (-2.81)					
+heat shock protein binding	 4	 5940 7054 12528 13000		 209		 168
+heat shock protein binding	 41.29/0 (5.4)	 1/0 (1) 1/0 (1) 0/0.94 (-0.95) 0/0.94 (-0.95)		 		 95/33.72 (1.47)
+orotate phosphoribosyltransferase activity	 5		 375 1500			 451
+orotate phosphoribosyltransferase activity	 36.9/0 (5.24)		 37/15.92 (1.08) 4/22.48 (-2.32)			 40/29.03 (0.45)
+pyrimidine nucleobase biosynthetic process	 6 681					
+pyrimidine nucleobase biosynthetic process	 36.9/0 (5.24) 57.98/97 (-0.73)					
+response to stress	 7 282 1086					
+response to stress	 901.32/27 (5.01) 15.81/6 (1.26) 5.27/115 (-4.21)					
+ribonucleoside-diphosphate reductase complex	 8					
+ribonucleoside-diphosphate reductase complex	 30.75/0 (4.99)					
+purine ribonucleoside salvage	 9 432					
+purine ribonucleoside salvage	 30.75/0 (4.99) 7.03/4 (0.68)					
+adenine salvage	 10					
+adenine salvage	 30.75/0 (4.99)					
