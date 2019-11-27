@@ -724,6 +724,7 @@ xref: MIPS_funcat:70.07
 xref: NIF_Subcellular:sao1036339110
 xref: Wikipedia:Endoplasmic_reticulum
 is_a: GO:0043226 ! organelle
+relationship: part_of GO:0005622 ! intracellular
 relationship: part_of GO:0005737 ! cytoplasm
 
 [Term]
@@ -748,6 +749,7 @@ xref: MIPS_funcat:70.08
 xref: NIF_Subcellular:sao451912436
 xref: Wikipedia:Golgi_apparatus
 is_a: GO:0043226 ! organelle
+relationship: part_of GO:0005575 ! cellular_component
 relationship: part_of GO:0005737 ! cytoplasm
 
 [Term]
@@ -1395,6 +1397,7 @@ subset: goslim_yeast
 synonym: "translation factor activity, nucleic acid binding" BROAD [GOC:mah]
 is_a: GO:0003723 ! RNA binding
 relationship: part_of GO:0006412 ! translation
+relationship: part_of GO:0008150 ! biological_process
 
 [Term]
 id: GO:0008150
@@ -2388,7 +2391,7 @@ alt_id: GO:0043298
 alt_id: GO:0044404
 alt_id: GO:0072519
 alt_id: GO:0085031
-def: "A process carried out by symbiont gene products that enables the interaction between two organisms living together in more or less intimate association. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
+def: "A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
 comment: Changed term, definition see https://github.com/geneontology/go-ontology/issues/14807
 subset: goslim_chembl
 subset: goslim_generic
