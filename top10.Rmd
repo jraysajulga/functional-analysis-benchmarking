@@ -239,7 +239,26 @@ pAll$countWS <- pAll$countWS * mpa_norm
 
 pAll[is.na(pAll)] <- 0
 
-collapse_by_go(pAll)
+collapse_by_go(pAll, "; ")
+```
+
+```{r}
+collapse_by_go <- function(go_df, delimiter){
+    # Separate the comma-delimited list of GOs into individual rows
+    # (retains the fold change value from the original row)
+    go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(countNS, countWS) ]
+
+    # Collapse GO terms based on fold change values.
+    go_df <- go_df %>% 
+        group_by(gos) %>%
+        select(countNS, countWS, gos) %>%
+        summarize_all(sum) %>%
+        mutate(name = Term(gsub(" ", "", gos)),
+               log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+        arrange(-log2ratio)
+    go_df
+}
+collapse_by_go(pAll, "; ")
 ```
 
 ```{r}
