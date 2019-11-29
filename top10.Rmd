@@ -65,11 +65,14 @@ filterOntology <- function(go_list, ontology){
 
 ## We need to expand and collapse to the GO-term level
 ```{r}
+
 collapse_by_go <- function(go_df, delimiter){
     # Separate the comma-delimited list of GOs into individual rows
     # (retains the fold change value from the original row)
     # go_df <- go_df %>% select(countNS, countWS, gos)
-    go_df <- data.table(go_df)
+    go_df <- go_df %>% mutate(countNS = as.numeric(countNS),
+                              countWS = as.numeric(countWS))
+    go_df <- data.table(go_df) 
     go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(countNS, countWS) ]
 
     # Collapse GO terms based on fold change values.
@@ -261,7 +264,8 @@ pAll$countWS <- pAll$countWS * mpa_norm
 
 pAll[is.na(pAll)] <- 0
 
-collapse_by_go(pAll, "; ")
+pAll <- collapse_by_go(pAll, "; ")
+pAll
 ```
 
 ```{r}
@@ -295,24 +299,16 @@ prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
                                                                ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
-    mutate(log2ratio = log2(as.double(ws)/as.double(ns)),
-           gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
+    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(log2ratio, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+    select(countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
     terms <- filterOntology(unique(x[x != "-"]), ontology)
     paste(terms[terms != ""], collapse = ",")
 })
-
-# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
-prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(log2ratio, countWS, countNS) ]
-prophane$name <- Term(prophane$gos)
-
-# Collapse GO terms based on fold change values.
-prophane <- prophane %>% group_by_at(vars(log2ratio, countWS, countNS)) %>%
-    summarize_all(paste, collapse="; ") %>%
+prophane <- collapse_by_go(prophane, ',') %>%
+    mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
-
 prophane
 ```
 
