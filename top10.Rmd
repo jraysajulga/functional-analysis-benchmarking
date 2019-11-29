@@ -101,9 +101,7 @@ eggnog_w_counts <- left_join(eggnog,
     select(protein, gos, gene, countWS, countNS, desc)
 eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
 #eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$gos, ","), function ( x ) { paste(Term(x), collapse="; ")})
-eggnog_w_counts <- collapse_by_go(eggnog_w_counts, ',') %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
+eggnog_w_counts <- collapse_by_go(eggnog_w_counts, ',')
 eggnog_w_counts$name <- Term(eggnog_w_counts$gos)
 eggnog_w_counts
 ```
@@ -175,10 +173,7 @@ sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
 })
 megan$countNS <- megan$countNS * norm_ratio
 megan$gos <- filterOntology(megan_go$gos, ontology)
-megan <- collapse_by_go(megan, ',')  %>% mutate(corrWS = countWS + 1,
-                          corrNS = countNS + 1,
-                          log2ratio = log2(corrWS/corrNS)) %>%
-                   arrange(-log2ratio)
+megan <- collapse_by_go(megan, ',')
 megan$name <- Term(megan$gos)
 megan
 ```
@@ -227,6 +222,7 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     arrange(-log2ratio)
 unipept_all
 ```
+
 ```{r}
 sum(unipeptWS$peptides)
 sum(unipeptNS$peptides) 
