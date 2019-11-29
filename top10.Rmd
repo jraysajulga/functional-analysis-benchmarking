@@ -165,11 +165,7 @@ kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold chan
 ```{r}
 megan <- read.delim("MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
     select(og = X.Datasets, countNS = X737_NS_BLASTOutput_2StepCombined,
-           countWS = X737_WS_BLASTOutput_2StepCombined) %>%
-    mutate(corrWS = countWS + 1,
-           corrNS = countNS + 1,
-           log2ratio = log2(corrWS/corrNS)) %>%
-    arrange(-log2ratio)
+           countWS = X737_WS_BLASTOutput_2StepCombined)
 megan_go <- read.delim("MEGAN_outputs/go_terms.txt",
                         header = TRUE,
                         stringsAsFactors = FALSE)
@@ -178,9 +174,16 @@ sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
     grepl(megan_go[n, "og"], megan[n, "og"])
 })
 megan$countNS <- megan$countNS * norm_ratio
-megan$go <- filterOntology(megan_go$go, ontology)
-megan$name <- sapply(strsplit(megan$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+megan$gos <- filterOntology(megan_go$gos, ontology)
+megan <- collapse_by_go(megan, ',')  %>% mutate(corrWS = countWS + 1,
+                          corrNS = countNS + 1,
+                          log2ratio = log2(corrWS/corrNS)) %>%
+                   arrange(-log2ratio)
+megan$name <- Term(megan$gos)
+megan
 ```
+
+
 ```{r}
 sum(megan$countWS)
 sum(megan$countNS)
