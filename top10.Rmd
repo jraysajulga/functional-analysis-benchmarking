@@ -65,7 +65,6 @@ filterOntology <- function(go_list, ontology){
 
 ## We need to expand and collapse to the GO-term level
 ```{r}
-
 collapse_by_go <- function(go_df, delimiter){
     # Separate the comma-delimited list of GOs into individual rows
     # (retains the fold change value from the original row)
@@ -499,25 +498,18 @@ get_rank_table <- function(name, tools){
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            rank <- which(grepl(topn, tool$name, fixed=TRUE))[[1]]
-            match <- tool[grepl(topn, tool$name, fixed=TRUE)[[1]],]
-            output1 <- output2 <- output3 <- ""
-            sapply(1:nrow(match), function(row){
-                if (row){
-                    if (!is.na(rank[row])){
-                        term <- match[row,]
-                        output1 <<- paste(output1, rank[row])
-                        output2 <<- paste(output2,
-                                         ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                                '',
-                                                paste(round(as.numeric(term$countWS), digits=2), '/',
-                                                      round(as.numeric(term$countNS), digits=2), ' (',
-                                                      round(as.numeric(term$log2ratio), digits=2), ')',
-                                                      sep='')))
-                    }
-                }
-            })
-            list(output1, output2)
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))
+            if (length(rank) > 0){
+                term <- tool[rank[[1]],]
+                list(rank[[1]],paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
+                                       '',
+                                       paste(round(as.numeric(term$countWS), digits=2), '/',
+                                             round(as.numeric(term$countNS), digits=2), ' (',
+                                             round(as.numeric(term$log2ratio), digits=2), ')',
+                                             sep=''))))
+            } else {
+                list('-','-')
+            }
         })
         rank_table[,labels[i]] <- unlist(output)
     }

@@ -1,21 +1,21 @@
 names	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
-cation binding; metal ion binding; binding; ion binding	 1 1228					
-cation binding; metal ion binding; binding; ion binding	 47/0 (5.58) 0/1.87 (-1.58)					
-catalytic activity; binding; ion binding; heterocyclic compound binding; anion binding; coenzyme binding; small molecule binding; cofactor binding; organic cyclic compound binding; cation binding; thiamine pyrophosphate binding; sulfur compound binding; vitamin binding; metal ion binding; magnesium ion binding; transferase activity; transferase activity, transferring aldehyde or ketonic groups; acetolactate synthase activity; nucleoside phosphate binding; nucleotide binding; flavin adenine dinucleotide binding; lyase activity; carbon-carbon lyase activity; carboxy-lyase activity	 2					
-catalytic activity; binding; ion binding; heterocyclic compound binding; anion binding; coenzyme binding; small molecule binding; cofactor binding; organic cyclic compound binding; cation binding; thiamine pyrophosphate binding; sulfur compound binding; vitamin binding; metal ion binding; magnesium ion binding; transferase activity; transferase activity, transferring aldehyde or ketonic groups; acetolactate synthase activity; nucleoside phosphate binding; nucleotide binding; flavin adenine dinucleotide binding; lyase activity; carbon-carbon lyase activity; carboxy-lyase activity	 106/1.87 (5.16)					
-catalytic activity; transferase activity; transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer; transferase activity, transferring acyl groups; 2-isopropylmalate synthase activity; lyase activity; oxo-acid-lyase activity; carbon-carbon lyase activity; hydroxymethylglutaryl-CoA lyase activity; homocitrate synthase activity; binding; 4-hydroxy-2-oxovalerate aldolase activity; ion binding; metal ion binding; cation binding; transition metal ion binding; manganese ion binding	 3					
-catalytic activity; transferase activity; transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer; transferase activity, transferring acyl groups; 2-isopropylmalate synthase activity; lyase activity; oxo-acid-lyase activity; carbon-carbon lyase activity; hydroxymethylglutaryl-CoA lyase activity; homocitrate synthase activity; binding; 4-hydroxy-2-oxovalerate aldolase activity; ion binding; metal ion binding; cation binding; transition metal ion binding; manganese ion binding	 30/0 (4.95)					
-hydrolase activity, hydrolyzing O-glycosyl compounds; catalytic activity; hydrolase activity, acting on glycosyl bonds; hydrolase activity; hexosaminidase activity; beta-N-acetylhexosaminidase activity; binding; carbohydrate binding; polysaccharide binding; pattern binding	 4					
-hydrolase activity, hydrolyzing O-glycosyl compounds; catalytic activity; hydrolase activity, acting on glycosyl bonds; hydrolase activity; hexosaminidase activity; beta-N-acetylhexosaminidase activity; binding; carbohydrate binding; polysaccharide binding; pattern binding	 28/0 (4.86)					
-peptidase activity; hydrolase activity; cysteine-type peptidase activity; catalytic activity; peptidase activity, acting on L-amino acid peptides; endopeptidase activity; cysteine-type endopeptidase activity; aminopeptidase activity; exopeptidase activity	 5					
-peptidase activity; hydrolase activity; cysteine-type peptidase activity; catalytic activity; peptidase activity, acting on L-amino acid peptides; endopeptidase activity; cysteine-type endopeptidase activity; aminopeptidase activity; exopeptidase activity	 78/1.87 (4.72)					
-hydrolase activity; catalytic activity; hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds; hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides; peptide deformylase activity; binding; cation binding; transition metal ion binding; ion binding; iron ion binding; metal ion binding	 6					
-hydrolase activity; catalytic activity; hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds; hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides; peptide deformylase activity; binding; cation binding; transition metal ion binding; ion binding; iron ion binding; metal ion binding	 46/0.94 (4.55)					
-hydrolase activity, hydrolyzing O-glycosyl compounds; hydrolase activity; catalytic activity; hydrolase activity, acting on glycosyl bonds; beta-fructofuranosidase activity; sucrose alpha-glucosidase activity; glucosidase activity; alpha-1,4-glucosidase activity; levanase activity	 7					
-hydrolase activity, hydrolyzing O-glycosyl compounds; hydrolase activity; catalytic activity; hydrolase activity, acting on glycosyl bonds; beta-fructofuranosidase activity; sucrose alpha-glucosidase activity; glucosidase activity; alpha-1,4-glucosidase activity; levanase activity	 20/0 (4.39)					
-catalytic activity; metal ion binding; binding; ion binding; cation binding; hydrolase activity; peptidase activity; metallopeptidase activity; peptidase activity, acting on L-amino acid peptides; endopeptidase activity; metalloendopeptidase activity	 8 861					
-catalytic activity; metal ion binding; binding; ion binding; cation binding; hydrolase activity; peptidase activity; metallopeptidase activity; peptidase activity, acting on L-amino acid peptides; endopeptidase activity; metalloendopeptidase activity	 18/0 (4.25) 3/3.75 (-0.32)					
-transferase activity, transferring phosphorus-containing groups; catalytic activity; transferase activity; kinase activity; phosphotransferase activity, alcohol group as acceptor; ethanolamine kinase activity; choline kinase activity	 9					
-transferase activity, transferring phosphorus-containing groups; catalytic activity; transferase activity; kinase activity; phosphotransferase activity, alcohol group as acceptor; ethanolamine kinase activity; choline kinase activity	 17/0 (4.17)					
-catalytic activity; transferase activity; transferase activity, transferring phosphorus-containing groups; nucleotidyltransferase activity; kinase activity; binding; anion binding; ion binding; cofactor binding; pyridoxal phosphate binding; transaminase activity; transferase activity, transferring nitrogenous groups; choline-phosphate cytidylyltransferase activity; cytidylyltransferase activity	 10					
-catalytic activity; transferase activity; transferase activity, transferring phosphorus-containing groups; nucleotidyltransferase activity; kinase activity; binding; anion binding; ion binding; cofactor binding; pyridoxal phosphate binding; transaminase activity; transferase activity, transferring nitrogenous groups; choline-phosphate cytidylyltransferase activity; cytidylyltransferase activity	 17/0 (4.17)					
+2-isopropylmalate synthase activity	1	-	12	-	-	-
+2-isopropylmalate synthase activity	30/0 (4.95)	-		-	-	-
+homocitrate synthase activity	2	-	-	-	-	-
+homocitrate synthase activity	30/0 (4.95)	-	-	-	-	-
+hydroxymethylglutaryl-CoA lyase activity	3	149	-	-	-	-
+hydroxymethylglutaryl-CoA lyase activity	30/0 (4.95)	2/0 (1.58)	-	-	-	-
+4-hydroxy-2-oxovalerate aldolase activity	4	-	-	-	-	-
+4-hydroxy-2-oxovalerate aldolase activity	30/0 (4.95)	-	-	-	-	-
+acetolactate synthase activity	5	869	275	898	-	100
+acetolactate synthase activity	111/2.81 (4.88)	0/0.94 (-0.95)		0/13 (-3.81)	-	30/7.49 (1.87)
+cysteine-type endopeptidase activity	6	267	389	396	-	177
+cysteine-type endopeptidase activity	78/1.87 (4.78)	1/0 (1)		29.87/21 (0.49)	-	165/60.88 (1.42)
+peptide deformylase activity	7	950	22	-	-	1
+peptide deformylase activity	46/0.94 (4.6)	0/0.94 (-0.95)		-	-	58/0.94 (4.93)
+beta-fructofuranosidase activity	8	-	17	-	-	7
+beta-fructofuranosidase activity	20/0 (4.39)	-		-	-	26/0.94 (3.8)
+sucrose alpha-glucosidase activity	9	-	18	-	-	-
+sucrose alpha-glucosidase activity	20/0 (4.39)	-		-	-	-
+levanase activity	10	-	-	-	-	-
+levanase activity	20/0 (4.39)	-	-	-	-	-
