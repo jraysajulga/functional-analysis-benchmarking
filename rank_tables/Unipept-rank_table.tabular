@@ -1,21 +1,21 @@
 names	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
-peptide deformylase activity	 1	 5007	 6	 22		
-peptide deformylase activity	 58/0.94 (4.93)	 0/0.94 (-0.95)	 46/0.94 (4.55)	 		
-1-phosphofructokinase activity	 2		 19	 11	 352	
-1-phosphofructokinase activity	 41/0.94 (4.44)		 27/0.94 (3.81)	 	 0.88/0 (0.91)	
-tagatose-6-phosphate kinase activity	 3		 19 29	 25	 61 355	
-tagatose-6-phosphate kinase activity	 87/3.75 (4.21)		 27/0.94 (3.81) 41/2.81 (3.39)	 	 7.91/0 (3.15) 0.88/0 (0.91)	
-branched-chain-amino-acid transaminase activity	 4	 2070 7677 7747	 315	 344	 45	
-branched-chain-amino-acid transaminase activity	 49/1.87 (4.12)	 1/0 (1) 0/9.37 (-3.37) 0/13.11 (-3.82)	 108/41.21 (1.28)	 	 14.06/0 (3.91)	
-biotin binding	 5	 2814 3918 5195 5663		 51	 1	
-biotin binding	 165/9.37 (4)	 1/0 (1) 1/0.94 (0.05) 0/0.94 (-0.95) 0/0.94 (-0.95)		 	 122.11/0 (6.94)	
-glycerol dehydrogenase [NAD+] activity	 6		 35	 23		
-glycerol dehydrogenase [NAD+] activity	 28/0.94 (3.9)		 27/1.87 (3.22)	 		
-beta-fructofuranosidase activity	 7		 7	 17		
-beta-fructofuranosidase activity	 26/0.94 (3.8)		 20/0 (4.39)	 		
-threonine synthase activity	 8	 2830	 54	 361		
-threonine synthase activity	 53/3.75 (3.51)	 1/0 (1)	 39/3.75 (3)	 		
-cytidylate kinase activity	 9	 194 868 926 1203 1363 1493 1518 1570 2072 2201 2460 2503 2790 6234	 30	 65	 167	
-cytidylate kinase activity	 37/2.81 (3.32)	 7/0 (3) 3/0 (2) 3/0 (2) 2/0 (1.58) 2/0 (1.58) 2/0 (1.58) 2/0 (1.58) 2/0 (1.58) 1/0 (1) 1/0 (1) 1/0 (1) 1/0 (1) 1/0 (1) 0/1.87 (-1.52)	 30/1.87 (3.37)	 	 2.64/0 (1.86)	
-galactose-6-phosphate isomerase activity	 10		 791	 87		
-galactose-6-phosphate isomerase activity	 18/0.94 (3.29)		 30/28.1 (0)	 		
+peptide deformylase activity	1	950	7	22	-	-
+peptide deformylase activity	58/0.94 (4.93)	0/0.94 (-0.95)	46/0.94 (4.6)		-	-
+1-phosphofructokinase activity	2	-	17	11	318	-
+1-phosphofructokinase activity	41/0.94 (4.44)	-	27/0.94 (3.85)		0.88/0 (0.91)	-
+tagatose-6-phosphate kinase activity	3	-	16	25	46	-
+tagatose-6-phosphate kinase activity	87/3.75 (4.21)	-	68/3.75 (3.86)		8.78/0 (3.29)	-
+branched-chain-amino-acid transaminase activity	4	1336	302	344	38	-
+branched-chain-amino-acid transaminase activity	49/1.87 (4.12)	1/22.48 (-3.55)	108/41.21 (1.37)		14.06/0 (3.91)	-
+biotin binding	5	752	-	51	1	-
+biotin binding	165/9.37 (4)	2/2.81 (-0.34)	-		122.11/0 (6.94)	-
+glycerol dehydrogenase [NAD+] activity	6	-	35	23	-	-
+glycerol dehydrogenase [NAD+] activity	28/0.94 (3.9)	-	27/1.87 (3.28)		-	-
+beta-fructofuranosidase activity	7	-	8	17	-	-
+beta-fructofuranosidase activity	26/0.94 (3.8)	-	20/0 (4.39)		-	-
+threonine synthase activity	8	273	54	361	-	-
+threonine synthase activity	53/3.75 (3.51)	1/0 (1)	39/3.75 (3.08)		-	-
+cytidylate kinase activity	9	18	32	65	142	-
+cytidylate kinase activity	37/2.81 (3.32)	28/1.87 (3.34)	30/1.87 (3.43)		2.64/0 (1.86)	-
+galactose-6-phosphate isomerase activity	10	-	889	87	-	-
+galactose-6-phosphate isomerase activity	18/0.94 (3.29)	-	30/28.1 (0.09)		-	-
