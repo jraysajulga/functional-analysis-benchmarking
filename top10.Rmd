@@ -62,6 +62,30 @@ filterOntology <- function(go_list, ontology){
 }
 ```
 
+
+## We need to expand and collapse to the GO-term level
+```{r}
+collapse_by_go <- function(go_df, delimiter){
+    # Separate the comma-delimited list of GOs into individual rows
+    # (retains the fold change value from the original row)
+    # go_df <- go_df %>% select(countNS, countWS, gos)
+    go_df <- go_df %>% mutate(countNS = as.numeric(countNS),
+                              countWS = as.numeric(countWS))
+    go_df <- data.table(go_df) 
+    go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(countNS, countWS) ]
+
+    # Collapse GO terms based on fold change values.
+    go_df <- go_df %>% 
+        group_by(gos) %>%
+        select(countNS, countWS, gos) %>%
+        summarize_all(sum) %>%
+        mutate(name = Term(gsub(" ", "", gos)),
+               log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+        arrange(-log2ratio)
+    go_df
+}
+```
+
 ## eggNOG mapper results
 
 Join peptides to counts, and calculate ratios.
@@ -70,20 +94,19 @@ Join peptides to counts, and calculate ratios.
 eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE) %>% 
-    select(peptide = V1, protein = V2, gene = V5, go = V6, ko = V7, desc = V13)
+    select(peptide = V1, protein = V2, gene = V5, gos = V6, ko = V7, desc = V13)
 eggnog_w_counts <- left_join(eggnog,
                              peptides_all,
                              by = "peptide") %>%
-    group_by(protein, desc, gene, go) %>%
+    group_by(protein, desc, gene, gos) %>%
     summarize(countWS = sum(countWS), countNS = sum(countNS)) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio) %>%
-    select(protein, go, gene, countWS, countNS, log2ratio, desc)
-eggnog_w_counts$go <- filterOntology(eggnog_w_counts$go, ontology)
-eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+    select(protein, gos, gene, countWS, countNS, desc)
+eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
+#eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$gos, ","), function ( x ) { paste(Term(x), collapse="; ")})
+eggnog_w_counts <- collapse_by_go(eggnog_w_counts, ',')
+eggnog_w_counts$name <- Term(eggnog_w_counts$gos)
 eggnog_w_counts
 ```
-
 
 Top *N*:
 ```{r echo=FALSE, results='asis'}
@@ -142,11 +165,7 @@ kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold chan
 ```{r}
 megan <- read.delim("MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
     select(og = X.Datasets, countNS = X737_NS_BLASTOutput_2StepCombined,
-           countWS = X737_WS_BLASTOutput_2StepCombined) %>%
-    mutate(corrWS = countWS + 1,
-           corrNS = countNS + 1,
-           log2ratio = log2(corrWS/corrNS)) %>%
-    arrange(-log2ratio)
+           countWS = X737_WS_BLASTOutput_2StepCombined)
 megan_go <- read.delim("MEGAN_outputs/go_terms.txt",
                         header = TRUE,
                         stringsAsFactors = FALSE)
@@ -155,9 +174,13 @@ sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
     grepl(megan_go[n, "og"], megan[n, "og"])
 })
 megan$countNS <- megan$countNS * norm_ratio
-megan$go <- filterOntology(megan_go$go, ontology)
-megan$name <- sapply(strsplit(megan$go, ","), function ( x ) { paste(Term(x), collapse="; ")})
+megan$gos <- filterOntology(megan_go$gos, ontology)
+megan <- collapse_by_go(megan, ',')
+megan$name <- Term(megan$gos)
+megan
 ```
+
+
 ```{r}
 sum(megan$countWS)
 sum(megan$countNS)
@@ -201,6 +224,7 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     arrange(-log2ratio)
 unipept_all
 ```
+
 ```{r}
 sum(unipeptWS$peptides)
 sum(unipeptNS$peptides) 
@@ -225,29 +249,22 @@ ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names =
 pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
     group_by(Protein.Accession, Protein.Description) %>%
     summarize("SpecCount" = sum(Spectral.Count))
-pAll <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description")))
+pAll <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description"))) %>%
+    rename(countNS = SpecCount.x, countWS = SpecCount.y, )
+
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 pAll$gos <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
     goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
 }))
 
 # Normalization ratio
-ns <- pAll$SpecCount.x
-ws <- pAll$SpecCount.y
-mpa_norm <- sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
+mpa_norm <- sum(pAll$countNS[!is.na(pAll$countNS)]) / sum(pAll$countWS[!is.na(pAll$countWS)])
+pAll$countWS <- pAll$countWS * mpa_norm
 
-# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
 pAll[is.na(pAll)] <- 0
-pAll <- pAll[ , list( gos = unlist( strsplit( gos , ";" ) ) ) , by = list(SpecCount.x, SpecCount.y) ]
 
-# Collapse GO terms based on fold change values.
-pAll$SpecCount.y <- pAll$SpecCount.y * mpa_norm
-pAll <- pAll %>% group_by(gos) %>%
-    summarize_all(sum) %>%
-    select(countNS = SpecCount.x, countWS = SpecCount.y, gos) %>%
-    mutate(name = Term(gsub(" ", "", gos)),
-           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
+pAll <- collapse_by_go(pAll, "; ")
+pAll
 ```
 
 ```{r}
@@ -281,24 +298,16 @@ prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
                                                                ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
-    mutate(log2ratio = log2(as.double(ws)/as.double(ns)),
-           gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
+    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(log2ratio, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+    select(countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
     terms <- filterOntology(unique(x[x != "-"]), ontology)
     paste(terms[terms != ""], collapse = ",")
 })
-
-# Separate the comma-delimited list of GOs into individual rows (retains the fold change value from the original row)
-prophane <- prophane[ , list( gos = unlist( strsplit( gos , "," ) ) ) , by = list(log2ratio, countWS, countNS) ]
-prophane$name <- Term(prophane$gos)
-
-# Collapse GO terms based on fold change values.
-prophane <- prophane %>% group_by_at(vars(log2ratio, countWS, countNS)) %>%
-    summarize_all(paste, collapse="; ") %>%
+prophane <- collapse_by_go(prophane, ',') %>%
+    mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
-
 prophane
 ```
 
@@ -489,25 +498,18 @@ get_rank_table <- function(name, tools){
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            rank <- which(grepl(topn, tool$name, fixed=TRUE))[[1]]
-            match <- tool[grepl(topn, tool$name, fixed=TRUE)[[1]],]
-            output1 <- output2 <- output3 <- ""
-            sapply(1:nrow(match), function(row){
-                if (row){
-                    if (!is.na(rank[row])){
-                        term <- match[row,]
-                        output1 <<- paste(output1, rank[row])
-                        output2 <<- paste(output2,
-                                         ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                                '',
-                                                paste(round(as.numeric(term$countWS), digits=2), '/',
-                                                      round(as.numeric(term$countNS), digits=2), ' (',
-                                                      round(as.numeric(term$log2ratio), digits=2), ')',
-                                                      sep='')))
-                    }
-                }
-            })
-            list(output1, output2)
+            rank <- which(grepl(topn, tool$name, fixed=TRUE))
+            if (length(rank) > 0){
+                term <- tool[rank[[1]],]
+                list(rank[[1]],paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
+                                       '',
+                                       paste(round(as.numeric(term$countWS), digits=2), '/',
+                                             round(as.numeric(term$countNS), digits=2), ' (',
+                                             round(as.numeric(term$log2ratio), digits=2), ')',
+                                             sep=''))))
+            } else {
+                list('-','-')
+            }
         })
         rank_table[,labels[i]] <- unlist(output)
     }
