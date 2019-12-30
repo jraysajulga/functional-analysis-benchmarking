@@ -125,7 +125,7 @@ protWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors 
 protAll <- rbind(protNS, protWS)
 
 # write for use on uniprot
-clean_write(protAll, file="mpa_results/all_proteins.tab")
+clean_write(protAll %>% unique(), file="mpa_results/all_proteins.tab")
 
 # these are the uniprot results from the above file
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
@@ -141,6 +141,33 @@ length(mpa_gos_clean_mf)
 length(mpa_gos_clean_mf %>% unique())
 
 clean_write(mpa_gos_clean_mf, file="go_lists/mpa.tab")
+```
+
+## Prophane
+
+```{r}
+prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_ns <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ws$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ws$task_8..fun_from_eggNog_4.5.1..og2GO,
+                  prophane_ns$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ns$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ns$task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_gos <- prophane_gos[prophane_gos != "-"]
+prophane_gos <- trimws(unlist(strsplit(prophane_gos, ",")))
+prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
+prophane_gos_clean_mf <- filterOntology(prophane_gos_clean, ontology)
+clean_write(prophane_gos_clean_mf, file="go_lists/prophane.tab")
+
+length(unlist(strsplit(prophane_ws$members_identifier, ";")))
+length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
+length(prophane_gos_clean)
+length(prophane_gos_clean %>% unique())
+length(prophane_gos_clean_mf)
+length(prophane_gos_clean_mf %>% unique())
 ```
 
 ## Unipept
@@ -175,28 +202,6 @@ unipept_gos_clean <- filterOntology(unipept_gos_clean, ontology)
 clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 length(unipept_gos_clean)
 ```
-
-## Prophane
-
-```{r}
-prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
-prophane_ns <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
-prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                  prophane_ws$task_7..fun_from_PFAMs_32..pfam2GO,
-                  prophane_ws$task_8..fun_from_eggNog_4.5.1..og2GO,
-                  prophane_ns$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                  prophane_ns$task_7..fun_from_PFAMs_32..pfam2GO,
-                  prophane_ns$task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
-prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
-prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
-prophane_gos_clean <- filterOntology(prophane_gos_clean, ontology)
-clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
-length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
-```
-
 
 ## Euler Diagram of Results
 ```{r}
