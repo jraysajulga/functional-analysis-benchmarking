@@ -62,21 +62,6 @@ eggnog_list_file <- "go_lists/eggnog.tab"
 clean_write(eggnog_gos_clean, file=eggnog_list_file)
 ```
 
-## MetaGOmics
-```{r}
-metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
-                             stringsAsFactors = FALSE,
-                             comment.char = "#")
-metagomics_gos <- metagomics$GO.acc %>%  unique()
-# takes out "unknownprc", "unknowncmp", "unknownfun"
-metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
-metagomics_gos_clean <- filterOntology(metagomics_gos_clean, ontology)
-clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
-nrow(metagomics) # total number of terms
-length(metagomics_gos_clean) # Number of translated GO terms
-length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
-```
-
 ## MEGAN6
 
 These go terms come from querying the eggNOG database with the orthologous group ids, contained in `MEGAN_outputs/737NSvsWS_EGGNOGcount.csv`. The Python function to do this is in `MEGAN_outputs/get_gos_from_ogs.py`. 
@@ -88,11 +73,40 @@ megan <- read.delim("MEGAN_outputs/go_terms.txt",
 megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
-megan_gos_clean <- filterOntology(megan_gos_clean, ontology)
+megan_gos_clean_mf <- filterOntology(megan_gos_clean, ontology)
 clean_write(megan_gos_clean, file="go_lists/megan.tab")
-nrow(megan)
+megan
+length(megan$og)
+length(megan$og %>% unique)
 length(megan_gos_clean)
+length(megan_gos_clean %>% unique)
+length(megan_gos_clean_mf)
+length(megan_gos_clean_mf %>% unique)
 ```
+
+## MetaGOmics
+```{r}
+metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
+                             stringsAsFactors = FALSE,
+                             comment.char = "#")
+metagomics_gos <- metagomics$GO.acc %>%  unique()
+# takes out "unknownprc", "unknowncmp", "unknownfun"
+metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
+metagomics_gos_clean_mf <- filterOntology(metagomics_gos_clean, ontology)
+clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
+
+length(metagomics$GO.acc) # total number of terms
+length(metagomics$GO.acc %>% unique()) # total number of terms
+length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc)
+length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc %>% unique())
+length(metagomics_gos_clean)
+length(metagomics_gos_clean %>% unique())
+length(metagomics_gos_clean_mf) # Number of translated GO terms
+length(metagomics_gos_clean_mf %>% unique())
+length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
+length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology) %>% unique()) #significant at FDR < 5%
+```
+
 
 ## Unipept
 
