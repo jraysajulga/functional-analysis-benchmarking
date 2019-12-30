@@ -322,7 +322,7 @@ jaccard <- function(vec1, vec2){
 jacmat <- matrix(0, nrow = 6, ncol = 6)
 for (i in 1:6){
     for (j in 1:6){
-        jacmat[i, j] <- jaccard(gos[[i]], gos[[j]])
+        jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
     }
 }
 dimnames(jacmat) <- list(names(gos), names(gos))
@@ -331,7 +331,7 @@ jacmat
 jacslim <- matrix(0, nrow = 6, ncol = 6)
 for (i in 1:6){
     for (j in 1:6){
-        jacslim[i, j] <- jaccard(gos_slims[[i]], gos_slims[[j]])
+        jacslim[i, j] <- jaccard(unique(gos_slims[[i]]), unique(gos_slims[[j]]))
     }
 }
 dimnames(jacslim) <- list(names(gos), names(gos))
