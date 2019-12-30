@@ -210,12 +210,12 @@ length(unipept_gos_clean_mf %>% unique())
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('eggnog' = eggnog_gos_clean,
-            'megan' = megan_gos_clean,
-            'metagomics' = metagomics_gos_clean,
-            'mpa' = mpa_gos_clean,
-            'prophane' = prophane_gos_clean,
-            'unipept' = unipept_gos_clean)
+gos <- list('eggnog' = eggnog_gos_clean_mf,
+            'megan' = megan_gos_clean_mf,
+            'metagomics' = metagomics_gos_clean_mf,
+            'mpa' = mpa_gos_clean_mf,
+            'prophane' = prophane_gos_clean_mf,
+            'unipept' = unipept_gos_clean_mf)
 ```
 
 # GO terms: all parents
