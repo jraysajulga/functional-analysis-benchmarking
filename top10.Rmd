@@ -471,7 +471,7 @@ eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
 megan_gos <- removeDuplicates(megan$name)
 metagomics_gos <- removeDuplicates(metagomics_filt$name)
 mpa_gos <- removeDuplicates(pAll$name)
-prophane_gos <- removeDuplicates(prophane$names)
+prophane_gos <- removeDuplicates(prophane$name)
 unipept_gos <- removeDuplicates(unipept_all$name)
 
 tools <- list()
