@@ -37,13 +37,17 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
                      stringsAsFactors = FALSE,
                      header = FALSE)
 # get all unique go terms from all peptides
-eggnog_gos <- unlist(str_split(eggnog$V6, ",")) %>% unique()
-length(unique(eggnog$V2)) # Total number of terms
+eggnog_gos <- unlist(str_split(eggnog$V6, ","))
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
+eggnog_gos_clean_mf <- filterOntology(eggnog_gos_clean, ontology)
+
+length(eggnog$V2)
+length(unique(eggnog$V2)) # Total number of terms
 length(eggnog_gos_clean)
-eggnog_gos_clean <- filterOntology(eggnog_gos_clean, ontology)
-length(eggnog_gos_clean)
+length(eggnog_gos_clean %>% unique())
+length(eggnog_gos_clean_mf)
+length(eggnog_gos_clean_mf %>% unique())
 ```
 
 We are going to write the lists to file, for later use in Python. First, I define a function `clean_write()` which writes a list without all the quotes and stuff:
@@ -56,22 +60,7 @@ clean_write <- function(object, file){
 Write list to file for later use:
 ```{r}
 eggnog_list_file <- "go_lists/eggnog.tab"
-clean_write(eggnog_gos_clean, file=eggnog_list_file)
-```
-
-## MetaGOmics
-```{r}
-metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
-                             stringsAsFactors = FALSE,
-                             comment.char = "#")
-metagomics_gos <- metagomics$GO.acc %>%  unique()
-# takes out "unknownprc", "unknowncmp", "unknownfun"
-metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
-metagomics_gos_clean <- filterOntology(metagomics_gos_clean, ontology)
-clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
-nrow(metagomics) # total number of terms
-length(metagomics_gos_clean) # Number of translated GO terms
-length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
+clean_write(eggnog_gos_clean_mf, file=eggnog_list_file)
 ```
 
 ## MEGAN6
@@ -85,10 +74,100 @@ megan <- read.delim("MEGAN_outputs/go_terms.txt",
 megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
-megan_gos_clean <- filterOntology(megan_gos_clean, ontology)
-clean_write(megan_gos_clean, file="go_lists/megan.tab")
-nrow(megan)
+megan_gos_clean_mf <- filterOntology(megan_gos_clean, ontology)
+clean_write(megan_gos_clean_mf, file="go_lists/megan.tab")
+megan
+length(megan$og)
+length(megan$og %>% unique)
 length(megan_gos_clean)
+length(megan_gos_clean %>% unique)
+length(megan_gos_clean_mf)
+length(megan_gos_clean_mf %>% unique)
+```
+
+## MetaGOmics
+```{r}
+metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
+                             stringsAsFactors = FALSE,
+                             comment.char = "#")
+metagomics_gos <- metagomics$GO.acc %>%  unique()
+# takes out "unknownprc", "unknowncmp", "unknownfun"
+metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
+metagomics_gos_clean_mf <- filterOntology(metagomics_gos_clean, ontology)
+clean_write(metagomics_gos_clean_mf, file="go_lists/metagomics.tab")
+
+length(metagomics$GO.acc) # total number of terms
+length(metagomics$GO.acc %>% unique()) # total number of terms
+length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc)
+length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc %>% unique())
+length(metagomics_gos_clean)
+length(metagomics_gos_clean %>% unique())
+length(metagomics_gos_clean_mf) # Number of translated GO terms
+length(metagomics_gos_clean_mf %>% unique())
+length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
+length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology) %>% unique()) #significant at FDR < 5%
+```
+
+## MetaProteomeAnalyzer
+
+Here, we get the Uniprot IDs from all of the files, then upload them to the UniProt "Retrieve/ID Mapping" service (https://www.uniprot.org/uploadlists/).  
+
+```{r}
+# get all uniprot ids
+ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
+protNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
+    select("prot" = Protein.Accession)
+
+ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
+protWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
+    select("prot" = Protein.Accession)
+
+protAll <- rbind(protNS, protWS)
+
+# write for use on uniprot
+clean_write(protAll %>% unique(), file="mpa_results/all_proteins.tab")
+
+# these are the uniprot results from the above file
+mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
+mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";"))) 
+mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"]
+mpa_gos_clean_mf <- filterOntology(mpa_gos_clean, ontology)
+
+length(mpa_uniprot$Entry)
+length(mpa_uniprot$Entry %>% unique())
+length(mpa_gos_clean)
+length(mpa_gos_clean %>% unique())
+length(mpa_gos_clean_mf)
+length(mpa_gos_clean_mf %>% unique())
+
+clean_write(mpa_gos_clean_mf, file="go_lists/mpa.tab")
+```
+
+## Prophane
+
+```{r}
+prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_ns <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
+                             stringsAsFactors = FALSE)
+prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ws$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ws$task_8..fun_from_eggNog_4.5.1..og2GO,
+                  prophane_ns$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+                  prophane_ns$task_7..fun_from_PFAMs_32..pfam2GO,
+                  prophane_ns$task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_gos <- prophane_gos[prophane_gos != "-"]
+prophane_gos <- trimws(unlist(strsplit(prophane_gos, ",")))
+prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
+prophane_gos_clean_mf <- filterOntology(prophane_gos_clean, ontology)
+clean_write(prophane_gos_clean_mf, file="go_lists/prophane.tab")
+
+length(unlist(strsplit(prophane_ws$members_identifier, ";")))
+length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
+length(prophane_gos_clean)
+length(prophane_gos_clean %>% unique())
+length(prophane_gos_clean_mf)
+length(prophane_gos_clean_mf %>% unique())
 ```
 
 ## Unipept
@@ -117,72 +196,26 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     rename(countNS = peptides.x, countWS = peptides.y) %>%
     mutate(log2ratio = log(countWS/countNS))
 
-unipept_gos <- unipept_all$GO.term %>% unique()
+unipept_gos <- unipept_all$GO.term
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
-unipept_gos_clean <- filterOntology(unipept_gos_clean, ontology)
-clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
+unipept_gos_clean_mf <- filterOntology(unipept_gos_clean, ontology)
+clean_write(unipept_gos_clean_mf, file="go_lists/unipept.tab")
+
+unipept_all
 length(unipept_gos_clean)
+length(unipept_gos_clean %>% unique())
+length(unipept_gos_clean_mf)
+length(unipept_gos_clean_mf %>% unique())
 ```
-
-## MetaProteomeAnalyzer
-
-Here, we get the Uniprot IDs from all of the files, then upload them to the UniProt "Retrieve/ID Mapping" service (https://www.uniprot.org/uploadlists/).  
-
-```{r}
-# get all uniprot ids
-ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
-protNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    select("prot" = Protein.Accession) %>% unique()
-
-ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
-protWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
-    select("prot" = Protein.Accession) %>% unique()
-
-protAll <- rbind(protNS, protWS) %>% unique()
-
-# write for use on uniprot
-clean_write(protAll, file="mpa_results/all_proteins.tab")
-
-# these are the uniprot results from the above file
-mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
-mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";")))
-mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"] %>% unique()
-mpa_gos_clean <- filterOntology(mpa_gos_clean, ontology)
-
-clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
-length(mpa_gos_clean)
-```
-
-## Prophane
-
-```{r}
-prophane_ws <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
-prophane_ns <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
-                             stringsAsFactors = FALSE)
-prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                  prophane_ws$task_7..fun_from_PFAMs_32..pfam2GO,
-                  prophane_ws$task_8..fun_from_eggNog_4.5.1..og2GO,
-                  prophane_ns$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                  prophane_ns$task_7..fun_from_PFAMs_32..pfam2GO,
-                  prophane_ns$task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane_gos <- prophane_gos[prophane_gos != "-"] %>% unique()
-prophane_gos <- trimws(unlist(strsplit(prophane_gos, ","))) %>% unique()
-prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
-prophane_gos_clean <- filterOntology(prophane_gos_clean, ontology)
-clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
-length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
-```
-
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('eggnog' = eggnog_gos_clean,
-            'megan' = megan_gos_clean,
-            'metagomics' = metagomics_gos_clean,
-            'mpa' = mpa_gos_clean,
-            'prophane' = prophane_gos_clean,
-            'unipept' = unipept_gos_clean)
+gos <- list('eggnog' = eggnog_gos_clean_mf,
+            'megan' = megan_gos_clean_mf,
+            'metagomics' = metagomics_gos_clean_mf,
+            'mpa' = mpa_gos_clean_mf,
+            'prophane' = prophane_gos_clean_mf,
+            'unipept' = unipept_gos_clean_mf)
 ```
 
 # GO terms: all parents
@@ -289,7 +322,7 @@ jaccard <- function(vec1, vec2){
 jacmat <- matrix(0, nrow = 6, ncol = 6)
 for (i in 1:6){
     for (j in 1:6){
-        jacmat[i, j] <- jaccard(gos[[i]], gos[[j]])
+        jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
     }
 }
 dimnames(jacmat) <- list(names(gos), names(gos))
@@ -298,7 +331,7 @@ jacmat
 jacslim <- matrix(0, nrow = 6, ncol = 6)
 for (i in 1:6){
     for (j in 1:6){
-        jacslim[i, j] <- jaccard(gos_slims[[i]], gos_slims[[j]])
+        jacslim[i, j] <- jaccard(unique(gos_slims[[i]]), unique(gos_slims[[j]]))
     }
 }
 dimnames(jacslim) <- list(names(gos), names(gos))
