@@ -502,8 +502,8 @@ get_rank_table <- function(name, tools){
             if (length(rank) > 0){
                 term <- tool[rank[[1]],]
                 list(rank[[1]],paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                       '',
-                                       paste(round(as.numeric(term$countWS), digits=2), '/',
+                                       ' ',
+                                       paste(round(as.numeric(term$countWS), digits=2), ' / ',
                                              round(as.numeric(term$countNS), digits=2), ' (',
                                              round(as.numeric(term$log2ratio), digits=2), ')',
                                              sep=''))))
