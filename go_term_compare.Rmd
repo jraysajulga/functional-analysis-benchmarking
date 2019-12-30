@@ -198,9 +198,14 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
 
 unipept_gos <- unipept_all$GO.term
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
-unipept_gos_clean <- filterOntology(unipept_gos_clean, ontology)
-clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
+unipept_gos_clean_mf <- filterOntology(unipept_gos_clean, ontology)
+clean_write(unipept_gos_clean_mf, file="go_lists/unipept.tab")
+
+unipept_all
 length(unipept_gos_clean)
+length(unipept_gos_clean %>% unique())
+length(unipept_gos_clean_mf)
+length(unipept_gos_clean_mf %>% unique())
 ```
 
 ## Euler Diagram of Results
