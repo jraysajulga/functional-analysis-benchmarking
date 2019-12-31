@@ -490,11 +490,13 @@ tools$go_list <- c(list(eggnog_gos),
                    list(unipept_gos))
 ```
 
+
 ```{r}
 get_rank_table <- function(name, tools){
     labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
     tool_topn <- tools[which(labels == name)][[1]]$name[1:10]
-    rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { rep(a, 2)})))
+    rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(as.character(a), '')})))
+    rank_table[,"Ranking"] <- rep(c('Rank', 'WS / NS (FC)'), 10)
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
@@ -502,7 +504,7 @@ get_rank_table <- function(name, tools){
             if (length(rank) > 0){
                 term <- tool[rank[[1]],]
                 list(rank[[1]],paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                       ' ',
+                                       paste('(', round(as.numeric(term$log2ratio), digits=2), ')', sep=''),
                                        paste(round(as.numeric(term$countWS), digits=2), ' / ',
                                              round(as.numeric(term$countNS), digits=2), ' (',
                                              round(as.numeric(term$log2ratio), digits=2), ')',
@@ -513,7 +515,7 @@ get_rank_table <- function(name, tools){
         })
         rank_table[,labels[i]] <- unlist(output)
     }
-    rank_table <- rank_table %>% select(names, name, everything())
+    rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
     write.table(rank_table, file=paste("rank_tables/",name,"-rank_table.tabular", sep=""), sep='\t', quote=FALSE, row.names=FALSE)
 }
 
