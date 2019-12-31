@@ -493,10 +493,14 @@ tools$go_list <- c(list(eggnog_gos),
 
 ```{r}
 get_rank_table <- function(name, tools){
+    n <- 10
+    if (name == "Unipept"){
+        n <- 15
+    }
     labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
-    tool_topn <- tools[which(labels == name)][[1]]$name[1:10]
+    tool_topn <- tools[which(labels == name)][[1]]$name[1:n]
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(as.character(a), '')})))
-    rank_table[,"Ranking"] <- rep(c('Rank', 'WS / NS (FC)'), 10)
+    rank_table[,"Ranking"] <- rep(c('Rank', 'WS / NS (FC)'), n)
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
