@@ -301,55 +301,66 @@ names(exslim) <- methods
 exslim
 ```
 
-## Jaccard distance 
+## Overlap Plot 
 
 ```{r}
-jaccard <- function(vec1, vec2){
-    c1 <- length(vec1)
-    c2 <- length(vec2)
-    int <- length(intersect(vec1, vec2))
-    int / c1
-}
-
-jacmat <- matrix(0, nrow = 6, ncol = 6)
-for (i in 1:6){
-    for (j in 1:6){
-        jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
-    }
-}
-dimnames(jacmat) <- list(names(gos), names(gos))
-jacmat
-
-jacslim <- matrix(0, nrow = 6, ncol = 6)
-for (i in 1:6){
-    for (j in 1:6){
-        jacslim[i, j] <- jaccard(filterOntology(unique(gos_slims[[i]]), ontology),
-                                 filterOntology(unique(gos_slims[[j]]), ontology))
-    }
-}
-dimnames(jacslim) <- list(names(gos), names(gos))
-jacslim
-```
-
-Levelplots
-```{r fig.width = 14}
 library(reshape2)
 library(ggplot2)
-jac_melt <- melt(jacmat)
-jac_melt$method <- "Full GO"
 
-jac_melt_slim <- melt(jacslim)
-jac_melt_slim$method <- "Slim GO"
+generate_overlap_plot <- function(ontology){
+    
+    gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
+            'megan' = filterOntology(megan_gos_clean, ontology),
+            'metagomics' = filterOntology(metagomics_gos_clean, ontology),
+            'mpa' = filterOntology(mpa_gos_clean, ontology),
+            'prophane' = filterOntology(prophane_gos_clean, ontology),
+            'unipept' = filterOntology(unipept_gos_clean, ontology))
+    
+    jaccard <- function(vec1, vec2){
+        c1 <- length(vec1)
+        c2 <- length(vec2)
+        int <- length(intersect(vec1, vec2))
+        int / c1
+    }
+    
+    jacmat <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
+        }
+    }
+    dimnames(jacmat) <- list(names(gos), names(gos))
+    
+    jacslim <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacslim[i, j] <- jaccard(unique(filterOntology(gos_slims[[i]], ontology)),
+                                     unique(filterOntology(gos_slims[[j]], ontology)))
+        }
+    }
+    dimnames(jacslim) <- list(names(gos), names(gos))
+    
+    jac_melt <- melt(jacmat)
+    jac_melt$method <- "Full GO"
+    
+    jac_melt_slim <- melt(jacslim)
+    jac_melt_slim$method <- "Slim GO"
+    
+    jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+    ggplot(jac_melt_all)+
+        geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
+        geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
+        scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
+                            guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
+        facet_grid(.~method) +
+        theme_minimal(base_size = 14) +
+        theme(aspect.ratio = 1) +
+        labs(x = NULL, y = NULL)
+    ggsave(paste0("results/overlap_plots/jaccard-", ontology, ".png"), height = 5, width = 12, units = "in", dpi = 700)
+}
 
-jac_melt_all <- rbind(jac_melt, jac_melt_slim)
-ggplot(jac_melt_all)+
-    geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
-    geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
-    scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
-                    guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
-    facet_grid(.~method) +
-    theme_minimal(base_size = 14) +
-    theme(aspect.ratio = 1) +
-    labs(x = NULL, y = NULL)
-ggsave("jaccard.png", height = 5, width = 12, units = "in", dpi = 700)
+generate_overlap_plot("all")
+generate_overlap_plot("MF")
+generate_overlap_plot("BP")
+generate_overlap_plot("CC")
 ```
