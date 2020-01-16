@@ -20,7 +20,6 @@ library(stringr)
 
 # Filter ontologies based on molecular function, biological process, or cellular component
 ```{r}
-library(GO.db)
 filterOntology <- function(go_list, ontology){
     if (ontology == "all") { return(go_list) }
     onts <- Ontology(go_list)
@@ -46,8 +45,8 @@ length(eggnog$V2)
 length(unique(eggnog$V2)) # Total number of terms
 length(eggnog_gos_clean)
 length(eggnog_gos_clean %>% unique())
-length(eggnog_gos_clean_mf)
-length(eggnog_gos_clean_mf %>% unique())
+length(filterOntology(eggnog_gos_clean, "MF"))
+length(filterOntology(eggnog_gos_clean, "MF") %>% unique())
 ```
 
 We are going to write the lists to file, for later use in Python. First, I define a function `clean_write()` which writes a list without all the quotes and stuff:
@@ -60,7 +59,7 @@ clean_write <- function(object, file){
 Write list to file for later use:
 ```{r}
 eggnog_list_file <- "go_lists/eggnog.tab"
-clean_write(eggnog_gos_clean_mf, file=eggnog_list_file)
+clean_write(eggnog_gos_clean, file=eggnog_list_file)
 ```
 
 ## MEGAN6
@@ -210,7 +209,7 @@ length(unipept_gos_clean_mf %>% unique())
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('eggnog' = eggnog_gos_clean_mf,
+gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
             'megan' = megan_gos_clean_mf,
             'metagomics' = metagomics_gos_clean_mf,
             'mpa' = mpa_gos_clean_mf,
@@ -224,13 +223,14 @@ Each of the tools produces a list of GO terms, but we don't necessarily know how
 
 Download the current GO ontology:
 ```{bash results='hide'}
-curl http://current.geneontology.org/ontology/go-basic.obo -o GO_files/go-basic.obo
-curl http://current.geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
+#curl http://current.geneontology.org/ontology/go-basic.obo -o GO_files/go-basic.obo
+#curl http://current.geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
 ```
 
-Run python to get the list of all ancestors
-```{bash results='hide'}
-#python go-converter.py
+Run python to get the list of all ancestors and slim GO terms
+```{r}
+library(reticulate)
+source_python('go-converter.py')
 ```
 
 Read ancestors into R. 
@@ -297,11 +297,9 @@ for (i in 1:6){
     all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos_slims[other_ind])))
-    exslim[i] <- length(setdiff(gos_slims[[i]], others))
-    if (exslim[i] > 0){
-        print(setdiff(gos_slims[[i]], others))
-    }
-    tot[i] <- length(gos_slims[[i]])
+    gos_slim <- filterOntology(gos_slims[[i]],ontology)
+    exslim[i] <- length(setdiff(gos_slim, others))
+    tot[i] <- length(gos_slim)
 }
 names(tot) <- names(gos)
 tot
@@ -331,7 +329,8 @@ jacmat
 jacslim <- matrix(0, nrow = 6, ncol = 6)
 for (i in 1:6){
     for (j in 1:6){
-        jacslim[i, j] <- jaccard(unique(gos_slims[[i]]), unique(gos_slims[[j]]))
+        jacslim[i, j] <- jaccard(filterOntology(unique(gos_slims[[i]]), ontology),
+                                 filterOntology(unique(gos_slims[[j]]), ontology))
     }
 }
 dimnames(jacslim) <- list(names(gos), names(gos))
