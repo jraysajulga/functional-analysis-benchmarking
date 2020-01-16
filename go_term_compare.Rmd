@@ -39,7 +39,6 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
 eggnog_gos <- unlist(str_split(eggnog$V6, ","))
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
-eggnog_gos_clean_mf <- filterOntology(eggnog_gos_clean, ontology)
 
 length(eggnog$V2)
 length(unique(eggnog$V2)) # Total number of terms
@@ -73,15 +72,14 @@ megan <- read.delim("MEGAN_outputs/go_terms.txt",
 megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
-megan_gos_clean_mf <- filterOntology(megan_gos_clean, ontology)
-clean_write(megan_gos_clean_mf, file="go_lists/megan.tab")
+clean_write(megan_gos_clean, file="go_lists/megan.tab")
 megan
 length(megan$og)
 length(megan$og %>% unique)
 length(megan_gos_clean)
 length(megan_gos_clean %>% unique)
-length(megan_gos_clean_mf)
-length(megan_gos_clean_mf %>% unique)
+length(filterOntology(megan_gos_clean, ontology))
+length(filterOntology(megan_gos_clean, ontology) %>% unique)
 ```
 
 ## MetaGOmics
@@ -92,8 +90,7 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
 metagomics_gos <- metagomics$GO.acc %>%  unique()
 # takes out "unknownprc", "unknowncmp", "unknownfun"
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
-metagomics_gos_clean_mf <- filterOntology(metagomics_gos_clean, ontology)
-clean_write(metagomics_gos_clean_mf, file="go_lists/metagomics.tab")
+clean_write(filterOntology(metagomics_gos_clean, ontology), file="go_lists/metagomics.tab")
 
 length(metagomics$GO.acc) # total number of terms
 length(metagomics$GO.acc %>% unique()) # total number of terms
@@ -101,8 +98,8 @@ length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc)
 length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc %>% unique())
 length(metagomics_gos_clean)
 length(metagomics_gos_clean %>% unique())
-length(metagomics_gos_clean_mf) # Number of translated GO terms
-length(metagomics_gos_clean_mf %>% unique())
+length(filterOntology(metagomics_gos_clean, ontology)) # Number of translated GO terms
+length(filterOntology(metagomics_gos_clean, ontology) %>% unique())
 length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
 length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology) %>% unique()) #significant at FDR < 5%
 ```
@@ -130,16 +127,15 @@ clean_write(protAll %>% unique(), file="mpa_results/all_proteins.tab")
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";"))) 
 mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"]
-mpa_gos_clean_mf <- filterOntology(mpa_gos_clean, ontology)
 
 length(mpa_uniprot$Entry)
 length(mpa_uniprot$Entry %>% unique())
 length(mpa_gos_clean)
 length(mpa_gos_clean %>% unique())
-length(mpa_gos_clean_mf)
-length(mpa_gos_clean_mf %>% unique())
+length(filterOntology(mpa_gos_clean, ontology))
+length(filterOntology(mpa_gos_clean, ontology) %>% unique())
 
-clean_write(mpa_gos_clean_mf, file="go_lists/mpa.tab")
+clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
 ```
 
 ## Prophane
@@ -158,15 +154,14 @@ prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
 prophane_gos <- prophane_gos[prophane_gos != "-"]
 prophane_gos <- trimws(unlist(strsplit(prophane_gos, ",")))
 prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
-prophane_gos_clean_mf <- filterOntology(prophane_gos_clean, ontology)
-clean_write(prophane_gos_clean_mf, file="go_lists/prophane.tab")
+clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
 
 length(unlist(strsplit(prophane_ws$members_identifier, ";")))
 length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
 length(prophane_gos_clean)
 length(prophane_gos_clean %>% unique())
-length(prophane_gos_clean_mf)
-length(prophane_gos_clean_mf %>% unique())
+length(filterOntology(prophane_gos_clean, ontology))
+length(filterOntology(prophane_gos_clean, ontology) %>% unique())
 ```
 
 ## Unipept
@@ -197,24 +192,23 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
 
 unipept_gos <- unipept_all$GO.term
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
-unipept_gos_clean_mf <- filterOntology(unipept_gos_clean, ontology)
-clean_write(unipept_gos_clean_mf, file="go_lists/unipept.tab")
+clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 
 unipept_all
 length(unipept_gos_clean)
 length(unipept_gos_clean %>% unique())
-length(unipept_gos_clean_mf)
-length(unipept_gos_clean_mf %>% unique())
+length(filterOntology(unipept_gos_clean, ontology))
+length(filterOntology(unipept_gos_clean, ontology) %>% unique())
 ```
 
 ## Euler Diagram of Results
 ```{r}
 gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
-            'megan' = megan_gos_clean_mf,
-            'metagomics' = metagomics_gos_clean_mf,
-            'mpa' = mpa_gos_clean_mf,
-            'prophane' = prophane_gos_clean_mf,
-            'unipept' = unipept_gos_clean_mf)
+            'megan' = filterOntology(megan_gos_clean, ontology),
+            'metagomics' = filterOntology(metagomics_gos_clean, ontology),
+            'mpa' = filterOntology(mpa_gos_clean, ontology),
+            'prophane' = filterOntology(prophane_gos_clean, ontology),
+            'unipept' = filterOntology(unipept_gos_clean, ontology))
 ```
 
 # GO terms: all parents
