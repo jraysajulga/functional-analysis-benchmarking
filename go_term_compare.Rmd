@@ -25,7 +25,6 @@ filterOntology <- function(go_list, ontology){
     onts <- Ontology(go_list)
     return(go_list[onts == ontology & !is.na(onts)])
 }
-ontology <- "MF"
 ```
 
 # GO terms, direct from tools
@@ -90,7 +89,7 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
 metagomics_gos <- metagomics$GO.acc %>%  unique()
 # takes out "unknownprc", "unknowncmp", "unknownfun"
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
-clean_write(filterOntology(metagomics_gos_clean, ontology), file="go_lists/metagomics.tab")
+clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
 
 length(metagomics$GO.acc) # total number of terms
 length(metagomics$GO.acc %>% unique()) # total number of terms
@@ -364,3 +363,4 @@ generate_overlap_plot("MF")
 generate_overlap_plot("BP")
 generate_overlap_plot("CC")
 ```
+
