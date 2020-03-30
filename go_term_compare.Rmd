@@ -1,8 +1,6 @@
 ---
 title: "Compare GO Terms"
-output:
-  html_document: default
-  pdf_document: default
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -76,7 +74,6 @@ megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
 megan_gos_clean_mf <- filterOntology(megan_gos_clean, ontology)
 clean_write(megan_gos_clean_mf, file="go_lists/megan.tab")
-megan
 length(megan$og)
 length(megan$og %>% unique)
 length(megan_gos_clean)
@@ -224,8 +221,8 @@ Each of the tools produces a list of GO terms, but we don't necessarily know how
 
 Download the current GO ontology:
 ```{bash results='hide'}
-curl http://current.geneontology.org/ontology/go-basic.obo -o GO_files/go-basic.obo
-curl http://current.geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
+#curl http://current.geneontology.org/ontology/go-basic.obo -o GO_files/go-basic.obo
+#curl http://current.geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
 ```
 
 Run python to get the list of all ancestors
