@@ -18,13 +18,11 @@ library(stringr)
 
 # Filter ontologies based on molecular function, biological process, or cellular component
 ```{r}
-library(GO.db)
 filterOntology <- function(go_list, ontology){
     if (ontology == "all") { return(go_list) }
     onts <- Ontology(go_list)
     return(go_list[onts == ontology & !is.na(onts)])
 }
-ontology <- "MF"
 ```
 
 # GO terms, direct from tools
@@ -38,14 +36,13 @@ eggnog <- read.delim("eggnogmap_results/diamond_annotations.tabular",
 eggnog_gos <- unlist(str_split(eggnog$V6, ","))
 # take out empty entry
 eggnog_gos_clean <- eggnog_gos[str_sub(eggnog_gos, 1, 2) == "GO"]
-eggnog_gos_clean_mf <- filterOntology(eggnog_gos_clean, ontology)
 
 length(eggnog$V2)
 length(unique(eggnog$V2)) # Total number of terms
 length(eggnog_gos_clean)
 length(eggnog_gos_clean %>% unique())
-length(eggnog_gos_clean_mf)
-length(eggnog_gos_clean_mf %>% unique())
+length(filterOntology(eggnog_gos_clean, "MF"))
+length(filterOntology(eggnog_gos_clean, "MF") %>% unique())
 ```
 
 We are going to write the lists to file, for later use in Python. First, I define a function `clean_write()` which writes a list without all the quotes and stuff:
@@ -58,7 +55,7 @@ clean_write <- function(object, file){
 Write list to file for later use:
 ```{r}
 eggnog_list_file <- "go_lists/eggnog.tab"
-clean_write(eggnog_gos_clean_mf, file=eggnog_list_file)
+clean_write(eggnog_gos_clean, file=eggnog_list_file)
 ```
 
 ## MEGAN6
@@ -72,14 +69,14 @@ megan <- read.delim("MEGAN_outputs/go_terms.txt",
 megan_go_lists <- megan$gos
 megan_gos <- unlist(str_split(megan_go_lists, pattern = ",")) %>% unique()
 megan_gos_clean <- megan_gos[str_sub(megan_gos, 1, 2) == "GO" & !is.na(megan_gos)]
-megan_gos_clean_mf <- filterOntology(megan_gos_clean, ontology)
-clean_write(megan_gos_clean_mf, file="go_lists/megan.tab")
+clean_write(megan_gos_clean, file="go_lists/megan.tab")
+megan
 length(megan$og)
 length(megan$og %>% unique)
 length(megan_gos_clean)
 length(megan_gos_clean %>% unique)
-length(megan_gos_clean_mf)
-length(megan_gos_clean_mf %>% unique)
+length(filterOntology(megan_gos_clean, ontology))
+length(filterOntology(megan_gos_clean, ontology) %>% unique)
 ```
 
 ## MetaGOmics
@@ -90,8 +87,7 @@ metagomics <- read.delim("metaGOmics_results/go_compare_149_150.txt",
 metagomics_gos <- metagomics$GO.acc %>%  unique()
 # takes out "unknownprc", "unknowncmp", "unknownfun"
 metagomics_gos_clean <- metagomics_gos[str_sub(metagomics_gos, 1, 2) == "GO"]
-metagomics_gos_clean_mf <- filterOntology(metagomics_gos_clean, ontology)
-clean_write(metagomics_gos_clean_mf, file="go_lists/metagomics.tab")
+clean_write(metagomics_gos_clean, file="go_lists/metagomics.tab")
 
 length(metagomics$GO.acc) # total number of terms
 length(metagomics$GO.acc %>% unique()) # total number of terms
@@ -99,8 +95,8 @@ length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc)
 length(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc %>% unique())
 length(metagomics_gos_clean)
 length(metagomics_gos_clean %>% unique())
-length(metagomics_gos_clean_mf) # Number of translated GO terms
-length(metagomics_gos_clean_mf %>% unique())
+length(filterOntology(metagomics_gos_clean, ontology)) # Number of translated GO terms
+length(filterOntology(metagomics_gos_clean, ontology) %>% unique())
 length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology)) #significant at FDR < 5%
 length(filterOntology(filter(metagomics, Laplace.corr..q.value < 0.05)$GO.acc, ontology) %>% unique()) #significant at FDR < 5%
 ```
@@ -128,16 +124,15 @@ clean_write(protAll %>% unique(), file="mpa_results/all_proteins.tab")
 mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 mpa_gos <- str_trim(unlist(str_split(mpa_uniprot$Gene.ontology.IDs, ";"))) 
 mpa_gos_clean <- mpa_gos[str_sub(mpa_gos, 1, 2) == "GO"]
-mpa_gos_clean_mf <- filterOntology(mpa_gos_clean, ontology)
 
 length(mpa_uniprot$Entry)
 length(mpa_uniprot$Entry %>% unique())
 length(mpa_gos_clean)
 length(mpa_gos_clean %>% unique())
-length(mpa_gos_clean_mf)
-length(mpa_gos_clean_mf %>% unique())
+length(filterOntology(mpa_gos_clean, ontology))
+length(filterOntology(mpa_gos_clean, ontology) %>% unique())
 
-clean_write(mpa_gos_clean_mf, file="go_lists/mpa.tab")
+clean_write(mpa_gos_clean, file="go_lists/mpa.tab")
 ```
 
 ## Prophane
@@ -156,15 +151,14 @@ prophane_gos <- c(prophane_ws$task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
 prophane_gos <- prophane_gos[prophane_gos != "-"]
 prophane_gos <- trimws(unlist(strsplit(prophane_gos, ",")))
 prophane_gos_clean <- prophane_gos[str_sub(prophane_gos, 1, 2) == "GO"]
-prophane_gos_clean_mf <- filterOntology(prophane_gos_clean, ontology)
-clean_write(prophane_gos_clean_mf, file="go_lists/prophane.tab")
+clean_write(prophane_gos_clean, file="go_lists/prophane.tab")
 
 length(unlist(strsplit(prophane_ws$members_identifier, ";")))
 length(unique(unlist(strsplit(prophane_ws$members_identifier, ";"))))
 length(prophane_gos_clean)
 length(prophane_gos_clean %>% unique())
-length(prophane_gos_clean_mf)
-length(prophane_gos_clean_mf %>% unique())
+length(filterOntology(prophane_gos_clean, ontology))
+length(filterOntology(prophane_gos_clean, ontology) %>% unique())
 ```
 
 ## Unipept
@@ -195,24 +189,23 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
 
 unipept_gos <- unipept_all$GO.term
 unipept_gos_clean <- unipept_gos[str_sub(unipept_gos, 1, 2) == "GO"]
-unipept_gos_clean_mf <- filterOntology(unipept_gos_clean, ontology)
-clean_write(unipept_gos_clean_mf, file="go_lists/unipept.tab")
+clean_write(unipept_gos_clean, file="go_lists/unipept.tab")
 
 unipept_all
 length(unipept_gos_clean)
 length(unipept_gos_clean %>% unique())
-length(unipept_gos_clean_mf)
-length(unipept_gos_clean_mf %>% unique())
+length(filterOntology(unipept_gos_clean, ontology))
+length(filterOntology(unipept_gos_clean, ontology) %>% unique())
 ```
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('eggnog' = eggnog_gos_clean_mf,
-            'megan' = megan_gos_clean_mf,
-            'metagomics' = metagomics_gos_clean_mf,
-            'mpa' = mpa_gos_clean_mf,
-            'prophane' = prophane_gos_clean_mf,
-            'unipept' = unipept_gos_clean_mf)
+gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
+            'megan' = filterOntology(megan_gos_clean, ontology),
+            'metagomics' = filterOntology(metagomics_gos_clean, ontology),
+            'mpa' = filterOntology(mpa_gos_clean, ontology),
+            'prophane' = filterOntology(prophane_gos_clean, ontology),
+            'unipept' = filterOntology(unipept_gos_clean, ontology))
 ```
 
 # GO terms: all parents
@@ -225,9 +218,10 @@ Download the current GO ontology:
 #curl http://current.geneontology.org/ontology/subsets/goslim_generic.obo -o GO_files/go-slim.obo
 ```
 
-Run python to get the list of all ancestors
-```{bash results='hide'}
-#python go-converter.py
+Run python to get the list of all ancestors and slim GO terms
+```{r}
+library(reticulate)
+source_python('go-converter.py')
 ```
 
 Read ancestors into R. 
@@ -294,11 +288,9 @@ for (i in 1:6){
     all <- 1:6
     other_ind <- all[-i]
     others <- unique(c(unlist(gos_slims[other_ind])))
-    exslim[i] <- length(setdiff(gos_slims[[i]], others))
-    if (exslim[i] > 0){
-        print(setdiff(gos_slims[[i]], others))
-    }
-    tot[i] <- length(gos_slims[[i]])
+    gos_slim <- filterOntology(gos_slims[[i]],ontology)
+    exslim[i] <- length(setdiff(gos_slim, others))
+    tot[i] <- length(gos_slim)
 }
 names(tot) <- names(gos)
 tot
@@ -306,54 +298,67 @@ names(exslim) <- methods
 exslim
 ```
 
-## Jaccard distance 
+## Overlap Plot 
 
 ```{r}
-jaccard <- function(vec1, vec2){
-    c1 <- length(vec1)
-    c2 <- length(vec2)
-    int <- length(intersect(vec1, vec2))
-    int / c1
-}
-
-jacmat <- matrix(0, nrow = 6, ncol = 6)
-for (i in 1:6){
-    for (j in 1:6){
-        jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
-    }
-}
-dimnames(jacmat) <- list(names(gos), names(gos))
-jacmat
-
-jacslim <- matrix(0, nrow = 6, ncol = 6)
-for (i in 1:6){
-    for (j in 1:6){
-        jacslim[i, j] <- jaccard(unique(gos_slims[[i]]), unique(gos_slims[[j]]))
-    }
-}
-dimnames(jacslim) <- list(names(gos), names(gos))
-jacslim
-```
-
-Levelplots
-```{r fig.width = 14}
 library(reshape2)
 library(ggplot2)
-jac_melt <- melt(jacmat)
-jac_melt$method <- "Full GO"
 
-jac_melt_slim <- melt(jacslim)
-jac_melt_slim$method <- "Slim GO"
+generate_overlap_plot <- function(ontology){
+    
+    gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
+            'megan' = filterOntology(megan_gos_clean, ontology),
+            'metagomics' = filterOntology(metagomics_gos_clean, ontology),
+            'mpa' = filterOntology(mpa_gos_clean, ontology),
+            'prophane' = filterOntology(prophane_gos_clean, ontology),
+            'unipept' = filterOntology(unipept_gos_clean, ontology))
+    
+    jaccard <- function(vec1, vec2){
+        c1 <- length(vec1)
+        c2 <- length(vec2)
+        int <- length(intersect(vec1, vec2))
+        int / c1
+    }
+    
+    jacmat <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
+        }
+    }
+    dimnames(jacmat) <- list(names(gos), names(gos))
+    
+    jacslim <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacslim[i, j] <- jaccard(unique(filterOntology(gos_slims[[i]], ontology)),
+                                     unique(filterOntology(gos_slims[[j]], ontology)))
+        }
+    }
+    dimnames(jacslim) <- list(names(gos), names(gos))
+    
+    jac_melt <- melt(jacmat)
+    jac_melt$method <- "Full GO"
+    
+    jac_melt_slim <- melt(jacslim)
+    jac_melt_slim$method <- "Slim GO"
+    
+    jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+    ggplot(jac_melt_all)+
+        geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
+        geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
+        scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
+                            guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
+        facet_grid(.~method) +
+        theme_minimal(base_size = 14) +
+        theme(aspect.ratio = 1) +
+        labs(x = NULL, y = NULL)
+    ggsave(paste0("results/overlap_plots/jaccard-", ontology, ".png"), height = 5, width = 12, units = "in", dpi = 700)
+}
 
-jac_melt_all <- rbind(jac_melt, jac_melt_slim)
-ggplot(jac_melt_all)+
-    geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
-    geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
-    scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
-                    guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
-    facet_grid(.~method) +
-    theme_minimal(base_size = 14) +
-    theme(aspect.ratio = 1) +
-    labs(x = NULL, y = NULL)
-ggsave("jaccard.png", height = 5, width = 12, units = "in", dpi = 700)
+generate_overlap_plot("all")
+generate_overlap_plot("MF")
+generate_overlap_plot("BP")
+generate_overlap_plot("CC")
 ```
+
