@@ -144,12 +144,47 @@ metaquantome filter \
     --mode f \
     --ontology go \
     --samps results/mqome/input/eggnog/eggnog_samples.tab \
-    --min_peptides 2 \
-    --min_pep_nsamp 2 \
-    --min_children_non_leaf 2 \
-    --min_child_nsamp 2 \
-    --qthreshold 3 \
+    --min_peptides 1 \
+    --min_pep_nsamp 1 \
+    --min_children_non_leaf 1 \
+    --min_child_nsamp 1 \
+    --qthreshold 1 \
     --outfile results/mqome/output/eggnog/func_filtered.tab
+    
+metaquantome stat \
+    --file results/mqome/output/eggnog/func_filtered.tab \
+    --mode f \
+    --ontology go \
+    --samps results/mqome/input/eggnog/eggnog_samples.tab \
+    --parametric True \
+    --paired \
+    --outfile results/mqome/output/eggnog/func_stat.tab
+```
+```{r}
+eggnog_expanded <- read.delim("results/mqome/output/eggnog/func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+eggnog_filtered <- read.delim("results/mqome/output/eggnog/func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+```{r}
+eggnog_w_counts
+```
+
+```{r}
+eggnog_expanded
+```
+
+```{r}
+eggnog_filtered
+```
+```{r}
+eggnog_w_counts[grepl('^((arginine)|(aspartate)|(glutamate 5-)|(homoserine)) kinase activity', eggnog_w_counts$name),]
+```
+
+```{r}
+eggnog_w_counts
 ```
 
 
