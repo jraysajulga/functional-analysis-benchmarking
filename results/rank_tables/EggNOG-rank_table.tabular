@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	Rank	1	224	-	759	-	-
-	WS / NS (FC)	42 / 0 (5.43)	2 / 0 (1.58)	-	0 / 3 (-2)	-	-
-NAD+ synthase activity	Rank	2	533	324	459	-	377
-	WS / NS (FC)	25 / 0 (4.7)	21 / 11.24 (0.85)	29 / 14 (1.11)	4.39 / 4 (0.11)	-	30 / 18.73 (0.65)
-aldo-keto reductase (NADP) activity	Rank	3	-	-	-	-	-
-	WS / NS (FC)	17 / 0 (4.17)	-	-	-	-	-
-alcohol dehydrogenase (NADP+) activity	Rank	4	-	-	-	-	-
-	WS / NS (FC)	17 / 0 (4.17)	-	-	-	-	-
-aldehyde dehydrogenase (NADP+) activity	Rank	5	469	638	-	-	-
-	WS / NS (FC)	17 / 0 (4.17)	1 / 0 (1)	20 / 59 (-1.4)	-	-	-
-3-deoxy-7-phosphoheptulonate synthase activity	Rank	6	82	111	-	-	35
-	WS / NS (FC)	32 / 0.94 (4.09)	45 / 6.56 (2.61)	50 / 7 (2.79)	-	-	55 / 7.49 (2.72)
-tRNA methyltransferase activity	Rank	7	495	310	-	-	887
-	WS / NS (FC)	45 / 1.87 (4)	57 / 28.1 (1)	39 / 18 (1.19)	-	-	1 / 2.81 (-0.93)
-phosphoserine phosphatase activity	Rank	8	176	-	-	-	-
-	WS / NS (FC)	13 / 0 (3.81)	16 / 3.75 (1.84)	-	-	-	-
-phosphatidylserine decarboxylase activity	Rank	9	677	641	-	-	867
-	WS / NS (FC)	12 / 0 (3.7)	3 / 1.87 (0.48)	40 / 119 (-1.44)	-	-	3 / 6.56 (-0.92)
-methylglyoxal reductase (NADH-dependent) activity	Rank	10	-	-	-	-	-
-	WS / NS (FC)	11 / 0 (3.58)	-	-	-	-	-
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	5.43 (42 / 0)	1.58 (2 / 0)	-	-2 (0 / 3)	-	-
+	Percentile (%)	0.071	13.887	-	71.875	-	-
+NAD+ synthase activity	FC (WS / NS)	4.7 (25 / 0)	0.85 (21 / 11.24)	1.11 (29 / 14)	0.11 (4.39 / 4)	-	0.65 (30 / 18.73)
+	Percentile (%)	0.142	33.044	37.85	43.466	-	33.995
+aldo-keto reductase (NADP) activity	FC (WS / NS)	4.17 (17 / 0)	-	-	-	-	-
+	Percentile (%)	0.213	-	-	-	-	-
+alcohol dehydrogenase (NADP+) activity	FC (WS / NS)	4.17 (17 / 0)	-	-	-	-	-
+	Percentile (%)	0.283	-	-	-	-	-
+aldehyde dehydrogenase (NADP+) activity	FC (WS / NS)	4.17 (17 / 0)	1 (1 / 0)	-1.4 (20 / 59)	-	-	-
+	Percentile (%)	0.354	29.076	74.533	-	-	-
+3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	4.09 (32 / 0.94)	2.61 (45 / 6.56)	2.79 (50 / 7)	-	-	2.72 (55 / 7.49)
+	Percentile (%)	0.425	5.084	12.967	-	-	3.156
+tRNA methyltransferase activity	FC (WS / NS)	4 (45 / 1.87)	1 (57 / 28.1)	1.19 (39 / 18)	-	-	-0.93 (1 / 2.81)
+	Percentile (%)	0.496	30.688	36.215	-	-	79.982
+phosphoserine phosphatase activity	FC (WS / NS)	3.81 (13 / 0)	1.84 (16 / 3.75)	-	-	-	-
+	Percentile (%)	0.567	10.911	-	-	-	-
+phosphatidylserine decarboxylase activity	FC (WS / NS)	3.7 (12 / 0)	0.48 (3 / 1.87)	-1.44 (40 / 119)	-	-	-0.92 (3 / 6.56)
+	Percentile (%)	0.638	41.971	74.883	-	-	78.179
+methylglyoxal reductase (NADH-dependent) activity	FC (WS / NS)	3.58 (11 / 0)	-	-	-	-	-
+	Percentile (%)	0.709	-	-	-	-	-
