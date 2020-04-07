@@ -358,17 +358,34 @@ Top *n*:
 ```{r echo=FALSE, results='asis'}
 kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
+```{r}
+pAll
+```
+
+Metaquantome-normalized dataset:
+```{r}
+write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
+print_mqome_cmds("mpa", "gos")
+```
+```{r}
+mpa_expanded <- read.delim("results/mqome/output/mpa/mpa_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+mpa_filtered <- read.delim("results/mqome/output/mpa/mpa_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
 
 ## Prophane
 
 ```{r}
-prophane_WS <- read.delim("prophane_results/summary_WS.txt", sep = "\t",
+prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"), sep = "\t",
                           stringsAsFactors = FALSE) %>% select(members_identifier,
                                                                ws = quant..sample_737..mean.,
                                                                ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
                                                                ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
                                                                ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane_NS <- read.delim("prophane_results/summary_NS.txt", sep = "\t",
+prophane_NS <- read.delim(paste0(tools_dir, "prophane_results/summary_NS.txt"), sep = "\t",
                           stringsAsFactors = FALSE) %>% select(members_identifier,
                                                                ns = quant..sample_737..mean.,
                                                                ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
@@ -387,6 +404,22 @@ prophane <- collapse_by_go(prophane, ',') %>%
     mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
 prophane
+```
+
+Metaquantome-normalized dataset:
+```{r}
+write_mqome_inputs(prophane, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
+print_mqome_cmds("prophane", "gos")
+```
+```{r}
+prophane_expanded <- read.delim("results/mqome/output/prophane/prophane_func_expanded.tab",
+                                stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+prophane_filtered <- read.delim("results/mqome/output/prophane/prophane_func_filtered.tab",
+                                stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
 ```
 
 ## Unipept and MetaGOmics

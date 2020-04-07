@@ -1,0 +1,3 @@
+id	name	namespace	NS_mean	WS_mean	countNS	countWS	countNS_n_peptide	countWS_n_peptide	countNS_n_samp_children	countWS_n_samp_children
+GO:0003674	molecular_function	molecular_function	1.1508417797052777	2.0507400882857723	1.1508417797052777	2.0507400882857723	473.0	473.0	10.0	10.0
+GO:0005488	binding	molecular_function	0.3930916284237696	1.4046595323807298	0.3930916284237696	1.4046595323807298	81.0	81.0	14.0	14.0
