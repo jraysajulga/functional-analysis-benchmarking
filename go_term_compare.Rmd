@@ -45,8 +45,9 @@ length(eggnog_gos_clean %>% unique())
 length(filterOntology(eggnog_gos_clean, ontology))
 length(filterOntology(eggnog_gos_clean, ontology) %>% unique())
 ```
+
 ```{r}
-eggnog_filtered <- read.delim("results/mqome/output/eggnog/func_filtered.tab", stringsAsFactors = FALSE) %>%
+eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.tab", stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
