@@ -141,12 +141,12 @@ print_mqome_cmds <- function(name, func_colname){
                        " --func_file results/mqome/input/", name, "/", name, "_func.tab",
                        " --pep_colname_func peptide",
                        " --func_colname ", func_colname," --ontology go",
-                       " --samps results/mqome/input/", name, "/", name, "_samples.tab",
+                       " --samps results/mqome/input/samples.tab",
                        " --outfile results/mqome/output/", name, "/", name, "_func_expanded.tab")
   cmd_filt <- paste0("metaquantome filter",
                      " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
                      " --mode f --ontology go",
-                     " --samps results/mqome/input/", name, "/", name, "_samples.tab",
+                     " --samps results/mqome/input/samples.tab",
                      " --min_peptides 1 --min_pep_nsamp 1 --min_children_non_leaf 1 --min_child_nsamp 1",
                      " --qthreshold 1 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
   print(cmd_expand)
@@ -249,10 +249,21 @@ kable(head(megan, n), caption = paste("MEGAN: Top", n, "fold changes"))
 
 Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a beta-hexosaminidase and <a href="http://eggnogdb.embl.de/#/app/results?target_nogs=ENOG410YESU">ENOG410YESU</a> is involved in cell wall/membrane/envelope biogenesis.
 
-## Unipept
+Metaquantome-normalized dataset:
 ```{r}
-unipept_results_NS
+write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
+print_mqome_cmds("megan", "gos")
 ```
+```{r}
+megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+
+## Unipept
 
 ```{r}
 unipept_results_NS <- paste0(tools_dir, 'unipept_results/',
