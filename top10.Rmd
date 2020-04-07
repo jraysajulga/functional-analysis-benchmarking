@@ -515,129 +515,8 @@ kable(m2u)
 kable(u2m)
 ```
 
-## Let's look at how the top terms are ranked in other tools
-
 ```{r}
-getMatch <- function(gos1, gos2){
-    delimiter <- "; "
-    
-    gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter)))
-    gos2 <- unique(unlist(strsplit(as.character(gos2), delimiter)))
-    gos1 <- gos1[gos1 != "NA"]
-    gos2 <- gos2[gos2 != "NA"]
-    matched <- sapply(gos1, function ( go1 ) { 
-        if(go1 %in% gos2){ go1 }
-    })
-    paste(unlist(matched), collapse="; ")
-}
-
-getMatches <- function(col_gos1, col_gos2, name){
-    paths <- data.frame(source = character(),
-                        target = character(),
-                        group = character(),
-                        value = numeric())
-    nodes <- sapply(1:20, function ( x ) { paste(rep(" ", x), collapse="") })
-    
-    matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){
-        ranks <- lapply(col_gos2, function ( gos2){
-            getMatch(gos1, gos2)
-        })
-        rank_list <- which(ranks != "")
-        top_list <- rank_list[as.numeric(rank_list) <= 10]
-        
-        # Set up nodes and paths from top 10 matches
-        if (length(top_list) != 0){
-            topn <- paste("[", as.character(top_list), "]", sep="")
-            nodes[top_list] <<- topn
-            path <- data.frame(target = topn) %>%
-                mutate(source = gos1,
-                       value = 0.1,
-                       percent = "NA",
-                       group = name) %>%
-                select(source, target, percent, value, group)
-            paths <<- rbind(paths, path)
-        }
-        
-        rank_list <- rank_list[as.numeric(rank_list) > 10]
-        perc_list <- as.character(sapply(rank_list,
-                                               function ( rank ){ ceiling(rank / length(col_gos2) * 10) }))
-        if (length(rank_list) != 0) {
-            # Consolidate ranks with same percentile 
-            consolidator <- data.frame(rank_list,
-                                       perc_list) %>%
-                group_by(perc_list) %>%
-                summarise_all(function ( x ) { paste(x, collapse=" / ") })
-            rank_list <- consolidator$rank_list
-            perc_list <- consolidator$perc_list
-            
-            # Extract pathing information
-            path <- consolidator %>% mutate(source = gos1,
-                                            group = name,
-                                            value = (str_count(rank_list, "/") + 1) * 0.1) %>%
-                                            #value = .01) %>%
-                select(source, target = rank_list, percent = perc_list, value, group)
-            paths <<- rbind(paths, path)
-            
-            # Set up node information
-            nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(rank_list)
-            
-            paste(paste(rank_list, collapse=", "), 
-                  " (",
-                  paste(perc_list, collapse=", "),
-                  ")", sep="")
-        } else {
-            ""
-        }
-    })))
-    colnames(matches) <- name
-    matches$name <- rownames(matches)
-    out <- list()
-    out$matches <- matches[,c(2,1)]
-    out$paths <- paths
-    out$nodes <- nodes
-    return(out)
-}
-
-# Retains the first copy
-removeDuplicates <- function(go_col){
-    all_gos <- unique(unlist(str_split(go_col, "; ")))
-    all_gos <- all_gos[all_gos != ""]
-    filtered <- sapply(str_split(go_col, "; "), function ( go_list ) {
-        output <- paste(go_list[go_list %in% all_gos], collapse="; ");
-        all_gos <<- setdiff(all_gos, go_list)
-        output
-    })
-    filtered <- filtered[filtered != ""]
-    filtered <- filtered[filtered != "NA"]
-    filtered[!is.na(filtered)]
-}
-
-eggnog_gos <- removeDuplicates(eggnog_w_counts$name)
-# eggnog_gos <- eggnog_gos[!is.na(eggnog_gos)]
-megan_gos <- removeDuplicates(megan$name)
-metagomics_gos <- removeDuplicates(metagomics_filt$name)
-mpa_gos <- removeDuplicates(pAll$name)
-prophane_gos <- removeDuplicates(prophane$name)
-unipept_gos <- removeDuplicates(unipept_all$name)
-
-tools <- list()
-tools$label <- c("EggNOG",
-                 "MEGAN",
-                 "MetaGOmics",
-                 "MPA",
-                 "Prophane",
-                 "Unipept")
-                    
-tools$go_list <- c(list(eggnog_gos),
-                   list(megan_gos),
-                   list(metagomics_gos),
-                   list(mpa_gos),
-                   list(prophane_gos),
-                   list(unipept_gos))
-```
-
-```{r}
-get_rank_table <- function(name, tools){
+get_rank_table <- function(name, tools, folder="raw"){
     n <- 10
     if (name == "Unipept"){
         n <- 15
@@ -665,7 +544,9 @@ get_rank_table <- function(name, tools){
         rank_table[,labels[i]] <- unlist(output)
     }
     rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
-    write.table(rank_table, file=paste("results/rank_tables/",name,"-rank_table.tabular", sep=""), sep='\t', quote=FALSE, row.names=FALSE)
+    write.table(rank_table,
+                file=paste0("results/rank_tables/", folder, "/", name, "-rank_table.tabular"),
+                sep='\t', quote=FALSE, row.names=FALSE)
 }
 
 # tool_topn
@@ -684,4 +565,138 @@ get_rank_table("MEGAN", tools)
 get_rank_table("MetaGOmics", tools)
 get_rank_table("MPA", tools)
 get_rank_table("Prophane", tools)
+
+tools <- list(remove_blanks(eggnog_filtered),
+              remove_blanks(megan_filtered),
+              remove_blanks(metagomics_filtered),
+              remove_blanks(mpa_filtered),
+              remove_blanks(prophane_filtered),
+              remove_blanks(unipept_filtered))
+get_rank_table("Unipept", tools, 'filtered')
+get_rank_table("EggNOG", tools, 'filtered')
+get_rank_table("MEGAN", tools, 'filtered')
+get_rank_table("MetaGOmics", tools, 'filtered')
+get_rank_table("MPA", tools, 'filtered')
+get_rank_table("Prophane", tools, 'filtered')
 ```
+
+<!-- ## Let's look at how the top terms are ranked in other tools -->
+
+<!-- ```{r} -->
+<!-- getMatch <- function(gos1, gos2){ -->
+<!--     delimiter <- "; " -->
+
+<!--     gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter))) -->
+<!--     gos2 <- unique(unlist(strsplit(as.character(gos2), delimiter))) -->
+<!--     gos1 <- gos1[gos1 != "NA"] -->
+<!--     gos2 <- gos2[gos2 != "NA"] -->
+<!--     matched <- sapply(gos1, function ( go1 ) {  -->
+<!--         if(go1 %in% gos2){ go1 } -->
+<!--     }) -->
+<!--     paste(unlist(matched), collapse="; ") -->
+<!-- } -->
+
+<!-- getMatches <- function(col_gos1, col_gos2, name){ -->
+<!--     paths <- data.frame(source = character(), -->
+<!--                         target = character(), -->
+<!--                         group = character(), -->
+<!--                         value = numeric()) -->
+<!--     nodes <- sapply(1:20, function ( x ) { paste(rep(" ", x), collapse="") }) -->
+
+<!--     matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){ -->
+<!--         ranks <- lapply(col_gos2, function ( gos2){ -->
+<!--             getMatch(gos1, gos2) -->
+<!--         }) -->
+<!--         rank_list <- which(ranks != "") -->
+<!--         top_list <- rank_list[as.numeric(rank_list) <= 10] -->
+
+<!--         # Set up nodes and paths from top 10 matches -->
+<!--         if (length(top_list) != 0){ -->
+<!--             topn <- paste("[", as.character(top_list), "]", sep="") -->
+<!--             nodes[top_list] <<- topn -->
+<!--             path <- data.frame(target = topn) %>% -->
+<!--                 mutate(source = gos1, -->
+<!--                        value = 0.1, -->
+<!--                        percent = "NA", -->
+<!--                        group = name) %>% -->
+<!--                 select(source, target, percent, value, group) -->
+<!--             paths <<- rbind(paths, path) -->
+<!--         } -->
+
+<!--         rank_list <- rank_list[as.numeric(rank_list) > 10] -->
+<!--         perc_list <- as.character(sapply(rank_list, -->
+<!--                                                function ( rank ){ ceiling(rank / length(col_gos2) * 10) })) -->
+<!--         if (length(rank_list) != 0) { -->
+<!--             # Consolidate ranks with same percentile  -->
+<!--             consolidator <- data.frame(rank_list, -->
+<!--                                        perc_list) %>% -->
+<!--                 group_by(perc_list) %>% -->
+<!--                 summarise_all(function ( x ) { paste(x, collapse=" / ") }) -->
+<!--             rank_list <- consolidator$rank_list -->
+<!--             perc_list <- consolidator$perc_list -->
+
+<!--             # Extract pathing information -->
+<!--             path <- consolidator %>% mutate(source = gos1, -->
+<!--                                             group = name, -->
+<!--                                             value = (str_count(rank_list, "/") + 1) * 0.1) %>% -->
+<!--                                             #value = .01) %>% -->
+<!--                 select(source, target = rank_list, percent = perc_list, value, group) -->
+<!--             paths <<- rbind(paths, path) -->
+
+<!--             # Set up node information -->
+<!--             nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(rank_list) -->
+
+<!--             paste(paste(rank_list, collapse=", "),  -->
+<!--                   " (", -->
+<!--                   paste(perc_list, collapse=", "), -->
+<!--                   ")", sep="") -->
+<!--         } else { -->
+<!--             "" -->
+<!--         } -->
+<!--     }))) -->
+<!--     colnames(matches) <- name -->
+<!--     matches$name <- rownames(matches) -->
+<!--     out <- list() -->
+<!--     out$matches <- matches[,c(2,1)] -->
+<!--     out$paths <- paths -->
+<!--     out$nodes <- nodes -->
+<!--     return(out) -->
+<!-- } -->
+
+<!-- # Retains the first copy -->
+<!-- removeDuplicates <- function(go_col){ -->
+<!--     all_gos <- unique(unlist(str_split(go_col, "; "))) -->
+<!--     all_gos <- all_gos[all_gos != ""] -->
+<!--     filtered <- sapply(str_split(go_col, "; "), function ( go_list ) { -->
+<!--         output <- paste(go_list[go_list %in% all_gos], collapse="; "); -->
+<!--         all_gos <<- setdiff(all_gos, go_list) -->
+<!--         output -->
+<!--     }) -->
+<!--     filtered <- filtered[filtered != ""] -->
+<!--     filtered <- filtered[filtered != "NA"] -->
+<!--     filtered[!is.na(filtered)] -->
+<!-- } -->
+
+<!-- eggnog_gos <- removeDuplicates(eggnog_w_counts$name) -->
+<!-- # eggnog_gos <- eggnog_gos[!is.na(eggnog_gos)] -->
+<!-- megan_gos <- removeDuplicates(megan$name) -->
+<!-- metagomics_gos <- removeDuplicates(metagomics_filt$name) -->
+<!-- mpa_gos <- removeDuplicates(pAll$name) -->
+<!-- prophane_gos <- removeDuplicates(prophane$name) -->
+<!-- unipept_gos <- removeDuplicates(unipept_all$name) -->
+
+<!-- tools <- list() -->
+<!-- tools$label <- c("EggNOG", -->
+<!--                  "MEGAN", -->
+<!--                  "MetaGOmics", -->
+<!--                  "MPA", -->
+<!--                  "Prophane", -->
+<!--                  "Unipept") -->
+
+<!-- tools$go_list <- c(list(eggnog_gos), -->
+<!--                    list(megan_gos), -->
+<!--                    list(metagomics_gos), -->
+<!--                    list(mpa_gos), -->
+<!--                    list(prophane_gos), -->
+<!--                    list(unipept_gos)) -->
+<!-- ``` -->
