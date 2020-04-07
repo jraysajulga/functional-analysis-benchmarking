@@ -447,7 +447,7 @@ This is comparing the estimated fold changes for GO terms for the two tools that
 
 ```{r}
 um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
-png("um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
+png("results/correlation/um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
 plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
      xlab = "Unipept: Log2 Ratio",
      ylab = "MetaGOmics: Log2 Ratio")
@@ -462,6 +462,22 @@ nrow(um)
 nrow(unipept_all)
 nrow(metagomics)
 ```
+
+```{r}
+um <- inner_join(unipept_filtered, metagomics_filtered, by = c("id" = "id"))
+png("results/correlation/um_cor_filtered.png", res = 700, width = 3.5, height = 4, units = "in")
+plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-2.5,2.5), ylim=c(-2.5,2.5),
+     xlab = "Unipept: Log2 Ratio",
+     ylab = "MetaGOmics: Log2 Ratio")
+mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+abline(0, 1, col = "red", lty = 2)
+abline(coef(mod))
+grid()
+dev.off()
+cor.test(um$log2ratio.x, um$log2ratio.y,
+         method = "pearson", alternative = "two.sided")
+```
+
 
 ### Rank comparison
 
