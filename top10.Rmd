@@ -24,6 +24,7 @@ library(kableExtra)
 library(stringr)
 library(networkD3)
 library(tidyverse)
+library(reticulate)
 ```
 
 ## Peptides
@@ -126,74 +127,43 @@ write_mqome_inputs(eggnog_w_counts, 'eggnog', 'gos', 'gos', 'countNS', 'countWS'
 ```
 
 Let's expand and filter using metaquantome
-```{bash}
-metaquantome expand \
-    --mode f \
-    --data_dir data/databases/gene_ontology/mqome \
-    --int_file results/mqome/input/eggnog/eggnog_int.tab \
-    --pep_colname_int peptide \
-    --func_file results/mqome/input/eggnog/eggnog_func.tab \
-    --pep_colname_func peptide \
-    --func_colname gos \
-    --ontology go \
-    --samps results/mqome/input/eggnog/eggnog_samples.tab \
-    --outfile results/mqome/output/eggnog/func_expanded.tab
-    
-metaquantome filter \
-    --expand_file results/mqome/output/eggnog/func_expanded.tab \
-    --mode f \
-    --ontology go \
-    --samps results/mqome/input/eggnog/eggnog_samples.tab \
-    --min_peptides 1 \
-    --min_pep_nsamp 1 \
-    --min_children_non_leaf 1 \
-    --min_child_nsamp 1 \
-    --qthreshold 1 \
-    --outfile results/mqome/output/eggnog/func_filtered.tab
-    
-metaquantome stat \
-    --file results/mqome/output/eggnog/func_filtered.tab \
-    --mode f \
-    --ontology go \
-    --samps results/mqome/input/eggnog/eggnog_samples.tab \
-    --parametric True \
-    --paired \
-    --outfile results/mqome/output/eggnog/func_stat.tab
+```{r}
+print_mqome_cmds <- function(name, func_colname){
+  cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
+                        " --int_file results/mqome/input/", name, "/", name, "_int.tab",
+                       " --pep_colname_int peptide",
+                       " --func_file results/mqome/input/", name, "/", name, "_func.tab",
+                       " --pep_colname_func peptide",
+                       " --func_colname ", func_colname," --ontology go",
+                       " --samps results/mqome/input/", name, "/", name, "_samples.tab",
+                       " --outfile results/mqome/output/", name, "/", name, "_func_expanded.tab")
+  cmd_filt <- paste0("metaquantome filter",
+                     " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
+                     " --mode f --ontology go",
+                     " --samps results/mqome/input/", name, "/", name, "_samples.tab",
+                     " --min_peptides 1 --min_pep_nsamp 1 --min_children_non_leaf 1 --min_child_nsamp 1",
+                     " --qthreshold 1 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
+  print(cmd_expand)
+  print(cmd_filt)
+}
+print_mqome_cmds("eggnog", 'gos')
 ```
 ```{r}
-eggnog_expanded <- read.delim("results/mqome/output/eggnog/func_expanded.tab", stringsAsFactors = FALSE) %>%
+eggnog_expanded <- read.delim("results/mqome/output/eggnog/eggnog_func_expanded.tab", stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
-eggnog_filtered <- read.delim("results/mqome/output/eggnog/func_filtered.tab", stringsAsFactors = FALSE) %>%
+eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.tab", stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
-```{r}
-eggnog_w_counts
-```
 
 ```{r}
-eggnog_expanded
-```
-
-```{r}
-eggnog_filtered
-```
-```{r}
-eggnog_w_counts[grepl('^((arginine)|(aspartate)|(glutamate 5-)|(homoserine)) kinase activity', eggnog_w_counts$name),]
-```
-
-```{r}
-eggnog_w_counts
-```
-
-```{r}
-# label_col <- 'GO.term'
-# go_col <- 'GO.term'
-# samp1_col <- 'countNS'
-# samp2_col <- 'countWS'
 write_mqome_inputs(unipept_all, 'unipept', 'GO.term', 'GO.term', 'countNS', 'countWS')
 ```
+```{r}
+print_mqome_cmds("unipept")
+```
+
 ```{bash}
 metaquantome expand \
     --mode f \
@@ -299,10 +269,6 @@ metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
 metagomics_filt
 ```
 
-```{r}
-megan
-```
-
 Top *n* results:
 ```{r echo=FALSE, results='asis'}
 kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold changes"))
@@ -327,10 +293,6 @@ megan <- collapse_by_go(megan, ',')
 megan$name <- Term(megan$gos)
 megan
 ```
-```{r}
-megan
-```
-
 
 ```{r}
 sum(megan$countWS)
@@ -373,7 +335,6 @@ unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     select(GO.term, name = Name, countWS, countNS, log2ratio) %>%
     filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
-write.table(unipept_all, file="quant_results/unipept.tab", quote=FALSE, row.names=FALSE)
 ```
 
 ```{r}
@@ -392,18 +353,18 @@ kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ## MetaProteomeAnalyzer
 
 ```{r}
-ns_files <- list.files('mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
+ns_files <- list.files('data/tool_outputs/func_tools/mpa_results/NS', pattern = "_proteins.csv", full.names = TRUE)
 pNS <- bind_rows(lapply(ns_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
     group_by(Protein.Accession, Protein.Description) %>%
     summarize("SpecCount" = sum(Spectral.Count))
-ws_files <- list.files('mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
+ws_files <- list.files('data/tool_outputs/func_tools/mpa_results/WS', pattern = "_proteins.csv", full.names = TRUE)
 pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
     group_by(Protein.Accession, Protein.Description) %>%
     summarize("SpecCount" = sum(Spectral.Count))
 pAll <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description"))) %>%
     rename(countNS = SpecCount.x, countWS = SpecCount.y, )
 
-mpa_uniprot <- read.delim('mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
+mpa_uniprot <- read.delim('data/tool_outputs/func_tools/mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
 pAll$gos <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
     goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
 }))
