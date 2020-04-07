@@ -201,6 +201,8 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
                          comment.char = "#") %>%
     select(go = GO.acc,
            name = GO.name,
+           countNS = Run.1.PSM.count,
+           countWS = Run.2.PSM.count,
            log2ratio =  Laplace.corr..Log.2..fold.change,
            p = Laplace.corr..q.value) %>%
     filter(Ontology(as.character(go)) == ontology)
@@ -214,6 +216,23 @@ Top *n* results:
 ```{r echo=FALSE, results='asis'}
 kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold changes"))
 ```
+
+Metaquantome-normalized dataset:
+```{r}
+write_mqome_inputs(metagomics, 'metagomics', 'go', 'go', 'countNS', 'countWS')
+print_mqome_cmds("metagomics", "go.1")
+```
+```{r}
+metagomics_expanded <- read.delim("results/mqome/output/metagomics/metagomics_func_expanded.tab",
+                             stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+metagomics_filtered <- read.delim("results/mqome/output/metagomics/metagomics_func_filtered.tab",
+                             stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+
 
 ## MEGAN
 
