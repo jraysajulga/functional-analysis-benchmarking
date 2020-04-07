@@ -1,21 +1,21 @@
 GO Term	Ranking	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
-biotin binding	Rank	1	752	-	51	-	5
-	WS / NS (FC)	122.11 / 0 (6.94)	2 / 2.81 (-0.34)	-	132 / 10 (3.71)	-	165 / 9.37 (4)
-ferroxidase activity	Rank	2	1199	1480	104	463	96
-	WS / NS (FC)	224.89 / 2 (6.23)	20 / 95.53 (-2.2)	17 / 86.16 (-2.28)	161 / 23 (2.87)	0 / 0 (-1.41)	310 / 81.48 (1.91)
-heat shock protein binding	Rank	3	594	-	209	-	168
-	WS / NS (FC)	41.29 / 0 (5.4)	2 / 1.87 (0.06)	-	99 / 32 (1.71)	-	95 / 33.72 (1.47)
-orotate phosphoribosyltransferase activity	Rank	4	-	887	-	-	451
-	WS / NS (FC)	36.9 / 0 (5.24)	-	41 / 38.4 (0.09)	-	-	40 / 29.03 (0.45)
-pyrimidine nucleobase biosynthetic process	Rank	5	-	-	-	-	-
-	WS / NS (FC)	36.9 / 0 (5.24)	-	-	-	-	-
-adenine phosphoribosyltransferase activity	Rank	6	696	653	615	-	726
-	WS / NS (FC)	30.75 / 0 (4.99)	15 / 15.92 (-0.08)	54 / 36.53 (0.55)	21 / 49 (-1.07)	-	26 / 32.78 (-0.32)
-ribonucleoside-diphosphate reductase complex	Rank	7	-	-	-	-	-
-	WS / NS (FC)	30.75 / 0 (4.99)	-	-	-	-	-
-adenine salvage	Rank	8	-	-	-	-	-
-	WS / NS (FC)	30.75 / 0 (4.99)	-	-	-	-	-
-potassium ion transmembrane transporter activity	Rank	9	725	658	308	-	437
-	WS / NS (FC)	30.75 / 0 (4.99)	8 / 9.37 (-0.2)	33 / 22.48 (0.53)	56 / 26 (1.19)	-	24 / 16.86 (0.49)
-oxaloacetate metabolic process	Rank	10	-	-	-	-	-
-	WS / NS (FC)	28.99 / 0 (4.91)	-	-	-	-	-
+biotin binding	FC (WS / NS)	6.94 (122.11 / 0)	-0.34 (2 / 2.81)	-	3.71 (132 / 10)	-	4 (165 / 9.37)
+	Percentile (%)	0.095	53.296	-	5.958	-	0.451
+ferroxidase activity	FC (WS / NS)	6.23 (224.89 / 2)	-2.2 (20 / 95.53)	-2.28 (17 / 86.16)	2.87 (161 / 23)	-1.41 (0 / 0)	1.91 (310 / 81.48)
+	Percentile (%)	0.189	84.975	91.754	12.15	97.679	8.656
+heat shock protein binding	FC (WS / NS)	5.4 (41.29 / 0)	0.06 (2 / 1.87)	-	1.71 (99 / 32)	-	1.47 (95 / 33.72)
+	Percentile (%)	0.284	42.098	-	24.416	-	15.149
+orotate phosphoribosyltransferase activity	FC (WS / NS)	5.24 (36.9 / 0)	-	0.09 (41 / 38.4)	-	-	0.45 (40 / 29.03)
+	Percentile (%)	0.379	-	54.991	-	-	40.667
+pyrimidine nucleobase biosynthetic process	FC (WS / NS)	5.24 (36.9 / 0)	-	-	-	-	-
+	Percentile (%)	0.473	-	-	-	-	-
+adenine phosphoribosyltransferase activity	FC (WS / NS)	4.99 (30.75 / 0)	-0.08 (15 / 15.92)	0.55 (54 / 36.53)	-1.07 (21 / 49)	-	-0.32 (26 / 32.78)
+	Percentile (%)	0.568	49.327	40.484	71.846	-	65.464
+ribonucleoside-diphosphate reductase complex	FC (WS / NS)	4.99 (30.75 / 0)	-	-	-	-	-
+	Percentile (%)	0.663	-	-	-	-	-
+adenine salvage	FC (WS / NS)	4.99 (30.75 / 0)	-	-	-	-	-
+	Percentile (%)	0.758	-	-	-	-	-
+potassium ion transmembrane transporter activity	FC (WS / NS)	4.99 (30.75 / 0)	-0.2 (8 / 9.37)	0.53 (33 / 22.48)	1.19 (56 / 26)	-	0.49 (24 / 16.86)
+	Percentile (%)	0.852	51.382	40.794	35.981	-	39.405
+oxaloacetate metabolic process	FC (WS / NS)	4.91 (28.99 / 0)	-	-	-	-	-
+	Percentile (%)	0.947	-	-	-	-	-

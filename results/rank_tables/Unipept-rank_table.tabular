@@ -1,31 +1,31 @@
 GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
-peptide deformylase activity	Rank	1	950	7	22	-	-
-	WS / NS (FC)	58 / 0.94 (4.93)	0 / 0.94 (-0.95)	46 / 0.94 (4.6)	51 / 1 (4.81)	-	-
-1-phosphofructokinase activity	Rank	2	-	17	11	318	-
-	WS / NS (FC)	41 / 0.94 (4.44)	-	27 / 0.94 (3.85)	36 / 0 (5.32)	0.88 / 0 (0.91)	-
-tagatose-6-phosphate kinase activity	Rank	3	-	16	25	46	-
-	WS / NS (FC)	87 / 3.75 (4.21)	-	68 / 3.75 (3.86)	81 / 3 (4.47)	8.78 / 0 (3.29)	-
-branched-chain-amino-acid transaminase activity	Rank	4	1336	302	344	38	-
-	WS / NS (FC)	49 / 1.87 (4.12)	1 / 22.48 (-3.55)	108 / 41.21 (1.37)	75 / 39 (1.04)	14.06 / 0 (3.91)	-
-biotin binding	Rank	5	752	-	51	1	-
-	WS / NS (FC)	165 / 9.37 (4)	2 / 2.81 (-0.34)	-	132 / 10 (3.71)	122.11 / 0 (6.94)	-
-glycerol dehydrogenase [NAD+] activity	Rank	6	-	35	23	-	-
-	WS / NS (FC)	28 / 0.94 (3.9)	-	27 / 1.87 (3.28)	24 / 0 (4.76)	-	-
-beta-fructofuranosidase activity	Rank	7	-	8	17	-	-
-	WS / NS (FC)	26 / 0.94 (3.8)	-	20 / 0 (4.39)	26 / 0 (4.87)	-	-
-threonine synthase activity	Rank	8	273	54	361	-	-
-	WS / NS (FC)	53 / 3.75 (3.51)	1 / 0 (1)	39 / 3.75 (3.08)	52 / 29 (0.93)	-	-
-cytidylate kinase activity	Rank	9	18	32	65	142	-
-	WS / NS (FC)	37 / 2.81 (3.32)	28 / 1.87 (3.34)	30 / 1.87 (3.43)	32 / 2 (3.57)	2.64 / 0 (1.86)	-
-galactose-6-phosphate isomerase activity	Rank	10	-	889	87	-	-
-	WS / NS (FC)	18 / 0.94 (3.29)	-	30 / 28.1 (0.09)	15 / 1 (3.11)	-	-
-ADP-ribose diphosphatase activity	Rank	11	960	1278	72	-	-
-	WS / NS (FC)	18 / 0.94 (3.29)	0 / 0.94 (-0.95)	0 / 0.94 (-0.95)	9 / 0 (3.43)	-	-
-6-phosphogluconolactonase activity	Rank	12	36	178	19	-	-
-	WS / NS (FC)	27 / 1.87 (3.28)	7 / 0 (3)	29 / 7.49 (1.82)	25 / 0 (4.81)	-	-
-proline dipeptidase activity	Rank	13	-	-	-	221	-
-	WS / NS (FC)	100 / 9.37 (3.28)	-	-	-	1.76 / 0 (1.46)	-
-tagatose-bisphosphate aldolase activity	Rank	14	1169	322	64	53	11
-	WS / NS (FC)	45 / 3.75 (3.28)	0 / 2.81 (-1.93)	427 / 172.33 (1.3)	44 / 3 (3.6)	7.91 / 0 (3.15)	0 / 0 (2.25)
-transferase activity, transferring phosphorus-containing groups	Rank	15	523	709	511	166	257
-	WS / NS (FC)	43 / 3.75 (3.21)	1584 / 1319.61 (0.26)	5090 / 3781.83 (0.43)	5331 / 4807 (0.26)	21.08 / 6 (1.66)	0.02 / 0.01 (0.49)
+peptide deformylase activity	FC (WS / NS)	4.93 (58 / 0.94)	-0.95 (0 / 0.94)	4.6 (46 / 0.94)	4.81 (51 / 1)	-	-
+	Percentile (%)	0.09	67.328	0.434	2.57	-	-
+1-phosphofructokinase activity	FC (WS / NS)	4.44 (41 / 0.94)	-	3.85 (27 / 0.94)	5.32 (36 / 0)	0.91 (0.88 / 0)	-
+	Percentile (%)	0.18	-	1.054	1.285	30.114	-
+tagatose-6-phosphate kinase activity	FC (WS / NS)	4.21 (87 / 3.75)	-	3.86 (68 / 3.75)	4.47 (81 / 3)	3.29 (8.78 / 0)	-
+	Percentile (%)	0.271	-	0.992	2.921	4.356	-
+branched-chain-amino-acid transaminase activity	FC (WS / NS)	4.12 (49 / 1.87)	-3.55 (1 / 22.48)	1.37 (108 / 41.21)	1.04 (75 / 39)	3.91 (14.06 / 0)	-
+	Percentile (%)	0.361	94.685	18.723	40.187	3.598	-
+biotin binding	FC (WS / NS)	4 (165 / 9.37)	-0.34 (2 / 2.81)	-	3.71 (132 / 10)	6.94 (122.11 / 0)	-
+	Percentile (%)	0.451	53.296	-	5.958	0.095	-
+glycerol dehydrogenase [NAD+] activity	FC (WS / NS)	3.9 (28 / 0.94)	-	3.28 (27 / 1.87)	4.76 (24 / 0)	-	-
+	Percentile (%)	0.541	-	2.17	2.687	-	-
+beta-fructofuranosidase activity	FC (WS / NS)	3.8 (26 / 0.94)	-	4.39 (20 / 0)	4.87 (26 / 0)	-	-
+	Percentile (%)	0.631	-	0.496	1.986	-	-
+threonine synthase activity	FC (WS / NS)	3.51 (53 / 3.75)	1 (1 / 0)	3.08 (39 / 3.75)	0.93 (52 / 29)	-	-
+	Percentile (%)	0.721	19.348	3.348	42.173	-	-
+cytidylate kinase activity	FC (WS / NS)	3.32 (37 / 2.81)	3.34 (28 / 1.87)	3.43 (30 / 1.87)	3.57 (32 / 2)	1.86 (2.64 / 0)	-
+	Percentile (%)	0.812	1.276	1.984	7.593	13.447	-
+galactose-6-phosphate isomerase activity	FC (WS / NS)	3.29 (18 / 0.94)	-	0.09 (30 / 28.1)	3.11 (15 / 1)	-	-
+	Percentile (%)	0.902	-	55.115	10.164	-	-
+ADP-ribose diphosphatase activity	FC (WS / NS)	3.29 (18 / 0.94)	-0.95 (0 / 0.94)	-0.95 (0 / 0.94)	3.43 (9 / 0)	-	-
+	Percentile (%)	0.992	68.037	79.231	8.411	-	-
+6-phosphogluconolactonase activity	FC (WS / NS)	3.28 (27 / 1.87)	3 (7 / 0)	1.82 (29 / 7.49)	4.81 (25 / 0)	-	-
+	Percentile (%)	1.082	2.551	11.035	2.22	-	-
+proline dipeptidase activity	FC (WS / NS)	3.28 (100 / 9.37)	-	-	-	1.46 (1.76 / 0)	-
+	Percentile (%)	1.172	-	-	-	20.928	-
+tagatose-bisphosphate aldolase activity	FC (WS / NS)	3.28 (45 / 3.75)	-1.93 (0 / 2.81)	1.3 (427 / 172.33)	3.6 (44 / 3)	3.15 (7.91 / 0)	2.25 (0 / 0)
+	Percentile (%)	1.262	82.849	19.963	7.477	5.019	2.321
+transferase activity, transferring phosphorus-containing groups	FC (WS / NS)	3.21 (43 / 3.75)	0.26 (1584 / 1319.61)	0.43 (5090 / 3781.83)	0.26 (5331 / 4807)	1.66 (21.08 / 6)	0.49 (0.02 / 0.01)
+	Percentile (%)	1.353	37.066	43.955	59.696	15.72	54.219
