@@ -45,6 +45,12 @@ length(eggnog_gos_clean %>% unique())
 length(filterOntology(eggnog_gos_clean, ontology))
 length(filterOntology(eggnog_gos_clean, ontology) %>% unique())
 ```
+```{r}
+eggnog_filtered <- read.delim("results/mqome/output/eggnog/func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+
 
 We are going to write the lists to file, for later use in Python. First, I define a function `clean_write()` which writes a list without all the quotes and stuff:
 ```{r}
@@ -56,7 +62,7 @@ clean_write <- function(object, file){
 Write list to file for later use:
 ```{r}
 eggnog_list_file <- "data/databases/gene_ontology/go_lists/eggnog.tab"
-clean_write(eggnog_gos_clean, file=eggnog_list_file)
+clean_write(eggnog_filtered$id, file=eggnog_list_file)
 ```
 
 
@@ -199,15 +205,25 @@ length(unipept_gos_clean %>% unique())
 length(filterOntology(unipept_gos_clean, ontology))
 length(filterOntology(unipept_gos_clean, ontology) %>% unique())
 ```
+```{r}
+unipept_filtered <- read.delim("results/mqome/output/unipept/func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+
+```{r}
+clean_write(unipept_filtered$id, file="data/databases/gene_ontology/go_lists/unipept.tab")
+```
+
 
 ## Euler Diagram of Results
 ```{r}
-gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
+gos <- list('eggnog' = filterOntology(eggnog_filtered$id, ontology),
             'megan' = filterOntology(megan_gos_clean, ontology),
             'metagomics' = filterOntology(metagomics_gos_clean, ontology),
             'mpa' = filterOntology(mpa_gos_clean, ontology),
             'prophane' = filterOntology(prophane_gos_clean, ontology),
-            'unipept' = filterOntology(unipept_gos_clean, ontology))
+            'unipept' = filterOntology(unipept_filtered$id, ontology))
 ```
 
 # GO terms: all parents
@@ -308,12 +324,12 @@ library(ggplot2)
 
 generate_overlap_plot <- function(ontology){
     
-    gos <- list('eggnog' = filterOntology(eggnog_gos_clean, ontology),
+    gos <- list('eggnog' = filterOntology(eggnog_filtered$id, ontology),
             'megan' = filterOntology(megan_gos_clean, ontology),
             'metagomics' = filterOntology(metagomics_gos_clean, ontology),
             'mpa' = filterOntology(mpa_gos_clean, ontology),
             'prophane' = filterOntology(prophane_gos_clean, ontology),
-            'unipept' = filterOntology(unipept_gos_clean, ontology))
+            'unipept' = filterOntology(unipept_filtered$id, ontology))
     
     jaccard <- function(vec1, vec2){
         c1 <- length(vec1)
