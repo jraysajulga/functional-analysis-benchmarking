@@ -1,0 +1,21 @@
+GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+trehalase activity	FC (WS / NS)	1.64 (5.25 / 1)	-	-	-	-	0.31 (3 / 2.23)
+	Percentile (%)	0.181	-	-	-	-	6.682
+transcription coregulator activity	FC (WS / NS)	1.18 (4.86 / 1.58)	0.56 (5.25 / 3.23)	-	-	-	-
+	Percentile (%)	0.362	6.874	-	-	-	-
+arsenate reductase activity	FC (WS / NS)	1.04 (5.17 / 2)	-	0.37 (5.86 / 4.3)	-	-	-
+	Percentile (%)	0.543	-	8.671	-	-	-
+oxidoreductase activity, acting on phosphorus or arsenic in donors, disulfide as acceptor	FC (WS / NS)	1.04 (5.17 / 2)	-	0.39 (5.86 / 4.23)	-	-	-
+	Percentile (%)	0.725	-	8.478	-	-	-
+alpha-1,4-glucosidase activity	FC (WS / NS)	0.95 (4.81 / 2)	-	0.68 (4.58 / 2.49)	-	-	-
+	Percentile (%)	0.906	-	4.817	-	-	-
+oxidoreductase activity, acting on phosphorus or arsenic in donors	FC (WS / NS)	1.04 (5.17 / 2)	-	0.39 (5.86 / 4.23)	-	-	-
+	Percentile (%)	0.725	-	8.478	-	-	-
+tRNA (adenine) methyltransferase activity	FC (WS / NS)	0.86 (4.46 / 2)	-	0.78 (4 / 1.91)	-	-	-
+	Percentile (%)	1.268	-	3.083	-	-	-
+oxidoreductase activity, acting on the CH-CH group of donors, iron-sulfur protein as acceptor	FC (WS / NS)	0.82 (6.04 / 3)	-	-1.3 (2 / 6.4)	-	-	0.47 (3.46 / 2.23)
+	Percentile (%)	1.449	-	97.688	-	-	3.118
+alpha-glucosidase activity	FC (WS / NS)	0.81 (6.6 / 3.32)	0.39 (3.58 / 2.49)	0.73 (5.46 / 2.91)	-	-	-
+	Percentile (%)	1.63	10.2	4.046	-	-	-
+rRNA (adenine-N6-)-methyltransferase activity	FC (WS / NS)	0.76 (5.09 / 2.58)	-	0.71 (4.7 / 2.49)	-	-	-
+	Percentile (%)	1.812	-	4.239	-	-	-
