@@ -27,6 +27,12 @@ library(tidyverse)
 library(reticulate)
 ```
 
+## Directories
+```{r}
+tools_dir <- "data/tool_outputs/func_tools/"
+```
+
+
 ## Peptides
 
 These are the counts used in eggNOG-mapper and BLAST results interpretation. 
@@ -157,71 +163,6 @@ eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.
     arrange(-log2ratio)
 ```
 
-```{r}
-write_mqome_inputs(unipept_all, 'unipept', 'GO.term', 'GO.term', 'countNS', 'countWS')
-```
-```{r}
-print_mqome_cmds("unipept")
-```
-
-```{bash}
-metaquantome expand \
-    --mode f \
-    --data_dir data/databases/gene_ontology/mqome \
-    --int_file results/mqome/input/unipept/unipept_int.tab \
-    --pep_colname_int peptide \
-    --func_file results/mqome/input/unipept/unipept_func.tab \
-    --pep_colname_func peptide \
-    --func_colname 'GO.term' \
-    --ontology go \
-    --samps results/mqome/input/unipept/unipept_samples.tab \
-    --outfile results/mqome/output/unipept/func_expanded.tab
-    
-metaquantome filter \
-    --expand_file results/mqome/output/unipept/func_expanded.tab \
-    --mode f \
-    --ontology go \
-    --samps results/mqome/input/unipept/unipept_samples.tab \
-    --min_peptides 1 \
-    --min_pep_nsamp 1 \
-    --min_children_non_leaf 1 \
-    --min_child_nsamp 1 \
-    --qthreshold 1 \
-    --outfile results/mqome/output/unipept/func_filtered.tab
-    
-metaquantome stat \
-    --file results/mqome/output/unipept/func_filtered.tab \
-    --mode f \
-    --ontology go \
-    --samps results/mqome/input/unipept/unipept_samples.tab \
-    --parametric True \
-    --paired \
-    --outfile results/mqome/output/unipept/func_stat.tab
-```
-
-```{r}
-unipept_expanded <- read.delim("results/mqome/output/unipept/func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-unipept_filtered <- read.delim("results/mqome/output/unipept/func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-```
-
-```{r}
-unipept_all
-```
-```{r}
-unipept_expanded
-```
-```{r}
-unipept_filtered
-```
-```{r}
-eggnog_filtered
-```
-
-
 Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
@@ -309,14 +250,15 @@ kable(head(megan, n), caption = paste("MEGAN: Top", n, "fold changes"))
 Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a beta-hexosaminidase and <a href="http://eggnogdb.embl.de/#/app/results?target_nogs=ENOG410YESU">ENOG410YESU</a> is involved in cell wall/membrane/envelope biogenesis.
 
 ## Unipept
+```{r}
+unipept_results_NS
+```
 
 ```{r}
-unipept_results_NS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737NS.*\\.csv"),
-                               sep = "")
-unipept_results_WS <- paste('unipept_results/',
-                               list.files("unipept_results/", pattern = "^737WS.*\\.csv"),
-                               sep = "")
+unipept_results_NS <- paste0(tools_dir, 'unipept_results/',
+                               list.files(paste0(tools_dir, 'unipept_results/'), pattern = "^737NS.*\\.csv"))
+unipept_results_WS <- paste0(tools_dir, 'unipept_results/',
+                               list.files(paste0(tools_dir, 'unipept_results/'), pattern = "^737WS.*\\.csv"))
 unipeptNS <- lapply(unipept_results_NS, function(i) {
         read.delim(i, sep = ',', as.is = TRUE)}) %>%
     bind_rows() %>%
@@ -349,6 +291,19 @@ Top *n*:
 kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ```
 
+Metaquantome-normalized dataset:
+```{r}
+write_mqome_inputs(unipept_all, 'unipept', 'GO.term', 'GO.term', 'countNS', 'countWS')
+print_mqome_cmds("unipept", "'GO.term.1'")
+```
+```{r}
+unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+unipept_filtered <- read.delim("results/mqome/output/unipept/unipept_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
 
 ## MetaProteomeAnalyzer
 
