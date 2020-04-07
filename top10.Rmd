@@ -516,7 +516,7 @@ kable(u2m)
 ```
 
 ```{r}
-get_rank_table <- function(name, tools, folder="raw"){
+get_rank_table <- function(name, tools, folder){
     n <- 10
     if (name == "Unipept"){
         n <- 15
@@ -559,12 +559,12 @@ tools <- list(remove_blanks(eggnog_w_counts),
               remove_blanks(pAll),
               remove_blanks(prophane),
               remove_blanks(unipept_all))
-get_rank_table("Unipept", tools)
-get_rank_table("EggNOG", tools)
-get_rank_table("MEGAN", tools)
-get_rank_table("MetaGOmics", tools)
-get_rank_table("MPA", tools)
-get_rank_table("Prophane", tools)
+get_rank_table("Unipept", tools, 'full')
+get_rank_table("EggNOG", tools, 'full')
+get_rank_table("MEGAN", tools, 'full')
+get_rank_table("MetaGOmics", tools, 'full')
+get_rank_table("MPA", tools, 'full')
+get_rank_table("Prophane", tools, 'full')
 
 tools <- list(remove_blanks(eggnog_filtered),
               remove_blanks(megan_filtered),
