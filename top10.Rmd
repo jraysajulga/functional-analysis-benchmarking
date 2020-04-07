@@ -645,8 +645,8 @@ generate_overlap_plot <- function(ontology){
     ggsave(paste0("results/overlap_plots/overlap-", ontology, "-filtered.png"), height = 5, width = 12, units = "in", dpi = 700)
 }
 
-# generate_overlap_plot("all")
+generate_overlap_plot("all")
 generate_overlap_plot("MF")
-# generate_overlap_plot("BP")
-# generate_overlap_plot("CC")
+generate_overlap_plot("BP")
+generate_overlap_plot("CC")
 ```
