@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 pyruvate oxidase activity	Rank	1	-	-	-	-	-
-	WS / NS (FC)	(7.23)	-	-	-	-	-
+	WS / NS (FC)	138 / 0 (7.23)	-	-	-	-	-
 oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	Rank	2	-	-	-	-	-
-	WS / NS (FC)	(7.23)	-	-	-	-	-
+	WS / NS (FC)	138 / 0 (7.23)	-	-	-	-	-
 serine-type endopeptidase inhibitor activity	Rank	3	882	1220	200	-	16
-	WS / NS (FC)	(6.76)	0 / 0.94 (-0.95)	0 / 0.94 (-0.95)	1.76 / 0 (1.46)	-	34 / 2.81 (3.2)
+	WS / NS (FC)	99 / 0 (6.76)	0 / 0.94 (-0.95)	0 / 0.94 (-0.95)	1.76 / 0 (1.46)	-	34 / 2.81 (3.2)
 L(+)-tartrate dehydratase activity	Rank	4	-	167	566	-	154
-	WS / NS (FC)	(6.42)	-	406 / 105.83 (1.93)	4.39 / 7 (-0.57)	-	172 / 58.07 (1.55)
+	WS / NS (FC)	78 / 0 (6.42)	-	406 / 105.83 (1.93)	4.39 / 7 (-0.57)	-	172 / 58.07 (1.55)
 ribitol-5-phosphate 2-dehydrogenase activity	Rank	5	-	-	-	-	-
-	WS / NS (FC)	(6.36)	-	-	-	-	-
+	WS / NS (FC)	75 / 0 (6.36)	-	-	-	-	-
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	Rank	6	-	-	-	-	-
-	WS / NS (FC)	(6.18)	-	-	-	-	-
+	WS / NS (FC)	66 / 0 (6.18)	-	-	-	-	-
 collagen binding	Rank	7	456	-	-	-	-
-	WS / NS (FC)	(6.02)	3 / 1.87 (0.48)	-	-	-	-
+	WS / NS (FC)	59 / 0 (6.02)	3 / 1.87 (0.48)	-	-	-	-
 fructuronate reductase activity	Rank	8	-	948	-	-	-
-	WS / NS (FC)	(5.73)	-	1 / 0.94 (0.05)	-	-	-
+	WS / NS (FC)	48 / 0 (5.73)	-	1 / 0.94 (0.05)	-	-	-
 hyalurononglucosaminidase activity	Rank	9	-	-	-	-	-
-	WS / NS (FC)	(5.7)	-	-	-	-	-
+	WS / NS (FC)	47 / 0 (5.7)	-	-	-	-	-
 transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	Rank	10	-	407	-	-	249
-	WS / NS (FC)	(5.57)	-	39 / 18.73 (1.02)	-	-	5 / 1.87 (1.06)
+	WS / NS (FC)	43 / 0 (5.57)	-	39 / 18.73 (1.02)	-	-	5 / 1.87 (1.06)

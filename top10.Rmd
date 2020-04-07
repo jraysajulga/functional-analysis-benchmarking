@@ -666,7 +666,7 @@ get_rank_table <- function(name, tools){
         rank_table[,labels[i]] <- unlist(output)
     }
     rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
-    write.table(rank_table, file=paste("rank_tables/",name,"-rank_table.tabular", sep=""), sep='\t', quote=FALSE, row.names=FALSE)
+    write.table(rank_table, file=paste("results/rank_tables/",name,"-rank_table.tabular", sep=""), sep='\t', quote=FALSE, row.names=FALSE)
 }
 
 # tool_topn
