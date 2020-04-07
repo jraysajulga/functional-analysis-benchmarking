@@ -61,7 +61,7 @@ ontology <- "MF"
 filterOntology <- function(go_list, ontology){
     if (ontology == "all") { return(go_list) }
     sapply(go_list, function (go_cell) {
-        go_list <- strsplit(go_cell, ",")[[1]]
+        go_list <- strsplit(toString(go_cell), ",")[[1]]
         onts <- Ontology(go_list)
         filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
         return(paste(filtered_gos, collapse = ","))
@@ -169,6 +169,7 @@ library(knitr)
 n <- 10
 kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold changes"))
 ```
+
 
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
@@ -580,123 +581,72 @@ get_rank_table("MPA", tools, 'filtered')
 get_rank_table("Prophane", tools, 'filtered')
 ```
 
-<!-- ## Let's look at how the top terms are ranked in other tools -->
 
-<!-- ```{r} -->
-<!-- getMatch <- function(gos1, gos2){ -->
-<!--     delimiter <- "; " -->
+```{r}
+library(reshape2)
+library(ggplot2)
 
-<!--     gos1 <- unique(unlist(strsplit(as.character(gos1), delimiter))) -->
-<!--     gos2 <- unique(unlist(strsplit(as.character(gos2), delimiter))) -->
-<!--     gos1 <- gos1[gos1 != "NA"] -->
-<!--     gos2 <- gos2[gos2 != "NA"] -->
-<!--     matched <- sapply(gos1, function ( go1 ) {  -->
-<!--         if(go1 %in% gos2){ go1 } -->
-<!--     }) -->
-<!--     paste(unlist(matched), collapse="; ") -->
-<!-- } -->
+generate_overlap_plot <- function(ontology){
+  
+    gos <- list('eggnog' = unique(filterOntology(eggnog_w_counts$gos, ontology)),
+            'megan' = unique(filterOntology(megan$gos, ontology)),
+            'metagomics' = unique(filterOntology(metagomics$go, ontology)),
+            'mpa' = unique(filterOntology(pAll$gos, ontology)),
+            'prophane' = filterOntology(prophane$gos, ontology),
+            'unipept' = unique(filterOntology(unipept_all$GO.term, ontology)))
+    
+    jaccard <- function(vec1, vec2){
+        c1 <- length(vec1)
+        c2 <- length(vec2)
+        int <- length(intersect(vec1, vec2))
+        int / c1
+    }
+    
+    jacmat <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
+        }
+    }
+    dimnames(jacmat) <- list(names(gos), names(gos))
+    
+    gos_filt <- list('eggnog' = unique(filterOntology(eggnog_filtered$id, ontology)),
+            'megan' = unique(filterOntology(megan_filtered$id, ontology)),
+            'metagomics' = unique(filterOntology(metagomics_filtered$id, ontology)),
+            'mpa' = unique(filterOntology(mpa_filtered$id, ontology)),
+            'prophane' = unique(filterOntology(prophane_filtered$id, ontology)),
+            'unipept' = unique(filterOntology(unipept_filtered$id, ontology)))
+    
+    jacslim <- matrix(0, nrow = 6, ncol = 6)
+    for (i in 1:6){
+        for (j in 1:6){
+            jacslim[i, j] <- jaccard(unique(filterOntology(gos_filt[[i]], ontology)),
+                                     unique(filterOntology(gos_filt[[j]], ontology)))
+        }
+    }
+    dimnames(jacslim) <- list(names(gos), names(gos))
+    
+    jac_melt <- melt(jacmat)
+    jac_melt$method <- "Full GO"
+    
+    jac_melt_slim <- melt(jacslim)
+    jac_melt_slim$method <- "Slim GO"
+    
+    jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+    ggplot(jac_melt_all)+
+        geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
+        geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
+        scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
+                            guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
+        facet_grid(.~method) +
+        theme_minimal(base_size = 14) +
+        theme(aspect.ratio = 1) +
+        labs(x = NULL, y = NULL)
+    ggsave(paste0("results/overlap_plots/overlap-", ontology, "-filtered.png"), height = 5, width = 12, units = "in", dpi = 700)
+}
 
-<!-- getMatches <- function(col_gos1, col_gos2, name){ -->
-<!--     paths <- data.frame(source = character(), -->
-<!--                         target = character(), -->
-<!--                         group = character(), -->
-<!--                         value = numeric()) -->
-<!--     nodes <- sapply(1:20, function ( x ) { paste(rep(" ", x), collapse="") }) -->
-
-<!--     matches <- as.data.frame(unlist(sapply(col_gos1, function ( gos1 ){ -->
-<!--         ranks <- lapply(col_gos2, function ( gos2){ -->
-<!--             getMatch(gos1, gos2) -->
-<!--         }) -->
-<!--         rank_list <- which(ranks != "") -->
-<!--         top_list <- rank_list[as.numeric(rank_list) <= 10] -->
-
-<!--         # Set up nodes and paths from top 10 matches -->
-<!--         if (length(top_list) != 0){ -->
-<!--             topn <- paste("[", as.character(top_list), "]", sep="") -->
-<!--             nodes[top_list] <<- topn -->
-<!--             path <- data.frame(target = topn) %>% -->
-<!--                 mutate(source = gos1, -->
-<!--                        value = 0.1, -->
-<!--                        percent = "NA", -->
-<!--                        group = name) %>% -->
-<!--                 select(source, target, percent, value, group) -->
-<!--             paths <<- rbind(paths, path) -->
-<!--         } -->
-
-<!--         rank_list <- rank_list[as.numeric(rank_list) > 10] -->
-<!--         perc_list <- as.character(sapply(rank_list, -->
-<!--                                                function ( rank ){ ceiling(rank / length(col_gos2) * 10) })) -->
-<!--         if (length(rank_list) != 0) { -->
-<!--             # Consolidate ranks with same percentile  -->
-<!--             consolidator <- data.frame(rank_list, -->
-<!--                                        perc_list) %>% -->
-<!--                 group_by(perc_list) %>% -->
-<!--                 summarise_all(function ( x ) { paste(x, collapse=" / ") }) -->
-<!--             rank_list <- consolidator$rank_list -->
-<!--             perc_list <- consolidator$perc_list -->
-
-<!--             # Extract pathing information -->
-<!--             path <- consolidator %>% mutate(source = gos1, -->
-<!--                                             group = name, -->
-<!--                                             value = (str_count(rank_list, "/") + 1) * 0.1) %>% -->
-<!--                                             #value = .01) %>% -->
-<!--                 select(source, target = rank_list, percent = perc_list, value, group) -->
-<!--             paths <<- rbind(paths, path) -->
-
-<!--             # Set up node information -->
-<!--             nodes[as.numeric(levels(perc_list))[perc_list] + 10] <<- as.character(rank_list) -->
-
-<!--             paste(paste(rank_list, collapse=", "),  -->
-<!--                   " (", -->
-<!--                   paste(perc_list, collapse=", "), -->
-<!--                   ")", sep="") -->
-<!--         } else { -->
-<!--             "" -->
-<!--         } -->
-<!--     }))) -->
-<!--     colnames(matches) <- name -->
-<!--     matches$name <- rownames(matches) -->
-<!--     out <- list() -->
-<!--     out$matches <- matches[,c(2,1)] -->
-<!--     out$paths <- paths -->
-<!--     out$nodes <- nodes -->
-<!--     return(out) -->
-<!-- } -->
-
-<!-- # Retains the first copy -->
-<!-- removeDuplicates <- function(go_col){ -->
-<!--     all_gos <- unique(unlist(str_split(go_col, "; "))) -->
-<!--     all_gos <- all_gos[all_gos != ""] -->
-<!--     filtered <- sapply(str_split(go_col, "; "), function ( go_list ) { -->
-<!--         output <- paste(go_list[go_list %in% all_gos], collapse="; "); -->
-<!--         all_gos <<- setdiff(all_gos, go_list) -->
-<!--         output -->
-<!--     }) -->
-<!--     filtered <- filtered[filtered != ""] -->
-<!--     filtered <- filtered[filtered != "NA"] -->
-<!--     filtered[!is.na(filtered)] -->
-<!-- } -->
-
-<!-- eggnog_gos <- removeDuplicates(eggnog_w_counts$name) -->
-<!-- # eggnog_gos <- eggnog_gos[!is.na(eggnog_gos)] -->
-<!-- megan_gos <- removeDuplicates(megan$name) -->
-<!-- metagomics_gos <- removeDuplicates(metagomics_filt$name) -->
-<!-- mpa_gos <- removeDuplicates(pAll$name) -->
-<!-- prophane_gos <- removeDuplicates(prophane$name) -->
-<!-- unipept_gos <- removeDuplicates(unipept_all$name) -->
-
-<!-- tools <- list() -->
-<!-- tools$label <- c("EggNOG", -->
-<!--                  "MEGAN", -->
-<!--                  "MetaGOmics", -->
-<!--                  "MPA", -->
-<!--                  "Prophane", -->
-<!--                  "Unipept") -->
-
-<!-- tools$go_list <- c(list(eggnog_gos), -->
-<!--                    list(megan_gos), -->
-<!--                    list(metagomics_gos), -->
-<!--                    list(mpa_gos), -->
-<!--                    list(prophane_gos), -->
-<!--                    list(unipept_gos)) -->
-<!-- ``` -->
+# generate_overlap_plot("all")
+generate_overlap_plot("MF")
+# generate_overlap_plot("BP")
+# generate_overlap_plot("CC")
+```
