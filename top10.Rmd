@@ -147,8 +147,8 @@ print_mqome_cmds <- function(name, func_colname){
                      " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
                      " --mode f --ontology go",
                      " --samps results/mqome/input/samples.tab",
-                     " --min_peptides 1 --min_pep_nsamp 1 --min_children_non_leaf 1 --min_child_nsamp 1",
-                     " --qthreshold 1 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
+                     " --min_peptides 2 --min_pep_nsamp 'all' --min_children_non_leaf 1 --min_child_nsamp 0",
+                     " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
   print(cmd_expand)
   print(cmd_filt)
 }
@@ -233,7 +233,6 @@ metagomics_filtered <- read.delim("results/mqome/output/metagomics/metagomics_fu
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
-
 
 ## MEGAN
 
@@ -378,9 +377,6 @@ Top *n*:
 ```{r echo=FALSE, results='asis'}
 kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
-```{r}
-pAll
-```
 
 Metaquantome-normalized dataset:
 ```{r}
@@ -477,6 +473,7 @@ grid()
 dev.off()
 cor.test(um$log2ratio.x, um$log2ratio.y,
          method = "pearson", alternative = "two.sided")
+
 ```
 
 
@@ -578,7 +575,7 @@ get_rank_table("EggNOG", tools, 'filtered')
 get_rank_table("MEGAN", tools, 'filtered')
 get_rank_table("MetaGOmics", tools, 'filtered')
 get_rank_table("MPA", tools, 'filtered')
-get_rank_table("Prophane", tools, 'filtered')
+#get_rank_table("Prophane", tools, 'filtered')
 ```
 
 
