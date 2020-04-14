@@ -385,7 +385,7 @@ print_mqome_cmds <- function(name, func_colname){
                      " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
                      " --mode f --ontology go",
                      " --samps results/mqome/input/samples.tab",
-                     " --min_peptides 2 --min_pep_nsamp 'all' --min_children_non_leaf 1 --min_child_nsamp 0",
+                     " --min_peptides 2 --min_pep_nsamp 1 --min_children_non_leaf 2 --min_child_nsamp 0",
                      " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
   return(paste(cmd_expand, cmd_filt, sep='; '))
 }
