@@ -132,36 +132,6 @@ write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2) 
 write_mqome_inputs(eggnog_w_counts, 'eggnog', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
-Let's expand and filter using metaquantome
-```{r}
-print_mqome_cmds <- function(name, func_colname){
-  cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
-                        " --int_file results/mqome/input/", name, "/", name, "_int.tab",
-                       " --pep_colname_int peptide",
-                       " --func_file results/mqome/input/", name, "/", name, "_func.tab",
-                       " --pep_colname_func peptide",
-                       " --func_colname ", func_colname," --ontology go",
-                       " --samps results/mqome/input/samples.tab",
-                       " --outfile results/mqome/output/", name, "/", name, "_func_expanded.tab")
-  cmd_filt <- paste0("metaquantome filter",
-                     " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
-                     " --mode f --ontology go",
-                     " --samps results/mqome/input/samples.tab",
-                     " --min_peptides 2 --min_pep_nsamp 'all' --min_children_non_leaf 1 --min_child_nsamp 0",
-                     " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
-  print(cmd_expand)
-  print(cmd_filt)
-}
-print_mqome_cmds("eggnog", 'gos')
-```
-```{r}
-eggnog_expanded <- read.delim("results/mqome/output/eggnog/eggnog_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-```
 
 Top *N*:
 ```{r echo=FALSE, results='asis'}
@@ -221,7 +191,6 @@ kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold chan
 Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(metagomics, 'metagomics', 'go', 'go', 'countNS', 'countWS')
-print_mqome_cmds("metagomics", "go.1")
 ```
 ```{r}
 metagomics_expanded <- read.delim("results/mqome/output/metagomics/metagomics_func_expanded.tab",
@@ -271,15 +240,6 @@ Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a b
 Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
-print_mqome_cmds("megan", "gos")
-```
-```{r}
-megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
 ```
 
 ## Unipept
@@ -324,15 +284,6 @@ kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(unipept_all, 'unipept', 'GO.term', 'GO.term', 'countNS', 'countWS')
-print_mqome_cmds("unipept", "'GO.term.1'")
-```
-```{r}
-unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-unipept_filtered <- read.delim("results/mqome/output/unipept/unipept_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
 ```
 
 ## MetaProteomeAnalyzer
@@ -381,16 +332,8 @@ kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Chang
 Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
-print_mqome_cmds("mpa", "gos")
 ```
-```{r}
-mpa_expanded <- read.delim("results/mqome/output/mpa/mpa_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-mpa_filtered <- read.delim("results/mqome/output/mpa/mpa_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-```
+
 
 ## Prophane
 
@@ -425,15 +368,67 @@ prophane
 Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(prophane, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
-print_mqome_cmds("prophane", "gos")
 ```
+
+Let's expand and filter using metaquantome
 ```{r}
+print_mqome_cmds <- function(name, func_colname){
+  cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
+                        " --int_file results/mqome/input/", name, "/", name, "_int.tab",
+                       " --pep_colname_int peptide",
+                       " --func_file results/mqome/input/", name, "/", name, "_func.tab",
+                       " --pep_colname_func peptide",
+                       " --func_colname ", func_colname," --ontology go",
+                       " --samps results/mqome/input/samples.tab",
+                       " --outfile results/mqome/output/", name, "/", name, "_func_expanded.tab")
+  cmd_filt <- paste0("metaquantome filter",
+                     " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
+                     " --mode f --ontology go",
+                     " --samps results/mqome/input/samples.tab",
+                     " --min_peptides 2 --min_pep_nsamp 'all' --min_children_non_leaf 1 --min_child_nsamp 0",
+                     " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
+  return(paste(cmd_expand, cmd_filt, sep='; '))
+}
+paste(print_mqome_cmds("eggnog", 'gos'),
+      print_mqome_cmds("metagomics", "go.1"),
+      print_mqome_cmds("megan", "gos"),
+      print_mqome_cmds("mpa", "gos"),
+      print_mqome_cmds("prophane", "gos"),
+      print_mqome_cmds("unipept", "'GO.term.1'"), sep='; ')
+```
+
+
+```{r}
+eggnog_expanded <- read.delim("results/mqome/output/eggnog/eggnog_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+unipept_filtered <- read.delim("results/mqome/output/unipept/unipept_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+mpa_expanded <- read.delim("results/mqome/output/mpa/mpa_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+mpa_filtered <- read.delim("results/mqome/output/mpa/mpa_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
 prophane_expanded <- read.delim("results/mqome/output/prophane/prophane_func_expanded.tab",
                                 stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 prophane_filtered <- read.delim("results/mqome/output/prophane/prophane_func_filtered.tab",
                                 stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
