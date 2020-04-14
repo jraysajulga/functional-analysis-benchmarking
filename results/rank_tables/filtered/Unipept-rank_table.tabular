@@ -1,31 +1,31 @@
 GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
-protein tyrosine kinase activity	FC (WS / NS)	1.44 (4.17 / 0.91)	-	0.24 (6.48 / 5.33)	-	-	-
-	Percentile (%)	0.223	-	14.258	-	-	-
-carbon-oxygen lyase activity, acting on phosphates	FC (WS / NS)	0.83 (6.27 / 3.08)	0.45 (4.32 / 2.91)	0.65 (7.61 / 4.49)	0.26 (7.27 / 5.91)	-	-
-	Percentile (%)	0.445	8.647	5.395	12.862	-	-
-tRNA adenylyltransferase activity	FC (WS / NS)	0.77 (4.95 / 2.49)	-	0.24 (4.58 / 3.71)	0.27 (5.04 / 4)	-	-
-	Percentile (%)	0.668	-	13.68	11.957	-	-
-RNA adenylyltransferase activity	FC (WS / NS)	0.77 (4.95 / 2.49)	-	0.24 (4.58 / 3.71)	0.27 (5.04 / 4)	-	-
-	Percentile (%)	0.668	-	13.68	11.957	-	-
-polynucleotide adenylyltransferase activity	FC (WS / NS)	0.69 (5 / 2.71)	-	0.22 (5.17 / 4.3)	0.27 (5.04 / 4)	-	-
-	Percentile (%)	1.114	-	16.185	11.775	-	-
-transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	0.68 (4.58 / 2.49)	-	0.32 (6.75 / 5.23)	-	-	-
-	Percentile (%)	1.336	-	10.597	-	-	-
-oxidoreductase activity, acting on NAD(P)H, nitrogenous group as acceptor	FC (WS / NS)	0.57 (4.52 / 2.71)	-	-0.14 (4.7 / 5.3)	0.48 (5.73 / 3.81)	-	-
-	Percentile (%)	1.559	-	82.659	5.254	-	-
-rRNA (cytosine) methyltransferase activity	FC (WS / NS)	0.57 (4.17 / 2.49)	0.78 (4 / 1.91)	-	0.43 (4.81 / 3.32)	-	-
-	Percentile (%)	1.782	3.548	-	5.978	-	-
-iron chelate transmembrane transporter activity	FC (WS / NS)	0.55 (4.7 / 2.91)	-	-	0.68 (5.91 / 3.32)	-	-
-	Percentile (%)	2.004	-	-	2.174	-	-
-galactosidase activity	FC (WS / NS)	0.51 (5.21 / 3.36)	-	1.17 (5.52 / 1.91)	0.31 (5.52 / 4.25)	-	-
-	Percentile (%)	2.227	-	1.156	9.601	-	-
+polynucleotide adenylyltransferase activity	FC (WS / NS)	0.69 (5 / 2.71)	-	0.22 (5.17 / 4.3)	-	-	-
+	Percentile (%)	0.312	-	11.813	-	-	-
+transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	0.68 (4.58 / 2.49)	-	-	-	-	-
+	Percentile (%)	0.623	-	-	-	-	-
 exo-alpha-sialidase activity	FC (WS / NS)	0.51 (6.88 / 4.55)	-	-	0.37 (8.42 / 6.29)	-	-
-	Percentile (%)	2.45	-	-	7.609	-	-
+	Percentile (%)	0.935	-	-	3.448	-	-
 alpha-sialidase activity	FC (WS / NS)	0.51 (6.88 / 4.55)	-	-	0.37 (8.42 / 6.29)	-	-
-	Percentile (%)	2.45	-	-	7.609	-	-
-aromatic-amino-acid:2-oxoglutarate aminotransferase activity	FC (WS / NS)	0.48 (6.3 / 4.23)	-	0.04 (7.13 / 6.88)	0.03 (6.46 / 6.32)	-	-
-	Percentile (%)	2.895	-	41.618	41.304	-	-
-oxidoreductase activity, acting on the CH-CH group of donors, iron-sulfur protein as acceptor	FC (WS / NS)	0.47 (3.46 / 2.23)	-	-1.3 (2 / 6.4)	0.82 (6.04 / 3)	-	-
-	Percentile (%)	3.118	-	97.688	1.449	-	-
-oxidoreductase activity, acting on iron-sulfur proteins as donors	FC (WS / NS)	0.45 (4.09 / 2.71)	-	0.17 (8.06 / 7.04)	0.32 (5.46 / 4.17)	-	-
-	Percentile (%)	3.341	-	19.846	9.239	-	-
+	Percentile (%)	0.935	-	-	3.448	-	-
+hexokinase activity	FC (WS / NS)	0.39 (6.7 / 4.86)	-	-	0.35 (7.6 / 5.75)	-	-
+	Percentile (%)	1.558	-	-	4.509	-	-
+acetoin dehydrogenase activity	FC (WS / NS)	0.38 (7.61 / 5.63)	-	-	0.43 (7.73 / 5.46)	0.4 (4.9 / 3.46)	-
+	Percentile (%)	1.869	-	-	2.387	1.133	-
+sequence-specific double-stranded DNA binding	FC (WS / NS)	0.33 (5.39 / 4.08)	-0.46 (4.39 / 6.4)	0.27 (5 / 3.99)	0.29 (7.56 / 6)	-	-
+	Percentile (%)	2.181	90.282	9.066	5.57	-	-
+acid-ammonia (or amide) ligase activity	FC (WS / NS)	0.31 (7.94 / 6.23)	0.23 (6.89 / 5.74)	0.27 (9.43 / 7.62)	0.28 (9.26 / 7.48)	0.39 (8.05 / 5.88)	-0.43 (-8.73 / -11.43)
+	Percentile (%)	2.492	11.599	8.242	6.101	1.456	85
+monocarboxylic acid binding	FC (WS / NS)	0.3 (8.12 / 6.43)	-0.01 (7.04 / 7.09)	0.19 (7.61 / 6.58)	0.25 (8.9 / 7.3)	-	-
+	Percentile (%)	2.804	59.875	14.286	7.427	-	-
+deaminase activity	FC (WS / NS)	0.28 (5.67 / 4.49)	-0.35 (4.39 / 5.86)	0.01 (8.2 / 8.11)	0.11 (6.97 / 6.38)	-	-
+	Percentile (%)	3.115	85.58	56.319	19.098	-	-
+oxidoreductase activity, oxidizing metal ions	FC (WS / NS)	0.28 (8.93 / 7.2)	-0.41 (5.91 / 8.16)	0.03 (8.85 / 8.62)	0.24 (9.92 / 8.25)	1.17 (8.02 / 3)	0.13 (-6.5 / -6.03)
+	Percentile (%)	3.427	88.401	41.484	7.958	0.162	13.333
+endodeoxyribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	0.27 (5.91 / 4.71)	-	-0.48 (4.64 / 6.87)	-0.23 (5.86 / 7.04)	-	-
+	Percentile (%)	3.738	-	94.78	88.329	-	-
+oxidoreductase activity, acting on other nitrogenous compounds as donors, with NAD or NADP as acceptor	FC (WS / NS)	0.25 (6.09 / 4.95)	-	-	-	-	-
+	Percentile (%)	4.05	-	-	-	-	-
+hydrolase activity, hydrolyzing O-glycosyl compounds	FC (WS / NS)	0.25 (9.06 / 7.48)	0.1 (5.32 / 4.91)	0.27 (9.77 / 7.92)	0.22 (10.75 / 9.07)	0.39 (5.9 / 4.25)	-
+	Percentile (%)	4.361	20.376	8.516	9.019	1.294	-
+C-methyltransferase activity	FC (WS / NS)	0.25 (5.64 / 4.61)	0.24 (6.29 / 5.15)	0.23 (6.55 / 5.43)	0.19 (6.64 / 5.7)	-	-
+	Percentile (%)	4.673	10.031	10.44	12.202	-	-
