@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
+phosphatidylcholine biosynthetic process	FC (WS / NS)	5.13 (34 / 0)	-	2.81 (12 / 1)	-	-	-
+	Percentile (%)	0.024	-	9.755	-	-	-
+CDP-choline pathway	FC (WS / NS)	5.13 (34 / 0)	-	2.81 (12 / 1)	-	-	-
+	Percentile (%)	0.048	-	9.806	-	-	-
 2-isopropylmalate synthase activity	FC (WS / NS)	4.95 (30 / 0)	-	5.28 (35 / 0)	-	-	-
-	Percentile (%)	0.062	-	1.402	-	-	-
+	Percentile (%)	0.072	-	0.919	-	-	-
 homocitrate synthase activity	FC (WS / NS)	4.95 (30 / 0)	-	-	-	-	-
-	Percentile (%)	0.124	-	-	-	-	-
+	Percentile (%)	0.096	-	-	-	-	-
 hydroxymethylglutaryl-CoA lyase activity	FC (WS / NS)	4.95 (30 / 0)	1.58 (2 / 0)	-	-	-	-
-	Percentile (%)	0.186	10.56	-	-	-	-
+	Percentile (%)	0.12	7.49	-	-	-	-
 4-hydroxy-2-oxovalerate aldolase activity	FC (WS / NS)	4.95 (30 / 0)	-	-	-	-	-
-	Percentile (%)	0.248	-	-	-	-	-
+	Percentile (%)	0.144	-	-	-	-	-
 acetolactate synthase activity	FC (WS / NS)	4.88 (111 / 2.81)	-0.95 (0 / 0.94)	1.31 (31 / 13)	-3.81 (0 / 13)	-	1.87 (30 / 7.49)
-	Percentile (%)	0.31	61.588	32.126	85.038	-	9.017
+	Percentile (%)	0.168	61.089	27.681	85.038	-	9.017
 cysteine-type endopeptidase activity	FC (WS / NS)	4.78 (78 / 1.87)	1 (1 / 0)	0.77 (268 / 170)	0.49 (29.87 / 21)	-	1.42 (165 / 60.88)
-	Percentile (%)	0.372	18.923	45.444	37.5	-	15.96
+	Percentile (%)	0.193	16.344	39.683	37.5	-	15.96
 peptide deformylase activity	FC (WS / NS)	4.6 (46 / 0.94)	-0.95 (0 / 0.94)	4.81 (51 / 1)	-	-	4.93 (58 / 0.94)
-	Percentile (%)	0.434	67.328	2.57	-	-	0.09
+	Percentile (%)	0.217	66.824	1.481	-	-	0.09
 beta-fructofuranosidase activity	FC (WS / NS)	4.39 (20 / 0)	-	4.87 (26 / 0)	-	-	3.8 (26 / 0.94)
-	Percentile (%)	0.496	-	1.986	-	-	0.631
-sucrose alpha-glucosidase activity	FC (WS / NS)	4.39 (20 / 0)	-	4.87 (26 / 0)	-	-	-
-	Percentile (%)	0.558	-	2.103	-	-	-
-levanase activity	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
-	Percentile (%)	0.62	-	-	-	-	-
+	Percentile (%)	0.241	-	1.226	-	-	0.631
