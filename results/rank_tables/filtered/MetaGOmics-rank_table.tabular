@@ -15,7 +15,7 @@ hydrolase activity, acting on ether bonds	FC (WS / NS)	0.54 (6.49 / 4.17)	-	0.69
 	Percentile (%)	1.857	-	2.747	-	31.667	-
 oxidoreductase activity, acting on NAD(P)H, nitrogenous group as acceptor	FC (WS / NS)	0.48 (5.73 / 3.81)	-	-	-	-	-
 	Percentile (%)	2.122	-	-	-	-	-
-acetoin dehydrogenase activity	FC (WS / NS)	0.43 (7.73 / 5.46)	-	-	0.4 (4.9 / 3.46)	-	0.38 (7.61 / 5.63)
-	Percentile (%)	2.387	-	-	1.133	-	1.869
+acetoin dehydrogenase activity	FC (WS / NS)	0.43 (7.73 / 5.46)	-	-	-	-	0.38 (7.61 / 5.63)
+	Percentile (%)	2.387	-	-	-	-	1.869
 rRNA (cytosine) methyltransferase activity	FC (WS / NS)	0.43 (4.81 / 3.32)	0.78 (4 / 1.91)	-	-	-	-
 	Percentile (%)	2.653	2.194	-	-	-	-
