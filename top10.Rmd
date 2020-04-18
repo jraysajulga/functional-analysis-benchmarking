@@ -574,6 +574,18 @@ get_rank_table("MPA", tools, 'filtered')
 ```
 
 
+### GO list exporting
+```{r}
+labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
+tools <- list(eggnog_w_counts, megan, metagomics, pAll, prophane)
+for (i in 1:5){
+  write.table(tools[i], file=paste0('results/go_output/', tolower(labels[i]), '.tabular'),
+              row.names=FALSE, quote=FALSE)
+}
+```
+
+
+### Overlap Plot Generation
 ```{r}
 library(reshape2)
 library(ggplot2)
