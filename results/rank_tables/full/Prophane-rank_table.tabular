@@ -1,21 +1,21 @@
 GO Term	Ranking	Prophane	EggNOG	MEGAN	MetaGOmics	MPA	Unipept
+cell morphogenesis	FC (WS / NS)	3.12 (0.01 / 0)	0.05 (1 / 0.94)	1 (1 / 0)	0.66 (437 / 298)	0.03 (148.46 / 145)	-
+	Percentile (%)	0.079	42.713	22.359	43.463	45.076	-
 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase activity	FC (WS / NS)	3.02 (0 / 0)	-1.14 (2 / 5.62)	1.35 (23 / 8.43)	-	-2.58 (0 / 5)	-1.73 (1 / 5.62)
-	Percentile (%)	0.211	70.446	19.591	-	77.746	89.179
+	Percentile (%)	0.158	71.373	17.377	-	77.746	89.179
 succinyltransferase activity	FC (WS / NS)	3.02 (0 / 0)	-1.14 (2 / 5.62)	1.35 (23 / 8.43)	-2.15 (4 / 23)	-1 (0 / 1)	-0.92 (3 / 6.56)
-	Percentile (%)	0.211	70.446	19.591	81.659	60.511	78.088
+	Percentile (%)	0.158	71.373	17.377	85.393	60.511	78.088
 N-succinyltransferase activity	FC (WS / NS)	3.02 (0 / 0)	-1.14 (2 / 5.62)	1.35 (23 / 8.43)	-	-2.58 (0 / 5)	-1.73 (1 / 5.62)
-	Percentile (%)	0.211	70.446	19.591	-	77.746	89.179
+	Percentile (%)	0.158	71.373	17.377	-	77.746	89.179
 tetrahydrodipicolinate N-acetyltransferase activity	FC (WS / NS)	3.02 (0 / 0)	-	1.35 (23 / 8.43)	2.81 (25 / 3)	0.14 (16.69 / 15)	2.88 (27 / 2.81)
-	Percentile (%)	0.844	-	19.653	12.617	42.424	2.254
+	Percentile (%)	0.394	-	17.401	9.551	42.424	2.254
+protein refolding	FC (WS / NS)	2.87 (0.01 / 0)	0.31 (72 / 58.07)	1.09 (624 / 293.14)	0.75 (532 / 341)	0.41 (1848.31 / 1395)	-
+	Percentile (%)	0.473	36.539	20.313	40.449	39.015	-
 N-acetyltransferase activity	FC (WS / NS)	3.02 (0 / 0)	0.16 (65 / 58.07)	1.35 (23 / 8.43)	2.81 (25 / 3)	1.25 (148.46 / 62)	2.88 (27 / 2.81)
-	Percentile (%)	0.844	39.263	19.653	12.617	23.674	2.254
+	Percentile (%)	0.394	38.993	17.401	9.551	23.674	2.254
 N-acyltransferase activity	FC (WS / NS)	2.75 (0 / 0)	-0.01 (67 / 67.43)	0.24 (104 / 88.04)	1.05 (319 / 166)	2.02 (19.33 / 4)	-2.05 (9 / 40.27)
-	Percentile (%)	1.266	47.697	50.279	39.019	12.311	92.335
+	Percentile (%)	0.631	47.376	51.817	33.248	12.311	92.335
 glutamate-ammonia ligase activity	FC (WS / NS)	2.7 (0 / 0)	-3.72 (0 / 12.18)	2.56 (160 / 26.22)	2.52 (158 / 29)	2.77 (252.12 / 36)	2.44 (187 / 33.72)
-	Percentile (%)	1.477	94.968	5.642	14.953	7.481	4.779
-ammonia ligase activity	FC (WS / NS)	2.7 (0 / 0)	1.86 (23 / 5.62)	2.56 (160 / 26.22)	2.52 (158 / 29)	2.77 (252.12 / 36)	2.44 (187 / 33.72)
-	Percentile (%)	1.477	8.221	5.642	14.953	7.481	4.779
-acid-ammonia (or amide) ligase activity	FC (WS / NS)	2.7 (0 / 0)	1.38 (48 / 17.79)	1.72 (252 / 75.86)	1.84 (214 / 64)	-	-
-	Percentile (%)	1.899	14.387	11.655	22.547	-	-
-fructose-bisphosphate aldolase activity	FC (WS / NS)	2.25 (0 / 0)	-2.29 (8 / 43.08)	0.26 (387 / 322.18)	-	-0.13 (227.53 / 249)	0.2 (408 / 355.89)
-	Percentile (%)	2.11	86.96	49.721	-	47.727	46.528
+	Percentile (%)	0.71	92.348	4.332	11.185	7.481	4.779
+glutamine biosynthetic process	FC (WS / NS)	2.7 (0 / 0)	-3.37 (0 / 9.37)	2.56 (159 / 26.22)	2.56 (157 / 28)	2.35 (187.12 / 36)	-
+	Percentile (%)	0.789	90.999	4.38	10.878	10.133	-

@@ -72,7 +72,7 @@ filterOntology <- function(go_list, ontology){
 
 ## We need to expand and collapse to the GO-term level
 ```{r}
-collapse_by_go <- function(go_df, delimiter){
+expand_by_go <- function(go_df, delimiter){
     # Separate the comma-delimited list of GOs into individual rows
     # (retains the fold change value from the original row)
     # go_df <- go_df %>% select(countNS, countWS, gos)
@@ -108,9 +108,10 @@ eggnog_w_counts <- left_join(eggnog,
     group_by(protein, desc, gene, gos) %>%
     summarize(countWS = sum(countWS), countNS = sum(countNS)) %>%
     select(protein, gos, gene, countWS, countNS, desc)
-eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
+#eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
 #eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$gos, ","), function ( x ) { paste(Term(x), collapse="; ")})
-eggnog_w_counts <- collapse_by_go(eggnog_w_counts, ',')
+
+eggnog_w_counts <- expand_by_go(eggnog_w_counts, ',')
 eggnog_w_counts$name <- Term(eggnog_w_counts$gos)
 eggnog_w_counts
 ```
@@ -175,8 +176,8 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
            countNS = Run.1.PSM.count,
            countWS = Run.2.PSM.count,
            log2ratio =  Laplace.corr..Log.2..fold.change,
-           p = Laplace.corr..q.value) %>%
-    filter(Ontology(as.character(go)) == ontology)
+           p = Laplace.corr..q.value) #%>%
+    # filter(Ontology(as.character(go)) == ontology)
 
 metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
     arrange(-log2ratio)
@@ -192,16 +193,6 @@ Metaquantome-normalized dataset:
 ```{r}
 write_mqome_inputs(metagomics, 'metagomics', 'go', 'go', 'countNS', 'countWS')
 ```
-```{r}
-metagomics_expanded <- read.delim("results/mqome/output/metagomics/metagomics_func_expanded.tab",
-                             stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-metagomics_filtered <- read.delim("results/mqome/output/metagomics/metagomics_func_filtered.tab",
-                             stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-```
 
 ## MEGAN
 
@@ -212,13 +203,11 @@ megan <- read.delim("data/tool_outputs/func_tools/MEGAN_outputs/737NSvsWS_EGGNOG
 megan_go <- read.delim("data/tool_outputs/func_tools/MEGAN_outputs/go_terms.txt",
                         header = TRUE,
                         stringsAsFactors = FALSE)
-# Double check that GO terms are in order (randomly check ten times for parity)
-sapply(sample(1:nrow(megan), 10, replace=T), function ( n ) {
-    grepl(megan_go[n, "og"], megan[n, "og"])
-})
+megan$gos <- megan_go$gos
 megan$countNS <- megan$countNS * norm_ratio
-megan$gos <- filterOntology(megan_go$gos, ontology)
-megan <- collapse_by_go(megan, ',')
+# megan$gos <- filterOntology(megan_go$gos, ontology)
+
+megan <- expand_by_go(megan, ',')
 megan$name <- Term(megan$gos)
 megan
 ```
@@ -355,10 +344,10 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
     mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
     select(countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
-prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
-    terms <- filterOntology(unique(x[x != "-"]), ontology)
-    paste(terms[terms != ""], collapse = ",")
-})
+# prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
+#     terms <- filterOntology(unique(x[x != "-"]), ontology)
+#     paste(terms[terms != ""], collapse = ",")
+# })
 prophane <- collapse_by_go(prophane, ',') %>%
     mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
@@ -409,6 +398,14 @@ unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expand
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 unipept_filtered <- read.delim("results/mqome/output/unipept/unipept_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+metagomics_expanded <- read.delim("results/mqome/output/metagomics/metagomics_func_expanded.tab",
+                             stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+metagomics_filtered <- read.delim("results/mqome/output/metagomics/metagomics_func_filtered.tab",
+                             stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 mpa_expanded <- read.delim("results/mqome/output/mpa/mpa_func_expanded.tab", stringsAsFactors = FALSE) %>%
@@ -583,7 +580,6 @@ for (i in 1:5){
               row.names=FALSE, quote=FALSE)
 }
 ```
-
 
 ### Overlap Plot Generation
 ```{r}
