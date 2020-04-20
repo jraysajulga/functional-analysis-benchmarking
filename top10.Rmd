@@ -426,30 +426,47 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 
 This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
 
+## Function for filtering ontologies
 ```{r}
-plot_correlation <- function(unipept, metagomics, header, dims, suffix=''){
-  um <- inner_join(unipept, metagomics, by = header)
-  png(paste0("results/correlation/um_cor", suffix, ".png"),
-      res = 700, width = 3.5, height = 4, units = "in")
-  plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=dims, ylim=dims,
-       xlab = "Unipept: Log2 Ratio",
-       ylab = "MetaGOmics: Log2 Ratio")
-  mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
-  abline(0, 1, col = "red", lty = 2)
-  abline(coef(mod))
-  grid()
-  dev.off()
-  cor.test(um$log2ratio.x, um$log2ratio.y,
-           method = "pearson", alternative = "two.sided")
-  nrow(um)
-  nrow(unipept)
-  nrow(metagomics)
+filterOntology <- function(tool, ontology){
+  translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
+  tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
+}
+```
+```{r}
+filterOntology(unipept_all, "MF")
+```
+
+```{r}
+plot_correlation <- function(unipept, metagomics, header, dims, ontology, suffix=''){
+  if (ontology != 'all'){
+    unipept <- filterOntology(unipept, ontology)
+    metagomics <- filterOntology(metagomics, ontology)
+  }
+  if (nrow(unipept)){
+    um <- inner_join(unipept, metagomics, by = header)
+    png(paste0("results/correlation/um_cor", paste(suffix, ontology, sep='-'), ".png"),
+        res = 700, width = 3.5, height = 4, units = "in")
+    plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=dims, ylim=dims,
+         xlab = "Unipept: Log2 Ratio",
+         ylab = "MetaGOmics: Log2 Ratio")
+    mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+    abline(0, 1, col = "red", lty = 2)
+    abline(coef(mod))
+    grid()
+    dev.off()
+    cor.test(um$log2ratio.x, um$log2ratio.y,
+             method = "pearson", alternative = "two.sided")
+    # nrow(um)
+    # nrow(unipept)
+    # nrow(metagomics)
+  }
 }
 
-sapply(c("MF,CC,BP", "MF", "CC", "BP"),
+sapply(c("MF", "CC", "BP", "all"),
        function(ontology){
-         plot_correlation(unipept_all, metagomics, 'gos', c(-8, 8))
-         plot_correlation(unipept_filtered, metagomics_filtered, 'id', c(-2.5, 2.5), suffix='-filtered')
+         plot_correlation(unipept_all, metagomics_filt, 'gos', c(-8, 8), ontology)
+         plot_correlation(unipept_filtered, metagomics_filtered, 'id', c(-1.5, 1.5), ontology, suffix='-filtered')
        })
 
 ```
