@@ -55,21 +55,6 @@ write.table(peptides_all$peptide, file="data/tool_outputs/peptide_shaker_outputs
             quote = FALSE, row.names = FALSE, col.names = FALSE)
 ```
 
-## Filter ontologies based on molecular function, biological process, or cellular component
-```{r}
-ontology <- "MF"
-filterOntology <- function(go_list, ontology){
-    if (ontology == "all") { return(go_list) }
-    sapply(go_list, function (go_cell) {
-        go_list <- strsplit(toString(go_cell), ",")[[1]]
-        onts <- Ontology(go_list)
-        filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
-        return(paste(filtered_gos, collapse = ","))
-    })
-}
-```
-
-
 ## We need to expand and collapse to the GO-term level
 ```{r}
 expand_by_go <- function(go_df, delimiter){
@@ -113,6 +98,7 @@ eggnog_w_counts <- left_join(eggnog,
 
 eggnog_w_counts <- expand_by_go(eggnog_w_counts, ',')
 eggnog_w_counts$name <- Term(eggnog_w_counts$gos)
+eggnog_w_counts$namespace <- Ontology(eggnog_w_counts$gos)
 eggnog_w_counts
 ```
 
@@ -171,7 +157,7 @@ We take the top *n* results that have a FDR-corrected $q$ value less than 0.05.
 ```{r}
 metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_compare_149_150.txt",
                          comment.char = "#") %>%
-    select(go = GO.acc,
+    select(gos = GO.acc,
            name = GO.name,
            countNS = Run.1.PSM.count,
            countWS = Run.2.PSM.count,
@@ -181,6 +167,7 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
 
 metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
     arrange(-log2ratio)
+metagomics_filt$namespace <- Ontology(as.character(metagomics_filt$go))
 metagomics_filt
 ```
 
@@ -191,7 +178,7 @@ kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold chan
 
 Metaquantome-normalized dataset:
 ```{r}
-write_mqome_inputs(metagomics, 'metagomics', 'go', 'go', 'countNS', 'countWS')
+write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
 ## MEGAN
@@ -209,6 +196,7 @@ megan$countNS <- megan$countNS * norm_ratio
 
 megan <- expand_by_go(megan, ',')
 megan$name <- Term(megan$gos)
+megan$namespace <- Ontology(megan$gos)
 megan
 ```
 
@@ -253,9 +241,11 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(countNS = peptides.x, countWS = peptides.y,
            log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    select(GO.term, name = Name, countWS, countNS, log2ratio) %>%
-    filter(Ontology(GO.term) == ontology) %>%
+    select(gos = GO.term, name = Name, countWS, countNS, log2ratio) %>%
+    # filter(Ontology(GO.term) == ontology) %>%
     arrange(-log2ratio)
+unipept_all$namespace <- Ontology(unipept_all$gos)
+unipept_all
 ```
 
 ```{r}
@@ -272,7 +262,7 @@ kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 
 Metaquantome-normalized dataset:
 ```{r}
-write_mqome_inputs(unipept_all, 'unipept', 'GO.term', 'GO.term', 'countNS', 'countWS')
+write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
 ## MetaProteomeAnalyzer
@@ -301,6 +291,7 @@ pAll$countWS <- pAll$countWS * mpa_norm
 pAll[is.na(pAll)] <- 0
 
 pAll <- collapse_by_go(pAll, "; ")
+pAll$namespace <- Ontology(pAll$gos)
 pAll
 ```
 
@@ -351,6 +342,7 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
 prophane <- collapse_by_go(prophane, ',') %>%
     mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
+prophane$namespace <- Ontology(prophane$gos)
 prophane
 ```
 
@@ -379,11 +371,11 @@ print_mqome_cmds <- function(name, func_colname){
   return(paste(cmd_expand, cmd_filt, sep='; '))
 }
 paste(print_mqome_cmds("eggnog", 'gos'),
-      print_mqome_cmds("metagomics", "go.1"),
+      print_mqome_cmds("metagomics", "gos.1"),
       print_mqome_cmds("megan", "gos"),
       print_mqome_cmds("mpa", "gos"),
       print_mqome_cmds("prophane", "gos"),
-      print_mqome_cmds("unipept", "'GO.term.1'"), sep='; ')
+      print_mqome_cmds("unipept", "gos.1"), sep='; ')
 ```
 
 
@@ -435,7 +427,7 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
 
 ```{r}
-um <- inner_join(unipept_all, metagomics, by = c("GO.term" = "go"))
+um <- inner_join(unipept_all, metagomics, by = "gos")
 png("results/correlation/um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
 plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
      xlab = "Unipept: Log2 Ratio",
@@ -484,14 +476,14 @@ for (i in 1:5){
     m2u_ranks[i] <- ifelse(length(m2u_rank) == 1, m2u_rank, NA)
     u2m_ranks[i] <- ifelse(length(u2m_rank) == 1, u2m_rank, NA)
 }
-
-m2u <- data.frame("go_term" = top5_meta,
-                  "rank_in_metagomics" = 1:5,
-                  "rank_in_unipept" = m2u_ranks)
-
-u2m <- data.frame("go_term" = top5_uni,
-                  "rank_in_unipept" = 1:5,
-                  "rank_in_metagomics" = u2m_ranks)
+# 
+# m2u <- data.frame("go_term" = top5_meta,
+#                   "rank_in_metagomics" = 1:5,
+#                   "rank_in_unipept" = m2u_ranks)
+# 
+# u2m <- data.frame("go_term" = top5_uni,
+#                   "rank_in_unipept" = 1:5,
+#                   "rank_in_metagomics" = u2m_ranks)
 
 ```
 
@@ -504,6 +496,7 @@ kable(m2u)
 ```{r echo=FALSE, results='asis'}
 kable(u2m)
 ```
+
 
 ```{r}
 get_rank_table <- function(name, tools, folder){
@@ -543,12 +536,24 @@ get_rank_table <- function(name, tools, folder){
 remove_blanks <- function(go_list){
     go_list[go_list$name != "",]
 }
-tools <- list(remove_blanks(eggnog_w_counts),
-              remove_blanks(megan),
-              remove_blanks(metagomics_filt),
-              remove_blanks(pAll),
-              remove_blanks(prophane),
-              remove_blanks(unipept_all))
+
+filterOntology <- function(go_list, ontology){
+  if (ontology == "all") { return(go_df) }
+  sapply(go_list, function (go_cell) {
+    go_list <- strsplit(toString(go_cell), ",")[[1]]
+    onts <- Ontology(go_list)
+    filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
+    return(paste(filtered_gos, collapse = ","))
+    })
+}
+
+ontology <- 'MF'
+tools <- list(remove_blanks(filterOntology(eggnog_w_counts, ontology)),
+              remove_blanks(filterOntology(megan, ontology)),
+              remove_blanks(filterOntology(metagomics_filt, ontology)),
+              remove_blanks(filterOntology(pAll, ontology)),
+              remove_blanks(filterOntology(prophane, ontology)),
+              remove_blanks(filterOntology(unipept_all, ontology)))
 get_rank_table("Unipept", tools, 'full')
 get_rank_table("EggNOG", tools, 'full')
 get_rank_table("MEGAN", tools, 'full')
@@ -556,12 +561,12 @@ get_rank_table("MetaGOmics", tools, 'full')
 get_rank_table("MPA", tools, 'full')
 get_rank_table("Prophane", tools, 'full')
 
-tools <- list(remove_blanks(eggnog_filtered),
-              remove_blanks(megan_filtered),
-              remove_blanks(metagomics_filtered),
-              remove_blanks(mpa_filtered),
-              remove_blanks(prophane_filtered),
-              remove_blanks(unipept_filtered))
+tools <- list(remove_blanks(filterOntology(eggnog_filtered, ontology)),
+              remove_blanks(filterOntology(megan_filtered, ontology)),
+              remove_blanks(filterOntology(metagomics_filtered, ontology)),
+              remove_blanks(filterOntology(mpa_filtered, ontology)),
+              remove_blanks(filterOntology(prophane_filtered, ontology)),
+              remove_blanks(filterOntology(unipept_filtered, ontology)))
 get_rank_table("Unipept", tools, 'filtered')
 get_rank_table("EggNOG", tools, 'filtered')
 get_rank_table("MEGAN", tools, 'filtered')
@@ -570,16 +575,29 @@ get_rank_table("MPA", tools, 'filtered')
 #get_rank_table("Prophane", tools, 'filtered')
 ```
 
-
 ### GO list exporting
 ```{r}
 labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
-tools <- list(eggnog_w_counts, megan, metagomics, pAll, prophane)
-for (i in 1:5){
+tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
+for (i in 1:length(tools)){
   write.table(tools[i], file=paste0('results/go_output/', tolower(labels[i]), '.tabular'),
               row.names=FALSE, quote=FALSE)
 }
 ```
+
+
+```{r}
+labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
+tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
+                    mpa_filtered, prophane_filtered, unipept_filtered)
+filtered_tools <- function(tools, ontology){
+  translations <- list("MF" = "molecular_function",
+                       "BP" = "biological_process",
+                       "CC" = "cellular_component")
+lapply(tools, function( tool ) { tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))})
+}
+```
+
 
 ### Overlap Plot Generation
 ```{r}
@@ -588,12 +606,14 @@ library(ggplot2)
 
 generate_overlap_plot <- function(ontology){
   
-    gos <- list('eggnog' = unique(filterOntology(eggnog_w_counts$gos, ontology)),
-            'megan' = unique(filterOntology(megan$gos, ontology)),
-            'metagomics' = unique(filterOntology(metagomics$go, ontology)),
-            'mpa' = unique(filterOntology(pAll$gos, ontology)),
-            'prophane' = filterOntology(prophane$gos, ontology),
-            'unipept' = unique(filterOntology(unipept_all$GO.term, ontology)))
+    # gos <- list('eggnog' = unique((eggnog_w_counts %>% filter(namespace %in% ontology))$gos),
+    #         'megan' =  unique((megan %>% filter(namespace %in% ontology))$gos),
+    #         'metagomics' =  unique((metagomics_filt %>% filter(namespace %in% ontology))$go),
+    #         'mpa' =  unique((pAll %>% filter(namespace %in% ontology))$gos),
+    #         'prophane' =  unique((prophane %>% filter(namespace %in% ontology))$gos),
+    #         'unipept' =  unique((unipept_all  %>% filter(namespace %in% ontology))$GO.term))
+    # 
+    gos <- sapply(filtered_tools(tools, ontology), function(tool){ tool$gos})
     
     jaccard <- function(vec1, vec2){
         c1 <- length(vec1)
@@ -608,23 +628,26 @@ generate_overlap_plot <- function(ontology){
             jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
         }
     }
-    dimnames(jacmat) <- list(names(gos), names(gos))
+    dimnames(jacmat) <- list(labels, labels)
     
-    gos_filt <- list('eggnog' = unique(filterOntology(eggnog_filtered$id, ontology)),
-            'megan' = unique(filterOntology(megan_filtered$id, ontology)),
-            'metagomics' = unique(filterOntology(metagomics_filtered$id, ontology)),
-            'mpa' = unique(filterOntology(mpa_filtered$id, ontology)),
-            'prophane' = unique(filterOntology(prophane_filtered$id, ontology)),
-            'unipept' = unique(filterOntology(unipept_filtered$id, ontology)))
+    # gos_filt <- list('eggnog' = unique(filterOntology(eggnog_filtered$id, ontology)),
+    #         'megan' = unique(filterOntology(megan_filtered$id, ontology)),
+    #         'metagomics' = unique(filterOntology(metagomics_filtered$id, ontology)),
+    #         'mpa' = unique(filterOntology(mpa_filtered$id, ontology)),
+    #         'prophane' = unique(filterOntology(prophane_filtered$id, ontology)),
+    #         'unipept' = unique(filterOntology(unipept_filtered$id, ontology)))
+    
+    gos_filt <- sapply(filtered_tools(tools_mqome, ontology), function(tool){ tool$id })
+    
     
     jacslim <- matrix(0, nrow = 6, ncol = 6)
     for (i in 1:6){
         for (j in 1:6){
-            jacslim[i, j] <- jaccard(unique(filterOntology(gos_filt[[i]], ontology)),
-                                     unique(filterOntology(gos_filt[[j]], ontology)))
+            jacslim[i, j] <- jaccard(unique(gos_filt[[i]]),
+                                     unique(gos_filt[[j]]))
         }
     }
-    dimnames(jacslim) <- list(names(gos), names(gos))
+    dimnames(jacslim) <- list(labels, labels)
     
     jac_melt <- melt(jacmat)
     jac_melt$method <- "Full GO"
@@ -633,19 +656,21 @@ generate_overlap_plot <- function(ontology){
     jac_melt_slim$method <- "Metaquantome-Filtered GO"
     
     jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+    
     ggplot(jac_melt_all)+
         geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
         geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
-        scale_fill_gradient(name="Jaccard\nIndex", low = "white", high = "dodgerblue", limits = c(0, 1),
+        scale_fill_gradient(name="", low = "white", high = "dodgerblue", limits = c(0, 1),
                             guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
         facet_grid(.~method) +
         theme_minimal(base_size = 14) +
-        theme(aspect.ratio = 1) +
+        theme(aspect.ratio = 1, axis.text.x = element_text(angle = 90)) +
         labs(x = NULL, y = NULL)
-    ggsave(paste0("results/overlap_plots/overlap-", ontology, "-filtered.png"), height = 5, width = 12, units = "in", dpi = 700)
+    ggsave(paste0("results/overlap_plots/overlap-", paste(ontology, collapse="-"), "-filtered.png"),
+           height = 5, width = 12, units = "in", dpi = 700)
 }
 
-generate_overlap_plot("all")
+generate_overlap_plot(c("MF", "BP", "CC"))
 generate_overlap_plot("MF")
 generate_overlap_plot("BP")
 generate_overlap_plot("CC")
