@@ -427,37 +427,62 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
 
 ```{r}
-um <- inner_join(unipept_all, metagomics, by = "gos")
-png("results/correlation/um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
-plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
-     xlab = "Unipept: Log2 Ratio",
-     ylab = "MetaGOmics: Log2 Ratio")
-mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
-abline(0, 1, col = "red", lty = 2)
-abline(coef(mod))
-grid()
-dev.off()
-cor.test(um$log2ratio.x, um$log2ratio.y,
-         method = "pearson", alternative = "two.sided")
-nrow(um)
-nrow(unipept_all)
-nrow(metagomics)
+plot_correlation <- function(unipept, metagomics, header, dims, suffix=''){
+  um <- inner_join(unipept, metagomics, by = header)
+  png(paste0("results/correlation/um_cor", suffix, ".png"),
+      res = 700, width = 3.5, height = 4, units = "in")
+  plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=dims, ylim=dims,
+       xlab = "Unipept: Log2 Ratio",
+       ylab = "MetaGOmics: Log2 Ratio")
+  mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+  abline(0, 1, col = "red", lty = 2)
+  abline(coef(mod))
+  grid()
+  dev.off()
+  cor.test(um$log2ratio.x, um$log2ratio.y,
+           method = "pearson", alternative = "two.sided")
+  nrow(um)
+  nrow(unipept)
+  nrow(metagomics)
+}
+
+sapply(c("MF,CC,BP", "MF", "CC", "BP"),
+       function(ontology){
+         plot_correlation(unipept_all, metagomics, 'gos', c(-8, 8))
+         plot_correlation(unipept_filtered, metagomics_filtered, 'id', c(-2.5, 2.5), suffix='-filtered')
+       })
+
 ```
-
 ```{r}
-um <- inner_join(unipept_filtered, metagomics_filtered, by = c("id" = "id"))
-png("results/correlation/um_cor_filtered.png", res = 700, width = 3.5, height = 4, units = "in")
-plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-2.5,2.5), ylim=c(-2.5,2.5),
-     xlab = "Unipept: Log2 Ratio",
-     ylab = "MetaGOmics: Log2 Ratio")
-mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
-abline(0, 1, col = "red", lty = 2)
-abline(coef(mod))
-grid()
-dev.off()
-cor.test(um$log2ratio.x, um$log2ratio.y,
-         method = "pearson", alternative = "two.sided")
-
+um <- inner_join(unipept_all, metagomics, by = "gos")
+         png("results/correlation/um_cor.png", res = 700, width = 3.5, height = 4, units = "in")
+         plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-8,8), ylim=c(-8,8),
+              xlab = "Unipept: Log2 Ratio",
+              ylab = "MetaGOmics: Log2 Ratio")
+         mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+         abline(0, 1, col = "red", lty = 2)
+         abline(coef(mod))
+         grid()
+         dev.off()
+         cor.test(um$log2ratio.x, um$log2ratio.y,
+                  method = "pearson", alternative = "two.sided")
+         nrow(um)
+         nrow(unipept_all)
+         nrow(metagomics)
+         
+         um <- inner_join(unipept_filtered, metagomics_filtered, by = c("id" = "id"))
+         png("results/correlation/um_cor_filtered.png", res = 700, width = 3.5, height = 4, units = "in")
+         plot(log2ratio.x ~ log2ratio.y, data = um, pch = 20, cex = 0.3, xlim=c(-2.5,2.5), ylim=c(-2.5,2.5),
+              xlab = "Unipept: Log2 Ratio",
+              ylab = "MetaGOmics: Log2 Ratio")
+         mod <- lm(log2ratio.x ~ log2ratio.y, data = um)
+         abline(0, 1, col = "red", lty = 2)
+         abline(coef(mod))
+         grid()
+         dev.off()
+         cor.test(um$log2ratio.x, um$log2ratio.y,
+                  method = "pearson", alternative = "two.sided")
+         
 ```
 
 
@@ -497,7 +522,7 @@ kable(m2u)
 kable(u2m)
 ```
 
-
+### Top Ten Tables
 ```{r}
 get_rank_table <- function(name, tools, folder){
     n <- 10
@@ -586,19 +611,6 @@ for (i in 1:length(tools)){
 ```
 
 
-```{r}
-labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
-tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
-                    mpa_filtered, prophane_filtered, unipept_filtered)
-filtered_tools <- function(tools, ontology){
-  translations <- list("MF" = "molecular_function",
-                       "BP" = "biological_process",
-                       "CC" = "cellular_component")
-lapply(tools, function( tool ) { tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))})
-}
-```
-
-
 ### Overlap Plot Generation
 ```{r}
 library(reshape2)
@@ -606,68 +618,71 @@ library(ggplot2)
 
 generate_overlap_plot <- function(ontology){
   
-    # gos <- list('eggnog' = unique((eggnog_w_counts %>% filter(namespace %in% ontology))$gos),
-    #         'megan' =  unique((megan %>% filter(namespace %in% ontology))$gos),
-    #         'metagomics' =  unique((metagomics_filt %>% filter(namespace %in% ontology))$go),
-    #         'mpa' =  unique((pAll %>% filter(namespace %in% ontology))$gos),
-    #         'prophane' =  unique((prophane %>% filter(namespace %in% ontology))$gos),
-    #         'unipept' =  unique((unipept_all  %>% filter(namespace %in% ontology))$GO.term))
-    # 
-    gos <- sapply(filtered_tools(tools, ontology), function(tool){ tool$gos})
-    
-    jaccard <- function(vec1, vec2){
-        c1 <- length(vec1)
-        c2 <- length(vec2)
-        int <- length(intersect(vec1, vec2))
-        int / c1
+  
+  labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
+  tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
+                      mpa_filtered, prophane_filtered, unipept_filtered)
+  filtered_tools <- function(tools, ontology){
+    translations <- list("MF" = "molecular_function",
+                         "BP" = "biological_process",
+                         "CC" = "cellular_component")
+    lapply(tools, function( tool ) { tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))})
+  }
+  gos <- sapply(filtered_tools(tools, ontology), function(tool){ tool$gos})
+  
+  jaccard <- function(vec1, vec2){
+    c1 <- length(vec1)
+    c2 <- length(vec2)
+    int <- length(intersect(vec1, vec2))
+    int / c1
+  }
+  
+  jacmat <- matrix(0, nrow = 6, ncol = 6)
+  for (i in 1:6){
+    for (j in 1:6){
+      jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
     }
-    
-    jacmat <- matrix(0, nrow = 6, ncol = 6)
-    for (i in 1:6){
-        for (j in 1:6){
-            jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
-        }
+  }
+  dimnames(jacmat) <- list(labels, labels)
+  
+  # gos_filt <- list('eggnog' = unique(filterOntology(eggnog_filtered$id, ontology)),
+  #         'megan' = unique(filterOntology(megan_filtered$id, ontology)),
+  #         'metagomics' = unique(filterOntology(metagomics_filtered$id, ontology)),
+  #         'mpa' = unique(filterOntology(mpa_filtered$id, ontology)),
+  #         'prophane' = unique(filterOntology(prophane_filtered$id, ontology)),
+  #         'unipept' = unique(filterOntology(unipept_filtered$id, ontology)))
+  
+  gos_filt <- sapply(filtered_tools(tools_mqome, ontology), function(tool){ tool$id })
+  
+  
+  jacslim <- matrix(0, nrow = 6, ncol = 6)
+  for (i in 1:6){
+    for (j in 1:6){
+      jacslim[i, j] <- jaccard(unique(gos_filt[[i]]),
+                               unique(gos_filt[[j]]))
     }
-    dimnames(jacmat) <- list(labels, labels)
-    
-    # gos_filt <- list('eggnog' = unique(filterOntology(eggnog_filtered$id, ontology)),
-    #         'megan' = unique(filterOntology(megan_filtered$id, ontology)),
-    #         'metagomics' = unique(filterOntology(metagomics_filtered$id, ontology)),
-    #         'mpa' = unique(filterOntology(mpa_filtered$id, ontology)),
-    #         'prophane' = unique(filterOntology(prophane_filtered$id, ontology)),
-    #         'unipept' = unique(filterOntology(unipept_filtered$id, ontology)))
-    
-    gos_filt <- sapply(filtered_tools(tools_mqome, ontology), function(tool){ tool$id })
-    
-    
-    jacslim <- matrix(0, nrow = 6, ncol = 6)
-    for (i in 1:6){
-        for (j in 1:6){
-            jacslim[i, j] <- jaccard(unique(gos_filt[[i]]),
-                                     unique(gos_filt[[j]]))
-        }
-    }
-    dimnames(jacslim) <- list(labels, labels)
-    
-    jac_melt <- melt(jacmat)
-    jac_melt$method <- "Full GO"
-    
-    jac_melt_slim <- melt(jacslim)
-    jac_melt_slim$method <- "Metaquantome-Filtered GO"
-    
-    jac_melt_all <- rbind(jac_melt, jac_melt_slim)
-    
-    ggplot(jac_melt_all)+
-        geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
-        geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
-        scale_fill_gradient(name="", low = "white", high = "dodgerblue", limits = c(0, 1),
-                            guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
-        facet_grid(.~method) +
-        theme_minimal(base_size = 14) +
-        theme(aspect.ratio = 1, axis.text.x = element_text(angle = 90)) +
-        labs(x = NULL, y = NULL)
-    ggsave(paste0("results/overlap_plots/overlap-", paste(ontology, collapse="-"), "-filtered.png"),
-           height = 5, width = 12, units = "in", dpi = 700)
+  }
+  dimnames(jacslim) <- list(labels, labels)
+  
+  jac_melt <- melt(jacmat)
+  jac_melt$method <- "Full GO"
+  
+  jac_melt_slim <- melt(jacslim)
+  jac_melt_slim$method <- "Metaquantome-Filtered GO"
+  
+  jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+  
+  ggplot(jac_melt_all)+
+    geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
+    geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
+    scale_fill_gradient(name="", low = "white", high = "dodgerblue", limits = c(0, 1),
+                        guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
+    facet_grid(.~method) +
+    theme_minimal(base_size = 14) +
+    theme(aspect.ratio = 1, axis.text.x = element_text(angle = 90)) +
+    labs(x = NULL, y = NULL)
+  ggsave(paste0("results/overlap_plots/overlap-", paste(ontology, collapse="-"), "-filtered.png"),
+         height = 5, width = 12, units = "in", dpi = 700)
 }
 
 generate_overlap_plot(c("MF", "BP", "CC"))
