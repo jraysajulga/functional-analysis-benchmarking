@@ -455,19 +455,24 @@ plot_correlation <- function(unipept, metagomics, header, dims, ontology, suffix
     abline(coef(mod))
     grid()
     dev.off()
-    cor.test(um$log2ratio.x, um$log2ratio.y,
+    results <- cor.test(um$log2ratio.x, um$log2ratio.y,
              method = "pearson", alternative = "two.sided")
-    # nrow(um)
-    # nrow(unipept)
-    # nrow(metagomics)
+    print(paste0(ontology, suffix))
+    print(nrow(um))
+    print(nrow(unipept))
+    print(nrow(metagomics))
+    print(results)
+    results
   }
 }
 
-sapply(c("MF", "CC", "BP", "all"),
-       function(ontology){
-         plot_correlation(unipept_all, metagomics_filt, 'gos', c(-8, 8), ontology)
-         plot_correlation(unipept_filtered, metagomics_filtered, 'id', c(-1.5, 1.5), ontology, suffix='-filtered')
-       })
+results <- sapply(c("MF", "CC", "BP", "all"),
+                  function(ontology){
+                    list(plot_correlation(unipept_all, metagomics_filt,
+                                          'gos', c(-8, 8), ontology),
+                         plot_correlation(unipept_filtered, metagomics_filtered, 
+                                          'id', c(-1.5, 1.5), ontology, suffix='-filtered'))
+                  })
 
 ```
 ```{r}
