@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 pyruvate oxidase activity	FC (WS / NS)	7.23 (138 / 0)	-	-	-	-	-
-	Percentile (%)	0.051	-	-	-	-	-
+	Percentile (%)	0.117	-	-	-	-	-
 oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	7.23 (138 / 0)	-	-	-	-	-
-	Percentile (%)	0.102	-	-	-	-	-
+	Percentile (%)	0.234	-	-	-	-	-
 serine-type endopeptidase inhibitor activity	FC (WS / NS)	6.76 (99 / 0)	-0.95 (0 / 0.94)	-0.95 (0 / 0.94)	1.46 (1.76 / 0)	-	3.2 (34 / 2.81)
-	Percentile (%)	0.153	61.3	77.954	18.939	-	1.443
-response to wounding	FC (WS / NS)	6.76 (99 / 0)	0.07 (65 / 61.81)	-0.95 (0 / 0.94)	1.46 (1.76 / 0)	-	-
-	Percentile (%)	0.204	41.137	79.374	19.602	-	-
-poly(ribitol phosphate) teichoic acid metabolic process	FC (WS / NS)	6.54 (85 / 0)	-	-	-	-	-
-	Percentile (%)	0.255	-	-	-	-	-
-poly(ribitol phosphate) teichoic acid biosynthetic process	FC (WS / NS)	6.54 (85 / 0)	-	-	-	-	-
-	Percentile (%)	0.306	-	-	-	-	-
+	Percentile (%)	0.35	62.509	75.635	18.612	-	1.443
 L(+)-tartrate dehydratase activity	FC (WS / NS)	6.42 (78 / 0)	-	1.93 (406 / 105.83)	-0.57 (4.39 / 7)	-	1.55 (172 / 58.07)
-	Percentile (%)	0.358	-	8.327	53.598	-	13.886
+	Percentile (%)	0.467	-	10.353	53.155	-	13.886
 ribitol-5-phosphate 2-dehydrogenase activity	FC (WS / NS)	6.36 (75 / 0)	-	-	-	-	-
-	Percentile (%)	0.409	-	-	-	-	-
+	Percentile (%)	0.584	-	-	-	-	-
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.18 (66 / 0)	-	-	-	-	-
-	Percentile (%)	0.46	-	-	-	-	-
+	Percentile (%)	0.701	-	-	-	-	-
 collagen binding	FC (WS / NS)	6.02 (59 / 0)	0.48 (3 / 1.87)	-	-	-	-
-	Percentile (%)	0.511	32.868	-	-	-	-
+	Percentile (%)	0.818	32.318	-	-	-	-
+fructuronate reductase activity	FC (WS / NS)	5.73 (48 / 0)	-	0.05 (1 / 0.94)	-	-	-
+	Percentile (%)	0.935	-	58.772	-	-	-
+hyalurononglucosaminidase activity	FC (WS / NS)	5.7 (47 / 0)	-	-	-	-	-
+	Percentile (%)	1.051	-	-	-	-	-
+transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	5.57 (43 / 0)	-	1.02 (39 / 18.73)	-	-	1.06 (5 / 1.87)
+	Percentile (%)	1.168	-	25.232	-	-	22.453
