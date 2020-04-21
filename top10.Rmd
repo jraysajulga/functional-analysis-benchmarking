@@ -597,8 +597,10 @@ for (i in 1:length(tools)){
               row.names=FALSE, quote=FALSE)
   write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/',
                                           tolower(labels[i]), '.tabular'),
-              row.names=FALSE, quote=FALSE)
-  
+              row.names=FALSE, col.names=FALSE, quote=FALSE)
+  write.table(filterOntology(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
+                                          tolower(labels[i]), '.tabular'),
+              row.names=FALSE, col.names=FALSE, quote=FALSE)
 }
 ```
 
