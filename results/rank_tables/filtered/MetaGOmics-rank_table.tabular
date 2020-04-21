@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+alpha-glucosidase activity	FC (WS / NS)	0.92 (6.55 / 3)	-	0.73 (5.46 / 2.91)	-	-	-
+	Percentile (%)	0.394	-	2.452	-	-	-
 oxidoreductase activity, acting on phosphorus or arsenic in donors	FC (WS / NS)	0.91 (5.75 / 2.58)	-	0.36 (6.44 / 4.81)	-	-	-
-	Percentile (%)	0.265	-	5.769	-	-	-
-alpha-glucosidase activity	FC (WS / NS)	0.81 (6.6 / 3.32)	-	0.73 (5.46 / 2.91)	-	-	-
-	Percentile (%)	0.531	-	2.473	-	-	-
-glucosidase activity	FC (WS / NS)	0.81 (6.6 / 3.32)	0.4 (4.39 / 3.08)	0.73 (5.46 / 2.91)	-	-	-
-	Percentile (%)	0.531	6.583	2.473	-	-	-
-phosphotransferase activity, for other substituted phosphate groups	FC (WS / NS)	0.61 (9.39 / 5.78)	-	0.46 (5.17 / 3.49)	-	-	-0.28 (3.46 / 4.43)
-	Percentile (%)	1.061	-	5.22	-	-	90.654
-phosphoprotein phosphatase activity	FC (WS / NS)	0.59 (6.07 / 3.7)	-	0.55 (6.19 / 3.91)	-	-	0.21 (5.61 / 4.71)
-	Percentile (%)	1.326	-	4.396	-	-	7.477
-rRNA (adenine) methyltransferase activity	FC (WS / NS)	0.56 (6.39 / 4)	-	0.53 (6.09 / 3.91)	-	-	0.17 (5.32 / 4.61)
-	Percentile (%)	1.592	-	4.67	-	-	9.657
-hydrolase activity, acting on ether bonds	FC (WS / NS)	0.54 (6.49 / 4.17)	-	0.69 (6.78 / 3.81)	-	-0.04 (-10.4 / -10.68)	-
-	Percentile (%)	1.857	-	2.747	-	31.667	-
-oxidoreductase activity, acting on NAD(P)H, nitrogenous group as acceptor	FC (WS / NS)	0.48 (5.73 / 3.81)	-	-	-	-	-
-	Percentile (%)	2.122	-	-	-	-	-
+	Percentile (%)	0.787	-	5.722	-	-	-
+glucosidase activity	FC (WS / NS)	0.92 (6.55 / 3)	0.4 (4.39 / 3.08)	0.73 (5.46 / 2.91)	-	-	-
+	Percentile (%)	0.394	6.502	2.452	-	-	-
+phosphotransferase activity, for other substituted phosphate groups	FC (WS / NS)	0.69 (9.34 / 5.39)	-	0.46 (5.17 / 3.49)	-	-	-0.28 (3.46 / 4.43)
+	Percentile (%)	1.575	-	5.177	-	-	90.712
+rRNA (adenine) methyltransferase activity	FC (WS / NS)	0.59 (6.25 / 3.81)	-	0.53 (6.09 / 3.91)	-	-	0.17 (5.32 / 4.61)
+	Percentile (%)	1.969	-	4.632	-	-	9.598
+hydrolase activity, acting on ether bonds	FC (WS / NS)	0.54 (6.49 / 4.17)	-	0.69 (6.78 / 3.81)	-	-0.05 (-8.98 / -9.26)	-
+	Percentile (%)	2.362	-	2.725	-	34.066	-
 acetoin dehydrogenase activity	FC (WS / NS)	0.43 (7.73 / 5.46)	-	-	-	-	0.38 (7.61 / 5.63)
-	Percentile (%)	2.387	-	-	-	-	1.869
-rRNA (cytosine) methyltransferase activity	FC (WS / NS)	0.43 (4.81 / 3.32)	0.78 (4 / 1.91)	-	-	-	-
-	Percentile (%)	2.653	2.194	-	-	-	-
+	Percentile (%)	2.756	-	-	-	-	1.858
+S-adenosylmethionine-dependent methyltransferase activity	FC (WS / NS)	0.38 (7.48 / 5.52)	0.3 (8.4 / 6.62)	0.13 (9.16 / 8.27)	-0.17 (4.34 / 5)	-	0.1 (7.75 / 7.13)
+	Percentile (%)	3.15	8.359	18.256	82.069	-	19.505
+exo-alpha-sialidase activity	FC (WS / NS)	0.37 (8.42 / 6.29)	-	-	-	-	0.51 (6.88 / 4.55)
+	Percentile (%)	3.543	-	-	-	-	0.929
+rRNA methyltransferase activity	FC (WS / NS)	0.36 (7.18 / 5.39)	0.65 (6.95 / 4.08)	0.32 (7.73 / 5.99)	-	-	0.24 (6.38 / 5.26)
+	Percentile (%)	3.937	3.406	7.084	-	-	4.954
