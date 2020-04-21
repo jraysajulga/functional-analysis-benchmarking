@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 (S)-2-hydroxy-acid oxidase activity	FC (WS / NS)	1.27 (6 / 1.91)	-	-	-	-	-
-	Percentile (%)	0.275	-	-	-	-	-
-nucleotide diphosphatase activity	FC (WS / NS)	1.23 (4.86 / 1.49)	-	-0.69 (3.32 / 5.95)	-	-	-
-	Percentile (%)	0.549	-	96.817	-	-	-
-galactosidase activity	FC (WS / NS)	1.17 (5.52 / 1.91)	-	0.31 (5.52 / 4.25)	-	-	-
-	Percentile (%)	0.824	-	5.305	-	-	-
-oxidoreductase activity, acting on a sulfur group of donors, disulfide as acceptor	FC (WS / NS)	1.11 (4.39 / 1.49)	-	0.14 (5.36 / 4.75)	-	-	0.18 (5.36 / 4.61)
-	Percentile (%)	1.099	-	16.711	-	-	9.034
+	Percentile (%)	0.272	-	-	-	-	-
+nucleotide diphosphatase activity	FC (WS / NS)	1.23 (4.86 / 1.49)	-	-0.76 (3 / 5.78)	-	-	-
+	Percentile (%)	0.545	-	96.063	-	-	-
+galactosidase activity	FC (WS / NS)	1.17 (5.52 / 1.91)	-	-	-	-	-
+	Percentile (%)	0.817	-	-	-	-	-
+oxidoreductase activity, acting on a sulfur group of donors, disulfide as acceptor	FC (WS / NS)	1.11 (4.39 / 1.49)	-	-	-	-	0.18 (5.36 / 4.61)
+	Percentile (%)	1.09	-	-	-	-	8.978
 lipid transporter activity	FC (WS / NS)	1 (5.98 / 2.49)	-0.16 (4.7 / 5.36)	-	-	-	-
-	Percentile (%)	1.374	77.116	-	-	-	-
+	Percentile (%)	1.362	76.78	-	-	-	-
 voltage-gated ion channel activity	FC (WS / NS)	0.88 (3.58 / 1.49)	-	-	-	-	-
-	Percentile (%)	1.648	-	-	-	-	-
+	Percentile (%)	1.635	-	-	-	-	-
 kinase regulator activity	FC (WS / NS)	0.82 (5.17 / 2.49)	-	-	-	-	-
-	Percentile (%)	1.923	-	-	-	-	-
+	Percentile (%)	1.907	-	-	-	-	-
 voltage-gated channel activity	FC (WS / NS)	0.78 (4 / 1.91)	-	-	-	-	-
-	Percentile (%)	2.198	-	-	-	-	-
-alpha-glucosidase activity	FC (WS / NS)	0.73 (5.46 / 2.91)	-	0.81 (6.6 / 3.32)	-	-	-
-	Percentile (%)	2.473	-	0.531	-	-	-
-hydrolase activity, acting on ether bonds	FC (WS / NS)	0.69 (6.78 / 3.81)	-	0.54 (6.49 / 4.17)	-	-0.04 (-10.4 / -10.68)	-
-	Percentile (%)	2.747	-	1.857	-	31.667	-
+	Percentile (%)	2.18	-	-	-	-	-
+alpha-glucosidase activity	FC (WS / NS)	0.73 (5.46 / 2.91)	-	0.92 (6.55 / 3)	-	-	-
+	Percentile (%)	2.452	-	0.394	-	-	-
+hydrolase activity, acting on ether bonds	FC (WS / NS)	0.69 (6.78 / 3.81)	-	0.54 (6.49 / 4.17)	-	-0.05 (-8.98 / -9.26)	-
+	Percentile (%)	2.725	-	2.362	-	34.066	-

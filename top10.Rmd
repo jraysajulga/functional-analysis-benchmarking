@@ -433,9 +433,6 @@ filterOntology <- function(tool, ontology){
   tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
 }
 ```
-```{r}
-filterOntology(unipept_all, "MF")
-```
 
 ```{r}
 plot_correlation <- function(unipept, metagomics, header, dims, ontology, suffix=''){
@@ -552,23 +549,23 @@ remove_blanks <- function(go_list){
     go_list[go_list$name != "",]
 }
 
-filterOntology <- function(go_list, ontology){
-  if (ontology == "all") { return(go_df) }
-  sapply(go_list, function (go_cell) {
-    go_list <- strsplit(toString(go_cell), ",")[[1]]
-    onts <- Ontology(go_list)
-    filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
-    return(paste(filtered_gos, collapse = ","))
-    })
-}
+# filterOntology <- function(go_list, ontology){
+#   if (ontology == "all") { return(go_df) }
+#   sapply(go_list, function (go_cell) {
+#     go_list <- strsplit(toString(go_cell), ",")[[1]]
+#     onts <- Ontology(go_list)
+#     filtered_gos <- go_list[onts == ontology & !is.na(onts) & onts != ""]
+#     return(paste(filtered_gos, collapse = ","))
+#     })
+# }
 
 ontology <- 'MF'
-tools <- list(remove_blanks(filterOntology(eggnog_w_counts, ontology)),
-              remove_blanks(filterOntology(megan, ontology)),
-              remove_blanks(filterOntology(metagomics_filt, ontology)),
-              remove_blanks(filterOntology(pAll, ontology)),
-              remove_blanks(filterOntology(prophane, ontology)),
-              remove_blanks(filterOntology(unipept_all, ontology)))
+tools <- list(filterOntology(eggnog_w_counts, ontology),
+              filterOntology(megan, ontology),
+              filterOntology(metagomics_filt, ontology),
+              filterOntology(pAll, ontology),
+              filterOntology(prophane, ontology),
+              filterOntology(unipept_all, ontology))
 get_rank_table("Unipept", tools, 'full')
 get_rank_table("EggNOG", tools, 'full')
 get_rank_table("MEGAN", tools, 'full')
@@ -576,12 +573,12 @@ get_rank_table("MetaGOmics", tools, 'full')
 get_rank_table("MPA", tools, 'full')
 get_rank_table("Prophane", tools, 'full')
 
-tools <- list(remove_blanks(filterOntology(eggnog_filtered, ontology)),
-              remove_blanks(filterOntology(megan_filtered, ontology)),
-              remove_blanks(filterOntology(metagomics_filtered, ontology)),
-              remove_blanks(filterOntology(mpa_filtered, ontology)),
-              remove_blanks(filterOntology(prophane_filtered, ontology)),
-              remove_blanks(filterOntology(unipept_filtered, ontology)))
+tools <- list(filterOntology(eggnog_filtered, ontology),
+              filterOntology(megan_filtered, ontology),
+              filterOntology(metagomics_filtered, ontology),
+              filterOntology(mpa_filtered, ontology),
+              filterOntology(prophane_filtered, ontology),
+              filterOntology(unipept_filtered, ontology))
 get_rank_table("Unipept", tools, 'filtered')
 get_rank_table("EggNOG", tools, 'filtered')
 get_rank_table("MEGAN", tools, 'filtered')
@@ -590,16 +587,20 @@ get_rank_table("MPA", tools, 'filtered')
 #get_rank_table("Prophane", tools, 'filtered')
 ```
 
+
 ### GO list exporting
 ```{r}
 labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
 tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
 for (i in 1:length(tools)){
-  write.table(tools[i], file=paste0('results/go_output/', tolower(labels[i]), '.tabular'),
+  write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
               row.names=FALSE, quote=FALSE)
+  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/',
+                                          tolower(labels[i]), '.tabular'),
+              row.names=FALSE, quote=FALSE)
+  
 }
 ```
-
 
 ### Overlap Plot Generation
 ```{r}
