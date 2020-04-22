@@ -290,7 +290,7 @@ pAll$countWS <- pAll$countWS * mpa_norm
 
 pAll[is.na(pAll)] <- 0
 
-pAll <- collapse_by_go(pAll, "; ")
+pAll <- expand_by_go(pAll, "; ")
 pAll$namespace <- Ontology(pAll$gos)
 pAll
 ```
@@ -339,7 +339,7 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
 #     terms <- filterOntology(unique(x[x != "-"]), ontology)
 #     paste(terms[terms != ""], collapse = ",")
 # })
-prophane <- collapse_by_go(prophane, ',') %>%
+prophane <- expand_by_go(prophane, ',') %>%
     mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
     arrange(-log2ratio)
 prophane$namespace <- Ontology(prophane$gos)
@@ -421,6 +421,7 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 ```
+
 
 ## Unipept and MetaGOmics
 
@@ -592,15 +593,21 @@ get_rank_table("MPA", tools, 'filtered')
 ```{r}
 labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
 tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
+tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
+                      mpa_filtered, prophane_filtered, unipept_filtered)
 for (i in 1:length(tools)){
   write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
               row.names=FALSE, quote=FALSE)
-  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/',
+  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/full/',
+                                          tolower(labels[i]), '.tabular'),
+              row.names=FALSE, col.names=FALSE, quote=FALSE)
+  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/filtered/',
                                           tolower(labels[i]), '.tabular'),
               row.names=FALSE, col.names=FALSE, quote=FALSE)
   write.table(filterOntology(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
                                           tolower(labels[i]), '.tabular'),
               row.names=FALSE, col.names=FALSE, quote=FALSE)
+  
 }
 ```
 
