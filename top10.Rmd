@@ -57,25 +57,36 @@ write.table(peptides_all$peptide, file="data/tool_outputs/peptide_shaker_outputs
 
 ## We need to expand and collapse to the GO-term level
 ```{r}
-expand_by_go <- function(go_df, delimiter){
+expand_by_go <- function(go_df, delimiter, header){
     # Separate the comma-delimited list of GOs into individual rows
     # (retains the fold change value from the original row)
     # go_df <- go_df %>% select(countNS, countWS, gos)
     go_df <- go_df %>% mutate(countNS = as.numeric(countNS),
-                              countWS = as.numeric(countWS))
+                              countWS = as.numeric(countWS),
+                              id = !!as.name(header))
     go_df <- data.table(go_df) 
-    go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(countNS, countWS) ]
-
+    go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(id, log2ratio, countWS, countNS) ]
+    go_df %>% mutate(name = Term(gsub(" ", "", gos)),
+                     namespace = Ontology(gos))
     # Collapse GO terms based on fold change values.
-    go_df <- go_df %>% 
-        group_by(gos) %>%
-        select(countNS, countWS, gos) %>%
-        summarize_all(sum) %>%
-        mutate(name = Term(gsub(" ", "", gos)),
-               log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-        arrange(-log2ratio)
-    go_df
+    # go_df <- go_df %>% 
+    #     group_by(gos) %>%
+    #     select(countNS, countWS, gos) %>%
+    #     summarize_all(sum) %>%
+    #     mutate(name = Term(gsub(" ", "", gos)),
+    #            log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    #     arrange(-log2ratio)
 }
+
+calculate_fold_change <- function(df){
+  df %>% mutate(log2ratio = log2((as.numeric(countWS) + 1)/(as.numeric(countNS) + 1))) %>%
+    arrange(-log2ratio)
+}
+
+# expand_go <- function(df){
+#   df %>% mutate(name = Term(gsub(" ", "", gos)),
+#                 namespace = Ontology(gos))
+# }
 ```
 
 ## eggNOG mapper results
@@ -96,10 +107,10 @@ eggnog_w_counts <- left_join(eggnog,
 #eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
 #eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$gos, ","), function ( x ) { paste(Term(x), collapse="; ")})
 
-eggnog_w_counts <- expand_by_go(eggnog_w_counts, ',')
-eggnog_w_counts$name <- Term(eggnog_w_counts$gos)
-eggnog_w_counts$namespace <- Ontology(eggnog_w_counts$gos)
+eggnog_w_counts <- calculate_fold_change(eggnog_w_counts)
+eggnog_w_counts_gos <- expand_by_go(eggnog_w_counts, ',', 'protein')
 eggnog_w_counts
+eggnog_w_counts_gos
 ```
 
 Let's write a function to write out formatted input tabular files for metaquantome.
@@ -131,24 +142,24 @@ kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold c
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
 ## Blast
-# ```{r}
-# blast <- read.delim('blast_results/blastp_vs_nr_current.tabular',
-#                     stringsAsFactors = FALSE,
-#                     header = FALSE) %>%
-#     select(peptide = V1, protein = V2, desc = V25)
-# 
-# blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
-#     group_by(protein, desc) %>%
-#     filter(!is.na(countWS) & !is.na(countNS)) %>%
-#     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-#     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
-#     arrange(-log2ratio)
-# ```
-# 
-# Print results:
-# ```{r echo=FALSE, results='asis'}
-# kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
-# ```
+```{r}
+blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular',
+                   stringsAsFactors = FALSE,
+                    header = FALSE) %>%
+    select(peptide = V1, protein = V2, desc = V25)
+
+blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
+    group_by(protein, desc) %>%
+    filter(!is.na(countWS) & !is.na(countNS)) %>%
+    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+    arrange(-log2ratio)
+```
+
+Print results:
+```{r echo=FALSE, results='asis'}
+kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
+```
 
 ## metaGOmics
 
@@ -161,7 +172,7 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
            name = GO.name,
            countNS = Run.1.PSM.count,
            countWS = Run.2.PSM.count,
-           log2ratio =  Laplace.corr..Log.2..fold.change,
+           Laplace.corr..Log.2..fold.change,
            p = Laplace.corr..q.value) #%>%
     # filter(Ontology(as.character(go)) == ontology)
 
@@ -185,26 +196,23 @@ write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'coun
 
 ```{r}
 megan <- read.delim("data/tool_outputs/func_tools/MEGAN_outputs/737NSvsWS_EGGNOGcount.csv") %>%
-    select(og = X.Datasets, countNS = X737_NS_BLASTOutput_2StepCombined,
-           countWS = X737_WS_BLASTOutput_2StepCombined)
+    select(og = X.Datasets, 
+           countWS = X737_WS_BLASTOutput_2StepCombined,
+           countNS = X737_NS_BLASTOutput_2StepCombined)
 megan_go <- read.delim("data/tool_outputs/func_tools/MEGAN_outputs/go_terms.txt",
                         header = TRUE,
                         stringsAsFactors = FALSE)
 megan$gos <- megan_go$gos
-megan$countNS <- megan$countNS * norm_ratio
-# megan$gos <- filterOntology(megan_go$gos, ontology)
+#megan$countNS <- megan$countNS * norm_ratio
 
-megan <- expand_by_go(megan, ',')
-megan$name <- Term(megan$gos)
-megan$namespace <- Ontology(megan$gos)
+megan <- calculate_fold_change(megan)
+megan_gos <- expand_by_go(megan, ',', 'og')
 megan
-```
-
-```{r}
-sum(megan$countWS)
-sum(megan$countNS)
-sum(megan$countWS) / sum(megan$countNS)
-norm_ratio
+megan_gos
+# sum(megan$countWS)
+# sum(megan$countNS)
+# sum(megan$countWS) / sum(megan$countNS)
+# norm_ratio
 ```
 
 Top *n* results:
@@ -220,6 +228,9 @@ write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
 ## Unipept
+```{r}
+unipept_all
+```
 
 ```{r}
 unipept_results_NS <- paste0(tools_dir, 'unipept_results/',
@@ -239,21 +250,15 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     rename(peptides = X.peptides)
 
 unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
-    mutate(countNS = peptides.x, countWS = peptides.y,
-           log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    select(gos = GO.term, name = Name, countWS, countNS, log2ratio) %>%
-    # filter(Ontology(GO.term) == ontology) %>%
-    arrange(-log2ratio)
+    mutate(countNS = peptides.x, countWS = peptides.y) %>%
+    select(gos = GO.term, name = Name, countWS, countNS)
+unipept_all <- calculate_fold_change(unipept_all)
 unipept_all$namespace <- Ontology(unipept_all$gos)
 unipept_all
+# sum(unipeptWS$peptides)
+# sum(unipeptNS$peptides) 
+# sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
 ```
-
-```{r}
-sum(unipeptWS$peptides)
-sum(unipeptNS$peptides) 
-sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
-```
-
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
@@ -289,18 +294,16 @@ mpa_norm <- sum(pAll$countNS[!is.na(pAll$countNS)]) / sum(pAll$countWS[!is.na(pA
 pAll$countWS <- pAll$countWS * mpa_norm
 
 pAll[is.na(pAll)] <- 0
+pAll <- calculate_fold_change(pAll)
 
-pAll <- expand_by_go(pAll, "; ")
-pAll$namespace <- Ontology(pAll$gos)
+pAll_gos <- expand_by_go(pAll, "; ", 'Protein.Accession')
 pAll
-```
-
-```{r}
-ns <- pAll$SpecCount.x
-ws <- pAll$SpecCount.y
-sum(ns[!is.na(ns)])
-sum(ws[!is.na(ws)])
-sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
+pAll_gos
+# ns <- pAll$SpecCount.x
+# ws <- pAll$SpecCount.y
+# sum(ns[!is.na(ns)])
+# sum(ws[!is.na(ws)])
+# sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
 ```
 
 
@@ -316,7 +319,6 @@ write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
 
 
 ## Prophane
-
 ```{r}
 prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"), sep = "\t",
                           stringsAsFactors = FALSE) %>% select(members_identifier,
@@ -334,16 +336,19 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
     filter(ns != "-", ws != "-") %>%
     mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
     filter(gos != "") %>%
-    select(countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
-# prophane$gos <- sapply(strsplit(prophane$gos,","), function(x) {
-#     terms <- filterOntology(unique(x[x != "-"]), ontology)
-#     paste(terms[terms != ""], collapse = ",")
-# })
-prophane <- expand_by_go(prophane, ',') %>%
-    mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
-    arrange(-log2ratio)
-prophane$namespace <- Ontology(prophane$gos)
+    select(id = members_identifier, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+prophane$gos <- sapply(strsplit(prophane$gos,","), function(terms) {
+   paste(terms[terms != "-" & terms != ""], collapse = ",")
+})
+
+prophane <- calculate_fold_change(prophane)
+prophane_gos <- expand_by_go(prophane, ',', 'id')
+  #expand_by_go(prophane, ',') %>%
+  #  mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
+  #  arrange(-log2ratio)
+#prophane$namespace <- Ontology(prophane$gos)
 prophane
+prophane_gos
 ```
 
 Metaquantome-normalized dataset:
@@ -366,7 +371,7 @@ print_mqome_cmds <- function(name, func_colname){
                      " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
                      " --mode f --ontology go",
                      " --samps results/mqome/input/samples.tab",
-                     " --min_peptides 2 --min_pep_nsamp 1 --min_children_non_leaf 2 --min_child_nsamp 0",
+                     " --min_peptides 2 --min_pep_nsamp 0 --min_children_non_leaf 2 --min_child_nsamp 1",
                      " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
   return(paste(cmd_expand, cmd_filt, sep='; '))
 }
@@ -422,6 +427,108 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
     arrange(-log2ratio)
 ```
 
+
+
+<!-- ```{r} -->
+<!-- unipept_expanded[c('countNS_n_peptide', 'countWS_n_peptide', -->
+<!--                    'countNS_n_samp_children', 'countWS_n_samp_children')] -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- unipept_all -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- Re -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- unipept_expanded -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- filter_to_nodes <- function(df){ -->
+<!--   df[df['countWS_n_samp_children'] == 0 & -->
+<!--      df['countNS_n_samp_children'] == 0,] -->
+<!-- } -->
+<!-- filter_to_ancestors <-function(df){ -->
+<!--   df[df['countWS_n_samp_children'] != 0 & -->
+<!--      df['countNS_n_samp_children'] != 0,] -->
+<!-- } -->
+<!-- filter_to_ancestors(unipept_filtered) -->
+<!-- filter_to_nodes(unipept_filtered) -->
+<!-- ``` -->
+
+
+# ```{r}
+# test <- unipept_all #%>% arrange(gos)
+# test <- test[1:5,]
+# #test <- unipept_all[grepl("(cytidylate kinase)|(1-phosphofructokinase)|(^kinase activity)", unipept_all$name),]
+# write_mqome_inputs(test, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
+# print_mqome_cmds <- function(name, func_colname){
+#   cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
+#                         " --int_file results/mqome/input/", name, "/", name, "_int.tab",
+#                        " --pep_colname_int peptide",
+#                        " --func_file results/mqome/input/", name, "/", name, "_func.tab",
+#                        " --pep_colname_func peptide",
+#                        " --func_colname ", func_colname," --ontology go",
+#                        " --samps results/mqome/input/samples.tab",
+#                        " --outfile results/mqome/output/", name, "/", name, "_func_expanded.tab")
+#   cmd_filt <- paste0("metaquantome filter",
+#                      " --expand_file results/mqome/output/", name, "/", name, "_func_expanded.tab",
+#                      " --mode f --ontology go",
+#                      " --samps results/mqome/input/samples.tab",
+#                      " --min_peptides 2 --min_pep_nsamp 0 --min_children_non_leaf 2 --min_child_nsamp 1",
+#                      " --qthreshold 0 --outfile results/mqome/output/", name, "/", name, "_func_filtered.tab")
+#   return(paste(cmd_expand, cmd_filt, sep='; '))
+# }
+# test
+# print_mqome_cmds("metagomics", "gos.1")
+# ```
+# ```{r}
+# unipept_all
+# ```
+# ```{r}
+# unipept_all
+# ```
+# ```{r}
+# prophane
+# ```
+
+
+# ```{r}
+# unipept_expanded
+# filter_to_nodes <- function(df){
+#   df[df['countWS_n_samp_children'] == 0 &
+#      df['countNS_n_samp_children'] == 0,]
+# }
+# filter_to_ancestors <-function(df){
+#   df[df['countWS_n_samp_children'] != 0 &
+#      df['countNS_n_samp_children'] != 0,]
+# }
+# filter_to_ancestors(unipept_filtered)
+# ```
+
+```{r}
+tools_gos <- list(filterOntology(eggnog_w_counts_gos, ontology),
+              filterOntology(megan_gos, ontology),
+              filterOntology(metagomics_filt, ontology),
+              filterOntology(pAll_gos, ontology),
+              filterOntology(prophane_gos, ontology),
+              filterOntology(unipept_all, ontology))
+```
+
+```{r}
+intersect_all_tools <- Reduce(intersect, sapply(tools_gos, function(tool) { tool[tool$namespace == "MF",]$gos }))
+length(intersect_all_tools)
+#test <- unipept_all[unipept_all$gos %in% intersect_all_tools,] #%>% arrange(gos)
+#test
+```
+
+```{r}
+unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+unipept_expanded
+```
 
 ## Unipept and MetaGOmics
 
