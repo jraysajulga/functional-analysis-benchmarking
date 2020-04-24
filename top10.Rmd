@@ -516,19 +516,51 @@ tools_gos <- list(filterOntology(eggnog_w_counts_gos, ontology),
               filterOntology(unipept_all, ontology))
 ```
 
+
+### Let's do some single GO analysis
+
+Let's find the GO set that is common in all tools:
 ```{r}
-intersect_all_tools <- Reduce(intersect, sapply(tools_gos, function(tool) { tool[tool$namespace == "MF",]$gos }))
-length(intersect_all_tools)
-#test <- unipept_all[unipept_all$gos %in% intersect_all_tools,] #%>% arrange(gos)
-#test
+intersect_all_gos <- Reduce(intersect, sapply(tools_gos, function(tool) { tool[tool$namespace == "MF",]$gos }))
+length(intersect_all_gos)
 ```
 
+Let's find the term with the highest average percentile:
 ```{r}
-unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-unipept_expanded
+average_ranks <- sapply(intersect_all_gos, function(go){
+  mean(sapply(tools_gos, function(tool){ 
+    which(tool$gos == go)[1]
+  }))
+})
+highest_intersected_term <- average_ranks[average_ranks == min(average_ranks)]
+highest_intersected_term
 ```
+```{r}
+character_lengths <- sapply(Term(intersect_all_gos), function(name) { 
+  nchar(name) 
+})
+longest_character_term <- average_ranks[character_lengths == max(character_lengths)]
+longest_character_term
+```
+```{r}
+total_hits <- sapply(intersect_all_gos, function(go){
+  sum(sapply(tools_gos, function(tool){ 
+    hits = tool$gos == go
+    length(hits[hits == TRUE])
+  }))
+})
+min(total_hits)
+average_ranks[total_hits == min(total_hits)]
+sapply(tools_gos, function(tool){
+    hits = tool$gos == "GO:0034618"
+    length(hits[hits == TRUE])
+})
+Term('GO:0034618')
+```
+
+
+
+
 
 ## Unipept and MetaGOmics
 
