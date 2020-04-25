@@ -163,6 +163,16 @@ kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 
 ## metaGOmics
 
+Let's format the input for metagomics:
+```{r}
+write.table(peptidesWS, file="data/tool_inputs/metagomics/737WS_peptide_counts.tabular",
+            row.names=FALSE, col.names=FALSE, quote=FALSE)
+write.table(peptidesNS, file="data/tool_inputs/metagomics/737NS_peptide_counts.tabular",
+            row.names=FALSE, col.names=FALSE, quote=FALSE)
+```
+
+The metagomics run is located here: https://www.yeastrc.org/metagomics/viewUploadedFasta.do?uid=ZgOKj9ROcCbJLdlw
+
 We take the top *n* results that have a FDR-corrected $q$ value less than 0.05. 
 
 ```{r}
@@ -504,6 +514,11 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 # ```
 
 ```{r}
+filterOntology <- function(tool, ontology){
+  translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
+  tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
+}
+ontology <- 'MF'
 tools_gos <- list(filterOntology(eggnog_w_counts_gos, ontology),
               filterOntology(megan_gos, ontology),
               filterOntology(metagomics_filt, ontology),
@@ -562,44 +577,6 @@ With this term chosen (fewest number of hits), let's examine it in depth.
 ### Single GO Term Analysis
 
 ```{r}
-labels
-```
-```{r}
-get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
-format_for_amigo <- function(gos) { paste(strsplit(gos, ',')[[1]], collapse=" ")}
-filterOntology <- function(gos, ontology){
- gos_mf <- gos[Ontology(gos) == ontology] 
- gos_mf[!is.na(gos_mf)]
-}
-```
-
-```{r}
-format_for_amigo <- function(go, df){
- group <- get_go_rows(go, df)
- gos <- strsplit(as.character(group$gos), ',')[[1]] 
- paste(filterOntology(gos, 'MF'), collapse=" ") 
-}
-```
-
-```{r}
-get_go_rows(min_hits_go, prophane)
-```
-```{r}
-#Term(strsplit(get_go_rows(min_hits_go, megan)$gos, ',')[[1]])
-```
-
-```{r}
-format_for_amigo(min_hits_go, eggnog_w_counts)
-format_for_amigo(min_hits_go, megan)
-format_for_amigo(min_hits_go, metagomics_filt)
-paste(filterOntology(strsplit(get_go_rows(min_hits_go, pAll)$gos[[1]], '; ')[[1]], "MF"), collapse=" ")
-
-format_for_amigo(min_hits_go, prophane)
-format_for_amigo(min_hits_go, unipept_all)
-```
-
-
-```{r}
 add_coverage <- function(gos_col, go_protein_counts_col, total_protein_count_col){
   mapply(function(gos_col, go_protein_counts_col, total_protein_count_col){
     sapply(1:length(gos_col), function(i){
@@ -635,17 +612,64 @@ unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_G
   filter(str_detect(go_terms, "GO:0034618")) %>%
   mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count),
          filtered_gos = filter_coverages(go_coverage),
-         go_mf_filtered = sapply(unipept_pep$filtered_gos, function(go_list){
+         go_mf_filtered = sapply(filtered_gos, function(go_list){
            paste(filter_go_mf(go_list), collapse=',')
          }))
 unipept_pep
-```
-```{r}
+
+
 unipept_pep_refiltered <- unipept_pep %>%
   filter(str_detect(go_mf_filtered, "GO:0034618"))
-unique(unipept_pep_refiltered$go_mf_filtered)
+unipept_pep_gos_mf <- unique(unipept_pep_refiltered$go_mf_filtered)
+unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
+unipept_pep_gos_mf
 ```
 
+```{r}
+get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
+format_for_amigo <- function(gos) { paste(strsplit(gos, ',')[[1]], collapse=" ")}
+filterOntology <- function(gos, ontology){
+ gos_mf <- gos[Ontology(gos) == ontology] 
+ gos_mf[!is.na(gos_mf)]
+}
+```
+
+```{r}
+format_for_amigo <- function(go, df){
+ group <- get_go_rows(go, df)
+ gos <- strsplit(as.character(group$gos), ',')[[1]] 
+ paste(filterOntology(gos, 'MF'), collapse=" ") 
+}
+```
+
+```{r}
+format_for_amigo(min_hits_go, eggnog_w_counts)
+format_for_amigo(min_hits_go, megan)
+format_for_amigo(min_hits_go, metagomics_filt)
+paste(filterOntology(strsplit(get_go_rows(min_hits_go, pAll)$gos[[1]], '; ')[[1]], "MF"), collapse=" ")
+
+format_for_amigo(min_hits_go, prophane)
+unipept_pep_gos_mf
+```
+
+Export out 'arginine binding' peptides from Unipept for Metagomics:
+```{r}
+write.table(unipept_pep$X.peptide, file=paste0(tools_dir, 'unipept_results/arginine_binding_peptides.txt'),
+            row.names=FALSE, col.names=FALSE, quote=FALSE)
+write.table(paste0(unipept_pep$X.peptide, "\t1"), file=paste0('data/tool_inputs/metagomics/arginine_binding_peptides.txt'),
+            row.names=FALSE, col.names=FALSE, quote=FALSE)
+```
+
+```{r}
+get_go_rows(min_hits_go, megan)
+```
+
+```{r}
+eggnog %>% filter(peptide %in% unipept_pep$X.peptide)
+```
+```{r}
+
+```
 
 
 ## Unipept and MetaGOmics
@@ -653,12 +677,6 @@ unique(unipept_pep_refiltered$go_mf_filtered)
 This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
 
 ## Function for filtering ontologies
-```{r}
-filterOntology <- function(tool, ontology){
-  translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
-  tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
-}
-```
 
 ```{r}
 plot_correlation <- function(unipept, metagomics, header, dims, ontology, suffix=''){
