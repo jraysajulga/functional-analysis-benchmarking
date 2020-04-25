@@ -362,6 +362,7 @@ Metaquantome-normalized dataset:
 write_mqome_inputs(prophane, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
+
 Let's expand and filter using metaquantome
 ```{r}
 print_mqome_cmds <- function(name, func_colname){
@@ -433,6 +434,38 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 ```
 
 
+```{r}
+test <- megan_gos %>% filter(gos %in% megan_min_hits)
+test <- test[!duplicated(test$gos),]
+write_mqome_inputs(test, 'megan', 'gos', 'gos', 'countNS', 'countWS')
+print_mqome_cmds("megan", "gos.1")
+megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+```
+
+```{r}
+filter_to_nodes <- function(df){
+  df[is.na(df['countWS_n_samp_children']) &
+     is.na(df['countNS_n_samp_children']),]
+}
+filter_to_ancestors <-function(df){
+  df[!is.na(df['countWS_n_samp_children']) &
+     !is.na(df['countNS_n_samp_children']),]
+}
+```
+
+```{r}
+test
+```
+
+```{r}
+filter_to_nodes(megan_expanded)
+```
+
 
 <!-- ```{r} -->
 <!-- unipept_expanded[c('countNS_n_peptide', 'countWS_n_peptide', -->
@@ -440,24 +473,9 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 <!-- ``` -->
 
 <!-- ```{r} -->
-<!-- unipept_all -->
-<!-- ``` -->
-<!-- ```{r} -->
-<!-- Re -->
-<!-- ``` -->
-
-<!-- ```{r} -->
 <!-- unipept_expanded -->
 <!-- ``` -->
-<!-- ```{r} -->
-<!-- filter_to_nodes <- function(df){ -->
-<!--   df[df['countWS_n_samp_children'] == 0 & -->
-<!--      df['countNS_n_samp_children'] == 0,] -->
-<!-- } -->
-<!-- filter_to_ancestors <-function(df){ -->
-<!--   df[df['countWS_n_samp_children'] != 0 & -->
-<!--      df['countNS_n_samp_children'] != 0,] -->
-<!-- } -->
+
 <!-- filter_to_ancestors(unipept_filtered) -->
 <!-- filter_to_nodes(unipept_filtered) -->
 <!-- ``` -->
@@ -513,17 +531,17 @@ megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab
 # ```
 
 ```{r}
-filterOntology <- function(tool, ontology){
+filter_ontology_df <- function(tool, ontology){
   translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
   tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
 }
 ontology <- 'MF'
-tools_gos <- list(filterOntology(eggnog_w_counts_gos, ontology),
-              filterOntology(megan_gos, ontology),
-              filterOntology(metagomics_filt, ontology),
-              filterOntology(pAll_gos, ontology),
-              filterOntology(prophane_gos, ontology),
-              filterOntology(unipept_all, ontology))
+tools_gos <- list(filter_ontology_df(eggnog_w_counts_gos, ontology),
+              filter_ontology_df(megan_gos, ontology),
+              filter_ontology_df(metagomics_filt, ontology),
+              filter_ontology_df(pAll_gos, ontology),
+              filter_ontology_df(prophane_gos, ontology),
+              filter_ontology_df(unipept_all, ontology))
 ```
 
 
@@ -866,12 +884,12 @@ remove_blanks <- function(go_list){
 # }
 
 ontology <- 'MF'
-tools <- list(filterOntology(eggnog_w_counts, ontology),
-              filterOntology(megan, ontology),
-              filterOntology(metagomics_filt, ontology),
-              filterOntology(pAll, ontology),
-              filterOntology(prophane, ontology),
-              filterOntology(unipept_all, ontology))
+tools <- list(filter_ontology_df(eggnog_w_counts, ontology),
+              filter_ontology_df(megan, ontology),
+              filter_ontology_df(metagomics_filt, ontology),
+              filter_ontology_df(pAll, ontology),
+              filter_ontology_df(prophane, ontology),
+              filter_ontology_df(unipept_all, ontology))
 get_rank_table("Unipept", tools, 'full')
 get_rank_table("EggNOG", tools, 'full')
 get_rank_table("MEGAN", tools, 'full')
@@ -879,18 +897,21 @@ get_rank_table("MetaGOmics", tools, 'full')
 get_rank_table("MPA", tools, 'full')
 get_rank_table("Prophane", tools, 'full')
 
-tools <- list(filterOntology(eggnog_filtered, ontology),
-              filterOntology(megan_filtered, ontology),
-              filterOntology(metagomics_filtered, ontology),
-              filterOntology(mpa_filtered, ontology),
-              filterOntology(prophane_filtered, ontology),
-              filterOntology(unipept_filtered, ontology))
+tools <- list(filter_ontology_df(eggnog_filtered, ontology),
+              filter_ontology_df(megan_filtered, ontology),
+              filter_ontology_df(metagomics_filtered, ontology),
+              filter_ontology_df(mpa_filtered, ontology),
+              filter_ontology_df(prophane_filtered, ontology),
+              filter_ontology_df(unipept_filtered, ontology))
 get_rank_table("Unipept", tools, 'filtered')
 get_rank_table("EggNOG", tools, 'filtered')
 get_rank_table("MEGAN", tools, 'filtered')
 get_rank_table("MetaGOmics", tools, 'filtered')
 get_rank_table("MPA", tools, 'filtered')
 #get_rank_table("Prophane", tools, 'filtered')
+```
+```{r}
+megan
 ```
 
 
