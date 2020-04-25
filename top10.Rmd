@@ -173,11 +173,10 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
            countNS = Run.1.PSM.count,
            countWS = Run.2.PSM.count,
            Laplace.corr..Log.2..fold.change,
-           p = Laplace.corr..q.value) #%>%
-    # filter(Ontology(as.character(go)) == ontology)
+           p = Laplace.corr..q.value)
 
-metagomics_filt <- metagomics %>% filter(p < 0.05) %>%
-    arrange(-log2ratio)
+metagomics_filt <- calculate_fold_change(metagomics) %>% 
+  filter(p < 0.05)
 metagomics_filt$namespace <- Ontology(as.character(metagomics_filt$go))
 metagomics_filt
 ```
@@ -229,8 +228,17 @@ write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
 
 ## Unipept
 ```{r}
-unipept_all
+unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
+  rename(gos = go_terms)
+unipept_pep
 ```
+
+```{r}
+#unipept_pep[grepl("GO:0034618", unipept_pep$gos),]
+unipept_pep$gos
+unipept_pep$go_protein_counts
+```
+
 
 ```{r}
 unipept_results_NS <- paste0(tools_dir, 'unipept_results/',
@@ -549,16 +557,62 @@ total_hits <- sapply(intersect_all_gos, function(go){
     length(hits[hits == TRUE])
   }))
 })
-min(total_hits)
-average_ranks[total_hits == min(total_hits)]
+ 
 sapply(tools_gos, function(tool){
     hits = tool$gos == "GO:0034618"
+    print(which(hits))
     length(hits[hits == TRUE])
 })
-Term('GO:0034618')
+min(total_hits)
+min_hits_go <- average_ranks[total_hits == min(total_hits)]
+min_hits_go <- "GO:0034618"
+min_hits_go
 ```
 
+With this term chosen (fewest number of hits), let's examine it in depth.
 
+### Single GO Term Analysis
+
+```{r}
+labels
+```
+```{r}
+get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
+format_for_amigo <- function(gos) { paste(strsplit(gos, ',')[[1]], collapse=" ")}
+filterOntology <- function(gos, ontology){
+ gos_mf <- gos[Ontology(gos) == ontology] 
+ gos_mf[!is.na(gos_mf)]
+}
+```
+
+```{r}
+format_for_amigo <- function(go, df){
+ group <- get_go_rows(go, df)
+ gos <- strsplit(as.character(group$gos), ',')[[1]] 
+ paste(filterOntology(gos, 'MF'), collapse=" ") 
+}
+```
+
+```{r}
+get_go_rows(min_hits_go, prophane)
+```
+```{r}
+#Term(strsplit(get_go_rows(min_hits_go, megan)$gos, ',')[[1]])
+```
+
+```{r}
+format_for_amigo(min_hits_go, eggnog_w_counts)
+format_for_amigo(min_hits_go, megan)
+format_for_amigo(min_hits_go, metagomics_filt)
+paste(filterOntology(strsplit(get_go_rows(min_hits_go, pAll)$gos[[1]], '; ')[[1]], "MF"), collapse=" ")
+
+format_for_amigo(min_hits_go, prophane)
+format_for_amigo(min_hits_go, unipept_all)
+```
+
+```{r}
+
+```
 
 
 
