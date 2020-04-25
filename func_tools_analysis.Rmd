@@ -561,15 +561,15 @@ total_hits <- sapply(intersect_all_gos, function(go){
 })
  
 sapply(tools_gos, function(tool){
-    hits = tool$gos == "GO:0034618"
-    print(which(hits))
+    hits = tool$gos == 'GO:0004854'
     length(hits[hits == TRUE])
 })
 min(total_hits)
-min_hits_go <- average_ranks[total_hits == min(total_hits)]
-min_hits_go <- "GO:0034618"
-min_hits_go
+small_hits_go <- average_ranks[total_hits == min(total_hits)]
+small_hits_go <- 'GO:0004854'
+small_hits_go
 ```
+
 
 Let's find the term with the most ancestors:
 ```{r}
@@ -594,6 +594,78 @@ go_most_ancestors <- 'GO:0046933'
 With this term chosen (fewest number of hits), let's examine it in depth.
 
 ### Single GO Term Analysis
+
+#### Chosen GO term
+
+```{r}
+go_target <- small_hits_go
+# go_target <- go_most_ancestors
+Term(go_target)
+```
+
+```{r}
+get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
+filterOntology <- function(gos, ontology){
+ gos_filt <- gos[Ontology(gos) == ontology] 
+ gos_filt[!is.na(gos_filt)]
+}
+split_gos <- function(go_list, delimiter=','){ strsplit(go_list, delimiter)[[1]]}
+```
+
+
+```{r}
+rows <- get_go_rows(go_target, eggnog_w_counts)
+eggnog_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+rows
+paste(eggnog_min_hits, collapse=" ")
+```
+
+```{r}
+rows <- get_go_rows(go_target, megan)
+megan_min_hits <- unique(filterOntology(split_gos(rows$gos), 'MF'))
+rows
+paste(megan_min_hits, collapse=" ")
+```
+
+```{r}
+length(eggnog_min_hits)
+length(intersect(eggnog_min_hits, megan_min_hits))
+length(megan_min_hits)
+length(intersect(megan_min_hits, prophane_min_hits))
+length(prophane_min_hits)
+length(intersect(megan_min_hits, unipept_pep_gos_mf))
+length(unipept_pep_gos_mf)
+length(intersect(mpa_min_hits, unipept_pep_gos_mf))
+length(mpa_min_hits)
+```
+```{r}
+paste(unipept_pep_gos_mf, collapse = " ")
+```
+
+
+Metagomics
+```{r}
+rows <- get_go_rows(min_hits_go, metagomics_filt)
+metagomics_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+rows
+metagomics_min_hits
+```
+
+MetaProteomeAnalyzer
+```{r}
+rows <- get_go_rows(go_target, pAll)
+mpa_min_hits <- filterOntology(split_gos(unique(rows$gos), delimiter="; "), 'MF')
+rows
+paste(mpa_min_hits, collapse=' ')
+```
+
+Prophane
+```{r}
+rows <- get_go_rows(go_target, prophane)
+prophane_min_hits <- unique(filterOntology(split_gos(unique(rows$gos)), 'MF'))
+rows
+paste(prophane_min_hits, collapse=" ")
+```
 
 #### Unipept Peptides
 ```{r}
@@ -629,7 +701,7 @@ filter_go_mf <- function(go_list){
 }
 
 unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
-  filter(str_detect(go_terms, "GO:0034618")) %>%
+  filter(str_detect(go_terms, go_target)) %>%
   mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count),
          filtered_gos = filter_coverages(go_coverage),
          go_mf_filtered = sapply(filtered_gos, function(go_list){
@@ -638,76 +710,11 @@ unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_G
 unipept_pep
 
 unipept_pep_refiltered <- unipept_pep %>%
-  filter(str_detect(go_mf_filtered, "GO:0034618"))
+  filter(str_detect(go_mf_filtered, go_target))
 unipept_pep_gos_mf <- unique(unipept_pep_refiltered$go_mf_filtered)
 unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
 ```
-
-#### Chosen GO term
-```{r}
-go_target <- 'GO:0016705' # longest character term
-Term(go_target)
-```
-
-
-```{r}
-get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
-filterOntology <- function(gos, ontology){
- gos_mf <- gos[Ontology(gos) == ontology] 
- gos_mf[!is.na(gos_mf)]
-}
-split_gos <- function(go_list, delimiter=','){ strsplit(go_list, delimiter)[[1]]}
-```
-
-```{r}
-rows <- get_go_rows(min_hits_go, eggnog_w_counts)
-eggnog_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
-rows
-eggnog_min_hits
-```
-```{r}
-Term(eggnog_min_hits)
-```
-```{r}
-Term(megan_min_hits)
-```
-
-```{r}
-rows <- get_go_rows(min_hits_go, megan)
-megan_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
-rows
-megan_min_hits
-```
-
-Metagomics
-```{r}
-rows <- get_go_rows(min_hits_go, metagomics_filt)
-metagomics_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
-rows
-metagomics_min_hits
-```
-
-```{r}
-rows <- get_go_rows(min_hits_go, pAll)
-mpa_min_hits <- filterOntology(split_gos(unique(rows$gos), delimiter="; "), 'MF')
-rows
-mpa_min_hits
-```
-
-```{r}
-rows <- get_go_rows(min_hits_go, prophane)
-prophane_min_hits <- filterOntology(split_gos(unique(rows$gos)), 'MF')
-rows
-prophane_min_hits
-```
-
-
-
-```{r}
-Term(unipept_pep_gos_mf)
-```
-
 
 
 Export out 'arginine binding' peptides from Unipept for Metagomics:
@@ -724,9 +731,6 @@ get_go_rows(min_hits_go, megan)
 
 ```{r}
 eggnog %>% filter(peptide %in% unipept_pep$X.peptide)
-```
-```{r}
-
 ```
 
 
