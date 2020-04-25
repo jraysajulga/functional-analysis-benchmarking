@@ -227,18 +227,6 @@ write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
 ## Unipept
-```{r}
-unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
-  rename(gos = go_terms)
-unipept_pep
-```
-
-```{r}
-#unipept_pep[grepl("GO:0034618", unipept_pep$gos),]
-#unipept_pep$gos
-#unipept_pep$go_protein_counts
-```
-
 
 ```{r}
 unipept_results_NS <- paste0(tools_dir, 'unipept_results/',
@@ -610,9 +598,28 @@ format_for_amigo(min_hits_go, prophane)
 format_for_amigo(min_hits_go, unipept_all)
 ```
 
-```{r}
 
+```{r}
+add_coverage <- function(gos_col, go_protein_counts_col, total_protein_count_col){
+  mapply(function(gos_col, go_protein_counts_col, total_protein_count_col){
+    sapply(1:length(gos_col), function(i){
+      gos_list <- strsplit(as.character(gos_col[i]), ',')[[1]]
+      gos_protein_counts_list <- strsplit(as.character(go_protein_counts_col[i]), ',')[[1]]
+      paste(mapply(function(gos, go_protein_counts) {
+        coverage <- round(as.numeric(go_protein_counts) / total_protein_count_col[i], digits = 3)
+        paste0(gos, '(', coverage, ')')
+      }, gos=gos_list, go_protein_counts=gos_protein_counts_list),
+      collapse=",")
+    })
+  }, gos_col=gos_col, go_protein_counts_col=go_protein_counts_col, total_protein_count_col)
+}
+
+unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
+  filter(str_detect(go_terms, "GO:0034618")) %>%
+  mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count))
+unipept_pep
 ```
+
 
 
 
