@@ -623,13 +623,23 @@ filter_coverages <- function(go_lists){
   })
 } 
 
+filter_go_mf <- function(go_list){
+  go_list <- strsplit(as.character(go_list), ',')[[1]] 
+  go_processed <- sapply(go_list, function(go){
+    str_match(go, '(GO:\\d+)\\((.+)\\)')
+  })
+  go_processed[2,][Ontology(go_processed[2,]) == "MF"]
+}
+
 unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
   filter(str_detect(go_terms, "GO:0034618")) %>%
   mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count),
-         filtered_gos = filter_coverages(go_coverage))
+         filtered_gos = filter_coverages(go_coverage),
+         go_mf_filtered = sapply(unipept_pep$filtered_gos, function(go_list){
+           paste(filter_go_mf(go_list), collapse=',')
+         }))
 unipept_pep
 ```
-
 
 
 ## Unipept and MetaGOmics
