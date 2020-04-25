@@ -166,9 +166,9 @@ kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 Let's format the input for metagomics:
 ```{r}
 write.table(peptidesWS, file="data/tool_inputs/metagomics/737WS_peptide_counts.tabular",
-            row.names=FALSE, col.names=FALSE, quote=FALSE)
+            row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
 write.table(peptidesNS, file="data/tool_inputs/metagomics/737NS_peptide_counts.tabular",
-            row.names=FALSE, col.names=FALSE, quote=FALSE)
+            row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
 ```
 
 The metagomics run is located here: https://www.yeastrc.org/metagomics/viewUploadedFasta.do?uid=ZgOKj9ROcCbJLdlw
@@ -389,7 +389,6 @@ paste(print_mqome_cmds("eggnog", 'gos'),
       print_mqome_cmds("unipept", "gos.1"), sep='; ')
 ```
 
-
 ```{r}
 eggnog_expanded <- read.delim("results/mqome/output/eggnog/eggnog_func_expanded.tab", stringsAsFactors = FALSE) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
@@ -576,6 +575,7 @@ With this term chosen (fewest number of hits), let's examine it in depth.
 
 ### Single GO Term Analysis
 
+#### Unipept Peptides
 ```{r}
 add_coverage <- function(gos_col, go_protein_counts_col, total_protein_count_col){
   mapply(function(gos_col, go_protein_counts_col, total_protein_count_col){
@@ -625,32 +625,65 @@ unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
 ```
 
+
 ```{r}
 get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
-format_for_amigo <- function(gos) { paste(strsplit(gos, ',')[[1]], collapse=" ")}
 filterOntology <- function(gos, ontology){
  gos_mf <- gos[Ontology(gos) == ontology] 
  gos_mf[!is.na(gos_mf)]
 }
+split_gos <- function(go_list, delimiter=','){ strsplit(go_list, delimiter)[[1]]}
 ```
 
 ```{r}
-format_for_amigo <- function(go, df){
- group <- get_go_rows(go, df)
- gos <- strsplit(as.character(group$gos), ',')[[1]] 
- paste(filterOntology(gos, 'MF'), collapse=" ") 
-}
+rows <- get_go_rows(min_hits_go, eggnog_w_counts)
+eggnog_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+rows
+eggnog_min_hits
+```
+```{r}
+Term(eggnog_min_hits)
+```
+```{r}
+Term(megan_min_hits)
 ```
 
 ```{r}
-format_for_amigo(min_hits_go, eggnog_w_counts)
-format_for_amigo(min_hits_go, megan)
-format_for_amigo(min_hits_go, metagomics_filt)
-paste(filterOntology(strsplit(get_go_rows(min_hits_go, pAll)$gos[[1]], '; ')[[1]], "MF"), collapse=" ")
-
-format_for_amigo(min_hits_go, prophane)
-unipept_pep_gos_mf
+rows <- get_go_rows(min_hits_go, megan)
+megan_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+rows
+megan_min_hits
 ```
+
+Metagomics
+```{r}
+rows <- get_go_rows(min_hits_go, metagomics_filt)
+metagomics_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+rows
+metagomics_min_hits
+```
+
+```{r}
+rows <- get_go_rows(min_hits_go, pAll)
+mpa_min_hits <- filterOntology(split_gos(unique(rows$gos), delimiter="; "), 'MF')
+rows
+mpa_min_hits
+```
+
+```{r}
+rows <- get_go_rows(min_hits_go, prophane)
+prophane_min_hits <- filterOntology(split_gos(unique(rows$gos)), 'MF')
+rows
+prophane_min_hits
+```
+
+
+
+```{r}
+Term(unipept_pep_gos_mf)
+```
+
+
 
 Export out 'arginine binding' peptides from Unipept for Metagomics:
 ```{r}
