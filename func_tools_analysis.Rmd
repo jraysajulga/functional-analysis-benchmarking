@@ -235,8 +235,8 @@ unipept_pep
 
 ```{r}
 #unipept_pep[grepl("GO:0034618", unipept_pep$gos),]
-unipept_pep$gos
-unipept_pep$go_protein_counts
+#unipept_pep$gos
+#unipept_pep$go_protein_counts
 ```
 
 
