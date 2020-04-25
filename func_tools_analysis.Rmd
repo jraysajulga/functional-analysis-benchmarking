@@ -614,12 +614,21 @@ add_coverage <- function(gos_col, go_protein_counts_col, total_protein_count_col
   }, gos_col=gos_col, go_protein_counts_col=go_protein_counts_col, total_protein_count_col)
 }
 
+filter_coverages <- function(go_lists){
+  sapply(go_lists, function(go_list){
+    go_list <- strsplit(go_list, ',')[[1]]
+    #go_list
+    coverages <- as.numeric(str_match(go_list, '\\((.+)\\)')[,2])
+    paste(go_list[coverages > 0.05], collapse=',')
+  })
+} 
+
 unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
   filter(str_detect(go_terms, "GO:0034618")) %>%
-  mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count))
+  mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count),
+         filtered_gos = filter_coverages(go_coverage))
 unipept_pep
 ```
-
 
 
 
