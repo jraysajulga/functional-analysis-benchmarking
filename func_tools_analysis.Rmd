@@ -571,6 +571,26 @@ min_hits_go <- "GO:0034618"
 min_hits_go
 ```
 
+Let's find the term with the most ancestors:
+```{r}
+library(httr)
+library(jsonlite)
+get_go_ancestors <- function(id_vector){
+    base_url <- 'https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/'
+    terms <- str_replace(id_vector, ":", "%3A")
+    joined_terms <- paste(terms, collapse="%2C")
+    term_url <- paste(base_url, joined_terms, '/ancestors?relations=is_a', sep="")
+    term_info <- GET(term_url, accept("application/json"))
+    json <- toJSON(content(term_info))
+    names <- unlist(fromJSON(json)$results$ancestors)
+    names
+}
+go_num_ancestors <- sapply(intersect_all_gos, function(go){ length(get_go_ancestors(go)) })
+go_num_ancestors[go_num_ancestors == max(go_num_ancestors)]
+go_most_ancestors <- 'GO:0046933'
+```
+
+
 With this term chosen (fewest number of hits), let's examine it in depth.
 
 ### Single GO Term Analysis
@@ -617,12 +637,17 @@ unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_G
          }))
 unipept_pep
 
-
 unipept_pep_refiltered <- unipept_pep %>%
   filter(str_detect(go_mf_filtered, "GO:0034618"))
 unipept_pep_gos_mf <- unique(unipept_pep_refiltered$go_mf_filtered)
 unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
+```
+
+#### Chosen GO term
+```{r}
+go_target <- 'GO:0016705' # longest character term
+Term(go_target)
 ```
 
 
