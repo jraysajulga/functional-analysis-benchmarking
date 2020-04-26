@@ -5,17 +5,17 @@ poly(ribitol phosphate) teichoic acid metabolic process	FC (WS / NS)	3.07 (7.41 
 NA	Percentile (%)	0.089	-	-	-	-	-
 pyruvate oxidase activity	FC (WS / NS)	3.02 (7.11 / 0)	-	-	-	-	-
 NA	Percentile (%)	0.134	-	-	-	-	-
-enzyme inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-0.33 (6.77 / 8.74)	-0.74 (1.58 / 3.32)	-1.16 (5.3 / 13.11)	-	-0.33 (5.52 / 7.18)
-NA	Percentile (%)	0.178	64.731	87.388	78.803	-	80.802
-endopeptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-2.94 (0 / 6.69)	-1 (0 / 1)	-1.16 (5.3 / 13.11)	-	-0.34 (5.46 / 7.17)
-NA	Percentile (%)	0.223	98.928	88.762	79.052	-	80.952
-serine-type endopeptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	1.29 (5.09 / 1.49)
-NA	Percentile (%)	0.267	26.184	54.841	-	-	3.784
-response to wounding	FC (WS / NS)	2.93 (6.63 / 0)	0.1 (7 / 6.46)	-1 (0 / 1)	-	-	2.75 (5.09 / -0.09)
-NA	Percentile (%)	0.312	34.369	89.448	-	-	0.075
-peptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-1.16 (5.3 / 13.11)	-	-0.34 (5.46 / 7.17)
-NA	Percentile (%)	0.356	99.596	92.973	79.551	-	80.977
-peptidase regulator activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.16 (5.3 / 13.11)	-	-0.34 (5.49 / 7.2)
-NA	Percentile (%)	0.401	99.907	95.216	79.8	-	80.902
-endopeptidase regulator activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-1.16 (5.3 / 13.11)	-	-0.34 (5.46 / 7.17)
-NA	Percentile (%)	0.445	99.612	93.202	80.05	-	81.003
+enzyme inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-0.33 (6.77 / 8.74)	-0.74 (1.58 / 3.32)	-1.15 (5.37 / 13.11)	-	-0.33 (5.52 / 7.18)
+NA	Percentile (%)	0.178	64.731	87.388	81.989	-	80.802
+endopeptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-2.94 (0 / 6.69)	-1 (0 / 1)	-1.15 (5.37 / 13.11)	-	-0.34 (5.46 / 7.17)
+NA	Percentile (%)	0.223	98.928	88.762	82.036	-	80.952
+serine-type endopeptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	0.14 (0 / -0.09)	0 (0 / 0)	0.86 (0.81 / 0)	-	1.29 (5.09 / 1.49)
+NA	Percentile (%)	0.267	26.184	54.841	9.053	-	3.784
+response to wounding	FC (WS / NS)	2.93 (6.63 / 0)	0.1 (7 / 6.46)	-1 (0 / 1)	0.86 (0.81 / 0)	-	2.75 (5.09 / -0.09)
+NA	Percentile (%)	0.312	34.369	89.448	9.146	-	0.075
+peptidase inhibitor activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-1.15 (5.37 / 13.11)	-	-0.34 (5.46 / 7.17)
+NA	Percentile (%)	0.356	99.596	92.973	82.083	-	80.977
+peptidase regulator activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.15 (5.37 / 13.11)	-	-0.34 (5.49 / 7.2)
+NA	Percentile (%)	0.401	99.907	95.216	82.129	-	80.902
+endopeptidase regulator activity	FC (WS / NS)	2.93 (6.63 / 0)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-1.15 (5.37 / 13.11)	-	-0.34 (5.46 / 7.17)
+NA	Percentile (%)	0.445	99.612	93.202	82.176	-	81.003

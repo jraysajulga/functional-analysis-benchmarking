@@ -1,8 +1,8 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-tRNA wobble uridine modification	FC (WS / NS)	2.89 (6.39 / 0)	-0.08 (5.25 / 5.58)	-	-	-	-0.08 (3.81 / 4.08)
-NA	Percentile (%)	0.016	75.166	-	-	-	66.416
-tRNA thio-modification	FC (WS / NS)	2.89 (6.39 / 0)	0.74 (5 / 2.58)	1.32 (4 / 1)	-	-	1.1 (4.32 / 1.49)
-NA	Percentile (%)	0.031	13.481	8.103	-	-	6.917
+tRNA wobble uridine modification	FC (WS / NS)	2.89 (6.39 / 0)	-0.08 (5.25 / 5.58)	-	1.99 (2.98 / 0)	-	-0.08 (3.81 / 4.08)
+NA	Percentile (%)	0.016	75.166	-	6.66	-	66.416
+tRNA thio-modification	FC (WS / NS)	2.89 (6.39 / 0)	0.74 (5 / 2.58)	1.32 (4 / 1)	2.45 (4.46 / 0)	-	1.1 (4.32 / 1.49)
+NA	Percentile (%)	0.031	13.481	8.103	5.441	-	6.917
 cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
 NA	Percentile (%)	0.047	-	-	-	-	-
 NADH metabolic process	FC (WS / NS)	2.77 (5.81 / 0)	-	-	-	-	-
