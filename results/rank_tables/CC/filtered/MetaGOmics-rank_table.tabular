@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 polyhedral organelle	FC (WS / NS)	2.11 (3.32 / 0)	-0.53 (3.81 / 5.95)	-	-	-	1.27 (3.58 / 0.91)
 NA	Percentile (%)	5.476	68.846	-	-	-	3.835
-septin ring	FC (WS / NS)	1.23 (6.02 / 2)	1 (1 / 0)	1.09 (6.09 / 2.32)	-	-	0.76 (6.15 / 3.23)
-NA	Percentile (%)	8.415	8.495	8.057	-	-	9.123
+septin ring	FC (WS / NS)	1.23 (6.02 / 2)	1 (1 / 0)	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+NA	Percentile (%)	8.415	8.495	8.057	1.97	-	9.123
 viral envelope	FC (WS / NS)	1.13 (5.55 / 2)	-	-	-	-	-0.17 (3 / 3.49)
 NA	Percentile (%)	8.816	-	-	-	-	72.03
-septin cytoskeleton	FC (WS / NS)	1 (7.02 / 3)	1.37 (1.58 / 0)	0.9 (7.09 / 3.32)	-	-	0.76 (6.15 / 3.23)
-NA	Percentile (%)	9.439	5.855	12.497	-	-	9.173
+septin cytoskeleton	FC (WS / NS)	1 (7.02 / 3)	1.37 (1.58 / 0)	0.9 (7.09 / 3.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+NA	Percentile (%)	9.439	5.855	12.497	2.111	-	9.173
 viral membrane	FC (WS / NS)	0.92 (6.55 / 3)	-	-	-	-	-0.17 (3 / 3.49)
 NA	Percentile (%)	9.973	-	-	-	-	72.055
-cytoskeleton	FC (WS / NS)	0.91 (7.61 / 3.58)	-0.21 (6.7 / 7.89)	0.11 (12.5 / 11.47)	-	-0.75 (-4.24 / -6.44)	0.35 (6.6 / 4.95)
-NA	Percentile (%)	10.196	60.848	30.259	-	91.008	17.794
+cytoskeleton	FC (WS / NS)	0.91 (7.61 / 3.58)	-0.21 (6.7 / 7.89)	0.11 (12.5 / 11.47)	3.08 (7.46 / 0)	-0.75 (-4.24 / -6.44)	0.35 (6.6 / 4.95)
+NA	Percentile (%)	10.196	60.848	30.259	1.923	91.008	17.794
 virion part	FC (WS / NS)	0.77 (7.17 / 3.81)	-2.08 (0 / 3.23)	-	-	-	-0.02 (5.29 / 5.36)
 NA	Percentile (%)	11.264	91.551	-	-	-	61.228
-ribonucleoside-diphosphate reductase complex	FC (WS / NS)	0.76 (5.09 / 2.58)	-2.49 (0 / 4.61)	0.06 (8.58 / 8.17)	-	-0.61 (-3.87 / -5.38)	0.74 (5.21 / 2.71)
-NA	Percentile (%)	11.309	93.539	35.683	-	88.107	9.348
-extrinsic component of plasma membrane	FC (WS / NS)	0.54 (5.04 / 3.17)	0.49 (6.77 / 4.55)	-	-	-	0.17 (4.7 / 4.08)
-NA	Percentile (%)	14.426	15.872	-	-	-	27.469
-nitrate reductase complex	FC (WS / NS)	0.47 (6.36 / 4.32)	-1.01 (2 / 5.03)	0.34 (7.23 / 5.52)	-	-0.07 (-11.95 / -12.47)	0.37 (6.46 / 4.76)
-NA	Percentile (%)	16.34	80.276	18.723	-	53.445	17.218
+ribonucleoside-diphosphate reductase complex	FC (WS / NS)	0.76 (5.09 / 2.58)	-2.49 (0 / 4.61)	0.06 (8.58 / 8.17)	3.31 (8.94 / 0)	-0.61 (-3.87 / -5.38)	0.74 (5.21 / 2.71)
+NA	Percentile (%)	11.309	93.539	35.683	0.281	88.107	9.348
+extrinsic component of plasma membrane	FC (WS / NS)	0.54 (5.04 / 3.17)	0.49 (6.77 / 4.55)	-	0.2 (8.66 / 7.41)	-	0.17 (4.7 / 4.08)
+NA	Percentile (%)	14.426	15.872	-	15.994	-	27.469
+nitrate reductase complex	FC (WS / NS)	0.47 (6.36 / 4.32)	-1.01 (2 / 5.03)	0.34 (7.23 / 5.52)	0.09 (10.37 / 9.7)	-0.07 (-11.95 / -12.47)	0.37 (6.46 / 4.76)
+NA	Percentile (%)	16.34	80.276	18.723	24.906	53.445	17.218

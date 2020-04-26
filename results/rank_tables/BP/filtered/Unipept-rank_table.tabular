@@ -1,8 +1,8 @@
 GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
-response to wounding	FC (WS / NS)	2.75 (5.09 / -0.09)	0.1 (7 / 6.46)	-1 (0 / 1)	2.93 (6.63 / 0)	-	-
-NA	Percentile (%)	0.075	34.369	89.448	0.312	-	-
-RNA secondary structure unwinding	FC (WS / NS)	2.51 (4.17 / -0.09)	0.27 (4.7 / 3.71)	-	0.46 (5.75 / 3.91)	-	-
-NA	Percentile (%)	0.175	21.09	-	16.563	-	-
+response to wounding	FC (WS / NS)	2.75 (5.09 / -0.09)	0.1 (7 / 6.46)	-1 (0 / 1)	2.93 (6.63 / 0)	0.86 (0.81 / 0)	-
+NA	Percentile (%)	0.075	34.369	89.448	0.312	9.146	-
+RNA secondary structure unwinding	FC (WS / NS)	2.51 (4.17 / -0.09)	0.27 (4.7 / 3.71)	-	0.46 (5.75 / 3.91)	0.86 (0.81 / 0)	-
+NA	Percentile (%)	0.175	21.09	-	16.563	9.193	-
 galactose catabolic process	FC (WS / NS)	2.51 (4.17 / -0.09)	0.19 (7.28 / 6.26)	0 (4.91 / 4.91)	2.29 (3.91 / 0)	-	-
 NA	Percentile (%)	0.201	24.041	59.052	3.384	-	-
 tRNA 3'-terminal CCA addition	FC (WS / NS)	2.25 (3.32 / -0.09)	-	0.27 (3.58 / 2.81)	-	-	-
@@ -17,5 +17,5 @@ regulation of cellular response to stress	FC (WS / NS)	2.25 (3.32 / -0.09)	-0.8 
 NA	Percentile (%)	0.576	72.76	-	-	-	-
 regulation of response to DNA damage stimulus	FC (WS / NS)	2.25 (3.32 / -0.09)	-0.93 (0 / 0.91)	-	-	-	-
 NA	Percentile (%)	0.602	79.609	-	-	-	-
-rRNA catabolic process	FC (WS / NS)	2.14 (3 / -0.09)	-	1.73 (2.32 / 0)	-	-	-
-NA	Percentile (%)	0.652	-	3.96	-	-	-
+rRNA catabolic process	FC (WS / NS)	2.14 (3 / -0.09)	-	1.73 (2.32 / 0)	-	-2.81 (0 / 6)	-
+NA	Percentile (%)	0.652	-	3.96	-	89.54	-
