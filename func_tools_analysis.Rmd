@@ -68,26 +68,20 @@ expand_by_go <- function(go_df, delimiter, header){
     go_df <- go_df[ , list( gos = unlist( strsplit( gos , delimiter ) ) ) , by = list(id, log2ratio, countWS, countNS) ]
     go_df %>% mutate(name = Term(gsub(" ", "", gos)),
                      namespace = Ontology(gos))
-    # Collapse GO terms based on fold change values.
-    # go_df <- go_df %>% 
-    #     group_by(gos) %>%
-    #     select(countNS, countWS, gos) %>%
-    #     summarize_all(sum) %>%
-    #     mutate(name = Term(gsub(" ", "", gos)),
-    #            log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    #     arrange(-log2ratio)
 }
 
-calculate_fold_change <- function(df){
-  df %>% mutate(log2ratio = log2((as.numeric(countWS) + 1)/(as.numeric(countNS) + 1))) %>%
+calculate_fold_change <- function(df, delimiter=','){
+  df %>% mutate(log2ratio = log2((as.numeric(countWS) + 1)/(as.numeric(countNS) + 1)),
+                namespace = sapply(gos, function(go_list){
+                  if (!is.na(go_list) && str_detect(go_list, delimiter)){
+                    go_list <- strsplit(go_list, delimiter)[[1]]
+                  }
+                  paste(Ontology(as.character(go_list)), collapse=',')
+                })) %>%
     arrange(-log2ratio)
 }
-
-# expand_go <- function(df){
-#   df %>% mutate(name = Term(gsub(" ", "", gos)),
-#                 namespace = Ontology(gos))
-# }
 ```
+
 
 ## eggNOG mapper results
 
@@ -113,24 +107,6 @@ eggnog_w_counts
 eggnog_w_counts_gos
 ```
 
-Let's write a function to write out formatted input tabular files for metaquantome.
-```{r}
-write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2) {
-    int_df <- df[c(header, col_samp1, col_samp2)]
-    names(int_df)[1] <- 'peptide'
-    write.table(int_df,
-                file=paste0("results/mqome/input/", name, "/", name, "_int.tab"),
-                quote=FALSE, row.names=FALSE, sep="\t")
-    func_df <- df[c(header, col_gos)]
-    names(func_df)[1] <- 'peptide'
-    write.table(func_df,
-                file=paste0("results/mqome/input/", name, "/", name, "_func.tab"),
-                quote=FALSE, row.names=FALSE, sep="\t")
-}
-write_mqome_inputs(eggnog_w_counts, 'eggnog', 'gos', 'gos', 'countNS', 'countWS')
-```
-
-
 Top *N*:
 ```{r echo=FALSE, results='asis'}
 library(knitr)
@@ -143,22 +119,22 @@ The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the Ya
 
 ## Blast
 ```{r}
-blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular',
-                   stringsAsFactors = FALSE,
-                    header = FALSE) %>%
-    select(peptide = V1, protein = V2, desc = V25)
-
-blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
-    group_by(protein, desc) %>%
-    filter(!is.na(countWS) & !is.na(countNS)) %>%
-    summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-    mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
-    arrange(-log2ratio)
-```
-
-Print results:
-```{r echo=FALSE, results='asis'}
-kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
+# blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular',
+#                    stringsAsFactors = FALSE,
+#                     header = FALSE) %>%
+#     select(peptide = V1, protein = V2, desc = V25)
+# 
+# blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
+#     group_by(protein, desc) %>%
+#     filter(!is.na(countWS) & !is.na(countNS)) %>%
+#     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
+#     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
+#     arrange(-log2ratio)
+# ```
+# 
+# Print results:
+# ```{r echo=FALSE, results='asis'}
+# kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
 ```
 
 ## metaGOmics
@@ -196,10 +172,6 @@ Top *n* results:
 kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold changes"))
 ```
 
-Metaquantome-normalized dataset:
-```{r}
-write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'countWS')
-```
 
 ## MEGAN
 
@@ -230,11 +202,6 @@ kable(head(megan, n), caption = paste("MEGAN: Top", n, "fold changes"))
 ```
 
 Note that <a href="https://enzyme.expasy.org/EC/3.2.1.52">EC 3.2.1.52</a> is a beta-hexosaminidase and <a href="http://eggnogdb.embl.de/#/app/results?target_nogs=ENOG410YESU">ENOG410YESU</a> is involved in cell wall/membrane/envelope biogenesis.
-
-Metaquantome-normalized dataset:
-```{r}
-write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
-```
 
 ## Unipept
 
@@ -271,10 +238,6 @@ Top *n*:
 kable(head(unipept_all, n), caption = paste("Unipept: top", n, "Fold Changes"))
 ```
 
-Metaquantome-normalized dataset:
-```{r}
-write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
-```
 
 ## MetaProteomeAnalyzer
 
@@ -300,7 +263,7 @@ mpa_norm <- sum(pAll$countNS[!is.na(pAll$countNS)]) / sum(pAll$countWS[!is.na(pA
 pAll$countWS <- pAll$countWS * mpa_norm
 
 pAll[is.na(pAll)] <- 0
-pAll <- calculate_fold_change(pAll)
+pAll <- calculate_fold_change(pAll, delimiter="; ")
 
 pAll_gos <- expand_by_go(pAll, "; ", 'Protein.Accession')
 pAll
@@ -316,11 +279,6 @@ pAll_gos
 Top *n*:
 ```{r echo=FALSE, results='asis'}
 kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
-```
-
-Metaquantome-normalized dataset:
-```{r}
-write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
 
@@ -357,11 +315,30 @@ prophane
 prophane_gos
 ```
 
-Metaquantome-normalized dataset:
-```{r}
-write_mqome_inputs(prophane, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
-```
 
+# Filtering
+
+Let's write a function to write out formatted input tabular files for metaquantome.
+```{r}
+write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2) {
+    int_df <- df[c(header, col_samp1, col_samp2)]
+    names(int_df)[1] <- 'peptide'
+    write.table(int_df,
+                file=paste0("results/mqome/input/", name, "/", name, "_int.tab"),
+                quote=FALSE, row.names=FALSE, sep="\t")
+    func_df <- df[c(header, col_gos)]
+    names(func_df)[1] <- 'peptide'
+    write.table(func_df,
+                file=paste0("results/mqome/input/", name, "/", name, "_func.tab"),
+                quote=FALSE, row.names=FALSE, sep="\t")
+}
+write_mqome_inputs(eggnog_w_counts, 'eggnog', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(megan, 'megan', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(prophane, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
+```
 
 Let's expand and filter using metaquantome
 ```{r}
@@ -919,8 +896,12 @@ megan
 ```{r}
 labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
 tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
-tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
-                      mpa_filtered, prophane_filtered, unipept_filtered)
+tools_mqome <- list(filter_to_nodes(eggnog_expanded), 
+                    filter_to_nodes(megan_expanded),
+                    filter_to_nodes(metagomics_expanded),
+                    filter_to_nodes(mpa_expanded),
+                    filter_to_nodes(prophane_expanded),
+                    filter_to_nodes(unipept_expanded))
 for (i in 1:length(tools)){
   write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
               row.names=FALSE, quote=FALSE)
@@ -944,10 +925,6 @@ library(ggplot2)
 
 generate_overlap_plot <- function(ontology){
   
-  
-  labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
-  tools_mqome <- list(eggnog_filtered, megan_filtered, metagomics_filtered,
-                      mpa_filtered, prophane_filtered, unipept_filtered)
   filtered_tools <- function(tools, ontology){
     translations <- list("MF" = "molecular_function",
                          "BP" = "biological_process",
