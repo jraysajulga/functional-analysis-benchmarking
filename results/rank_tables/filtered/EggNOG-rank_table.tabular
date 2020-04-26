@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-sulfur amino acid transmembrane transporter activity	FC (WS / NS)	1.11 (4.39 / 1.49)	0.04 (5.58 / 5.4)	-	-	-	-
-	Percentile (%)	0.31	38.965	-	-	-	-
-sulfur compound transmembrane transporter activity	FC (WS / NS)	1 (4.81 / 1.91)	0.05 (6.07 / 5.81)	-	-	0.07 (-9.76 / -9.37)	-0.71 (2.81 / 5.23)
-	Percentile (%)	0.619	34.06	-	-	18.681	97.523
-peptide disulfide oxidoreductase activity	FC (WS / NS)	0.93 (6.44 / 2.91)	0.16 (9.43 / 8.34)	0.2 (8.06 / 6.91)	-	-	-
-	Percentile (%)	0.929	15.259	11.417	-	-	-
-Ras GTPase binding	FC (WS / NS)	0.88 (3.58 / 1.49)	-	-	-	-	0.03 (3.58 / 3.49)
-	Percentile (%)	1.238	-	-	-	-	42.105
-tRNA methyltransferase activity	FC (WS / NS)	0.83 (6.54 / 3.23)	0.22 (7.5 / 6.28)	-	-	-	0.11 (4.91 / 4.49)
-	Percentile (%)	1.548	10.627	-	-	-	19.195
-small GTPase binding	FC (WS / NS)	0.81 (4.09 / 1.91)	-	-	-	-	0.03 (3.58 / 3.49)
-	Percentile (%)	1.858	-	-	-	-	42.415
-rRNA (cytosine) methyltransferase activity	FC (WS / NS)	0.78 (4 / 1.91)	-	-	-	-	-
-	Percentile (%)	2.167	-	-	-	-	-
-endoribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	0.73 (3.81 / 1.91)	0.13 (4.17 / 3.71)	-	-	-	0.09 (5.64 / 5.23)
-	Percentile (%)	2.477	17.711	-	-	-	20.433
-exodeoxyribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	0.68 (5.25 / 2.91)	0.12 (6.04 / 5.49)	-	-	-	0.08 (5.32 / 4.99)
-	Percentile (%)	2.786	21.526	-	-	-	24.149
-GTPase binding	FC (WS / NS)	0.88 (3.58 / 1.49)	-	-	-	-	0.03 (3.58 / 3.49)
-	Percentile (%)	1.238	-	-	-	-	42.105
+3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.8 (5.64 / 2.81)	-	-	0.8 (5.78 / 2.91)
+NA	Percentile (%)	0.078	14.168	10.997	-	-	8.571
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-	-	-
+NA	Percentile (%)	0.124	8.927	-	-	-	-
+aldo-keto reductase (NADP) activity	FC (WS / NS)	2.61 (5.09 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.155	-	-	-	-	-
+4-hydroxy-tetrahydrodipicolinate synthase	FC (WS / NS)	2.56 (4.32 / -0.09)	0.77 (5.49 / 2.81)	1.64 (5.25 / 1)	-	-	1.13 (5.36 / 1.91)
+NA	Percentile (%)	0.186	13.321	7.124	-	-	6.667
+oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor	FC (WS / NS)	2.52 (4.75 / 0)	2.11 (3.32 / 0)	-3.06 (0 / 7.33)	-	-	0.19 (2.32 / 1.91)
+NA	Percentile (%)	0.202	2.014	99.51	-	-	25.789
+NAD+ synthase activity	FC (WS / NS)	2.5 (4.64 / 0)	0.23 (4.39 / 3.58)	0.29 (4.86 / 3.81)	-	-	0.18 (4.91 / 4.23)
+NA	Percentile (%)	0.217	22.568	24.087	-	-	26.917
+4-hydroxy-tetrahydrodipicolinate reductase	FC (WS / NS)	2.49 (4.09 / -0.09)	0.72 (6.93 / 3.81)	-	-	-0.25 (-8.83 / -10.28)	-0.11 (5 / 5.46)
+NA	Percentile (%)	0.233	13.687	-	-	69.761	69.223
+aspartate kinase activity	FC (WS / NS)	2.47 (4 / -0.09)	0.32 (7.49 / 5.81)	0.28 (5.17 / 4.09)	-	-	0.2 (5.46 / 4.61)
+NA	Percentile (%)	0.248	19.318	24.488	-	-	24.536
+DNA replication origin binding	FC (WS / NS)	2.44 (3.91 / -0.09)	2.32 (4 / 0)	-	-	-	0.61 (4.32 / 2.49)
+NA	Percentile (%)	0.357	0.984	-	-	-	11.303
+aspartate oxidase activity	FC (WS / NS)	2.37 (4.17 / 0)	1 (1 / 0)	-	-	-	0.27 (2 / 1.49)
+NA	Percentile (%)	0.435	9.819	-	-	-	21.103

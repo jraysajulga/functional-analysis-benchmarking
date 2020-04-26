@@ -374,7 +374,10 @@ import_mqome_output <- function(name, type){
   read.delim(paste0("results/mqome/output/", name, "/", name, "_func_", type, ".tab"),
              stringsAsFactors = FALSE) %>%
     rename(gos = id) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    mutate(
+      countWS = replace_na(countWS, 0),
+      countNS = replace_na(countNS, 0),
+      log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
 }
 eggnog_expanded <- import_mqome_output('eggnog', 'expanded')
@@ -765,13 +768,11 @@ get_rank_table <- function(name, tools, folder, ontology){
     tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
     tool_topn <- tool_topn[!is.na(tool_topn)]
     tool_topn <- tool_topn[1:n]
-    print(tool_topn)
     rank_table <- data.frame(names = Term(unlist(lapply(tool_topn, function(a) { c(as.character(a), '')}))))
     rank_table[,"Ranking"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            print(topn)
             rank <- which(grepl(topn, tool$gos, fixed=TRUE))
             if (length(rank) > 0){
                 term <- tool[rank[[1]],]
@@ -793,19 +794,30 @@ get_rank_table <- function(name, tools, folder, ontology){
                 sep='\t', quote=FALSE, row.names=FALSE)
 }
 ontology <- 'MF'
-# get_rank_table("Unipept", tools, 'full', ontology)
-# get_rank_table("EggNOG", tools, 'full', ontology)
-# get_rank_table("MEGAN", tools, 'full', ontology)
-# get_rank_table("MetaGOmics", tools, 'full', ontology)
-# get_rank_table("MPA", tools, 'full', ontology)
-# get_rank_table("Prophane", tools, 'full', ontology)
+get_rank_table("Unipept", tools, 'full', ontology)
+get_rank_table("EggNOG", tools, 'full', ontology)
+get_rank_table("MEGAN", tools, 'full', ontology)
+get_rank_table("MetaGOmics", tools, 'full', ontology)
+get_rank_table("MPA", tools, 'full', ontology)
+get_rank_table("Prophane", tools, 'full', ontology)
 
-# get_rank_table("Unipept", tools_mqome, 'filtered', ontology)
-# get_rank_table("EggNOG", tools_mqome, 'filtered', ontology)
+get_rank_table("Unipept", tools_mqome, 'filtered', ontology)
+get_rank_table("EggNOG", tools_mqome, 'filtered', ontology)
 get_rank_table("MEGAN", tools_mqome, 'filtered', ontology)
 get_rank_table("MetaGOmics", tools_mqome, 'filtered', ontology)
 get_rank_table("MPA", tools_mqome, 'filtered', ontology)
 get_rank_table("Prophane", tools, 'filtered', ontology)
+```
+```{r}
+read.delim('results/rank_tables/full/unipept-rank_table.tabular')
+```
+```{r}
+megan_filtered
+ADP-ribose diphosphatase activity
+```
+
+```{r}
+read.delim('results/rank_tables/filtered/unipept-rank_table.tabular')
 ```
 
 
