@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	5.43 (42 / 0)	1.58 (2 / 0)	-	-2 (0 / 3)	-	-
-	Percentile (%)	0.071	13.887	-	72.555	-	-
-NAD+ synthase activity	FC (WS / NS)	4.7 (25 / 0)	0.85 (21 / 11.24)	1.11 (29 / 14)	0.11 (4.39 / 4)	-	0.65 (30 / 18.73)
-	Percentile (%)	0.142	33.044	37.85	43.375	-	33.995
-aldo-keto reductase (NADP) activity	FC (WS / NS)	4.17 (17 / 0)	-	-	-	-	-
-	Percentile (%)	0.213	-	-	-	-	-
-alcohol dehydrogenase (NADP+) activity	FC (WS / NS)	4.17 (17 / 0)	-	-	-	-	-
-	Percentile (%)	0.283	-	-	-	-	-
-aldehyde dehydrogenase (NADP+) activity	FC (WS / NS)	4.17 (17 / 0)	1 (1 / 0)	-1.4 (20 / 59)	-	-	-
-	Percentile (%)	0.354	29.076	74.533	-	-	-
-3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	4.09 (32 / 0.94)	2.61 (45 / 6.56)	2.79 (50 / 7)	-	-	2.72 (55 / 7.49)
-	Percentile (%)	0.425	5.084	12.967	-	-	3.156
-tRNA methyltransferase activity	FC (WS / NS)	4 (45 / 1.87)	1 (57 / 28.1)	1.19 (39 / 18)	-	-	-0.93 (1 / 2.81)
-	Percentile (%)	0.496	30.688	36.215	-	-	79.982
-phosphoserine phosphatase activity	FC (WS / NS)	3.81 (13 / 0)	1.84 (16 / 3.75)	-	-	-	-
-	Percentile (%)	0.567	10.911	-	-	-	-
-phosphatidylserine decarboxylase activity	FC (WS / NS)	3.7 (12 / 0)	0.48 (3 / 1.87)	-1.44 (40 / 119)	-	-	-0.92 (3 / 6.56)
-	Percentile (%)	0.638	41.971	74.883	-	-	78.179
-methylglyoxal reductase (NADH-dependent) activity	FC (WS / NS)	3.58 (11 / 0)	-	-	-	-	-
-	Percentile (%)	0.709	-	-	-	-	-
+catalytic activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.01 (33868 / 34156)	1.67 (14.93 / 4)	0.01 (0.01 / 0)	-0.4 (1065 / 1407.65)
+NA	Percentile (%)	0.038	0.12	64.045	10.1	0.752	68.418
+CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	1 (1 / 0)	-4.5 (25 / 588)	-1 (0 / 1)	-	-7.84 (2 / 685.56)
+NA	Percentile (%)	0.038	28.949	96.118	65.622	-	100
+acetate CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	-8.16 (0 / 285)	-	-	-	-4.37 (1 / 40.27)
+NA	Percentile (%)	0.038	99.82	-	-	-	99.018
+transferase activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.01 (11265 / 11375)	3.63 (11.42 / 0)	0 (0 / 0)	0.01 (1789 / 1772.91)
+NA	Percentile (%)	0.038	0.12	64.096	0.341	4.135	57.711
+transferase activity, transferring sulfur-containing groups	FC (WS / NS)	5.46 (43 / 0)	3.81 (13 / 0)	-2.47 (116 / 649)	-	-	-
+NA	Percentile (%)	0.038	1.321	86.159	-	-	-
+structural constituent of ribosome	FC (WS / NS)	5.43 (42 / 0)	2 (3 / 0)	-0.25 (5190 / 6155)	3.63 (11.42 / 0)	0.03 (0.02 / 0)	-0.1 (5890 / 6308.66)
+NA	Percentile (%)	0.043	9.61	66.343	0.319	0.188	60.02
+structural molecule activity	FC (WS / NS)	5.43 (42 / 0)	2 (3 / 0)	-0.26 (5416 / 6505)	2.65 (5.27 / 0)	0.03 (0.02 / 0)	-1.18 (179 / 407.4)
+NA	Percentile (%)	0.043	9.61	66.394	2.18	0.188	83.546
+catalytic activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.01 (33868 / 34156)	1.67 (14.93 / 4)	0.01 (0.01 / 0)	-0.4 (1065 / 1407.65)
+NA	Percentile (%)	0.038	0.12	64.045	10.1	0.752	68.418
+phosphoglucomutase activity	FC (WS / NS)	5 (31 / 0)	2.58 (5 / 0)	-	2.05 (11.42 / 2)	-	0.81 (195 / 110.51)
+NA	Percentile (%)	0.081	5.826	-	6.276	-	25.884
+phosphomannomutase activity	FC (WS / NS)	5 (31 / 0)	0.14 (254 / 230)	-	1.65 (5.27 / 1)	-	0.31 (147 / 118.01)
+NA	Percentile (%)	0.081	47.087	-	10.229	-	42.043
