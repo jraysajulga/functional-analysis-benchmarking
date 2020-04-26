@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
-(S)-2-hydroxy-acid oxidase activity	FC (WS / NS)	1.27 (6 / 1.91)	-	-	-	-	-
-	Percentile (%)	0.272	-	-	-	-	-
-nucleotide diphosphatase activity	FC (WS / NS)	1.23 (4.86 / 1.49)	-	-0.76 (3 / 5.78)	-	-	-
-	Percentile (%)	0.545	-	96.063	-	-	-
-galactosidase activity	FC (WS / NS)	1.17 (5.52 / 1.91)	-	-	-	-	-
-	Percentile (%)	0.817	-	-	-	-	-
-oxidoreductase activity, acting on a sulfur group of donors, disulfide as acceptor	FC (WS / NS)	1.11 (4.39 / 1.49)	-	-	-	-	0.18 (5.36 / 4.61)
-	Percentile (%)	1.09	-	-	-	-	8.978
-lipid transporter activity	FC (WS / NS)	1 (5.98 / 2.49)	-0.16 (4.7 / 5.36)	-	-	-	-
-	Percentile (%)	1.362	76.78	-	-	-	-
-voltage-gated ion channel activity	FC (WS / NS)	0.88 (3.58 / 1.49)	-	-	-	-	-
-	Percentile (%)	1.635	-	-	-	-	-
-kinase regulator activity	FC (WS / NS)	0.82 (5.17 / 2.49)	-	-	-	-	-
-	Percentile (%)	1.907	-	-	-	-	-
-voltage-gated channel activity	FC (WS / NS)	0.78 (4 / 1.91)	-	-	-	-	-
-	Percentile (%)	2.18	-	-	-	-	-
-alpha-glucosidase activity	FC (WS / NS)	0.73 (5.46 / 2.91)	-	0.92 (6.55 / 3)	-	-	-
-	Percentile (%)	2.452	-	0.394	-	-	-
-hydrolase activity, acting on ether bonds	FC (WS / NS)	0.69 (6.78 / 3.81)	-	0.54 (6.49 / 4.17)	-	-0.05 (-8.98 / -9.26)	-
-	Percentile (%)	2.725	-	2.362	-	34.066	-
+peptide deformylase activity	FC (WS / NS)	2.71 (5.52 / 0)	0.14 (0 / -0.09)	2.74 (5.67 / 0)	-	-	2.92 (5.86 / -0.09)
+NA	Percentile (%)	0.092	30.175	0.89	-	-	0.025
+beta-fructofuranosidase activity	FC (WS / NS)	2.66 (5.32 / 0)	-	2.74 (5.7 / 0)	-	-	2.65 (4.7 / -0.09)
+NA	Percentile (%)	0.114	-	0.846	-	-	0.15
+solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-1.8 (0 / 2.49)	-	-	-	-0.07 (3.17 / 3.36)
+NA	Percentile (%)	0.183	89.129	-	-	-	65.388
+ether hydrolase activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.206	-	-	-	-	-
+2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.62 (5.13 / 0)	-	-	-
+NA	Percentile (%)	0.229	-	1.603	-	-	-
+homocitrate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.252	-	-	-	-	-
+hydroxymethylglutaryl-CoA lyase activity	FC (WS / NS)	2.56 (4.91 / 0)	1 (1 / 0)	-	-	-	-
+NA	Percentile (%)	0.275	8.309	-	-	-	-
+4-hydroxy-2-oxovalerate aldolase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.298	-	-	-	-	-
+urease activity	FC (WS / NS)	2.56 (4.91 / 0)	2.06 (3.17 / 0)	2.16 (3.46 / 0)	-	-	-
+NA	Percentile (%)	0.32	1.475	4.987	-	-	-
+1-phosphofructokinase activity	FC (WS / NS)	2.52 (4.75 / 0)	-	2.63 (5.17 / 0)	-	-	2.81 (5.36 / -0.09)
+NA	Percentile (%)	0.435	-	1.558	-	-	0.05
