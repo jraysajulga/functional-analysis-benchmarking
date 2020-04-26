@@ -1,0 +1,21 @@
+GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+biological_process	FC (WS / NS)	5.46 (43 / 0)	-	-0.12 (50729 / 55002)	-	-	-
+NA	Percentile (%)	0.038	-	65.117	-	-	-
+metabolic process	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.05 (36425 / 37634)	2.43 (4.39 / 0)	0.03 (0.02 / 0)	-0.74 (1529 / 2554.93)
+NA	Percentile (%)	0.038	0.12	64.964	3.224	0.188	76.277
+translation	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-0.18 (9477 / 10773)	3.63 (11.42 / 0)	0.03 (0.02 / 0)	-0.03 (6423 / 6567.15)
+NA	Percentile (%)	0.043	0.42	65.526	0.319	0.188	58.841
+biological_process	FC (WS / NS)	5.46 (43 / 0)	-	-0.12 (50729 / 55002)	-	-	-
+NA	Percentile (%)	0.038	-	65.117	-	-	-
+metabolic process	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.05 (36425 / 37634)	2.43 (4.39 / 0)	0.03 (0.02 / 0)	-0.74 (1529 / 2554.93)
+NA	Percentile (%)	0.038	0.12	64.964	3.224	0.188	76.277
+biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	5.16 (106 / 2)	-0.01 (20242 / 20357)	1.86 (2.64 / 0)	0.03 (0.02 / 0)	0.52 (296 / 206.04)
+NA	Percentile (%)	0.043	0.12	63.994	7.501	0.188	35.56
+macromolecule biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-0.02 (13210 / 13417)	-	0.03 (0.02 / 0)	-
+NA	Percentile (%)	0.043	0.42	64.3	-	0.188	-
+cellular process	FC (WS / NS)	5.43 (42 / 0)	5.16 (106 / 2)	-0.02 (33995 / 34548)	-	0.03 (0.02 / 0)	-
+NA	Percentile (%)	0.043	0.12	64.351	-	0.188	-
+gene expression	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-	-	0.03 (0.02 / 0)	-
+NA	Percentile (%)	0.043	0.42	-	-	0.188	-
+protein metabolic process	FC (WS / NS)	5.43 (42 / 0)	4.72 (78 / 2)	-0.04 (12889 / 13227)	2.84 (6.15 / 0)	0.03 (0.02 / 0)	1.45 (94 / 33.72)
+NA	Percentile (%)	0.043	0.36	64.862	1.407	0.188	13.212
