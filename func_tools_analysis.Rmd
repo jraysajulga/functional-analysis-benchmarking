@@ -369,46 +369,25 @@ paste(print_mqome_cmds("eggnog", 'gos.1'),
 ```
 
 ```{r}
-eggnog_expanded <- read.delim("results/mqome/output/eggnog/eggnog_func_expanded.tab", stringsAsFactors = FALSE) %>%
+import_mqome_output <- function(name, type){
+  read.delim(paste0("results/mqome/output/", name, "/", name, "_func_", type, ".tab"),
+             stringsAsFactors = FALSE) %>%
+    rename(gos = id) %>%
     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
     arrange(-log2ratio)
-eggnog_filtered <- read.delim("results/mqome/output/eggnog/eggnog_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-unipept_expanded <- read.delim("results/mqome/output/unipept/unipept_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-unipept_filtered <- read.delim("results/mqome/output/unipept/unipept_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-metagomics_expanded <- read.delim("results/mqome/output/metagomics/metagomics_func_expanded.tab",
-                             stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-metagomics_filtered <- read.delim("results/mqome/output/metagomics/metagomics_func_filtered.tab",
-                             stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-mpa_expanded <- read.delim("results/mqome/output/mpa/mpa_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-mpa_filtered <- read.delim("results/mqome/output/mpa/mpa_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-prophane_expanded <- read.delim("results/mqome/output/prophane/prophane_func_expanded.tab",
-                                stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-prophane_filtered <- read.delim("results/mqome/output/prophane/prophane_func_filtered.tab",
-                                stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
+}
+eggnog_expanded <- import_mqome_output('eggnog', 'expanded')
+eggnog_filtered <- import_mqome_output('eggnog', 'filtered')
+unipept_expanded <- import_mqome_output('unipept', 'expanded')
+unipept_filtered <- import_mqome_output('unipept', 'filtered')
+metagomics_expanded <- import_mqome_output('metagomics', 'expanded')
+metagomics_filtered <- import_mqome_output('metagomics', 'filtered')
+mpa_expanded <- import_mqome_output('mpa', 'expanded')
+mpa_filtered <- import_mqome_output('mpa', 'filtered')
+prophane_expanded <- import_mqome_output('prophane', 'expanded')
+prophane_filtered <- import_mqome_output('prophane', 'filtered')
+megan_expanded <- import_mqome_output('megan', 'expanded')
+megan_filtered <- import_mqome_output('megan', 'filtered')
 ```
 
 
