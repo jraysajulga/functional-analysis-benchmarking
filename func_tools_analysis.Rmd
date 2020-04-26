@@ -337,7 +337,7 @@ write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2) 
 write_mqome_inputs(eggnog_w_counts_gos, 'eggnog', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(megan_gos, 'megan', 'gos', 'gos', 'countNS', 'countWS')
-write_mqome_inputs(pAll, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(pAll_gos, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(prophane_gos, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
 ```
@@ -435,6 +435,27 @@ tools_mqome <- list(filter_to_nodes(eggnog_expanded),
                     filter_to_nodes(mpa_expanded),
                     filter_to_nodes(prophane_expanded),
                     filter_to_nodes(unipept_expanded))
+
+tools_mqome <- list(filter_to_ancestors(eggnog_expanded), 
+                    filter_to_ancestors(megan_expanded),
+                    filter_to_ancestors(metagomics_expanded),
+                    filter_to_ancestors(mpa_expanded),
+                    filter_to_ancestors(prophane_expanded),
+                    filter_to_ancestors(unipept_expanded))
+
+tools_mqome <- list(eggnog_expanded, 
+                    megan_expanded,
+                    metagomics_expanded,
+                    mpa_expanded,
+                    prophane_expanded,
+                    unipept_expanded)
+
+# tools_mqome <- list(eggnog_filtered, 
+#                     megan_filtered,
+#                     metagomics_filtered,
+#                     mpa_filtered,
+#                     prophane_filtered,
+#                     unipept_filtered)
 
 
 filter_ontology_df <- function(tool, ontology){
@@ -723,21 +744,6 @@ kable(u2m)
 
 
 ### Top Ten Tables
-```{r}
-] "GO:0005506"
-[1] "GO:0009055"
-[1] "GO:0020037"
-[1] "GO:0004854"
-[1] "GO:0018492"
-[1] "GO:0051537"
-[1] "GO:0016614"
-[1] NA
-```
-asdf
-```{r}
-tool_topn <- filterOntology(expand_gos(megan$gos[1:2]), ontology)
-tool_topn
-```
 
 ```{r}
 expand_gos <- function(go_lists){
@@ -805,12 +811,6 @@ get_rank_table("Prophane", tools, 'filtered', ontology)
 
 ### GO list exporting
 ```{r}
-# tools_mqome <- list(eggnog_filtered,
-#                     megan_filtered,
-#                     metagomics_filtered,
-#                     mpa_filtered,
-#                     prophane_filtered,
-#                     unipept_filtered)
 for (i in 1:length(tools)){
   write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
               row.names=FALSE, quote=FALSE)
@@ -827,7 +827,6 @@ for (i in 1:length(tools)){
 }
 ```
 
-
 ### Overlap Plot Generation
 ```{r}
 library(reshape2)
@@ -842,6 +841,7 @@ generate_overlap_plot <- function(ontology){
     c2 <- length(vec2)
     int <- length(intersect(vec1, vec2))
     int / c1
+    # int / (c1 + c2)
   }
   
   jacmat <- matrix(0, nrow = 6, ncol = 6)
@@ -852,7 +852,7 @@ generate_overlap_plot <- function(ontology){
   }
   dimnames(jacmat) <- list(labels, labels)
   
-  gos_filt <- sapply(tools_mqome, function(tool){ tool$id })
+  gos_filt <- sapply(tools_mqome, function(tool){ filter_ontology_df(tool, ontology)$gos })
   
   
   jacslim <- matrix(0, nrow = 6, ncol = 6)
@@ -872,6 +872,11 @@ generate_overlap_plot <- function(ontology){
   
   jac_melt_all <- rbind(jac_melt, jac_melt_slim)
   
+  print(ontology)
+  print(labels)
+  print(sapply(tools, function(tool){ nrow(tool)}))
+  print(sapply(tools_mqome, function(tool){ nrow(tool)}))
+  
   ggplot(jac_melt_all)+
     geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
     geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
@@ -890,3 +895,9 @@ generate_overlap_plot("MF")
 generate_overlap_plot("BP")
 generate_overlap_plot("CC")
 ```
+
+
+```{r}
+mpa_expanded
+```
+
