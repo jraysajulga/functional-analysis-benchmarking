@@ -1,8 +1,8 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 poly(ribitol phosphate) teichoic acid metabolic process	FC (WS / NS)	3.07 (7.41 / 0)	-	-	-	-	-
 NA	Percentile (%)	0.089	-	-	-	-	-
-response to wounding	FC (WS / NS)	2.93 (6.63 / 0)	0.1 (7 / 6.46)	-1 (0 / 1)	-	-	2.75 (5.09 / -0.09)
-NA	Percentile (%)	0.312	34.369	89.448	-	-	0.075
+response to wounding	FC (WS / NS)	2.93 (6.63 / 0)	0.1 (7 / 6.46)	-1 (0 / 1)	0.86 (0.81 / 0)	-	2.75 (5.09 / -0.09)
+NA	Percentile (%)	0.312	34.369	89.448	9.146	-	0.075
 homocysteine catabolic process	FC (WS / NS)	2.9 (6.44 / 0)	0 (0 / 0)	-	-	-	-
 NA	Percentile (%)	0.49	49.946	-	-	-	-
 poly(ribitol phosphate) teichoic acid biosynthetic process	FC (WS / NS)	2.89 (6.41 / 0)	-	-	-	-	-
