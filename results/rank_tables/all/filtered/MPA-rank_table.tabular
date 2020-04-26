@@ -1,0 +1,21 @@
+GO Term	Ranking	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
+hexokinase activity	FC (WS / NS)	3.17 (7.98 / 0)	0.81 (6.43 / 3.23)	0.25 (8.58 / 7.04)	0.35 (7.6 / 5.75)	0.12 (-9.56 / -8.88)	0.39 (6.7 / 4.86)
+NA	Percentile (%)	0.249	12.844	21.767	20.837	30.747	16.541
+fructokinase activity	FC (WS / NS)	3.17 (7.98 / 0)	0.99 (5.43 / 2.23)	-	1.08 (5.32 / 2)	-	1.01 (5.49 / 2.23)
+NA	Percentile (%)	0.499	12.005	-	8.949	-	7.343
+phosphotransferase activity, alcohol group as acceptor	FC (WS / NS)	3.17 (7.98 / 0)	0.05 (10.39 / 9.99)	0.06 (17.62 / 16.86)	0.1 (11.67 / 10.81)	0.38 (-2.4 / -2.08)	0.08 (11.13 / 10.46)
+NA	Percentile (%)	0.748	39.991	36.576	39.849	10.225	40.025
+carbohydrate kinase activity	FC (WS / NS)	3.17 (7.98 / 0)	0.21 (8.98 / 7.65)	0.11 (12.11 / 11.17)	0.13 (9.44 / 8.54)	0.19 (-5.39 / -4.86)	0.17 (8.25 / 7.22)
+NA	Percentile (%)	0.998	23.466	31.06	36.866	22.117	27.268
+oxidoreductase activity, acting on other nitrogenous compounds as donors	FC (WS / NS)	3.14 (7.81 / 0)	-0.5 (5.88 / 8.71)	-0.02 (11.62 / 11.77)	-0.06 (7.72 / 8.07)	-0.02 (-7.36 / -7.46)	0.07 (7.94 / 7.53)
+NA	Percentile (%)	1.247	68.178	69.467	67.32	49.891	44.211
+oxidoreductase activity, acting on other nitrogenous compounds as donors, with NAD or NADP as acceptor	FC (WS / NS)	3.14 (7.81 / 0)	-	-1 (0 / 1)	0.16 (6.82 / 6.02)	-	0.25 (6.09 / 4.95)
+NA	Percentile (%)	1.496	-	90.73	34.506	-	22.03
+azobenzene reductase activity	FC (WS / NS)	3.14 (7.81 / 0)	-	-	0.15 (5.67 / 5)	-	0.25 (5.78 / 4.71)
+NA	Percentile (%)	1.746	-	-	34.817	-	22.155
+metalloendopeptidase activity	FC (WS / NS)	2.95 (6.73 / 0)	0.31 (6.93 / 5.4)	0.14 (11.58 / 10.39)	0.16 (8.1 / 7.17)	-0.43 (-7.31 / -9.5)	0.14 (8.37 / 7.51)
+NA	Percentile (%)	1.995	19.863	27.97	34.283	82.669	35.013
+endonuclease activity	FC (WS / NS)	2.9 (6.46 / 0)	0.15 (8.1 / 7.2)	-0.09 (12.06 / 12.9)	0.04 (9.53 / 9.23)	-0.24 (-7 / -8.08)	0.06 (8.85 / 8.44)
+NA	Percentile (%)	2.244	25.082	76.036	52.271	68.818	45.138
+endodeoxyribonuclease activity	FC (WS / NS)	2.9 (6.46 / 0)	0.05 (6.25 / 5.99)	-0.22 (8.82 / 10.4)	-0.27 (5.98 / 7.4)	-	0.14 (6.86 / 6.15)
+NA	Percentile (%)	2.494	39.944	80.888	75.289	-	35.188

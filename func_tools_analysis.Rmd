@@ -168,6 +168,7 @@ metagomics_filt$namespace <- Ontology(as.character(metagomics_filt$go))
 metagomics_filt
 ```
 
+
 Top *n* results:
 ```{r echo=FALSE, results='asis'}
 kable(head(metagomics_filt, n), caption = paste("MetaGOmics: Top", n, "fold changes"))
@@ -547,8 +548,11 @@ Term(go_target)
 ```{r}
 get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
 filterOntology <- function(gos, ontology){
- gos_filt <- gos[Ontology(gos) == ontology] 
- gos_filt[!is.na(gos_filt)]
+  if (ontology == 'all'){
+    return(gos)
+  }
+    gos_filt <- gos[Ontology(gos) == ontology] 
+    gos_filt[!is.na(gos_filt)]
 }
 split_gos <- function(go_list, delimiter=','){ strsplit(go_list, delimiter)[[1]]}
 ```
@@ -703,10 +707,13 @@ results <- sapply(c("MF", "CC", "BP", "all"),
                   function(ontology){
                     list(plot_correlation(unipept_all, metagomics_filt,
                                           c(-8, 8), ontology),
-                         plot_correlation(unipept_filtered, metagomics_filtered, 
+                         plot_correlation(unipept_expanded, metagomics_expanded, 
                                           c(-1.5, 1.5), ontology, suffix='-filtered'))
                   })
 
+```
+```{r}
+unipept_all
 ```
 
 ### Rank comparison
@@ -760,7 +767,7 @@ expand_gos <- function(go_lists){
 }
 get_rank_table <- function(name, tools, folder, ontology){
     n <- 10
-    if (name == "Unipept"){
+    if (name == "Unipept" && ontology == "MF"){
         n <- 15
     }
     labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
@@ -790,34 +797,28 @@ get_rank_table <- function(name, tools, folder, ontology){
     }
     rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
     write.table(rank_table,
-                file=paste0("results/rank_tables/", folder, "/", name, "-rank_table.tabular"),
+                file=paste0("results/rank_tables/", ontology, '/', folder, "/", name, "-rank_table.tabular"),
                 sep='\t', quote=FALSE, row.names=FALSE)
+    rank_table
 }
-ontology <- 'MF'
-get_rank_table("Unipept", tools, 'full', ontology)
-get_rank_table("EggNOG", tools, 'full', ontology)
-get_rank_table("MEGAN", tools, 'full', ontology)
-get_rank_table("MetaGOmics", tools, 'full', ontology)
-get_rank_table("MPA", tools, 'full', ontology)
-get_rank_table("Prophane", tools, 'full', ontology)
-
-get_rank_table("Unipept", tools_mqome, 'filtered', ontology)
-get_rank_table("EggNOG", tools_mqome, 'filtered', ontology)
-get_rank_table("MEGAN", tools_mqome, 'filtered', ontology)
-get_rank_table("MetaGOmics", tools_mqome, 'filtered', ontology)
-get_rank_table("MPA", tools_mqome, 'filtered', ontology)
-get_rank_table("Prophane", tools, 'filtered', ontology)
+rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
+  list(get_rank_table("Unipept", tools, 'full', ontology),
+       get_rank_table("EggNOG", tools, 'full', ontology),
+       get_rank_table("MEGAN", tools, 'full', ontology),
+       get_rank_table("MetaGOmics", tools, 'full', ontology),
+       get_rank_table("MPA", tools, 'full', ontology),
+       get_rank_table("Prophane", tools, 'full', ontology),
+       get_rank_table("Unipept", tools_mqome, 'filtered', ontology),
+       get_rank_table("EggNOG", tools_mqome, 'filtered', ontology),
+       get_rank_table("MEGAN", tools_mqome, 'filtered', ontology),
+       get_rank_table("MetaGOmics", tools_mqome, 'filtered', ontology),
+       get_rank_table("MPA", tools_mqome, 'filtered', ontology),
+       get_rank_table("Prophane", tools, 'filtered', ontology))
+})
 ```
 ```{r}
-read.delim('results/rank_tables/full/unipept-rank_table.tabular')
-```
-```{r}
-megan_filtered
-ADP-ribose diphosphatase activity
-```
-
-```{r}
-read.delim('results/rank_tables/filtered/unipept-rank_table.tabular')
+read.delim('results/rank_tables/MF/full/mpa-rank_table.tabular')
+read.delim('results/rank_tables/MF/filtered/mpa-rank_table.tabular')
 ```
 
 
