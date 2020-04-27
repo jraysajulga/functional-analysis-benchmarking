@@ -777,7 +777,7 @@ generate_overlap_plot <- function(ontology){
   jac_melt$method <- "Full GO"
   
   jac_melt_slim <- melt(jacslim)
-  jac_melt_slim$method <- "Metaquantome-Filtered GO"
+  jac_melt_slim$method <- "Metaquantome-Expanded GO"
   
   jac_melt_all <- rbind(jac_melt, jac_melt_slim)
   
