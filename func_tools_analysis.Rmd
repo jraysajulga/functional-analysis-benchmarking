@@ -156,7 +156,9 @@ metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_com
            countNS = Run.1.PSM.count,
            countWS = Run.2.PSM.count,
            Laplace.corr..Log.2..fold.change,
-           p = Laplace.corr..q.value)
+           p = Laplace.corr..q.value,
+           peptidesNS = Run.1.peptides,
+           peptidesWS = Run.2.peptides)
 
 metagomics_filt <- calculate_fold_change(metagomics) %>% 
   filter(p < 0.05)
@@ -583,18 +585,23 @@ length(mpa_min_hits)
 paste(unipept_pep_gos_mf, collapse = " ")
 ```
 
-```{r}
-#rows$gos
-filterOntology(as.character(split_gos(rows$gos, delimiter='; ')), 'MF')
-```
+
 
 Metagomics
 ```{r}
-rows <- get_go_rows(min_hits_go, metagomics_filt)
-metagomics_min_hits <- filterOntology(split_gos(rows$gos, delimiter='; '), 'MF')
-rows
-metagomics_min_hits
+target_row <- metagomics_filt[metagomics_filt$gos == go_target,]
+target_peptides <- unique(strsplit(as.character(target_row$peptidesNS), ',')[[1]],
+                   strsplit(as.character(target_row$peptidesWS), ',')[[1]])
+peptide_regex <- paste(paste0('(', target_peptides, ')'), collapse="|")
+target_rows <- metagomics_filt %>%
+  filter(grepl(peptide_regex, peptidesNS) |
+         grepl(peptide_regex, peptidesWS))
+target_rows <- filter_ontology_df(target_rows, 'MF')
+metagomics_min_hits <- target_rows$gos
+target_rows
+paste(metagomics_min_hits, collapse=" ")
 ```
+
 
 MetaProteomeAnalyzer
 ```{r}
@@ -661,16 +668,26 @@ unipept_pep_gos_mf <- unique(unipept_pep_refiltered$go_mf_filtered)
 unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
 ```
-```{r}
-unipept_pep[grepl("GO:0033727", unipept_pep$go_terms),]
-```
+
+Let's write out the peptides associated with 
+eggNOG, metaGOmics, and unipept and see what BLAST2GO gives.
 
 ```{r}
-unipept_pep
+eggnog_peptide <- eggnog[grepl(go_target, eggnog$gos),]$peptide
+target_peptides # Metagomics
+eggnog_peptide
+unipept_pep$X.peptide
 ```
 ```{r}
-paste(unipept_pep_gos_mf, collapse=" ")
+peps_blast2go <- unique(c(as.character(unipept_pep$X.peptide), target_peptides, eggnog_peptide))
+format_to_fasta <- function(peptides){
+  unlist(sapply(peptides, function(peptide) {  list(paste0('>', peptide), peptide) }))
+}
+write.table(format_to_fasta(peps_blast2go),
+                   file='data/tool_inputs/blast2go/xanthine_peps.fasta',
+            quote=FALSE, row.names=FALSE,)
 ```
+
 
 <!-- Export out 'arginine binding' peptides from Unipept for Metagomics: -->
 ```{r}
