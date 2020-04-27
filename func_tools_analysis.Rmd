@@ -144,12 +144,12 @@ write.table(peptidesNS_unnormalized, file="data/tool_inputs/metagomics/737NS_pep
             row.names=FALSE, col.names=FALSE, quote=FALSE, sep="\t")
 ```
 
-The metagomics run is located here: https://www.yeastrc.org/metagomics/viewUploadedFasta.do?uid=ZgOKj9ROcCbJLdlw
+The metagomics run is located here: https://www.yeastrc.org/metagomics/viewUploadedFasta.do?uid=fUQeneujBElcHd5h
 
 We take the top *n* results that have a FDR-corrected $q$ value less than 0.05. 
 
 ```{r}
-metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_compare_149_150.txt",
+metagomics <- read.delim("data/tool_outputs/func_tools/metaGOmics_results/go_compare_624_625.txt",
                          comment.char = "#") %>%
     select(gos = GO.acc,
            name = GO.name,
@@ -279,21 +279,6 @@ Top *n*:
 kable(head(mpa, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
 
-```{r}
-prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
-    filter(ns != "-", ws != "-") %>%
-    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
-    filter(gos != "") %>%
-    select(id = members_identifier, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
-prophane$gos <- sapply(strsplit(prophane$gos,","), function(terms) {
-   paste(terms[terms != "-" & terms != ""], collapse = ",")
-})
-prophane
-```
-```{r}
-test
-```
-
 ## Prophane
 ```{r}
 prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"), 
@@ -405,32 +390,19 @@ megan_expanded <- import_mqome_output('megan', 'expanded')
 megan_filtered <- import_mqome_output('megan', 'filtered')
 ```
 
-
+For filtering small sets
 ```{r}
-test <- megan_gos %>% filter(gos %in% megan_min_hits)
-test <- test[!duplicated(test$gos),]
-write_mqome_inputs(test, 'megan', 'gos', 'gos', 'countNS', 'countWS')
-print_mqome_cmds("megan", "gos.1")
-megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
-    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
+# test <- megan_gos %>% filter(gos %in% megan_min_hits)
+# test <- test[!duplicated(test$gos),]
+# write_mqome_inputs(test, 'megan', 'gos', 'gos', 'countNS', 'countWS')
+# print_mqome_cmds("megan", "gos.1")
+# megan_expanded <- read.delim("results/mqome/output/megan/megan_func_expanded.tab", stringsAsFactors = FALSE) %>%
+#     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+#     arrange(-log2ratio)
+# megan_filtered <- read.delim("results/mqome/output/megan/megan_func_filtered.tab", stringsAsFactors = FALSE) %>%
+#     mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+#     arrange(-log2ratio)
 ```
-
-```{r}
-filter_to_nodes <- function(df){
-  df[is.na(df['countWS_n_samp_children']) &
-     is.na(df['countNS_n_samp_children']),]
-}
-filter_to_ancestors <-function(df){
-  df[!is.na(df['countWS_n_samp_children']) &
-     !is.na(df['countNS_n_samp_children']),]
-}
-```
-
-
 
 # Tool Setup
 
@@ -443,6 +415,16 @@ tools_gos <- list(eggnog_w_counts_gos,
                   prophane_gos,
                   unipept_all)
 tools <- list(eggnog_w_counts, megan, metagomics_filt, mpa, prophane, unipept_all)
+
+filter_to_nodes <- function(df){
+  df[is.na(df['countWS_n_samp_children']) &
+     is.na(df['countNS_n_samp_children']),]
+}
+filter_to_ancestors <-function(df){
+  df[!is.na(df['countWS_n_samp_children']) &
+     !is.na(df['countNS_n_samp_children']),]
+}
+
 tools_mqome <- list(filter_to_nodes(eggnog_expanded), 
                     filter_to_nodes(megan_expanded),
                     filter_to_nodes(metagomics_expanded),
@@ -563,7 +545,12 @@ filterOntology <- function(gos, ontology){
     gos_filt <- gos[Ontology(gos) == ontology] 
     gos_filt[!is.na(gos_filt)]
 }
-split_gos <- function(go_list, delimiter=','){ strsplit(go_list, delimiter)[[1]]}
+split_gos <- function(go_list, delimiter=','){
+  if (!str_detect(go_list, delimiter)){
+    return(as.character(go_list))
+  }
+  strsplit(go_list, delimiter)[[1]]
+}
 ```
 
 
@@ -596,11 +583,15 @@ length(mpa_min_hits)
 paste(unipept_pep_gos_mf, collapse = " ")
 ```
 
+```{r}
+#rows$gos
+filterOntology(as.character(split_gos(rows$gos, delimiter='; ')), 'MF')
+```
 
 Metagomics
 ```{r}
 rows <- get_go_rows(min_hits_go, metagomics_filt)
-metagomics_min_hits <- filterOntology(split_gos(rows$gos), 'MF')
+metagomics_min_hits <- filterOntology(split_gos(rows$gos, delimiter='; '), 'MF')
 rows
 metagomics_min_hits
 ```
@@ -620,6 +611,7 @@ prophane_min_hits <- unique(filterOntology(split_gos(unique(rows$gos)), 'MF'))
 rows
 paste(prophane_min_hits, collapse=" ")
 ```
+
 
 #### Unipept Peptides
 ```{r}
@@ -670,7 +662,14 @@ unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
 ```
 ```{r}
+unipept_pep[grepl("GO:0033727", unipept_pep$go_terms),]
+```
+
+```{r}
 unipept_pep
+```
+```{r}
+paste(unipept_pep_gos_mf, collapse=" ")
 ```
 
 <!-- Export out 'arginine binding' peptides from Unipept for Metagomics: -->
@@ -680,6 +679,133 @@ unipept_pep
 # write.table(paste0(unipept_pep$X.peptide, "\t1"), file=paste0('data/tool_inputs/metagomics/arginine_binding_peptides.txt'),
 #             row.names=FALSE, col.names=FALSE, quote=FALSE)
 ```
+
+
+## Summary Tables
+
+```{r}
+get_exclusive <- function(gos){
+  all <- 1:6
+  sapply(all, function(i){
+    other_ind <- all[-i]
+    others <- unique(c(unlist(gos[other_ind])))
+    length(setdiff(gos[[i]], others))
+  })
+}
+create_summary_df <- function(ontology){
+  translations <- list("MF" = "molecular function", "BP" = "biological process", "CC" = "cellular component", "all" = "all")
+  headers <- list('Type of functional annotation',
+                  'Total number of annotation groups',
+                  'Total (or unique) number of translated GO terms for all ontologies',
+                  paste0('Total (or unique) number of translated ', translations[ontology], ' GO terms'),
+                  paste0('Total number of ', translations[ontology], ' GO terms exclusive to the tool'),
+                  paste0('Total number of ', translations[ontology], ' expanded GO terms'),
+                  paste0('Total number of ', translations[ontology], ' expanded GO terms exclusive to the tool')
+                  )
+  summary_df <- data.frame(
+    rbind(c('Proteins', 'eggNOG orthologous groups', 'GO terms',
+            'Proteins', 'Protein families, eggNOG orthologous groups', 'GO terms'),
+          sapply(tools, function(tool) {nrow(tool)}),
+          sapply(tools_gos, function(tool) {
+            paste0(length(tool$gos), ' (', length(unique(tool$gos)), ')')
+          }),
+          sapply(tools_gos, function(tool) {
+            gos <- filter_ontology_df(tool, ontology)$gos
+            paste0(length(gos), ' (', length(unique(gos)), ')')
+          }),
+          get_exclusive(sapply(tools_gos, function(tool){
+            filter_ontology_df(tool, ontology)$gos
+          })),
+          sapply(tools_mqome, function(tool){
+            length(filter_ontology_df(tool, ontology)$gos)
+          }),
+          get_exclusive(sapply(tools_mqome, function(tool){
+            filter_ontology_df(tool, ontology)$gos
+          }))
+    )
+  )
+  colnames(summary_df) <- labels
+  row.names(summary_df) <- headers
+  write.table(summary_df, file= paste0('results/summary_tables/summary_table-', ontology, '.tabular'),
+              quote=FALSE, sep='\t')
+  summary_df
+}
+create_summary_df('MF')
+create_summary_df('BP')
+create_summary_df('CC')
+create_summary_df('all')
+```
+
+### Overlap Plot Generation
+```{r}
+library(reshape2)
+library(ggplot2)
+
+generate_overlap_plot <- function(ontology){
+  
+  gos <- sapply(tools_gos, function(tool) {filter_ontology_df(tool, ontology)$gos})
+  
+  jaccard <- function(vec1, vec2){
+    c1 <- length(vec1)
+    c2 <- length(vec2)
+    int <- length(intersect(vec1, vec2))
+    int / c1
+    # int / (c1 + c2)
+  }
+  
+  jacmat <- matrix(0, nrow = 6, ncol = 6)
+  for (i in 1:6){
+    for (j in 1:6){
+      jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
+    }
+  }
+  dimnames(jacmat) <- list(labels, labels)
+  
+  gos_filt <- sapply(tools_mqome, function(tool){ filter_ontology_df(tool, ontology)$gos })
+  
+  
+  jacslim <- matrix(0, nrow = 6, ncol = 6)
+  for (i in 1:6){
+    for (j in 1:6){
+      jacslim[i, j] <- jaccard(unique(gos_filt[[i]]),
+                               unique(gos_filt[[j]]))
+    }
+  }
+  dimnames(jacslim) <- list(labels, labels)
+  
+  jac_melt <- melt(jacmat)
+  jac_melt$method <- "Full GO"
+  
+  jac_melt_slim <- melt(jacslim)
+  jac_melt_slim$method <- "Metaquantome-Filtered GO"
+  
+  jac_melt_all <- rbind(jac_melt, jac_melt_slim)
+  
+  print(ontology)
+  print(labels)
+  print(sapply(tools, function(tool){ nrow(tool)}))
+  print(sapply(tools_mqome, function(tool){ nrow(tool)}))
+  
+  ggplot(jac_melt_all)+
+    geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
+    geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
+    scale_fill_gradient(name="", low = "white", high = "dodgerblue", limits = c(0, 1),
+                        guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
+    facet_grid(.~method) +
+    theme_minimal(base_size = 14) +
+    theme(aspect.ratio = 1, axis.text.x = element_text(angle = 90)) +
+    labs(x = NULL, y = NULL)
+  ggsave(paste0("results/overlap_plots/overlap-", paste(ontology, collapse="-"), "-filtered.png"),
+         height = 5, width = 12, units = "in", dpi = 700)
+}
+
+generate_overlap_plot(c("MF", "BP", "CC"))
+generate_overlap_plot("MF")
+generate_overlap_plot("BP")
+generate_overlap_plot("CC")
+```
+
+
 
 
 ## Unipept and MetaGOmics
@@ -850,137 +976,22 @@ for (i in 1:length(tools)){
 }
 ```
 
-### Overlap Plot Generation
+
+
+
+
+
+
 ```{r}
-library(reshape2)
-library(ggplot2)
-
-generate_overlap_plot <- function(ontology){
-  
-  gos <- sapply(tools_gos, function(tool) {filter_ontology_df(tool, ontology)$gos})
-  
-  jaccard <- function(vec1, vec2){
-    c1 <- length(vec1)
-    c2 <- length(vec2)
-    int <- length(intersect(vec1, vec2))
-    int / c1
-    # int / (c1 + c2)
-  }
-  
-  jacmat <- matrix(0, nrow = 6, ncol = 6)
-  for (i in 1:6){
-    for (j in 1:6){
-      jacmat[i, j] <- jaccard(unique(gos[[i]]), unique(gos[[j]]))
-    }
-  }
-  dimnames(jacmat) <- list(labels, labels)
-  
-  gos_filt <- sapply(tools_mqome, function(tool){ filter_ontology_df(tool, ontology)$gos })
-  
-  
-  jacslim <- matrix(0, nrow = 6, ncol = 6)
-  for (i in 1:6){
-    for (j in 1:6){
-      jacslim[i, j] <- jaccard(unique(gos_filt[[i]]),
-                               unique(gos_filt[[j]]))
-    }
-  }
-  dimnames(jacslim) <- list(labels, labels)
-  
-  jac_melt <- melt(jacmat)
-  jac_melt$method <- "Full GO"
-  
-  jac_melt_slim <- melt(jacslim)
-  jac_melt_slim$method <- "Metaquantome-Filtered GO"
-  
-  jac_melt_all <- rbind(jac_melt, jac_melt_slim)
-  
-  print(ontology)
-  print(labels)
-  print(sapply(tools, function(tool){ nrow(tool)}))
-  print(sapply(tools_mqome, function(tool){ nrow(tool)}))
-  
-  ggplot(jac_melt_all)+
-    geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
-    geom_text(aes(x = Var1, y = Var2, label = format(value, digits = 2))) + 
-    scale_fill_gradient(name="", low = "white", high = "dodgerblue", limits = c(0, 1),
-                        guide = guide_colorbar(frame.colour = "black", ticks.colour = "black")) +
-    facet_grid(.~method) +
-    theme_minimal(base_size = 14) +
-    theme(aspect.ratio = 1, axis.text.x = element_text(angle = 90)) +
-    labs(x = NULL, y = NULL)
-  ggsave(paste0("results/overlap_plots/overlap-", paste(ontology, collapse="-"), "-filtered.png"),
-         height = 5, width = 12, units = "in", dpi = 700)
-}
-
-generate_overlap_plot(c("MF", "BP", "CC"))
-generate_overlap_plot("MF")
-generate_overlap_plot("BP")
-generate_overlap_plot("CC")
+eggnog
 ```
 
-
-
-
-
-  translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
-  tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
-
-  
 ```{r}
-get_exclusive <- function(gos){
-  sapply(all, function(i){
-    other_ind <- all[-i]
-    others <- unique(c(unlist(gos[other_ind])))
-    length(setdiff(gos[[i]], others))
-  })
-}
-create_summary_df <- function(ontology){
-  translations <- list("MF" = "molecular function", "BP" = "biological process", "CC" = "cellular component", "all" = "all")
-  headers <- list('Type of functional annotation',
-                  'Total number of annotation groups',
-                  'Total (or unique) number of translated GO terms for all ontologies',
-                  paste0('Total (or unique) number of translated ', translations[ontology], ' GO terms'),
-                  paste0('Total number of ', translations[ontology], ' GO terms exclusive to the tool'),
-                  paste0('Total number of ', translations[ontology], ' expanded GO terms'),
-                  paste0('Total number of ', translations[ontology], ' expanded GO terms exclusive to the tool')
-                  )
-  summary_df <- data.frame(
-    rbind(c('Proteins', 'eggNOG orthologous groups', 'GO terms',
-            'Proteins', 'Protein families, eggNOG orthologous groups', 'GO terms'),
-          sapply(tools, function(tool) {nrow(tool)}),
-          sapply(tools_gos, function(tool) {
-            paste0(length(tool$gos), ' (', length(unique(tool$gos)), ')')
-          }),
-          sapply(tools_gos, function(tool) {
-            gos <- filter_ontology_df(tool, ontology)$gos
-            paste0(length(gos), ' (', length(unique(gos)), ')')
-          }),
-          get_exclusive(sapply(tools_gos, function(tool){
-            filter_ontology_df(tool, ontology)$gos
-          })),
-          sapply(tools_mqome, function(tool){
-            length(filter_ontology_df(tool, ontology)$gos)
-          }),
-          get_exclusive(sapply(tools_mqome, function(tool){
-            filter_ontology_df(tool, ontology)$gos
-          }))
-    )
-  )
-  colnames(summary_df) <- labels
-  row.names(summary_df) <- headers
-  write.table(summary_df, file= paste0('results/summary_tables/summary_table-', ontology, '.tabular'),
-              quote=FALSE)
-  summary_df
-}
-create_summary_df('MF')
-create_summary_df('BP')
-create_summary_df('CC')
-create_summary_df('all')
+unipept_pep
 ```
 
-
 ```{r}
-
+all_results <- plyr::join_all(list(em, blast, mg, uni), by = "peptide")
+all_results
 ```
 
