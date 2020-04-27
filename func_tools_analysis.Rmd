@@ -47,9 +47,9 @@ peptidesWS <- read.delim("data/tool_outputs/peptide_shaker_outputs/737WS_Peptide
     select(peptide = Sequence, countWS = "X.Validated.PSMs") 
 
 norm_ratio <- sum(peptidesWS$countWS) / sum(peptidesNS$countNS)
-peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
 peptidesNS_unnormalized <- peptidesNS
 peptidesNS$countNS <- peptidesNS$countNS * sum(peptidesWS$countWS) / sum(peptidesNS$countNS)
+peptides_all <- full_join(peptidesNS, peptidesWS, by = "peptide")
 peptides_all[is.na(peptides_all)] <- 0
 peptides_all
 write.table(peptides_all$peptide, file="data/tool_outputs/peptide_shaker_outputs/peptides_all.txt",
@@ -99,8 +99,6 @@ eggnog_w_counts <- left_join(eggnog,
     group_by(protein, desc, gene, gos) %>%
     summarize(countWS = sum(countWS), countNS = sum(countNS)) %>%
     select(protein, gos, gene, countWS, countNS, desc)
-#eggnog_w_counts$gos <- filterOntology(eggnog_w_counts$gos, ontology)
-#eggnog_w_counts$name <- sapply(strsplit(eggnog_w_counts$gos, ","), function ( x ) { paste(Term(x), collapse="; ")})
 
 eggnog_w_counts <- calculate_fold_change(eggnog_w_counts)
 eggnog_w_counts_gos <- expand_by_go(eggnog_w_counts, ',', 'protein')
@@ -119,7 +117,7 @@ kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold c
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
 ## Blast
-```{r}
+# ```{r}
 # blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular',
 #                    stringsAsFactors = FALSE,
 #                     header = FALSE) %>%
@@ -132,11 +130,9 @@ The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the Ya
 #     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
 #     arrange(-log2ratio)
 # ```
-# 
 # Print results:
 # ```{r echo=FALSE, results='asis'}
 # kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
-```
 
 ## metaGOmics
 
@@ -252,26 +248,26 @@ ws_files <- list.files('data/tool_outputs/func_tools/mpa_results/WS', pattern = 
 pWS <- bind_rows(lapply(ws_files, function(i) read.delim(i, stringsAsFactors = FALSE))) %>%
     group_by(Protein.Accession, Protein.Description) %>%
     summarize("SpecCount" = sum(Spectral.Count))
-pAll <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description"))) %>%
+mpa <- data.table(full_join(pNS, pWS, by=c("Protein.Accession", "Protein.Description"))) %>%
     rename(countNS = SpecCount.x, countWS = SpecCount.y, )
 
 mpa_uniprot <- read.delim('data/tool_outputs/func_tools/mpa_results/uniprot_protein_results.tab', stringsAsFactors = FALSE)
-pAll$gos <- as.character(sapply(pAll$Protein.Accession, function ( protid ) {
+mpa$gos <- as.character(sapply(mpa$Protein.Accession, function ( protid ) {
     goids <- mpa_uniprot[mpa_uniprot$Entry == protid,]$Gene.ontology.IDs
 }))
 
 # Normalization ratio
-mpa_norm <- sum(pAll$countNS[!is.na(pAll$countNS)]) / sum(pAll$countWS[!is.na(pAll$countWS)])
-pAll$countWS <- pAll$countWS * mpa_norm
+mpa_norm <- sum(mpa$countNS[!is.na(mpa$countNS)]) / sum(mpa$countWS[!is.na(mpa$countWS)])
+mpa$countWS <- mpa$countWS * mpa_norm
 
-pAll[is.na(pAll)] <- 0
-pAll <- calculate_fold_change(pAll, delimiter="; ")
+mpa[is.na(mpa)] <- 0
+mpa <- calculate_fold_change(mpa, delimiter="; ")
 
-pAll_gos <- expand_by_go(pAll, "; ", 'Protein.Accession')
-pAll
-pAll_gos
-# ns <- pAll$SpecCount.x
-# ws <- pAll$SpecCount.y
+mpa_gos <- expand_by_go(mpa, "; ", 'Protein.Accession')
+mpa
+mpa_gos
+# ns <- mpa$SpecCount.x
+# ws <- mpa$SpecCount.y
 # sum(ns[!is.na(ns)])
 # sum(ws[!is.na(ws)])
 # sum(ns[!is.na(ns)]) / sum(ws[!is.na(ws)])
@@ -280,24 +276,10 @@ pAll_gos
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
-kable(head(pAll, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
+kable(head(mpa, n), caption = paste("MetaProteomeAnalyzer: top", n, "Fold Changes"))
 ```
 
-
-## Prophane
 ```{r}
-prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"), sep = "\t",
-                          stringsAsFactors = FALSE) %>% select(members_identifier,
-                                                               ws = quant..sample_737..mean.,
-                                                               ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                                                               ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
-                                                               ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane_NS <- read.delim(paste0(tools_dir, "prophane_results/summary_NS.txt"), sep = "\t",
-                          stringsAsFactors = FALSE) %>% select(members_identifier,
-                                                               ns = quant..sample_737..mean.,
-                                                               ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
-                                                               ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
-                                                               ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
 prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     filter(ns != "-", ws != "-") %>%
     mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=","))) %>%
@@ -306,13 +288,41 @@ prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_iden
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(terms) {
    paste(terms[terms != "-" & terms != ""], collapse = ",")
 })
+prophane
+```
+```{r}
+test
+```
+
+## Prophane
+```{r}
+prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"), 
+                          sep = "\t", stringsAsFactors = FALSE) %>%
+  filter(level == 'group') %>%
+  select(members_identifier,
+         ws = quant..sample_737..mean.,
+         ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+         ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
+         ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane_NS <- read.delim(paste0(tools_dir, "prophane_results/summary_NS.txt"), 
+                          sep = "\t", stringsAsFactors = FALSE) %>% 
+  filter(level == 'group') %>%
+  select(members_identifier,
+         ns = quant..sample_737..mean.,
+         ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
+         ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
+         ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
+prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
+    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=",")),
+           ns = replace(ns, ns=='-', 0),
+           ws = replace(ws, ws=='-', 0)) %>%
+    select(id = members_identifier, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
+prophane$gos <- sapply(strsplit(prophane$gos,","), function(terms) {
+   paste(terms[terms != "-" & terms != ""], collapse = ",")
+})
 
 prophane <- calculate_fold_change(prophane)
 prophane_gos <- expand_by_go(prophane, ',', 'id')
-  #expand_by_go(prophane, ',') %>%
-  #  mutate(log2ratio = log2(as.double(countWS)/as.double(countNS))) %>%
-  #  arrange(-log2ratio)
-#prophane$namespace <- Ontology(prophane$gos)
 prophane
 prophane_gos
 ```
@@ -338,7 +348,7 @@ write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2) 
 write_mqome_inputs(eggnog_w_counts_gos, 'eggnog', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(metagomics_filt, 'metagomics', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(megan_gos, 'megan', 'gos', 'gos', 'countNS', 'countWS')
-write_mqome_inputs(pAll_gos, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
+write_mqome_inputs(mpa_gos, 'mpa', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(prophane_gos, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
 ```
@@ -429,10 +439,10 @@ labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
 tools_gos <- list(eggnog_w_counts_gos,
                   megan_gos,
                   metagomics_filt,
-                  pAll_gos,
+                  mpa_gos,
                   prophane_gos,
                   unipept_all)
-tools <- list(eggnog_w_counts, megan, metagomics_filt, pAll, prophane, unipept_all)
+tools <- list(eggnog_w_counts, megan, metagomics_filt, mpa, prophane, unipept_all)
 tools_mqome <- list(filter_to_nodes(eggnog_expanded), 
                     filter_to_nodes(megan_expanded),
                     filter_to_nodes(metagomics_expanded),
@@ -460,9 +470,8 @@ tools_mqome <- list(eggnog_expanded,
 #                     mpa_filtered,
 #                     prophane_filtered,
 #                     unipept_filtered)
-
-
 filter_ontology_df <- function(tool, ontology){
+  if (ontology == 'all') { return( tool )}
   translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
   tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
 }
@@ -598,7 +607,7 @@ metagomics_min_hits
 
 MetaProteomeAnalyzer
 ```{r}
-rows <- get_go_rows(go_target, pAll)
+rows <- get_go_rows(go_target, mpa)
 mpa_min_hits <- filterOntology(split_gos(unique(rows$gos), delimiter="; "), 'MF')
 rows
 paste(mpa_min_hits, collapse=' ')
@@ -659,6 +668,9 @@ unipept_pep_refiltered <- unipept_pep %>%
 unipept_pep_gos_mf <- unique(unipept_pep_refiltered$go_mf_filtered)
 unipept_pep_gos_mf <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
 unipept_pep_gos_mf
+```
+```{r}
+unipept_pep
 ```
 
 <!-- Export out 'arginine binding' peptides from Unipept for Metagomics: -->
@@ -821,7 +833,6 @@ read.delim('results/rank_tables/MF/full/mpa-rank_table.tabular')
 read.delim('results/rank_tables/MF/filtered/mpa-rank_table.tabular')
 ```
 
-
 ### GO list exporting
 ```{r}
 for (i in 1:length(tools)){
@@ -836,7 +847,6 @@ for (i in 1:length(tools)){
   write.table(filter_ontology_df(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
                                           tolower(labels[i]), '.tabular'),
               row.names=FALSE, col.names=FALSE, quote=FALSE)
-
 }
 ```
 
@@ -910,7 +920,67 @@ generate_overlap_plot("CC")
 ```
 
 
+
+
+
+  translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
+  tool %>% filter(namespace %in% c(ontology, translations[ontology][[1]]))
+
+  
 ```{r}
-mpa_expanded
+get_exclusive <- function(gos){
+  sapply(all, function(i){
+    other_ind <- all[-i]
+    others <- unique(c(unlist(gos[other_ind])))
+    length(setdiff(gos[[i]], others))
+  })
+}
+create_summary_df <- function(ontology){
+  translations <- list("MF" = "molecular function", "BP" = "biological process", "CC" = "cellular component", "all" = "all")
+  headers <- list('Type of functional annotation',
+                  'Total number of annotation groups',
+                  'Total (or unique) number of translated GO terms for all ontologies',
+                  paste0('Total (or unique) number of translated ', translations[ontology], ' GO terms'),
+                  paste0('Total number of ', translations[ontology], ' GO terms exclusive to the tool'),
+                  paste0('Total number of ', translations[ontology], ' expanded GO terms'),
+                  paste0('Total number of ', translations[ontology], ' expanded GO terms exclusive to the tool')
+                  )
+  summary_df <- data.frame(
+    rbind(c('Proteins', 'eggNOG orthologous groups', 'GO terms',
+            'Proteins', 'Protein families, eggNOG orthologous groups', 'GO terms'),
+          sapply(tools, function(tool) {nrow(tool)}),
+          sapply(tools_gos, function(tool) {
+            paste0(length(tool$gos), ' (', length(unique(tool$gos)), ')')
+          }),
+          sapply(tools_gos, function(tool) {
+            gos <- filter_ontology_df(tool, ontology)$gos
+            paste0(length(gos), ' (', length(unique(gos)), ')')
+          }),
+          get_exclusive(sapply(tools_gos, function(tool){
+            filter_ontology_df(tool, ontology)$gos
+          })),
+          sapply(tools_mqome, function(tool){
+            length(filter_ontology_df(tool, ontology)$gos)
+          }),
+          get_exclusive(sapply(tools_mqome, function(tool){
+            filter_ontology_df(tool, ontology)$gos
+          }))
+    )
+  )
+  colnames(summary_df) <- labels
+  row.names(summary_df) <- headers
+  write.table(summary_df, file= paste0('results/summary_tables/summary_table-', ontology, '.tabular'),
+              quote=FALSE)
+  summary_df
+}
+create_summary_df('MF')
+create_summary_df('BP')
+create_summary_df('CC')
+create_summary_df('all')
+```
+
+
+```{r}
+
 ```
 
