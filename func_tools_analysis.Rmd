@@ -688,6 +688,30 @@ write.table(format_to_fasta(peps_blast2go),
             quote=FALSE, row.names=FALSE,)
 ```
 
+After running the peptides through BLAST, let's retrieve the GO terms:
+
+```{r}
+find_pep_in_tool <- function(peptide, labels){
+  target_peps <- list('MetaGOmics' = target_peptides,
+                  'EggNOG' = eggnog_peptide,
+                  'Unipept' = unipept_pep$X.peptide)
+  paste(labels[sapply(labels, function(label) {"YVGDAIALVATTEKK" %in% target_peps[[label]]})],
+      collapse=",")
+}
+
+blast2go <- read.delim('data/tool_outputs/blast2go/blast2go_go_table.txt') %>%
+  select(peptide = SeqName,
+         description = Description,
+         gos = GO.IDs) %>%
+  mutate(tool = sapply(peptide, function(pep) { find_pep_in_tool(pep, labels)}))
+
+blast2go
+```
+
+
+
+
+
 
 <!-- Export out 'arginine binding' peptides from Unipept for Metagomics: -->
 ```{r}

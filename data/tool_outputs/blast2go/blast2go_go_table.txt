@@ -1,0 +1,54 @@
+	Tags	SeqName	Description	Length	#Hits	e-Value	sim mean	#GO	GO IDs	GO Names	Enzyme Codes	Enzyme Names	InterPro IDs	InterPro GO IDs	InterPro GO Names
+true	[NO-BLAST]	KAERVELAK	---NA---	10											
+true	[NO-BLAST]	ITDLKEIDIR	---NA---	10											
+true	[BLASTED]	VFVERPDTVR	selenium-dependent xanthine dehydrogenase	10	1	820.603	100.0								
+true	[NO-BLAST]	QKVIAAKAELVR	---NA---	12											
+true	[NO-BLAST]	KVDGDKFDR	---NA---	9											
+true	[NO-BLAST]	TKEETIKR	---NA---	8											
+true	[NO-BLAST]	VDGDKFDR	---NA---	8											
+true	[BLASTED, MAPPED]	GTPEQYAYGAK	selenium-dependent xanthine dehydrogenase	11	28	507.421	100.0	8	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	VDGDKLDR	---NA---	8											
+true	[BLASTED, MAPPED]	ALEHPACVTALTAK	selenium-dependent xanthine dehydrogenase	14	48	13.7679	92.37	12	F:GO:0004854; F:GO:0008270; F:GO:0009055; P:GO:0009056; F:GO:0016491; F:GO:0016788; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:zinc ion binding; F:electron transfer activity; P:catabolic process; F:oxidoreductase activity; F:hydrolase activity, acting on ester bonds; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	LNKVEELKK	---NA---	9											
+true	[NO-BLAST]	TEAEKLELTR	---NA---	10											
+true	[BLASTED, MAPPED]	ENLPVPEKDTNGNVGAR	selenium-dependent xanthine dehydrogenase	17	41	0.044612	92.53	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED, MAPPED]	VANLHVAYDVGR	selenium-dependent xanthine dehydrogenase	12	30	79.0429	98.89	8	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	KATLVAK	---NA---	7											
+true	[NO-BLAST]	LELLKDKER	---NA---	9											
+true	[BLASTED, MAPPED]	YVGDAIALVATTEKK	selenium-dependent xanthine dehydrogenase	15	40	10.5665	98.0	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED]	KEEFKQEKETLEK	hypothetical protein RN97_09825	13	1	47.788	100.0								
+true	[BLASTED, MAPPED]	ETALVECLEAVK	selenium-dependent xanthine dehydrogenase	12	16	353.324	100.0	8	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	AILGNICR	---NA---	8											
+true	[NO-BLAST]	ENIEKEKDILR	---NA---	11											
+true	[NO-BLAST]	LVGGGFGGK	---NA---	9											
+true	[NO-BLAST]	YDDKIDAAR	---NA---	9											
+true	[NO-BLAST]	SIVTIEGLSER	---NA---	11											
+true	[NO-BLAST]	TKEELLKR	---NA---	8											
+true	[NO-BLAST]	KMSSKELAEK	---NA---	10											
+true	[NO-BLAST]	KEAAKEALDR	---NA---	10											
+true	[BLASTED, MAPPED]	TGHLVPDWDVLIAEGDITR	selenium-dependent xanthine dehydrogenase	19	50	9.40574E-5	98.0	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	IEEGIMLAAK	---NA---	10											
+true	[BLASTED, MAPPED]	IVGAKGKAALLR	thioredoxin	12	9	469.104	100.0	5	C:GO:0005623; P:GO:0006662; F:GO:0015035; P:GO:0045454; P:GO:0055114	C:cell; P:glycerol ether metabolic process; F:protein disulfide oxidoreductase activity; P:cell redox homeostasis; P:oxidation-reduction process					
+true	[BLASTED]	EEFKQEKETLEK	hypothetical protein RN97_09825	12	1	194.574	100.0								
+true	[NO-BLAST]	RAAAAEREAR	---NA---	10											
+true	[NO-BLAST]	GIGEISSIPIAPAIANAYR	---NA---	19											
+true	[NO-BLAST]	QTLFTGEATR	---NA---	10											
+true	[BLASTED, MAPPED]	FQVNGTQYEVQEDQR	selenium-dependent xanthine dehydrogenase	15	33	0.206811	98.18	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	ENLPVPEK	---NA---	8											
+true	[NO-BLAST]	QESLNIHTK	---NA---	9											
+true	[NO-BLAST]	ESLEKAVER	---NA---	9											
+true	[NO-BLAST]	QTVFTGEATR	---NA---	10											
+true	[NO-BLAST]	ALADKYFPK	---NA---	9											
+true	[BLASTED, MAPPED]	YVGDAIALVATTEK	selenium-dependent xanthine dehydrogenase	14	34	47.2289	100.0	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	SVVTIEGLSER	---NA---	11											
+true	[NO-BLAST]	RVAQAKVDLAR	---NA---	11											
+true	[NO-BLAST]	TGLAVCLK	---NA---	8											
+true	[BLASTED, MAPPED]	NSGIGVGLPDTGR	selenium-dependent xanthine dehydrogenase	13	50	22.2134	100.0	8	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED, MAPPED]	ATQCPPIHVSLIEK	selenium-dependent xanthine dehydrogenase	14	35	0.890439	98.13	14	F:GO:0004854; P:GO:0007165; F:GO:0009055; P:GO:0009190; C:GO:0016020; C:GO:0016021; F:GO:0016491; P:GO:0022900; F:GO:0033727; P:GO:0035556; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; P:signal transduction; F:electron transfer activity; P:cyclic nucleotide biosynthetic process; C:membrane; C:integral component of membrane; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; P:intracellular signal transduction; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED, MAPPED]	NVVRPGDSLPNGQICSK	selenium-dependent xanthine dehydrogenase	17	50	0.00326643	95.62	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED, MAPPED]	VLIDENNDPTPDDVKK	selenium-dependent xanthine dehydrogenase	16	39	0.071659	97.16	9	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0033727; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:aldehyde dehydrogenase (FAD-independent) activity; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[NO-BLAST]	IGGGFGSK	---NA---	8											
+true	[NO-BLAST]	RSAYRDAEAR	---NA---	10											
+true	[NO-BLAST]	EDIIKDIESK	---NA---	10											
+true	[BLASTED, MAPPED]	TPDSGTTTASR	selenium-dependent xanthine dehydrogenase	11	3	727.222	100.0	8	F:GO:0004854; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0051536; F:GO:0051537; P:GO:0055114	F:xanthine dehydrogenase activity; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process					
+true	[BLASTED, MAPPED]	NNDGAYYLQTQFTNADK	amylase-binding protein	17	12	0.0238334	94.72	10	F:GO:0005506; F:GO:0009055; F:GO:0016491; P:GO:0022900; F:GO:0046872; F:GO:0050660; F:GO:0051536; F:GO:0051537; P:GO:0055114; F:GO:0071949	F:iron ion binding; F:electron transfer activity; F:oxidoreductase activity; P:electron transport chain; F:metal ion binding; F:flavin adenine dinucleotide binding; F:iron-sulfur cluster binding; F:2 iron, 2 sulfur cluster binding; P:oxidation-reduction process; F:FAD binding					
