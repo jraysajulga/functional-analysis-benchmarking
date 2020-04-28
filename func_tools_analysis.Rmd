@@ -673,8 +673,10 @@ Let's write out the peptides associated with
 eggNOG, metaGOmics, and unipept and see what BLAST2GO gives.
 
 ```{r}
-eggnog_peptide <- eggnog[grepl(go_target, eggnog$gos),]$peptide
+row <- eggnog[grepl(go_target, eggnog$gos),]
+eggnog_peptide <- row$peptide
 target_peptides # Metagomics
+row$protein
 eggnog_peptide
 unipept_pep$X.peptide
 ```
@@ -720,16 +722,17 @@ blast2go
 ```
 
 ```{r}
-library(plyr)
-go_presence <- join_all(lapply(labels, function(label){
+go_dfs <- lapply(labels, function(label){
   gos <- unique(unlist(strsplit(blast2go[grepl(label, blast2go$tool),]$names, ',')))
   df <- data.frame(label = gos)
   df[label] <- gos
   df
-}))
-go_presence
+})
+go_dfs <- go_dfs[sapply(go_dfs, function(go_df) { nrow(go_df) > 0})]
+go_dfs %>% reduce(full_join, by="label")
+# blast2go[grepl('EggNOG', blast2go$tool),]
+#paste(strsplit(blast2go[grepl('Unipept', blast2go$tool),]$gos_mf, ',')[[1]], collapse=' ')
 ```
-
 
 
 <!-- Export out 'arginine binding' peptides from Unipept for Metagomics: -->
