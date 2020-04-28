@@ -544,7 +544,7 @@ filterOntology <- function(gos, ontology){
   if (ontology == 'all'){
     return(gos)
   }
-    gos_filt <- gos[Ontology(gos) == ontology] 
+    gos_filt <- gos[Ontology(as.character(gos)) == ontology] 
     gos_filt[!is.na(gos_filt)]
 }
 split_gos <- function(go_list, delimiter=','){
@@ -695,21 +695,40 @@ find_pep_in_tool <- function(peptide, labels){
   target_peps <- list('MetaGOmics' = target_peptides,
                   'EggNOG' = eggnog_peptide,
                   'Unipept' = unipept_pep$X.peptide)
-  paste(labels[sapply(labels, function(label) {"YVGDAIALVATTEKK" %in% target_peps[[label]]})],
+  paste(labels[sapply(labels, function(label) {peptide %in% target_peps[[label]]})],
       collapse=",")
 }
 
 blast2go <- read.delim('data/tool_outputs/blast2go/blast2go_go_table.txt') %>%
   select(peptide = SeqName,
          description = Description,
-         gos = GO.IDs) %>%
-  mutate(tool = sapply(peptide, function(pep) { find_pep_in_tool(pep, labels)}))
+         gos_all = GO.IDs) %>%
+  mutate(tool = sapply(peptide, function(pep) { find_pep_in_tool(pep, labels)}),
+         gos_all = sapply(gos_all, function(go_list) {
+           paste(str_extract(strsplit(as.character(go_list), '; ')[[1]], 'GO:\\d+'), collapse=',')
+         }),
+         gos_mf = sapply(gos_all, function(go_list){
+           paste(filterOntology(strsplit(go_list, ',')[[1]], 'MF'), collapse=',')
+           }),
+         names = sapply(gos_mf, function(go_list){
+           paste(Term(strsplit(go_list, ',')[[1]]), collapse=',')
+         })) %>%
+  group_by(names, gos_mf, tool) %>%
+  summarize(peptides = paste(peptide, collapse=","))
 
 blast2go
 ```
 
-
-
+```{r}
+library(plyr)
+go_presence <- join_all(lapply(labels, function(label){
+  gos <- unique(unlist(strsplit(blast2go[grepl(label, blast2go$tool),]$names, ',')))
+  df <- data.frame(label = gos)
+  df[label] <- gos
+  df
+}))
+go_presence
+```
 
 
 
