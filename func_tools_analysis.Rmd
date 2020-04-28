@@ -716,7 +716,8 @@ blast2go <- read.delim('data/tool_outputs/blast2go/blast2go_go_table.txt') %>%
            paste(Term(strsplit(go_list, ',')[[1]]), collapse=',')
          })) %>%
   group_by(names, gos_mf, tool) %>%
-  summarize(peptides = paste(peptide, collapse=","))
+  summarize(peptides = paste(peptide, collapse=",")) %>%
+  filter(length(strsplit(peptides, ',')[[1]]) > 1)
 
 blast2go
 ```
@@ -729,7 +730,9 @@ go_dfs <- lapply(labels, function(label){
   df
 })
 go_dfs <- go_dfs[sapply(go_dfs, function(go_df) { nrow(go_df) > 0})]
-go_dfs %>% reduce(full_join, by="label")
+go_dfs <- go_dfs %>% reduce(full_join, by="label")
+go_dfs$label <- NULL
+go_dfs
 # blast2go[grepl('EggNOG', blast2go$tool),]
 #paste(strsplit(blast2go[grepl('Unipept', blast2go$tool),]$gos_mf, ',')[[1]], collapse=' ')
 ```
