@@ -1,0 +1,21 @@
+GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
+Smc5-Smc6 complex	FC (WS / NS)	1.88 (2.32 / -0.09)	-	0.14 (4.17 / 3.7)	-	-	-
+NA	Percentile (%)	1.438	-	25.911	-	-	-
+exocyst	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	1.654	-	-	-	-	-
+presynaptic active zone	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.014	-	-	-	-	-
+condensin complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-2.08 (0 / 3.23)	0.13 (5.25 / 4.7)	-	-	-
+NA	Percentile (%)	2.157	91.521	26.312	-	-	-
+bacterial-type flagellum basal body, MS ring	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.553	-	-	-	-	-
+CCAAT-binding factor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.697	-	-	-	-	-
+proteasome core complex, alpha-subunit complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.841	-	-	-	-	-
+clathrin adaptor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.877	-	-	-	-	-
+polysomal ribosome	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+NA	Percentile (%)	2.913	-	-	-	-	-
+postsynapse	FC (WS / NS)	1.46 (4.25 / 0.91)	-	-	-	-	-
+NA	Percentile (%)	3.272	-	-	-	-	-

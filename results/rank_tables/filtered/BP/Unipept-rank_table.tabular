@@ -1,0 +1,21 @@
+GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
+response to wounding	FC (WS / NS)	2.75 (5.09 / -0.09)	-	-	-	0.86 (0.81 / 0)	-
+NA	Percentile (%)	0.108	-	-	-	9.005	-
+RNA secondary structure unwinding	FC (WS / NS)	2.51 (4.17 / -0.09)	0.27 (4.7 / 3.71)	-	-	0.86 (0.81 / 0)	-
+NA	Percentile (%)	0.216	17.292	-	-	9.078	-
+galactose catabolic process	FC (WS / NS)	2.51 (4.17 / -0.09)	-	0 (4.91 / 4.91)	-	-	-
+NA	Percentile (%)	0.252	-	59.98	-	-	-
+tRNA 3'-terminal CCA addition	FC (WS / NS)	2.25 (3.32 / -0.09)	-	0.27 (3.58 / 2.81)	-	-	-
+NA	Percentile (%)	0.467	-	18.923	-	-	-
+regulation of DNA repair	FC (WS / NS)	2.25 (3.32 / -0.09)	0.14 (0 / -0.09)	-	-	-	-
+NA	Percentile (%)	0.503	22.88	-	-	-	-
+rRNA catabolic process	FC (WS / NS)	2.14 (3 / -0.09)	-	1.73 (2.32 / 0)	-	-2.81 (0 / 6)	-
+NA	Percentile (%)	0.755	-	4.045	-	90.196	-
+L-methionine salvage from S-adenosylmethionine	FC (WS / NS)	2.14 (3 / -0.09)	0.04 (2.81 / 2.71)	-0.33 (4.75 / 6.23)	-0.42 (3.17 / 4.58)	-	-
+NA	Percentile (%)	0.791	41.724	85.356	80.374	-	-
+dTDP biosynthetic process	FC (WS / NS)	2.07 (2.81 / -0.09)	-	0.2 (2.81 / 2.32)	-	-	-
+NA	Percentile (%)	1.007	-	22.635	-	-	-
+pyrimidine nucleoside diphosphate metabolic process	FC (WS / NS)	2.07 (2.81 / -0.09)	0.31 (6.83 / 5.3)	0.11 (5.39 / 4.91)	-	-	-
+NA	Percentile (%)	1.115	16.432	27.884	-	-	-
+deoxyribonucleoside diphosphate metabolic process	FC (WS / NS)	2.07 (2.81 / -0.09)	-	0 (7.08 / 7.1)	-	-	-
+NA	Percentile (%)	1.151	-	67.536	-	-	-

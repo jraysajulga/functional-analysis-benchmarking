@@ -1,0 +1,21 @@
+GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
+apoplast	FC (WS / NS)	2.45 (4.46 / 0)	0.23 (3.58 / 2.91)	-	-	-	-1.97 (0 / 2.91)
+NA	Percentile (%)	0.549	22.705	-	-	-	98.622
+lytic vacuole	FC (WS / NS)	2.32 (4 / 0)	-0.47 (4 / 5.91)	-	-	-	0.07 (1 / 0.91)
+NA	Percentile (%)	0.961	67.635	-	-	-	42.256
+DNA helicase complex	FC (WS / NS)	2.2 (3.58 / 0)	0.07 (4.25 / 3.99)	-	-	-	-0.47 (3.58 / 5.36)
+NA	Percentile (%)	1.602	36.434	-	-	-	83.759
+ion channel complex	FC (WS / NS)	2.2 (3.58 / 0)	-0.71 (1.58 / 3.23)	-	-	-	1.14 (1 / -0.09)
+NA	Percentile (%)	1.625	71.937	-	-	-	5.489
+cation channel complex	FC (WS / NS)	2.06 (3.17 / 0)	-1.69 (0 / 2.23)	-	-	-	-
+NA	Percentile (%)	2.449	88.104	-	-	-	-
+lysosome	FC (WS / NS)	2 (3 / 0)	-0.6 (1.58 / 2.91)	-	-	-	0.07 (1 / 0.91)
+NA	Percentile (%)	2.747	70.399	-	-	-	42.607
+TAT protein transport complex	FC (WS / NS)	2 (3 / 0)	-	-	-	-	0.42 (2.32 / 1.49)
+NA	Percentile (%)	2.884	-	-	-	-	16.14
+collagen trimer	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
+NA	Percentile (%)	3.136	-	-	-	-	-
+microtubule organizing center	FC (WS / NS)	1.93 (2.81 / 0)	-0.09 (4.58 / 4.95)	-2.37 (0 / 4.17)	-	-	0.03 (3.17 / 3.08)
+NA	Percentile (%)	3.159	57.09	93.079	-	-	50.777
+Holliday junction helicase complex	FC (WS / NS)	1.84 (2.58 / 0)	2.07 (2.81 / -0.09)	-	-	-	-0.61 (3 / 5.11)
+NA	Percentile (%)	3.479	1.367	-	-	-	87.343

@@ -1,0 +1,21 @@
+GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+anchored component of membrane	FC (WS / NS)	2.06 (3.17 / 0)	-0.58 (2 / 3.49)	-	-	-	-
+NA	Percentile (%)	3.619	70.026	-	-	-	-
+Gram-negative-bacterium-type cell wall	FC (WS / NS)	2 (3 / 0)	-0.23 (6.09 / 7.34)	-0.03 (7.7 / 7.86)	-3.03 (0 / 7.17)	-	-1.08 (1 / 3.23)
+NA	Percentile (%)	3.841	61.702	71.504	92.026	-	94.06
+tertiary granule lumen	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
+NA	Percentile (%)	4.444	-	-	-	-	-
+anaerobic ribonucleoside-triphosphate reductase complex	FC (WS / NS)	1.66 (5.32 / 1)	0.24 (5.43 / 4.43)	-	-	-	-
+NA	Percentile (%)	4.667	22.41	-	-	-	-
+septin ring	FC (WS / NS)	1.23 (6.02 / 2)	1 (1 / 0)	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+NA	Percentile (%)	6.19	8.495	8.057	1.97	-	9.123
+cytoskeleton	FC (WS / NS)	1 (7.02 / 3)	-0.21 (6.7 / 7.89)	0.11 (12.5 / 11.47)	3.08 (7.46 / 0)	-0.75 (-4.24 / -6.44)	0.35 (6.6 / 4.95)
+NA	Percentile (%)	7.143	60.848	30.259	1.923	91.008	17.794
+septin cytoskeleton	FC (WS / NS)	1 (7.02 / 3)	1.37 (1.58 / 0)	0.9 (7.09 / 3.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+NA	Percentile (%)	7.206	5.855	12.497	2.111	-	9.173
+organellar chromatophore	FC (WS / NS)	0.73 (4.52 / 2.32)	-	-	-	-	-
+NA	Percentile (%)	9.619	-	-	-	-	-
+bacteroid-containing symbiosome	FC (WS / NS)	0.59 (5.52 / 3.32)	-	-	-	-	-
+NA	Percentile (%)	11.365	-	-	-	-	-
+vacuole	FC (WS / NS)	0.56 (6.11 / 3.81)	-0.32 (5.36 / 6.94)	-0.12 (7.64 / 8.42)	-	-	0.07 (1 / 0.91)
+NA	Percentile (%)	11.683	64.467	77.707	-	-	42.632

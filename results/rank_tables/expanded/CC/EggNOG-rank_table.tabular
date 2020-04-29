@@ -1,0 +1,21 @@
+GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+striated muscle dense body	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.87	-	-	-	-	-
+Holliday junction helicase complex	FC (WS / NS)	2.07 (2.81 / -0.09)	1.84 (2.58 / 0)	-	-	-	-0.61 (3 / 5.11)
+NA	Percentile (%)	1.367	3.479	-	-	-	87.343
+urease complex	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
+NA	Percentile (%)	1.724	-	-	-	-	-
+succinate dehydrogenase complex (ubiquinone)	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
+NA	Percentile (%)	1.77	-	-	-	-	-
+fumarate reductase complex	FC (WS / NS)	2 (3 / 0)	-	-0.76 (3.81 / 7.16)	-	-	-
+NA	Percentile (%)	1.786	-	82.508	-	-	-
+trans-Golgi network	FC (WS / NS)	1.88 (2.32 / -0.09)	-1.58 (0 / 2)	-	-	-	-
+NA	Percentile (%)	2.236	93.797	-	-	-	-
+myosin complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-0.16 (4.32 / 4.95)
+NA	Percentile (%)	2.516	-	-	-	-	71.754
+thylakoid lumen	FC (WS / NS)	1.84 (2.58 / 0)	-	-0.08 (7.36 / 7.86)	-	-	-
+NA	Percentile (%)	2.578	-	59.714	-	-	-
+SWI/SNF superfamily-type complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-0.31 (2 / 2.71)
+NA	Percentile (%)	2.795	-	-	-	-	76.992
+hemoglobin complex	FC (WS / NS)	1.73 (2.32 / 0)	-0.09 (2.58 / 2.81)	-	-	-	-
+NA	Percentile (%)	3.028	75.761	-	-	-	-
