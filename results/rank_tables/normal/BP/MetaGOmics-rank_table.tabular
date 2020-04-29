@@ -1,0 +1,21 @@
+GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+cell wall polysaccharide metabolic process	FC (WS / NS)	5.36 (40 / 0)	-	1 (1 / 0)	-	-	-
+NA	Percentile (%)	0.318	-	31.051	-	-	-
+hemicellulose metabolic process	FC (WS / NS)	4.81 (27 / 0)	-	1 (1 / 0)	-	-	-
+NA	Percentile (%)	0.566	-	31.051	-	-	-
+negative regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0.46 (54 / 39)	-	-	-
+NA	Percentile (%)	0.707	-	41.682	-	-	-
+regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0.46 (54 / 39)	-	-	-
+NA	Percentile (%)	0.742	-	41.682	-	-	-
+xyloglucan metabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.778	-	-	-	-	-
+symbiont process benefiting host	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.813	-	-	-	-	-
+xyloglucan catabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.848	-	-	-	-	-
+hemicellulose catabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.884	-	-	-	-	-
+tRNA 4-thiouridine biosynthesis	FC (WS / NS)	4.09 (16 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.99	-	-	-	-	-
+thiazole metabolic process	FC (WS / NS)	4.09 (16 / 0)	-	3.09 (16 / 1)	-	-	-
+NA	Percentile (%)	1.025	-	3.423	-	-	-

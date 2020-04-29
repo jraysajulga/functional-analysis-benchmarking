@@ -1,0 +1,21 @@
+GO Term	Ranking	Prophane	EggNOG	MEGAN	MetaGOmics	MPA	Unipept
+organellar large ribosomal subunit	FC (WS / NS)	0.03 (0.02 / 0)	 (4 / 2.81)	-	-	-	-
+NA	Percentile (%)	0.188	4.485	-	-	-	-
+organellar large ribosomal subunit	FC (WS / NS)	0.03 (0.02 / 0)	 (4 / 2.81)	-	-	-	-
+NA	Percentile (%)	0.188	4.485	-	-	-	-
+intracellular	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	4.72 (78 / 2)	-	2.58 (58.86 / 9)	-0.62 (1443 / 2221.52)
+NA	Percentile (%)	0.188	0.005	0.36	-	2.667	73.527
+cell	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	5.58 (47 / 0)	0.63 (481 / 311)	5.65 (49.19 / 0)	0.56 (1284 / 870.06)
+NA	Percentile (%)	0.188	0.005	0.06	33.97	0.004	34.528
+cytoplasm	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	4.72 (78 / 2)	-0.03 (18075 / 18512)	4.07 (15.81 / 0)	0.06 (14557 / 13927.57)
+NA	Percentile (%)	0.188	0.005	0.36	52.916	0.108	49.067
+ribosome	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 1.87)	2 (3 / 0)	-0.18 (5001 / 5677)	3.63 (11.42 / 0)	0.01 (4327 / 4306.3)
+NA	Percentile (%)	0.188	0.456	9.129	53.482	0.319	57.859
+protein-containing complex	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	3.25 (18 / 1)	-0.18 (9156 / 10399)	-	-
+NA	Percentile (%)	0.188	0.206	2.402	53.552	-	-
+organelle	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	4.25 (18 / 0)	-0.19 (7903 / 9036)	-	-
+NA	Percentile (%)	0.188	0.206	0.601	53.623	-	-
+non-membrane-bounded organelle	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	3.52 (68 / 5)	-0.21 (5648 / 6544)	-	-
+NA	Percentile (%)	0.188	0.206	1.802	53.8	-	-
+intracellular organelle	FC (WS / NS)	0.03 (0.02 / 0)	 (0 / 0.94)	4.25 (18 / 0)	-0.2 (7844 / 9004)	-	-
+NA	Percentile (%)	0.188	0.206	0.601	53.659	-	-

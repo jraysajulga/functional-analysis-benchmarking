@@ -1,0 +1,21 @@
+GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+reproduction	FC (WS / NS)	 (0 / 0.94)	1.56 (55 / 18)	-	-	0 (0 / 0)	-
+NA	Percentile (%)	0.005	17.778	-	-	6.391	-
+response to hypoxia	FC (WS / NS)	 (0 / 0.94)	1 (1 / 0)	0.46 (372 / 271)	-	-	-
+NA	Percentile (%)	0.005	27.387	40.014	-	-	-
+nucleobase-containing compound metabolic process	FC (WS / NS)	 (0 / 0.94)	4.17 (17 / 0)	0.13 (11894 / 10874)	-1 (0 / 1)	0 (0 / 0)	-0.64 (26 / 41.21)
+NA	Percentile (%)	0.005	0.841	50.088	51.202	6.015	73.772
+purine nucleoside catabolic process	FC (WS / NS)	 (0 / 0.94)	3.04 (81 / 9)	-	-	0 (0 / 0)	-
+NA	Percentile (%)	0.005	3.483	-	-	6.015	-
+purine nucleotide metabolic process	FC (WS / NS)	 (0 / 0.94)	3.04 (81 / 9)	0.15 (5687 / 5139)	0.91 (0.88 / 0)	0 (0 / 0)	1.08 (9 / 3.75)
+NA	Percentile (%)	0.005	3.483	49.664	20.968	6.015	19.106
+purine nucleotide catabolic process	FC (WS / NS)	 (0 / 0.94)	3.04 (81 / 9)	-	-	0 (0 / 0)	-
+NA	Percentile (%)	0.005	3.483	-	-	6.015	-
+protein folding	FC (WS / NS)	 (0 / 0.94)	2.58 (5 / 0)	0.32 (2146 / 1715)	4.35 (19.33 / 0)	0.01 (0 / 0)	0.6 (1822 / 1202.54)
+NA	Percentile (%)	0.005	5.706	44.715	0.086	3.195	33.743
+cellular aromatic compound metabolic process	FC (WS / NS)	 (0 / 0.94)	4.95 (30 / 0)	0.05 (12841 / 12430)	-	0 (0 / 0)	-0.08 (30 / 31.84)
+NA	Percentile (%)	0.005	0.18	52.209	-	6.015	59.676
+nucleoside phosphate metabolic process	FC (WS / NS)	 (0 / 0.94)	4.17 (17 / 0)	0.21 (6851 / 5907)	-	0 (0 / 0)	-
+NA	Percentile (%)	0.005	0.841	47.19	-	6.015	-
+phosphorus metabolic process	FC (WS / NS)	 (0 / 0.94)	4.17 (17 / 0)	0.16 (8737 / 7804)	-	0 (0 / 0)	-
+NA	Percentile (%)	0.005	0.661	48.71	-	4.135	-

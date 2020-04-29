@@ -1,0 +1,21 @@
+GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
+phosphatidylcholine biosynthetic process	FC (WS / NS)	3.02 (7.09 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.023	-	-	-	-	-
+urea metabolic process	FC (WS / NS)	2.91 (6.49 / 0)	0.87 (4.32 / 1.91)	2.11 (3.32 / 0)	-	-	-
+NA	Percentile (%)	0.046	12.533	3.143	-	-	-
+CDP-choline pathway	FC (WS / NS)	2.83 (6.09 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.069	-	-	-	-	-
+peptide deformylase activity	FC (WS / NS)	2.71 (5.52 / 0)	0.14 (0 / -0.09)	2.73 (5.61 / 0)	-	-	2.92 (5.86 / -0.09)
+NA	Percentile (%)	0.092	30.175	0.349	-	-	0.025
+beta-fructofuranosidase activity	FC (WS / NS)	2.66 (5.32 / 0)	-	2.5 (4.64 / 0)	-	-	2.65 (4.7 / -0.09)
+NA	Percentile (%)	0.114	-	1.048	-	-	0.15
+immune response	FC (WS / NS)	2.66 (5.32 / 0)	-0.56 (5 / 7.83)	-0.12 (7.23 / 7.94)	-	-	-0.44 (3 / 4.43)
+NA	Percentile (%)	0.137	69.7	64.476	-	-	83.258
+regulation of response to external stimulus	FC (WS / NS)	2.64 (5.25 / 0)	-0.65 (4.86 / 8.18)	0.18 (10.91 / 9.48)	-	-	-0.48 (3.46 / 5.23)
+NA	Percentile (%)	0.16	71.129	24.635	-	-	84.01
+solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-1.8 (0 / 2.49)	-	1.49 (1.81 / 0)	-	-0.07 (3.17 / 3.36)
+NA	Percentile (%)	0.183	89.129	-	7.739	-	65.388
+ether hydrolase activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	-	-	-
+NA	Percentile (%)	0.206	-	-	-	-	-
+2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	-
+NA	Percentile (%)	0.229	-	0.667	-	-	-
