@@ -427,33 +427,33 @@ filter_to_ancestors <-function(df){
      !is.na(df['countNS_n_samp_children']),]
 }
 
-tools_mqome <- list(filter_to_nodes(eggnog_expanded), 
+tools_nodes <- list(filter_to_nodes(eggnog_expanded), 
                     filter_to_nodes(megan_expanded),
                     filter_to_nodes(metagomics_expanded),
                     filter_to_nodes(mpa_expanded),
                     filter_to_nodes(prophane_expanded),
                     filter_to_nodes(unipept_expanded))
 
-tools_mqome <- list(filter_to_ancestors(eggnog_expanded), 
+tools_ancestors <- list(filter_to_ancestors(eggnog_expanded), 
                     filter_to_ancestors(megan_expanded),
                     filter_to_ancestors(metagomics_expanded),
                     filter_to_ancestors(mpa_expanded),
                     filter_to_ancestors(prophane_expanded),
                     filter_to_ancestors(unipept_expanded))
 
-tools_mqome <- list(eggnog_expanded, 
+tools_expanded <- list(eggnog_expanded, 
                     megan_expanded,
                     metagomics_expanded,
                     mpa_expanded,
                     prophane_expanded,
                     unipept_expanded)
 
-# tools_mqome <- list(eggnog_filtered, 
-#                     megan_filtered,
-#                     metagomics_filtered,
-#                     mpa_filtered,
-#                     prophane_filtered,
-#                     unipept_filtered)
+tools_filtered <- list(eggnog_filtered,
+                    megan_filtered,
+                    metagomics_filtered,
+                    mpa_filtered,
+                    prophane_filtered,
+                    unipept_filtered)
 filter_ontology_df <- function(tool, ontology){
   if (ontology == 'all') { return( tool )}
   translations <- list("MF" = "molecular_function", "BP" = "biological_process", "CC" = "cellular_component")
@@ -570,18 +570,6 @@ rows
 paste(megan_hits, collapse=" ")
 ```
 
-```{r}
-length(eggnog_min_hits)
-length(intersect(eggnog_min_hits, megan_min_hits))
-length(megan_min_hits)
-length(intersect(megan_min_hits, prophane_min_hits))
-length(prophane_min_hits)
-length(intersect(megan_min_hits, unipept_pep_gos_mf))
-length(unipept_pep_gos_mf)
-length(intersect(mpa_min_hits, unipept_pep_gos_mf))
-length(mpa_min_hits)
-```
-
 Metagomics
 ```{r}
 target_row <- metagomics_filt[metagomics_filt$gos == go_target,]
@@ -659,8 +647,8 @@ unipept_pep
 
 unipept_pep_refiltered <- unipept_pep %>%
   filter(str_detect(go_mf_filtered, go_target))
-unipept_hits <- unique(unipept_pep_refiltered$go_mf_filtered)
-unipept_hits <- unique(unlist(strsplit(unipept_pep_gos_mf, ',')))
+unipept_hits <- unipept_pep_refiltered$go_mf_filtered
+unipept_hits <- unique(unlist(strsplit(unipept_hits, ',')))
 unipept_hits
 ```
 
@@ -1034,29 +1022,43 @@ get_rank_table <- function(name, tools, folder, ontology){
     }
     rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
     write.table(rank_table,
-                file=paste0("results/rank_tables/", ontology, '/', folder, "/", name, "-rank_table.tabular"),
+                file=paste0("results/rank_tables/", folder, "/", ontology, '/', name, "-rank_table.tabular"),
                 sep='\t', quote=FALSE, row.names=FALSE)
     rank_table
 }
+
 rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
-  list(get_rank_table("Unipept", tools, 'full', ontology),
-       get_rank_table("EggNOG", tools, 'full', ontology),
-       get_rank_table("MEGAN", tools, 'full', ontology),
-       get_rank_table("MetaGOmics", tools, 'full', ontology),
-       get_rank_table("MPA", tools, 'full', ontology),
-       get_rank_table("Prophane", tools, 'full', ontology),
-       get_rank_table("Unipept", tools_mqome, 'filtered', ontology),
-       get_rank_table("EggNOG", tools_mqome, 'filtered', ontology),
-       get_rank_table("MEGAN", tools_mqome, 'filtered', ontology),
-       get_rank_table("MetaGOmics", tools_mqome, 'filtered', ontology),
-       get_rank_table("MPA", tools_mqome, 'filtered', ontology),
-       get_rank_table("Prophane", tools, 'filtered', ontology))
+  list(get_rank_table("Unipept", tools, 'normal', ontology),
+       get_rank_table("EggNOG", tools, 'normal', ontology),
+       get_rank_table("MEGAN", tools, 'normal', ontology),
+       get_rank_table("MetaGOmics", tools, 'normal', ontology),
+       get_rank_table("MPA", tools, 'normal', ontology),
+       get_rank_table("Prophane", tools, 'normal', ontology),
+       get_rank_table("Unipept", tools_expanded, 'expanded', ontology),
+       get_rank_table("EggNOG", tools_expanded, 'expanded', ontology),
+       get_rank_table("MEGAN", tools_expanded, 'expanded', ontology),
+       get_rank_table("MetaGOmics", tools_expanded, 'expanded', ontology),
+       get_rank_table("MPA", tools_expanded, 'expanded', ontology),
+       get_rank_table("Prophane", tools_expanded, 'expanded', ontology),
+       get_rank_table("Unipept", tools_filtered, 'filtered', ontology),
+       get_rank_table("EggNOG", tools_filtered, 'filtered', ontology),
+       get_rank_table("MEGAN", tools_filtered, 'filtered', ontology),
+       get_rank_table("MetaGOmics", tools_filtered, 'filtered', ontology),
+       get_rank_table("MPA", tools_filtered, 'filtered', ontology),
+       get_rank_table("Prophane", tools_filtered, 'filtered', ontology))
 })
 ```
 ```{r}
-read.delim('results/rank_tables/MF/full/mpa-rank_table.tabular')
-read.delim('results/rank_tables/MF/filtered/mpa-rank_table.tabular')
+read.delim('results/rank_tables/normal/MF/unipept-rank_table.tabular')
 ```
+```{r}
+read.delim('results/rank_tables/expanded/MF/unipept-rank_table.tabular')
+```
+
+```{r}
+read.delim('results/rank_tables/filtered/MF/unipept-rank_table.tabular')
+```
+
 
 ### GO list exporting
 ```{r}
