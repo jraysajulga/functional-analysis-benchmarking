@@ -1,0 +1,16 @@
+id	name	namespace	NS_mean	WS_mean	countNS	countWS	countNS_n_peptide	countWS_n_peptide	countNS_n_samp_children	countWS_n_samp_children
+GO:0003674	molecular_function	molecular_function	3.700439718141092	3.700439718141092	3.700439718141092	3.700439718141092	13	13	2.0	2.0
+GO:0003824	catalytic activity	molecular_function	2.584962500721156	2.584962500721156	2.584962500721156	2.584962500721156	6	6	1.0	1.0
+GO:0004854	xanthine dehydrogenase activity	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0005488	binding	molecular_function	2.807354922057604	2.807354922057604	2.807354922057604	2.807354922057604	7	7	3.0	3.0
+GO:0009055	electron transfer activity	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0016491	oxidoreductase activity	molecular_function	2.321928094887362	2.321928094887362	2.321928094887362	2.321928094887362	5	5	3.0	3.0
+GO:0016725	oxidoreductase activity, acting on CH or CH2 groups	molecular_function	1.0	1.0	1.0	1.0	2	2	1.0	1.0
+GO:0016726	oxidoreductase activity, acting on CH or CH2 groups, NAD or NADP as acceptor	molecular_function	NA	NA	0.0	0.0	1	1	1.0	1.0
+GO:0016903	oxidoreductase activity, acting on the aldehyde or oxo group of donors	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0043167	ion binding	molecular_function	1.584962500721156	1.584962500721156	1.584962500721156	1.584962500721156	3	3	1.0	1.0
+GO:0043169	cation binding	molecular_function	1.0	1.0	1.0	1.0	2	2	1.0	1.0
+GO:0046872	metal ion binding	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0048037	cofactor binding	molecular_function	1.0	1.0	1.0	1.0	2	2	1.0	1.0
+GO:0051536	iron-sulfur cluster binding	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0051540	metal cluster binding	molecular_function	1.0	1.0	1.0	1.0	2	2	1.0	1.0

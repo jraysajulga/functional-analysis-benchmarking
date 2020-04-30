@@ -1,0 +1,2 @@
+id	name	namespace	NS_mean	WS_mean	countNS	countWS	countNS_n_peptide	countWS_n_peptide	countNS_n_samp_children	countWS_n_samp_children
+GO:0004854	xanthine dehydrogenase activity	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0
