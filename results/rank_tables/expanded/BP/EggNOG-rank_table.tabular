@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 tRNA wobble uridine modification	FC (WS / NS)	2.89 (6.39 / 0)	-0.08 (5.25 / 5.58)	0.22 (6.64 / 5.58)	1.99 (2.98 / 0)	-	-0.08 (3.81 / 4.08)
-NA	Percentile (%)	0.016	75.166	22.635	6.66	-	66.416
+ 	Percentile (%)	0.016	75.166	22.635	6.66	-	66.416
 tRNA thio-modification	FC (WS / NS)	2.89 (6.39 / 0)	0.74 (5 / 2.58)	0.55 (6.67 / 4.25)	2.45 (4.46 / 0)	-	1.1 (4.32 / 1.49)
-NA	Percentile (%)	0.031	13.481	11.81	5.441	-	6.917
+ 	Percentile (%)	0.031	13.481	11.81	5.441	-	6.917
 cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-1.06 (2 / 5.25)	-	-	-
-NA	Percentile (%)	0.047	-	85.175	-	-	-
+ 	Percentile (%)	0.047	-	85.175	-	-	-
 NADH metabolic process	FC (WS / NS)	2.77 (5.81 / 0)	-	0.23 (10.53 / 8.8)	-	-	-
-NA	Percentile (%)	0.062	-	21.524	-	-	-
+ 	Percentile (%)	0.062	-	21.524	-	-	-
 positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	0.04 (5.91 / 5.7)	-	-	-0.19 (-8.29 / -9.29)	-
-NA	Percentile (%)	0.093	39.872	-	-	64.032	-
+ 	Percentile (%)	0.093	39.872	-	-	64.032	-
 tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
-NA	Percentile (%)	0.109	-	11.714	-	-	-
+ 	Percentile (%)	0.109	-	11.714	-	-	-
 carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.14	-	-	-	-	-
+ 	Percentile (%)	0.14	-	-	-	-	-
 regulation of nucleocytoplasmic transport	FC (WS / NS)	2.58 (5 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.171	-	-	-	-	-
+ 	Percentile (%)	0.171	-	-	-	-	-
 amino acid catabolic process via Ehrlich pathway	FC (WS / NS)	2.45 (4.46 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.264	-	-	-	-	-
+ 	Percentile (%)	0.264	-	-	-	-	-
 negative regulation of histone methylation	FC (WS / NS)	2.45 (4.46 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.28	-	-	-	-	-
+ 	Percentile (%)	0.28	-	-	-	-	-

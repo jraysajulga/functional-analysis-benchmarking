@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (0 / 0.94)	-	2.43 (4.39 / 0)	0.03 (0.02 / 0)	-0.74 (1529 / 2554.93)
-NA	Percentile (%)	0.12	0.005	-	3.224	0.188	76.277
+ 	Percentile (%)	0.12	0.005	-	3.224	0.188	76.277
 organic substance metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (0 / 0.94)	-	-	0.03 (0.02 / 0)	-0.93 (1 / 2.81)
-NA	Percentile (%)	0.12	0.005	-	-	0.188	80.059
+ 	Percentile (%)	0.12	0.005	-	-	0.188	80.059
 cellular process	FC (WS / NS)	5.16 (106 / 2)	 (0 / 0.94)	-0.11 (32999 / 35687)	-	0.03 (0.02 / 0)	-
-NA	Percentile (%)	0.12	0.005	53.093	-	0.188	-
+ 	Percentile (%)	0.12	0.005	53.093	-	0.188	-
 cellular metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (0 / 0.94)	-0.15 (29166 / 32341)	0.91 (0.88 / 0)	0.03 (0.02 / 0)	-1.85 (12 / 45.89)
-NA	Percentile (%)	0.12	0.005	53.234	22.155	0.188	91.306
+ 	Percentile (%)	0.12	0.005	53.234	22.155	0.188	91.306
 small molecule metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (0 / 0.94)	-0.21 (16474 / 19000)	-	0 (0 / 0)	-
-NA	Percentile (%)	0.12	0.005	53.729	-	5.827	-
+ 	Percentile (%)	0.12	0.005	53.729	-	5.827	-
 cellular biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	 (1 / 0)	0.05 (22087 / 21268)	-	0.03 (0.02 / 0)	-
-NA	Percentile (%)	0.12	0.027	51.997	-	0.188	-
+ 	Percentile (%)	0.12	0.027	51.997	-	0.188	-
 biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	 (2 / 0)	0.04 (22826 / 22151)	1.86 (2.64 / 0)	0.03 (0.02 / 0)	0.52 (296 / 206.04)
-NA	Percentile (%)	0.12	0.022	52.351	7.501	0.188	35.56
+ 	Percentile (%)	0.12	0.022	52.351	7.501	0.188	35.56
 organic substance biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	 (2 / 0)	0.04 (22747 / 22091)	-	0.03 (0.02 / 0)	-
-NA	Percentile (%)	0.12	0.022	52.386	-	0.188	-
+ 	Percentile (%)	0.12	0.022	52.386	-	0.188	-
 oxoacid metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (1 / 0)	-0.35 (11192 / 14285)	-	0 (0 / 0)	-
-NA	Percentile (%)	0.12	0.027	55.32	-	5.827	-
+ 	Percentile (%)	0.12	0.027	55.32	-	5.827	-
 organic acid metabolic process	FC (WS / NS)	5.16 (106 / 2)	 (1 / 0)	-0.35 (11411 / 14510)	1.46 (1.76 / 0)	0 (0 / 0)	-0.9 (143 / 267.86)
-NA	Percentile (%)	0.12	0.027	55.214	13.721	5.827	77.701
+ 	Percentile (%)	0.12	0.027	55.214	13.721	5.827	77.701

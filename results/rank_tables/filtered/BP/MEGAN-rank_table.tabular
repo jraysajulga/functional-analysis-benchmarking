@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 CDP-choline pathway	FC (WS / NS)	2.83 (6.09 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.033	-	-	-	-	-
+ 	Percentile (%)	0.033	-	-	-	-	-
 regulation of response to external stimulus	FC (WS / NS)	2.64 (5.25 / 0)	-0.65 (4.86 / 8.18)	0.18 (10.91 / 9.48)	-	-	-0.48 (3.46 / 5.23)
-NA	Percentile (%)	0.1	74.588	23.512	-	-	85.617
+ 	Percentile (%)	0.1	74.588	23.512	-	-	85.617
 urea catabolic process	FC (WS / NS)	2.56 (4.91 / 0)	1.18 (3.32 / 0.91)	2.11 (3.32 / 0)	-	-	-
-NA	Percentile (%)	0.334	5.684	3.345	-	-	-
+ 	Percentile (%)	0.334	5.684	3.345	-	-	-
 negative regulation of developmental process	FC (WS / NS)	2.54 (4.81 / 0)	-1.19 (3.32 / 8.87)	-	-	-	-0.32 (1 / 1.49)
-NA	Percentile (%)	0.368	82.971	-	-	-	81.086
+ 	Percentile (%)	0.368	82.971	-	-	-	81.086
 tyrosine biosynthetic process	FC (WS / NS)	2.51 (4.7 / 0)	-	-	-	-	-1.89 (0 / 2.71)
-NA	Percentile (%)	0.468	-	-	-	-	98.094
+ 	Percentile (%)	0.468	-	-	-	-	98.094
 regulation of response to extracellular stimulus	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.635	-	-	-	-	-
+ 	Percentile (%)	0.635	-	-	-	-	-
 regulation of immune response	FC (WS / NS)	2.37 (4.17 / 0)	-0.18 (6.04 / 6.98)	-0.48 (5.36 / 7.88)	-	-	-0.47 (3 / 4.55)
-NA	Percentile (%)	0.702	64.27	81.505	-	-	85.401
+ 	Percentile (%)	0.702	64.27	81.505	-	-	85.401
 glucan catabolic process	FC (WS / NS)	2.35 (4.09 / 0)	-0.37 (5.04 / 6.84)	-0.32 (5.04 / 6.54)	-	-	0.24 (2.81 / 2.23)
-NA	Percentile (%)	0.836	70.002	77.324	-	-	21.251
+ 	Percentile (%)	0.836	70.002	77.324	-	-	21.251
 cellular polysaccharide catabolic process	FC (WS / NS)	2.35 (4.09 / 0)	-0.37 (5.04 / 6.82)	-0.55 (4.58 / 7.19)	-	-	0.24 (2.81 / 2.23)
-NA	Percentile (%)	0.903	69.979	82.538	-	-	21.287
+ 	Percentile (%)	0.903	69.979	82.538	-	-	21.287
 DNA replication initiation	FC (WS / NS)	2.32 (4 / 0)	0.88 (4.95 / 2.23)	1.45 (4.46 / 1)	-	-	0.26 (4.52 / 3.61)
-NA	Percentile (%)	1.07	9.649	5.952	-	-	20.209
+ 	Percentile (%)	1.07	9.649	5.952	-	-	20.209

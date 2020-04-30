@@ -1,21 +1,21 @@
 GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
 peptide deformylase activity	FC (WS / NS)	2.92 (5.86 / -0.09)	0.14 (0 / -0.09)	2.71 (5.52 / 0)	2.73 (5.61 / 0)	-	-
-NA	Percentile (%)	0.025	30.175	0.092	0.349	-	-
+ 	Percentile (%)	0.025	30.175	0.092	0.349	-	-
 1-phosphofructokinase activity	FC (WS / NS)	2.81 (5.36 / -0.09)	-	2.52 (4.75 / 0)	2.63 (5.17 / 0)	-0.3 (-0.19 / 0)	-
-NA	Percentile (%)	0.05	-	0.435	0.603	70.122	-
+ 	Percentile (%)	0.05	-	0.435	0.603	70.122	-
 response to wounding	FC (WS / NS)	2.75 (5.09 / -0.09)	0.1 (7 / 6.46)	-1 (0 / 1)	-2.74 (0 / 5.7)	0.86 (0.81 / 0)	-
-NA	Percentile (%)	0.075	34.369	89.448	98.254	9.146	-
+ 	Percentile (%)	0.075	34.369	89.448	98.254	9.146	-
 glycerol dehydrogenase [NAD+] activity	FC (WS / NS)	2.68 (4.81 / -0.09)	-	1.52 (4.75 / 1)	1.54 (4.81 / 1)	-	-
-NA	Percentile (%)	0.1	-	5.631	4.921	-	-
+ 	Percentile (%)	0.1	-	5.631	4.921	-	-
 glycerol dehydrogenase [NAD(P)+] activity	FC (WS / NS)	2.68 (4.81 / -0.09)	-	1.52 (4.75 / 1)	1.54 (4.81 / 1)	-	-
-NA	Percentile (%)	0.125	-	5.676	5.016	-	-
+ 	Percentile (%)	0.125	-	5.676	5.016	-	-
 beta-fructofuranosidase activity	FC (WS / NS)	2.65 (4.7 / -0.09)	-	2.66 (5.32 / 0)	2.5 (4.64 / 0)	-	-
-NA	Percentile (%)	0.15	-	0.114	1.048	-	-
+ 	Percentile (%)	0.15	-	0.114	1.048	-	-
 RNA secondary structure unwinding	FC (WS / NS)	2.51 (4.17 / -0.09)	0.27 (4.7 / 3.71)	-	-	0.86 (0.81 / 0)	-
-NA	Percentile (%)	0.175	21.09	-	-	9.193	-
+ 	Percentile (%)	0.175	21.09	-	-	9.193	-
 galactose catabolic process	FC (WS / NS)	2.51 (4.17 / -0.09)	0.19 (7.28 / 6.26)	0 (4.91 / 4.91)	-	-	-
-NA	Percentile (%)	0.201	24.041	59.052	-	-	-
+ 	Percentile (%)	0.201	24.041	59.052	-	-	-
 ADP-ribose diphosphatase activity	FC (WS / NS)	2.51 (4.17 / -0.09)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-
-NA	Percentile (%)	0.226	30.905	62.669	-	-	-
+ 	Percentile (%)	0.226	30.905	62.669	-	-	-
 galactose-6-phosphate isomerase activity	FC (WS / NS)	2.51 (4.17 / -0.09)	-	0 (4.91 / 4.91)	2.29 (3.91 / 0)	-	-
-NA	Percentile (%)	0.251	-	62.943	1.746	-	-
+ 	Percentile (%)	0.251	-	62.943	1.746	-	-

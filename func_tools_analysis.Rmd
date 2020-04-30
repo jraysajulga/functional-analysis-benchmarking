@@ -652,6 +652,105 @@ unipept_hits <- unique(unlist(strsplit(unipept_hits, ',')))
 unipept_hits
 ```
 
+
+```{r}
+write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2, folder="full", fill=FALSE) {
+  if (fill) {
+    df <- data.frame(gos = df, countNS = 1, countWS = 1) 
+  }
+  names(df)[1] <- header
+  int_df <- df[c(header, col_samp1, col_samp2)] 
+  names(int_df)[1] <- 'id'
+  write.table(int_df,
+              file=paste0("results/mqome/input/", folder, "/", name, "/", name, "_int.tab"),
+              quote=FALSE, row.names=FALSE, sep="\t")
+  func_df <- df[c(header, col_gos)]
+  names(func_df) <- c('id', 'gos')
+  write.table(func_df,
+              file=paste0("results/mqome/input/", folder, "/", name, "/", name, "_func.tab"),
+              quote=FALSE, row.names=FALSE, sep="\t")
+}
+
+print_mqome_cmds <- function(name, folder="full"){
+  func_colname <- 'gos'
+  cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
+                        " --int_file results/mqome/input/", folder, "/", name, "/", name, "_int.tab",
+                       " --pep_colname_int id",
+                       " --func_file results/mqome/input/", folder, "/", name, "/", name, "_func.tab",
+                       " --pep_colname_func id",
+                       " --func_colname ", func_colname," --ontology go",
+                       " --samps results/mqome/input/samples.tab",
+                       " --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab")
+  cmd_filt <- paste0("metaquantome filter",
+                     " --expand_file results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab",
+                     " --mode f --ontology go",
+                     " --samps results/mqome/input/samples.tab",
+                     " --min_peptides 2 --min_pep_nsamp 0 --min_children_non_leaf 2 --min_child_nsamp 1",
+                     " --qthreshold 0 --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_filtered.tab")
+  return(paste(cmd_expand, cmd_filt, sep='; '))
+}
+
+tool_hits <- list('EggNOG' = eggnog_hits,
+                    'MEGAN' = megan_hits,
+                    'MetaGOmics' = metagomics_hits,
+                    'MPA' = mpa_hits,
+                    'Prophane' = prophane_hits,
+                    'Unipept' = unipept_hits)
+paste(sapply(labels, function(label){
+  write_mqome_inputs(tool_hits[label], label, 'gos', 'gos', 'countNS', 'countWS', fill=TRUE, folder='hits')
+  print_mqome_cmds(label, folder="hits")
+}), collapse='; ')
+```
+
+```{r}
+import_mqome_output <- function(name, type, folder="full"){
+  read.delim(paste0("results/mqome/output/", folder, "/", name, "/", name, "_func_", type, ".tab"),
+             stringsAsFactors = FALSE) %>%
+    rename(gos = id) %>%
+    mutate(
+      countWS = replace_na(countWS, 0),
+      countNS = replace_na(countNS, 0),
+      log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio)
+}
+eggnog_hits_expanded <- import_mqome_output('eggnog', 'expanded', folder="hits")
+eggnog_hits_filtered <- import_mqome_output('eggnog', 'filtered', folder="hits")
+megan_hits_expanded <- import_mqome_output('megan', 'expanded', folder="hits")
+megan_hits_filtered <- import_mqome_output('megan', 'filtered', folder="hits")
+metagomics_hits_expanded <- import_mqome_output('metagomics', 'expanded', folder="hits")
+metagomics_hits_filtered <- import_mqome_output('metagomics', 'filtered', folder="hits")
+mpa_hits_expanded <- import_mqome_output('mpa', 'expanded', folder="hits")
+mpa_hits_filtered <- import_mqome_output('mpa', 'filtered', folder="hits")
+prophane_hits_expanded <- import_mqome_output('prophane', 'expanded', folder="hits")
+prophane_hits_filtered <- import_mqome_output('prophane', 'filtered', folder="hits")
+unipept_hits_expanded <- import_mqome_output('unipept', 'expanded', folder="hits")
+unipept_hits_filtered <- import_mqome_output('unipept', 'filtered', folder="hits")
+```
+
+```{r}
+data.frame(gos = unipept_hits, name = Term(unipept_hits))
+```
+
+```{r}
+unipept_hits_expanded
+```
+```{r}
+unipept_hits_filtered[unipept_hits_filtered$countWS_n_samp_children != 0,]
+```
+```{r}
+tools_hits_filtered <- list(eggnog_hits_filtered,
+                            megan_hits_filtered,
+                            metagomics_hits_filtered,
+                            mpa_hits_filtered,
+                            prophane_hits_filtered,
+                            unipept_hits_filtered)
+tools_hits_filtered
+# sapply(tools_hits_filtered, function(tool){
+#   print(tool[tool$countWS_n_samp_children != 0,])
+# })
+```
+
+
 Let's write out the peptides associated with 
 eggNOG, metaGOmics, and unipept and see what BLAST2GO gives.
 
@@ -992,16 +1091,16 @@ expand_gos <- function(go_lists){
 }
 get_rank_table <- function(name, tools, folder, ontology){
     n <- 10
-    if (name == "Unipept" && ontology == "MF"){
-        n <- 15
-    }
+    # if (name == "Unipept" && ontology == "MF"){
+    #     n <- 15
+    # }
     labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
     tool_topn <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
     tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
     tool_topn <- tool_topn[!is.na(tool_topn)]
     tool_topn <- tool_topn[1:n]
-    rank_table <- data.frame(names = Term(unlist(lapply(tool_topn, function(a) { c(as.character(a), '')}))))
-    rank_table[,"Ranking"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
+    rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
+    rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
@@ -1049,14 +1148,16 @@ rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
 })
 ```
 ```{r}
-read.delim('results/rank_tables/normal/MF/unipept-rank_table.tabular')
+tool <- 'unipept'
+read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular')) #%>%
+  # filter(GO.Term %in% c('biotin binding'))
 ```
 ```{r}
-read.delim('results/rank_tables/expanded/MF/unipept-rank_table.tabular')
+read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
 ```
 
 ```{r}
-read.delim('results/rank_tables/filtered/MF/unipept-rank_table.tabular')
+read.delim(paste0('results/rank_tables/filtered/MF/', tool, '-rank_table.tabular'))
 ```
 
 

@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.098	-	-	-	-	-
+ 	Percentile (%)	0.098	-	-	-	-	-
 negative regulation of purine nucleobase metabolic process	FC (WS / NS)	2.43 (4.39 / 0)	-	0.1 (5.75 / 5.29)	-	-	-
-NA	Percentile (%)	1.033	-	28.619	-	-	-
+ 	Percentile (%)	1.033	-	28.619	-	-	-
 symbiont process benefiting host	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-
-NA	Percentile (%)	1.131	-	-	-	-	-
+ 	Percentile (%)	1.131	-	-	-	-	-
 xyloglucan catabolic process	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-
-NA	Percentile (%)	1.181	-	-	-	-	-
+ 	Percentile (%)	1.181	-	-	-	-	-
 tRNA 4-thiouridine biosynthesis	FC (WS / NS)	2.32 (4 / 0)	-	-	-	-	-
-NA	Percentile (%)	1.279	-	-	-	-	-
+ 	Percentile (%)	1.279	-	-	-	-	-
 thiazole biosynthetic process	FC (WS / NS)	2.32 (4 / 0)	-	2.32 (4 / 0)	-	-	1.51 (1.58 / -0.09)
-NA	Percentile (%)	1.476	-	1.237	-	-	3.128
+ 	Percentile (%)	1.476	-	1.237	-	-	3.128
 ubiquinone biosynthetic process	FC (WS / NS)	2.27 (3.81 / 0)	0.08 (4.58 / 4.3)	-1.32 (1 / 4)	-	-	-0.23 (2.32 / 2.91)
-NA	Percentile (%)	1.82	35.562	92.645	-	-	76.879
+ 	Percentile (%)	1.82	35.562	92.645	-	-	76.879
 protein lipoylation	FC (WS / NS)	2.27 (3.81 / 0)	-0.93 (0 / 0.91)	0.9 (4.58 / 2)	2.58 (4.98 / 0)	-	0.4 (3.91 / 2.71)
-NA	Percentile (%)	1.918	78.887	10.632	4.793	-	14.923
+ 	Percentile (%)	1.918	78.887	10.632	4.793	-	14.923
 leucine import across plasma membrane	FC (WS / NS)	2.27 (3.81 / 0)	-	-	-	-	-
-NA	Percentile (%)	2.213	-	-	-	-	-
+ 	Percentile (%)	2.213	-	-	-	-	-
 pyruvate catabolic process	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
-NA	Percentile (%)	2.312	-	-	-	-	-
+ 	Percentile (%)	2.312	-	-	-	-	-
