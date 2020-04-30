@@ -1,21 +1,21 @@
 GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 peptide deformylase activity	FC (WS / NS)	2.71 (5.52 / 0)	0.14 (0 / -0.09)	2.73 (5.61 / 0)	-	-	2.92 (5.86 / -0.09)
-NA	Percentile (%)	0.092	30.175	0.349	-	-	0.025
+ 	Percentile (%)	0.092	30.175	0.349	-	-	0.025
 beta-fructofuranosidase activity	FC (WS / NS)	2.66 (5.32 / 0)	-	2.5 (4.64 / 0)	-	-	2.65 (4.7 / -0.09)
-NA	Percentile (%)	0.114	-	1.048	-	-	0.15
+ 	Percentile (%)	0.114	-	1.048	-	-	0.15
 solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-1.8 (0 / 2.49)	-	1.49 (1.81 / 0)	-	-0.07 (3.17 / 3.36)
-NA	Percentile (%)	0.183	89.129	-	7.739	-	65.388
+ 	Percentile (%)	0.183	89.129	-	7.739	-	65.388
 ether hydrolase activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.206	-	-	-	-	-
+ 	Percentile (%)	0.206	-	-	-	-	-
 2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	-
-NA	Percentile (%)	0.229	-	0.667	-	-	-
+ 	Percentile (%)	0.229	-	0.667	-	-	-
 homocitrate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.252	-	-	-	-	-
+ 	Percentile (%)	0.252	-	-	-	-	-
 hydroxymethylglutaryl-CoA lyase activity	FC (WS / NS)	2.56 (4.91 / 0)	1 (1 / 0)	-	-	-	-
-NA	Percentile (%)	0.275	8.309	-	-	-	-
+ 	Percentile (%)	0.275	8.309	-	-	-	-
 4-hydroxy-2-oxovalerate aldolase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.298	-	-	-	-	-
+ 	Percentile (%)	0.298	-	-	-	-	-
 urease activity	FC (WS / NS)	2.56 (4.91 / 0)	2.06 (3.17 / 0)	2.11 (3.32 / 0)	-	-	-
-NA	Percentile (%)	0.32	1.475	3.079	-	-	-
+ 	Percentile (%)	0.32	1.475	3.079	-	-	-
 1-phosphofructokinase activity	FC (WS / NS)	2.52 (4.75 / 0)	-	2.63 (5.17 / 0)	-0.3 (-0.19 / 0)	-	2.81 (5.36 / -0.09)
-NA	Percentile (%)	0.435	-	0.603	70.122	-	0.05
+ 	Percentile (%)	0.435	-	0.603	70.122	-	0.05

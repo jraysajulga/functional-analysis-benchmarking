@@ -1,21 +1,21 @@
 GO Term	Ranking	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
 cell wall	FC (WS / NS)	3.22 (532 / 56.19)	 (0 / 0.94)	5.58 (47 / 0)	0.77 (3807 / 2230)	2.84 (6.15 / 0)	0 (0 / 0)
-NA	Percentile (%)	1.13	0.005	0.06	30.187	1.463	43.985
+ 	Percentile (%)	1.13	0.005	0.06	30.187	1.463	43.985
 postsynapse	FC (WS / NS)	2.8 (19 / 1.87)	-	-	-	-	-
-NA	Percentile (%)	1.866	-	-	-	-	-
+ 	Percentile (%)	1.866	-	-	-	-	-
 septin ring	FC (WS / NS)	2.8 (71 / 9.37)	 (1 / 0)	3.52 (68 / 5)	3.72 (65 / 4)	2.17 (3.51 / 0)	-
-NA	Percentile (%)	2.014	11.171	1.802	2.545	4.817	-
+ 	Percentile (%)	2.014	11.171	1.802	2.545	4.817	-
 mediator complex	FC (WS / NS)	2.77 (25 / 2.81)	 (1 / 0)	-	-	-	-
-NA	Percentile (%)	2.161	4.403	-	-	-	-
+ 	Percentile (%)	2.161	4.403	-	-	-	-
 polyhedral organelle	FC (WS / NS)	2.51 (10 / 0.94)	 (0 / 5.62)	-	-0.86 (58 / 106)	-	-
-NA	Percentile (%)	3.389	13.178	-	64.97	-	-
+ 	Percentile (%)	3.389	13.178	-	64.97	-	-
 ribonucleoside-diphosphate reductase complex	FC (WS / NS)	2.33 (37 / 6.56)	 (0 / 0.94)	1.93 (41 / 10)	0.87 (105 / 57)	1.86 (2.64 / 0)	0 (0 / 0)
-NA	Percentile (%)	4.322	0.607	10.931	28.773	7.018	6.767
+ 	Percentile (%)	4.322	0.607	10.931	28.773	7.018	6.767
 nitrate reductase complex	FC (WS / NS)	1.66 (88 / 27.16)	 (0 / 2.81)	1.89 (25 / 6)	0.46 (83 / 60)	1.46 (1.76 / 0)	0 (0 / 0)
-NA	Percentile (%)	9.381	0.228	11.111	39.555	13.553	58.459
+ 	Percentile (%)	9.381	0.228	11.111	39.555	13.553	58.459
 actin cytoskeleton	FC (WS / NS)	1.66 (11 / 2.81)	 (1 / 0)	-1 (0 / 1)	-	-	-
-NA	Percentile (%)	9.627	11.171	70.33	-	-	-
+ 	Percentile (%)	9.627	11.171	70.33	-	-	-
 Smc5-Smc6 complex	FC (WS / NS)	1.63 (5 / 0.94)	-	0.44 (18 / 13)	-	-	-
-NA	Percentile (%)	10.609	-	41.922	-	-	-
+ 	Percentile (%)	10.609	-	41.922	-	-	-
 mitochondrial proton-transporting ATP synthase, catalytic core	FC (WS / NS)	1.58 (16 / 4.68)	 (0 / 2.81)	-	0.47 (268 / 193)	-	-
-NA	Percentile (%)	11.248	31.123	-	38.848	-	-
+ 	Percentile (%)	11.248	31.123	-	38.848	-	-

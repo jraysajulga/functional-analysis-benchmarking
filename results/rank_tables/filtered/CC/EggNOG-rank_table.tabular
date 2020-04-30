@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 striated muscle dense body	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.836	-	-	-	-	-
+ 	Percentile (%)	0.836	-	-	-	-	-
 Holliday junction helicase complex	FC (WS / NS)	2.07 (2.81 / -0.09)	1.84 (2.58 / 0)	-	-	-	-0.61 (3 / 5.11)
-NA	Percentile (%)	1.29	3.644	-	-	-	88.206
+ 	Percentile (%)	1.29	3.644	-	-	-	88.206
 urease complex	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
-NA	Percentile (%)	1.6	-	-	-	-	-
+ 	Percentile (%)	1.6	-	-	-	-	-
 trans-Golgi network	FC (WS / NS)	1.88 (2.32 / -0.09)	-1.58 (0 / 2)	-	-	-	-
-NA	Percentile (%)	2.173	93.781	-	-	-	-
+ 	Percentile (%)	2.173	93.781	-	-	-	-
 myosin complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-0.16 (4.32 / 4.95)
-NA	Percentile (%)	2.508	-	-	-	-	73.679
+ 	Percentile (%)	2.508	-	-	-	-	73.679
 thylakoid lumen	FC (WS / NS)	1.84 (2.58 / 0)	-	-0.08 (7.36 / 7.86)	-	-	-
-NA	Percentile (%)	2.556	-	63.453	-	-	-
+ 	Percentile (%)	2.556	-	63.453	-	-	-
 SWI/SNF superfamily-type complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-
-NA	Percentile (%)	2.651	-	-	-	-	-
+ 	Percentile (%)	2.651	-	-	-	-	-
 hemoglobin complex	FC (WS / NS)	1.73 (2.32 / 0)	-0.09 (2.58 / 2.81)	-	-	-	-
-NA	Percentile (%)	2.914	77.533	-	-	-	-
+ 	Percentile (%)	2.914	77.533	-	-	-	-
 mitochondrial intermembrane space	FC (WS / NS)	1.73 (2 / -0.09)	0 (2 / 2)	-0.23 (5.95 / 7.14)	-	-	0.52 (3.17 / 1.91)
-NA	Percentile (%)	3.2	54.965	73.487	-	-	11.722
+ 	Percentile (%)	3.2	54.965	73.487	-	-	11.722
 spindle microtubule	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
-NA	Percentile (%)	3.224	-	-	-	-	-
+ 	Percentile (%)	3.224	-	-	-	-	-

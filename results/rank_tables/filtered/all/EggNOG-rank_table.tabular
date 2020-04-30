@@ -1,21 +1,21 @@
 GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.024	-	-	-	-	-
+ 	Percentile (%)	0.024	-	-	-	-	-
 3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)
-NA	Percentile (%)	0.048	12.304	9.297	-	-	8.019
+ 	Percentile (%)	0.048	12.304	9.297	-	-	8.019
 positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	-	-	-	-	-
-NA	Percentile (%)	0.072	-	-	-	-	-
+ 	Percentile (%)	0.072	-	-	-	-	-
 tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
-NA	Percentile (%)	0.096	-	11.658	-	-	-
+ 	Percentile (%)	0.096	-	11.658	-	-	-
 tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	-	-
-NA	Percentile (%)	0.119	8.225	-	85.839	-	-
+ 	Percentile (%)	0.119	8.225	-	85.839	-	-
 carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.143	-	-	-	-	-
+ 	Percentile (%)	0.143	-	-	-	-	-
 regulation of nucleocytoplasmic transport	FC (WS / NS)	2.58 (5 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.167	-	-	-	-	-
+ 	Percentile (%)	0.167	-	-	-	-	-
 4-hydroxy-tetrahydrodipicolinate synthase	FC (WS / NS)	2.56 (4.32 / -0.09)	0.77 (5.49 / 2.81)	1.67 (5.36 / 1)	1.26 (1.4 / 0)	-	1.13 (5.36 / 1.91)
-NA	Percentile (%)	0.191	11.501	5.263	8.424	-	6.293
+ 	Percentile (%)	0.191	11.501	5.263	8.424	-	6.293
 oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor	FC (WS / NS)	2.52 (4.75 / 0)	2.11 (3.32 / 0)	-	-	-	0.19 (2.32 / 1.91)
-NA	Percentile (%)	0.215	2.106	-	-	-	24.488
+ 	Percentile (%)	0.215	2.106	-	-	-	24.488
 NAD+ synthase activity	FC (WS / NS)	2.5 (4.64 / 0)	0.23 (4.39 / 3.58)	-	0.03 (4.94 / 4.81)	-	0.18 (4.91 / 4.23)
-NA	Percentile (%)	0.239	20.562	-	35.875	-	25.854
+ 	Percentile (%)	0.239	20.562	-	35.875	-	25.854

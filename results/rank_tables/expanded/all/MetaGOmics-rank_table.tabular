@@ -1,21 +1,21 @@
 GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	3.02 (7.11 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.032	-	-	-	-	-
+ 	Percentile (%)	0.032	-	-	-	-	-
 cell wall polysaccharide metabolic process	FC (WS / NS)	3.01 (7.07 / 0)	-	0.07 (5.91 / 5.58)	-	-	0.52 (4.58 / 2.91)
-NA	Percentile (%)	0.063	-	34.859	-	-	12.632
+ 	Percentile (%)	0.063	-	34.859	-	-	12.632
 dextransucrase activity	FC (WS / NS)	2.94 (6.7 / 0)	-	-	1.93 (2.81 / 0)	-	-
-NA	Percentile (%)	0.095	-	-	6.895	-	-
+ 	Percentile (%)	0.095	-	-	6.895	-	-
 hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	0.07 (5.49 / 5.17)	-	-	0.52 (4.58 / 2.91)
-NA	Percentile (%)	0.127	-	34.516	-	-	12.657
+ 	Percentile (%)	0.127	-	34.516	-	-	12.657
 racemase and epimerase activity, acting on hydroxy acids and derivatives	FC (WS / NS)	2.92 (6.55 / 0)	-	-2.01 (1 / 7.04)	-	-	-
-NA	Percentile (%)	0.159	-	96.841	-	-	-
+ 	Percentile (%)	0.159	-	96.841	-	-	-
 transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	2.89 (6.39 / 0)	-	0.16 (7.82 / 6.91)	-	-	0.68 (4.58 / 2.49)
-NA	Percentile (%)	0.19	-	26.94	-	-	10.075
+ 	Percentile (%)	0.19	-	26.94	-	-	10.075
 pyruvate oxidase activity	FC (WS / NS)	2.83 (6.11 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.222	-	-	-	-	-
+ 	Percentile (%)	0.222	-	-	-	-	-
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.254	-	-	-	-	-
+ 	Percentile (%)	0.254	-	-	-	-	-
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
-NA	Percentile (%)	0.286	-	-	-	-	-
+ 	Percentile (%)	0.286	-	-	-	-	-
 carbon-oxygen lyase activity, acting on phosphates	FC (WS / NS)	2.74 (5.7 / 0)	0.45 (4.32 / 2.91)	0.47 (9.79 / 6.78)	0.86 (0.81 / 0)	-	0.83 (6.27 / 3.08)
-NA	Percentile (%)	0.317	16.555	16.045	9.334	-	8.221
+ 	Percentile (%)	0.317	16.555	16.045	9.334	-	8.221
