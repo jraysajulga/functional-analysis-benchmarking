@@ -368,8 +368,8 @@ paste(print_mqome_cmds("eggnog", 'gos.1'),
 ```
 
 ```{r}
-import_mqome_output <- function(name, type){
-  read.delim(paste0("results/mqome/output/", name, "/", name, "_func_", type, ".tab"),
+import_mqome_output <- function(name, type, folder="full"){
+  read.delim(paste0("results/mqome/output/", folder, "/", name, "/", name, "_func_", type, ".tab"),
              stringsAsFactors = FALSE) %>%
     rename(gos = id) %>%
     mutate(
@@ -703,16 +703,6 @@ paste(sapply(labels, function(label){
 ```
 
 ```{r}
-import_mqome_output <- function(name, type, folder="full"){
-  read.delim(paste0("results/mqome/output/", folder, "/", name, "/", name, "_func_", type, ".tab"),
-             stringsAsFactors = FALSE) %>%
-    rename(gos = id) %>%
-    mutate(
-      countWS = replace_na(countWS, 0),
-      countNS = replace_na(countNS, 0),
-      log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
-    arrange(-log2ratio)
-}
 eggnog_hits_expanded <- import_mqome_output('eggnog', 'expanded', folder="hits")
 eggnog_hits_filtered <- import_mqome_output('eggnog', 'filtered', folder="hits")
 megan_hits_expanded <- import_mqome_output('megan', 'expanded', folder="hits")
@@ -1151,10 +1141,24 @@ rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
 
 ```{r}
 tool <- 'mpa'
-read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular'))
-#which(grepl('GO:0009374', mpa$gos))
+rank_table <- read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular'))
+#which(grepl('peptide deformylase', rank_table$GO.Term))
+rank_table
 ```
 
+```{r}
+which(grepl("GO:0009374", mpa$gos))
+```
+
+```{r}
+which(grepl('biotin binding', rank_table$GO.Term))
+which(grepl('biotin binding', rank_table_expanded$GO.Term))
+```
+
+```{r}
+rank_table_expanded <- read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
+rank_table_expanded
+```
 ```{r}
 read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
 ```
