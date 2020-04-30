@@ -1,0 +1,7 @@
+id	name	namespace	NS_mean	WS_mean	countNS	countWS	countNS_n_peptide	countWS_n_peptide	countNS_n_samp_children	countWS_n_samp_children
+GO:0003674	molecular_function	molecular_function	2.584962500721156	2.584962500721156	2.584962500721156	2.584962500721156	6	6	1.0	1.0
+GO:0003824	catalytic activity	molecular_function	2.321928094887362	2.321928094887362	2.321928094887362	2.321928094887362	5	5	1.0	1.0
+GO:0004854	xanthine dehydrogenase activity	molecular_function	NA	NA	0.0	0.0	1	1	NA	NA
+GO:0016491	oxidoreductase activity	molecular_function	2.0	2.0	2.0	2.0	4	4	1.0	1.0
+GO:0016725	oxidoreductase activity, acting on CH or CH2 groups	molecular_function	1.584962500721156	1.584962500721156	1.584962500721156	1.584962500721156	3	3	1.0	1.0
+GO:0016726	oxidoreductase activity, acting on CH or CH2 groups, NAD or NADP as acceptor	molecular_function	1.0	1.0	1.0	1.0	2	2	1.0	1.0
