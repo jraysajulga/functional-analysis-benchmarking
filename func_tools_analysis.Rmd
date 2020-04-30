@@ -1098,6 +1098,7 @@ get_rank_table <- function(name, tools, folder, ontology){
     tool_topn <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
     tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
     tool_topn <- tool_topn[!is.na(tool_topn)]
+    n <- length(tool_topn)
     tool_topn <- tool_topn[1:n]
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
     rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
@@ -1119,7 +1120,7 @@ get_rank_table <- function(name, tools, folder, ontology){
         })
         rank_table[,labels[i]] <- unlist(output)
     }
-    rank_table <- rank_table %>% select('GO Term' = names, "Ranking", name, everything())
+    rank_table <- rank_table %>% select('GO Term' = names, "Fold Change", name, everything())
     write.table(rank_table,
                 file=paste0("results/rank_tables/", folder, "/", ontology, '/', name, "-rank_table.tabular"),
                 sep='\t', quote=FALSE, row.names=FALSE)
@@ -1147,11 +1148,13 @@ rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
        get_rank_table("Prophane", tools_filtered, 'filtered', ontology))
 })
 ```
+
 ```{r}
-tool <- 'unipept'
-read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular')) #%>%
-  # filter(GO.Term %in% c('biotin binding'))
+tool <- 'mpa'
+read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular'))
+#which(grepl('GO:0009374', mpa$gos))
 ```
+
 ```{r}
 read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
 ```

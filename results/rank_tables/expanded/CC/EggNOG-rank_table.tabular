@@ -1,4 +1,4 @@
-GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 striated muscle dense body	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
  	Percentile (%)	0.87	-	-	-	-	-
 Holliday junction helicase complex	FC (WS / NS)	2.07 (2.81 / -0.09)	1.84 (2.58 / 0)	-	-	-	-0.61 (3 / 5.11)
@@ -19,3 +19,1293 @@ SWI/SNF superfamily-type complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-0.31 (2 /
  	Percentile (%)	2.795	-	-	-	-	76.992
 hemoglobin complex	FC (WS / NS)	1.73 (2.32 / 0)	-0.09 (2.58 / 2.81)	-	-	-	-
  	Percentile (%)	3.028	75.761	-	-	-	-
+mitochondrial intermembrane space	FC (WS / NS)	1.73 (2 / -0.09)	0 (2 / 2)	-0.23 (5.95 / 7.14)	-	-	0.52 (3.17 / 1.91)
+ 	Percentile (%)	3.308	55.093	69.778	-	-	12.331
+spindle microtubule	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	3.323	-	-	-	-	-
+tethering complex	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	0.53 (2.58 / 1.49)
+ 	Percentile (%)	3.401	-	-	-	-	12.18
+proteasome complex	FC (WS / NS)	1.58 (2 / 0)	-1.37 (1 / 4.17)	-	-2.73 (0 / 5.61)	-	0.05 (1.58 / 1.49)
+ 	Percentile (%)	3.463	92.584	-	88.227	-	46.491
+mitochondrial respiratory chain	FC (WS / NS)	1.58 (2 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.619	-	-	-	-	-
+mitochondrial respiratory chain complex II, succinate dehydrogenase complex (ubiquinone)	FC (WS / NS)	1.58 (2 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.634	-	-	-	-	-
+exodeoxyribonuclease V complex	FC (WS / NS)	1.58 (2 / 0)	-0.58 (1 / 2)	-	-	-	-
+ 	Percentile (%)	3.789	86.198	-	-	-	-
+endopeptidase complex	FC (WS / NS)	1.58 (2 / 0)	-1.37 (1 / 4.17)	-	-2.73 (0 / 5.61)	-	0.05 (1.58 / 1.49)
+ 	Percentile (%)	4.814	93.339	-	88.743	-	46.992
+Golgi cis cisterna	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	4.877	-	-	-	-	-
+Golgi trans cisterna	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	4.892	-	-	-	-	-
+transcription factor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	1.2 (3.58 / 1)	-	-	-	0.15 (2.58 / 2.23)
+ 	Percentile (%)	5.001	7.828	-	-	-	28.747
+Golgi stack	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	5.016	-	-	-	-	-
+Golgi medial cisterna	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	5.032	-	-	-	-	-
+bacterial-type flagellum basal body	FC (WS / NS)	1.51 (1.58 / -0.09)	0 (3.58 / 3.58)	-	-	-	-1.32 (0 / 1.49)
+ 	Percentile (%)	5.078	57.244	-	-	-	95.188
+COPI-coated vesicle	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	5.141	-	-	-	-	-
+COPI-coated vesicle membrane	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	5.156	-	-	-	-	-
+citrate lyase complex	FC (WS / NS)	1.46 (4.25 / 0.91)	-0.48 (5.25 / 7.7)	-0.47 (4.52 / 6.66)	-3.75 (0 / 12.47)	-	-0.66 (3.91 / 6.74)
+ 	Percentile (%)	5.311	85.1	78.54	98.827	-	87.769
+histone deacetylase complex	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	5.374	-	-	-	-	-
+phosphatidylinositol 3-kinase complex	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	5.467	-	-	-	-	-
+photosystem	FC (WS / NS)	1.37 (1.58 / 0)	-	-2.48 (0 / 4.58)	-	-	-
+ 	Percentile (%)	5.638	-	95.048	-	-	-
+septin cytoskeleton	FC (WS / NS)	1.37 (1.58 / 0)	0.9 (7.09 / 3.32)	1 (7.02 / 3)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+ 	Percentile (%)	5.855	12.497	7.206	2.111	-	9.173
+trans-Golgi network membrane	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	5.87	-	-	-	-	-
+H4/H2A histone acetyltransferase complex	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	6.088	-	-	-	-	-
+cell cortex region	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	6.399	-	-	-	-	-
+H4 histone acetyltransferase complex	FC (WS / NS)	1.37 (1.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	6.43	-	-	-	-	-
+transcriptional repressor complex	FC (WS / NS)	1.3 (3.7 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	6.569	-	-	-	-	-
+protein phosphatase type 2A complex	FC (WS / NS)	1.14 (1 / -0.09)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	6.864	-	-	-	-	30.201
+transcription export complex	FC (WS / NS)	1.14 (1 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	6.88	-	-	-	-	-
+nuclear heterochromatin	FC (WS / NS)	1.14 (1 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	7.02	-	-	-	-	-
+cytochrome complex	FC (WS / NS)	1.14 (1 / -0.09)	-	-	-	-	0.27 (2 / 1.49)
+ 	Percentile (%)	7.408	-	-	-	-	21.228
+HAUS complex	FC (WS / NS)	1.14 (1 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	7.424	-	-	-	-	-
+plastid large ribosomal subunit	FC (WS / NS)	1.08 (4.25 / 1.49)	-	-	-	-0.68 (-2.26 / -3.02)	-
+ 	Percentile (%)	7.672	-	-	-	89.848	-
+plastid ribosome	FC (WS / NS)	1.08 (4.25 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	7.688	-	-	-	-	-
+organelle envelope lumen	FC (WS / NS)	1.07 (3 / 0.91)	0 (3 / 3)	-0.2 (6.95 / 8.14)	-	-	0.52 (3.17 / 1.91)
+ 	Percentile (%)	7.781	60.037	68.73	-	-	12.406
+incipient cellular bud site	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.029	-	-	-	-	-
+GARP complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.122	-	-	-	-	-
+spliceosomal complex	FC (WS / NS)	1 (1 / 0)	-0.27 (2.32 / 3)	-	-	-	-1.69 (0 / 2.23)
+ 	Percentile (%)	8.402	82.33	-	-	-	97.193
+polytene chromosome band	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.417	-	-	-	-	-
+vacuolar lumen	FC (WS / NS)	1 (1 / 0)	-	-0.7 (3.58 / 6.46)	-	-	-
+ 	Percentile (%)	8.433	-	81.841	-	-	-
+Golgi lumen	FC (WS / NS)	1 (1 / 0)	-	-	-	-	0.3 (2.58 / 1.91)
+ 	Percentile (%)	8.449	-	-	-	-	19.173
+cytoplasmic microtubule	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.464	-	-	-	-	-
+septin ring	FC (WS / NS)	1 (1 / 0)	1.09 (6.09 / 2.32)	1.23 (6.02 / 2)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+ 	Percentile (%)	8.495	8.057	6.19	1.97	-	9.123
+sulfite reductase complex (NADPH)	FC (WS / NS)	1 (1 / 0)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	8.899	9.682	-	-	-	-
+imidazoleglycerol-phosphate synthase complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.914	-	-	-	-	-
+chromoplast	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.93	-	-	-	-	-
+photosystem II	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	8.945	-	-	-	-	-
+myosin II complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.241	-	-	-	-	-
+unconventional myosin complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.256	-	-	-	-	-
+SWI/SNF complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.272	-	-	-	-	-
+RSC-type complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.303	-	-	-	-	-
+death-inducing signaling complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.536	-	-	-	-	-
+RNAi effector complex	FC (WS / NS)	1 (1 / 0)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	9.567	90.158	-	-	-	-
+haptoglobin-hemoglobin complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.675	-	-	-	-	-
+phosphatidylinositol 3-kinase complex, class III	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.908	-	-	-	-	-
+NuA4 histone acetyltransferase complex	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.939	-	-	-	-	-
+microtubule plus-end	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	9.986	-	-	-	-	-
+organelle membrane contact site	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	10.281	-	-	-	-	-
+neuron spine	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	10.297	-	-	-	-	-
+anchored component of plasma membrane	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	10.607	-	-	-	-	-
+pigment granule	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	10.747	-	-	-	-	-
+microtubule end	FC (WS / NS)	1 (1 / 0)	-	-	-	-	-
+ 	Percentile (%)	11.756	-	-	-	-	-
+nuclear pore	FC (WS / NS)	1 (2.81 / 0.91)	-1 (0 / 1)	-	-	-	-2.2 (0 / 3.61)
+ 	Percentile (%)	11.943	88.876	-	-	-	99.148
+Holliday junction resolvase complex	FC (WS / NS)	0.95 (3.81 / 1.49)	1.84 (2.58 / 0)	-	-	-	-
+ 	Percentile (%)	12.145	3.754	-	-	-	-
+Golgi-associated vesicle	FC (WS / NS)	0.91 (2.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	12.238	-	-	-	-	-
+Golgi-associated vesicle membrane	FC (WS / NS)	0.91 (2.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	12.3	-	-	-	-	-
+peptidase complex	FC (WS / NS)	0.91 (2.58 / 0.91)	-1.37 (1 / 4.17)	-	-2.73 (0 / 5.61)	-	0.05 (2 / 1.91)
+ 	Percentile (%)	12.347	93.317	-	88.696	-	48.371
+exodeoxyribonuclease VII complex	FC (WS / NS)	0.88 (3.58 / 1.49)	0.51 (4.7 / 3)	-	-	-	0.16 (4 / 3.49)
+ 	Percentile (%)	12.502	15.61	-	-	-	28.396
+alpha DNA polymerase:primase complex	FC (WS / NS)	0.87 (4.32 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	12.517	-	-	-	-	-
+nuclear replisome	FC (WS / NS)	0.87 (4.32 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	12.549	-	-	-	-	-
+nuclear periphery	FC (WS / NS)	0.84 (3.46 / 1.49)	-	-0.33 (4.81 / 6.32)	-	-	-
+ 	Percentile (%)	12.657	-	75.079	-	-	-
+DNA topoisomerase IV complex	FC (WS / NS)	0.83 (4.17 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	12.719	-	-	-	-	-
+host cell nucleus	FC (WS / NS)	0.82 (5.17 / 2.49)	-	-	-	-	-0.08 (3 / 3.23)
+ 	Percentile (%)	12.75	-	-	-	-	66.717
+extraorganismal space	FC (WS / NS)	0.82 (5.17 / 2.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	12.766	61.479	-	-	-	-
+intracellular region of host	FC (WS / NS)	0.82 (5.17 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	12.781	-	-	-	-	-
+host cell	FC (WS / NS)	0.82 (5.17 / 2.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	12.797	61.639	-	-	-	-
+other organism cell	FC (WS / NS)	0.82 (5.17 / 2.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	12.813	61.776	-	-	-	-
+cis-Golgi network	FC (WS / NS)	0.8 (2.32 / 0.91)	-	-	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	12.983	-	-	-	-	4.261
+methionine adenosyltransferase complex	FC (WS / NS)	0.8 (2.32 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	13.061	-	-	-	-	-
+mitotic spindle	FC (WS / NS)	0.8 (2.32 / 0.91)	-	-2.37 (0 / 4.17)	-	-	-
+ 	Percentile (%)	13.108	-	93.492	-	-	-
+ferredoxin hydrogenase complex	FC (WS / NS)	0.75 (5.55 / 2.91)	0.09 (3.58 / 3.32)	-0.27 (4.17 / 5.25)	-2.5 (0 / 4.64)	-	0.22 (3.91 / 3.23)
+ 	Percentile (%)	13.356	33.211	71.937	86.867	-	24.11
+pore complex	FC (WS / NS)	0.74 (3.17 / 1.49)	-0.33 (5.49 / 7.17)	-0.28 (7.19 / 8.92)	-2.87 (0 / 6.32)	-	-0.73 (2 / 3.99)
+ 	Percentile (%)	13.387	83.268	72.127	89.775	-	89.023
+microtubule	FC (WS / NS)	0.68 (3 / 1.49)	0.14 (9.42 / 8.43)	-	-	-0.6 (-5.24 / -7.44)	-0.21 (3.32 / 3.99)
+ 	Percentile (%)	13.744	27.993	-	-	87.31	74.085
+cell pole	FC (WS / NS)	0.68 (3 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	13.791	-	-	-	-	-
+host intracellular membrane-bounded organelle	FC (WS / NS)	0.68 (6.17 / 3.49)	-	-	-	-	-0.01 (3.32 / 3.36)
+ 	Percentile (%)	13.853	-	-	-	-	60.877
+other organism part	FC (WS / NS)	0.68 (6.17 / 3.49)	1.58 (2 / 0)	-	-	-	-
+ 	Percentile (%)	13.869	5.196	-	-	-	-
+Golgi cisterna	FC (WS / NS)	0.66 (3.58 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	14.055	-	-	-	-	-
+vacuolar proton-transporting V-type ATPase, V1 domain	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	14.071	-	-	-	-	-
+contractile vacuole	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	14.086	-	-	-	-	-
+protein serine/threonine phosphatase complex	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	14.241	-	-	-	-	31.604
+vacuolar proton-transporting V-type ATPase complex	FC (WS / NS)	0.65 (2 / 0.91)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	14.335	89.746	-	-	-	-
+mitotic spindle pole body	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	14.49	-	-	-	-	-
+invadopodium	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	14.552	-	-	-	-	-
+invadopodium membrane	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	14.567	-	-	-	-	-
+phosphatase complex	FC (WS / NS)	0.65 (2 / 0.91)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	14.614	-	-	-	-	34.612
+replisome	FC (WS / NS)	0.63 (5.32 / 3.08)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	14.676	10.346	-	-	-	-
+extrinsic component of cytoplasmic side of plasma membrane	FC (WS / NS)	0.63 (5.52 / 3.23)	-	0.14 (5.7 / 5.09)	-	-	-
+ 	Percentile (%)	14.738	-	27.46	-	-	-
+host intracellular organelle	FC (WS / NS)	0.61 (6.75 / 4.08)	-	-	-	-	-0.01 (3.32 / 3.36)
+ 	Percentile (%)	14.94	-	-	-	-	60.852
+nuclear DNA-directed RNA polymerase complex	FC (WS / NS)	0.61 (4.32 / 2.49)	-0.01 (10.41 / 10.52)	-	-	-	-
+ 	Percentile (%)	14.956	68.78	-	-	-	-
+Golgi subcompartment	FC (WS / NS)	0.61 (4.32 / 2.49)	-1.58 (0 / 2)	-	-	-	-
+ 	Percentile (%)	14.971	94.667	-	-	-	-
+apicoplast	FC (WS / NS)	0.58 (4.86 / 2.91)	-	-	-	-	-
+ 	Percentile (%)	15.096	-	-	-	-	-
+host intracellular part	FC (WS / NS)	0.57 (7.17 / 4.49)	-	-	-	-	-0.07 (3.58 / 3.81)
+ 	Percentile (%)	15.111	-	-	-	-	65.865
+contractile fiber	FC (WS / NS)	0.54 (4.09 / 2.49)	1 (1 / 0)	-0.81 (3.58 / 7.04)	-	-	-
+ 	Percentile (%)	15.266	10.941	82.921	-	-	-
+host cell part	FC (WS / NS)	0.53 (7.75 / 5.08)	1.37 (1.58 / 0)	-	-	-	-0.18 (4.32 / 5.03)
+ 	Percentile (%)	15.422	6.981	-	-	-	73.383
+apical part of cell	FC (WS / NS)	0.53 (2.58 / 1.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	15.53	61.936	-	-	-	-
+Golgi membrane	FC (WS / NS)	0.52 (3.17 / 1.91)	0 (0 / 0)	-	-	-	0.04 (2.58 / 2.49)
+ 	Percentile (%)	15.577	52.987	-	-	-	49.649
+DNA-directed RNA polymerase complex	FC (WS / NS)	0.52 (4.32 / 2.71)	-0.01 (10.89 / 11)	-	-	0.08 (-10.73 / -10.18)	-
+ 	Percentile (%)	15.608	68.62	-	-	34.01	-
+S-layer	FC (WS / NS)	0.5 (4.25 / 2.71)	-	0.36 (7.63 / 5.73)	-	-	-
+ 	Percentile (%)	15.748	-	15.651	-	-	-
+host	FC (WS / NS)	0.5 (8.17 / 5.49)	1.73 (2.32 / 0)	-	-	-	-0.18 (4.32 / 5.03)
+ 	Percentile (%)	15.779	4.005	-	-	-	73.358
+extrinsic component of plasma membrane	FC (WS / NS)	0.49 (6.77 / 4.55)	-	-0.16 (6 / 6.81)	0.2 (8.66 / 7.41)	-	0.17 (4.7 / 4.08)
+ 	Percentile (%)	15.872	-	67.016	15.994	-	27.469
+proton-transporting V-type ATPase complex	FC (WS / NS)	0.46 (3 / 1.91)	-0.2 (7.45 / 8.68)	-	-	-	-
+ 	Percentile (%)	16.276	80.247	-	-	-	-
+proton-transporting V-type ATPase, V1 domain	FC (WS / NS)	0.46 (3 / 1.91)	-0.25 (6.04 / 7.37)	-	-	-	-
+ 	Percentile (%)	16.291	81.804	-	-	-	-
+protein-DNA complex	FC (WS / NS)	0.45 (5.93 / 4.08)	0.47 (2.58 / 1.58)	0.3 (7.27 / 5.73)	0.36 (6.59 / 4.91)	-	0.14 (5.95 / 5.3)
+ 	Percentile (%)	16.447	16.022	17.968	12.758	-	34.787
+nuclear replication fork	FC (WS / NS)	0.45 (4.32 / 2.91)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	16.524	10.986	-	-	-	-
+signal recognition particle	FC (WS / NS)	0.44 (5.67 / 3.91)	0.34 (6.73 / 5.09)	0.38 (5.73 / 4.17)	0.32 (9.23 / 7.17)	-0.1 (-9.26 / -9.87)	0.2 (5.91 / 4.99)
+ 	Percentile (%)	16.586	18.654	15.143	13.086	57.36	24.511
+heterochromatin	FC (WS / NS)	0.44 (1.58 / 0.91)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	16.617	8.469	-	-	-	-
+nuclear RNA-directed RNA polymerase complex	FC (WS / NS)	0.44 (1.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	16.882	-	-	-	-	-
+P granule	FC (WS / NS)	0.44 (1.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	16.944	-	-	-	-	-
+intercellular canaliculus	FC (WS / NS)	0.44 (1.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	16.99	-	-	-	-	-
+germ plasm	FC (WS / NS)	0.44 (1.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	17.161	-	-	-	-	-
+cytoplasmic region	FC (WS / NS)	0.44 (1.58 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	17.208	-	-	-	-	-
+extrinsic component of membrane	FC (WS / NS)	0.42 (7.45 / 5.33)	-	-0.16 (6 / 6.81)	0.2 (8.66 / 7.41)	-	0.17 (4.7 / 4.08)
+ 	Percentile (%)	17.394	-	67.048	16.041	-	27.494
+apical plasma membrane	FC (WS / NS)	0.42 (2.32 / 1.49)	-	-	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	17.441	-	-	-	-	77.87
+organellar large ribosomal subunit	FC (WS / NS)	0.41 (5.95 / 4.23)	-	-	-	0.76 (2.35 / 0.98)	0.14 (0 / -0.09)
+ 	Percentile (%)	17.534	-	-	-	4.133	30.326
+platelet alpha granule lumen	FC (WS / NS)	0.4 (5.7 / 4.08)	-	0.39 (5.78 / 4.17)	-	-	-
+ 	Percentile (%)	17.813	-	14.603	-	-	-
+succinate dehydrogenase complex	FC (WS / NS)	0.39 (3.58 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	18.093	-	-	-	-	-
+platelet alpha granule	FC (WS / NS)	0.38 (5.7 / 4.15)	-	-	-	-	-
+ 	Percentile (%)	18.435	-	-	-	-	-
+basement membrane	FC (WS / NS)	0.34 (5.73 / 4.3)	-	0.39 (5.78 / 4.17)	-	-	-
+ 	Percentile (%)	18.854	-	14.54	-	-	-
+secretory granule lumen	FC (WS / NS)	0.34 (6.7 / 5.08)	-	-0.01 (5.91 / 5.95)	-	-	-
+ 	Percentile (%)	18.9	-	53.048	-	-	-
+organellar ribosome	FC (WS / NS)	0.34 (5.95 / 4.49)	-	-	-	-	-
+ 	Percentile (%)	18.978	-	-	-	-	-
+mitochondrial inner membrane	FC (WS / NS)	0.34 (3.7 / 2.71)	0.02 (6.58 / 6.49)	0.1 (8.87 / 8.2)	-	-	-0.54 (3.81 / 5.99)
+ 	Percentile (%)	19.087	46.464	32.254	-	-	86.416
+secretory granule	FC (WS / NS)	0.33 (6.75 / 5.15)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	19.196	89.929	-	-	-	-
+nuclear chromosome	FC (WS / NS)	0.33 (4.64 / 3.49)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	19.32	8.4	-	-	-	-
+secretory vesicle	FC (WS / NS)	0.32 (6.75 / 5.19)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	19.491	91.257	-	-	-	-
+replication fork	FC (WS / NS)	0.32 (5.32 / 4.08)	1.1 (4.52 / 1.58)	-	-	-	-
+ 	Percentile (%)	19.646	7.988	-	-	-	-
+cytoplasmic vesicle lumen	FC (WS / NS)	0.31 (7.29 / 5.66)	-	-0.01 (5.91 / 5.95)	-	-	-
+ 	Percentile (%)	19.755	-	53.079	-	-	-
+mitochondrial large ribosomal subunit	FC (WS / NS)	0.3 (3.58 / 2.71)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	20.174	-	-	-	-	31.203
+RNA-directed RNA polymerase complex	FC (WS / NS)	0.3 (2.58 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	20.345	-	-	-	-	-
+pole plasm	FC (WS / NS)	0.3 (2.58 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	20.376	-	-	-	-	-
+cell septum	FC (WS / NS)	0.3 (6.11 / 4.76)	-	0.55 (6.17 / 3.91)	-	-	-
+ 	Percentile (%)	20.438	-	11.841	-	-	-
+collagen-containing extracellular matrix	FC (WS / NS)	0.3 (5.75 / 4.49)	-	0.21 (6.87 / 5.78)	-	-	-
+ 	Percentile (%)	20.531	-	22.73	-	-	-
+vesicle lumen	FC (WS / NS)	0.29 (7.7 / 6.1)	-	-0.01 (5.91 / 5.95)	-	-	-
+ 	Percentile (%)	20.655	-	53.016	-	-	-
+extracellular membrane-bounded organelle	FC (WS / NS)	0.29 (5.86 / 4.61)	0.39 (5.78 / 4.17)	-	-	-	-
+ 	Percentile (%)	20.749	17.441	-	-	-	-
+extracellular exosome	FC (WS / NS)	0.29 (5.86 / 4.61)	0.39 (5.78 / 4.17)	-	-	-	0.12 (5.91 / 5.36)
+ 	Percentile (%)	20.764	17.464	-	-	-	36.566
+extracellular vesicle	FC (WS / NS)	0.29 (5.86 / 4.61)	0.39 (5.78 / 4.17)	-	-	-	0.12 (5.91 / 5.36)
+ 	Percentile (%)	20.78	17.487	-	-	-	36.591
+6-phosphofructokinase complex	FC (WS / NS)	0.29 (6.95 / 5.52)	0.2 (6.92 / 5.88)	-	-	0.13 (-9.66 / -8.91)	-
+ 	Percentile (%)	20.842	24.537	-	-	28.861	-
+bacterial nucleoid	FC (WS / NS)	0.28 (5.17 / 4.08)	-	-	-	-	-0.13 (5.29 / 5.88)
+ 	Percentile (%)	20.919	-	-	-	-	70.201
+extracellular matrix	FC (WS / NS)	0.28 (6.78 / 5.43)	1.58 (2 / 0)	0.08 (6.97 / 6.54)	-	-	-0.92 (1.58 / 3.91)
+ 	Percentile (%)	21.075	5.035	35.873	-	-	91.353
+phosphoenolpyruvate-dependent sugar phosphotransferase complex	FC (WS / NS)	0.26 (7.29 / 5.91)	-	-2.5 (0 / 4.64)	-	-	-
+ 	Percentile (%)	21.603	-	95.175	-	-	-
+anaerobic ribonucleoside-triphosphate reductase complex	FC (WS / NS)	0.24 (5.43 / 4.43)	-	1.66 (5.32 / 1)	-	-	-
+ 	Percentile (%)	22.41	-	4.667	-	-	-
+cell division site	FC (WS / NS)	0.24 (8.47 / 7.02)	0.15 (8.83 / 7.83)	0.16 (8.18 / 7.23)	0.11 (16.67 / 15.42)	-0.61 (-4.53 / -6.37)	0.15 (8.32 / 7.37)
+ 	Percentile (%)	22.488	27.352	25.841	23.546	87.817	28.571
+extracellular organelle	FC (WS / NS)	0.23 (7.44 / 6.19)	0.31 (7.37 / 5.75)	-	-	-	0.12 (5.91 / 5.36)
+ 	Percentile (%)	22.628	19.684	-	-	-	36.541
+histone acetyltransferase complex	FC (WS / NS)	0.23 (3.58 / 2.91)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	22.659	-	-	-	-	42.18
+protein acetyltransferase complex	FC (WS / NS)	0.23 (3.58 / 2.91)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	22.69	-	-	-	-	43.183
+apoplast	FC (WS / NS)	0.23 (3.58 / 2.91)	2.45 (4.46 / 0)	-	-	-	-1.97 (0 / 2.91)
+ 	Percentile (%)	22.705	0.549	-	-	-	98.622
+acetyltransferase complex	FC (WS / NS)	0.23 (3.58 / 2.91)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	22.721	-	-	-	-	44.01
+chloroplast thylakoid	FC (WS / NS)	0.22 (5.67 / 4.71)	-	-0.08 (7.36 / 7.86)	-	-	-
+ 	Percentile (%)	22.892	-	60.063	-	-	-
+chloroplast thylakoid membrane	FC (WS / NS)	0.22 (5.67 / 4.71)	-	-	-	-	-0.01 (4.81 / 4.86)
+ 	Percentile (%)	22.907	-	-	-	-	60.602
+DNA polymerase III complex	FC (WS / NS)	0.22 (6.04 / 5.03)	0 (7.71 / 7.73)	-	0.3 (10.22 / 8.11)	-0.19 (-9.4 / -10.6)	0.02 (6.52 / 6.4)
+ 	Percentile (%)	22.938	65.713	-	13.321	64.612	53.058
+DNA polymerase complex	FC (WS / NS)	0.21 (7.25 / 6.11)	-0.01 (9.05 / 9.11)	-	0.3 (10.22 / 8.11)	-0.22 (-8.4 / -9.6)	0.02 (6.54 / 6.41)
+ 	Percentile (%)	23.327	67.361	-	13.368	66.715	53.083
+RNA polymerase complex	FC (WS / NS)	0.21 (5.04 / 4.23)	-0.01 (11.6 / 11.67)	-	-	0.08 (-10.73 / -10.18)	-
+ 	Percentile (%)	23.435	67.155	-	-	34.155	-
+ATPase complex	FC (WS / NS)	0.2 (4.75 / 3.99)	0 (3.58 / 3.58)	-0.12 (8.57 / 9.43)	-2.73 (0 / 5.61)	-	-0.47 (3.58 / 5.36)
+ 	Percentile (%)	23.528	64.958	64.698	88.649	-	83.784
+spindle pole body	FC (WS / NS)	0.2 (3 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	23.668	-	-	-	-	-
+plastid thylakoid	FC (WS / NS)	0.19 (6.67 / 5.71)	-	-0.08 (8.36 / 8.86)	-	-	-
+ 	Percentile (%)	23.901	-	58.984	-	-	-
+plastid thylakoid membrane	FC (WS / NS)	0.19 (6.67 / 5.71)	-	-	-	-	-0.01 (4.81 / 4.86)
+ 	Percentile (%)	23.917	-	-	-	-	60.627
+transferase complex, transferring phosphorus-containing groups	FC (WS / NS)	0.19 (8.19 / 7.04)	0 (11.88 / 11.92)	0.07 (8.51 / 8.07)	0.29 (10.22 / 8.15)	-0.04 (-7.71 / -7.88)	0.04 (6.67 / 6.48)
+ 	Percentile (%)	23.948	66.011	38.095	13.462	50.326	49.925
+organelle subcompartment	FC (WS / NS)	0.19 (7.46 / 6.41)	-1.58 (0 / 2)	-0.07 (8.94 / 9.45)	-	-	-
+ 	Percentile (%)	23.994	94.186	58.444	-	-	-
+DNA topoisomerase complex (ATP-hydrolyzing)	FC (WS / NS)	0.18 (6.25 / 5.4)	-	0.13 (6.41 / 5.75)	-	-	-
+ 	Percentile (%)	24.196	-	28.254	-	-	-
+mitochondrial ribosome	FC (WS / NS)	0.17 (3.58 / 3.08)	-	-	-	-	-
+ 	Percentile (%)	24.538	-	-	-	-	-
+chloroplast envelope	FC (WS / NS)	0.17 (5.67 / 4.95)	-	-	-	-	-
+ 	Percentile (%)	24.662	-	-	-	-	-
+plastid stroma	FC (WS / NS)	0.15 (7.24 / 6.41)	-	-0.05 (10.2 / 10.59)	-	-	-0.71 (1.58 / 3.23)
+ 	Percentile (%)	24.911	-	56.921	-	-	88.822
+cytoplasmic side of plasma membrane	FC (WS / NS)	0.15 (6.79 / 6.01)	-	-0.15 (6.09 / 6.88)	-0.48 (6.9 / 10.04)	-	0.15 (6.34 / 5.61)
+ 	Percentile (%)	24.926	-	66.762	76.97	-	28.672
+coated vesicle membrane	FC (WS / NS)	0.15 (2.58 / 2.23)	-	-	-	-	-
+ 	Percentile (%)	25.019	-	-	-	-	-
+cytoplasmic side of membrane	FC (WS / NS)	0.15 (6.79 / 6.03)	-	-0.14 (7.09 / 7.88)	-0.48 (6.9 / 10.04)	-	0.15 (6.34 / 5.61)
+ 	Percentile (%)	25.128	-	65.524	77.064	-	28.722
+chloroplast stroma	FC (WS / NS)	0.15 (6.04 / 5.36)	-	-0.05 (9.2 / 9.59)	-	-	-0.71 (1.58 / 3.23)
+ 	Percentile (%)	25.159	-	57.143	-	-	88.847
+ubiquitin ligase complex	FC (WS / NS)	0.14 (0 / -0.09)	-1.58 (0 / 2)	-	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	25.299	93.591	-	-	-	72.18
+pericentriolar material	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.346	-	-	-	-	-
+cyclin-dependent protein kinase holoenzyme complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.361	-	-	-	-	-
+condensed nuclear chromosome	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.485	-	-	-	-	-
+synaptonemal complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.501	-	-	-	-	-
+lateral element	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.516	-	-	-	-	-
+voltage-gated sodium channel complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	25.61	-	-	-	-	-
+polysome	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	26.277	-	-	-	-	42.682
+mRNA cleavage factor complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	26.293	-	-	-	-	31.253
+kinesin complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	26.308	-	-	-	-	-
+synaptic vesicle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	26.868	-	-	-	-	-
+cyclin/CDK positive transcription elongation factor complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	26.883	-	-	-	-	-
+gamma-tubulin ring complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	26.961	-	-	-	-	-
+gamma-tubulin small complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	26.976	-	-	-	-	-
+aminodeoxychorismate synthase complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	27.458	-	-	-	-	-
+enterobactin synthetase complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	27.473	-	-	-	-	-
+bacterial-type flagellum filament	FC (WS / NS)	0.14 (0 / -0.09)	0 (0 / 0)	-	-2.06 (0 / 3.17)	-	-0.11 (2 / 2.23)
+ 	Percentile (%)	27.504	57.198	-	85.225	-	68.722
+plasmodesma	FC (WS / NS)	0.14 (0 / -0.09)	-	0.29 (5.58 / 4.39)	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	27.535	-	18.476	-	-	96.566
+chromocenter	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	27.66	-	-	-	-	-
+nuclear matrix	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	28.063	-	-	-	-	-
+RNA polymerase II, holoenzyme	FC (WS / NS)	0.14 (0 / -0.09)	-0.02 (9.09 / 9.19)	-	-	-	-
+ 	Percentile (%)	28.094	69.238	-	-	-	-
+Golgi transport complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	28.172	-	-	-	-	43.008
+nuclear cyclin-dependent protein kinase holoenzyme complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	28.421	-	-	-	-	-
+clathrin coat	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	28.7	-	-	-	-	-
+transport vesicle	FC (WS / NS)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	28.716	59.556	-	-	-	-
+clathrin-coated endocytic vesicle membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	28.886	-	-	-	-	-
+extrinsic component of external side of plasma membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-0.67 (3.58 / 6.29)	-	-	-
+ 	Percentile (%)	29.057	-	81.714	-	-	-
+intrinsic component of mitochondrial inner membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.073	-	-	-	-	-
+endosome lumen	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.135	-	-	-	-	-
+integrator complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.182	-	-	-	-	-
+cleavage furrow	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.213	-	-	-	-	-
+cytoplasmic side of mitochondrial outer membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.29	-	-	-	-	-
+dendrite cytoplasm	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.337	-	-	-	-	-
+TSC1-TSC2 complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.539	-	-	-	-	-
+luminal surveillance complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.616	-	-	-	-	-
+mature chylomicron	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.679	-	-	-	-	-
+chylomicron remnant	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.694	-	-	-	-	-
+very-low-density lipoprotein particle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.71	-	-	-	-	-
+low-density lipoprotein particle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.725	-	-	-	-	-
+intermediate-density lipoprotein particle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.741	-	-	-	-	-
+nuclear mitotic cohesin complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.834	-	-	-	-	-
+nuclear meiotic cohesin complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.849	-	-	-	-	-
+transcriptionally active chromatin	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	29.88	-	-	-	-	-
+Seh1-associated complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.005	-	-	-	-	-
+acroblast	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.036	-	-	-	-	-
+actomyosin	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.207	-	-	-	-	-
+C-fiber	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.486	-	-	-	-	-
+integral component of cell outer membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.533	-	-	-	-	-
+tubulin complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.548	-	-	-	-	-
+clathrin-coated endocytic vesicle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	30.564	-	-	-	-	-
+coated membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	31.03	-	-	-	-	-
+periplasmic flagellum	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	31.666	-	-	-	-	-
+symplast	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	31.682	-	-	-	-	-
+neurofilament cytoskeleton	FC (WS / NS)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	31.713	63.928	-	-	-	-
+exocytic vesicle	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.07	-	-	-	-	-
+spindle envelope	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.148	-	-	-	-	-
+clathrin complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.334	-	-	-	-	-
+extrinsic component of fungal-type vacuolar membrane	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.536	-	-	-	-	-
+synaptonemal structure	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.614	-	-	-	-	-
+neuron projection cytoplasm	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.691	-	-	-	-	-
+GATOR1 complex	FC (WS / NS)	0.14 (0 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	32.909	-	-	-	-	-
+plastid envelope	FC (WS / NS)	0.14 (6.67 / 5.95)	-	-	-	-	-
+ 	Percentile (%)	33.049	-	-	-	-	-
+endodeoxyribonuclease complex	FC (WS / NS)	0.13 (4.17 / 3.71)	-0.14 (4.58 / 5.17)	-	-0.23 (10.01 / 11.93)	-	0.1 (5.09 / 4.66)
+ 	Percentile (%)	33.235	78.302	-	67.308	-	38.195
+endonuclease complex	FC (WS / NS)	0.13 (4.17 / 3.71)	-0.14 (4.58 / 5.17)	-	-0.23 (10.01 / 11.93)	-	0.1 (5.09 / 4.66)
+ 	Percentile (%)	33.251	78.325	-	67.355	-	38.221
+extracellular space	FC (WS / NS)	0.13 (6.15 / 5.52)	0.24 (8.56 / 7.11)	0.15 (9.21 / 8.22)	-	-	0.09 (6.64 / 6.17)
+ 	Percentile (%)	33.297	22.202	26.635	-	-	39.098
+respiratory chain complex	FC (WS / NS)	0.12 (4.32 / 3.91)	-	-0.13 (8.45 / 9.32)	-	-	-
+ 	Percentile (%)	33.747	-	65.048	-	-	-
+transcription elongation factor complex	FC (WS / NS)	0.1 (6.02 / 5.55)	-	-	-	-	-
+ 	Percentile (%)	34.384	-	-	-	-	-
+nuclear lumen	FC (WS / NS)	0.1 (7.03 / 6.51)	-0.02 (11.11 / 11.26)	-	-	-	-
+ 	Percentile (%)	34.493	69.718	-	-	-	-
+cell surface	FC (WS / NS)	0.1 (10.08 / 9.35)	0.1 (9.64 / 8.92)	0.09 (11.51 / 10.76)	0.11 (20.99 / 19.41)	-	0.11 (9.63 / 8.87)
+ 	Percentile (%)	34.54	31.632	34.19	23.03	-	37.945
+cytosolic large ribosomal subunit	FC (WS / NS)	0.09 (9.45 / 8.84)	-	-0.09 (10.12 / 10.81)	-3.06 (0 / 7.32)	-	-1.62 (1 / 5.15)
+ 	Percentile (%)	35.301	-	60.317	92.073	-	97.068
+plasma membrane proton-transporting ATP synthase complex, catalytic core F(1)	FC (WS / NS)	0.08 (8.99 / 8.46)	-	-0.36 (5.58 / 7.47)	-	-	-
+ 	Percentile (%)	35.891	-	76.095	-	-	-
+extracellular region	FC (WS / NS)	0.08 (11.46 / 10.8)	0.08 (14.98 / 14.09)	0.07 (11.19 / 10.62)	0.11 (21.37 / 19.78)	-0.36 (-4.75 / -5.8)	0.16 (10.53 / 9.35)
+ 	Percentile (%)	36.015	33.486	37.778	23.405	78.535	28.271
+plastid	FC (WS / NS)	0.08 (8.13 / 7.65)	-0.11 (7.25 / 7.88)	0.05 (7.42 / 7.14)	-	-	-0.08 (6.95 / 7.44)
+ 	Percentile (%)	36.03	76.883	42.222	-	-	67.168
+plasma membrane-derived chromatophore	FC (WS / NS)	0.08 (8.89 / 8.38)	-	-	-	-	-
+ 	Percentile (%)	36.263	-	-	-	-	-
+plasma membrane-derived chromatophore membrane	FC (WS / NS)	0.08 (8.89 / 8.38)	-	-0.27 (5.55 / 6.92)	-	-	-
+ 	Percentile (%)	36.279	-	71.873	-	-	-
+plasma membrane proton-transporting ATP synthase complex	FC (WS / NS)	0.07 (9 / 8.51)	-	-	-	-	-
+ 	Percentile (%)	36.403	-	-	-	-	-
+large ribosomal subunit	FC (WS / NS)	0.07 (10.73 / 10.16)	-0.02 (13.07 / 13.25)	-0.06 (11.4 / 11.93)	-0.04 (15.57 / 16)	0.71 (2.41 / 1.09)	-0.03 (9.66 / 9.88)
+ 	Percentile (%)	36.419	70.016	57.524	49.437	4.786	62.832
+DNA helicase complex	FC (WS / NS)	0.07 (4.25 / 3.99)	2.2 (3.58 / 0)	-	-	-	-0.47 (3.58 / 5.36)
+ 	Percentile (%)	36.434	1.602	-	-	-	83.759
+nucleoplasm	FC (WS / NS)	0.07 (6.48 / 6.11)	-0.02 (10.09 / 10.23)	-	-	-	-0.24 (2.81 / 3.49)
+ 	Percentile (%)	36.481	69.833	-	-	-	75.113
+proton-transporting ATP synthase complex, catalytic core F(1)	FC (WS / NS)	0.07 (9.99 / 9.47)	0.04 (11.57 / 11.2)	-0.03 (9.5 / 9.73)	-0.04 (18.72 / 19.26)	0.53 (-2.48 / -2.03)	0.04 (9.3 / 9.03)
+ 	Percentile (%)	36.496	40.055	55.365	49.765	6.889	49.599
+organelle inner membrane	FC (WS / NS)	0.07 (4.7 / 4.43)	-0.05 (7.81 / 8.14)	0.08 (10.32 / 9.74)	-3.34 (0 / 9.1)	-	-0.59 (3.91 / 6.4)
+ 	Percentile (%)	36.605	73.747	36.508	95.732	-	87.093
+chloroplast	FC (WS / NS)	0.07 (6.95 / 6.58)	-0.12 (6.25 / 6.88)	-	-	-	-0.06 (6.57 / 6.92)
+ 	Percentile (%)	36.621	77.546	-	-	-	65.288
+SAGA complex	FC (WS / NS)	0.07 (1 / 0.91)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	36.683	-	-	-	-	30.175
+intrinsic component of cell outer membrane	FC (WS / NS)	0.07 (1 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	37.102	-	-	-	-	-
+SLIK (SAGA-like) complex	FC (WS / NS)	0.07 (1 / 0.91)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	37.288	-	-	-	-	33.559
+proton-transporting two-sector ATPase complex, catalytic domain	FC (WS / NS)	0.07 (10.59 / 10.06)	0.03 (13.2 / 12.93)	-0.01 (10.33 / 10.42)	-0.04 (18.72 / 19.26)	1.13 (-1.94 / -1.43)	0.04 (9.3 / 9.05)
+ 	Percentile (%)	37.739	43.076	53.397	49.719	2.828	50.075
+thylakoid	FC (WS / NS)	0.07 (9.68 / 9.2)	0.12 (8.2 / 7.49)	-0.01 (9.61 / 9.71)	-	-	-
+ 	Percentile (%)	37.879	30.167	53.746	-	-	-
+thylakoid membrane	FC (WS / NS)	0.07 (9.67 / 9.19)	0.12 (8.2 / 7.49)	0.08 (9.11 / 8.59)	-	-	-0.02 (5.04 / 5.11)
+ 	Percentile (%)	37.925	30.19	36.444	-	-	61.128
+transferase complex	FC (WS / NS)	0.06 (8.38 / 7.97)	-0.01 (11.9 / 11.96)	0.01 (8.54 / 8.46)	0.12 (10.27 / 9.36)	-0.04 (-7.71 / -7.88)	-0.04 (6.95 / 7.18)
+ 	Percentile (%)	38.189	66.423	48.825	21.764	50.399	63.885
+proton-transporting ATP synthase complex	FC (WS / NS)	0.06 (10 / 9.52)	0.04 (12.52 / 12.16)	0.06 (9.22 / 8.78)	-	0.4 (-3.62 / -2.99)	-
+ 	Percentile (%)	38.251	40.673	39.111	-	9.137	-
+proton-transporting two-sector ATPase complex	FC (WS / NS)	0.06 (10.59 / 10.11)	0.02 (14.04 / 13.79)	0.06 (9.85 / 9.43)	-	0.71 (-2.62 / -1.99)	-
+ 	Percentile (%)	38.64	43.877	40.286	-	4.496	-
+plasma membrane protein complex	FC (WS / NS)	0.06 (10.02 / 9.56)	-0.05 (9.42 / 9.77)	-0.11 (10.09 / 10.96)	-0.13 (15.56 / 17.15)	-0.01 (-8.39 / -8.45)	-0.1 (9.13 / 9.85)
+ 	Percentile (%)	38.655	73.152	63.27	62.383	48.151	68.296
+photosynthetic membrane	FC (WS / NS)	0.06 (10.97 / 10.5)	0.1 (9.2 / 8.49)	0.05 (10.17 / 9.8)	-	-	-0.02 (5.04 / 5.11)
+ 	Percentile (%)	39.074	31.449	42.317	-	-	61.103
+membrane protein complex	FC (WS / NS)	0.05 (11.62 / 11.15)	0.02 (14.75 / 14.52)	-0.04 (12.78 / 13.19)	-0.05 (18.88 / 19.56)	NaN (-1.23 / -0.68)	-0.03 (10.32 / 10.58)
+ 	Percentile (%)	39.385	45.205	56.413	53.612	99.71	62.982
+bacterial-type flagellum	FC (WS / NS)	0.05 (1.58 / 1.49)	0.16 (7.17 / 6.32)	-	-	-	0.42 (2.32 / 1.49)
+ 	Percentile (%)	39.478	26.825	-	-	-	16.115
+nucleus	FC (WS / NS)	0.05 (7.85 / 7.57)	0 (15.39 / 15.42)	-0.09 (8.87 / 9.47)	-	0.08 (-10.73 / -10.18)	-0.13 (7.29 / 8.09)
+ 	Percentile (%)	40.534	65.599	60.222	-	34.083	70.326
+SAGA-type complex	FC (WS / NS)	0.04 (2.58 / 2.49)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	41.808	-	-	-	-	43.835
+cytoplasmic vesicle membrane	FC (WS / NS)	0.03 (3.32 / 3.23)	-	-	-	-	-
+ 	Percentile (%)	42.74	-	-	-	-	-
+vesicle membrane	FC (WS / NS)	0.03 (3.81 / 3.71)	-	-	-	-	-
+ 	Percentile (%)	43.205	-	-	-	-	-
+nucleoid	FC (WS / NS)	0.03 (8.54 / 8.35)	-2.32 (0 / 4)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-0.08 (5.86 / 6.25)
+ 	Percentile (%)	43.252	97.78	63.619	42.12	-	66.516
+organelle lumen	FC (WS / NS)	0.03 (9.89 / 9.68)	-0.01 (13.96 / 14.09)	0.01 (11.34 / 11.23)	-	-	-0.05 (4.86 / 5.08)
+ 	Percentile (%)	43.268	67.979	49.016	-	-	64.411
+intracellular organelle lumen	FC (WS / NS)	0.03 (9.27 / 9.1)	-0.01 (13.21 / 13.33)	0.01 (10.8 / 10.75)	-	-	-0.05 (4.86 / 5.08)
+ 	Percentile (%)	43.501	68.185	50.444	-	-	64.436
+membrane-enclosed lumen	FC (WS / NS)	0.02 (10.27 / 10.08)	-0.01 (14.51 / 14.63)	0.02 (11.73 / 11.59)	-	-	-0.05 (4.86 / 5.08)
+ 	Percentile (%)	43.625	67.887	48.286	-	-	64.386
+cytoplasm	FC (WS / NS)	0.02 (14.5 / 14.26)	0 (23.45 / 23.49)	0 (14.14 / 14.18)	0.01 (27.05 / 26.83)	0.18 (8.31 / 7.22)	0.01 (13.83 / 13.77)
+ 	Percentile (%)	43.92	65.507	52.317	39.024	22.698	56.516
+protein-containing complex	FC (WS / NS)	0.02 (14.09 / 13.86)	0 (21.15 / 21.13)	-0.03 (15.13 / 15.42)	0.04 (21.97 / 21.29)	0.22 (7.53 / 6.32)	-0.01 (12.29 / 12.36)
+ 	Percentile (%)	43.998	52.598	55.016	31.754	18.419	59.9
+intracellular	FC (WS / NS)	0.02 (14.51 / 14.29)	0 (23.85 / 23.87)	-	-0.02 (16.87 / 17.13)	0.18 (8.31 / 7.21)	-0.08 (10.49 / 11.12)
+ 	Percentile (%)	44.06	65.301	-	47.467	22.553	66.266
+ribosome	FC (WS / NS)	0.02 (12.13 / 11.95)	-0.01 (18.49 / 18.57)	-0.02 (12.29 / 12.47)	0.06 (22.58 / 21.6)	0.29 (6.14 / 4.86)	0 (12.08 / 12.07)
+ 	Percentile (%)	44.23	66.537	54.286	29.034	13.416	57.794
+cell wall	FC (WS / NS)	0.02 (13.19 / 13)	0.12 (12.65 / 11.58)	0.08 (12.25 / 11.51)	0.44 (11.94 / 8.52)	-0.13 (-8.65 / -9.34)	0.52 (9.06 / 6.03)
+ 	Percentile (%)	44.277	29.984	35.333	11.679	58.883	12.581
+cell	FC (WS / NS)	0.02 (14.82 / 14.61)	0 (24.32 / 24.38)	0.09 (8.91 / 8.28)	0.11 (18.7 / 17.2)	0.17 (8.44 / 7.39)	0.07 (10.33 / 9.76)
+ 	Percentile (%)	44.355	65.69	33.302	22.42	23.858	41.454
+cytosolic ribosome	FC (WS / NS)	0.02 (11.01 / 10.85)	0.02 (8.11 / 7.98)	-	-1.58 (0 / 2)	-	-
+ 	Percentile (%)	44.386	45.388	-	83.912	-	-
+cell envelope Sec protein transport complex	FC (WS / NS)	0.02 (7.13 / 7.02)	-	-	-	-	-
+ 	Percentile (%)	44.401	-	-	-	-	-
+plasma membrane	FC (WS / NS)	0.02 (13.89 / 13.7)	-0.02 (18.3 / 18.59)	0.02 (12.77 / 12.58)	-0.04 (20.48 / 21.1)	-1.37 (-0.65 / -0.09)	0 (11.06 / 11.03)
+ 	Percentile (%)	44.417	70.726	47.206	51.548	94.344	57.293
+ribonucleoprotein complex	FC (WS / NS)	0.02 (12.72 / 12.55)	-0.02 (15.81 / 16.05)	-0.04 (13.66 / 14.03)	0.02 (20.2 / 19.89)	0.33 (4.17 / 3.12)	-0.02 (11.04 / 11.21)
+ 	Percentile (%)	44.51	70.428	56.063	37.57	11.313	61.554
+ribosomal subunit	FC (WS / NS)	0.02 (12.71 / 12.54)	-0.02 (15.8 / 16.05)	-0.05 (12.91 / 13.42)	0.02 (20.2 / 19.89)	0.33 (4.17 / 3.12)	-0.02 (10.99 / 11.18)
+ 	Percentile (%)	44.557	70.588	57.048	37.617	11.24	61.855
+cell periphery	FC (WS / NS)	0.02 (14.01 / 13.83)	-0.02 (18.82 / 19.08)	-	-	-0.66 (-0.18 / 0.29)	-
+ 	Percentile (%)	44.65	69.97	-	-	89.195	-
+external encapsulating structure	FC (WS / NS)	0.02 (14.21 / 14.05)	-0.05 (15.85 / 16.39)	0.08 (13.21 / 12.4)	0.44 (11.94 / 8.52)	1.13 (-2.31 / -1.6)	0.52 (9.06 / 6.03)
+ 	Percentile (%)	44.79	73.014	35.302	11.726	2.901	12.607
+cellular_component	FC (WS / NS)	0.01 (17.84 / 17.68)	0 (25.83 / 25.9)	-0.01 (17.24 / 17.37)	0.01 (27.23 / 26.97)	0.15 (10.6 / 9.48)	0 (15.29 / 15.3)
+ 	Percentile (%)	45.131	65.896	52.984	38.696	26.831	58.471
+membrane	FC (WS / NS)	0.01 (15.12 / 14.99)	-0.02 (20.69 / 20.93)	0 (14.49 / 14.48)	-0.05 (20.58 / 21.27)	-0.16 (1.88 / 2.23)	-0.02 (11.96 / 12.13)
+ 	Percentile (%)	45.271	69.284	51.651	52.486	62.292	61.278
+cell outer membrane	FC (WS / NS)	0.01 (9.93 / 9.86)	-0.16 (12.69 / 14.31)	-0.14 (9.58 / 10.7)	-0.19 (14.53 / 16.66)	0.66 (-3.45 / -2.55)	-0.19 (8.26 / 9.6)
+ 	Percentile (%)	45.519	79.103	66.349	65.572	5.294	73.634
+intracellular non-membrane-bounded organelle	FC (WS / NS)	0.01 (12.84 / 12.76)	-0.01 (19.99 / 20.06)	-0.02 (13.47 / 13.69)	0.06 (22.58 / 21.61)	0.25 (7.16 / 5.88)	0 (12.2 / 12.16)
+ 	Percentile (%)	45.566	66.308	54.54	28.987	15.664	57.018
+non-membrane-bounded organelle	FC (WS / NS)	0.01 (13.28 / 13.2)	-0.01 (20.69 / 20.77)	-0.02 (14.05 / 14.27)	0.06 (22.58 / 21.61)	0.23 (7.75 / 6.47)	0 (12.2 / 12.16)
+ 	Percentile (%)	45.613	66.285	54.381	28.893	17.331	56.892
+cytosol	FC (WS / NS)	0.01 (13.27 / 13.21)	0.05 (15.03 / 14.46)	-0.03 (12.9 / 13.21)	-3.53 (0 / 10.58)	-0.29 (-3.73 / -4.34)	-0.29 (5.86 / 7.41)
+ 	Percentile (%)	45.737	38.178	55.524	97.983	74.619	76.316
+organelle	FC (WS / NS)	0 (14.17 / 14.13)	-0.01 (22.55 / 22.77)	-0.02 (15.31 / 15.53)	0.06 (22.58 / 21.61)	0.2 (8.57 / 7.31)	0 (12.35 / 12.34)
+ 	Percentile (%)	46.187	68.666	54.222	28.846	20.305	57.669
+intracellular organelle	FC (WS / NS)	0 (13.54 / 13.52)	-0.01 (21.64 / 21.86)	-0.02 (14.58 / 14.8)	0.06 (22.58 / 21.61)	0.22 (7.81 / 6.55)	0 (12.33 / 12.32)
+ 	Percentile (%)	46.28	68.734	54.317	28.94	18.057	57.87
+astral microtubule	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	46.544	-	-	-	-	-
+acrosomal vesicle	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	46.7	-	-	-	-	-
+photoreceptor outer segment	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	46.731	-	-	-	-	-
+uropod	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	46.746	-	-	-	-	-
+interstitial matrix	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	46.995	-	-	-	-	-
+intercalary heterochromatin	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.01	-	-	-	-	-
+signal recognition particle receptor complex	FC (WS / NS)	0 (0 / 0)	0.37 (5.21 / 3.81)	-	-	-	-
+ 	Percentile (%)	47.026	18.059	-	-	-	-
+aster	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.041	-	-	-	-	-
+kinetochore microtubule	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.057	-	-	-	-	-
+dynactin complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	0.44 (1.58 / 0.91)
+ 	Percentile (%)	47.073	-	-	-	-	14.486
+actin filament	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.088	-	-	-	-	-
+axoneme	FC (WS / NS)	0 (0 / 0)	-1.93 (0 / 2.81)	-	-	-	-
+ 	Percentile (%)	47.104	96.407	-	-	-	-
+cellular bud tip	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.119	-	-	-	-	-
+mating projection	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.135	-	-	-	-	-
+3-isopropylmalate dehydratase complex	FC (WS / NS)	0 (0 / 0)	1.41 (4.32 / 1)	-	-	-	-
+ 	Percentile (%)	47.725	5.974	-	-	-	-
+plant-type cell wall	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	47.756	-	-	-	-	-
+cytoplasmic stress granule	FC (WS / NS)	0 (0 / 0)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	47.88	-	-	-	-	42.882
+eukaryotic translation initiation factor 4F complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.206	-	-	-	-	-
+RISC complex	FC (WS / NS)	0 (0 / 0)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	48.268	58.549	-	-	-	-
+snRNA-activating protein complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.377	-	-	-	-	-
+mitochondrial crista	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.486	-	-	-	-	-
+bacterial thylakoid	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.517	-	-	-	-	-
+plasma membrane-derived thylakoid photosystem II	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.532	-	-	-	-	-
+midbody	FC (WS / NS)	0 (0 / 0)	-	-2.37 (0 / 4.17)	-	-	-
+ 	Percentile (%)	48.657	-	93.302	-	-	-
+rough endoplasmic reticulum membrane	FC (WS / NS)	0 (0 / 0)	0.37 (5.21 / 3.81)	-	-	-	-
+ 	Percentile (%)	48.703	18.105	-	-	-	-
+HOPS complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.719	-	-	-	-	-
+glutamyl-tRNA(Gln) amidotransferase complex	FC (WS / NS)	0 (0 / 0)	0.09 (6.15 / 5.7)	0.25 (6.86 / 5.61)	0.01 (13.56 / 13.45)	-	0.21 (6.97 / 5.88)
+ 	Percentile (%)	48.75	32.502	20.317	39.212	-	24.311
+intraciliary transport particle	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.765	-	-	-	-	-
+intraciliary transport particle B	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.781	-	-	-	-	-
+medial cortex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.796	-	-	-	-	-
+cell trailing edge	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.859	-	-	-	-	-
+CD95 death-inducing signaling complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.874	-	-	-	-	-
+extrinsic component of mitochondrial inner membrane	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.905	-	-	-	-	-
+anchored component of external side of plasma membrane	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.921	-	-	-	-	-
+myosin V complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.952	-	-	-	-	-
+spitzenkorper	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	48.998	-	-	-	-	-
+filamentous actin	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.029	-	-	-	-	-
+early phagosome	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.06	-	-	-	-	-
+hyphal septin ring	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.107	-	-	-	-	-
+AMPA glutamate receptor complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.154	-	-	-	-	-
+insulin-responsive compartment	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.185	-	-	-	-	-
+Piccolo NuA4 histone acetyltransferase complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.2	-	-	-	-	-
+myosin filament	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.231	-	-	-	-	-
+CORVET complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.262	-	-	-	-	-
+phosphatidylinositol 3-kinase complex, class III, type I	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.355	-	-	-	-	-
+phosphatidylinositol 3-kinase complex, class III, type II	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.371	-	-	-	-	-
+Set3 complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.418	-	-	-	-	-
+melanosome	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.651	-	-	-	-	-
+dendritic spine	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.868	-	-	-	-	-
+lysosomal lumen	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.884	-	-	-	-	-
+mating projection tip	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	49.915	-	-	-	-	-
+nuclear transcription factor complex	FC (WS / NS)	0 (0 / 0)	1.84 (2.58 / 0)	-	-	-	0.15 (2.58 / 2.23)
+ 	Percentile (%)	50.054	3.685	-	-	-	28.822
+apical cortex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	50.148	-	-	-	-	-
+spindle midzone	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	50.738	-	-	-	-	-
+cell cortex of cell tip	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	50.8	-	-	-	-	-
+ciliary membrane	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.002	-	-	-	-	-
+Rpd3L-Expanded complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.219	-	-	-	-	-
+nucleus-vacuole junction	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.39	-	-	-	-	-
+signal recognition particle, chloroplast targeting	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.483	-	-	-	-	-
+mitochondrial inner boundary membrane	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.576	-	-	-	-	-
+TAM protein secretion complex	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	51.592	-	-	-	-	-
+postsynapse	FC (WS / NS)	0 (0 / 0)	-	-	-	-	1.46 (4.25 / 0.91)
+ 	Percentile (%)	51.623	-	-	-	-	3.283
+organelle envelope	FC (WS / NS)	0 (7.65 / 7.65)	-0.05 (8.67 / 9.04)	-0.3 (4.95 / 6.32)	-	-	-
+ 	Percentile (%)	51.98	73.77	73.302	-	-	-
+outer membrane	FC (WS / NS)	0 (10.93 / 10.94)	-0.09 (14.82 / 15.83)	-0.11 (10.8 / 11.76)	-0.1 (16.39 / 17.67)	NaN (-1.21 / -0.49)	-0.08 (9.9 / 10.54)
+ 	Percentile (%)	52.104	76.059	63.556	59.334	98.042	66.817
+small ribosomal subunit	FC (WS / NS)	0 (11.41 / 11.44)	-0.03 (13.38 / 13.66)	-0.07 (10.98 / 11.59)	0.02 (20.14 / 19.79)	0.42 (2.96 / 1.97)	-0.02 (10.26 / 10.43)
+ 	Percentile (%)	52.431	71.824	58.222	37.054	8.847	61.704
+cytosolic small ribosomal subunit	FC (WS / NS)	0 (10.41 / 10.44)	0.02 (8.11 / 7.98)	-0.12 (9.34 / 10.28)	-1.38 (2.4 / 7.87)	-	-
+ 	Percentile (%)	52.446	45.411	64.857	83.208	-	-
+nuclear envelope	FC (WS / NS)	-0.01 (3.32 / 3.36)	-1 (0 / 1)	-0.3 (4.95 / 6.32)	-	-	-
+ 	Percentile (%)	53.083	88.853	73.27	-	-	-
+membrane-bounded organelle	FC (WS / NS)	-0.02 (11.23 / 11.39)	-0.05 (19.17 / 19.85)	-0.02 (12.95 / 13.18)	-	0.64 (-3.02 / -2.29)	-0.04 (8.97 / 9.22)
+ 	Percentile (%)	53.456	73.22	54.73	-	5.584	63.133
+vesicle	FC (WS / NS)	-0.02 (8.77 / 8.9)	0.11 (8.13 / 7.49)	0.24 (7.74 / 6.41)	-	-	0.12 (5.91 / 5.36)
+ 	Percentile (%)	53.487	31.128	21.079	-	-	36.516
+envelope	FC (WS / NS)	-0.03 (11.24 / 11.51)	-0.08 (16.01 / 17.01)	-0.3 (4.95 / 6.32)	-	NaN (-1.71 / -0.91)	-
+ 	Percentile (%)	54.418	75.418	73.333	-	98.622	-
+intracellular membrane-bounded organelle	FC (WS / NS)	-0.03 (10.35 / 10.59)	-0.05 (18.26 / 18.93)	-0.03 (12.32 / 12.59)	-	0.39 (-3.99 / -3.28)	-0.05 (8.79 / 9.12)
+ 	Percentile (%)	54.434	73.289	55.175	-	9.645	64.085
+supramolecular polymer	FC (WS / NS)	-0.03 (5.25 / 5.4)	0.1 (9.51 / 8.83)	-0.48 (5.83 / 8.54)	-	-0.6 (-5.24 / -7.44)	-0.08 (5.49 / 5.88)
+ 	Percentile (%)	54.698	32.181	78.825	-	87.6	67.043
+supramolecular fiber	FC (WS / NS)	-0.03 (5.25 / 5.4)	0.1 (9.51 / 8.83)	-0.5 (5.49 / 8.21)	-	-0.6 (-5.24 / -7.44)	-0.08 (5.49 / 5.88)
+ 	Percentile (%)	54.713	32.204	79.365	-	87.672	67.068
+cell envelope	FC (WS / NS)	-0.04 (10.06 / 10.36)	-0.09 (14.85 / 15.87)	-	-	0.9 (-2.71 / -1.91)	-
+ 	Percentile (%)	54.946	76.013	-	-	3.481	-
+intracellular vesicle	FC (WS / NS)	-0.04 (8.24 / 8.53)	-0.91 (2.58 / 5.75)	0.24 (7.74 / 6.41)	-	-	-
+ 	Percentile (%)	55.288	87.961	21.111	-	-	-
+catalytic complex	FC (WS / NS)	-0.05 (9.08 / 9.43)	-0.01 (12.71 / 12.84)	-0.04 (12.04 / 12.38)	0.11 (21.21 / 19.62)	-0.63 (-2.85 / -3.86)	0.05 (10.36 / 9.98)
+ 	Percentile (%)	55.568	68.551	56.19	23.077	88.615	47.644
+coated vesicle	FC (WS / NS)	-0.05 (2.58 / 2.71)	-	-	-	-	-
+ 	Percentile (%)	55.63	-	-	-	-	-
+cell cortex	FC (WS / NS)	-0.05 (2.58 / 2.71)	0.75 (7.71 / 4.17)	-	-	-	0.05 (2 / 1.91)
+ 	Percentile (%)	55.661	13.413	-	-	-	48.095
+supramolecular complex	FC (WS / NS)	-0.05 (5.58 / 5.84)	0.1 (9.51 / 8.84)	-0.47 (6.11 / 8.81)	-	-0.6 (-5.24 / -7.44)	-0.08 (5.55 / 5.93)
+ 	Percentile (%)	55.754	32.227	78.413	-	87.527	66.742
+cytoplasmic vesicle	FC (WS / NS)	-0.06 (7.84 / 8.19)	-0.88 (2.58 / 5.58)	0.27 (7.37 / 5.93)	-	-	-
+ 	Percentile (%)	55.878	87.846	19.143	-	-	-
+respiratory chain	FC (WS / NS)	-0.08 (3 / 3.23)	-0.35 (2.58 / 3.58)	-	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	56.857	83.612	-	-	-	25.263
+microtubule organizing center	FC (WS / NS)	-0.09 (4.58 / 4.95)	1.93 (2.81 / 0)	-2.37 (0 / 4.17)	-	-	0.03 (3.17 / 3.08)
+ 	Percentile (%)	57.09	3.159	93.079	-	-	50.777
+spindle	FC (WS / NS)	-0.1 (3.81 / 4.15)	0 (0 / 0)	-2.63 (0 / 5.17)	-	-	-
+ 	Percentile (%)	57.245	55.138	96.825	-	-	-
+mitochondrial protein complex	FC (WS / NS)	-0.1 (4 / 4.36)	0.05 (4.17 / 4)	0.01 (10.34 / 10.27)	-	0.19 (-3.35 / -3.06)	0.54 (4.09 / 2.49)
+ 	Percentile (%)	57.307	38.819	49.905	-	21.9	11.98
+mitochondrion	FC (WS / NS)	-0.11 (7.44 / 8.11)	-0.12 (13.38 / 14.64)	-0.03 (10.88 / 11.15)	-	-	-0.09 (5 / 5.4)
+ 	Percentile (%)	57.726	77.501	55.397	-	-	67.845
+mitochondrial matrix	FC (WS / NS)	-0.12 (6.55 / 7.2)	0 (9.61 / 9.63)	0.04 (9.45 / 9.16)	-	-	-0.11 (3.46 / 3.81)
+ 	Percentile (%)	58.161	65.85	43.714	-	-	69.373
+intrinsic component of membrane	FC (WS / NS)	-0.13 (9.68 / 10.65)	-0.03 (19.28 / 19.65)	-0.02 (12.23 / 12.46)	-0.08 (19.51 / 20.71)	-1.86 (-0.74 / -0.07)	-0.04 (12.19 / 12.52)
+ 	Percentile (%)	58.565	71.412	54.825	57.645	95.286	63.358
+spindle pole	FC (WS / NS)	-0.15 (2.81 / 3.23)	0 (0 / 0)	-2.37 (0 / 4.17)	-	-	0.91 (2.58 / 0.91)
+ 	Percentile (%)	59.248	53.216	93.016	-	-	7.594
+chromosome	FC (WS / NS)	-0.15 (6.51 / 7.34)	-0.01 (12.41 / 12.52)	0.09 (7.39 / 6.89)	0.18 (14.57 / 12.71)	-0.22 (-10.36 / -11.88)	0.07 (7.79 / 7.36)
+ 	Percentile (%)	59.279	68.07	34.635	16.886	66.788	41.654
+side of membrane	FC (WS / NS)	-0.17 (6.83 / 7.79)	-	-0.17 (8.22 / 9.35)	-0.48 (6.9 / 10.04)	-	0.15 (6.34 / 5.61)
+ 	Percentile (%)	59.807	-	67.492	77.017	-	28.697
+ribonucleoprotein granule	FC (WS / NS)	-0.17 (3 / 3.49)	0 (0 / 0)	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	59.854	60.838	-	-	-	43.409
+actin cytoskeleton	FC (WS / NS)	-0.17 (1.58 / 1.91)	0 (0 / 0)	-	-	-	0.84 (3.46 / 1.49)
+ 	Percentile (%)	59.932	58.022	-	-	-	8.045
+integral component of membrane	FC (WS / NS)	-0.17 (8.41 / 9.58)	-0.03 (18.26 / 18.64)	-0.03 (11.19 / 11.44)	-0.08 (19.51 / 20.71)	3.52 (-1.74 / -1.06)	-0.04 (12.17 / 12.52)
+ 	Percentile (%)	59.978	71.71	55.27	57.692	0.29	63.534
+intrinsic component of plasma membrane	FC (WS / NS)	-0.18 (8.33 / 9.58)	-0.07 (9.51 / 10.01)	0.46 (5.73 / 3.91)	-0.29 (7.04 / 8.85)	0 (-11 / -11.03)	-0.01 (7.06 / 7.13)
+ 	Percentile (%)	60.118	74.594	12.984	68.949	46.483	60.802
+periplasmic space	FC (WS / NS)	-0.19 (8.78 / 10.15)	-0.05 (14.37 / 14.86)	-0.12 (10.44 / 11.39)	-0.49 (9.23 / 13.38)	0.21 (-5.39 / -4.8)	-0.43 (6.64 / 9.33)
+ 	Percentile (%)	60.429	72.992	63.778	77.111	19.942	83.208
+endomembrane system	FC (WS / NS)	-0.19 (4.39 / 5.15)	0.16 (7.94 / 6.98)	-	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	60.522	26.459	-	-	-	4.837
+vacuolar membrane	FC (WS / NS)	-0.19 (3.81 / 4.49)	-1.32 (1 / 4)	-	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	60.537	92.287	-	-	-	96.366
+ATP-binding cassette (ABC) transporter complex	FC (WS / NS)	-0.21 (3.17 / 3.81)	-0.05 (9.4 / 9.77)	-0.12 (8.55 / 9.4)	-0.13 (15.56 / 17.15)	-0.01 (-8.39 / -8.45)	-0.1 (9.11 / 9.84)
+ 	Percentile (%)	60.786	73.426	64.762	62.289	47.933	68.396
+ATPase dependent transmembrane transport complex	FC (WS / NS)	-0.21 (3.17 / 3.81)	-0.05 (9.4 / 9.77)	-0.11 (9.55 / 10.4)	-0.13 (15.56 / 17.15)	-0.01 (-8.39 / -8.45)	-0.1 (9.11 / 9.84)
+ 	Percentile (%)	60.801	73.449	63.397	62.336	48.006	68.421
+peptidoglycan-based cell wall	FC (WS / NS)	-0.21 (7.09 / 8.34)	0 (9.48 / 9.45)	0.09 (10.07 / 9.37)	-3.03 (0 / 7.17)	-	-1.08 (1 / 3.23)
+ 	Percentile (%)	60.832	51.797	33.397	91.979	-	94.035
+cytoskeleton	FC (WS / NS)	-0.21 (6.7 / 7.89)	0.11 (12.5 / 11.47)	1 (7.02 / 3)	3.08 (7.46 / 0)	-0.75 (-4.24 / -6.44)	0.35 (6.6 / 4.95)
+ 	Percentile (%)	60.848	30.259	7.143	1.923	91.008	17.794
+polymeric cytoskeletal fiber	FC (WS / NS)	-0.22 (4.32 / 5.19)	0.09 (9.5 / 8.83)	-0.46 (4.39 / 6.44)	-	-0.6 (-5.24 / -7.44)	-0.08 (5.49 / 5.88)
+ 	Percentile (%)	61.174	32.319	78.381	-	87.745	67.093
+lipid droplet	FC (WS / NS)	-0.22 (2 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	61.205	-	-	-	-	-
+cytoplasmic ribonucleoprotein granule	FC (WS / NS)	-0.22 (2 / 2.49)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	61.236	-	-	-	-	43.434
+respiratory chain complex II	FC (WS / NS)	-0.22 (2 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	61.329	-	-	-	-	-
+organelle membrane	FC (WS / NS)	-0.22 (7.26 / 8.63)	0 (10.59 / 10.6)	0.06 (11.69 / 11.2)	-3.34 (0 / 9.1)	-	-0.45 (4.64 / 6.71)
+ 	Percentile (%)	61.438	65.232	40.317	95.779	-	83.383
+integral component of plasma membrane	FC (WS / NS)	-0.23 (7.17 / 8.56)	-0.21 (7.42 / 8.72)	-	-3.3 (0 / 8.85)	0 (-11 / -11.03)	-0.09 (6.49 / 6.98)
+ 	Percentile (%)	61.547	80.613	-	95.075	46.265	67.644
+Gram-negative-bacterium-type cell wall	FC (WS / NS)	-0.23 (6.09 / 7.34)	-0.03 (7.7 / 7.86)	2 (3 / 0)	-3.03 (0 / 7.17)	-	-1.08 (1 / 3.23)
+ 	Percentile (%)	61.702	71.504	3.841	92.026	-	94.06
+nuclear chromatin	FC (WS / NS)	-0.24 (2.81 / 3.49)	-	-	-	-	-
+ 	Percentile (%)	61.888	-	-	-	-	-
+plastid membrane	FC (WS / NS)	-0.27 (3.32 / 4.23)	-	0.06 (9.41 / 8.98)	-	-	-
+ 	Percentile (%)	62.525	-	39.397	-	-	-
+transmembrane transporter complex	FC (WS / NS)	-0.28 (3.58 / 4.55)	-0.05 (9.43 / 9.77)	-0.08 (10.36 / 11.04)	-0.13 (15.56 / 17.15)	-0.01 (-8.39 / -8.45)	-0.1 (9.12 / 9.85)
+ 	Percentile (%)	62.541	73.106	59.841	62.43	48.223	68.346
+transporter complex	FC (WS / NS)	-0.28 (3.58 / 4.55)	-0.05 (9.43 / 9.77)	-0.08 (10.78 / 11.46)	-0.13 (15.56 / 17.15)	-0.01 (-8.39 / -8.45)	-0.1 (9.12 / 9.85)
+ 	Percentile (%)	62.556	73.129	59.46	62.477	48.296	68.371
+oxidoreductase complex	FC (WS / NS)	-0.29 (6.41 / 8.03)	0.06 (9.54 / 9.11)	-0.08 (9.77 / 10.41)	0.05 (12.16 / 11.68)	-0.55 (-3.79 / -5.09)	0.11 (7.7 / 7.03)
+ 	Percentile (%)	62.789	36.622	59.651	29.831	85.932	36.942
+Golgi apparatus	FC (WS / NS)	-0.3 (4.52 / 5.79)	-0.21 (8.15 / 9.59)	-	-	-0.25 (-8.91 / -10.43)	0.24 (6.04 / 4.95)
+ 	Percentile (%)	63.162	80.774	-	-	70.558	22.356
+extrinsic component of organelle membrane	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	63.69	-	-	-	-	-
+photoreceptor inner segment	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	63.783	-	-	-	-	-
+cellular bud	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	63.814	-	-	-	-	-
+cellular bud neck	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	63.83	-	-	-	-	-
+myofibril	FC (WS / NS)	-0.32 (1 / 1.49)	0 (0 / 0)	-0.9 (3 / 6.46)	-	-	-
+ 	Percentile (%)	63.923	59.442	83.587	-	-	-
+sarcomere	FC (WS / NS)	-0.32 (1 / 1.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	63.938	59.464	-	-	-	-
+M band	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	63.97	-	-	-	-	-
+A band	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	64.001	-	-	-	-	-
+nuclear membrane	FC (WS / NS)	-0.32 (1 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	64.016	-	-	-	-	-
+chromatin	FC (WS / NS)	-0.32 (3.7 / 4.86)	1.58 (2 / 0)	-	-	-	-
+ 	Percentile (%)	64.327	4.28	-	-	-	-
+polytene chromosome	FC (WS / NS)	-0.32 (1.58 / 2.23)	-	-	-	-	-
+ 	Percentile (%)	64.373	-	-	-	-	-
+cell tip	FC (WS / NS)	-0.32 (1.58 / 2.23)	-	-	-	-	-
+ 	Percentile (%)	64.451	-	-	-	-	-
+vacuole	FC (WS / NS)	-0.32 (5.36 / 6.94)	-0.12 (7.64 / 8.42)	0.56 (6.11 / 3.81)	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	64.467	77.707	11.683	-	-	42.632
+microtubule cytoskeleton	FC (WS / NS)	-0.33 (3.91 / 5.15)	0.12 (10.43 / 9.52)	-	-	-0.6 (-5.24 / -7.44)	-
+ 	Percentile (%)	64.715	29.824	-	-	87.455	-
+chloroplast membrane	FC (WS / NS)	-0.35 (2.32 / 3.23)	-	0.07 (8.41 / 7.98)	-	-	-
+ 	Percentile (%)	65.134	-	38.19	-	-	-
+mitochondrial membrane	FC (WS / NS)	-0.36 (4.81 / 6.44)	0.01 (7.81 / 7.74)	0.09 (9.88 / 9.25)	-	-	-0.54 (3.81 / 5.99)
+ 	Percentile (%)	65.259	48.524	34.921	-	-	86.441
+acetyl-CoA carboxylase complex	FC (WS / NS)	-0.37 (4.95 / 6.67)	-0.11 (10.25 / 11.12)	-0.18 (5.83 / 6.75)	0.02 (11.57 / 11.36)	-0.34 (-4.03 / -4.83)	-0.13 (6.7 / 7.45)
+ 	Percentile (%)	65.445	76.814	68.063	37.008	77.012	70.376
+microtubule associated complex	FC (WS / NS)	-0.39 (3.46 / 4.86)	-1.3 (1.58 / 5.36)	-	-	-	0.24 (2.81 / 2.23)
+ 	Percentile (%)	66.035	92.218	-	-	-	22.657
+nucleolus	FC (WS / NS)	-0.4 (3.17 / 4.49)	-0.58 (1 / 2)	-	-	-	0.04 (2.32 / 2.23)
+ 	Percentile (%)	66.113	86.175	-	-	-	48.997
+DNA repair complex	FC (WS / NS)	-0.41 (3 / 4.3)	-0.22 (5.29 / 6.3)	-0.28 (5.09 / 6.41)	-0.23 (10.01 / 11.93)	-	0.08 (5.32 / 4.99)
+ 	Percentile (%)	66.206	80.98	72.381	67.402	-	41.053
+bounding membrane of organelle	FC (WS / NS)	-0.41 (5.43 / 7.53)	0.08 (5.29 / 4.95)	0.05 (8.29 / 7.99)	-	-	-0.15 (2.81 / 3.23)
+ 	Percentile (%)	66.268	33.921	42.984	-	-	70.927
+mitochondrial envelope	FC (WS / NS)	-0.43 (3.81 / 5.46)	0.02 (7.41 / 7.32)	-	-	-	-
+ 	Percentile (%)	66.517	47.127	-	-	-	-
+stromule	FC (WS / NS)	-0.43 (1.58 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	66.687	-	-	-	-	-
+receptor complex	FC (WS / NS)	-0.43 (1.58 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	66.781	-	-	-	-	-
+endocytic vesicle	FC (WS / NS)	-0.44 (4.64 / 6.63)	-	0.34 (6.86 / 5.21)	-	-	-
+ 	Percentile (%)	66.998	-	16.349	-	-	-
+contractile ring	FC (WS / NS)	-0.44 (2 / 3.08)	-	-	-	-	-
+ 	Percentile (%)	67.184	-	-	-	-	-
+acetate CoA-transferase complex	FC (WS / NS)	-0.45 (4.32 / 6.25)	-	-	-	-	-
+ 	Percentile (%)	67.246	-	-	-	-	-
+intermediate filament	FC (WS / NS)	-0.45 (3.46 / 5.08)	-0.29 (5.36 / 6.79)	-0.52 (3.7 / 5.75)	-	-	-0.07 (5.13 / 5.43)
+ 	Percentile (%)	67.262	82.765	79.587	-	-	65.764
+lytic vacuole	FC (WS / NS)	-0.47 (4 / 5.91)	2.32 (4 / 0)	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	67.635	0.961	-	-	-	42.256
+cell projection	FC (WS / NS)	-0.47 (5.86 / 8.51)	-0.06 (7.75 / 8.1)	-0.22 (8.04 / 9.54)	-	-	-0.2 (3 / 3.61)
+ 	Percentile (%)	67.697	74.044	69.333	-	-	74.035
+mismatch repair complex	FC (WS / NS)	-0.49 (2 / 3.23)	-0.24 (4.39 / 5.36)	-0.49 (3.32 / 5.09)	-1 (0 / 1)	-	-0.05 (2.58 / 2.71)
+ 	Percentile (%)	68.039	81.529	79.048	81.332	-	64.261
+whole membrane	FC (WS / NS)	-0.5 (5 / 7.51)	-1.32 (1 / 4)	0.05 (8.27 / 7.95)	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	68.349	92.447	42.159	-	-	96.892
+centrosome	FC (WS / NS)	-0.5 (2.32 / 3.71)	1 (1 / 0)	-	-	-	-0.16 (2.32 / 2.71)
+ 	Percentile (%)	68.38	9.087	-	-	-	71.378
+outer membrane-bounded periplasmic space	FC (WS / NS)	-0.53 (5.17 / 7.89)	-0.04 (12.28 / 12.65)	-0.14 (8.73 / 9.68)	-0.7 (7.59 / 12.96)	-0.01 (-7.25 / -7.27)	-0.55 (5.67 / 8.78)
+ 	Percentile (%)	68.722	72.74	65.556	79.503	46.846	86.617
+endoplasmic reticulum membrane	FC (WS / NS)	-0.53 (2.81 / 4.49)	0.22 (7.65 / 6.43)	-	-	-	-0.8 (1.58 / 3.49)
+ 	Percentile (%)	68.753	23.323	-	-	-	89.348
+polyhedral organelle	FC (WS / NS)	-0.53 (3.81 / 5.95)	-	-0.21 (5.88 / 6.94)	-	-	1.27 (3.58 / 0.91)
+ 	Percentile (%)	68.846	-	69.016	-	-	3.835
+ionotropic glutamate receptor complex	FC (WS / NS)	-0.54 (1 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	69.064	-	-	-	-	-
+plasma membrane receptor complex	FC (WS / NS)	-0.54 (1 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	69.374	-	-	-	-	-
+neurotransmitter receptor complex	FC (WS / NS)	-0.54 (1 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	69.39	-	-	-	-	-
+excinuclease repair complex	FC (WS / NS)	-0.54 (2 / 3.36)	-0.26 (4.17 / 5.17)	-	-0.23 (10.01 / 11.93)	-	0.1 (5.09 / 4.66)
+ 	Percentile (%)	69.483	81.918	-	67.261	-	38.17
+pyruvate dehydrogenase complex	FC (WS / NS)	-0.55 (4.32 / 6.79)	-0.01 (5.21 / 5.25)	-0.47 (4.75 / 6.98)	-3.2 (0 / 8.17)	-	-0.68 (2.58 / 4.76)
+ 	Percentile (%)	69.592	67.475	78.476	93.668	-	87.92
+phagocytic vesicle	FC (WS / NS)	-0.55 (3.46 / 5.55)	-	-	-	-	-
+ 	Percentile (%)	69.654	-	-	-	-	-
+microbody	FC (WS / NS)	-0.56 (3.46 / 5.58)	-0.71 (6.25 / 10.87)	-	-	-	-
+ 	Percentile (%)	69.747	87.228	-	-	-	-
+intermediate filament cytoskeleton	FC (WS / NS)	-0.56 (2.58 / 4.3)	-0.27 (5.21 / 6.49)	-	-	-	-
+ 	Percentile (%)	69.809	82.353	-	-	-	-
+anchored component of membrane	FC (WS / NS)	-0.58 (2 / 3.49)	-	2.06 (3.17 / 0)	-	-	-
+ 	Percentile (%)	70.026	-	3.619	-	-	-
+storage vacuole	FC (WS / NS)	-0.59 (3.32 / 5.49)	-	-	-	-	-
+ 	Percentile (%)	70.244	-	-	-	-	-
+plasma membrane bounded cell projection	FC (WS / NS)	-0.59 (5.04 / 8.08)	-0.42 (2.58 / 3.81)	-0.28 (7.23 / 8.96)	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	70.259	84.527	72.063	-	-	79.724
+keratin filament	FC (WS / NS)	-0.59 (2.32 / 3.99)	-0.3 (4 / 5.17)	-0.7 (2.32 / 4.39)	-	-	-0.49 (3 / 4.61)
+ 	Percentile (%)	70.275	82.856	81.778	-	-	84.11
+fungal-type vacuole membrane	FC (WS / NS)	-0.6 (1.58 / 2.91)	-	-	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	70.368	-	-	-	-	96.241
+lysosome	FC (WS / NS)	-0.6 (1.58 / 2.91)	2 (3 / 0)	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	70.399	2.747	-	-	-	42.607
+lytic vacuole membrane	FC (WS / NS)	-0.6 (1.58 / 2.91)	-	-	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	70.461	-	-	-	-	96.917
+ethanolamine ammonia-lyase complex	FC (WS / NS)	-0.6 (3.32 / 5.55)	-	-0.74 (3 / 5.67)	-1.37 (0 / 1.58)	-	-
+ 	Percentile (%)	70.492	-	82.159	82.739	-	-
+cytosolic pyruvate dehydrogenase complex	FC (WS / NS)	-0.61 (3.32 / 5.61)	-	-2.5 (0 / 4.64)	-	-	-
+ 	Percentile (%)	70.57	-	95.206	-	-	-
+nuclear outer membrane-endoplasmic reticulum membrane network	FC (WS / NS)	-0.61 (2.58 / 4.49)	0.22 (7.36 / 6.17)	-	-	-	-
+ 	Percentile (%)	70.632	23.232	-	-	-	-
+inner mitochondrial membrane protein complex	FC (WS / NS)	-0.62 (2 / 3.61)	0.38 (3.32 / 2.32)	0.02 (9.99 / 9.87)	-	0.19 (-3.35 / -3.06)	0.63 (4 / 2.23)
+ 	Percentile (%)	70.725	17.624	48.476	-	21.972	11.003
+ethanolamine degradation polyhedral organelle	FC (WS / NS)	-0.64 (2.81 / 4.95)	-	-2.35 (0 / 4.09)	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	71.005	-	92.952	-	-	5.263
+cell-cell junction	FC (WS / NS)	-0.65 (3 / 5.26)	-	0.25 (6.58 / 5.39)	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	71.098	-	20.476	-	-	96.391
+chromosomal region	FC (WS / NS)	-0.66 (1.58 / 3.08)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	71.191	64.569	-	-	-	-
+pilus	FC (WS / NS)	-0.66 (1.58 / 3.08)	-1.58 (0 / 2)	-	-	-	-1.89 (0 / 2.71)
+ 	Percentile (%)	71.207	93.98	-	-	-	98.246
+plasma membrane region	FC (WS / NS)	-0.66 (4.39 / 7.51)	0 (1 / 1)	-	-	-	-0.29 (2.32 / 3.08)
+ 	Percentile (%)	71.238	64.523	-	-	-	76.441
+cell projection membrane	FC (WS / NS)	-0.68 (3.81 / 6.73)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	71.455	90.135	-	-	-	-
+peroxisome	FC (WS / NS)	-0.69 (2.32 / 4.36)	-0.8 (5.25 / 9.87)	-	-	-	-
+ 	Percentile (%)	71.673	87.617	-	-	-	-
+ion channel complex	FC (WS / NS)	-0.71 (1.58 / 3.23)	2.2 (3.58 / 0)	-	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	71.937	1.625	-	-	-	5.489
+fungal-type vacuole	FC (WS / NS)	-0.72 (2.32 / 4.49)	-	-	-	-	-
+ 	Percentile (%)	72.045	-	-	-	-	-
+cilium	FC (WS / NS)	-0.77 (3 / 5.81)	-0.9 (1.58 / 3.81)	-0.25 (6.43 / 7.8)	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	72.465	87.892	70.508	-	-	77.393
+endoplasmic reticulum	FC (WS / NS)	-0.78 (3.46 / 6.65)	0.02 (10.99 / 10.79)	-1.11 (2 / 5.46)	-	-	0.24 (5.88 / 4.81)
+ 	Percentile (%)	72.511	43.969	85.651	-	-	22.331
+actomyosin contractile ring	FC (WS / NS)	-0.8 (1 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	72.993	-	-	-	-	-
+cortical cytoskeleton	FC (WS / NS)	-0.8 (1 / 2.49)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	73.024	90.066	-	-	-	-
+intracellular immature spore	FC (WS / NS)	-0.8 (1 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	73.039	-	-	-	-	-
+ER membrane insertion complex	FC (WS / NS)	-0.8 (1 / 2.49)	-	-0.29 (5.81 / 7.32)	-	-	-
+ 	Percentile (%)	73.07	-	72.952	-	-	-
+neuron projection	FC (WS / NS)	-0.81 (3.46 / 6.8)	1 (1 / 0)	-0.75 (3.58 / 6.71)	-	-	-
+ 	Percentile (%)	73.086	10.758	82.317	-	-	-
+cell junction	FC (WS / NS)	-0.84 (4 / 7.96)	1 (1 / 0)	0.21 (7.31 / 6.21)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	73.303	10.071	23.365	-	-	91.028
+cell body	FC (WS / NS)	-0.9 (3 / 6.44)	-	-	-	-	-
+ 	Percentile (%)	73.909	-	-	-	-	-
+endosome	FC (WS / NS)	-0.9 (2.81 / 6.1)	-0.53 (2.58 / 4.17)	-	-	-	-
+ 	Percentile (%)	73.956	85.649	-	-	-	-
+cell leading edge	FC (WS / NS)	-0.9 (2.32 / 5.19)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	73.987	59.876	-	-	-	-
+extrinsic component of vacuolar membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.22	-	-	-	-	-
+condensed chromosome kinetochore	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.282	-	-	-	-	-
+condensed chromosome, centromeric region	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.297	-	-	-	-	-
+nucleosome	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-0.22 (2 / 2.49)
+ 	Percentile (%)	74.313	-	-	-	-	74.286
+gamma-tubulin large complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.328	-	-	-	-	-
+PAM complex, Tim23 associated import motor	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.344	-	-	-	-	-
+TIM23 mitochondrial import inner membrane translocase complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.763	-	-	-	-	-
+mitochondrial small ribosomal subunit	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.779	-	-	-	-	-
+endoplasmic reticulum lumen	FC (WS / NS)	-0.93 (0 / 0.91)	0 (0 / 0)	0.4 (5.81 / 4.17)	-	-	-
+ 	Percentile (%)	74.794	55.116	14.254	-	-	-
+cytoplasmic dynein complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	74.81	-	-	-	-	-
+aminoacyl-tRNA synthetase multienzyme complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.285	-	-	-	-	-
+NMDA selective glutamate receptor complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.301	-	-	-	-	-
+glycosome	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.503	-	-	-	-	-
+membrane coat	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-0.69 (1 / 2.23)
+ 	Percentile (%)	76.565	-	-	-	-	88.221
+integral component of endoplasmic reticulum membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.58	-	-	-	-	-
+clathrin-coated vesicle membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.704	-	-	-	-	-
+endocytic vesicle membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.72	-	-	-	-	-
+preribosome, large subunit precursor	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.736	-	-	-	-	-
+mitotic cohesin complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.767	-	-	-	-	-
+meiotic cohesin complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.782	-	-	-	-	-
+SNARE complex	FC (WS / NS)	-0.93 (0 / 0.91)	-1 (0 / 1)	-	-	-	-
+ 	Percentile (%)	76.86	90.089	-	-	-	-
+periplasmic side of cell outer membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.875	-	-	-	-	-
+intrinsic component of mitochondrial outer membrane	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	76.891	-	-	-	-	-
+carboxy-terminal domain protein kinase complex	FC (WS / NS)	-0.93 (0 / 0.91)	1.37 (1.58 / 0)	-	-	-	-
+ 	Percentile (%)	77.093	6.958	-	-	-	-
+plasma membrane bounded cell projection cytoplasm	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	77.108	-	-	-	-	-
+sodium channel complex	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	77.388	-	-	-	-	-
+plasma membrane respiratory chain complex I	FC (WS / NS)	-0.93 (0 / 0.91)	-	-	-	-	-
+ 	Percentile (%)	77.931	-	-	-	-	-
+ATP-binding cassette (ABC) transporter complex, substrate-binding subunit-containing	FC (WS / NS)	-0.93 (0 / 0.91)	1.58 (2 / 0)	-	-	-	-
+ 	Percentile (%)	78.584	5.47	-	-	-	-
+serine/threonine protein kinase complex	FC (WS / NS)	-0.93 (0 / 0.91)	1.37 (1.58 / 0)	-	-	-	-
+ 	Percentile (%)	79.36	7.507	-	-	-	-
+protein kinase complex	FC (WS / NS)	-0.93 (0 / 0.91)	1.37 (1.58 / 0)	-	-	-	-
+ 	Percentile (%)	79.376	7.53	-	-	-	-
+leading edge membrane	FC (WS / NS)	-0.94 (3 / 6.7)	-	-	-	-	-
+ 	Percentile (%)	79.671	-	-	-	-	-
+site of polarized growth	FC (WS / NS)	-0.95 (3 / 6.74)	-	-	-	-	-
+ 	Percentile (%)	79.717	-	-	-	-	-
+nitrate reductase complex	FC (WS / NS)	-1.01 (2 / 5.03)	0.34 (7.23 / 5.52)	0.17 (7.09 / 6.21)	0.09 (10.37 / 9.7)	-0.07 (-11.95 / -12.47)	0.37 (6.46 / 4.76)
+ 	Percentile (%)	80.276	18.723	25.492	24.906	53.445	17.218
+anchoring junction	FC (WS / NS)	-1.02 (3 / 7.1)	-	0.25 (6.58 / 5.39)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	80.385	-	20.508	-	-	91.203
+lamellipodium	FC (WS / NS)	-1.03 (2 / 5.11)	-	-	-	-	-
+ 	Percentile (%)	80.572	-	-	-	-	-
+lamellipodium membrane	FC (WS / NS)	-1.03 (2 / 5.11)	-	-	-	-	-
+ 	Percentile (%)	80.587	-	-	-	-	-
+membrane raft	FC (WS / NS)	-1.04 (2 / 5.15)	1 (1 / 0)	-0.11 (6.88 / 7.52)	-	-	-
+ 	Percentile (%)	80.711	11.032	63.46	-	-	-
+membrane region	FC (WS / NS)	-1.04 (2 / 5.15)	1 (1 / 0)	-0.09 (8.47 / 9.11)	-	-	-
+ 	Percentile (%)	80.727	12.131	61.429	-	-	-
+membrane microdomain	FC (WS / NS)	-1.04 (2 / 5.15)	1 (1 / 0)	-0.1 (7.88 / 8.52)	-	-	-
+ 	Percentile (%)	80.742	12.154	62.444	-	-	-
+neuronal cell body	FC (WS / NS)	-1.1 (2 / 5.43)	-	-	-	-	-
+ 	Percentile (%)	81.053	-	-	-	-	-
+mitochondrial nucleoid	FC (WS / NS)	-1.13 (1 / 3.36)	-	-0.08 (7.51 / 8.02)	-	-	-
+ 	Percentile (%)	81.286	-	59.968	-	-	-
+intrinsic component of organelle membrane	FC (WS / NS)	-1.24 (1 / 3.71)	-	-	-	-	-
+ 	Percentile (%)	81.798	-	-	-	-	-
+microbody membrane	FC (WS / NS)	-1.24 (1 / 3.71)	-	-	-	-	-
+ 	Percentile (%)	81.814	-	-	-	-	-
+organelle outer membrane	FC (WS / NS)	-1.26 (2 / 6.19)	-	0.07 (6.82 / 6.46)	-	-	-
+ 	Percentile (%)	81.969	-	38	-	-	-
+proton-transporting two-sector ATPase complex, proton-transporting domain	FC (WS / NS)	-1.28 (1.58 / 5.3)	0.01 (8.9 / 8.81)	-	-0.13 (7.91 / 8.71)	-	0.09 (5.83 / 5.43)
+ 	Percentile (%)	82.078	47.562	-	61.398	-	39.549
+intrinsic component of external side of plasma membrane	FC (WS / NS)	-1.31 (2.58 / 7.91)	-	-	-	-	-
+ 	Percentile (%)	82.202	-	-	-	-	-
+nuclear cohesin complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	82.218	-	-	-	-	-
+clathrin-coated vesicle	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	82.559	-	-	-	-	-
+triglyceride-rich plasma lipoprotein particle	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	82.653	-	-	-	-	-
+chylomicron	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	82.668	-	-	-	-	-
+intrinsic component of mitochondrial membrane	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	82.932	-	-	-	-	-
+cellular bud neck contractile ring	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.025	-	-	-	-	-
+mitochondrial proton-transporting ATP synthase complex, catalytic core F(1)	FC (WS / NS)	-1.32 (0 / 1.49)	-	-0.1 (7.1 / 7.67)	-	0.19 (-3.35 / -3.06)	-
+ 	Percentile (%)	83.041	-	62.095	-	21.827	-
+X chromosome	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.103	-	-	-	-	-
+hyphal tip	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.134	-	-	-	-	-
+laminin-1 complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.429	-	-	-	-	-
+laminin-2 complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.445	-	-	-	-	-
+prospore membrane	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.46	-	-	-	-	-
+mitochondrial proton-transporting ATP synthase complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	0.08 (8.07 / 7.59)	-	-	-
+ 	Percentile (%)	83.476	-	36.095	-	-	-
+mitochondrial proton-transporting ATP synthase, catalytic core	FC (WS / NS)	-1.32 (0 / 1.49)	-	0.08 (8.07 / 7.59)	-	-	0.63 (4 / 2.23)
+ 	Percentile (%)	83.491	-	36.127	-	-	10.952
+carbamoyl-phosphate synthase complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.507	-	-	-	-	-
+chloroplast inner membrane	FC (WS / NS)	-1.32 (0 / 1.49)	-	0.09 (6.85 / 6.38)	-	-	-
+ 	Percentile (%)	83.817	-	34.222	-	-	-
+Cajal body	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	83.879	-	-	-	-	-
+actin cortical patch	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.004	-	-	-	-	-
+cortical actin cytoskeleton	FC (WS / NS)	-1.32 (0 / 1.49)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	84.035	59.67	-	-	-	-
+box H/ACA snoRNP complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.097	-	-	-	-	-
+actin filament bundle	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.128	-	-	-	-	-
+ascospore-type prospore	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.237	-	-	-	-	-
+laminin-8 complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.361	-	-	-	-	-
+laminin-10 complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.376	-	-	-	-	-
+plasma membrane respiratory chain complex II	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.454	-	-	-	-	-
+plasma membrane succinate dehydrogenase complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.47	-	-	-	-	-
+endocytic patch	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.609	-	-	-	-	-
+TRC complex	FC (WS / NS)	-1.32 (0 / 1.49)	-	-0.33 (4.81 / 6.32)	-	-	-
+ 	Percentile (%)	84.64	-	75.206	-	-	-
+mitotic actomyosin contractile ring	FC (WS / NS)	-1.32 (0 / 1.49)	-	-	-	-	-
+ 	Percentile (%)	84.703	-	-	-	-	-
+endosome membrane	FC (WS / NS)	-1.45 (1.58 / 6.06)	-	-	-	-	-
+ 	Percentile (%)	85.029	-	-	-	-	-
+synapse	FC (WS / NS)	-1.49 (1.58 / 6.26)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	85.169	61.959	-	-	-	-
+proton-transporting ATP synthase complex, coupling factor F(o)	FC (WS / NS)	-1.51 (1 / 4.71)	0.06 (7.49 / 7.17)	-	-0.13 (7.91 / 8.71)	-	0.13 (5.78 / 5.19)
+ 	Percentile (%)	85.308	37.263	-	61.445	-	35.514
+organellar small ribosomal subunit	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	0.53 (2.25 / 1.25)	-
+ 	Percentile (%)	85.37	-	-	-	6.817	-
+chromosome, centromeric region	FC (WS / NS)	-1.54 (0 / 1.91)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	85.433	53.17	-	-	-	-
+kinetochore	FC (WS / NS)	-1.54 (0 / 1.91)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	85.448	53.193	-	-	-	-
+gamma-tubulin complex	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	85.464	-	-	-	-	-
+P-body	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	85.479	-	-	-	-	-
+polytene chromosome puff	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	85.634	-	-	-	-	-
+nuclear euchromatin	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	85.65	-	-	-	-	-
+phragmoplast	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	86.023	-	-	-	-	-
+dynein complex	FC (WS / NS)	-1.54 (0 / 1.91)	-2.27 (0 / 3.81)	-	-	-	0.27 (2 / 1.49)
+ 	Percentile (%)	86.333	97.551	-	-	-	21.153
+intrinsic component of endoplasmic reticulum membrane	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	86.458	-	-	-	-	-
+replication fork protection complex	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	86.473	-	-	-	-	-
+integral component of organelle membrane	FC (WS / NS)	-1.54 (0 / 1.91)	-	-	-	-	-
+ 	Percentile (%)	86.489	-	-	-	-	-
+respiratory chain complex I	FC (WS / NS)	-1.54 (0 / 1.91)	-	-0.14 (7.2 / 8.03)	-	-	-
+ 	Percentile (%)	86.861	-	65.778	-	-	-
+motile cilium	FC (WS / NS)	-1.54 (1 / 4.81)	-	-	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	87.358	-	-	-	-	78.195
+dendrite	FC (WS / NS)	-1.6 (1 / 5.08)	-	-	-	-	-
+ 	Percentile (%)	87.514	-	-	-	-	-
+mitochondrial outer membrane	FC (WS / NS)	-1.63 (1 / 5.19)	-	-	-	-	-
+ 	Percentile (%)	87.731	-	-	-	-	-
+perikaryon	FC (WS / NS)	-1.65 (1 / 5.3)	-	-	-	-	-
+ 	Percentile (%)	87.855	-	-	-	-	-
+external side of plasma membrane	FC (WS / NS)	-1.68 (1.58 / 7.26)	-	-	-	-	-
+ 	Percentile (%)	88.011	-	-	-	-	-
+cation channel complex	FC (WS / NS)	-1.69 (0 / 2.23)	2.06 (3.17 / 0)	-	-	-	-
+ 	Percentile (%)	88.104	2.449	-	-	-	-
+glyoxysome	FC (WS / NS)	-1.69 (0 / 2.23)	-	-	-	-	-
+ 	Percentile (%)	88.306	-	-	-	-	-
+spindle pole centrosome	FC (WS / NS)	-1.69 (0 / 2.23)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	88.523	59.991	-	-	-	-
+plasma membrane respiratory chain	FC (WS / NS)	-1.69 (0 / 2.23)	-	-	-	-	-
+ 	Percentile (%)	88.663	-	-	-	-	-
+cohesin complex	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	89.051	-	-	-	-	-
+cysteine synthase complex	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	89.082	-	-	-	-	-
+mediator complex	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	1.18 (4.64 / 1.49)
+ 	Percentile (%)	89.191	-	-	-	-	3.96
+preribosome	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	89.237	-	-	-	-	43.133
+NADH dehydrogenase complex	FC (WS / NS)	-1.8 (0 / 2.49)	0 (0 / 0)	-0.13 (7.79 / 8.64)	-	-	-
+ 	Percentile (%)	89.253	59.762	65.397	-	-	-
+Ski complex	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	89.362	-	-	-	-	-
+sex chromosome	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	89.548	-	-	-	-	-
+plastid inner membrane	FC (WS / NS)	-1.8 (0 / 2.49)	-	0.08 (7.85 / 7.38)	-	-	-
+ 	Percentile (%)	89.579	-	35.937	-	-	-
+nuclear body	FC (WS / NS)	-1.8 (0 / 2.49)	-2.2 (0 / 3.58)	-2.76 (0 / 5.75)	-	-	-
+ 	Percentile (%)	89.61	97.185	98.381	-	-	-
+proton-transporting ATP synthase, catalytic core	FC (WS / NS)	-1.8 (0 / 2.49)	-	0.07 (9.07 / 8.59)	-	-	0.63 (4 / 2.23)
+ 	Percentile (%)	89.75	-	37.683	-	-	10.977
+box H/ACA RNP complex	FC (WS / NS)	-1.8 (0 / 2.49)	-	-	-	-	-
+ 	Percentile (%)	89.905	-	-	-	-	-
+synaptic membrane	FC (WS / NS)	-1.84 (1 / 6.17)	1 (1 / 0)	-	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	90.03	12.085	-	-	-	92.807
+peroxisomal membrane	FC (WS / NS)	-1.89 (0 / 2.71)	-	-	-	-	-
+ 	Percentile (%)	90.216	-	-	-	-	-
+peroxisomal matrix	FC (WS / NS)	-1.89 (0 / 2.71)	-	-	-	-	-
+ 	Percentile (%)	90.231	-	-	-	-	-
+spore wall	FC (WS / NS)	-1.89 (0 / 2.71)	-	-	-	-	-
+ 	Percentile (%)	90.34	-	-	-	-	-
+euchromatin	FC (WS / NS)	-1.97 (0 / 2.91)	-	-	-	-	-
+ 	Percentile (%)	90.433	-	-	-	-	-
+glycine reductase complex	FC (WS / NS)	-1.97 (0 / 2.91)	-	-2.51 (0 / 4.7)	-	-	-
+ 	Percentile (%)	90.666	-	95.27	-	-	-
+plasma lipoprotein particle	FC (WS / NS)	-1.97 (0 / 2.91)	-	-	-	-	-
+ 	Percentile (%)	90.713	-	-	-	-	-
+lipoprotein particle	FC (WS / NS)	-1.97 (0 / 2.91)	-	-	-	-	-
+ 	Percentile (%)	90.868	-	-	-	-	-
+integral component of external side of plasma membrane	FC (WS / NS)	-1.98 (1 / 6.91)	-	-	-	-	-
+ 	Percentile (%)	90.961	-	-	-	-	-
+protein-lipid complex	FC (WS / NS)	-2.03 (0 / 3.08)	-	-	-	-	-
+ 	Percentile (%)	91.039	-	-	-	-	-
+small nucleolar ribonucleoprotein complex	FC (WS / NS)	-2.03 (0 / 3.08)	-	-	-	-	-
+ 	Percentile (%)	91.179	-	-	-	-	-
+condensin complex	FC (WS / NS)	-2.08 (0 / 3.23)	0.13 (5.25 / 4.7)	-	-	-	1.51 (1.58 / -0.09)
+ 	Percentile (%)	91.303	28.885	-	-	-	2.18
+virion	FC (WS / NS)	-2.08 (0 / 3.23)	-	-1.2 (1 / 3.58)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	91.458	-	86.571	-	-	91.003
+virion part	FC (WS / NS)	-2.08 (0 / 3.23)	-	-2.68 (0 / 5.39)	-	-	-0.02 (5.29 / 5.36)
+ 	Percentile (%)	91.551	-	97.27	-	-	61.228
+cytosolic oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.13 (0 / 3.36)	-	-	-	-	-
+ 	Percentile (%)	91.847	-	-	-	-	-
+DNA packaging complex	FC (WS / NS)	-2.17 (0 / 3.49)	0.13 (5.25 / 4.7)	-	-	-	0.04 (2.81 / 2.71)
+ 	Percentile (%)	92.033	28.954	-	-	-	50.025
+condensed chromosome	FC (WS / NS)	-2.2 (0 / 3.61)	0.13 (5.25 / 4.7)	-	-	-	-
+ 	Percentile (%)	92.219	28.862	-	-	-	-
+microbody lumen	FC (WS / NS)	-2.24 (0 / 3.71)	-	-	-	-	-
+ 	Percentile (%)	92.53	-	-	-	-	-
+plasma membrane proton-transporting ATP synthase complex, coupling factor F(o)	FC (WS / NS)	-2.24 (0 / 3.71)	-	-	-	-	-
+ 	Percentile (%)	92.561	-	-	-	-	-
+phosphopyruvate hydratase complex	FC (WS / NS)	-2.27 (0 / 3.81)	0.1 (9.64 / 8.92)	0.07 (9.22 / 8.74)	0.11 (21.2 / 19.6)	-	0.11 (9.64 / 8.86)
+ 	Percentile (%)	92.608	31.586	37.714	22.889	-	37.544
+laminin complex	FC (WS / NS)	-2.27 (0 / 3.81)	-	-	-	-	-
+ 	Percentile (%)	92.763	-	-	-	-	-
+ribonucleoside-diphosphate reductase complex	FC (WS / NS)	-2.49 (0 / 4.61)	0.06 (8.58 / 8.17)	0.18 (6.71 / 5.83)	3.31 (8.94 / 0)	-0.61 (-3.87 / -5.38)	0.74 (5.21 / 2.71)
+ 	Percentile (%)	93.539	35.683	24.984	0.281	88.107	9.348
+formate dehydrogenase complex	FC (WS / NS)	-2.5 (0 / 4.66)	-	-2.61 (0 / 5.09)	-	-	-
+ 	Percentile (%)	93.617	-	96.603	-	-	-
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.51 (0 / 4.71)	-0.01 (5.21 / 5.25)	-1.73 (1 / 5.64)	-3.22 (0 / 8.34)	-	-
+ 	Percentile (%)	93.71	67.453	89.429	94.09	-	-
+early endosome	FC (WS / NS)	-2.59 (0 / 5.03)	-1.84 (0 / 2.58)	-	-	-	-
+ 	Percentile (%)	94.223	95.468	-	-	-	-
+rough endoplasmic reticulum	FC (WS / NS)	-2.59 (0 / 5.03)	0.37 (5.21 / 3.81)	-	-	-	-
+ 	Percentile (%)	94.238	18.082	-	-	-	-
+adherens junction	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	94.254	-	-	-	-	-
+focal adhesion	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-1.32 (0 / 1.49)
+ 	Percentile (%)	94.269	-	-	-	-	94.912
+postsynaptic density	FC (WS / NS)	-2.59 (0 / 5.03)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	94.44	57.61	-	-	-	-
+filopodium	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	94.595	-	-	-	-	-
+early endosome membrane	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	94.72	-	-	-	-	-
+axon terminus	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	94.999	-	-	-	-	-
+axonal growth cone	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	95.03	-	-	-	-	-
+presynapse	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	95.853	-	-	-	-	-
+actin-based cell projection	FC (WS / NS)	-2.59 (0 / 5.03)	-	-	-	-	-
+ 	Percentile (%)	95.869	-	-	-	-	-
+postsynaptic specialization	FC (WS / NS)	-2.59 (0 / 5.03)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	95.884	64.752	-	-	-	-
+ruffle	FC (WS / NS)	-2.6 (0 / 5.08)	-	-	-	-	-
+ 	Percentile (%)	96.133	-	-	-	-	-
+ruffle membrane	FC (WS / NS)	-2.6 (0 / 5.08)	-	-	-	-	-
+ 	Percentile (%)	96.273	-	-	-	-	-
+postsynaptic membrane	FC (WS / NS)	-2.61 (0 / 5.11)	0 (0 / 0)	-	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	96.49	61.982	-	-	-	92.581
+neuromuscular junction	FC (WS / NS)	-2.62 (0 / 5.15)	-	-	-	-	-
+ 	Percentile (%)	96.708	-	-	-	-	-
+perinuclear region of cytoplasm	FC (WS / NS)	-2.62 (0 / 5.15)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	96.739	62.76	-	-	-	-
+axon	FC (WS / NS)	-2.63 (0 / 5.19)	0 (0 / 0)	-1.13 (2 / 5.58)	-	-	-
+ 	Percentile (%)	96.801	59.625	86.222	-	-	-
+dihydrolipoyl dehydrogenase complex	FC (WS / NS)	-2.68 (0 / 5.4)	-0.01 (6.21 / 6.25)	-1.35 (2 / 6.64)	-3.22 (0 / 8.34)	-	-
+ 	Percentile (%)	96.972	67.109	87.651	94.043	-	-
+tricarboxylic acid cycle enzyme complex	FC (WS / NS)	-2.78 (0 / 5.86)	-0.11 (7.34 / 7.99)	-0.85 (4 / 8)	-0.31 (9.7 / 12.29)	-	-0.44 (4.17 / 5.99)
+ 	Percentile (%)	97.329	76.905	83.206	72.045	-	83.233
+cell-substrate junction	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	-1.32 (0 / 1.49)
+ 	Percentile (%)	97.624	-	-	-	-	95.439
+growth cone	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	-
+ 	Percentile (%)	97.639	-	-	-	-	-
+neuron projection terminus	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	-
+ 	Percentile (%)	97.717	-	-	-	-	-
