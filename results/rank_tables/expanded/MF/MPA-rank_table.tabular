@@ -1,4 +1,4 @@
-GO Term	Ranking	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
+GO Term	Fold Change	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
 biotin binding	FC (WS / NS)	3.58 (10.93 / 0)	-0.32 (1 / 1.49)	-	0.89 (7.02 / 3.32)	-	0.98 (7.37 / 3.23)
  	Percentile (%)	0.047	63.892	-	8.063	-	7.419
 heat shock protein binding	FC (WS / NS)	3.48 (10.12 / 0)	-0.32 (1 / 1.49)	-	0.06 (9.59 / 9.14)	-	0.32 (6.57 / 5.08)
@@ -19,3 +19,1919 @@ catalytic activity, acting on a glycoprotein	FC (WS / NS)	3.19 (8.15 / 0)	-	-	0.
  	Percentile (%)	0.938	-	-	16.857	-	17.068
 4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase activity	FC (WS / NS)	3.17 (8.03 / 0)	0.38 (4.09 / 2.91)	0.42 (4.09 / 2.81)	-	-	0.33 (4.32 / 3.23)
  	Percentile (%)	1.032	18.372	16.548	-	-	18.095
+oxidoreductase activity, acting on CH or CH2 groups, with an iron-sulfur protein as acceptor	FC (WS / NS)	3.17 (8.03 / 0)	0.31 (5.09 / 3.91)	0.34 (5.09 / 3.81)	-	-	0.33 (4.32 / 3.23)
+ 	Percentile (%)	1.079	19.848	18.677	-	-	18.12
+orotate phosphoribosyltransferase activity	FC (WS / NS)	3.17 (8.01 / 0)	-	0 (6.36 / 6.36)	-	-	0.11 (5.32 / 4.86)
+ 	Percentile (%)	1.126	-	54.383	-	-	37.444
+acid-thiol ligase activity	FC (WS / NS)	3.17 (7.99 / 0)	-1.51 (1.58 / 6.35)	-0.54 (5.64 / 8.64)	-0.36 (6.29 / 8.35)	-	-0.26 (5.52 / 6.82)
+ 	Percentile (%)	1.173	85.277	85.786	76.032	-	75.689
+D-alanine [D-alanyl carrier protein] ligase activity	FC (WS / NS)	3.17 (7.99 / 0)	-	-	1.26 (5.17 / 1.58)	-	1.11 (5.29 / 1.91)
+ 	Percentile (%)	1.313	-	-	6.032	-	6.892
+fructokinase activity	FC (WS / NS)	3.17 (7.98 / 0)	0.99 (5.43 / 2.23)	-	0.96 (5.46 / 2.32)	-	1.01 (5.49 / 2.23)
+ 	Percentile (%)	1.454	12.005	-	7.397	-	7.343
+hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in cyclic amidines	FC (WS / NS)	3.15 (7.88 / 0)	0 (4.64 / 4.66)	-0.04 (10.87 / 11.21)	-0.13 (8.37 / 9.22)	-	0.09 (6.67 / 6.19)
+ 	Percentile (%)	1.501	52.524	72.808	64.921	-	38.897
+oxidoreductase activity, acting on other nitrogenous compounds as donors, with NAD or NADP as acceptor	FC (WS / NS)	3.14 (7.81 / 0)	-	-1 (0 / 1)	-	-	0.25 (6.09 / 4.95)
+ 	Percentile (%)	1.548	-	90.73	-	-	22.03
+azobenzene reductase activity	FC (WS / NS)	3.14 (7.81 / 0)	-	-	-	-	0.25 (5.78 / 4.71)
+ 	Percentile (%)	1.595	-	-	-	-	22.155
+acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase activity	FC (WS / NS)	3.13 (7.74 / 0)	-1.54 (0 / 1.91)	0.14 (3.58 / 3.17)	-	-	0.2 (4 / 3.36)
+ 	Percentile (%)	1.642	85.898	28.519	-	-	24.937
+S-adenosylhomocysteine deaminase activity	FC (WS / NS)	3.13 (7.73 / 0)	-	0.23 (5.25 / 4.32)	2.06 (3.17 / 0)	-	1.23 (3.46 / 0.91)
+ 	Percentile (%)	1.689	-	22.843	3.714	-	3.885
+5'-methylthioadenosine deaminase activity	FC (WS / NS)	3.13 (7.73 / 0)	-	-	2.06 (3.17 / 0)	-	1.13 (3.17 / 0.91)
+ 	Percentile (%)	1.735	-	-	3.778	-	6.617
+cofactor transmembrane transporter activity	FC (WS / NS)	3.11 (7.66 / 0)	-	0.16 (8.71 / 7.71)	-	-	0.22 (4.25 / 3.49)
+ 	Percentile (%)	1.782	-	27.008	-	-	23.409
+heme transporter activity	FC (WS / NS)	3.02 (7.14 / 0)	-	0 (0 / 0)	-	-	-0.54 (1 / 1.91)
+ 	Percentile (%)	2.205	-	57.794	-	-	85.313
+biotin-[acetyl-CoA-carboxylase] ligase activity	FC (WS / NS)	2.95 (6.72 / 0)	-1.69 (0 / 2.23)	0.09 (4.32 / 4)	-	-	0.19 (3.46 / 2.91)
+ 	Percentile (%)	2.251	88.197	32.845	-	-	25.89
+biotin-protein ligase activity	FC (WS / NS)	2.95 (6.72 / 0)	-2.08 (0 / 3.23)	0.08 (5.32 / 5)	-	-	0.19 (3.46 / 2.91)
+ 	Percentile (%)	2.345	91.614	34.218	-	-	25.915
+endonuclease activity, active with either ribo- or deoxyribonucleic acids and producing 5'-phosphomonoesters	FC (WS / NS)	2.91 (6.51 / 0)	0.63 (4.39 / 2.49)	-0.19 (8.94 / 10.33)	0.55 (5.73 / 3.58)	-	0.15 (6.78 / 5.99)
+ 	Percentile (%)	2.392	14.723	79.881	11.778	-	28.596
+tagatose-6-phosphate kinase activity	FC (WS / NS)	2.9 (6.46 / 0)	-	1.02 (7.09 / 3)	1.33 (5.49 / 1.58)	-	1.36 (6.44 / 1.91)
+ 	Percentile (%)	2.439	-	8.309	5.619	-	3.559
+endodeoxyribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	2.9 (6.46 / 0)	-	-0.31 (6.91 / 8.81)	-	-	0.27 (5.91 / 4.71)
+ 	Percentile (%)	2.486	-	82.971	-	-	20.576
+dihydroorotate dehydrogenase activity	FC (WS / NS)	2.86 (6.27 / 0)	-	0.41 (5.64 / 4)	0.61 (5.58 / 3.32)	-	0.3 (4.81 / 3.71)
+ 	Percentile (%)	2.674	-	16.777	11.175	-	19.499
+ADP-glyceromanno-heptose 6-epimerase activity	FC (WS / NS)	2.85 (6.22 / 0)	0.14 (5.04 / 4.49)	-	-	-	0 (5.21 / 5.19)
+ 	Percentile (%)	2.72	33.142	-	-	-	57.118
+glucose-6-phosphate dehydrogenase activity	FC (WS / NS)	2.84 (6.15 / 0)	-1.53 (1 / 4.76)	1.25 (5.13 / 1.58)	1.05 (5.21 / 2)	-	0.96 (5.29 / 2.23)
+ 	Percentile (%)	2.955	85.324	7.736	7.016	-	7.469
+tagatose-bisphosphate aldolase activity	FC (WS / NS)	2.84 (6.15 / 0)	-1.32 (0 / 1.49)	0.17 (9.74 / 8.52)	1.32 (5.46 / 1.58)	-0.52 (-6.16 / -8.41)	1.16 (5.49 / 1.91)
+ 	Percentile (%)	3.096	83.771	26.024	5.683	85.062	3.985
+ribosomal large subunit binding	FC (WS / NS)	2.84 (6.15 / 0)	0.08 (6.04 / 5.69)	0 (2.32 / 2.32)	-0.16 (5.83 / 6.61)	-	0.02 (5.95 / 5.84)
+ 	Percentile (%)	3.377	36.294	61.295	66.984	-	52.932
+heme-transporting ATPase activity	FC (WS / NS)	2.83 (6.14 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.471	-	-	-	-	-
+protoheme IX ABC transporter activity	FC (WS / NS)	2.83 (6.14 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.518	-	-	-	-	-
+beta-galactosidase activity	FC (WS / NS)	2.8 (5.98 / 0)	-	1.66 (5.32 / 1)	1.41 (4.32 / 1)	-	0.54 (5.13 / 3.23)
+ 	Percentile (%)	3.565	-	4.234	5.397	-	12.105
+galactosidase activity	FC (WS / NS)	2.8 (5.98 / 0)	-	0.85 (7.04 / 3.46)	1.09 (5.39 / 2)	-	0.51 (5.21 / 3.36)
+ 	Percentile (%)	3.612	-	12.68	6.857	-	12.807
+cobalamin-transporting ATPase activity	FC (WS / NS)	2.8 (5.94 / 0)	-	0.22 (7.28 / 6.13)	-	-	0.38 (4.09 / 2.91)
+ 	Percentile (%)	3.659	-	23.667	-	-	16.917
+vitamin transmembrane transporter activity	FC (WS / NS)	2.8 (5.94 / 0)	-	0.16 (8.71 / 7.67)	-	-	0.38 (4.09 / 2.91)
+ 	Percentile (%)	3.705	-	26.528	-	-	16.942
+dihydroorotase activity	FC (WS / NS)	2.77 (5.81 / 0)	-	0.52 (5 / 3.17)	0.12 (6.41 / 5.81)	-	0.56 (5.25 / 3.23)
+ 	Percentile (%)	3.752	-	15.381	29.302	-	11.679
+inorganic phosphate transmembrane transporter activity	FC (WS / NS)	2.77 (5.81 / 0)	-	0.28 (4.58 / 3.58)	2.27 (3.81 / 0)	-	0.31 (4.25 / 3.23)
+ 	Percentile (%)	3.799	-	20.508	1.873	-	18.622
+inorganic anion transmembrane transporter activity	FC (WS / NS)	2.77 (5.81 / 0)	-0.39 (3 / 4.23)	0.06 (7.96 / 7.57)	0.78 (5.52 / 2.81)	0.06 (-5.99 / -5.78)	-0.24 (4.46 / 5.46)
+ 	Percentile (%)	3.846	65.802	35.592	9.111	37.854	75.213
+phosphate ion transmembrane transporter activity	FC (WS / NS)	2.77 (5.81 / 0)	-0.53 (2.32 / 3.81)	0.54 (4.52 / 2.81)	0.79 (4.75 / 2.32)	-	0.57 (3.81 / 2.23)
+ 	Percentile (%)	3.893	68.908	15.198	8.921	-	11.454
+ATPase-coupled phosphate ion transmembrane transporter activity	FC (WS / NS)	2.77 (5.81 / 0)	0 (0 / 0)	1.93 (2.81 / 0)	2.2 (3.58 / 0)	-	0.57 (3.81 / 2.23)
+ 	Percentile (%)	3.94	48.051	3.227	2.794	-	11.479
+ATPase-coupled anion transmembrane transporter activity	FC (WS / NS)	2.77 (5.81 / 0)	1 (1 / 0)	0.11 (6.02 / 5.49)	1.2 (4.95 / 1.58)	0.05 (-7.09 / -6.87)	0.32 (4.09 / 3.08)
+ 	Percentile (%)	3.987	10.203	30.51	6.286	39.594	18.496
+cysteine-tRNA ligase activity	FC (WS / NS)	2.73 (5.62 / 0)	0.38 (5 / 3.61)	0.27 (5.52 / 4.39)	0.24 (5.52 / 4.52)	-	0.22 (5.67 / 4.71)
+ 	Percentile (%)	4.081	18.341	20.76	20.952	-	23.434
+ferrochelatase activity	FC (WS / NS)	2.68 (5.43 / 0)	0.12 (6.91 / 6.26)	0 (0 / 0)	0.32 (6.04 / 4.64)	-	0.39 (5.04 / 3.61)
+ 	Percentile (%)	4.268	33.654	54.2	17.175	-	16.667
+uroporphyrin-III C-methyltransferase activity	FC (WS / NS)	2.68 (5.43 / 0)	0.19 (4.81 / 4.08)	0.13 (5.75 / 5.17)	0.39 (5 / 3.58)	-	0.18 (5.09 / 4.36)
+ 	Percentile (%)	4.315	23.793	29.046	14.825	-	26.591
+uroporphyrinogen-III synthase activity	FC (WS / NS)	2.68 (5.43 / 0)	0.45 (4.75 / 3.23)	0.13 (5.75 / 5.17)	0.39 (5 / 3.58)	-	0.38 (5.13 / 3.71)
+ 	Percentile (%)	4.362	16.571	29.068	14.857	-	16.992
+precorrin-2 dehydrogenase activity	FC (WS / NS)	2.68 (5.43 / 0)	-	0.11 (7.98 / 7.32)	0.39 (5 / 3.58)	-	0.33 (5.04 / 3.81)
+ 	Percentile (%)	4.55	-	30.877	14.889	-	18.321
+sirohydrochlorin ferrochelatase activity	FC (WS / NS)	2.68 (5.43 / 0)	0.14 (5.91 / 5.26)	-	0.4 (5.04 / 3.58)	-	0.39 (5.04 / 3.61)
+ 	Percentile (%)	4.644	33.111	-	14.19	-	16.692
+DNA primase activity	FC (WS / NS)	2.63 (5.21 / 0)	1.14 (1 / -0.09)	-0.25 (3.81 / 4.7)	-	-	0.74 (3.17 / 1.49)
+ 	Percentile (%)	4.69	6.942	81.758	-	-	9.323
+branched-chain amino acid transmembrane transporter activity	FC (WS / NS)	2.63 (5.21 / 0)	-	-	0.92 (6.57 / 3)	-	1.13 (4.46 / 1.49)
+ 	Percentile (%)	4.737	-	-	7.778	-	6.516
+metallocarboxypeptidase activity	FC (WS / NS)	2.58 (4.98 / 0)	0.14 (0 / -0.09)	-0.65 (3.58 / 6.17)	-2.68 (0 / 5.43)	-	0.07 (6.02 / 5.71)
+ 	Percentile (%)	4.784	25.982	86.908	97.365	-	44.662
+shikimate kinase activity	FC (WS / NS)	2.58 (4.98 / 0)	-0.93 (0 / 0.91)	0.47 (7.78 / 5.32)	0.62 (4.52 / 2.58)	-	0.56 (4.75 / 2.91)
+ 	Percentile (%)	4.831	74.623	15.885	10.921	-	11.754
+galactokinase activity	FC (WS / NS)	2.45 (4.46 / 0)	-1.44 (1 / 4.43)	-2.47 (0 / 4.52)	-1.23 (1.58 / 5.04)	-	-1.25 (1.58 / 5.15)
+ 	Percentile (%)	5.019	84.982	98.466	86.857	-	94.586
+nucleoside diphosphate kinase activity	FC (WS / NS)	2.45 (4.46 / 0)	0.39 (7.38 / 5.4)	0.71 (5.21 / 2.81)	0.25 (5.13 / 4.17)	-	0.64 (5.36 / 3.08)
+ 	Percentile (%)	5.066	18.186	13.779	20.603	-	10.877
+galactose binding	FC (WS / NS)	2.45 (4.46 / 0)	-	-	-1.23 (1.58 / 5.04)	-	-0.8 (2.58 / 5.23)
+ 	Percentile (%)	5.113	-	-	86.889	-	89.298
+queuine tRNA-ribosyltransferase activity	FC (WS / NS)	2.45 (4.46 / 0)	-1.32 (0 / 1.49)	-0.36 (1.58 / 2.32)	-	-	-0.38 (2 / 2.91)
+ 	Percentile (%)	5.3	83.678	83.726	-	-	81.554
+guanine deaminase activity	FC (WS / NS)	2.45 (4.46 / 0)	-	0.23 (5.25 / 4.32)	0.92 (3.91 / 1.58)	-	0.78 (4 / 1.91)
+ 	Percentile (%)	5.394	-	22.82	7.714	-	8.672
+monosaccharide binding	FC (WS / NS)	2.45 (4.46 / 0)	-	-0.35 (2.58 / 3.58)	-0.93 (2.81 / 6.27)	-	-0.45 (3.81 / 5.58)
+ 	Percentile (%)	5.675	-	83.589	84.127	-	83.409
+lysozyme activity	FC (WS / NS)	2.43 (4.4 / 0)	-	0 (0 / 0)	-	-	0.66 (4.52 / 2.49)
+ 	Percentile (%)	5.769	-	53.765	-	-	10.175
+D-sedoheptulose 7-phosphate isomerase activity	FC (WS / NS)	2.27 (3.81 / 0)	-2.08 (0 / 3.23)	-0.2 (3 / 3.58)	-	-	-0.32 (3 / 3.99)
+ 	Percentile (%)	6.004	91.427	80.293	-	-	80.276
+pseudouridine synthase activity	FC (WS / NS)	2.27 (3.81 / 0)	1.06 (5.04 / 1.91)	0.54 (7.13 / 4.58)	1.23 (6.04 / 2)	-	0.24 (5.75 / 4.71)
+ 	Percentile (%)	6.098	7.812	15.152	6.095	-	22.431
+mucinaminylserine mucinaminidase activity	FC (WS / NS)	2.27 (3.81 / 0)	-	-	0.4 (5.32 / 3.81)	-	0.46 (3 / 1.91)
+ 	Percentile (%)	6.285	-	-	14.444	-	14.135
+ligase activity, forming carbon-sulfur bonds	FC (WS / NS)	2.17 (8 / 1)	-1.45 (2 / 7.17)	-0.51 (6.6 / 9.83)	-0.32 (6.86 / 8.78)	-	-0.26 (5.52 / 6.82)
+ 	Percentile (%)	6.52	85.013	85.512	74.095	-	75.664
+6,7-dihydropteridine reductase activity	FC (WS / NS)	1.99 (2.98 / 0)	-0.93 (0 / 0.91)	-	-	-	0.44 (5.52 / 3.81)
+ 	Percentile (%)	6.707	74.53	-	-	-	15.138
+methylmalonyl-CoA epimerase activity	FC (WS / NS)	1.93 (2.81 / 0)	0.34 (7.88 / 6.01)	-	0.24 (6.83 / 5.64)	-	0.32 (7.46 / 5.79)
+ 	Percentile (%)	6.848	18.994	-	21.143	-	18.521
+dextransucrase activity	FC (WS / NS)	1.93 (2.81 / 0)	-	-	2.94 (6.7 / 0)	-	-
+ 	Percentile (%)	6.895	-	-	0.095	-	-
+O-acyltransferase activity	FC (WS / NS)	1.76 (7.74 / 1.58)	-0.34 (4.09 / 5.46)	-0.06 (6.98 / 7.3)	-	-	-0.07 (4.7 / 4.99)
+ 	Percentile (%)	7.129	65.088	74.113	-	-	66.115
+carboxypeptidase activity	FC (WS / NS)	1.58 (4.98 / 1)	-0.46 (2.81 / 4.23)	-0.08 (8.71 / 9.29)	-2.68 (0 / 5.43)	-	0.05 (6.95 / 6.67)
+ 	Percentile (%)	7.176	67.542	75.463	97.333	-	47.444
+phosphorelay response regulator activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.53 (2.32 / 3.81)	-0.01 (11.49 / 11.62)	-0.13 (5.95 / 6.6)	-0.19 (-7.47 / -8.37)	-0.89 (1 / 2.71)
+ 	Percentile (%)	7.223	68.862	69.123	65.175	64.104	90.702
+O-acetylhomoserine aminocarboxypropyltransferase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	0.32 (5.36 / 4.09)	0.82 (5.32 / 2.58)	-	0.15 (5.04 / 4.43)
+ 	Percentile (%)	7.27	-	19.272	8.413	-	28.471
+dihydropteroate synthase activity	FC (WS / NS)	1.49 (1.81 / 0)	0.13 (2.81 / 2.49)	0.05 (3.46 / 3.32)	-	-	0.4 (4.58 / 3.23)
+ 	Percentile (%)	7.317	33.515	39.551	-	-	16.391
+guanylate kinase activity	FC (WS / NS)	1.49 (1.81 / 0)	0.48 (4.17 / 2.71)	0.37 (4.39 / 3.17)	0.81 (4.25 / 2)	-	0.61 (4.32 / 2.49)
+ 	Percentile (%)	7.364	15.981	17.693	8.698	-	11.328
+tryptophan synthase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	0.52 (5.58 / 3.58)	0.75 (4.58 / 2.32)	-	0.04 (4.64 / 4.49)
+ 	Percentile (%)	7.411	-	15.473	9.492	-	49.373
+monovalent cation:proton antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.93 (0 / 0.91)	1 (1 / 0)	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	7.458	74.732	9.018	-	-	91.704
+dTDP-4-dehydrorhamnose 3,5-epimerase activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.93 (0 / 0.91)	0.83 (4.32 / 2)	1.37 (4.17 / 1)	-	0.89 (4.39 / 1.91)
+ 	Percentile (%)	7.598	75.462	12.978	5.492	-	7.92
+protein-glutamate methylesterase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	-	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	7.645	-	-	-	-	72.356
+antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.72 (2.58 / 4.91)	-0.07 (5.98 / 6.32)	-0.64 (2.58 / 4.58)	-	0.23 (4.52 / 3.71)
+ 	Percentile (%)	7.692	72.014	74.846	81.111	-	23.308
+solute:cation antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	-1.8 (0 / 2.49)	2.6 (5.04 / 0)	-	-	-0.07 (3.17 / 3.36)
+ 	Percentile (%)	7.739	89.129	0.183	-	-	65.388
+solute:proton antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	-1.32 (0 / 1.49)	2.35 (4.09 / 0)	-	-	0.2 (3 / 2.49)
+ 	Percentile (%)	7.786	82.404	0.893	-	-	24.887
+sodium:proton antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	7.833	27.877	57.862	-	-	92.105
+cation:cation antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	-1.54 (0 / 1.91)	1.37 (1.58 / 0)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	7.88	86.116	6.615	-	-	90.952
+endoribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	1.49 (1.81 / 0)	0.73 (3.81 / 1.91)	0.07 (5.95 / 5.61)	1.43 (4.39 / 1)	-	0.09 (5.64 / 5.23)
+ 	Percentile (%)	7.927	13.449	34.63	5.365	-	38.997
+formimidoyltetrahydrofolate cyclodeaminase activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.44 (2.81 / 4.15)	-0.24 (6.78 / 8.21)	-2.6 (0 / 5.04)	-0.25 (-8.91 / -10.43)	-0.28 (3.46 / 4.43)
+ 	Percentile (%)	7.974	67.029	81.689	96.508	70.703	76.14
+3'-tRNA processing endoribonuclease activity	FC (WS / NS)	1.49 (1.81 / 0)	0.14 (0 / -0.09)	-	-	-	1.88 (2.32 / -0.09)
+ 	Percentile (%)	8.114	30.238	-	-	-	1.479
+UDP-N-acetylmuramoyl-tripeptide-D-alanyl-D-alanine ligase activity	FC (WS / NS)	1.49 (1.81 / 0)	-0.81 (2.81 / 5.69)	0.45 (4.7 / 3.17)	0.39 (4.64 / 3.32)	-	0.29 (4.75 / 3.71)
+ 	Percentile (%)	8.302	73.101	16.251	14.952	-	19.975
+cephalosporin-C deacetylase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	0 (0 / 0)	-	-	-
+ 	Percentile (%)	8.349	-	62.692	-	-	-
+metal ion:proton antiporter activity	FC (WS / NS)	1.49 (1.81 / 0)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	8.396	31.465	63.31	-	-	92.707
+protein methylesterase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	-	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	8.443	-	-	-	-	72.632
+proline dipeptidase activity	FC (WS / NS)	1.49 (1.81 / 0)	-	-	0.92 (6.19 / 2.81)	-	0.85 (6.64 / 3.23)
+ 	Percentile (%)	8.537	-	-	7.841	-	7.995
+ferroxidase activity	FC (WS / NS)	1.31 (10.4 / 3.58)	-0.51 (4.32 / 6.58)	-0.56 (4.09 / 6.52)	-0.59 (4.17 / 6.78)	0.43 (-6.43 / -5.02)	0.34 (8.28 / 6.35)
+ 	Percentile (%)	8.583	68.52	86.015	80.794	8.267	18.02
+oxidoreductase activity, oxidizing metal ions, oxygen as acceptor	FC (WS / NS)	1.31 (10.4 / 3.58)	-0.44 (5.32 / 7.58)	-0.49 (5.09 / 7.52)	-0.51 (5.17 / 7.78)	0.55 (-5.43 / -4.02)	0.34 (8.28 / 6.35)
+ 	Percentile (%)	8.63	67.076	85.328	79.397	6.526	18.045
+cytidylate kinase activity	FC (WS / NS)	1.26 (1.4 / 0)	1.61 (4.81 / 0.91)	1.56 (4.91 / 1)	1.54 (4.81 / 1)	-	1.32 (5.21 / 1.49)
+ 	Percentile (%)	8.677	3.448	5.608	4.889	-	3.634
+4-hydroxy-tetrahydrodipicolinate synthase	FC (WS / NS)	1.26 (1.4 / 0)	2.56 (4.32 / -0.09)	0.77 (5.49 / 2.81)	1.67 (5.36 / 1)	-	1.13 (5.36 / 1.91)
+ 	Percentile (%)	8.724	0.186	13.321	4.603	-	6.667
+peptidoglycan glycosyltransferase activity	FC (WS / NS)	1.26 (1.4 / 0)	0.8 (2.32 / 0.91)	0.09 (6.83 / 6.34)	-	-	0.72 (5.13 / 2.71)
+ 	Percentile (%)	8.771	13.014	32.456	-	-	9.624
+diacetyl reductase ((S)-acetoin forming) activity	FC (WS / NS)	1.26 (1.4 / 0)	-	-	0.37 (5.88 / 4.32)	-	0.68 (6 / 3.36)
+ 	Percentile (%)	8.818	-	-	15.397	-	10.025
+3-dehydroquinate synthase activity	FC (WS / NS)	0.86 (0.81 / 0)	-	0.61 (7.23 / 4.39)	2.32 (4 / 0)	-	0.79 (4.58 / 2.23)
+ 	Percentile (%)	8.865	-	14.511	1.587	-	8.596
+ATP-dependent RNA helicase activity	FC (WS / NS)	0.86 (0.81 / 0)	0.01 (4.86 / 4.81)	-	-	-	0.95 (5.25 / 2.23)
+ 	Percentile (%)	8.912	45.302	-	-	-	7.494
+glutamate dehydrogenase [NAD(P)+] activity	FC (WS / NS)	0.86 (0.81 / 0)	-0.22 (7.88 / 9.32)	-	-0.23 (8.52 / 10.16)	-	0.44 (4.52 / 3.08)
+ 	Percentile (%)	8.959	60.988	-	69.968	-	15.163
+glutamate dehydrogenase (NADP+) activity	FC (WS / NS)	0.86 (0.81 / 0)	0.33 (6.89 / 5.3)	-	0.52 (6.94 / 4.52)	-	0.63 (4.39 / 2.49)
+ 	Percentile (%)	9.006	19.46	-	12.063	-	11.028
+serine-type endopeptidase inhibitor activity	FC (WS / NS)	0.86 (0.81 / 0)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	1.29 (5.09 / 1.49)
+ 	Percentile (%)	9.053	26.184	54.841	-	-	3.784
+xenobiotic transmembrane transporting ATPase activity	FC (WS / NS)	0.86 (0.81 / 0)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	9.099	83.693	-	-	-	-
+polyol transmembrane transporter activity	FC (WS / NS)	0.86 (0.81 / 0)	-0.16 (3.91 / 4.49)	0.01 (7.73 / 7.67)	-	-0.01 (-8.39 / -8.45)	0.68 (3 / 1.49)
+ 	Percentile (%)	9.24	59.668	48.707	-	47.571	9.95
+galactitol transmembrane transporter activity	FC (WS / NS)	0.86 (0.81 / 0)	-	1.84 (2.58 / 0)	-	-	-
+ 	Percentile (%)	9.287	-	3.502	-	-	-
+carbon-oxygen lyase activity, acting on phosphates	FC (WS / NS)	0.86 (0.81 / 0)	0.45 (4.32 / 2.91)	0.47 (9.79 / 6.78)	2.74 (5.7 / 0)	-	0.83 (6.27 / 3.08)
+ 	Percentile (%)	9.334	16.555	16.045	0.317	-	8.221
+intramolecular oxidoreductase activity, transposing C=C bonds	FC (WS / NS)	0.86 (0.81 / 0)	0.69 (5.81 / 3.23)	-0.1 (8.02 / 8.68)	0.49 (6.29 / 4.17)	-	-0.69 (1 / 2.23)
+ 	Percentile (%)	9.381	13.729	76.631	12.349	-	88.195
+pyruvate synthase activity	FC (WS / NS)	0.86 (0.81 / 0)	-	-0.12 (9.94 / 10.93)	-0.15 (8.82 / 9.87)	-0.31 (-7.8 / -9.45)	-
+ 	Percentile (%)	9.428	-	77.752	66.381	76.142	-
+trans-2-decenoyl-acyl-carrier-protein isomerase activity	FC (WS / NS)	0.86 (0.81 / 0)	0.85 (4.81 / 2.23)	0.31 (5.09 / 3.91)	0.59 (5.29 / 3.17)	-	-0.69 (1 / 2.23)
+ 	Percentile (%)	9.475	12.611	19.524	11.429	-	88.296
+2-oxoglutarate synthase activity	FC (WS / NS)	0.86 (0.81 / 0)	-	-0.12 (9.94 / 10.93)	0.24 (6.83 / 5.64)	-0.2 (-7.81 / -8.82)	0.16 (5.21 / 4.55)
+ 	Percentile (%)	9.568	-	77.775	21.238	65.265	27.769
+organic hydroxy compound transmembrane transporter activity	FC (WS / NS)	0.86 (0.81 / 0)	-0.14 (4.64 / 5.23)	0.02 (9.86 / 9.74)	-	-0.01 (-6.81 / -6.86)	0.29 (4.17 / 3.23)
+ 	Percentile (%)	9.615	58.969	46.967	-	49.094	19.925
+N-methyltransferase activity	FC (WS / NS)	0.86 (0.81 / 0)	0.63 (6.13 / 3.61)	0.05 (9.86 / 9.52)	0.38 (6.44 / 4.7)	-	0.07 (6.38 / 6.03)
+ 	Percentile (%)	9.662	14.692	39.391	14.984	-	44.135
+oxidoreductase activity, oxidizing metal ions	FC (WS / NS)	0.85 (10.71 / 5.49)	-0.41 (5.91 / 8.16)	0.06 (9.8 / 9.35)	-0.32 (6.52 / 8.42)	0.18 (-2.02 / -1.9)	0.28 (8.93 / 7.2)
+ 	Percentile (%)	9.709	66.253	36.37	74.476	22.625	20.476
+NADH peroxidase activity	FC (WS / NS)	0.8 (4.21 / 2)	-1.8 (0 / 2.49)	-	-	-	0.4 (7.67 / 5.58)
+ 	Percentile (%)	9.756	89.206	-	-	-	16.416
+pyruvate carboxylase activity	FC (WS / NS)	0.78 (11.19 / 6.09)	-	0.19 (9.44 / 8.15)	0.2 (8.12 / 6.93)	-0.54 (-5.65 / -7.76)	0.5 (8.41 / 5.63)
+ 	Percentile (%)	9.803	-	25.246	23.683	85.642	13.008
+tetraacyldisaccharide 4'-kinase activity	FC (WS / NS)	0.72 (4.46 / 2.32)	0.65 (2 / 0.91)	0.93 (2.81 / 1)	2.06 (3.17 / 0)	-0.16 (-7.79 / -8.58)	1.13 (3.17 / 0.91)
+ 	Percentile (%)	9.85	14.257	12.36	3.492	61.929	6.566
+sigma factor activity	FC (WS / NS)	0.69 (9.33 / 5.39)	0 (5.21 / 5.23)	-0.01 (7.91 / 7.94)	-	-	-0.03 (6.04 / 6.21)
+ 	Percentile (%)	9.991	52.493	66.514	-	-	63.058
+hydroxylamine reductase activity	FC (WS / NS)	0.69 (7.06 / 4)	1.51 (1.58 / -0.09)	0.32 (6.3 / 4.86)	0.2 (5.81 / 4.91)	-0.07 (-10.71 / -11.23)	0.21 (5.88 / 4.95)
+ 	Percentile (%)	10.038	5.203	19.364	23.556	54.46	24.336
+protease binding	FC (WS / NS)	0.68 (3.81 / 2)	0.44 (1.58 / 0.91)	-	0.15 (9.52 / 8.49)	-	-
+ 	Percentile (%)	10.084	16.633	-	26.444	-	-
+mercury (II) reductase activity	FC (WS / NS)	0.66 (8.34 / 4.91)	-	-	-	0.04 (-11.37 / -11.07)	0.29 (7.29 / 5.76)
+ 	Percentile (%)	10.225	-	-	-	41.407	19.825
+oxidoreductase activity, oxidizing metal ions, NAD or NADP as acceptor	FC (WS / NS)	0.66 (8.34 / 4.91)	-	-	-	0.05 (-10.37 / -10.07)	0.29 (7.29 / 5.76)
+ 	Percentile (%)	10.272	-	-	-	40.392	19.85
+phosphorylase activity	FC (WS / NS)	0.59 (12.96 / 8.3)	-0.97 (2.58 / 6.03)	0.18 (9.7 / 8.42)	0.17 (8.31 / 7.29)	-0.26 (-8.73 / -10.25)	0.27 (7.48 / 6.03)
+ 	Percentile (%)	10.319	79.966	25.521	25.46	70.921	20.702
+glycogen phosphorylase activity	FC (WS / NS)	0.59 (12.96 / 8.3)	-0.93 (0 / 0.91)	0.23 (7.07 / 5.86)	0.26 (7.13 / 5.81)	-	0.28 (7.44 / 5.97)
+ 	Percentile (%)	10.366	75.291	22.522	19.778	-	20.451
+linear malto-oligosaccharide phosphorylase activity	FC (WS / NS)	0.59 (12.96 / 8.3)	-	-	0.26 (7.13 / 5.81)	-	0.29 (7.43 / 5.88)
+ 	Percentile (%)	10.413	-	-	19.81	-	19.674
+SHG alpha-glucan phosphorylase activity	FC (WS / NS)	0.59 (12.96 / 8.3)	-	-	0.26 (7.13 / 5.81)	-	0.29 (7.43 / 5.88)
+ 	Percentile (%)	10.46	-	-	19.841	-	19.699
+small ribosomal subunit rRNA binding	FC (WS / NS)	0.57 (6.68 / 4.17)	0.19 (6.02 / 5.15)	-	-0.16 (6.55 / 7.42)	-	0.95 (5.25 / 2.23)
+ 	Percentile (%)	10.507	23.979	-	66.952	-	7.519
+amino acid-transporting ATPase activity	FC (WS / NS)	0.55 (3.4 / 2)	0.46 (3 / 1.91)	-	0.38 (6.11 / 4.46)	-	0.26 (6.29 / 5.08)
+ 	Percentile (%)	10.647	16.214	-	15.079	-	21.679
+organic acid-transporting ATPase activity	FC (WS / NS)	0.55 (3.4 / 2)	0.46 (3 / 1.91)	-	0.3 (7.69 / 6.04)	-	0.26 (6.29 / 5.08)
+ 	Percentile (%)	10.694	16.307	-	17.81	-	21.704
+carboxylic acid-transporting ATPase activity	FC (WS / NS)	0.55 (3.4 / 2)	0.46 (3 / 1.91)	-	0.33 (7.11 / 5.46)	-	0.26 (6.29 / 5.08)
+ 	Percentile (%)	10.741	16.322	-	17.016	-	21.729
+monocarboxylic acid binding	FC (WS / NS)	0.54 (11.11 / 7.32)	-0.01 (7.04 / 7.09)	0.12 (9.49 / 8.66)	0.14 (8.55 / 7.67)	-	0.3 (8.12 / 6.43)
+ 	Percentile (%)	10.788	52.726	30.007	27.429	-	19.574
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, iron-sulfur protein as acceptor	FC (WS / NS)	0.49 (1.81 / 1)	-	-0.11 (12.09 / 13.09)	-0.12 (10.47 / 11.45)	-0.4 (-5.16 / -6.47)	0.22 (5.64 / 4.71)
+ 	Percentile (%)	10.882	-	76.837	64.19	81.436	23.985
+acetoacetyl-CoA reductase activity	FC (WS / NS)	0.49 (1.81 / 1)	0.48 (5.83 / 3.91)	-	-	-	0.82 (5.55 / 2.71)
+ 	Percentile (%)	10.929	15.95	-	-	-	8.246
+transferase activity, transferring hexosyl groups	FC (WS / NS)	0.47 (14.56 / 10.22)	-0.08 (7.33 / 7.81)	0.09 (12.88 / 12)	0.21 (10.26 / 8.76)	-0.23 (-6.75 / -7.77)	0.14 (9.49 / 8.54)
+ 	Percentile (%)	10.976	56.888	32.479	23.333	67.875	35.088
+intramolecular transferase activity, transferring acyl groups	FC (WS / NS)	0.45 (8.54 / 6)	0.02 (6.41 / 6.33)	-0.02 (7.04 / 7.15)	-	-0.51 (-5.83 / -7.86)	0.21 (5.43 / 4.55)
+ 	Percentile (%)	11.445	44.852	70.039	-	84.627	24.236
+precorrin-8X methylmutase activity	FC (WS / NS)	0.45 (8.54 / 6)	0.2 (5.29 / 4.49)	0.18 (5.32 / 4.58)	-	-0.48 (-6.15 / -8.18)	0.21 (5.43 / 4.55)
+ 	Percentile (%)	11.492	23.715	25.704	-	84.119	24.261
+glutathione-disulfide reductase activity	FC (WS / NS)	0.45 (7.8 / 5.46)	1.62 (4.86 / 0.91)	0.17 (7.85 / 6.85)	2.63 (5.21 / 0)	-	1.13 (5.36 / 1.91)
+ 	Percentile (%)	11.538	3.432	26.07	0.571	-	6.642
+peptide disulfide oxidoreductase activity	FC (WS / NS)	0.45 (7.8 / 5.46)	0.93 (6.44 / 2.91)	0.15 (9.43 / 8.43)	1.23 (6.79 / 2.32)	-	1.13 (5.36 / 1.91)
+ 	Percentile (%)	11.585	12.16	27.901	6.127	-	6.692
+glutathione disulfide oxidoreductase activity	FC (WS / NS)	0.45 (7.8 / 5.46)	1.09 (5.86 / 2.23)	0.15 (8.85 / 7.85)	1.48 (6.21 / 1.58)	-	1.13 (5.36 / 1.91)
+ 	Percentile (%)	11.632	7.61	27.329	5.143	-	6.717
+isobutyryl-CoA mutase activity	FC (WS / NS)	0.43 (4.4 / 3)	-	-	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	11.82	-	-	-	-	25.188
+glycerol-3-phosphate transmembrane transporter activity	FC (WS / NS)	0.42 (4.57 / 3.17)	-1.69 (0 / 2.23)	-0.01 (7.55 / 7.6)	-	-0.01 (-7.39 / -7.45)	0.17 (6.02 / 5.26)
+ 	Percentile (%)	11.867	88.321	67.498	-	48.658	27.569
+glycerol-3-phosphate-transporting ATPase activity	FC (WS / NS)	0.42 (4.57 / 3.17)	-	0.02 (5.93 / 5.86)	-	-0.01 (-8.39 / -8.45)	0.28 (5.98 / 4.76)
+ 	Percentile (%)	11.914	-	47.105	-	47.643	20.501
+organophosphate ester transmembrane transporter activity	FC (WS / NS)	0.42 (4.57 / 3.17)	-1.69 (0 / 2.23)	-0.01 (7.55 / 7.61)	-	-0.01 (-7.39 / -7.45)	0.17 (6.02 / 5.26)
+ 	Percentile (%)	11.961	88.383	67.727	-	48.731	27.594
+glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity	FC (WS / NS)	0.4 (8.38 / 6.13)	-0.44 (4.46 / 6.43)	0.1 (9.51 / 8.78)	0.05 (9.01 / 8.64)	-0.38 (-5.33 / -6.65)	0.27 (7.65 / 6.19)
+ 	Percentile (%)	12.008	67.2	31.38	40.794	80.058	21.353
+glyceraldehyde-3-phosphate dehydrogenase (NAD(P)+) (phosphorylating) activity	FC (WS / NS)	0.4 (8.38 / 6.13)	-0.44 (4.46 / 6.43)	0.1 (9.51 / 8.78)	0.07 (10.18 / 9.64)	-0.38 (-5.33 / -6.65)	0.27 (7.65 / 6.19)
+ 	Percentile (%)	12.054	67.215	31.403	36.921	80.276	21.378
+dihydroxy-acid dehydratase activity	FC (WS / NS)	0.37 (11.68 / 8.81)	0.72 (6.41 / 3.49)	0.8 (6.74 / 3.46)	0.73 (6.61 / 3.58)	-	0.65 (6.83 / 3.99)
+ 	Percentile (%)	12.336	13.589	13.092	9.651	-	10.802
+UDP-N-acetylmuramate-L-alanine ligase activity	FC (WS / NS)	0.36 (9.99 / 7.56)	0.21 (6.13 / 5.15)	0.1 (5.86 / 5.39)	0.14 (6.09 / 5.43)	-0.13 (-7.72 / -8.34)	0.15 (6.32 / 5.61)
+ 	Percentile (%)	12.852	23.373	31.54	27.111	59.101	29.098
+hexokinase activity	FC (WS / NS)	0.34 (11.39 / 8.76)	0.81 (6.43 / 3.23)	0.25 (8.58 / 7.04)	0.34 (7.64 / 5.81)	0.12 (-9.56 / -8.88)	0.39 (6.7 / 4.86)
+ 	Percentile (%)	12.899	12.844	21.767	16.095	30.747	16.541
+phosphoglucosamine mutase activity	FC (WS / NS)	0.33 (11.78 / 9.16)	0.07 (6.11 / 5.79)	0.02 (7.99 / 7.85)	-	-	0.04 (6.49 / 6.3)
+ 	Percentile (%)	12.946	37.91	44.472	-	-	49.825
+glucokinase activity	FC (WS / NS)	0.33 (11.24 / 8.76)	-	0.29 (7.58 / 6.04)	0.3 (5.81 / 4.52)	0.11 (-10.56 / -9.88)	0.35 (5.83 / 4.36)
+ 	Percentile (%)	12.992	-	20.485	17.873	31.835	17.87
+7S RNA binding	FC (WS / NS)	0.32 (9.23 / 7.17)	-	0.4 (5.73 / 4.09)	-	-0.09 (-10.26 / -10.87)	0.2 (5.91 / 4.99)
+ 	Percentile (%)	13.039	-	16.892	-	56.128	24.486
+ureidoglycolate dehydrogenase activity	FC (WS / NS)	0.32 (4.21 / 3.17)	-	-	-	-	0.22 (5.39 / 4.49)
+ 	Percentile (%)	13.133	-	-	-	-	23.659
+propionyl-CoA carboxylase activity	FC (WS / NS)	0.32 (3.98 / 3)	0.17 (7.73 / 6.76)	-0.19 (7.29 / 8.46)	0.13 (6.54 / 5.88)	-0.25 (-8.1 / -9.42)	0.19 (6.17 / 5.3)
+ 	Percentile (%)	13.18	24.522	80.018	28.476	69.616	26.216
+methylmalonyl-CoA carboxytransferase activity	FC (WS / NS)	0.32 (3.98 / 3)	-	-	-	-0.25 (-8.1 / -9.42)	0.15 (7.2 / 6.4)
+ 	Percentile (%)	13.227	-	-	-	69.688	29.073
+glutamate-ammonia ligase activity	FC (WS / NS)	0.32 (13.3 / 10.49)	-2.2 (0 / 3.61)	0.45 (8.32 / 5.81)	0.5 (7.27 / 4.86)	-0.72 (-5.15 / -7.84)	0.49 (7.55 / 5.08)
+ 	Percentile (%)	13.274	92.235	16.228	12.317	90.138	13.083
+transferase activity, transferring glycosyl groups	FC (WS / NS)	0.29 (15.12 / 12.15)	-0.06 (9.19 / 9.63)	0.04 (15.59 / 15.09)	0.12 (11.38 / 10.42)	-0.41 (-3.54 / -4.39)	0.09 (10.43 / 9.73)
+ 	Percentile (%)	13.415	56.142	39.803	30.095	81.798	39.073
+diaminopimelate dehydrogenase activity	FC (WS / NS)	0.27 (8.52 / 6.92)	-	0.85 (5.46 / 2.58)	0.76 (5.75 / 3)	-0.25 (-8.83 / -10.28)	0.72 (5.73 / 3.08)
+ 	Percentile (%)	13.602	-	12.703	9.429	69.833	9.549
+threonine-tRNA ligase activity	FC (WS / NS)	0.26 (12.8 / 10.5)	-1.8 (0 / 2.49)	0.15 (6.94 / 6.15)	0.17 (7.08 / 6.17)	-	0.15 (7.43 / 6.58)
+ 	Percentile (%)	13.649	88.896	27.558	25.238	-	28.521
+purine-nucleoside phosphorylase activity	FC (WS / NS)	0.26 (12.83 / 10.53)	-1.5 (1 / 4.66)	0.09 (7.42 / 6.88)	-	-0.29 (-4.64 / -5.44)	0.07 (6.41 / 6.08)
+ 	Percentile (%)	13.743	85.246	32.364	-	74.474	44.411
+ammonia ligase activity	FC (WS / NS)	0.26 (13.33 / 10.95)	0.08 (5.52 / 5.15)	0.3 (9.81 / 7.78)	0.37 (8.39 / 6.29)	-0.74 (-5 / -7.69)	0.36 (7.75 / 5.81)
+ 	Percentile (%)	13.79	35.502	20.05	15.492	90.863	17.469
+acid-ammonia (or amide) ligase activity	FC (WS / NS)	0.26 (13.34 / 10.97)	0.23 (6.89 / 5.74)	0.23 (11.12 / 9.36)	0.31 (9.08 / 7.14)	-0.76 (-4.86 / -7.55)	0.31 (7.94 / 6.23)
+ 	Percentile (%)	13.837	22.799	23.095	17.429	91.226	18.997
+ribonucleoside-triphosphate reductase activity	FC (WS / NS)	0.26 (10.72 / 8.78)	0.19 (6.36 / 5.43)	0.23 (7.38 / 6.13)	0.37 (6.49 / 4.81)	-0.39 (-6.43 / -8.11)	0.28 (6.74 / 5.36)
+ 	Percentile (%)	13.884	23.777	22.728	15.46	80.711	20.15
+ferric iron binding	FC (WS / NS)	0.26 (15.97 / 13.19)	-0.48 (4.32 / 6.41)	0.09 (10.33 / 9.68)	0.07 (8.55 / 8.11)	0.33 (-0.41 / -0.53)	0.06 (8.89 / 8.46)
+ 	Percentile (%)	14.024	67.806	33.188	38.063	11.53	44.687
+enoyl-CoA hydratase activity	FC (WS / NS)	0.26 (3.98 / 3.17)	-	-0.24 (6.29 / 7.6)	1.14 (4.7 / 1.58)	-0.19 (-9.1 / -10.24)	0.98 (5.36 / 2.23)
+ 	Percentile (%)	14.259	-	81.575	6.54	64.394	7.444
+aspartate-tRNA(Asn) ligase activity	FC (WS / NS)	0.25 (10.85 / 8.95)	-	-	-	-	0.25 (6.38 / 5.19)
+ 	Percentile (%)	14.306	-	-	-	-	22.005
+hydrolase activity, hydrolyzing O-glycosyl compounds	FC (WS / NS)	0.25 (9.82 / 8.1)	0.1 (5.32 / 4.91)	0.15 (13.63 / 12.21)	0.31 (9.52 / 7.51)	-0.2 (-6.48 / -7.28)	0.25 (9.06 / 7.48)
+ 	Percentile (%)	14.681	34.477	27.695	17.651	65.12	22.231
+hydrolase activity, acting on glycosyl bonds	FC (WS / NS)	0.25 (9.84 / 8.13)	0.08 (7.17 / 6.71)	0.11 (14.88 / 13.73)	0.16 (10.06 / 8.92)	-0.22 (-5.66 / -6.43)	0.18 (9.2 / 8.02)
+ 	Percentile (%)	14.728	35.642	30.922	25.937	67.368	26.892
+3'-5' exonuclease activity	FC (WS / NS)	0.25 (10.44 / 8.64)	-0.13 (7.47 / 8.29)	-0.08 (10.7 / 11.34)	-	-0.16 (-8.03 / -8.84)	-0.03 (7 / 7.15)
+ 	Percentile (%)	14.775	58.736	75.257	-	61.784	62.581
+acetoin dehydrogenase activity	FC (WS / NS)	0.25 (8.24 / 6.79)	-	-	0.32 (6.88 / 5.32)	-	0.38 (7.61 / 5.63)
+ 	Percentile (%)	14.822	-	-	17.238	-	17.018
+acid phosphatase activity	FC (WS / NS)	0.24 (6.3 / 5.17)	0.82 (4.7 / 2.23)	1 (3 / 1)	-0.62 (3 / 5.13)	0 (-10.4 / -10.43)	-0.13 (5.09 / 5.66)
+ 	Percentile (%)	14.916	12.828	8.721	80.921	46.628	70.15
+uracil phosphoribosyltransferase activity	FC (WS / NS)	0.24 (11.78 / 9.81)	-2.74 (0 / 5.69)	0.1 (7.95 / 7.34)	0.13 (6.98 / 6.29)	-	0.17 (7.33 / 6.38)
+ 	Percentile (%)	14.962	97.111	31.472	28.571	-	27.043
+3-oxo-glutaryl-[acp] methyl ester reductase activity	FC (WS / NS)	0.24 (8.21 / 6.81)	-	-	-	-	0.01 (6.77 / 6.74)
+ 	Percentile (%)	15.338	-	-	-	-	56.642
+3-oxo-pimeloyl-[acp] methyl ester reductase activity	FC (WS / NS)	0.24 (8.21 / 6.81)	-	-	-	-	0.01 (6.77 / 6.74)
+ 	Percentile (%)	15.385	-	-	-	-	56.667
+phosphomannomutase activity	FC (WS / NS)	0.23 (10.41 / 8.7)	0.05 (7.65 / 7.36)	0.02 (7.99 / 7.85)	-0.14 (6.13 / 6.83)	-	0.06 (7.2 / 6.88)
+ 	Percentile (%)	15.432	40.177	44.45	65.587	-	45.84
+aspartate kinase activity	FC (WS / NS)	0.23 (6.72 / 5.58)	2.47 (4 / -0.09)	0.32 (7.49 / 5.81)	0.35 (5.13 / 3.81)	-	0.2 (5.46 / 4.61)
+ 	Percentile (%)	15.478	0.248	19.318	15.937	-	24.536
+amino acid kinase activity	FC (WS / NS)	0.23 (6.72 / 5.58)	1.75 (5.39 / 0.91)	0.25 (9.67 / 7.97)	0.33 (6.29 / 4.81)	-	0.16 (5.58 / 4.91)
+ 	Percentile (%)	15.525	2.935	21.881	17.048	-	28.145
+L-lactate dehydrogenase activity	FC (WS / NS)	0.22 (15.08 / 12.77)	-	0.22 (8.01 / 6.73)	0.38 (7.81 / 5.75)	-0.55 (-5.74 / -7.97)	0.38 (7.9 / 5.84)
+ 	Percentile (%)	15.572	-	23.301	15.016	86.149	16.967
+lactate dehydrogenase activity	FC (WS / NS)	0.22 (15.08 / 12.77)	-2.75 (0 / 5.71)	0 (10.76 / 10.78)	0.28 (9.26 / 7.46)	-0.67 (-4.74 / -6.97)	0.37 (7.91 / 5.91)
+ 	Percentile (%)	15.619	97.127	65.553	18.921	89.63	17.444
+ketol-acid reductoisomerase activity	FC (WS / NS)	0.22 (12.86 / 10.92)	0.5 (7.64 / 5.11)	0.46 (7.61 / 5.25)	0.44 (7.64 / 5.39)	-0.68 (-4.57 / -6.69)	0.42 (7.77 / 5.55)
+ 	Percentile (%)	15.666	15.825	16.182	13.492	89.775	15.514
+precorrin-6A reductase activity	FC (WS / NS)	0.22 (4.81 / 4)	-	0.56 (2.81 / 1.58)	-	-0.07 (-7.28 / -7.6)	0.35 (3.46 / 2.49)
+ 	Percentile (%)	15.713	-	14.992	-	53.807	17.719
+S-methyl-5-thioadenosine phosphorylase activity	FC (WS / NS)	0.22 (4.81 / 4)	-	0.44 (5.21 / 3.58)	-	-0.26 (-8.73 / -10.25)	1.13 (3.17 / 0.91)
+ 	Percentile (%)	15.76	-	16.342	-	71.284	6.591
+damaged DNA binding	FC (WS / NS)	0.21 (11.38 / 9.71)	-1.69 (0 / 2.23)	-0.04 (9.78 / 10.05)	-	0.04 (-11.02 / -10.73)	-0.03 (6.73 / 6.89)
+ 	Percentile (%)	15.807	88.166	72.419	-	41.624	62.857
+D-glucosamine PTS permease activity	FC (WS / NS)	0.21 (11.91 / 10.18)	-	-	-	-	0.19 (8.68 / 7.5)
+ 	Percentile (%)	15.854	-	-	-	-	26.065
+xanthine dehydrogenase activity	FC (WS / NS)	0.21 (3.14 / 2.58)	1.51 (1.58 / -0.09)	0.61 (6 / 3.58)	0.24 (5.09 / 4.17)	0.01 (-8.8 / -8.72)	0.15 (5.04 / 4.43)
+ 	Percentile (%)	15.901	4.985	14.42	21.397	44.017	28.496
+transferase activity, transferring pentosyl groups	FC (WS / NS)	0.2 (13.5 / 11.58)	-0.06 (7.88 / 8.28)	0.04 (13.17 / 12.78)	0.07 (9.21 / 8.76)	-0.33 (-4.19 / -5.02)	0.07 (9.05 / 8.57)
+ 	Percentile (%)	15.947	56.235	40.558	38.571	76.94	42.13
+glucose-6-phosphate isomerase activity	FC (WS / NS)	0.19 (15.66 / 13.59)	0.03 (3 / 2.91)	0.26 (7.35 / 5.95)	0.21 (7.21 / 6.11)	-0.15 (-3.43 / -3.7)	0.24 (7.56 / 6.26)
+ 	Percentile (%)	16.182	42.351	21.401	23.175	60.696	22.807
+phosphoglucomutase activity	FC (WS / NS)	0.19 (12.88 / 11.17)	0.05 (7.65 / 7.38)	0.02 (9.02 / 8.85)	0.12 (7.38 / 6.73)	-	0.14 (7.61 / 6.79)
+ 	Percentile (%)	16.229	40.938	43.763	30	-	30.1
+alanine dehydrogenase activity	FC (WS / NS)	0.19 (13.79 / 11.98)	0.09 (6.36 / 5.91)	0.05 (6.27 / 6.02)	0.09 (6.41 / 5.95)	-0.24 (-8.36 / -9.7)	0.05 (6.43 / 6.15)
+ 	Percentile (%)	16.276	34.881	38.59	33.651	68.963	46.19
+ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor	FC (WS / NS)	0.19 (14.17 / 12.32)	-0.61 (3.32 / 5.58)	0.06 (8.58 / 8.17)	0.18 (7.48 / 6.49)	-0.61 (-3.87 / -5.38)	0.09 (7.1 / 6.62)
+ 	Percentile (%)	16.604	70.508	35.66	24.825	88.035	39.574
+ribonucleoside-diphosphate reductase activity	FC (WS / NS)	0.19 (14.17 / 12.32)	-0.61 (3.32 / 5.58)	0.06 (8.58 / 8.17)	0.12 (8.2 / 7.45)	-0.61 (-3.87 / -5.38)	0.09 (7.1 / 6.62)
+ 	Percentile (%)	16.651	70.523	35.706	29.206	88.18	39.599
+oxidoreductase activity, acting on CH or CH2 groups, disulfide as acceptor	FC (WS / NS)	0.19 (14.3 / 12.44)	-0.03 (7.18 / 7.32)	0.07 (10.26 / 9.72)	0.12 (9.11 / 8.29)	-0.8 (-3.08 / -4.63)	0.14 (7.93 / 7.12)
+ 	Percentile (%)	16.698	53.906	34.653	29.524	91.733	35.163
+glucose-1-phosphate thymidylyltransferase activity	FC (WS / NS)	0.18 (11.31 / 9.83)	0.36 (4.75 / 3.49)	0.28 (4.95 / 3.91)	0.29 (4.75 / 3.7)	-	0.37 (5.09 / 3.71)
+ 	Percentile (%)	16.745	18.605	20.691	18.222	-	17.393
+DNA topoisomerase activity	FC (WS / NS)	0.18 (14.65 / 12.84)	0.06 (8.39 / 7.99)	0.04 (11.03 / 10.69)	0.07 (8.71 / 8.25)	-0.29 (-7.78 / -9.3)	0.07 (7.79 / 7.36)
+ 	Percentile (%)	17.073	38.313	40.238	37.492	74.837	41.679
+DNA topoisomerase type II (ATP-hydrolyzing) activity	FC (WS / NS)	0.18 (14.65 / 12.84)	0.09 (6.73 / 6.25)	0.03 (9.01 / 8.78)	0.09 (7.06 / 6.58)	-0.27 (-8.36 / -9.88)	0.06 (7.31 / 6.98)
+ 	Percentile (%)	17.12	34.804	41.794	34.857	72.661	45.614
+methylmalonyl-CoA decarboxylase activity	FC (WS / NS)	0.18 (6.89 / 5.98)	-	-	-	-	0.16 (7.02 / 6.19)
+ 	Percentile (%)	17.167	-	-	-	-	28.12
+protein histidine kinase activity	FC (WS / NS)	0.18 (7.35 / 6.39)	0.05 (2 / 1.91)	-0.01 (10.46 / 10.54)	0.31 (6.09 / 4.7)	0.07 (-9.25 / -8.86)	-0.09 (7.14 / 7.67)
+ 	Percentile (%)	17.214	40.612	67.659	17.27	36.331	67.694
+phosphopentomutase activity	FC (WS / NS)	0.17 (14.5 / 12.76)	0.31 (6.78 / 5.26)	0.34 (6.83 / 5.17)	0.33 (6.71 / 5.13)	-0.36 (-7.14 / -8.88)	0.36 (6.85 / 5.11)
+ 	Percentile (%)	17.542	19.801	18.631	16.889	78.825	17.494
+phosphorelay sensor kinase activity	FC (WS / NS)	0.17 (7.32 / 6.39)	0.07 (1 / 0.91)	-0.01 (9.4 / 9.49)	0.37 (5.09 / 3.7)	0.06 (-10.25 / -9.86)	-0.09 (7.14 / 7.67)
+ 	Percentile (%)	17.589	36.698	68.368	15.302	37.418	67.669
+exonuclease activity	FC (WS / NS)	0.17 (13.54 / 11.92)	-0.08 (9.32 / 9.92)	-0.05 (13.38 / 13.91)	0.06 (9.87 / 9.4)	-0.17 (-6.93 / -7.66)	0.08 (8.45 / 7.95)
+ 	Percentile (%)	17.683	56.919	73.655	38.857	62.437	40.677
+5'-3' exoribonuclease activity	FC (WS / NS)	0.17 (13.36 / 11.77)	-	-	0.34 (6.77 / 5.13)	-	0.33 (6.91 / 5.3)
+ 	Percentile (%)	17.73	-	-	16.254	-	18.346
+5'-3' exonuclease activity	FC (WS / NS)	0.17 (13.36 / 11.77)	-2.03 (0 / 3.08)	0 (5.7 / 5.7)	0.26 (7.85 / 6.39)	-	0.28 (6.94 / 5.55)
+ 	Percentile (%)	17.777	91.101	56.237	19.492	-	20.426
+3-oxoacyl-[acyl-carrier-protein] reductase (NADPH) activity	FC (WS / NS)	0.17 (9.56 / 8.39)	-0.05 (5.81 / 6.06)	0.6 (6.29 / 3.81)	-	-0.21 (-6.53 / -7.41)	0 (6.78 / 6.78)
+ 	Percentile (%)	17.824	55.692	14.58	-	66.062	57.769
+exoribonuclease activity	FC (WS / NS)	0.17 (13.36 / 11.79)	-0.12 (8.06 / 8.84)	-0.11 (9.79 / 10.66)	0.34 (6.77 / 5.13)	0.01 (-10.18 / -10.14)	0.22 (7.02 / 5.91)
+ 	Percentile (%)	17.871	58.239	77.066	16.222	44.743	24.01
+exonuclease activity, active with either ribo- or deoxyribonucleic acids and producing 5'-phosphomonoesters	FC (WS / NS)	0.17 (13.36 / 11.79)	-0.08 (8.33 / 8.87)	-0.07 (11.01 / 11.61)	0.08 (8.68 / 8.13)	0.01 (-10.18 / -10.14)	0.16 (7.41 / 6.52)
+ 	Percentile (%)	17.917	56.903	74.868	35.206	44.815	27.92
+exoribonuclease activity, producing 5'-phosphomonoesters	FC (WS / NS)	0.17 (13.36 / 11.79)	-0.13 (7.46 / 8.25)	-0.12 (8.94 / 9.81)	0.34 (6.77 / 5.13)	0.01 (-10.77 / -10.72)	0.22 (7.02 / 5.91)
+ 	Percentile (%)	17.964	58.643	77.638	16.286	45.105	24.035
+single-stranded DNA binding	FC (WS / NS)	0.17 (12.28 / 10.83)	-0.01 (6.3 / 6.35)	-0.02 (8.24 / 8.37)	-	-0.13 (-5.51 / -5.94)	-0.03 (6.92 / 7.07)
+ 	Percentile (%)	18.011	52.757	70.108	-	59.391	62.18
+adenylosuccinate synthase activity	FC (WS / NS)	0.17 (11.53 / 10.17)	-2.08 (0 / 3.23)	0.06 (6.71 / 6.38)	-	0.1 (-8.21 / -7.74)	0.05 (6.82 / 6.56)
+ 	Percentile (%)	18.058	91.319	35.431	-	32.777	47.794
+ADP binding	FC (WS / NS)	0.16 (10.11 / 8.92)	-0.47 (3.17 / 4.76)	-	0.01 (9.66 / 9.58)	-	0.19 (5.39 / 4.61)
+ 	Percentile (%)	18.199	67.65	-	49.397	-	26.015
+glutamate-tRNA ligase activity	FC (WS / NS)	0.16 (11.66 / 10.33)	-0.6 (1.58 / 2.91)	-0.01 (6.77 / 6.81)	-	-	-0.06 (6.51 / 6.82)
+ 	Percentile (%)	18.34	70.384	66.789	-	-	64.962
+carbohydrate kinase activity	FC (WS / NS)	0.15 (15.23 / 13.62)	0.21 (8.98 / 7.65)	0.11 (12.11 / 11.17)	0.13 (9.41 / 8.54)	0.19 (-5.39 / -4.86)	0.17 (8.25 / 7.22)
+ 	Percentile (%)	19.043	23.466	31.06	28.984	22.117	27.268
+tyrosine-tRNA ligase activity	FC (WS / NS)	0.15 (11.79 / 10.53)	0.19 (5.83 / 4.99)	0.11 (5.61 / 5.13)	-	-0.14 (-6.28 / -6.81)	0.1 (6.09 / 5.61)
+ 	Percentile (%)	19.09	24.01	30.716	-	60.406	38.521
+phosphofructokinase activity	FC (WS / NS)	0.15 (15.13 / 13.57)	0.25 (7.95 / 6.52)	0.19 (9.59 / 8.32)	0.18 (7.94 / 6.88)	0.22 (-6.34 / -5.59)	0.23 (7.58 / 6.33)
+ 	Percentile (%)	19.184	22.053	25.452	24.73	18.564	23.383
+6-phosphofructokinase activity	FC (WS / NS)	0.15 (15.13 / 13.57)	0.29 (6.95 / 5.52)	0.2 (6.92 / 5.88)	0.11 (6.44 / 5.88)	0.21 (-6.49 / -5.74)	0.2 (7.19 / 6.11)
+ 	Percentile (%)	19.231	20.826	24.514	30.54	19.362	24.662
+isoleucine-tRNA ligase activity	FC (WS / NS)	0.14 (9.88 / 8.86)	-2.13 (0 / 3.36)	-0.21 (6.19 / 7.3)	-0.12 (6.63 / 7.3)	-	-0.12 (6.93 / 7.61)
+ 	Percentile (%)	19.747	91.784	80.568	64.635	-	69.599
+pyruvate kinase activity	FC (WS / NS)	0.14 (17.66 / 15.93)	-0.33 (4.81 / 6.31)	0.21 (9.48 / 8.06)	0.19 (8.38 / 7.21)	-0.09 (-7.54 / -7.99)	0.22 (8.8 / 7.41)
+ 	Percentile (%)	19.841	64.886	23.941	24.19	56.273	23.609
+potassium ion binding	FC (WS / NS)	0.14 (17.66 / 15.93)	-1.69 (0 / 2.23)	0.15 (10.07 / 8.97)	0.13 (8.46 / 7.67)	-0.09 (-7.54 / -7.99)	0.16 (8.8 / 7.76)
+ 	Percentile (%)	19.887	88.476	27.604	29.016	56.345	27.719
+alkali metal ion binding	FC (WS / NS)	0.14 (17.66 / 15.93)	-1.39 (1 / 4.23)	0.13 (11.48 / 10.4)	0.11 (9.46 / 8.68)	-0.11 (-6.54 / -6.99)	0.16 (8.8 / 7.76)
+ 	Percentile (%)	19.934	84.889	28.977	30.635	57.941	27.744
+precorrin-6Y C5,15-methyltransferase (decarboxylating) activity	FC (WS / NS)	0.14 (5.4 / 4.81)	-	0.37 (4.58 / 3.32)	-	-0.06 (-6.21 / -6.42)	0.51 (3.58 / 2.23)
+ 	Percentile (%)	19.981	-	17.967	-	52.139	12.882
+adenosylhomocysteinase activity	FC (WS / NS)	0.14 (7.98 / 7.17)	-	0.72 (4.46 / 2.32)	0.71 (4.86 / 2.58)	-0.06 (-7.98 / -8.26)	0.77 (4.95 / 2.49)
+ 	Percentile (%)	20.075	-	13.71	9.841	51.922	8.797
+hydrolase activity, acting on ether bonds	FC (WS / NS)	0.14 (7.98 / 7.17)	-	0.62 (7.16 / 4.32)	0.53 (6.44 / 4.17)	-0.06 (-7.4 / -7.68)	0.77 (4.95 / 2.49)
+ 	Percentile (%)	20.122	-	14.305	12.032	52.647	8.847
+trialkylsulfonium hydrolase activity	FC (WS / NS)	0.14 (7.98 / 7.17)	-	0.58 (5.46 / 3.32)	0.58 (5.86 / 3.58)	-0.06 (-7.66 / -7.94)	0.77 (4.95 / 2.49)
+ 	Percentile (%)	20.169	-	14.74	11.524	52.212	8.872
+UDP-N-acetylglucosamine diphosphorylase activity	FC (WS / NS)	0.14 (12.94 / 11.68)	0.03 (6.02 / 5.86)	0.02 (6.09 / 5.98)	-	-0.44 (-6.95 / -9.05)	0 (6.19 / 6.17)
+ 	Percentile (%)	20.216	42.538	44.564	-	82.814	57.343
+glucosamine-1-phosphate N-acetyltransferase activity	FC (WS / NS)	0.14 (12.94 / 11.68)	0.03 (6.02 / 5.86)	0.02 (6.09 / 5.98)	-	-0.34 (-8.95 / -11.05)	0 (6.19 / 6.17)
+ 	Percentile (%)	20.31	42.553	44.61	-	77.302	57.419
+deacetylase activity	FC (WS / NS)	0.14 (4.77 / 4.25)	0.19 (4.58 / 3.91)	-0.04 (10.57 / 10.87)	-0.44 (4.86 / 6.93)	-	0.03 (6.46 / 6.31)
+ 	Percentile (%)	20.356	24.072	72.602	77.873	-	51.93
+uridylyltransferase activity	FC (WS / NS)	0.13 (13.08 / 11.87)	0.09 (7.91 / 7.39)	0.04 (8.87 / 8.61)	0.21 (6.55 / 5.52)	-0.24 (-4.82 / -5.51)	0.05 (7.15 / 6.85)
+ 	Percentile (%)	20.685	35.238	40.833	22.889	68.745	46.14
+protein-N(PI)-phosphohistidine-sugar phosphotransferase activity	FC (WS / NS)	0.13 (14.3 / 12.98)	0.19 (8.5 / 7.32)	0.09 (13.03 / 12.17)	0.2 (8.44 / 7.23)	0.33 (-5.71 / -4.75)	0.19 (8.85 / 7.65)
+ 	Percentile (%)	20.732	23.963	32.731	23.968	11.168	26.291
+N-acetyltransferase activity	FC (WS / NS)	0.13 (12.99 / 11.79)	0.01 (7.02 / 6.95)	0.03 (9.81 / 9.57)	1.1 (4.52 / 1.58)	-0.72 (-5.22 / -7.97)	0.05 (7.53 / 7.22)
+ 	Percentile (%)	20.779	45.085	41.909	6.73	90.21	46.316
+glycerone kinase activity	FC (WS / NS)	0.13 (14.09 / 12.79)	-2.29 (0 / 3.91)	-1.07 (2 / 5.29)	-	-	0 (6.86 / 6.84)
+ 	Percentile (%)	20.826	92.841	91.669	-	-	57.243
+N-acyltransferase activity	FC (WS / NS)	0.13 (13.01 / 11.81)	0 (7.65 / 7.66)	0.02 (10.97 / 10.77)	1.1 (4.52 / 1.58)	-0.93 (-4.09 / -6.9)	0 (7.61 / 7.61)
+ 	Percentile (%)	20.872	52.151	43.809	6.762	92.821	57.92
+heme binding	FC (WS / NS)	0.13 (9.03 / 8.17)	-0.03 (6.19 / 6.33)	0.05 (11.02 / 10.59)	-0.23 (6.17 / 7.39)	0.01 (-10.6 / -10.55)	-0.01 (6.7 / 6.78)
+ 	Percentile (%)	20.919	54.232	37.903	69.81	44.96	60.777
+translation initiation factor activity	FC (WS / NS)	0.13 (15.01 / 13.64)	-0.23 (5.93 / 7.11)	-0.03 (10.23 / 10.44)	-	0.27 (-6.87 / -5.88)	-0.04 (7.64 / 7.87)
+ 	Percentile (%)	21.013	61.531	71.687	-	14.213	63.559
+DNA-dependent ATPase activity	FC (WS / NS)	0.12 (14.82 / 13.51)	0.07 (8.83 / 8.36)	0.01 (12.91 / 12.84)	0.09 (8.13 / 7.61)	-0.2 (-7.2 / -8.12)	0 (8.46 / 8.47)
+ 	Percentile (%)	21.248	36.558	50.24	34.984	65.192	58.596
+phosphogluconate dehydrogenase (decarboxylating) activity	FC (WS / NS)	0.12 (13.67 / 12.46)	0.29 (6.46 / 5.11)	0.27 (7.25 / 5.86)	0.26 (6.54 / 5.29)	0.05 (-4.25 / -4.14)	0.27 (6.88 / 5.55)
+ 	Percentile (%)	21.295	20.857	21.241	19.365	40.174	21.303
+glycerol-3-phosphate dehydrogenase [NAD+] activity	FC (WS / NS)	0.12 (10.85 / 9.88)	-	0.2 (5.36 / 4.52)	-	0.1 (-8.05 / -7.6)	0.14 (5.67 / 5.03)
+ 	Percentile (%)	21.435	-	24.445	-	33.212	30.05
+inorganic diphosphatase activity	FC (WS / NS)	0.12 (13 / 11.88)	0.38 (5.39 / 3.91)	0.08 (8.23 / 7.73)	-	-0.49 (-4.52 / -5.94)	0.07 (6.87 / 6.52)
+ 	Percentile (%)	21.811	18.31	33.806	-	84.336	44.536
+carbohydrate transmembrane transporter activity	FC (WS / NS)	0.12 (14.38 / 13.15)	0.09 (10.55 / 9.89)	0.06 (15.73 / 15.09)	0.04 (9.92 / 9.65)	0.24 (-3.11 / -2.79)	0.11 (9.43 / 8.69)
+ 	Percentile (%)	21.857	35.409	37.148	44.508	16.461	38.02
+manganese ion binding	FC (WS / NS)	0.12 (15.92 / 14.58)	-0.15 (6.34 / 7.13)	0.03 (14.25 / 13.96)	-0.06 (8.37 / 8.75)	-1.58 (-1.61 / -2.83)	-0.01 (7.87 / 7.91)
+ 	Percentile (%)	21.904	59.171	42.985	57.397	94.851	59.524
+phosphotransferase activity, alcohol group as acceptor	FC (WS / NS)	0.12 (18.14 / 16.64)	0.05 (10.39 / 9.99)	0.06 (17.62 / 16.86)	0.1 (11.42 / 10.57)	0.38 (-2.4 / -2.08)	0.08 (11.13 / 10.46)
+ 	Percentile (%)	21.951	39.991	36.576	32.19	10.225	40.025
+UDP-N-acetylglucosamine 1-carboxyvinyltransferase activity	FC (WS / NS)	0.12 (8.78 / 8.02)	-0.87 (1.58 / 3.71)	0.17 (5.43 / 4.7)	0.23 (5.73 / 4.75)	0.21 (-9.4 / -8.28)	0.17 (5.88 / 5.11)
+ 	Percentile (%)	22.186	73.521	26.116	21.937	20.015	27.193
+NADP binding	FC (WS / NS)	0.12 (17.47 / 16.04)	0.1 (7.96 / 7.36)	0.1 (15.01 / 13.98)	0.1 (10.15 / 9.44)	-0.78 (-1.84 / -2.45)	0.13 (10.37 / 9.38)
+ 	Percentile (%)	22.326	34.431	32.158	33.175	91.443	35.414
+UTP:glucose-1-phosphate uridylyltransferase activity	FC (WS / NS)	0.11 (9.66 / 8.85)	0.3 (5.13 / 3.99)	0.28 (5.29 / 4.17)	0.37 (5.55 / 4.09)	-0.08 (-6.24 / -6.52)	0.33 (6.02 / 4.61)
+ 	Percentile (%)	22.467	20.624	20.6	15.524	54.605	18.396
+UTP-monosaccharide-1-phosphate uridylyltransferase activity	FC (WS / NS)	0.11 (9.66 / 8.85)	0.25 (6.13 / 4.99)	0.24 (6.29 / 5.17)	0.31 (6.55 / 5.09)	-0.08 (-5.91 / -6.2)	0.33 (6.02 / 4.61)
+ 	Percentile (%)	22.561	22.069	22.179	17.365	54.895	18.421
+beta-ketoacyl-acyl-carrier-protein synthase II activity	FC (WS / NS)	0.11 (15.33 / 14.09)	-2.75 (0 / 5.74)	0.07 (7.49 / 7.07)	0.09 (7.34 / 6.83)	-0.3 (-5.27 / -6.28)	0.15 (7.67 / 6.84)
+ 	Percentile (%)	22.608	97.189	34.356	34.032	75.997	30.025
+glycerol-3-phosphate dehydrogenase [NAD(P)+] activity	FC (WS / NS)	0.11 (11.85 / 10.88)	-	0.17 (6.36 / 5.52)	-	0.11 (-7.05 / -6.6)	0.13 (6.67 / 5.99)
+ 	Percentile (%)	22.655	-	25.933	-	31.4	35.338
+carbohydrate binding	FC (WS / NS)	0.11 (8.86 / 8.13)	-0.97 (1.58 / 4.08)	0.01 (12.6 / 12.49)	0.15 (12.47 / 11.16)	-0.22 (-6.05 / -6.87)	-0.1 (6.7 / 7.25)
+ 	Percentile (%)	22.702	80.075	47.677	26.54	67.223	68.246
+penicillin binding	FC (WS / NS)	0.11 (7.98 / 7.32)	-0.69 (2.32 / 4.36)	0.07 (7.43 / 7.04)	-	-	0 (5.88 / 5.91)
+ 	Percentile (%)	22.749	71.688	35.111	-	-	59.474
+intramolecular transferase activity, phosphotransferases	FC (WS / NS)	0.11 (15.71 / 14.49)	0.04 (10.33 / 10.01)	0.02 (12.56 / 12.33)	0.05 (9.72 / 9.38)	-0.46 (-5.13 / -6.69)	0.04 (10.02 / 9.7)
+ 	Percentile (%)	22.795	41.528	43.854	42.54	83.321	48.972
+oxidoreductase activity, acting on CH or CH2 groups	FC (WS / NS)	0.11 (14.58 / 13.45)	0 (8.01 / 7.99)	0.03 (12.44 / 12.17)	0.05 (10.08 / 9.72)	-1.22 (-1.97 / -3.26)	0.05 (8.95 / 8.6)
+ 	Percentile (%)	22.842	46.218	42.641	42.698	94.054	47.243
+phosphopyruvate hydratase activity	FC (WS / NS)	0.11 (21.2 / 19.6)	-0.17 (5.78 / 6.61)	0.1 (9.64 / 8.92)	0.07 (9.22 / 8.74)	-	0.11 (9.64 / 8.86)
+ 	Percentile (%)	22.936	59.792	31.609	37.746	-	37.569
+methylmalonyl-CoA mutase activity	FC (WS / NS)	0.11 (15.12 / 13.96)	1.37 (1.58 / 0)	0.19 (10.88 / 9.38)	0.2 (8.71 / 7.43)	-1.3 (-1.73 / -2.8)	0.23 (9.06 / 7.59)
+ 	Percentile (%)	22.983	5.451	25.017	23.524	94.199	23.358
+acetylornithine deacetylase activity	FC (WS / NS)	0.11 (4.57 / 4.17)	-	-0.11 (6.83 / 7.48)	-2.48 (0 / 4.58)	-	0.01 (5.83 / 5.79)
+ 	Percentile (%)	23.311	-	77.157	94.984	-	55.94
+ribonuclease activity	FC (WS / NS)	0.11 (14.85 / 13.73)	-0.11 (8.63 / 9.4)	-0.1 (11.06 / 11.92)	0.09 (9.21 / 8.59)	-0.06 (-8.24 / -8.57)	0.13 (8.51 / 7.71)
+ 	Percentile (%)	23.499	57.851	76.608	34.063	53.227	35.815
+translation release factor activity, codon specific	FC (WS / NS)	0.1 (12.48 / 11.53)	0.23 (5.64 / 4.66)	0.19 (7.83 / 6.75)	0.26 (6.36 / 5.13)	-	0.2 (6.85 / 5.81)
+ 	Percentile (%)	23.593	22.736	25.315	19.333	-	24.561
+translation release factor activity	FC (WS / NS)	0.1 (12.48 / 11.53)	0.25 (7.27 / 5.95)	0.17 (8.83 / 7.75)	0.24 (7.55 / 6.23)	-	0.17 (6.87 / 5.97)
+ 	Percentile (%)	23.64	22.084	26.23	20.794	-	26.992
+translation termination factor activity	FC (WS / NS)	0.1 (12.48 / 11.53)	0.15 (8.18 / 7.25)	0.16 (9.42 / 8.34)	0.22 (8.08 / 6.78)	-	0.17 (6.87 / 5.97)
+ 	Percentile (%)	23.687	24.864	26.963	22.222	-	27.018
+large ribosomal subunit rRNA binding	FC (WS / NS)	0.1 (14.63 / 13.55)	0.08 (6.94 / 6.52)	-	-	-	0.03 (8.1 / 7.94)
+ 	Percentile (%)	23.827	35.984	-	-	-	52.431
+protein kinase activity	FC (WS / NS)	0.1 (10.94 / 10.12)	-0.29 (6.41 / 8.04)	0.02 (13.54 / 13.31)	0.19 (8.34 / 7.19)	0 (-7.18 / -7.2)	-0.03 (8.4 / 8.58)
+ 	Percentile (%)	23.874	62.836	44.495	24.286	46.555	62.682
+protein serine/threonine kinase activity	FC (WS / NS)	0.1 (10.81 / 10)	0.45 (5.13 / 3.49)	0.03 (11 / 10.77)	0.26 (6.02 / 4.86)	-0.08 (-9.7 / -10.22)	0.05 (6.79 / 6.53)
+ 	Percentile (%)	23.921	16.462	42.733	19.429	55.257	47.619
+carbon-oxygen lyase activity	FC (WS / NS)	0.1 (21.21 / 19.68)	0.1 (10.59 / 9.78)	0.02 (17.43 / 17.2)	0.02 (12.07 / 11.86)	1.41 (-0.32 / -0.75)	0.06 (11.13 / 10.62)
+ 	Percentile (%)	23.968	34.182	46.166	46.413	1.378	45.163
+hydro-lyase activity	FC (WS / NS)	0.1 (21.21 / 19.68)	0.11 (9.97 / 9.15)	0.02 (16.21 / 16.01)	0.02 (11.48 / 11.27)	NaN (-0.79 / -1.25)	0.06 (11.07 / 10.61)
+ 	Percentile (%)	24.015	33.98	46.647	46	97.679	45.915
+intramolecular oxidoreductase activity, interconverting aldoses and ketoses	FC (WS / NS)	0.1 (16.09 / 14.93)	0.02 (8.07 / 7.92)	0.04 (12.71 / 12.29)	0.07 (8.96 / 8.46)	-3 (-1.07 / -1.53)	0.06 (8.6 / 8.2)
+ 	Percentile (%)	24.062	43.827	39.643	36.635	96.012	45.238
+intramolecular oxidoreductase activity	FC (WS / NS)	0.1 (16.09 / 14.93)	0.11 (9.57 / 8.79)	0.03 (13.89 / 13.62)	0.09 (10.4 / 9.71)	NaN (-0.59 / -1.05)	0.05 (8.61 / 8.25)
+ 	Percentile (%)	24.109	34.043	43.374	34.095	97.752	46.115
+endoribonuclease activity	FC (WS / NS)	0.1 (14.21 / 13.18)	0.63 (4.39 / 2.49)	0.07 (6.74 / 6.39)	0.24 (7.51 / 6.23)	-0.1 (-10.65 / -11.36)	0.16 (7.85 / 6.95)
+ 	Percentile (%)	24.156	14.707	35.18	21.46	57.07	28.421
+DNA-directed DNA polymerase activity	FC (WS / NS)	0.1 (11.28 / 10.47)	0.18 (6.23 / 5.4)	0.03 (10.96 / 10.74)	-	-0.25 (-7.4 / -8.6)	-0.03 (7.19 / 7.39)
+ 	Percentile (%)	24.203	24.336	43.259	-	69.978	63.108
+DNA polymerase activity	FC (WS / NS)	0.1 (11.28 / 10.47)	0.15 (7.23 / 6.4)	0.03 (12.03 / 11.81)	-	-0.26 (-7.08 / -8.28)	-0.04 (7.21 / 7.43)
+ 	Percentile (%)	24.25	24.88	43.694	-	71.719	63.609
+monosaccharide-transporting ATPase activity	FC (WS / NS)	0.1 (7.81 / 7.23)	0.08 (6.17 / 5.76)	-0.73 (3.81 / 6.98)	-	-	-0.08 (6.21 / 6.61)
+ 	Percentile (%)	24.296	35.518	87.297	-	-	66.316
+carbohydrate-transporting ATPase activity	FC (WS / NS)	0.1 (7.81 / 7.23)	0.06 (7.19 / 6.84)	-0.61 (5.09 / 8.29)	-0.52 (4.86 / 7.38)	-	-0.08 (6.21 / 6.61)
+ 	Percentile (%)	24.343	38.298	86.725	79.492	-	66.341
+ribose-5-phosphate isomerase activity	FC (WS / NS)	0.1 (10.29 / 9.55)	0.52 (4.58 / 2.91)	0 (6.67 / 6.67)	-	-0.22 (-3.17 / -3.53)	-0.07 (4.81 / 5.11)
+ 	Percentile (%)	24.39	15.624	54.681	-	67.44	66.165
+UDP-N-acetylglucosamine 2-epimerase activity	FC (WS / NS)	0.1 (9.23 / 8.56)	0 (0 / 0)	0.35 (4.86 / 3.58)	-	-0.22 (-7.8 / -8.9)	0.28 (4.95 / 3.91)
+ 	Percentile (%)	24.484	47.554	18.471	-	66.642	20.351
+intramolecular transferase activity	FC (WS / NS)	0.1 (16.46 / 15.32)	-0.01 (10.98 / 11.09)	0.02 (15.41 / 15.16)	-0.05 (10.4 / 10.83)	1.64 (0.48 / -0.53)	0.04 (10.87 / 10.53)
+ 	Percentile (%)	24.531	53.005	44.541	57.111	1.015	49.123
+acetaldehyde dehydrogenase (acetylating) activity	FC (WS / NS)	0.1 (14.58 / 13.57)	0.31 (3 / 2.23)	0.11 (7.43 / 6.81)	0.14 (7.37 / 6.61)	-0.26 (-7.28 / -8.54)	0.15 (7.38 / 6.53)
+ 	Percentile (%)	24.672	19.941	30.694	27.714	71.864	28.647
+mRNA binding	FC (WS / NS)	0.09 (15.03 / 14.05)	-0.17 (8.18 / 9.33)	-0.03 (7.43 / 7.58)	-0.08 (9.31 / 9.88)	-0.02 (-3.8 / -3.83)	-0.03 (7.67 / 7.85)
+ 	Percentile (%)	24.812	60.009	71.435	59.143	49.384	62.732
+catalytic activity, acting on DNA	FC (WS / NS)	0.08 (14.84 / 13.94)	0.06 (9.75 / 9.29)	0 (13.3 / 13.32)	0.03 (9.04 / 8.85)	-0.3 (-6.33 / -7.54)	0 (9.48 / 9.48)
+ 	Percentile (%)	25.516	38.422	65.53	45.587	75.199	58.221
+phosphoglycerate mutase activity	FC (WS / NS)	0.08 (12.06 / 11.37)	-0.01 (7.75 / 7.78)	-0.02 (9.23 / 9.36)	-	-0.25 (-7.86 / -9.16)	0 (8.01 / 8.03)
+ 	Percentile (%)	25.891	52.632	70.085	-	70.123	59.424
+2,3-bisphosphoglycerate-dependent phosphoglycerate mutase activity	FC (WS / NS)	0.08 (12.06 / 11.37)	-0.01 (6.67 / 6.75)	-0.05 (6.69 / 6.95)	-	-0.22 (-8.86 / -10.16)	-0.03 (7.02 / 7.17)
+ 	Percentile (%)	25.938	53.114	73.312	-	67.295	62.306
+cysteine-type endopeptidase activity	FC (WS / NS)	0.08 (8.81 / 8.3)	0 (0 / 0)	1.87 (6.29 / 1)	1.9 (6.46 / 1)	-	0.27 (7.37 / 5.93)
+ 	Percentile (%)	26.126	46.855	3.342	4.54	-	20.602
+magnesium ion binding	FC (WS / NS)	0.08 (24.17 / 22.88)	0.06 (10.34 / 9.89)	0.03 (17.32 / 16.88)	0.03 (11.82 / 11.55)	-2.21 (-1.32 / -2.5)	0.05 (11.79 / 11.39)
+ 	Percentile (%)	26.173	38.95	41.52	45.206	95.722	48.446
+lyase activity	FC (WS / NS)	0.08 (21.29 / 20.15)	-0.02 (12.08 / 12.27)	-0.02 (19.83 / 20.07)	-0.04 (13.55 / 14.01)	0.11 (2.96 / 2.67)	-0.03 (12.43 / 12.69)
+ 	Percentile (%)	26.313	53.595	69.421	56.635	31.617	62.607
+oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor	FC (WS / NS)	0.07 (12.31 / 11.64)	0.15 (8.38 / 7.42)	0.08 (12.72 / 11.98)	0 (7.97 / 7.97)	-0.35 (-3.63 / -4.35)	0.04 (7.71 / 7.5)
+ 	Percentile (%)	26.501	24.849	33.692	51.968	78.245	50.15
+enoyl-[acyl-carrier-protein] reductase (NADH) activity	FC (WS / NS)	0.07 (12.28 / 11.62)	0.15 (7.22 / 6.4)	-0.02 (8.39 / 8.53)	-	-0.2 (-5.65 / -6.36)	0.12 (6.92 / 6.28)
+ 	Percentile (%)	26.782	24.957	70.405	-	65.41	36.341
+ligase activity, forming carbon-carbon bonds	FC (WS / NS)	0.07 (12.86 / 12.2)	0.05 (9.51 / 9.18)	-0.04 (13.17 / 13.53)	0.09 (9.71 / 9.06)	-1.47 (-1.58 / -2.62)	0.14 (9.19 / 8.22)
+ 	Percentile (%)	27.58	40.954	72.557	33.81	94.779	30.125
+oxidoreductase activity, acting on single donors with incorporation of molecular oxygen	FC (WS / NS)	0.07 (14.42 / 13.69)	1.37 (1.58 / 0)	0.19 (10.67 / 9.27)	0.16 (9.08 / 8.02)	-0.27 (-4.54 / -5.27)	0.13 (7.7 / 6.97)
+ 	Percentile (%)	27.861	5.715	25.429	25.746	72.516	35.84
+oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of one atom of oxygen (internal monooxygenases or internal mixed function oxidases)	FC (WS / NS)	0.07 (14.42 / 13.69)	-	1 (1 / 0)	0.17 (8.49 / 7.43)	-0.21 (-5.54 / -6.27)	0.18 (7.64 / 6.63)
+ 	Percentile (%)	27.908	-	9.911	25.302	65.917	26.817
+nitronate monooxygenase activity	FC (WS / NS)	0.07 (14.42 / 13.69)	-	-	0.16 (7.3 / 6.43)	-0.18 (-6.54 / -7.27)	0.18 (7.64 / 6.63)
+ 	Percentile (%)	27.955	-	-	25.714	63.379	26.842
+monooxygenase activity	FC (WS / NS)	0.07 (14.42 / 13.69)	0.2 (8.18 / 6.97)	-0.22 (6.38 / 7.6)	0.16 (9.08 / 8.01)	-0.24 (-4.96 / -5.68)	0.13 (7.86 / 7.1)
+ 	Percentile (%)	28.049	23.56	81.186	25.683	69.108	35.639
+pyruvate, water dikinase activity	FC (WS / NS)	0.07 (10.97 / 10.41)	0.24 (5.86 / 4.81)	-0.23 (6.15 / 7.39)	0.21 (6.04 / 5.09)	0.07 (-7.82 / -7.49)	0.23 (6.25 / 5.19)
+ 	Percentile (%)	28.096	22.503	81.323	22.952	35.46	23.333
+isomerase activity	FC (WS / NS)	0.07 (18.15 / 17.26)	0.02 (12.56 / 12.36)	0.02 (18.5 / 18.29)	0.02 (12.6 / 12.45)	0.45 (2.26 / 1.39)	0.04 (11.99 / 11.66)
+ 	Percentile (%)	28.189	44.029	46.921	48.54	8.194	49.95
+fructose-6-phosphate phosphoketolase activity	FC (WS / NS)	0.07 (2.98 / 2.81)	-	-	0.11 (6.11 / 5.58)	-	0.12 (6.07 / 5.49)
+ 	Percentile (%)	28.471	-	-	31.143	-	36.19
+phosphoketolase activity	FC (WS / NS)	0.06 (6.84 / 6.49)	-	0.14 (6.21 / 5.55)	0.11 (6.11 / 5.58)	0.11 (-8.16 / -7.61)	0.13 (6.21 / 5.58)
+ 	Percentile (%)	28.565	-	28.382	31.175	30.964	35.489
+nuclease activity	FC (WS / NS)	0.06 (14.96 / 14.27)	-0.03 (10.48 / 10.7)	-0.05 (15.14 / 15.74)	0.04 (11.11 / 10.75)	-0.33 (-4.69 / -5.63)	0.06 (9.72 / 9.31)
+ 	Percentile (%)	28.612	54.17	73.701	43.397	76.577	45.94
+alcohol dehydrogenase (NAD) activity	FC (WS / NS)	0.06 (15.72 / 15.07)	0.08 (7.67 / 7.19)	0.07 (10.06 / 9.5)	0.05 (8.01 / 7.69)	0.05 (-5.31 / -5.18)	0.08 (8.31 / 7.81)
+ 	Percentile (%)	29.128	35.72	34.31	41.873	41.117	40.501
+alcohol dehydrogenase [NAD(P)+] activity	FC (WS / NS)	0.06 (15.72 / 15.07)	0.08 (7.67 / 7.19)	0.07 (10.06 / 9.5)	0.06 (8.09 / 7.69)	0.05 (-5.31 / -5.18)	0.08 (8.31 / 7.81)
+ 	Percentile (%)	29.174	35.735	34.333	38.73	41.189	40.526
+unfolded protein binding	FC (WS / NS)	0.06 (20.68 / 19.85)	0.16 (9.93 / 8.76)	-	0.06 (10.43 / 9.97)	0.3 (-9.9 / -8.23)	0.08 (10.79 / 10.15)
+ 	Percentile (%)	29.315	24.724	-	39.81	12.835	40.451
+dTDP-4-dehydrorhamnose reductase activity	FC (WS / NS)	0.06 (8.27 / 7.92)	0.24 (4.7 / 3.81)	0.04 (6.73 / 6.49)	-	-	0.07 (5 / 4.71)
+ 	Percentile (%)	29.362	22.271	39.734	-	-	41.855
+oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor	FC (WS / NS)	0.06 (17.23 / 16.55)	0.07 (10.81 / 10.28)	0.05 (16.71 / 16.13)	0.09 (11.71 / 10.94)	0.9 (1.24 / 0.2)	0.06 (11.31 / 10.84)
+ 	Percentile (%)	29.55	37.972	38.933	34.159	3.553	46.015
+protein binding	FC (WS / NS)	0.05 (20.7 / 19.89)	0.06 (11.79 / 11.31)	-0.71 (2 / 3.91)	0.03 (14.21 / 13.9)	-0.02 (-7.54 / -7.63)	0.05 (11.46 / 11.01)
+ 	Percentile (%)	29.597	39.276	87.205	45.333	49.456	47.043
+oxidoreductase activity, acting on CH-OH group of donors	FC (WS / NS)	0.05 (17.23 / 16.55)	0.05 (11.53 / 11.08)	0.04 (17.82 / 17.29)	0.08 (12.53 / 11.84)	0.58 (2.24 / 1.17)	0.05 (11.39 / 10.94)
+ 	Percentile (%)	29.644	39.773	40.33	36.476	6.309	47.018
+transcription regulator activity	FC (WS / NS)	0.05 (14.81 / 14.26)	0.01 (9.9 / 9.79)	0.02 (15.89 / 15.63)	-0.02 (9.96 / 10.14)	-0.3 (-2.31 / -2.61)	0.02 (9.46 / 9.28)
+ 	Percentile (%)	29.972	44.96	44.633	54.794	75.489	52.982
+efflux transmembrane transporter activity	FC (WS / NS)	0.05 (9.92 / 9.55)	-1.54 (0 / 1.91)	-	-	-0.05 (-10.19 / -10.51)	0.1 (6.79 / 6.26)
+ 	Percentile (%)	30.113	86.131	-	-	51.559	38.496
+DNA-binding transcription factor activity	FC (WS / NS)	0.05 (14.78 / 14.26)	0.02 (8.7 / 8.54)	0.02 (14.88 / 14.62)	0.07 (9.29 / 8.83)	-0.22 (-2.79 / -3.08)	0.02 (9.23 / 9.09)
+ 	Percentile (%)	30.394	43.811	44.015	38.476	67.15	53.81
+sirohydrochlorin cobaltochelatase activity	FC (WS / NS)	0.05 (9.42 / 9.08)	0.14 (5.91 / 5.26)	0.14 (5.91 / 5.29)	-	-0.06 (-4.66 / -4.82)	0.15 (6.02 / 5.33)
+ 	Percentile (%)	30.441	33.08	28.725	-	53.082	29.023
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor	FC (WS / NS)	0.05 (17.6 / 17.01)	-0.16 (7.04 / 8.01)	0.03 (14.41 / 14.07)	-0.04 (11.77 / 12.13)	-0.89 (-2.03 / -2.91)	0.06 (10.53 / 10.09)
+ 	Percentile (%)	30.535	59.683	42.184	56.349	92.531	45.865
+aspartate carbamoyltransferase activity	FC (WS / NS)	0.05 (9.99 / 9.64)	-	-0.03 (10.63 / 10.84)	0.13 (6.55 / 5.91)	0.03 (-6.3 / -6.2)	0.03 (6.82 / 6.65)
+ 	Percentile (%)	30.582	-	71.389	28.603	43.002	50.977
+endonuclease activity	FC (WS / NS)	0.05 (14.29 / 13.82)	0.15 (8.1 / 7.2)	-0.09 (12.06 / 12.9)	0.09 (8.86 / 8.24)	-0.24 (-7 / -8.08)	0.06 (8.85 / 8.44)
+ 	Percentile (%)	31.004	25.082	76.036	33.524	68.818	45.138
+dioxygenase activity	FC (WS / NS)	0.04 (12.23 / 11.82)	-0.43 (1.58 / 2.49)	0.18 (10.69 / 9.32)	-	-0.21 (-5.54 / -6.27)	0 (8.38 / 8.4)
+ 	Percentile (%)	31.285	66.874	25.658	-	65.99	58.822
+glutamate synthase activity	FC (WS / NS)	0.04 (4.06 / 3.91)	-2.17 (0 / 3.49)	0.1 (8.68 / 8.04)	-2.95 (0 / 6.71)	-	0.08 (5.64 / 5.3)
+ 	Percentile (%)	31.332	91.955	31.998	99.111	-	40.827
+phosphotransferase activity, nitrogenous group as acceptor	FC (WS / NS)	0.04 (14.75 / 14.29)	0.22 (8.31 / 6.97)	0.05 (13.22 / 12.75)	0.22 (8.68 / 7.31)	-0.08 (-5.23 / -5.47)	0.04 (8.37 / 8.09)
+ 	Percentile (%)	31.848	22.876	38.865	22.444	54.822	48.747
+phosphoenolpyruvate-protein phosphotransferase activity	FC (WS / NS)	0.04 (14.74 / 14.29)	0.26 (7.29 / 5.91)	0.09 (10.36 / 9.65)	0.26 (7.26 / 5.91)	-0.1 (-6.75 / -7.18)	0.28 (7.56 / 6.08)
+ 	Percentile (%)	31.942	21.587	32.685	19.651	57.578	20.551
+purine nucleoside binding	FC (WS / NS)	0.04 (24.26 / 23.54)	0.09 (12.36 / 11.57)	0.01 (22.84 / 22.73)	0 (8.58 / 8.55)	0.22 (5.64 / 4.7)	0 (11.64 / 11.67)
+ 	Percentile (%)	31.989	35.254	50.652	50.857	18.492	58.897
+GTP binding	FC (WS / NS)	0.04 (24.26 / 23.54)	0.13 (9.07 / 8.2)	-0.01 (15.89 / 16.03)	-	0.51 (1.74 / 0.93)	0 (11.64 / 11.67)
+ 	Percentile (%)	32.036	33.359	68.276	-	7.107	58.922
+guanyl nucleotide binding	FC (WS / NS)	0.04 (24.26 / 23.54)	0.08 (11.26 / 10.57)	-0.01 (17.51 / 17.66)	0.04 (8.85 / 8.57)	0.43 (2.42 / 1.54)	0 (11.64 / 11.67)
+ 	Percentile (%)	32.083	35.58	67.91	43.556	8.484	58.847
+purine ribonucleoside binding	FC (WS / NS)	0.04 (24.26 / 23.54)	0.1 (11.56 / 10.75)	0.01 (21.85 / 21.75)	0 (8.58 / 8.55)	0.26 (4.73 / 3.8)	0 (11.64 / 11.67)
+ 	Percentile (%)	32.129	34.617	50.629	50.921	15.083	58.947
+guanyl ribonucleotide binding	FC (WS / NS)	0.04 (24.26 / 23.54)	0.09 (10.7 / 10)	-0.01 (16.92 / 17.06)	0 (8.58 / 8.55)	0.46 (2.12 / 1.27)	0 (11.64 / 11.67)
+ 	Percentile (%)	32.176	35.005	67.956	50.952	7.832	58.872
+nucleoside binding	FC (WS / NS)	0.04 (24.27 / 23.56)	0.08 (13.25 / 12.48)	0.01 (23.87 / 23.77)	0 (8.58 / 8.55)	0.19 (6.6 / 5.66)	0 (11.78 / 11.8)
+ 	Percentile (%)	32.27	35.937	50.835	50.825	21.537	58.546
+ribonucleoside binding	FC (WS / NS)	0.04 (24.27 / 23.56)	0.09 (12.36 / 11.57)	0.01 (22.88 / 22.77)	0 (8.58 / 8.55)	0.22 (5.65 / 4.71)	0 (11.78 / 11.8)
+ 	Percentile (%)	32.317	35.269	50.767	50.889	18.637	58.571
+GTPase activity	FC (WS / NS)	0.04 (23.96 / 23.27)	0.16 (9.08 / 8.01)	-0.02 (14.57 / 14.76)	-	5.74 (0.01 / -0.98)	-0.01 (11.38 / 11.48)
+ 	Percentile (%)	32.411	24.755	69.604	-	0.073	60.451
+malate dehydrogenase (decarboxylating) (NAD+) activity	FC (WS / NS)	0.04 (10.79 / 10.46)	-	-	-	-	0.03 (6.87 / 6.7)
+ 	Percentile (%)	32.458	-	-	-	-	51.078
+structural constituent of ribosome	FC (WS / NS)	0.04 (23.67 / 23.02)	0.01 (12.43 / 12.31)	-0.01 (18.36 / 18.46)	-0.02 (12.29 / 12.47)	0.22 (7.74 / 6.48)	-0.01 (12.52 / 12.62)
+ 	Percentile (%)	33.021	45.054	66.766	54.254	18.129	60.376
+structural molecule activity	FC (WS / NS)	0.04 (23.67 / 23.02)	0.01 (13.44 / 13.32)	-0.01 (19.47 / 19.57)	-0.02 (13.31 / 13.52)	0.21 (8.12 / 6.89)	-0.02 (12.57 / 12.72)
+ 	Percentile (%)	33.068	45.24	66.629	54.476	19.579	61.053
+metal ion binding	FC (WS / NS)	0.04 (24.65 / 23.98)	0 (12.86 / 12.89)	0.01 (22.39 / 22.19)	0.01 (14.48 / 14.38)	0.26 (5.01 / 4.01)	0.01 (13.73 / 13.6)
+ 	Percentile (%)	33.302	52.306	48.02	50	14.358	55.539
+nucleoside-triphosphatase activity	FC (WS / NS)	0.04 (24 / 23.34)	0.05 (12.83 / 12.34)	0.02 (20.49 / 20.27)	0.01 (13.6 / 13.46)	0.24 (2.31 / 1.8)	0 (12.13 / 12.17)
+ 	Percentile (%)	33.349	39.96	47.196	48.635	16.244	59.173
+pyrophosphatase activity	FC (WS / NS)	0.04 (24 / 23.34)	0.05 (13.28 / 12.75)	0.01 (21.23 / 21.03)	0.01 (14.14 / 14.02)	0.23 (3.26 / 2.64)	0 (12.25 / 12.25)
+ 	Percentile (%)	33.396	39.447	47.723	49.365	17.186	58.045
+hydrolase activity, acting on acid anhydrides	FC (WS / NS)	0.04 (24 / 23.34)	0.06 (13.89 / 13.33)	0.01 (22.08 / 21.91)	0.01 (14.83 / 14.74)	0.2 (4.14 / 3.46)	0 (12.25 / 12.25)
+ 	Percentile (%)	33.443	39.261	48.501	50.159	20.74	57.97
+hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides	FC (WS / NS)	0.04 (24 / 23.34)	0.06 (13.62 / 13.07)	0.01 (21.71 / 21.53)	0.01 (14.52 / 14.42)	0.21 (3.76 / 3.11)	0 (12.25 / 12.25)
+ 	Percentile (%)	33.49	39.292	48.318	49.873	19.144	58.07
+translation factor activity, RNA binding	FC (WS / NS)	0.04 (23.67 / 23.03)	-0.02 (12.22 / 12.36)	-0.02 (15.97 / 16.23)	-0.03 (12.03 / 12.35)	0.49 (2.7 / 1.63)	-0.02 (11.45 / 11.63)
+ 	Percentile (%)	33.724	53.316	70.794	55.81	7.542	61.579
+translation regulator activity	FC (WS / NS)	0.04 (23.67 / 23.03)	-0.02 (12.33 / 12.48)	-0.02 (15.97 / 16.23)	-0.03 (12.03 / 12.35)	0.49 (2.7 / 1.63)	-0.02 (11.45 / 11.63)
+ 	Percentile (%)	33.771	53.285	70.817	55.841	7.614	61.604
+translation regulator activity, nucleic acid binding	FC (WS / NS)	0.04 (23.67 / 23.03)	-0.02 (12.27 / 12.42)	-0.02 (15.97 / 16.23)	-0.03 (12.03 / 12.35)	0.49 (2.7 / 1.63)	-0.02 (11.45 / 11.63)
+ 	Percentile (%)	33.818	53.3	70.84	55.873	7.687	61.629
+translation elongation factor activity	FC (WS / NS)	0.04 (23.67 / 23.03)	-0.02 (11.04 / 11.22)	-0.03 (14.31 / 14.6)	-0.05 (10.85 / 11.26)	0.6 (2.32 / 1.2)	-0.02 (11.28 / 11.49)
+ 	Percentile (%)	33.865	53.626	71.664	56.889	6.164	62.08
+cation binding	FC (WS / NS)	0.04 (24.66 / 24)	0 (13.33 / 13.34)	0.01 (23.21 / 23)	0.01 (15.18 / 15.11)	0.23 (5.84 / 4.85)	0.01 (13.8 / 13.73)
+ 	Percentile (%)	33.912	52.058	47.7	50.381	17.766	56.416
+IMP dehydrogenase activity	FC (WS / NS)	0.04 (15.08 / 14.67)	0.26 (6.58 / 5.33)	-0.2 (3.7 / 4.39)	-	-0.69 (-3.84 / -5.57)	-0.03 (7.18 / 7.33)
+ 	Percentile (%)	34.006	21.696	80.407	-	89.92	62.281
+hydrolase activity	FC (WS / NS)	0.04 (24.02 / 23.39)	0.04 (14.57 / 14.17)	0.01 (23.11 / 22.95)	0.01 (15.59 / 15.47)	0.18 (4.88 / 4.19)	0.02 (13.6 / 13.39)
+ 	Percentile (%)	34.146	41.963	48.867	49.27	23.35	53.659
+peptidyl-prolyl cis-trans isomerase activity	FC (WS / NS)	0.04 (15.57 / 15.15)	-0.03 (8.2 / 8.38)	-0.02 (11.63 / 11.82)	-	0.1 (-6.18 / -5.83)	0 (9.14 / 9.17)
+ 	Percentile (%)	34.193	54.061	70.657	-	32.705	59.198
+cis-trans isomerase activity	FC (WS / NS)	0.04 (15.57 / 15.15)	-0.02 (9.21 / 9.38)	-0.02 (12.63 / 12.82)	-	0.08 (-5.55 / -5.31)	0 (9.14 / 9.17)
+ 	Percentile (%)	34.24	53.751	70.176	-	34.88	59.223
+rRNA binding	FC (WS / NS)	0.03 (22.34 / 21.78)	0.02 (9.32 / 9.2)	-0.01 (17 / 17.13)	-0.03 (11.77 / 12.02)	0.35 (4.82 / 3.57)	-0.01 (12.07 / 12.13)
+ 	Percentile (%)	34.334	44.727	67.75	55.206	10.732	59.875
+NAD+ synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	0.03 (4.94 / 4.81)	0.33 (4.64 / 3.49)	0.23 (4.39 / 3.58)	-	-	0.22 (5.09 / 4.23)
+ 	Percentile (%)	34.991	19.304	22.545	-	-	23.634
+NAD+ synthase activity	FC (WS / NS)	0.03 (4.94 / 4.81)	2.5 (4.64 / 0)	0.23 (4.39 / 3.58)	-	-	0.18 (4.91 / 4.23)
+ 	Percentile (%)	35.038	0.217	22.568	-	-	26.917
+ornithine decarboxylase activity	FC (WS / NS)	0.03 (12.31 / 12.01)	-0.29 (6.23 / 7.82)	-0.21 (7.59 / 8.93)	-0.1 (7.46 / 8.06)	0.71 (-7.24 / -4.82)	0.05 (7.51 / 7.25)
+ 	Percentile (%)	35.225	62.851	80.659	62	4.569	48.496
+RNA binding	FC (WS / NS)	0.03 (24.24 / 23.69)	-0.02 (13.11 / 13.33)	-0.01 (19.94 / 20.11)	-0.03 (13.95 / 14.24)	0.23 (6.73 / 5.61)	-0.01 (13.31 / 13.4)
+ 	Percentile (%)	35.46	53.688	67.933	55.111	17.694	60.075
+4-hydroxy-tetrahydrodipicolinate reductase	FC (WS / NS)	0.03 (5.3 / 5.17)	2.49 (4.09 / -0.09)	0.72 (6.93 / 3.81)	0.79 (6.21 / 3.17)	-0.25 (-8.83 / -10.28)	-0.11 (5 / 5.46)
+ 	Percentile (%)	35.647	0.233	13.687	9.016	69.761	69.223
+nucleic acid binding	FC (WS / NS)	0.03 (24.45 / 23.96)	-0.03 (13.7 / 13.97)	0 (22.18 / 22.24)	-0.02 (14.81 / 15.02)	0.2 (7.53 / 6.4)	-0.01 (13.93 / 14.01)
+ 	Percentile (%)	36.398	53.952	65.736	54.19	20.232	60
+oxidoreductase activity, acting on the CH-NH2 group of donors	FC (WS / NS)	0.03 (15.09 / 14.78)	-0.2 (9.42 / 10.99)	-0.12 (12.41 / 13.62)	-0.19 (10.06 / 11.65)	-0.37 (-5.8 / -7.19)	-0.14 (8.79 / 9.81)
+ 	Percentile (%)	36.445	60.724	77.729	68.317	79.188	70.602
+malic enzyme activity	FC (WS / NS)	0.03 (10.84 / 10.61)	0.13 (7.71 / 6.95)	0.02 (10.3 / 10.14)	-1.48 (1 / 4.58)	-0.57 (-2.99 / -3.94)	0.05 (7.65 / 7.34)
+ 	Percentile (%)	36.538	33.328	45.48	88.381	86.512	47.293
+NAD binding	FC (WS / NS)	0.03 (18.11 / 17.75)	0.17 (7.17 / 6.25)	0.02 (14.69 / 14.52)	-0.34 (4.81 / 6.38)	-2.11 (-1.26 / -2.13)	0.01 (10.28 / 10.24)
+ 	Percentile (%)	36.585	24.414	46.944	75.651	95.504	56.541
+catalytic activity	FC (WS / NS)	0.03 (24.56 / 24.11)	0 (16.26 / 16.25)	0 (25.74 / 25.72)	0 (17.39 / 17.44)	0.12 (8.38 / 7.62)	0.01 (15.79 / 15.71)
+ 	Percentile (%)	36.726	46.467	52.575	52.413	30.094	56.366
+glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	0.02 (14.24 / 13.98)	0 (0 / 0)	0.1 (10.19 / 9.46)	0.18 (7.89 / 6.83)	-0.3 (-9.26 / -11.19)	0.17 (8.02 / 7.01)
+ 	Percentile (%)	36.773	50.567	31.975	24.667	75.78	27.293
+tetrahydrodipicolinate N-acetyltransferase activity	FC (WS / NS)	0.02 (8.15 / 7.99)	-	0.41 (4.52 / 3.17)	1.1 (4.52 / 1.58)	-0.57 (-7.17 / -10.19)	1.21 (4.75 / 1.49)
+ 	Percentile (%)	36.82	-	16.823	6.794	86.657	3.935
+fatty acid synthase activity	FC (WS / NS)	0.02 (12.71 / 12.48)	0.03 (9.17 / 8.98)	0.03 (12.26 / 12.02)	-	-0.27 (-3.44 / -3.95)	0 (8.51 / 8.48)
+ 	Percentile (%)	36.961	43.283	43.168	-	72.951	57.093
+adenylate kinase activity	FC (WS / NS)	0.02 (12.85 / 12.63)	0.11 (7.26 / 6.66)	0.06 (6.98 / 6.64)	-	-0.39 (-5.76 / -7.25)	0.09 (7.12 / 6.63)
+ 	Percentile (%)	37.195	34.089	36.21	-	81.001	39.449
+glutamate synthase (NADPH) activity	FC (WS / NS)	0.02 (3.98 / 3.91)	-1.54 (0 / 1.91)	0.12 (6.67 / 6.04)	-2.62 (0 / 5.13)	-	0.11 (5.49 / 5.03)
+ 	Percentile (%)	37.383	85.588	29.458	96.762	-	38.07
+glutamate synthase activity, NAD(P)H as acceptor	FC (WS / NS)	0.02 (3.98 / 3.91)	-1.97 (0 / 2.91)	0.1 (8.26 / 7.63)	-2.83 (0 / 6.13)	-	0.11 (5.49 / 5.03)
+ 	Percentile (%)	37.43	90.759	31.563	98.889	-	38.095
+aminopeptidase activity	FC (WS / NS)	0.02 (15.38 / 15.13)	0 (7.07 / 7.08)	0.06 (12.62 / 12.04)	0.07 (9.18 / 8.72)	-0.45 (-4.83 / -6.23)	0.1 (9.29 / 8.62)
+ 	Percentile (%)	37.477	52.166	36.072	38.317	83.031	38.672
+catalytic activity, acting on a protein	FC (WS / NS)	0.02 (17.72 / 17.44)	-0.01 (11.06 / 11.15)	0.04 (18.29 / 17.78)	0.04 (13.23 / 12.87)	NaN (-0.92 / -1.77)	0.05 (12.12 / 11.71)
+ 	Percentile (%)	37.523	52.819	40.787	44.476	99.782	48.396
+kinase activity	FC (WS / NS)	0.02 (20.33 / 20.05)	0.04 (11.07 / 10.72)	0.03 (18.69 / 18.27)	0.05 (12.08 / 11.61)	0.49 (1.69 / 0.92)	0.03 (11.75 / 11.5)
+ 	Percentile (%)	37.852	41.373	42.275	41.333	7.469	51.955
+peptidase activity	FC (WS / NS)	0.02 (17.33 / 17.08)	0.01 (10.69 / 10.64)	0.04 (18.22 / 17.69)	0.04 (12.73 / 12.36)	NaN (-0.99 / -1.91)	0.07 (11.72 / 11.14)
+ 	Percentile (%)	37.899	45.861	40.513	44.095	97.027	44.261
+GMP reductase activity	FC (WS / NS)	0.02 (8.73 / 8.61)	-	-0.2 (3.7 / 4.39)	-	-0.44 (-4.17 / -5.3)	0.66 (3.58 / 1.91)
+ 	Percentile (%)	37.992	-	80.385	-	82.959	10.201
+oxidoreductase activity, acting on NAD(P)H, nitrogenous group as acceptor	FC (WS / NS)	0.02 (8.73 / 8.61)	-	-0.17 (4.7 / 5.39)	0.77 (5.13 / 2.58)	-0.62 (-3.34 / -4.59)	0.57 (4.52 / 2.71)
+ 	Percentile (%)	38.039	-	79.286	9.143	88.252	11.554
+exopeptidase activity	FC (WS / NS)	0.02 (15.39 / 15.2)	-0.04 (8.21 / 8.46)	0.01 (14.88 / 14.72)	0.03 (10.58 / 10.36)	-0.55 (-3.8 / -5.11)	0.05 (10.06 / 9.65)
+ 	Percentile (%)	38.133	55.055	47.219	45.524	85.859	46.165
+cysteine-type peptidase activity	FC (WS / NS)	0.02 (8.81 / 8.7)	-0.8 (1 / 2.49)	0.51 (8.48 / 5.64)	0.72 (7.64 / 4.25)	-	0.19 (7.51 / 6.48)
+ 	Percentile (%)	38.227	72.837	15.564	9.778	-	26.241
+DNA binding	FC (WS / NS)	0.02 (21.45 / 21.2)	-0.1 (9.25 / 10.02)	0.02 (19.03 / 18.76)	0.01 (11.47 / 11.38)	0.79 (0.95 / 0.13)	-0.01 (12.11 / 12.18)
+ 	Percentile (%)	38.274	57.369	45.846	49.556	3.988	59.85
+CoA carboxylase activity	FC (WS / NS)	0.02 (12.32 / 12.18)	0.05 (8.92 / 8.6)	-0.09 (11.86 / 12.67)	0.13 (6.54 / 5.88)	-0.63 (-2.62 / -3.5)	0 (7.94 / 7.96)
+ 	Percentile (%)	38.321	40.379	75.921	28.508	88.542	59.148
+acetyl-CoA carboxylase activity	FC (WS / NS)	0.02 (12.32 / 12.17)	-0.33 (4.91 / 6.41)	-0.09 (10.73 / 11.5)	-	-0.48 (-3.35 / -4.27)	-0.05 (7.42 / 7.71)
+ 	Percentile (%)	38.368	64.777	76.127	-	83.829	64.16
+sedoheptulose-7-phosphate:D-glyceraldehyde-3-phosphate glyceronetransferase activity	FC (WS / NS)	0.01 (10.86 / 10.73)	-1.1 (1.58 / 4.55)	-0.18 (4.25 / 4.95)	-	-0.24 (-8.52 / -9.85)	-0.2 (4.25 / 5.03)
+ 	Percentile (%)	38.462	81.068	79.675	-	68.6	73.784
+phosphoglycerate kinase activity	FC (WS / NS)	0.01 (16.97 / 16.78)	-	0.16 (8.56 / 7.58)	0.11 (8.53 / 7.83)	NaN (-0.2 / -1.26)	0.14 (8.86 / 7.95)
+ 	Percentile (%)	38.508	-	27.123	31.048	96.447	34.962
+protein methyltransferase activity	FC (WS / NS)	0.01 (8.62 / 8.52)	0.39 (3.58 / 2.49)	0.16 (6.79 / 5.98)	-	-0.04 (-8.21 / -8.42)	0.14 (4.58 / 4.08)
+ 	Percentile (%)	38.555	18.077	26.642	-	50.689	35.063
+arginine binding	FC (WS / NS)	0.01 (7.04 / 6.97)	-0.93 (0 / 0.91)	0.4 (4.7 / 3.32)	0.3 (4.91 / 3.81)	-0.02 (-7.05 / -7.13)	0.37 (4.95 / 3.61)
+ 	Percentile (%)	38.649	77.357	16.938	18.032	49.674	17.268
+binding	FC (WS / NS)	0.01 (26.91 / 26.66)	0.01 (16.5 / 16.33)	0 (27.22 / 27.16)	0 (18.56 / 18.52)	0.14 (10.56 / 9.53)	0 (15.79 / 15.79)
+ 	Percentile (%)	38.79	45.038	51.82	51.238	27.774	57.945
+malate dehydrogenase activity	FC (WS / NS)	0.01 (10.84 / 10.73)	0.05 (8.41 / 8.11)	0.06 (12.72 / 12.14)	0.06 (9.2 / 8.75)	NaN (-0.82 / -2.32)	0.02 (8.14 / 8)
+ 	Percentile (%)	38.837	40.503	36.164	38.698	97.607	53.258
+glucose-1-phosphate adenylyltransferase activity	FC (WS / NS)	0.01 (13.83 / 13.7)	-	-0.12 (6.25 / 6.88)	-0.23 (4.64 / 5.61)	0.12 (-6.08 / -5.67)	-0.11 (6.36 / 6.94)
+ 	Percentile (%)	38.884	-	77.523	69.873	30.384	69.348
+adenylyltransferase activity	FC (WS / NS)	0.01 (13.84 / 13.72)	0 (4.81 / 4.81)	-0.05 (10.22 / 10.6)	0.04 (6.52 / 6.34)	0.15 (-5.08 / -4.67)	-0.03 (7.07 / 7.25)
+ 	Percentile (%)	38.977	52.073	73.175	44.667	26.468	63.033
+lysine-tRNA ligase activity	FC (WS / NS)	0.01 (13.04 / 12.93)	-0.13 (6.58 / 7.27)	-0.12 (6.81 / 7.49)	-0.1 (6.89 / 7.43)	-0.03 (-9.22 / -9.41)	-0.08 (7.2 / 7.68)
+ 	Percentile (%)	39.071	58.534	77.592	61.556	50.181	66.842
+amidase activity	FC (WS / NS)	0.01 (13.56 / 13.45)	-	0.18 (9.07 / 7.88)	0.25 (6.95 / 5.7)	-	0.18 (7.09 / 6.13)
+ 	Percentile (%)	39.165	-	25.681	20.349	-	26.717
+ion binding	FC (WS / NS)	0.01 (26.58 / 26.38)	0.02 (14.51 / 14.35)	0 (25.17 / 25.09)	0.01 (16.62 / 16.55)	0.16 (7.84 / 6.92)	0 (14.95 / 14.9)
+ 	Percentile (%)	39.259	44.712	51.385	50.508	24.656	56.917
+amide binding	FC (WS / NS)	0.01 (11.52 / 11.45)	-0.43 (4.58 / 6.52)	0 (10.9 / 10.9)	-0.09 (8.67 / 9.33)	-0.33 (-6.91 / -8.43)	0.04 (8.2 / 7.96)
+ 	Percentile (%)	39.54	66.563	52.873	61.365	76.795	49.424
+organic cyclic compound binding	FC (WS / NS)	0.01 (26.54 / 26.38)	0.02 (15.63 / 15.39)	0 (26.11 / 26.03)	0 (17.35 / 17.33)	0.15 (9.52 / 8.47)	0 (15.19 / 15.2)
+ 	Percentile (%)	39.587	43.966	51.431	51.333	26.613	58.246
+heterocyclic compound binding	FC (WS / NS)	0.01 (26.54 / 26.38)	0.02 (15.63 / 15.39)	0 (26.11 / 26.03)	0 (17.35 / 17.33)	0.15 (9.52 / 8.47)	0 (15.19 / 15.2)
+ 	Percentile (%)	39.634	43.982	51.453	51.302	26.686	58.271
+hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides	FC (WS / NS)	0.01 (13.6 / 13.52)	0.33 (8.09 / 6.23)	0 (13.53 / 13.54)	0.05 (7.62 / 7.32)	0.24 (-6.2 / -5.4)	0.03 (8.49 / 8.28)
+ 	Percentile (%)	39.681	19.273	65.278	41.778	16.171	51.028
+methionine adenosyltransferase activity	FC (WS / NS)	0.01 (13.03 / 12.97)	-0.05 (2.58 / 2.71)	0.22 (6.52 / 5.46)	0.18 (6.71 / 5.83)	-0.58 (-3.42 / -4.61)	0.2 (6.87 / 5.86)
+ 	Percentile (%)	39.822	55.645	23.346	24.952	86.73	24.812
+active transmembrane transporter activity	FC (WS / NS)	0.01 (14.46 / 14.4)	0.05 (12.63 / 12.19)	0.02 (18.91 / 18.62)	0 (12.68 / 12.68)	-0.39 (0.63 / 1.15)	0.06 (10.21 / 9.76)
+ 	Percentile (%)	40.009	40.457	45.09	51.841	81.363	45.464
+purine ribonucleotide binding	FC (WS / NS)	0 (26.13 / 26.06)	0.07 (12.84 / 12.19)	0.01 (23.16 / 23.01)	0.02 (15.01 / 14.79)	0.22 (6.03 / 5.03)	0.01 (13.88 / 13.74)
+ 	Percentile (%)	40.244	37.63	49.714	47.619	18.202	55.363
+purine ribonucleoside triphosphate binding	FC (WS / NS)	0 (26.13 / 26.06)	0.08 (12.11 / 11.37)	0.01 (22.64 / 22.5)	0.02 (14.42 / 14.2)	0.24 (5.63 / 4.61)	0.01 (13.88 / 13.74)
+ 	Percentile (%)	40.291	35.596	50.08	47.238	16.389	55.388
+purine nucleotide binding	FC (WS / NS)	0 (26.13 / 26.06)	0.07 (13.57 / 12.92)	0.01 (23.93 / 23.79)	0.02 (15.75 / 15.54)	0.2 (6.7 / 5.72)	0.01 (13.89 / 13.74)
+ 	Percentile (%)	40.338	37.987	50.057	47.778	21.32	55.263
+ribonucleotide binding	FC (WS / NS)	0 (26.13 / 26.06)	0.06 (13.24 / 12.62)	0.01 (23.68 / 23.56)	0.01 (15.49 / 15.36)	0.21 (6.49 / 5.49)	0.01 (13.89 / 13.8)
+ 	Percentile (%)	40.385	38.143	50.469	49.143	20.087	55.99
+carbohydrate derivative binding	FC (WS / NS)	0 (26.14 / 26.06)	0.07 (14.19 / 13.52)	0.01 (24.78 / 24.66)	0.01 (15.87 / 15.74)	0.17 (7.52 / 6.55)	0.01 (13.94 / 13.85)
+ 	Percentile (%)	40.432	37.956	50.675	49.492	23.568	56.015
+nucleotide binding	FC (WS / NS)	0 (26.15 / 26.07)	0.06 (14.1 / 13.51)	0.01 (24.66 / 24.54)	0.01 (16.39 / 16.25)	0.18 (7.39 / 6.42)	0.01 (14.22 / 14.13)
+ 	Percentile (%)	40.478	39.059	50.584	49.333	23.205	56.04
+nucleoside phosphate binding	FC (WS / NS)	0 (26.15 / 26.07)	0.06 (14.45 / 13.86)	0.01 (25.13 / 25.01)	0.01 (16.79 / 16.66)	0.17 (7.85 / 6.87)	0.01 (14.22 / 14.13)
+ 	Percentile (%)	40.525	39.152	50.744	49.651	23.93	56.065
+small molecule binding	FC (WS / NS)	0 (26.16 / 26.09)	0.05 (14.85 / 14.26)	0.01 (25.56 / 25.46)	0.01 (16.73 / 16.64)	0.16 (8.29 / 7.33)	0 (14.43 / 14.38)
+ 	Percentile (%)	40.572	39.307	50.95	50.317	24.946	56.992
+anion binding	FC (WS / NS)	0 (26.14 / 26.07)	0.04 (13 / 12.57)	0 (23.62 / 23.62)	0 (15.33 / 15.29)	0.19 (6.37 / 5.46)	0 (14.14 / 14.14)
+ 	Percentile (%)	40.619	41.062	52.895	50.794	21.61	58.17
+arginine-tRNA ligase activity	FC (WS / NS)	0 (13.34 / 13.33)	-1.65 (1 / 5.3)	0.01 (8.64 / 8.55)	-	0.03 (-5.74 / -5.65)	0.01 (7.83 / 7.78)
+ 	Percentile (%)	40.76	87.809	47.494	-	42.712	56.09
+alanine-tRNA ligase activity	FC (WS / NS)	0 (13.94 / 13.93)	0.08 (6.73 / 6.33)	0.04 (6.81 / 6.58)	-	-0.57 (-5.69 / -7.93)	0.03 (7.19 / 7.01)
+ 	Percentile (%)	40.854	36.248	40.261	-	86.439	51.103
+transferase activity, transferring phosphorus-containing groups	FC (WS / NS)	0 (21.54 / 21.52)	0.03 (12.94 / 12.62)	0.03 (20.68 / 20.3)	0.04 (13.77 / 13.4)	0.2 (3.08 / 2.54)	0.03 (12.93 / 12.61)
+ 	Percentile (%)	40.994	42.507	43.671	44.571	20.16	50.827
+ligase activity, forming carbon-nitrogen bonds	FC (WS / NS)	0 (15.26 / 15.26)	-0.02 (9.88 / 10.02)	0.02 (16.53 / 16.25)	0.07 (11.74 / 11.16)	-1.26 (-1.72 / -2.72)	0.08 (10.84 / 10.17)
+ 	Percentile (%)	41.088	53.393	44.266	38.032	94.126	39.925
+mannosyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-1.32 (0 / 1.49)
+ 	Percentile (%)	41.135	-	-	-	-	94.637
+acetyl-CoA:L-glutamate N-acetyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-1.84 (0 / 2.58)	-	-	-
+ 	Percentile (%)	41.182	-	95.377	-	-	-
+carbonate dehydratase activity	FC (WS / NS)	0 (0 / 0)	0.42 (2.32 / 1.49)	0 (3.32 / 3.32)	-	-	-0.31 (2 / 2.71)
+ 	Percentile (%)	41.229	17.41	54.017	-	-	76.892
+catalase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	1.73 (2 / -0.09)
+ 	Percentile (%)	41.276	-	-	-	-	1.679
+glutamate N-acetyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	41.323	-	-	-	-	-
+homoserine O-acetyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-1.89 (0 / 2.71)
+ 	Percentile (%)	41.37	-	-	-	-	98.045
+methylcrotonoyl-CoA carboxylase activity	FC (WS / NS)	0 (0 / 0)	-	-0.19 (7.29 / 8.46)	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	41.417	-	79.995	-	-	4.06
+deoxyribonuclease I activity	FC (WS / NS)	0 (0 / 0)	-	-1 (0 / 1)	-	-	-
+ 	Percentile (%)	41.463	-	88.647	-	-	-
+dolichyl-phosphate beta-D-mannosyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-1.32 (0 / 1.49)
+ 	Percentile (%)	41.51	-	-	-	-	94.812
+pyrroline-5-carboxylate reductase activity	FC (WS / NS)	0 (0 / 0)	0 (0 / 0)	0 (0 / 0)	-	-	-
+ 	Percentile (%)	41.557	46.902	54.635	-	-	-
+N-acetylglucosamine-6-phosphate deacetylase activity	FC (WS / NS)	0 (0 / 0)	-0.93 (0 / 0.91)	0.04 (3.58 / 3.46)	-	-	0.18 (4.32 / 3.71)
+ 	Percentile (%)	41.792	75.369	40.581	-	-	26.967
+cadmium-exporting ATPase activity	FC (WS / NS)	0 (0 / 0)	-	-0.02 (6.09 / 6.19)	-	-	0.38 (5 / 3.61)
+ 	Percentile (%)	41.839	-	70.474	-	-	16.842
+D-lactate dehydrogenase activity	FC (WS / NS)	0 (0 / 0)	-2.51 (0 / 4.71)	-0.95 (3.46 / 7.61)	0.19 (5.78 / 4.95)	-	-
+ 	Percentile (%)	41.886	93.633	88.098	24.444	-	-
+dihydrofolate synthase activity	FC (WS / NS)	0 (0 / 0)	-	-0.74 (1.58 / 3.32)	-	-	-2.17 (0 / 3.49)
+ 	Percentile (%)	41.932	-	87.434	-	-	99.073
+homoserine O-succinyltransferase activity	FC (WS / NS)	0 (0 / 0)	-1.54 (0 / 1.91)	-1.73 (0 / 2.32)	-	-	-0.52 (1.58 / 2.71)
+ 	Percentile (%)	41.979	85.929	95.056	-	-	84.812
+serine O-acetyltransferase activity	FC (WS / NS)	0 (0 / 0)	0.14 (0 / -0.09)	-1.37 (0 / 1.58)	-	-	-
+ 	Percentile (%)	42.026	27.349	92.859	-	-	-
+cadmium ion transmembrane transporter activity	FC (WS / NS)	0 (0 / 0)	-	-0.02 (7.09 / 7.19)	-	-	0.38 (5 / 3.61)
+ 	Percentile (%)	42.167	-	69.787	-	-	16.867
+cadmium-transporting ATPase activity	FC (WS / NS)	0 (0 / 0)	-	-0.02 (6.09 / 6.19)	-	-	0.38 (5 / 3.61)
+ 	Percentile (%)	42.214	-	70.497	-	-	16.892
+teichoic-acid-transporting ATPase activity	FC (WS / NS)	0 (0 / 0)	-	0 (0 / 0)	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	42.261	-	57.908	-	-	32.18
+serine O-acyltransferase activity	FC (WS / NS)	0 (0 / 0)	-1.54 (0 / 1.91)	-1.84 (0 / 2.58)	-	-	-
+ 	Percentile (%)	42.308	87.343	95.903	-	-	-
+O-succinyltransferase activity	FC (WS / NS)	0 (0 / 0)	-0.97 (1 / 2.91)	-1.11 (1 / 3.32)	-	-	-0.52 (1.58 / 2.71)
+ 	Percentile (%)	42.402	79.826	91.76	-	-	84.837
+serine 3-dehydrogenase activity	FC (WS / NS)	0 (0 / 0)	-0.38 (3.32 / 4.61)	-	-	-	-
+ 	Percentile (%)	42.589	65.6	-	-	-	-
+formyl-CoA transferase activity	FC (WS / NS)	0 (0 / 0)	-	0 (0 / 0)	-	-	0.13 (2.81 / 2.49)
+ 	Percentile (%)	42.636	-	60.472	-	-	36.04
+glucose-1-phosphate cytidylyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-1.58 (0 / 2)	-	-	-
+ 	Percentile (%)	42.824	-	94.484	-	-	-
+propanediol dehydratase activity	FC (WS / NS)	0 (0 / 0)	-	-0.24 (7.71 / 9.27)	-0.33 (5.95 / 7.75)	-	-0.66 (4.09 / 7.01)
+ 	Percentile (%)	42.871	-	81.506	74.984	-	87.744
+methione N-acyltransferase activity	FC (WS / NS)	0 (0 / 0)	-	-	-	-	-
+ 	Percentile (%)	42.964	-	-	-	-	-
+proline-tRNA ligase activity	FC (WS / NS)	0 (13.5 / 13.51)	0.07 (6.11 / 5.76)	0.01 (6.04 / 5.98)	-	-	0.04 (6.32 / 6.11)
+ 	Percentile (%)	43.105	36.45	47.379	-	-	49.173
+tetrapyrrole binding	FC (WS / NS)	0 (17.63 / 17.65)	-0.06 (7.19 / 7.56)	0.08 (15.14 / 14.31)	-0.07 (10.2 / 10.78)	2.01 (0.43 / -0.64)	-0.01 (9.53 / 9.6)
+ 	Percentile (%)	43.386	56.329	34.081	58.476	0.58	60.15
+cobalamin binding	FC (WS / NS)	0 (17.62 / 17.65)	-2.27 (0 / 3.81)	0.1 (13.02 / 12.1)	-0.07 (8.93 / 9.4)	NaN (-0.48 / -1.51)	-0.01 (9.31 / 9.38)
+ 	Percentile (%)	43.433	92.685	31.838	57.905	98.55	60.175
+DNA-directed 5'-3' RNA polymerase activity	FC (WS / NS)	0 (19.7 / 19.72)	0.02 (8.7 / 8.57)	0.01 (13.03 / 12.93)	0.02 (9.53 / 9.38)	0.03 (-7.23 / -7.1)	0.04 (9.98 / 9.71)
+ 	Percentile (%)	43.48	44.293	49.439	46.984	42.422	50.1
+5'-3' RNA polymerase activity	FC (WS / NS)	0 (19.7 / 19.72)	0.02 (9.69 / 9.57)	0.01 (14.02 / 13.93)	0.02 (10.53 / 10.38)	0.02 (-6.66 / -6.58)	0.03 (10.01 / 9.75)
+ 	Percentile (%)	43.527	44.603	49.783	47.714	43.582	50.576
+RNA polymerase activity	FC (WS / NS)	0 (19.7 / 19.72)	0.02 (9.69 / 9.57)	0.01 (14.02 / 13.93)	0.02 (11.11 / 10.96)	0.02 (-6.66 / -6.58)	0.03 (10.01 / 9.75)
+ 	Percentile (%)	43.574	44.619	49.805	47.968	43.655	50.602
+glutamine-fructose-6-phosphate transaminase (isomerizing) activity	FC (WS / NS)	0 (14.84 / 14.86)	-0.56 (4.39 / 6.97)	-0.08 (7.88 / 8.36)	-	-0.35 (-4.05 / -4.87)	-0.06 (7.07 / 7.39)
+ 	Percentile (%)	43.621	69.856	75.12	-	78.173	64.712
+L-glutamine aminotransferase activity	FC (WS / NS)	0 (14.84 / 14.86)	-0.49 (5.39 / 7.97)	-0.07 (9.56 / 10.1)	-	-0.38 (-3.72 / -4.55)	-0.06 (7.07 / 7.39)
+ 	Percentile (%)	43.668	67.961	74.96	-	80.638	64.737
+aldehyde-lyase activity	FC (WS / NS)	0 (15.25 / 15.28)	-0.52 (4.32 / 6.62)	0.04 (13.12 / 12.71)	0.07 (9.56 / 9.08)	-0.6 (-3.49 / -4.77)	0.07 (9.65 / 9.18)
+ 	Percentile (%)	43.715	68.613	40.169	37.968	86.947	44.637
+nucleotidyltransferase activity	FC (WS / NS)	0 (19.77 / 19.82)	0.02 (11.03 / 10.88)	0 (16.57 / 16.57)	0.02 (11.32 / 11.16)	-0.06 (-1.58 / -1.6)	0.01 (10.82 / 10.75)
+ 	Percentile (%)	43.762	44.634	65.141	47.937	52.067	56.291
+transferase activity	FC (WS / NS)	0 (21.8 / 21.86)	-0.02 (14.03 / 14.25)	0 (22.55 / 22.49)	0 (14.92 / 14.93)	0.17 (5 / 4.34)	0.01 (13.98 / 13.83)
+ 	Percentile (%)	43.902	53.611	51.774	52.032	23.713	55.238
+2 iron, 2 sulfur cluster binding	FC (WS / NS)	-0.01 (9.93 / 9.96)	-1.49 (1 / 4.61)	0.01 (12.13 / 12.01)	-	-0.02 (-9.81 / -9.9)	0.01 (7.54 / 7.48)
+ 	Percentile (%)	44.371	85.137	47.631	-	49.311	55.915
+adenyl ribonucleotide binding	FC (WS / NS)	-0.01 (25.67 / 25.78)	0.07 (11.71 / 11.08)	0.01 (22.4 / 22.21)	0.02 (14.31 / 14.06)	0.27 (5.23 / 4.18)	0.02 (13.54 / 13.35)
+ 	Percentile (%)	44.418	36.357	48.295	46.159	14.068	54.11
+ATP binding	FC (WS / NS)	-0.01 (25.67 / 25.78)	0.09 (10.71 / 10.01)	0.01 (21.39 / 21.2)	0.03 (13.25 / 12.98)	0.33 (4.53 / 3.4)	0.02 (13.53 / 13.35)
+ 	Percentile (%)	44.465	35.176	48.043	45.556	11.095	54.135
+drug binding	FC (WS / NS)	-0.01 (25.68 / 25.79)	0.03 (10.98 / 10.77)	0.01 (21.41 / 21.24)	0.02 (14.41 / 14.21)	0.32 (4.58 / 3.46)	0.02 (13.73 / 13.55)
+ 	Percentile (%)	44.512	43.438	48.386	47.81	11.675	54.286
+adenyl nucleotide binding	FC (WS / NS)	-0.01 (25.67 / 25.78)	0.07 (12.3 / 11.67)	0.01 (22.99 / 22.8)	0.02 (14.89 / 14.63)	0.24 (5.71 / 4.69)	0.02 (13.55 / 13.35)
+ 	Percentile (%)	44.559	37.599	48.341	46.19	16.534	53.91
+glucosyltransferase activity	FC (WS / NS)	-0.01 (7.3 / 7.34)	-0.08 (5.29 / 5.63)	0.04 (7.12 / 6.91)	0.63 (6.87 / 4.09)	-0.01 (-9.55 / -9.62)	-0.14 (4.86 / 5.46)
+ 	Percentile (%)	44.606	56.748	40.902	10.73	48.368	70.551
+catalytic activity, acting on RNA	FC (WS / NS)	-0.01 (20 / 20.1)	0.01 (12.3 / 12.26)	0 (16.79 / 16.81)	0.02 (13.19 / 12.95)	NaN (-0.91 / -1.71)	0.03 (12.22 / 11.96)
+ 	Percentile (%)	44.653	45.97	65.461	46.095	99.855	51.88
+monosaccharide transmembrane transporter activity	FC (WS / NS)	-0.01 (7.81 / 7.85)	0.08 (9.21 / 8.64)	-0.63 (5.39 / 8.86)	0.09 (7.34 / 6.85)	-	-0.08 (7.01 / 7.46)
+ 	Percentile (%)	44.747	35.673	86.862	34.667	-	66.466
+sugar transmembrane transporter activity	FC (WS / NS)	-0.01 (7.81 / 7.85)	0.08 (9.58 / 9.01)	0.04 (13.41 / 12.98)	0.09 (7.34 / 6.85)	-0.05 (-5.85 / -6.01)	-0.08 (7.01 / 7.46)
+ 	Percentile (%)	44.794	35.875	39.918	34.73	51.051	66.491
+zinc ion binding	FC (WS / NS)	-0.01 (19.87 / 20.01)	-0.01 (10.32 / 10.37)	0.01 (17.36 / 17.25)	0.01 (11.08 / 10.99)	-1.66 (-1.59 / -2.85)	0.04 (11.13 / 10.8)
+ 	Percentile (%)	45.356	52.695	49.508	49.46	95.069	49.449
+phosphotransferase activity, carboxyl group as acceptor	FC (WS / NS)	-0.01 (17.05 / 17.18)	-0.27 (5.32 / 6.61)	0.03 (12.59 / 12.34)	0.03 (9 / 8.83)	1.96 (0.35 / -0.65)	0.02 (9.64 / 9.46)
+ 	Percentile (%)	45.497	62.354	43.488	45.778	0.653	52.957
+triose-phosphate isomerase activity	FC (WS / NS)	-0.01 (14.02 / 14.14)	-0.01 (6.15 / 6.21)	-0.04 (6.44 / 6.63)	-	-0.44 (-3.54 / -4.44)	-0.03 (6.54 / 6.69)
+ 	Percentile (%)	45.685	52.881	72.442	-	82.741	62.657
+fructose-bisphosphate aldolase activity	FC (WS / NS)	-0.01 (15.05 / 15.18)	-0.68 (3 / 5.43)	0.02 (10.18 / 10.01)	-	-0.52 (-6.16 / -8.41)	0.03 (8.67 / 8.48)
+ 	Percentile (%)	45.732	71.471	44.953	-	84.989	51.604
+oxidoreductase activity, acting on the aldehyde or oxo group of donors	FC (WS / NS)	-0.01 (18.04 / 18.2)	-0.18 (7.74 / 8.93)	0 (16.29 / 16.35)	-0.06 (12.77 / 13.31)	NaN (-0.99 / -1.95)	0 (11.07 / 11.11)
+ 	Percentile (%)	46.013	60.196	66.033	57.27	97.897	59.373
+glycine hydroxymethyltransferase activity	FC (WS / NS)	-0.01 (11.87 / 11.99)	-2.2 (0 / 3.61)	0.2 (6.46 / 5.49)	0.24 (6.67 / 5.49)	0.04 (-7.72 / -7.53)	0.26 (6.83 / 5.52)
+ 	Percentile (%)	46.107	92.25	24.605	20.889	41.914	21.504
+hydroxymethyl-, formyl- and related transferase activity	FC (WS / NS)	-0.01 (11.94 / 12.06)	-0.12 (4.52 / 4.99)	-0.07 (10.35 / 10.89)	-0.1 (7.71 / 8.31)	-0.12 (-5.49 / -5.87)	0.02 (7.65 / 7.56)
+ 	Percentile (%)	46.154	58.146	74.617	61.81	58.158	54.787
+transition metal ion binding	FC (WS / NS)	-0.01 (20.29 / 20.51)	-0.02 (11.67 / 11.89)	0 (20.18 / 20.12)	-0.01 (12.15 / 12.25)	0.42 (2.91 / 1.92)	0 (12.02 / 11.99)
+ 	Percentile (%)	46.764	53.875	51.682	53.333	8.629	57.469
+tRNA binding	FC (WS / NS)	-0.01 (19.88 / 20.1)	-0.02 (6.51 / 6.63)	-0.01 (14.69 / 14.79)	-	1.57 (0.92 / -0.35)	-0.01 (10.83 / 10.88)
+ 	Percentile (%)	46.811	53.782	67.521	-	1.233	59.699
+transferase activity, transferring aldehyde or ketonic groups	FC (WS / NS)	-0.02 (11.07 / 11.21)	-0.2 (6.13 / 7.17)	0.02 (10.95 / 10.78)	-0.01 (4.81 / 4.86)	-0.27 (-7.52 / -8.85)	-0.08 (6.95 / 7.44)
+ 	Percentile (%)	47.28	60.677	45.754	53.651	72.589	67.193
+metalloendopeptidase activity	FC (WS / NS)	-0.02 (14.54 / 14.74)	0.31 (6.93 / 5.4)	0.14 (11.58 / 10.39)	0.2 (8.08 / 6.91)	-0.43 (-7.31 / -9.5)	0.14 (8.37 / 7.51)
+ 	Percentile (%)	47.326	19.863	27.97	23.905	82.669	35.013
+phosphate acetyltransferase activity	FC (WS / NS)	-0.02 (12.14 / 12.32)	0.02 (7.56 / 7.42)	0.01 (9.82 / 9.72)	0.05 (7.61 / 7.31)	-0.54 (-3.14 / -4.11)	0.03 (7.76 / 7.61)
+ 	Percentile (%)	47.373	43.702	47.745	41.714	85.497	52.657
+oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor	FC (WS / NS)	-0.02 (14.34 / 14.55)	-0.25 (8.48 / 10.29)	-0.14 (10.85 / 12.07)	-0.23 (9.36 / 11.12)	-0.28 (-7.83 / -9.28)	-0.18 (8.39 / 9.64)
+ 	Percentile (%)	47.42	62.106	78.256	69.683	73.604	73.308
+coenzyme binding	FC (WS / NS)	-0.02 (19.61 / 19.92)	-0.06 (9.78 / 10.24)	-0.02 (18.69 / 19)	-0.05 (12.74 / 13.19)	0.64 (1.12 / 0.36)	-0.02 (12.32 / 12.5)
+ 	Percentile (%)	47.514	56.127	70.954	56.698	5.439	61.378
+ATPase activity	FC (WS / NS)	-0.02 (18.56 / 18.86)	0.05 (11.7 / 11.29)	0.03 (18.62 / 18.25)	0.02 (12.15 / 11.96)	-0.18 (-0.62 / -0.57)	0.01 (10.77 / 10.69)
+ 	Percentile (%)	47.561	40.441	43.03	46.921	63.452	55.84
+pyridoxal phosphate binding	FC (WS / NS)	-0.03 (16.48 / 16.8)	-0.16 (7.59 / 8.57)	-0.07 (14.89 / 15.65)	-	0.67 (-4.5 / -3.2)	0 (9.5 / 9.5)
+ 	Percentile (%)	47.608	59.404	74.662	-	5.149	57.719
+vitamin B6 binding	FC (WS / NS)	-0.03 (16.48 / 16.8)	-0.16 (7.59 / 8.57)	-0.07 (14.89 / 15.65)	-2.32 (0 / 4)	0.67 (-4.5 / -3.2)	0 (9.5 / 9.5)
+ 	Percentile (%)	47.655	59.419	74.685	92.698	5.221	57.744
+carboxylic acid binding	FC (WS / NS)	-0.03 (13.52 / 13.8)	0.01 (7.88 / 7.8)	0 (14.86 / 14.91)	0.02 (10.41 / 10.24)	0.06 (-1.67 / -1.64)	0.05 (9.39 / 9.07)
+ 	Percentile (%)	48.124	45.162	66.102	46.762	38.144	48.521
+organic acid binding	FC (WS / NS)	-0.03 (13.52 / 13.8)	0.01 (7.88 / 7.8)	0 (14.86 / 14.91)	0.02 (11.1 / 10.97)	0.06 (-1.67 / -1.64)	0.05 (9.39 / 9.07)
+ 	Percentile (%)	48.171	45.178	66.125	48.317	38.216	48.546
+hydrolase activity, acting on ester bonds	FC (WS / NS)	-0.03 (16.46 / 16.8)	-0.01 (11.54 / 11.67)	-0.01 (17.54 / 17.73)	0.01 (11.41 / 11.28)	-0.63 (-1.96 / -2.49)	0 (10.71 / 10.67)
+ 	Percentile (%)	48.358	53.098	69.078	48.603	88.47	57.168
+oxidoreductase activity	FC (WS / NS)	-0.03 (19.89 / 20.31)	-0.03 (13.01 / 13.3)	0 (21.05 / 21.09)	-0.03 (14.71 / 15.05)	0.29 (4.94 / 3.84)	0 (13.61 / 13.65)
+ 	Percentile (%)	48.405	54.372	65.644	55.302	13.343	59.098
+DNA helicase activity	FC (WS / NS)	-0.03 (3.9 / 4)	0.1 (6.29 / 5.79)	0.08 (10.47 / 9.81)	0.92 (3.91 / 1.58)	0.02 (-10.9 / -10.77)	-0.09 (5.7 / 6.11)
+ 	Percentile (%)	48.452	34.322	33.326	7.651	43.437	67.293
+carbon-nitrogen ligase activity, with glutamine as amido-N-donor	FC (WS / NS)	-0.03 (14.47 / 14.79)	-0.28 (6.07 / 7.56)	0.05 (12.79 / 12.3)	0.11 (9.53 / 8.77)	-0.44 (-6.13 / -7.95)	0.11 (9.34 / 8.61)
+ 	Percentile (%)	48.499	62.603	37.995	31.46	82.886	37.92
+formate C-acetyltransferase activity	FC (WS / NS)	-0.03 (16.82 / 17.18)	-0.33 (5.78 / 7.5)	-0.11 (8.15 / 8.87)	-0.13 (7.85 / 8.67)	-0.22 (-5.07 / -5.74)	-0.1 (8.21 / 8.85)
+ 	Percentile (%)	48.546	64.684	77.02	65.302	67.078	68.07
+formimidoyltransferase activity	FC (WS / NS)	-0.03 (7.53 / 7.71)	2.27 (3.81 / 0)	-0.22 (7.78 / 9.21)	-0.28 (6.43 / 8.04)	-0.29 (-7.91 / -9.43)	-0.26 (5.52 / 6.79)
+ 	Percentile (%)	48.64	0.777	81.025	72.413	74.402	75.388
+glutamate formimidoyltransferase activity	FC (WS / NS)	-0.03 (7.53 / 7.71)	1.93 (2.81 / 0)	-0.24 (6.78 / 8.21)	-0.32 (5.43 / 7.04)	-0.25 (-8.91 / -10.43)	-0.26 (5.52 / 6.79)
+ 	Percentile (%)	48.687	2.128	81.666	74.508	70.631	75.414
+transferase activity, transferring acyl groups other than amino-acyl groups	FC (WS / NS)	-0.03 (17.49 / 17.9)	-0.12 (11.24 / 12.31)	-0.04 (16.04 / 16.58)	-0.12 (11.44 / 12.51)	0.99 (1.17 / 0.09)	-0.04 (10.67 / 11)
+ 	Percentile (%)	48.734	58.285	72.969	64.381	3.191	63.86
+transferase activity, transferring acyl groups	FC (WS / NS)	-0.03 (17.5 / 17.91)	-0.11 (11.57 / 12.59)	-0.04 (16.9 / 17.41)	-0.1 (11.95 / 12.85)	0.65 (1.99 / 0.91)	-0.04 (10.8 / 11.11)
+ 	Percentile (%)	48.78	57.944	72.831	61.905	5.366	63.509
+C-acetyltransferase activity	FC (WS / NS)	-0.04 (16.82 / 17.28)	-0.51 (6.78 / 10.07)	-0.19 (10.15 / 11.75)	-0.23 (8.85 / 10.53)	-0.28 (-4.07 / -4.74)	-0.1 (8.21 / 8.85)
+ 	Percentile (%)	49.109	68.458	80.156	69.841	74.112	68.12
+C-acyltransferase activity	FC (WS / NS)	-0.04 (16.82 / 17.28)	-0.51 (7.37 / 10.94)	-0.19 (10.96 / 12.64)	-0.24 (9.43 / 11.31)	-0.34 (-3.49 / -4.15)	-0.1 (8.21 / 8.85)
+ 	Percentile (%)	49.156	68.582	79.927	70.286	77.883	68.095
+glycogen (starch) synthase activity	FC (WS / NS)	-0.04 (6.15 / 6.34)	-0.2 (3 / 3.61)	-	-	-0.01 (-11.14 / -11.2)	-0.18 (3.81 / 4.43)
+ 	Percentile (%)	49.203	60.739	-	-	47.281	73.233
+UDP-glycosyltransferase activity	FC (WS / NS)	-0.04 (6.15 / 6.34)	0.08 (6.46 / 6.08)	0.05 (8.29 / 7.95)	-	-0.01 (-11.14 / -11.2)	-0.04 (5.86 / 6.03)
+ 	Percentile (%)	49.25	36.17	37.606	-	47.353	63.459
+starch synthase activity	FC (WS / NS)	-0.04 (6.15 / 6.34)	-0.2 (3 / 3.61)	-0.17 (3.46 / 4)	-	-0.01 (-11.14 / -11.2)	-0.14 (3.81 / 4.3)
+ 	Percentile (%)	49.296	60.755	79.263	-	47.426	70.501
+alpha-1,4-glucan synthase activity	FC (WS / NS)	-0.04 (6.15 / 6.34)	-	-	-	-	-0.14 (3.81 / 4.3)
+ 	Percentile (%)	49.343	-	-	-	-	70.526
+UDP-glucosyltransferase activity	FC (WS / NS)	-0.04 (6.15 / 6.34)	-0.17 (4 / 4.61)	-1 (0 / 1)	-	-0.01 (-11.14 / -11.2)	-0.19 (3.91 / 4.61)
+ 	Percentile (%)	49.39	59.745	90.455	-	47.498	73.484
+vitamin binding	FC (WS / NS)	-0.04 (18.56 / 19.07)	-0.19 (7.65 / 8.84)	-0.03 (16.35 / 16.69)	-0.06 (11.66 / 12.2)	1.14 (0.74 / -0.21)	-0.03 (11.07 / 11.36)
+ 	Percentile (%)	49.484	60.335	71.801	57.46	2.756	63.083
+thioredoxin peroxidase activity	FC (WS / NS)	-0.04 (5.98 / 6.17)	0.56 (6.38 / 3.99)	0.52 (6.43 / 4.17)	-	0.03 (-8.49 / -8.36)	0.56 (6.51 / 4.08)
+ 	Percentile (%)	49.531	15.158	15.45	-	43.075	11.654
+transaminase activity	FC (WS / NS)	-0.04 (15.17 / 15.6)	-0.2 (8.01 / 9.35)	0.01 (13.52 / 13.43)	0.06 (8.92 / 8.53)	-0.42 (-3.46 / -4.29)	0.12 (10.12 / 9.25)
+ 	Percentile (%)	49.578	60.708	49.92	40.095	82.161	36.642
+transferase activity, transferring nitrogenous groups	FC (WS / NS)	-0.04 (15.17 / 15.6)	-0.19 (8.41 / 9.75)	0.01 (14.4 / 14.32)	0.06 (8.92 / 8.53)	-0.45 (-3.24 / -4.07)	0.12 (10.12 / 9.25)
+ 	Percentile (%)	49.625	60.599	50.401	40.127	83.249	36.667
+amino acid binding	FC (WS / NS)	-0.04 (13.11 / 13.48)	0.1 (4.25 / 3.91)	-0.01 (13.52 / 13.64)	0.13 (6.78 / 6.09)	0.05 (-2.58 / -2.53)	0 (8.43 / 8.4)
+ 	Percentile (%)	49.672	34.586	68.231	27.968	40.247	57.268
+ligase activity	FC (WS / NS)	-0.04 (17.22 / 17.72)	0 (12.89 / 12.92)	0 (19.13 / 19.09)	0.03 (13.07 / 12.82)	0.77 (1.38 / 0.4)	0.03 (12.37 / 12.09)
+ 	Percentile (%)	49.812	52.337	51.934	45.841	4.061	51.228
+peptidase activity, acting on L-amino acid peptides	FC (WS / NS)	-0.04 (16.4 / 16.89)	0.02 (10.27 / 10.16)	0.04 (17.43 / 16.95)	0.04 (12.35 / 11.97)	-1.09 (-1.95 / -3.02)	0.04 (11.24 / 10.93)
+ 	Percentile (%)	50.422	44.867	40.856	43.524	93.328	50.05
+6,7-dimethyl-8-ribityllumazine synthase activity	FC (WS / NS)	-0.04 (5.46 / 5.64)	-0.69 (2.81 / 5.15)	-0.77 (2.58 / 5.13)	-0.66 (2.81 / 5)	-	-0.7 (2.81 / 5.19)
+ 	Percentile (%)	51.22	71.704	87.549	81.365	-	88.622
+catalytic activity, acting on a tRNA	FC (WS / NS)	-0.04 (17.38 / 17.92)	0.01 (11.8 / 11.72)	0 (16.49 / 16.53)	0.02 (11.48 / 11.34)	NaN (-0.95 / -1.77)	0.02 (11.65 / 11.47)
+ 	Percentile (%)	51.642	45.551	65.759	48.222	99.927	53.709
+oxidoreductase activity, acting on other nitrogenous compounds as donors	FC (WS / NS)	-0.04 (11.62 / 12)	-0.5 (5.88 / 8.71)	-0.02 (11.62 / 11.77)	-0.11 (7.96 / 8.69)	-0.02 (-7.36 / -7.46)	0.07 (7.94 / 7.53)
+ 	Percentile (%)	51.97	68.178	69.467	63.587	49.891	44.211
+pyruvate dehydrogenase activity	FC (WS / NS)	-0.04 (4.94 / 5.13)	-0.45 (3.32 / 4.91)	0.08 (8.49 / 7.98)	-0.16 (10.06 / 11.39)	-	0.08 (5.78 / 5.4)
+ 	Percentile (%)	52.251	67.371	33.646	67.333	-	39.875
+pyruvate dehydrogenase (acetyl-transferring) activity	FC (WS / NS)	-0.04 (4.94 / 5.13)	-0.56 (2.32 / 3.91)	0.09 (7.49 / 6.98)	-	-	0.08 (5.78 / 5.4)
+ 	Percentile (%)	52.298	69.793	32.753	-	-	39.9
+transporter activity	FC (WS / NS)	-0.05 (19.19 / 19.83)	0.02 (13.87 / 13.62)	0.01 (21.05 / 20.87)	0 (13.89 / 13.94)	-0.19 (2.18 / 2.63)	0.03 (11.41 / 11.19)
+ 	Percentile (%)	52.345	43.578	48.272	52.635	64.54	52.556
+transmembrane transporter activity	FC (WS / NS)	-0.05 (19.19 / 19.83)	0.03 (13.57 / 13.29)	0.02 (20.15 / 19.87)	0 (13.89 / 13.94)	-0.25 (1.54 / 2.02)	0.03 (11.35 / 11.14)
+ 	Percentile (%)	52.392	43.33	46.098	52.667	70.196	52.707
+cofactor binding	FC (WS / NS)	-0.05 (20.3 / 20.99)	-0.05 (10.85 / 11.29)	-0.02 (20.17 / 20.54)	-0.04 (13.99 / 14.46)	0.26 (2.58 / 1.99)	-0.04 (12.89 / 13.27)
+ 	Percentile (%)	52.533	55.723	71.298	56.667	14.503	63.709
+aminoacyl-tRNA ligase activity	FC (WS / NS)	-0.05 (16.5 / 17.08)	0 (11.05 / 11.04)	0 (15.49 / 15.54)	-0.01 (9.07 / 9.16)	-1.34 (-1.56 / -2.41)	0.02 (11.25 / 11.12)
+ 	Percentile (%)	52.58	46.436	66.217	53.492	94.271	54.887
+ligase activity, forming carbon-oxygen bonds	FC (WS / NS)	-0.05 (16.5 / 17.08)	0 (12.05 / 12.04)	0 (17.01 / 17.06)	-0.01 (9.07 / 9.16)	NaN (-0.53 / -1.34)	0.02 (11.25 / 11.12)
+ 	Percentile (%)	52.627	46.451	65.988	53.524	97.825	54.912
+iron ion binding	FC (WS / NS)	-0.05 (18.03 / 18.65)	-0.2 (7.28 / 8.48)	-0.01 (16.53 / 16.7)	-0.03 (10.78 / 11.06)	0.6 (0.86 / 0.23)	-0.04 (10.57 / 10.88)
+ 	Percentile (%)	52.674	60.662	68.917	55.778	6.091	63.684
+proton transmembrane transporter activity	FC (WS / NS)	-0.05 (19.1 / 19.77)	0.05 (10.48 / 10.06)	0.03 (15.38 / 15.02)	-0.01 (10.71 / 10.8)	0.99 (-1.99 / -1.5)	0.04 (9.68 / 9.4)
+ 	Percentile (%)	52.72	39.804	41.978	53.302	3.263	49.624
+cation channel activity	FC (WS / NS)	-0.05 (19.1 / 19.77)	0.07 (9 / 8.54)	0.02 (13.2 / 12.96)	0.02 (9.25 / 9.13)	0.3 (-3.18 / -2.76)	0.03 (9.48 / 9.28)
+ 	Percentile (%)	52.767	37.816	43.946	48.032	12.473	52.281
+proton channel activity	FC (WS / NS)	-0.05 (19.1 / 19.77)	0.07 (9 / 8.52)	0.02 (13.2 / 12.96)	0.02 (9.25 / 9.13)	0.3 (-3.18 / -2.76)	0.03 (9.48 / 9.28)
+ 	Percentile (%)	52.814	36.574	44.106	48.063	12.545	52.18
+proton-transporting ATP synthase activity, rotational mechanism	FC (WS / NS)	-0.05 (19.1 / 19.77)	0.07 (9 / 8.52)	0.02 (13.2 / 12.96)	0.02 (9.25 / 9.13)	0.3 (-3.18 / -2.76)	0.03 (9.48 / 9.28)
+ 	Percentile (%)	52.861	36.59	44.152	48.095	12.763	52.206
+monovalent inorganic cation transmembrane transporter activity	FC (WS / NS)	-0.05 (19.1 / 19.77)	0.04 (10.95 / 10.59)	0.02 (16.05 / 15.81)	-0.02 (11.21 / 11.41)	3.32 (-1.58 / -1.06)	0.02 (9.73 / 9.55)
+ 	Percentile (%)	52.908	41.171	45.571	54.635	0.363	52.832
+ion channel activity	FC (WS / NS)	-0.05 (19.11 / 19.77)	0.05 (9.02 / 8.66)	0.02 (13.21 / 12.97)	0.02 (9.49 / 9.33)	0.3 (-3.18 / -2.76)	0.03 (9.75 / 9.54)
+ 	Percentile (%)	52.955	39.727	44.038	46.476	12.4	51.905
+channel activity	FC (WS / NS)	-0.05 (19.11 / 19.77)	-0.05 (9.13 / 9.49)	0.01 (13.3 / 13.2)	-0.07 (10.69 / 11.23)	0.3 (-3.18 / -2.76)	0.01 (9.79 / 9.7)
+ 	Percentile (%)	53.002	55.537	48.821	57.81	12.618	55.564
+passive transmembrane transporter activity	FC (WS / NS)	-0.05 (19.11 / 19.77)	-0.07 (9.18 / 9.71)	0.01 (13.36 / 13.31)	-0.06 (11.06 / 11.61)	0.3 (-3.18 / -2.76)	0.01 (9.79 / 9.7)
+ 	Percentile (%)	53.049	56.717	51.064	57.778	12.69	55.589
+phosphotransferase activity, phosphate group as acceptor	FC (WS / NS)	-0.05 (19.13 / 19.8)	0.06 (10.39 / 9.95)	0.03 (13.74 / 13.49)	0.04 (9.91 / 9.62)	0.01 (-2.59 / -2.58)	0.05 (10.06 / 9.72)
+ 	Percentile (%)	53.189	39.028	43.717	44.19	45.468	48.596
+inorganic molecular entity transmembrane transporter activity	FC (WS / NS)	-0.05 (19.11 / 19.79)	0.03 (11.65 / 11.38)	0.01 (17.26 / 17.08)	0.01 (12.56 / 12.47)	-2.51 (-0.89 / -0.37)	0.03 (10.45 / 10.23)
+ 	Percentile (%)	53.377	42.802	47.311	49.81	95.794	52.105
+inorganic cation transmembrane transporter activity	FC (WS / NS)	-0.05 (19.11 / 19.79)	0.04 (11.6 / 11.29)	0.02 (17.24 / 17.04)	0 (12.07 / 12.1)	-3.77 (-0.96 / -0.42)	0.02 (10.09 / 9.91)
+ 	Percentile (%)	53.424	42.149	47.059	52.444	96.084	53.133
+ion transmembrane transporter activity	FC (WS / NS)	-0.05 (19.11 / 19.79)	0.03 (12.4 / 12.12)	0.02 (18.66 / 18.44)	0.01 (13.15 / 13.04)	-0.53 (0.17 / 0.69)	0.02 (10.52 / 10.34)
+ 	Percentile (%)	53.471	42.957	46.693	49.429	85.279	53.509
+cation transmembrane transporter activity	FC (WS / NS)	-0.05 (19.11 / 19.79)	0.03 (11.85 / 11.57)	0.02 (17.96 / 17.74)	0 (12.36 / 12.36)	-1.18 (-0.6 / -0.09)	0.02 (10.13 / 10.02)
+ 	Percentile (%)	53.518	42.771	46.67	51.714	93.981	55.063
+acetyltransferase activity	FC (WS / NS)	-0.05 (17.05 / 17.67)	-0.19 (9.6 / 11.08)	-0.08 (13.83 / 14.63)	-0.13 (10.27 / 11.37)	NaN (-0.62 / -1.78)	-0.02 (9.87 / 10)
+ 	Percentile (%)	53.565	60.413	75.189	65.429	97.534	61.153
+molecular transducer activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-0.66 (5.29 / 8.94)	0 (13.95 / 13.9)	-0.13 (5.95 / 6.6)	-0.16 (-5.15 / -5.65)	-0.01 (7.32 / 7.38)
+ 	Percentile (%)	53.705	71.3	51.637	65.206	62.364	60.351
+signaling receptor activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-2.2 (1 / 8.2)	0 (9.68 / 9.67)	-	0.06 (-10.25 / -9.86)	0.01 (6.98 / 6.92)
+ 	Percentile (%)	53.752	92.204	52.461	-	37.636	55.714
+transmembrane signaling receptor activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-3.16 (0 / 7.96)	1 (1 / 0)	-	-	0.01 (6.98 / 6.92)
+ 	Percentile (%)	53.799	99.736	8.972	-	-	55.689
+ionotropic glutamate receptor activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.05 (6.81 / 6.55)
+ 	Percentile (%)	53.846	-	-	-	-	47.669
+extracellular ligand-gated ion channel activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.08 (7.03 / 6.58)
+ 	Percentile (%)	53.893	-	-	-	-	39.799
+glutamate receptor activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.05 (6.81 / 6.55)
+ 	Percentile (%)	53.94	-	-	-	-	47.694
+ligand-gated ion channel activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.08 (7.03 / 6.58)
+ 	Percentile (%)	53.987	-	-	-	-	39.825
+transmitter-gated ion channel activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.05 (6.81 / 6.55)
+ 	Percentile (%)	54.034	-	-	-	-	47.719
+ligand-gated channel activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.08 (7.03 / 6.58)
+ 	Percentile (%)	54.081	-	-	-	-	39.85
+transmitter-gated channel activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-	-	-	-	0.05 (6.81 / 6.55)
+ 	Percentile (%)	54.128	-	-	-	-	47.744
+neurotransmitter receptor activity	FC (WS / NS)	-0.05 (10.13 / 10.52)	-0.93 (0 / 0.91)	-	-	-	0.05 (6.81 / 6.55)
+ 	Percentile (%)	54.174	76.673	-	-	-	47.769
+oxidoreductase activity, acting on CH or CH2 groups, NAD or NADP as acceptor	FC (WS / NS)	-0.05 (11.98 / 12.46)	0.91 (2.58 / 0.91)	0 (9.87 / 9.87)	-0.06 (7.34 / 7.67)	-0.15 (-5.43 / -5.9)	-0.01 (7.86 / 7.89)
+ 	Percentile (%)	54.268	12.269	58.663	57.302	60.551	59.549
+4-hydroxy-3-methylbut-2-en-1-yl diphosphate reductase activity	FC (WS / NS)	-0.05 (11.98 / 12.46)	-	-0.07 (7.08 / 7.48)	-0.09 (7 / 7.54)	-0.13 (-7.32 / -7.93)	-0.05 (7.45 / 7.74)
+ 	Percentile (%)	54.315	-	74.937	61.302	60.044	64.11
+carboxyl- or carbamoyltransferase activity	FC (WS / NS)	-0.05 (12.23 / 12.72)	-0.19 (5.32 / 6.19)	-0.02 (11.86 / 12.08)	-0.03 (8.77 / 8.95)	0.14 (-2.84 / -2.67)	0.01 (9.09 / 9.03)
+ 	Percentile (%)	54.503	60.351	71.252	55.048	27.701	55.965
+metallopeptidase activity	FC (WS / NS)	-0.06 (15.19 / 15.84)	0.07 (7.97 / 7.57)	0.01 (14.39 / 14.23)	0 (10.15 / 10.19)	-0.09 (-5.57 / -5.86)	0.02 (9.69 / 9.55)
+ 	Percentile (%)	55.113	37.941	47.242	52.603	55.547	54.211
+carboxylic ester hydrolase activity	FC (WS / NS)	-0.06 (15.83 / 16.5)	0.06 (8.86 / 8.47)	0 (12.34 / 12.36)	2.41 (4.32 / 0)	-	0.01 (8.79 / 8.72)
+ 	Percentile (%)	55.159	38.904	65.576	1.333	-	55.739
+aminoacyl-tRNA editing activity	FC (WS / NS)	-0.06 (15.82 / 16.5)	0.06 (7.97 / 7.59)	-0.02 (10.13 / 10.32)	-	-	0 (8.65 / 8.68)
+ 	Percentile (%)	55.206	38.593	71.183	-	-	59.348
+protein dimerization activity	FC (WS / NS)	-0.06 (13.68 / 14.31)	-0.1 (7.03 / 7.63)	-1.73 (0 / 2.32)	0.02 (10.2 / 10.02)	-	-0.01 (8.66 / 8.7)
+ 	Percentile (%)	55.488	57.385	95.148	46.317	-	59.574
+nitrate reductase activity	FC (WS / NS)	-0.06 (11.44 / 12)	-1.04 (2 / 5.15)	-0.05 (8.48 / 8.81)	0.09 (6.38 / 5.91)	0 (-8.81 / -8.78)	0.09 (6.61 / 6.15)
+ 	Percentile (%)	56.051	80.696	73.358	33.333	45.758	39.323
+transferase activity, transferring one-carbon groups	FC (WS / NS)	-0.06 (14.01 / 14.69)	0.14 (9.79 / 8.81)	0 (16.41 / 16.4)	0.04 (10.59 / 10.31)	-0.12 (-1.48 / -1.53)	0.03 (10.48 / 10.24)
+ 	Percentile (%)	56.098	33.157	52.667	44.635	58.521	51.178
+racemase and epimerase activity	FC (WS / NS)	-0.07 (11.09 / 11.7)	0.21 (9.55 / 8.1)	-0.03 (12.91 / 13.22)	0.07 (9.25 / 8.75)	-0.14 (-5.52 / -5.98)	0.12 (8.68 / 7.93)
+ 	Percentile (%)	56.426	23.342	72.03	37.079	60.334	36.742
+racemase and epimerase activity, acting on carbohydrates and derivatives	FC (WS / NS)	-0.07 (11.09 / 11.7)	0.22 (7.29 / 6.13)	0 (11.21 / 11.19)	1.37 (4.17 / 1)	-0.13 (-5.83 / -6.27)	0.09 (7.73 / 7.22)
+ 	Percentile (%)	56.707	23.264	52.369	5.524	58.811	39.524
+ornithine carbamoyltransferase activity	FC (WS / NS)	-0.07 (11.88 / 12.54)	-0.22 (4.32 / 5.19)	-0.06 (7.81 / 8.2)	-	0.23 (-5.39 / -4.75)	-0.03 (8.02 / 8.22)
+ 	Percentile (%)	56.754	61.143	74.411	-	17.984	62.957
+hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds	FC (WS / NS)	-0.07 (14.69 / 15.52)	0.08 (8.98 / 8.43)	-0.01 (15.72 / 15.8)	-0.08 (9.52 / 10.12)	0.5 (-2.64 / -2.16)	0.02 (9.68 / 9.54)
+ 	Percentile (%)	56.848	35.782	66.606	59.206	7.179	54.035
+methionine-tRNA ligase activity	FC (WS / NS)	-0.08 (13.32 / 14.1)	0.11 (6.36 / 5.84)	0.03 (8.41 / 8.23)	-	-0.42 (-5.69 / -7.29)	0.04 (6.66 / 6.43)
+ 	Percentile (%)	56.895	34.167	42.802	-	82.379	48.797
+acyl carrier activity	FC (WS / NS)	-0.08 (2.4 / 2.58)	-0.51 (3.58 / 5.52)	-0.06 (5.73 / 6.02)	-	-0.13 (-7.2 / -7.79)	-0.01 (6 / 6.03)
+ 	Percentile (%)	56.989	68.473	74.296	-	59.536	59.774
+ACP phosphopantetheine attachment site binding	FC (WS / NS)	-0.08 (2.4 / 2.58)	-0.43 (4.58 / 6.52)	-0.05 (6.73 / 7.02)	-	-0.16 (-6.2 / -6.79)	-0.01 (6 / 6.03)
+ 	Percentile (%)	57.036	66.548	73.838	-	61.566	59.799
+prosthetic group binding	FC (WS / NS)	-0.08 (2.4 / 2.58)	-0.39 (5.17 / 7.11)	-0.05 (7.31 / 7.61)	-	-0.17 (-5.61 / -6.21)	-0.01 (6 / 6.03)
+ 	Percentile (%)	57.083	65.926	73.472	-	63.162	59.825
+molecular carrier activity	FC (WS / NS)	-0.08 (2.4 / 2.58)	-0.46 (3.91 / 5.74)	-0.03 (5.95 / 6.11)	-	-0.13 (-7.2 / -7.79)	0.03 (6.29 / 6.13)
+ 	Percentile (%)	57.129	67.557	72.076	-	59.608	51.378
+protein disulfide oxidoreductase activity	FC (WS / NS)	-0.08 (11.26 / 11.97)	-0.18 (2.58 / 3.08)	-0.01 (10.85 / 10.9)	-	0.25 (-6.8 / -5.87)	0.02 (8.23 / 8.09)
+ 	Percentile (%)	57.505	60.211	66.56	-	15.301	53.158
+disulfide oxidoreductase activity	FC (WS / NS)	-0.08 (11.38 / 12.11)	0.29 (7.77 / 6.15)	0.03 (12.67 / 12.39)	-0.02 (8.54 / 8.66)	0.31 (-5.8 / -4.87)	0.03 (8.6 / 8.41)
+ 	Percentile (%)	57.739	20.686	42.504	54.159	11.965	51.83
+endopeptidase activity	FC (WS / NS)	-0.09 (14.87 / 15.85)	0.11 (8.47 / 7.79)	0.08 (14.26 / 13.47)	0.11 (9.97 / 9.16)	-0.47 (-5.27 / -6.91)	0.08 (9.71 / 9.11)
+ 	Percentile (%)	57.833	34.105	34.012	31.111	83.611	39.975
+flavin adenine dinucleotide binding	FC (WS / NS)	-0.09 (17.14 / 18.3)	-0.39 (4.95 / 6.82)	-0.06 (14.47 / 15.16)	-0.12 (9.48 / 10.42)	-0.42 (-4.34 / -5.45)	-0.09 (9.69 / 10.42)
+ 	Percentile (%)	57.88	66.051	74.388	64.794	81.871	67.92
+UDP-glucose 4-epimerase activity	FC (WS / NS)	-0.09 (10.51 / 11.28)	1 (5.46 / 2.23)	-0.08 (7.02 / 7.48)	-	-	0.13 (6.54 / 5.91)
+ 	Percentile (%)	58.068	7.92	75.326	-	-	35.789
+glycine-tRNA ligase activity	FC (WS / NS)	-0.09 (11.23 / 12.06)	-0.07 (6.3 / 6.65)	-0.06 (8.62 / 8.99)	-	-0.01 (-9.65 / -9.68)	-0.05 (7.24 / 7.56)
+ 	Percentile (%)	58.114	56.437	73.999	-	46.918	64.662
+gated channel activity	FC (WS / NS)	-0.1 (10.13 / 10.91)	-0.48 (3.58 / 5.4)	0.54 (6 / 3.81)	-	-	0.04 (7.16 / 6.92)
+ 	Percentile (%)	58.724	67.883	15.129	-	-	48.822
+carbon-carbon lyase activity	FC (WS / NS)	-0.1 (15.8 / 16.98)	-0.1 (9.92 / 10.68)	-0.03 (16.65 / 17.02)	-0.08 (11.75 / 12.49)	0.25 (0.55 / 0.3)	-0.09 (10.72 / 11.49)
+ 	Percentile (%)	58.959	57.229	71.962	59.365	15.373	67.769
+methyltransferase activity	FC (WS / NS)	-0.1 (12.92 / 13.92)	0.22 (9.39 / 7.92)	0.03 (14.94 / 14.58)	0.14 (9.81 / 8.83)	-0.05 (-4.73 / -4.86)	0.06 (9.41 / 8.96)
+ 	Percentile (%)	59.006	22.985	41.863	27.651	51.269	44.712
+sulfur compound binding	FC (WS / NS)	-0.11 (16.48 / 17.81)	-0.45 (4.81 / 6.92)	-0.08 (13.76 / 14.58)	-0.08 (10.41 / 11.04)	-0.38 (-5.16 / -6.41)	-0.07 (9.63 / 10.15)
+ 	Percentile (%)	59.428	67.293	75.28	59.048	79.913	65.915
+peroxidase activity	FC (WS / NS)	-0.11 (10.67 / 11.57)	0.35 (7.4 / 5.61)	0.07 (9.75 / 9.27)	-1.29 (1 / 3.91)	0.37 (-4.97 / -4.08)	0.09 (8.68 / 8.07)
+ 	Percentile (%)	59.475	18.838	35.248	87.333	10.442	39.023
+hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amidines	FC (WS / NS)	-0.11 (13.71 / 14.84)	-0.29 (4.32 / 5.52)	-0.04 (10.41 / 10.71)	-2.37 (0 / 4.17)	0.3 (-3.23 / -2.81)	0.03 (7.77 / 7.56)
+ 	Percentile (%)	59.662	62.991	72.648	93.206	12.11	50.401
+arginine deiminase activity	FC (WS / NS)	-0.11 (13.71 / 14.84)	-0.27 (3 / 3.81)	0.02 (7.5 / 7.38)	-	0.26 (-3.55 / -3.13)	0.03 (7.74 / 7.55)
+ 	Percentile (%)	59.709	62.308	45.777	-	14.576	51.003
+peptidoglycan muralytic activity	FC (WS / NS)	-0.11 (8.32 / 9.04)	-1.97 (0 / 2.91)	-0.14 (7.23 / 8.08)	-0.14 (5.17 / 5.78)	0.23 (-6.52 / -5.72)	-0.01 (6.39 / 6.44)
+ 	Percentile (%)	59.756	90.822	78.233	65.651	17.621	60.326
+serine-tRNA ligase activity	FC (WS / NS)	-0.11 (11.36 / 12.32)	0.02 (6.7 / 6.62)	0 (6.77 / 6.74)	-	-0.13 (-5.32 / -5.73)	0.01 (7.17 / 7.1)
+ 	Percentile (%)	59.803	44.805	51.133	-	59.463	55.439
+thiamine pyrophosphate binding	FC (WS / NS)	-0.11 (16.44 / 17.81)	-1.42 (1 / 4.36)	-0.07 (12.29 / 12.99)	-0.13 (9.04 / 9.97)	-0.34 (-5.8 / -7.1)	-0.13 (9.12 / 10.04)
+ 	Percentile (%)	59.897	84.936	75.097	65.238	78.028	70.1
+CTP synthase activity	FC (WS / NS)	-0.11 (10.07 / 10.94)	0.36 (5.91 / 4.36)	0.27 (5.88 / 4.7)	0.34 (6.09 / 4.58)	-	0.28 (6.23 / 4.95)
+ 	Percentile (%)	59.991	18.543	20.966	16.19	-	20.326
+1,4-dihydroxy-2-naphthoyl-CoA synthase activity	FC (WS / NS)	-0.11 (4.72 / 5.17)	0.08 (3.46 / 3.23)	0.14 (3.58 / 3.17)	-	-	0.17 (3.91 / 3.36)
+ 	Percentile (%)	60.038	36.108	28.542	-	-	27.368
+tripeptidase activity	FC (WS / NS)	-0.11 (10.18 / 11.07)	0.13 (7 / 6.3)	0.01 (7.49 / 7.41)	0.13 (6.95 / 6.25)	-	0.11 (6.21 / 5.69)
+ 	Percentile (%)	60.366	33.313	47.333	28.095	-	37.619
+tripeptide aminopeptidase activity	FC (WS / NS)	-0.11 (10.18 / 11.07)	0.15 (6 / 5.3)	0.02 (6.49 / 6.41)	0.15 (5.95 / 5.25)	-	0.11 (6.21 / 5.69)
+ 	Percentile (%)	60.413	24.895	46.83	26.032	-	37.644
+tetrahydrofolylpolyglutamate synthase activity	FC (WS / NS)	-0.11 (7.06 / 7.71)	1.51 (1.58 / -0.09)	0.02 (7.49 / 7.37)	-	-	0.08 (5.13 / 4.81)
+ 	Percentile (%)	60.507	4.97	45.159	-	-	41.153
+transferase activity, transferring alkyl or aryl (other than methyl) groups	FC (WS / NS)	-0.11 (13.24 / 14.4)	0.01 (7.3 / 7.22)	0 (13.26 / 13.21)	0 (8.59 / 8.61)	-0.5 (-3.01 / -3.84)	-0.02 (9.19 / 9.3)
+ 	Percentile (%)	60.6	44.914	51.316	52.381	84.554	61.028
+iron-sulfur cluster binding	FC (WS / NS)	-0.12 (18.14 / 19.73)	0.1 (8.7 / 8.08)	-0.03 (17.07 / 17.47)	-0.07 (11.66 / 12.33)	-0.39 (-2.67 / -3.18)	-0.1 (10.65 / 11.52)
+ 	Percentile (%)	60.788	34.695	72.007	58.73	80.783	68.571
+metal cluster binding	FC (WS / NS)	-0.12 (18.14 / 19.73)	0.1 (9.26 / 8.57)	-0.03 (17.89 / 18.35)	-0.07 (12.26 / 12.92)	-0.75 (-1.78 / -2.32)	-0.1 (10.65 / 11.52)
+ 	Percentile (%)	60.835	34.415	72.374	58.159	91.08	68.596
+amidine-lyase activity	FC (WS / NS)	-0.12 (12.07 / 13.17)	0.55 (6.67 / 4.23)	0.1 (8.23 / 7.61)	0.16 (7.53 / 6.61)	-0.3 (-7.9 / -9.47)	0.14 (7.3 / 6.52)
+ 	Percentile (%)	60.882	15.189	31.678	25.524	75.272	34.812
+acid-amino acid ligase activity	FC (WS / NS)	-0.12 (10.6 / 11.57)	0.01 (8.19 / 8.15)	0.04 (11.77 / 11.42)	0.12 (8.91 / 8.11)	-0.18 (-6.14 / -6.82)	0.07 (8.46 / 8)
+ 	Percentile (%)	60.929	45.846	40.421	29.365	63.524	41.88
+4 iron, 4 sulfur cluster binding	FC (WS / NS)	-0.12 (18.1 / 19.72)	0.15 (7.61 / 6.78)	0.02 (14.73 / 14.55)	-0.08 (10.61 / 11.3)	-0.07 (-5.84 / -6.08)	-0.13 (9.97 / 11)
+ 	Percentile (%)	60.976	25.144	46.715	59.683	53.517	70.125
+(R,R)-butanediol dehydrogenase activity	FC (WS / NS)	-0.12 (6.68 / 7.34)	-0.02 (3.17 / 3.23)	-	-	-	0.48 (6.41 / 4.3)
+ 	Percentile (%)	61.023	53.533	-	-	-	13.534
+nucleobase-containing compound kinase activity	FC (WS / NS)	-0.12 (13.07 / 14.28)	0.06 (9.76 / 9.29)	0.05 (12.72 / 12.3)	0.09 (8.3 / 7.75)	-0.55 (-4.17 / -5.66)	0.07 (8.29 / 7.87)
+ 	Percentile (%)	61.069	38.096	39.597	34.762	86.004	44.236
+nucleoside monophosphate kinase activity	FC (WS / NS)	-0.12 (13.07 / 14.28)	0 (7.94 / 7.91)	0.01 (8.13 / 8.09)	0.87 (5.55 / 2.58)	-0.39 (-5.76 / -7.25)	0.08 (8.04 / 7.57)
+ 	Percentile (%)	61.116	46.032	50.607	8.222	81.218	41.128
+transketolase activity	FC (WS / NS)	-0.12 (8.18 / 8.98)	-0.03 (5 / 5.11)	-0.13 (7.79 / 8.61)	-	-	-0.14 (6.11 / 6.86)
+ 	Percentile (%)	61.163	54.154	77.935	-	-	70.727
+N-acetylmuramoyl-L-alanine amidase activity	FC (WS / NS)	-0.12 (8.22 / 9.04)	-	-0.14 (7.23 / 8.05)	-0.46 (3.81 / 5.61)	0.23 (-6.52 / -5.72)	-0.21 (5.09 / 6.03)
+ 	Percentile (%)	61.21	-	78.141	78.286	17.549	74.11
+valine-tRNA ligase activity	FC (WS / NS)	-0.12 (12.23 / 13.43)	0.19 (6.25 / 5.33)	0.17 (6.39 / 5.55)	0.12 (6.75 / 6.15)	-	0.09 (6.98 / 6.49)
+ 	Percentile (%)	61.304	23.746	25.956	30.032	-	39.273
+N6-(1,2-dicarboxyethyl)AMP AMP-lyase (fumarate-forming) activity	FC (WS / NS)	-0.13 (11.07 / 12.17)	0.85 (5.67 / 2.71)	0.12 (5.75 / 5.21)	0.21 (5.88 / 4.95)	-0.24 (-9.49 / -11.06)	0.16 (6.19 / 5.43)
+ 	Percentile (%)	61.492	12.626	29.618	23.016	69.253	27.87
+(S)-2-(5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido)succinate AMP-lyase (fumarate-forming) activity	FC (WS / NS)	-0.13 (11.07 / 12.17)	-0.93 (0 / 0.91)	0.12 (5.75 / 5.21)	0.21 (5.88 / 4.95)	-0.24 (-9.49 / -11.06)	0.16 (6.19 / 5.43)
+ 	Percentile (%)	61.538	78.817	29.686	23.079	69.543	27.895
+glutaconyl-CoA decarboxylase activity	FC (WS / NS)	-0.13 (8.13 / 8.98)	-	0.11 (2.58 / 2.32)	-	-0.15 (-9.2 / -10.11)	-0.31 (6.61 / 8.47)
+ 	Percentile (%)	61.914	-	30.762	-	61.059	77.093
+ferredoxin hydrogenase activity	FC (WS / NS)	-0.13 (10.74 / 11.85)	0 (0 / 0)	0.17 (9.07 / 7.98)	0.17 (7.09 / 6.19)	-0.13 (-7.76 / -8.39)	0.18 (7.15 / 6.19)
+ 	Percentile (%)	62.101	47.632	26.368	25.365	59.246	26.742
+oxidoreductase activity, acting on hydrogen as donor, iron-sulfur protein as acceptor	FC (WS / NS)	-0.13 (10.74 / 11.85)	1 (1 / 0)	0.15 (10.07 / 8.98)	0.15 (8.09 / 7.19)	-0.15 (-6.76 / -7.39)	0.18 (7.15 / 6.19)
+ 	Percentile (%)	62.148	9.318	27.626	26.286	60.914	26.767
+electron transfer activity	FC (WS / NS)	-0.13 (17.07 / 18.81)	-0.24 (6.81 / 8.2)	-0.09 (15.96 / 17.01)	-0.15 (9.41 / 10.57)	0.08 (-2.24 / -2.18)	-0.13 (9.62 / 10.64)
+ 	Percentile (%)	62.523	61.795	75.715	66.667	35.098	70.226
+oxidoreductase activity, acting on a sulfur group of donors	FC (WS / NS)	-0.13 (12.63 / 13.94)	0.18 (9.13 / 7.94)	0.04 (14 / 13.58)	0.02 (10.35 / 10.23)	0.38 (-4.91 / -4.01)	0.08 (9.53 / 8.94)
+ 	Percentile (%)	62.711	24.243	40.375	48.254	10.08	40
+oxidoreductase activity, acting on hydrogen as donor	FC (WS / NS)	-0.13 (10.74 / 11.89)	1.37 (1.58 / 0)	0.12 (11.05 / 10.08)	0.14 (8.67 / 7.77)	-0.06 (-5.99 / -6.19)	0.13 (7.71 / 6.97)
+ 	Percentile (%)	62.899	5.7	29.595	27.175	51.849	35.739
+ribonucleoprotein complex binding	FC (WS / NS)	-0.13 (9.1 / 10.09)	0 (10.1 / 10.08)	0.02 (10.15 / 10)	-0.17 (6.41 / 7.35)	-	-0.03 (7.45 / 7.63)
+ 	Percentile (%)	62.946	46.312	45.457	67.683	-	62.807
+protein-containing complex binding	FC (WS / NS)	-0.13 (9.1 / 10.09)	0 (10.12 / 10.1)	0.02 (10.17 / 10)	0.06 (11.14 / 10.62)	-	-0.03 (7.59 / 7.75)
+ 	Percentile (%)	62.992	46.234	44.907	38.952	-	62.155
+nicotinate-nucleotide diphosphorylase (carboxylating) activity	FC (WS / NS)	-0.14 (7.38 / 8.2)	-	0.08 (5.32 / 5)	-	-	0.01 (5.64 / 5.58)
+ 	Percentile (%)	63.039	-	34.173	-	-	55.188
+nicotinate phosphoribosyltransferase activity	FC (WS / NS)	-0.14 (7.38 / 8.2)	0.84 (5.25 / 2.49)	0.08 (5.32 / 5)	-	-	0.12 (5.61 / 5.08)
+ 	Percentile (%)	63.086	12.673	34.195	-	-	36.165
+metal ion transmembrane transporter activity	FC (WS / NS)	-0.14 (9.24 / 10.3)	-0.27 (5.46 / 6.79)	-0.03 (13.22 / 13.55)	-0.07 (8.35 / 8.82)	-	0 (7.61 / 7.62)
+ 	Percentile (%)	63.321	62.432	72.282	58.254	-	58.296
+[acyl-carrier-protein] S-malonyltransferase activity	FC (WS / NS)	-0.14 (9.8 / 10.91)	0.3 (6.23 / 4.86)	0.01 (6.55 / 6.52)	-	0.38 (-8.95 / -7.1)	0.02 (6.67 / 6.55)
+ 	Percentile (%)	63.368	20.422	50.881	-	9.862	53.183
+S-malonyltransferase activity	FC (WS / NS)	-0.14 (9.8 / 10.91)	0.26 (7.23 / 5.86)	0.01 (7.55 / 7.52)	-	0.4 (-8.63 / -6.78)	0.02 (6.67 / 6.55)
+ 	Percentile (%)	63.415	21.634	51.11	-	8.92	53.208
+malonyltransferase activity	FC (WS / NS)	-0.14 (9.8 / 10.91)	0.24 (7.81 / 6.44)	0 (8.14 / 8.11)	-	0.42 (-8.36 / -6.51)	0.02 (6.67 / 6.55)
+ 	Percentile (%)	63.462	22.348	51.225	-	8.774	53.233
+beta-N-acetylhexosaminidase activity	FC (WS / NS)	-0.14 (0.81 / 1)	-	1.08 (6.58 / 2.58)	-	-	1.03 (5.58 / 2.23)
+ 	Percentile (%)	63.508	-	8.125	-	-	7.293
+ubiquitin-like modifier activating enzyme activity	FC (WS / NS)	-0.14 (0.81 / 1)	-	-	-	-	-
+ 	Percentile (%)	63.555	-	-	-	-	-
+hexosaminidase activity	FC (WS / NS)	-0.14 (0.81 / 1)	-	0.9 (7.58 / 3.58)	1.84 (6.17 / 1)	-	1.03 (5.58 / 2.23)
+ 	Percentile (%)	63.602	-	12.451	4.571	-	7.318
+cobyrinic acid a,c-diamide synthase activity	FC (WS / NS)	-0.14 (0.81 / 1)	-	-0.26 (2 / 2.58)	-	-	0.03 (3 / 2.91)
+ 	Percentile (%)	63.649	-	81.987	-	-	50.276
+polyribonucleotide nucleotidyltransferase activity	FC (WS / NS)	-0.14 (13.3 / 14.77)	-0.14 (6.41 / 7.15)	-0.15 (6.49 / 7.34)	-0.12 (6.58 / 7.25)	0.01 (-9.77 / -9.72)	-0.14 (6.74 / 7.53)
+ 	Percentile (%)	63.696	58.876	78.759	64.571	44.453	70.476
+lipid binding	FC (WS / NS)	-0.15 (11.07 / 12.39)	-0.04 (7.17 / 7.39)	0.02 (10.71 / 10.57)	0.08 (7.5 / 7.07)	-0.05 (-10.19 / -10.51)	0.15 (7.15 / 6.36)
+ 	Percentile (%)	63.743	54.993	46.532	36.54	51.487	30
+diaminopropionate ammonia-lyase activity	FC (WS / NS)	-0.15 (7.14 / 8.02)	-0.11 (4.32 / 4.76)	-0.1 (5.21 / 5.64)	-	0.1 (-8.38 / -7.91)	-0.07 (5.13 / 5.43)
+ 	Percentile (%)	63.79	58.052	76.402	-	33.067	65.789
+aspartate-tRNA ligase activity	FC (WS / NS)	-0.15 (13.1 / 14.67)	0.03 (6.66 / 6.48)	-0.08 (7.92 / 8.4)	-	-	0.03 (7.09 / 6.91)
+ 	Percentile (%)	63.977	42.274	75.212	-	-	50.877
+formate-tetrahydrofolate ligase activity	FC (WS / NS)	-0.16 (7.94 / 8.98)	-0.39 (2.32 / 3.36)	-0.26 (6.73 / 8.28)	-0.31 (5.64 / 7.22)	-	-0.3 (5.81 / 7.41)
+ 	Percentile (%)	64.071	65.989	82.078	73.81	-	76.617
+oxidoreductase activity, acting on NAD(P)H	FC (WS / NS)	-0.16 (12.11 / 13.64)	-0.23 (7.73 / 9.24)	0.04 (13.99 / 13.61)	-0.02 (9.03 / 9.21)	-0.93 (-2.44 / -3.76)	0.07 (8.97 / 8.53)
+ 	Percentile (%)	64.118	61.609	41.016	54.889	92.676	44.586
+ribosome binding	FC (WS / NS)	-0.16 (8.9 / 10.09)	-0.01 (8.91 / 8.99)	-0.01 (8.14 / 8.2)	-	-	-0.06 (6.82 / 7.13)
+ 	Percentile (%)	64.493	52.865	67.613	-	-	64.762
+carboxy-lyase activity	FC (WS / NS)	-0.16 (14.13 / 15.96)	-0.11 (9.15 / 9.97)	-0.04 (14.33 / 14.75)	-0.11 (10.38 / 11.25)	-0.12 (-0.55 / -0.51)	-0.13 (9.67 / 10.7)
+ 	Percentile (%)	64.54	57.975	72.763	63.016	58.448	70.301
+oxidoreductase activity, acting on the CH-CH group of donors	FC (WS / NS)	-0.17 (12.8 / 14.49)	0.06 (9.08 / 8.68)	-0.04 (14.88 / 15.29)	-0.21 (9.72 / 11.38)	-1.69 (-1.51 / -2.64)	-0.17 (9.32 / 10.6)
+ 	Percentile (%)	64.634	38.841	72.534	69.048	95.141	72.105
+oxidoreductase activity, acting on a sulfur group of donors, NAD(P) as acceptor	FC (WS / NS)	-0.17 (11.93 / 13.52)	-0.03 (6.09 / 6.23)	0.13 (10.86 / 9.85)	0.02 (8.76 / 8.6)	0.05 (-10.37 / -10.07)	0.16 (8.57 / 7.56)
+ 	Percentile (%)	64.681	54.248	29.252	46.063	40.319	27.945
+oxidoreductase activity, acting on peroxide as acceptor	FC (WS / NS)	-0.17 (11.03 / 12.54)	0.32 (8.4 / 6.52)	0.05 (10.99 / 10.55)	-1.29 (1 / 3.91)	0.63 (-3.75 / -2.78)	0.04 (8.92 / 8.66)
+ 	Percentile (%)	64.822	19.553	37.583	87.397	5.729	49.549
+transcription factor binding	FC (WS / NS)	-0.17 (9.98 / 11.38)	0.31 (3 / 2.23)	-	-0.28 (6.23 / 7.76)	-	-0.03 (7.14 / 7.29)
+ 	Percentile (%)	64.962	19.879	-	72.222	-	62.13
+iron ion transmembrane transporter activity	FC (WS / NS)	-0.18 (7.66 / 8.78)	-1.27 (1 / 3.81)	-0.29 (6.93 / 8.69)	-1.78 (1 / 5.86)	-	-0.47 (3.46 / 5.19)
+ 	Percentile (%)	65.009	82.016	82.628	89.524	-	83.81
+ferric iron transmembrane transporter activity	FC (WS / NS)	-0.18 (7.66 / 8.78)	-	-0.5 (4 / 6.09)	-2.63 (0 / 5.17)	-	-0.95 (2 / 4.81)
+ 	Percentile (%)	65.056	-	85.42	96.857	-	93.133
+ferric-transporting ATPase activity	FC (WS / NS)	-0.18 (7.66 / 8.78)	-	-0.61 (3 / 5.09)	-2.37 (0 / 4.17)	-	-0.95 (2 / 4.81)
+ 	Percentile (%)	65.103	-	86.542	93.175	-	93.158
+trivalent inorganic cation transmembrane transporter activity	FC (WS / NS)	-0.18 (7.66 / 8.78)	-	-0.46 (4.58 / 6.67)	-2.76 (0 / 5.75)	-	-0.95 (2 / 4.81)
+ 	Percentile (%)	65.15	-	84.848	98.54	-	93.183
+antioxidant activity	FC (WS / NS)	-0.18 (11.17 / 12.8)	0.24 (8.85 / 7.36)	0.06 (13.65 / 13.02)	0.06 (9.46 / 9.06)	0.63 (-3.75 / -2.78)	0.06 (9.54 / 9.12)
+ 	Percentile (%)	65.385	22.597	35.798	40.476	5.656	45.739
+FMN binding	FC (WS / NS)	-0.19 (12.75 / 14.66)	-0.45 (4.25 / 6.15)	-0.13 (12.23 / 13.44)	-0.18 (9.04 / 10.36)	-0.51 (-6.04 / -8.18)	-0.32 (7.12 / 9.11)
+ 	Percentile (%)	65.713	67.278	77.867	67.841	84.772	80.15
+molybdopterin cofactor binding	FC (WS / NS)	-0.19 (11.83 / 13.62)	-1.32 (0 / 1.49)	0 (0 / 0)	-0.17 (5.93 / 6.78)	-	-0.12 (6.38 / 7.02)
+ 	Percentile (%)	65.76	84.392	61.547	67.524	-	69.825
+S-acyltransferase activity	FC (WS / NS)	-0.19 (9.8 / 11.31)	0.16 (8.06 / 7.11)	0 (9.31 / 9.31)	-1.8 (1 / 5.95)	0.42 (-8.36 / -6.51)	0 (6.94 / 6.92)
+ 	Percentile (%)	65.807	24.786	52.827	89.683	8.702	56.867
+aspartate-ammonia ligase activity	FC (WS / NS)	-0.19 (7.79 / 9.06)	0.66 (4.52 / 2.49)	0.08 (4.64 / 4.32)	-	-	0.09 (4.86 / 4.49)
+ 	Percentile (%)	65.854	13.946	33.303	-	-	38.922
+GMP synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	-0.19 (11.7 / 13.53)	-1.72 (1 / 5.61)	0.06 (6.54 / 6.21)	-	-0.34 (-7.55 / -9.31)	0.05 (6.71 / 6.44)
+ 	Percentile (%)	66.088	88.725	35.569	-	77.955	47.569
+dihydrolipoyl dehydrogenase activity	FC (WS / NS)	-0.2 (11.16 / 12.92)	-2.5 (0 / 4.66)	0.17 (7.85 / 6.85)	-	0.04 (-11.37 / -11.07)	0.31 (7.68 / 5.99)
+ 	Percentile (%)	66.135	93.601	26.047	-	41.334	18.647
+ribose phosphate diphosphokinase activity	FC (WS / NS)	-0.2 (10.4 / 12.07)	-2.24 (0 / 3.71)	0.15 (7.17 / 6.38)	0.12 (6.99 / 6.36)	-	0.11 (7.23 / 6.63)
+ 	Percentile (%)	66.182	92.421	27.672	29.873	-	37.669
+diphosphotransferase activity	FC (WS / NS)	-0.2 (10.4 / 12.07)	-0.11 (5 / 5.49)	0.1 (10.05 / 9.33)	0.1 (8.08 / 7.45)	-	0.11 (7.39 / 6.78)
+ 	Percentile (%)	66.229	57.99	32.044	31.841	-	37.368
+phosphoenolpyruvate carboxykinase activity	FC (WS / NS)	-0.21 (13.39 / 15.65)	-0.09 (7.58 / 8.15)	-0.19 (9.06 / 10.47)	-0.18 (7.74 / 8.88)	0.2 (-5.19 / -4.64)	-0.19 (6.98 / 8.09)
+ 	Percentile (%)	66.323	57.152	79.835	67.746	20.812	73.409
+transition metal ion transmembrane transporter activity	FC (WS / NS)	-0.22 (7.66 / 9.06)	-0.86 (2.58 / 5.49)	-0.01 (11.46 / 11.55)	0.12 (8.11 / 7.38)	-	0.06 (7.01 / 6.69)
+ 	Percentile (%)	66.651	73.459	67.773	29.683	-	45.338
+carbon-nitrogen lyase activity	FC (WS / NS)	-0.22 (12.8 / 15.02)	-0.04 (9.16 / 9.43)	-0.1 (13 / 13.97)	-0.12 (9.77 / 10.74)	0.03 (-1.47 / -1.46)	-0.09 (8.83 / 9.44)
+ 	Percentile (%)	66.886	54.962	76.333	64.889	42.495	67.343
+endodeoxyribonuclease activity	FC (WS / NS)	-0.22 (9.94 / 11.71)	0.05 (6.25 / 5.99)	-0.22 (8.82 / 10.4)	-1.26 (1.58 / 5.17)	-	0.14 (6.86 / 6.15)
+ 	Percentile (%)	66.932	39.944	80.888	87.111	-	35.188
+deoxyribonuclease activity	FC (WS / NS)	-0.22 (9.94 / 11.71)	0.13 (7.77 / 7.03)	-0.1 (10.86 / 11.69)	0 (5.98 / 6)	-	0.11 (7.29 / 6.69)
+ 	Percentile (%)	66.979	33.483	76.425	52.571	-	37.694
+acetate kinase activity	FC (WS / NS)	-0.22 (12.83 / 15.08)	-0.98 (2 / 4.91)	-0.16 (7.08 / 8.02)	-0.17 (6.75 / 7.73)	-0.15 (-5.85 / -6.38)	-0.15 (7.16 / 8.07)
+ 	Percentile (%)	67.026	80.121	79.034	67.651	60.841	70.977
+phosphoenolpyruvate carboxykinase (ATP) activity	FC (WS / NS)	-0.22 (13.28 / 15.65)	-0.28 (5.7 / 7.12)	-0.36 (6.64 / 8.8)	-0.4 (5.64 / 7.77)	0.2 (-5.44 / -4.87)	-0.39 (5.83 / 7.94)
+ 	Percentile (%)	67.073	62.649	83.703	76.73	21.392	81.779
+folic acid binding	FC (WS / NS)	-0.23 (9.51 / 11.36)	-	-0.24 (6.78 / 8.21)	-0.35 (5.43 / 7.21)	-0.33 (-6.91 / -8.43)	-0.26 (5.52 / 6.79)
+ 	Percentile (%)	67.495	-	81.643	75.873	76.722	75.363
+modified amino acid binding	FC (WS / NS)	-0.23 (9.51 / 11.36)	-0.32 (1 / 1.49)	-0.12 (9.37 / 10.3)	-0.14 (7.87 / 8.8)	-0.35 (-6.59 / -8.11)	-0.25 (6.11 / 7.47)
+ 	Percentile (%)	67.542	63.737	77.798	66.095	78.1	75.338
+excinuclease ABC activity	FC (WS / NS)	-0.23 (9.81 / 11.71)	-0.54 (2 / 3.36)	-0.16 (5.17 / 5.91)	-	-	0.06 (5.46 / 5.19)
+ 	Percentile (%)	67.589	69.498	79.194	-	-	45.188
+malate dehydrogenase (decarboxylating) (NADP+) activity	FC (WS / NS)	-0.24 (5.98 / 7.26)	-2.41 (0 / 4.3)	0.02 (9.18 / 9.01)	-1.48 (1 / 4.58)	-0.38 (-4.13 / -5.06)	0.11 (6.39 / 5.86)
+ 	Percentile (%)	67.871	93.306	44.06	88.413	79.84	37.719
+serine-type endopeptidase activity	FC (WS / NS)	-0.25 (12.45 / 14.94)	-0.05 (5.75 / 5.97)	0.01 (11.24 / 11.14)	-	-0.28 (-7.51 / -8.91)	0.01 (8.29 / 8.2)
+ 	Percentile (%)	67.917	55.381	47.906	-	74.257	55.138
+polynucleotide adenylyltransferase activity	FC (WS / NS)	-0.25 (6.14 / 7.46)	-0.52 (1.58 / 2.71)	0.19 (5.17 / 4.39)	0.62 (6.04 / 3.58)	-	0.69 (5 / 2.71)
+ 	Percentile (%)	67.964	68.691	25.04	10.984	-	9.9
+tRNA adenylyltransferase activity	FC (WS / NS)	-0.25 (6.14 / 7.46)	-	0.22 (4.58 / 3.81)	0.86 (4.46 / 2)	-	0.77 (4.95 / 2.49)
+ 	Percentile (%)	68.011	-	23.575	8.254	-	8.997
+RNA adenylyltransferase activity	FC (WS / NS)	-0.25 (6.14 / 7.46)	-	0.22 (4.58 / 3.81)	0.69 (5.46 / 3)	-	0.77 (4.95 / 2.49)
+ 	Percentile (%)	68.058	-	23.644	10	-	9.023
+fumarate hydratase activity	FC (WS / NS)	-0.25 (10.21 / 12.31)	0.21 (8.1 / 6.85)	0.18 (10.27 / 8.94)	0.1 (7.21 / 6.67)	-0.23 (-2.71 / -3.01)	0.19 (8.69 / 7.49)
+ 	Percentile (%)	68.199	23.311	25.589	32.667	67.658	25.965
+phosphoribosylformylglycinamidine synthase activity	FC (WS / NS)	-0.26 (4.14 / 5.13)	-1.32 (0 / 1.49)	0.08 (6.61 / 6.21)	-	-	0.09 (5.98 / 5.55)
+ 	Percentile (%)	68.246	83.274	33.852	-	-	39.198
+serine-type peptidase activity	FC (WS / NS)	-0.26 (12.46 / 15.13)	-0.04 (7.5 / 7.74)	-0.01 (12.77 / 12.9)	-	-0.33 (-6.51 / -7.91)	-0.03 (8.68 / 8.86)
+ 	Percentile (%)	68.293	55.133	68.894	-	76.65	62.206
+hydrolase activity, acting on acid phosphorus-nitrogen bonds	FC (WS / NS)	-0.26 (12.46 / 15.13)	-0.03 (8.24 / 8.45)	-0.02 (13.48 / 13.67)	-	-0.36 (-5.92 / -7.33)	-0.03 (8.68 / 8.86)
+ 	Percentile (%)	68.34	54.527	69.856	-	78.97	62.231
+serine hydrolase activity	FC (WS / NS)	-0.26 (12.46 / 15.13)	-0.03 (8.24 / 8.45)	-0.02 (13.48 / 13.67)	-	-0.36 (-5.92 / -7.33)	-0.03 (8.68 / 8.86)
+ 	Percentile (%)	68.386	54.543	69.879	-	79.043	62.256
+ATPase activity, coupled to transmembrane movement of substances	FC (WS / NS)	-0.26 (11.2 / 13.66)	0.05 (11.42 / 11.02)	0.02 (16.63 / 16.38)	0.01 (11.96 / 11.86)	-2.73 (-0.89 / -0.29)	0.04 (9.22 / 8.94)
+ 	Percentile (%)	68.715	40.565	45.251	49.302	95.939	49.348
+primary active transmembrane transporter activity	FC (WS / NS)	-0.27 (11.2 / 13.66)	0.04 (12.22 / 11.85)	0.02 (18.06 / 17.81)	0 (12.34 / 12.32)	-0.59 (0.11 / 0.67)	0.03 (9.28 / 9.07)
+ 	Percentile (%)	68.809	41.497	46.052	51.397	86.875	51.579
+L(+)-tartrate dehydratase activity	FC (WS / NS)	-0.28 (2.14 / 2.81)	-	0.27 (9.67 / 7.82)	0.25 (8.13 / 6.66)	-	0.3 (7.43 / 5.86)
+ 	Percentile (%)	68.856	-	20.851	19.873	-	19.549
+S-adenosylmethionine-dependent methyltransferase activity	FC (WS / NS)	-0.29 (6.47 / 8.11)	0.3 (8.4 / 6.62)	0.06 (12.69 / 12.14)	0.29 (8.7 / 6.95)	-0.06 (-5.88 / -6.1)	0.1 (7.75 / 7.13)
+ 	Percentile (%)	68.902	20.453	36.805	18.698	52.719	38.145
+oxidoreductase activity, acting on the CH-CH group of donors, quinone or related compound as acceptor	FC (WS / NS)	-0.29 (9.71 / 12.12)	2 (3 / 0)	-0.01 (10.57 / 10.64)	-0.34 (6.52 / 8.5)	-0.52 (-4.41 / -5.88)	-0.35 (5.58 / 7.41)
+ 	Percentile (%)	68.996	1.662	67.59	75.302	84.917	81.203
+ammonia-lyase activity	FC (WS / NS)	-0.29 (11.4 / 14.19)	-0.06 (8.02 / 8.42)	-0.14 (11.39 / 12.69)	-0.2 (8.42 / 9.84)	0.17 (-2.57 / -2.4)	-0.17 (7.85 / 8.94)
+ 	Percentile (%)	69.043	56.204	78.347	68.857	24.148	72.13
+dipeptidase activity	FC (WS / NS)	-0.29 (8.26 / 10.36)	1.93 (2.81 / 0)	-0.03 (11.26 / 11.48)	0.92 (6.19 / 2.81)	0.23 (-10.86 / -9.38)	0.09 (8.17 / 7.64)
+ 	Percentile (%)	69.09	2.081	71.481	7.81	16.679	39.674
+carbamate kinase activity	FC (WS / NS)	-0.3 (8.04 / 10.12)	-2.37 (0 / 4.15)	-0.12 (5.93 / 6.52)	-	0.13 (-10.53 / -9.72)	-0.09 (6.38 / 6.84)
+ 	Percentile (%)	69.137	93.167	77.363	-	29.224	67.368
+rRNA (adenine-N6,N6-)-dimethyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.84 (3.46 / 1.49)	0.86 (3.7 / 1.58)	0.9 (3.81 / 1.58)	-	-0.06 (4 / 4.23)
+ 	Percentile (%)	69.231	12.642	12.634	7.968	-	65.263
+1,4-alpha-glucan branching enzyme activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-1.97 (0 / 2.91)	-0.08 (4.32 / 4.64)	-	-	-0.01 (4.52 / 4.55)
+ 	Percentile (%)	69.278	90.48	75.486	-	-	59.724
+DNA ligase (ATP) activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-0.46 (2.32 / 3.58)	-	-	-0.54 (2.81 / 4.55)
+ 	Percentile (%)	69.325	-	84.871	-	-	86.516
+L-alanine:2-oxoglutarate aminotransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.6 (5.17 / 3.08)	-	0.61 (5.36 / 3.17)	-	0.53 (5.49 / 3.49)
+ 	Percentile (%)	69.371	15.049	-	11.143	-	12.13
+argininosuccinate lyase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-0.93 (0 / 0.91)	0.61 (3.58 / 2)	-	-	0.37 (3.17 / 2.23)
+ 	Percentile (%)	69.418	74.515	14.328	-	-	17.293
+3',5'-cyclic-nucleotide phosphodiesterase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	69.465	-	-	-	-	-
+3',5'-cyclic-AMP phosphodiesterase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	69.512	-	-	-	-	-
+imidazoleglycerol-phosphate dehydratase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	69.559	-	-	-	-	-
+methenyltetrahydrofolate cyclohydrolase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	1.58 (2 / 0)	-0.37 (4.7 / 6.39)	-0.24 (6.02 / 7.29)	-	0.2 (4.64 / 3.91)
+ 	Percentile (%)	69.606	3.541	84.047	70.222	-	24.712
+phospholipase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.07 (1 / 0.91)	-2.11 (0 / 3.32)	-2.11 (0 / 3.32)	-0.01 (-7.11 / -7.15)	-0.66 (3 / 5.33)
+ 	Percentile (%)	69.653	36.791	96.956	90.762	47.136	87.794
+phosphoribosylglycinamide formyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	0 (0 / 0)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	69.7	-	54.566	-	-	90.727
+uridine kinase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.14 (0 / -0.09)	0.09 (8.48 / 7.92)	-	-	-2.27 (0 / 3.81)
+ 	Percentile (%)	69.747	26.169	33.051	-	-	99.273
+dTDP-glucose 4,6-dehydratase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.24 (4.58 / 3.71)	-0.03 (4.58 / 4.7)	-	-	0.06 (5.04 / 4.81)
+ 	Percentile (%)	70.075	22.239	71.893	-	-	45.89
+1-phosphofructokinase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	2.52 (4.75 / 0)	2.63 (5.17 / 0)	-	2.81 (5.36 / -0.09)
+ 	Percentile (%)	70.122	-	0.435	0.603	-	0.05
+N-acetylneuraminate lyase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-1.32 (0 / 1.49)	-	-	0.07 (-10.85 / -10.38)	0.15 (2.58 / 2.23)
+ 	Percentile (%)	70.169	83.709	-	-	35.823	28.897
+[isocitrate dehydrogenase (NADP+)] kinase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	70.216	-	-	-	-	31.754
+rRNA (adenine-N6-)-methyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	0.67 (4.7 / 2.58)	0.7 (4.81 / 2.58)	-	0.78 (4 / 1.91)
+ 	Percentile (%)	70.263	-	14.031	9.968	-	8.697
+lipase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.05 (1.58 / 1.49)	0.15 (4.81 / 4.25)	-1.43 (1 / 4.39)	-0.01 (-6.7 / -6.73)	-0.66 (3 / 5.33)
+ 	Percentile (%)	70.356	39.494	27.878	88.222	47.208	87.82
+phosphorus-oxygen lyase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-1.7 (1 / 5.49)	0.06 (8.39 / 8.01)	-	-	-0.16 (4.17 / 4.76)
+ 	Percentile (%)	70.403	88.709	36.667	-	-	71.253
+nucleoside kinase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	1.07 (3 / 0.91)	0.08 (9.93 / 9.38)	-	-	-1.22 (1.58 / 5.03)
+ 	Percentile (%)	70.45	7.734	34.264	-	-	94.461
+cyclohydrolase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.03 (3.46 / 3.36)	-0.11 (8.84 / 9.64)	-0.18 (7.46 / 8.58)	-	0 (5.98 / 5.99)
+ 	Percentile (%)	70.497	42.895	77.134	68	-	58.797
+precorrin-2 C20-methyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	0.11 (4.09 / 3.7)	-	-	0.14 (4.09 / 3.61)
+ 	Percentile (%)	70.591	-	30.304	-	-	30.15
+ATP-dependent 3'-5' DNA helicase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-0.11 (3.46 / 3.81)	0 (0 / 0)	-	-	0.05 (1.58 / 1.49)
+ 	Percentile (%)	70.826	57.757	61.433	-	-	46.917
+phosphoribosylglycinamide formyltransferase 2 activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	70.872	-	-	-	-	-
+2,3-bisphosphoglycerate-independent phosphoglycerate mutase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.65 (2 / 0.91)	0.16 (3 / 2.58)	-	-	0.39 (2.81 / 1.91)
+ 	Percentile (%)	70.966	14.505	26.917	-	-	16.717
+alanine-oxo-acid transaminase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	0.5 (6.17 / 4.08)	-	0.51 (6.36 / 4.17)	-	0.53 (5.49 / 3.49)
+ 	Percentile (%)	71.013	15.81	-	12.222	-	12.155
+pullulanase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	1.37 (1.58 / 0)	0.43 (5.32 / 3.7)	-	0.44 (1.58 / 0.91)
+ 	Percentile (%)	71.06	-	7.164	13.746	-	14.862
+16S rRNA (adenine(1518)-N(6)/adenine(1519)-N(6))-dimethyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	0.86 (3.7 / 1.58)	0.9 (3.81 / 1.58)	-	0.78 (4 / 1.91)
+ 	Percentile (%)	71.154	-	12.657	8	-	8.772
+molybdopterin-synthase adenylyltransferase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	71.201	-	-	-	-	-
+cyclic pyranopterin monophosphate synthase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-
+ 	Percentile (%)	71.248	-	-	-	-	-
+serine-type exopeptidase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-0.5 (2.58 / 4.08)	0.09 (6.44 / 5.98)	-	-	0.07 (5.25 / 4.95)
+ 	Percentile (%)	71.295	68.318	32.57	-	-	41.905
+N-acylphosphatidylethanolamine-specific phospholipase D activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	0 (0 / 0)	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	71.341	-	64.088	-	-	72.657
+N-acetyl-beta-D-galactosaminidase activity	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	0.95 (3.81 / 1.49)
+ 	Percentile (%)	71.388	-	-	-	-	7.544
+1,4-alpha-glucan branching enzyme activity (using a glucosylated glycogenin as primer for glycogen synthesis)	FC (WS / NS)	-0.3 (-0.19 / 0)	-	-	-	-	-0.01 (4.52 / 4.55)
+ 	Percentile (%)	71.435	-	-	-	-	59.749
+glutamate-1-semialdehyde 2,1-aminomutase activity	FC (WS / NS)	-0.3 (8.06 / 10.15)	-	-0.11 (4 / 4.39)	-	-	-0.1 (4 / 4.36)
+ 	Percentile (%)	71.529	-	76.928	-	-	68.496
+aspartate ammonia-lyase activity	FC (WS / NS)	-0.3 (10.08 / 12.68)	-0.07 (6.51 / 6.88)	-0.11 (6.43 / 7.01)	-0.1 (6.54 / 7.1)	0.09 (-5.11 / -4.85)	-0.12 (6.41 / 7.06)
+ 	Percentile (%)	71.857	56.562	76.997	62.762	33.648	69.774
+fumarate reductase (menaquinone)	FC (WS / NS)	-0.31 (9.57 / 12.1)	-	-	-1.42 (2 / 7.06)	-	-1.02 (2.32 / 5.74)
+ 	Percentile (%)	71.998	-	-	88.19	-	93.759
+enzyme binding	FC (WS / NS)	-0.32 (5.67 / 7.3)	0.05 (7.22 / 6.96)	-	0.11 (11.6 / 10.67)	-	0.14 (6.74 / 6.03)
+ 	Percentile (%)	72.092	40.891	-	31.079	-	35.038
+aspartate-semialdehyde dehydrogenase activity	FC (WS / NS)	-0.32 (5.94 / 7.64)	-0.37 (2.81 / 3.91)	0.18 (5.58 / 4.81)	-	0.1 (-8.11 / -7.63)	0.17 (5.81 / 5.03)
+ 	Percentile (%)	72.139	65.429	25.612	-	32.415	27.118
+leucine-tRNA ligase activity	FC (WS / NS)	-0.32 (9.49 / 12.06)	0.1 (5.7 / 5.26)	0.03 (5.83 / 5.67)	-	-	0.07 (6.32 / 5.99)
+ 	Percentile (%)	72.186	34.555	41.566	-	-	44.461
+L-threonine ammonia-lyase activity	FC (WS / NS)	-0.32 (1.4 / 2)	2.34 (3.58 / -0.09)	-0.1 (5.21 / 5.64)	-	0.1 (-8.38 / -7.91)	-0.09 (5.13 / 5.52)
+ 	Percentile (%)	72.373	0.575	76.379	-	32.922	67.444
+phosphotransferase activity, paired acceptors	FC (WS / NS)	-0.33 (10.97 / 14)	0.2 (6.89 / 5.88)	-0.19 (8.15 / 9.41)	-0.19 (7.17 / 8.33)	0.09 (-6.23 / -5.9)	-0.21 (6.41 / 7.54)
+ 	Percentile (%)	72.42	23.637	79.767	68.254	33.575	74.06
+UDP-N-acetylmuramoylalanyl-D-glutamate-2,6-diaminopimelate ligase activity	FC (WS / NS)	-0.33 (7.63 / 9.81)	-0.93 (0 / 0.91)	0.15 (4.75 / 4.17)	-	-	0.03 (4.32 / 4.23)
+ 	Percentile (%)	72.608	75.415	27.283	-	-	52.632
+peroxiredoxin activity	FC (WS / NS)	-0.33 (9 / 11.54)	0.48 (7.38 / 4.99)	0.09 (8.9 / 8.29)	-	0.36 (-5.35 / -4.4)	0.02 (7.39 / 7.25)
+ 	Percentile (%)	72.655	15.919	32.593	-	10.587	53.108
+helicase activity	FC (WS / NS)	-0.33 (9.88 / 12.68)	0.04 (7.8 / 7.53)	-0.01 (14.16 / 14.31)	0.45 (6.17 / 4.25)	0.02 (-8.87 / -8.76)	0.06 (8.67 / 8.3)
+ 	Percentile (%)	72.702	41.109	69.055	13.111	43.292	45.815
+NADH dehydrogenase activity	FC (WS / NS)	-0.34 (6.46 / 8.41)	-0.64 (3.58 / 6.15)	0.09 (11.66 / 10.88)	-0.89 (2.58 / 5.64)	-0.37 (-7.43 / -9.3)	-0.09 (6.43 / 6.93)
+ 	Percentile (%)	72.936	70.974	32.662	83.397	79.26	67.87
+oxidoreductase activity, acting on a heme group of donors	FC (WS / NS)	-0.34 (7.79 / 10.1)	-	-0.37 (3.58 / 4.91)	-0.73 (3.81 / 6.97)	-	-0.42 (3.91 / 5.55)
+ 	Percentile (%)	72.983	-	83.864	82	-	82.456
+oxidoreductase activity, acting on a heme group of donors, nitrogenous group as acceptor	FC (WS / NS)	-0.34 (7.79 / 10.1)	-	-	-0.87 (3 / 6.32)	-	-1.09 (2 / 5.36)
+ 	Percentile (%)	73.03	-	-	83.365	-	94.11
+molybdenum ion binding	FC (WS / NS)	-0.34 (7.79 / 10.1)	-0.07 (5.78 / 6.1)	-0.12 (8.49 / 9.29)	-1 (2.81 / 6.6)	0.04 (-9.99 / -9.75)	-0.49 (3.58 / 5.46)
+ 	Percentile (%)	73.077	56.375	77.272	84.635	42.132	84.135
+nitrate reductase (cytochrome) activity	FC (WS / NS)	-0.34 (7.79 / 10.1)	-	-	-1.08 (2 / 5.32)	-	-1.09 (2 / 5.36)
+ 	Percentile (%)	73.171	-	-	85.397	-	94.135
+histidine ammonia-lyase activity	FC (WS / NS)	-0.35 (9.93 / 12.9)	-	-0.48 (4.95 / 7.33)	-0.47 (4.86 / 7.14)	0.07 (-7.25 / -6.94)	-0.46 (5.09 / 7.36)
+ 	Percentile (%)	73.218	-	85.237	78.635	35.243	83.584
+anion transmembrane transporter activity	FC (WS / NS)	-0.36 (6.99 / 9.27)	-0.03 (6.97 / 7.13)	-0.1 (11.79 / 12.72)	0.05 (9.08 / 8.73)	0.05 (-5.16 / -5.01)	0.02 (7.67 / 7.57)
+ 	Percentile (%)	74.25	54.387	76.654	42.095	39.014	54.812
+cysteine desulfurase activity	FC (WS / NS)	-0.37 (5.14 / 6.91)	-1.54 (0 / 1.91)	-0.09 (5.58 / 6)	-	-	0.02 (5.17 / 5.08)
+ 	Percentile (%)	74.296	86.395	75.944	-	-	53.534
+dUTP diphosphatase activity	FC (WS / NS)	-0.37 (6.86 / 9.16)	-1.32 (0 / 1.49)	0.07 (5 / 4.7)	-	-	0.01 (4.25 / 4.23)
+ 	Percentile (%)	74.343	83.243	34.401	-	-	56.566
+ethanolamine ammonia-lyase activity	FC (WS / NS)	-0.38 (8.87 / 11.82)	-	-0.5 (4.46 / 6.7)	-0.53 (3.7 / 5.78)	0.13 (-9.08 / -8.4)	-0.5 (3.81 / 5.81)
+ 	Percentile (%)	74.812	-	85.351	79.746	29.659	84.536
+intramolecular transferase activity, transferring amino groups	FC (WS / NS)	-0.38 (8.06 / 10.79)	-0.94 (3.81 / 8.21)	-0.72 (5.67 / 9.96)	-1.15 (3.91 / 9.86)	-	-0.86 (4.09 / 8.23)
+ 	Percentile (%)	74.906	79.655	87.251	86.254	-	90.602
+uridylate kinase activity	FC (WS / NS)	-0.39 (10.21 / 13.73)	-0.3 (5.52 / 7.03)	-0.13 (6.58 / 7.29)	-	-	-0.08 (5.91 / 6.28)
+ 	Percentile (%)	75	63.24	77.913	-	-	66.216
+UMP kinase activity	FC (WS / NS)	-0.39 (10.21 / 13.73)	-0.35 (4.52 / 6.03)	-0.15 (5.58 / 6.29)	-	-	-0.08 (5.91 / 6.28)
+ 	Percentile (%)	75.047	65.196	78.508	-	-	66.241
+sequence-specific DNA binding	FC (WS / NS)	-0.4 (10.54 / 14.21)	-0.29 (5.91 / 7.46)	-0.04 (11.1 / 11.45)	0 (8.61 / 8.61)	0.05 (-9.2 / -8.91)	-0.17 (7.58 / 8.63)
+ 	Percentile (%)	75.328	62.96	72.854	51.746	39.666	71.98
+nucleoside-triphosphate diphosphatase activity	FC (WS / NS)	-0.4 (6.86 / 9.36)	0.32 (4.46 / 3.36)	0.24 (8.2 / 6.82)	0.17 (5.43 / 4.7)	-	0.08 (5.58 / 5.23)
+ 	Percentile (%)	75.375	19.537	22.339	25.111	-	40.201
+D-alanine-D-alanine ligase activity	FC (WS / NS)	-0.4 (6.78 / 9.29)	0.04 (4.81 / 4.66)	0.18 (5.67 / 4.91)	0.21 (5.88 / 4.95)	-0.15 (-7.73 / -8.48)	0.17 (5.95 / 5.19)
+ 	Percentile (%)	75.469	42.01	25.818	23.048	61.131	27.419
+glutathione hydrolase activity	FC (WS / NS)	-0.41 (3.62 / 5.13)	-	-	-	-	-1.69 (0 / 2.23)
+ 	Percentile (%)	75.563	-	-	-	-	97.419
+RNA polymerase binding	FC (WS / NS)	-0.41 (5.21 / 7.27)	0 (6.21 / 6.23)	-	0.42 (6.02 / 4.25)	-	0.43 (6.38 / 4.49)
+ 	Percentile (%)	75.61	52.384	-	13.841	-	15.363
+sulfurtransferase activity	FC (WS / NS)	-0.41 (7.14 / 9.84)	0.38 (5.39 / 3.91)	0.08 (9.89 / 9.3)	0.09 (6.75 / 6.29)	-	0.12 (6.91 / 6.28)
+ 	Percentile (%)	75.657	18.295	33.669	34.127	-	36.441
+oxaloacetate decarboxylase activity	FC (WS / NS)	-0.42 (7.63 / 10.55)	0.14 (0 / -0.09)	0.07 (9.92 / 9.43)	0.07 (7.94 / 7.54)	-0.67 (-2.82 / -3.89)	-0.12 (7.08 / 7.76)
+ 	Percentile (%)	75.797	27.318	35.134	38.54	89.558	69.574
+ATPase coupled ion transmembrane transporter activity	FC (WS / NS)	-0.42 (9.92 / 13.64)	0.06 (10.88 / 10.43)	0.02 (15.65 / 15.44)	0.01 (11.43 / 11.31)	NaN (-1.48 / -0.83)	0.05 (8.62 / 8.26)
+ 	Percentile (%)	75.891	39.105	46.258	48.952	99.13	46.09
+cation-transporting ATPase activity	FC (WS / NS)	-0.43 (9.78 / 13.49)	0.06 (9.73 / 9.27)	0.02 (14.22 / 14.01)	-0.02 (10.16 / 10.3)	0.56 (-3.03 / -2.37)	0.04 (7.82 / 7.59)
+ 	Percentile (%)	75.938	38.22	45.686	54.095	6.381	49.875
+UDP-N-acetylmuramoylalanine-D-glutamate ligase activity	FC (WS / NS)	-0.43 (6.46 / 9.04)	-	0.04 (4.91 / 4.75)	-	-	0.07 (5.55 / 5.23)
+ 	Percentile (%)	75.985	-	40.925	-	-	41.404
+active ion transmembrane transporter activity	FC (WS / NS)	-0.43 (9.92 / 13.7)	0.06 (10.99 / 10.5)	0.03 (16.35 / 16.04)	0 (11.82 / 11.81)	NaN (-1.34 / -0.76)	0.02 (8.83 / 8.68)
+ 	Percentile (%)	76.032	38.733	43.557	51.492	98.332	53.333
+3-oxoacyl-[acyl-carrier-protein] synthase activity	FC (WS / NS)	-0.45 (5.72 / 8.17)	-0.84 (3 / 6.17)	0.04 (9.67 / 9.4)	-	-	-0.28 (4.95 / 6.25)
+ 	Percentile (%)	76.126	73.319	41.131	-	-	76.115
+identical protein binding	FC (WS / NS)	-0.46 (9.13 / 12.93)	0.02 (8.33 / 8.18)	-	0.06 (8.84 / 8.44)	-	0.17 (7.25 / 6.31)
+ 	Percentile (%)	76.22	43.687	-	39.556	-	27.168
+protein homodimerization activity	FC (WS / NS)	-0.46 (9.13 / 12.93)	-0.21 (4.64 / 5.55)	-	0.06 (8.84 / 8.44)	-	0.15 (6.54 / 5.81)
+ 	Percentile (%)	76.266	60.957	-	39.587	-	29.198
+urocanate hydratase activity	FC (WS / NS)	-0.47 (10.66 / 15.11)	-0.03 (3 / 3.08)	-0.38 (5.64 / 7.65)	-0.32 (5.64 / 7.31)	0.06 (-12 / -11.53)	-0.32 (5.98 / 7.69)
+ 	Percentile (%)	76.36	54.108	84.115	74.444	36.911	77.168
+adenyl-nucleotide exchange factor activity	FC (WS / NS)	-0.47 (7.73 / 11.09)	-	0.17 (6.02 / 5.25)	0.17 (5.98 / 5.21)	-	0.24 (6.43 / 5.3)
+ 	Percentile (%)	76.454	-	26.207	25.397	-	22.782
+chaperone binding	FC (WS / NS)	-0.47 (7.73 / 11.09)	0.07 (1 / 0.91)	-	-0.1 (7.85 / 8.46)	-	0.26 (7.14 / 5.81)
+ 	Percentile (%)	76.501	37.351	-	61.524	-	21.779
+nucleoside-triphosphatase regulator activity	FC (WS / NS)	-0.47 (7.73 / 11.09)	-0.07 (5.43 / 5.74)	0.1 (8.87 / 8.23)	0.14 (7.56 / 6.79)	-	0.22 (6.57 / 5.52)
+ 	Percentile (%)	76.548	56.484	32.113	27.873	-	24.085
+ATPase regulator activity	FC (WS / NS)	-0.47 (7.73 / 11.09)	-0.1 (4.32 / 4.71)	0.14 (7.65 / 6.83)	0.15 (6.98 / 6.21)	-	0.24 (6.46 / 5.33)
+ 	Percentile (%)	76.595	57.338	28.061	26.667	-	22.857
+cysteine synthase activity	FC (WS / NS)	-0.47 (9.58 / 13.67)	-0.69 (1 / 2.23)	-0.21 (7.86 / 9.24)	-0.2 (6.77 / 7.91)	-	-0.34 (6.25 / 8.17)
+ 	Percentile (%)	76.876	71.548	80.728	68.603	-	81.028
+C-methyltransferase activity	FC (WS / NS)	-0.47 (5.43 / 7.92)	0.24 (6.29 / 5.15)	0.16 (7.97 / 7.02)	0.46 (7.17 / 4.95)	-	0.25 (5.64 / 4.61)
+ 	Percentile (%)	76.923	22.333	26.619	12.952	-	22.281
+beta-ketoacyl-acyl-carrier-protein synthase III activity	FC (WS / NS)	-0.51 (4.98 / 7.49)	-	-0.29 (3.91 / 5)	-0.33 (4 / 5.29)	-	-0.37 (3.91 / 5.33)
+ 	Percentile (%)	77.158	-	82.673	74.857	-	81.479
+organic anion transmembrane transporter activity	FC (WS / NS)	-0.52 (6.15 / 9.27)	0 (6.58 / 6.61)	-0.2 (10.3 / 11.97)	0.03 (8.95 / 8.71)	-0.01 (-7.39 / -7.45)	0.05 (7.5 / 7.19)
+ 	Percentile (%)	77.251	52.415	80.43	44.73	48.586	47.068
+succinate dehydrogenase activity	FC (WS / NS)	-0.54 (7.78 / 11.8)	-0.59 (3.7 / 6.06)	-0.01 (10.59 / 10.68)	-0.25 (6.58 / 8)	-0.79 (-3.31 / -5)	-0.13 (7.52 / 8.29)
+ 	Percentile (%)	77.392	70.182	67.796	70.635	91.661	69.975
+secondary active transmembrane transporter activity	FC (WS / NS)	-0.57 (5.9 / 9.24)	0.13 (7.8 / 7.02)	0.03 (15.81 / 15.41)	-0.16 (8.09 / 9.16)	-0.18 (-4.16 / -4.59)	-0.06 (6.7 / 7.02)
+ 	Percentile (%)	77.814	33.266	41.497	67.206	63.669	64.937
+omega peptidase activity	FC (WS / NS)	-0.58 (3.62 / 5.91)	-	-0.03 (4.7 / 4.81)	-	-	-0.04 (4.17 / 4.3)
+ 	Percentile (%)	77.861	-	71.641	-	-	63.158
+histidine-tRNA ligase activity	FC (WS / NS)	-0.6 (7.61 / 12)	-0.02 (5.52 / 5.63)	-0.12 (5.39 / 5.95)	-	-	-0.03 (5.95 / 6.1)
+ 	Percentile (%)	77.908	53.797	77.661	-	-	62.757
+ribulose-phosphate 3-epimerase activity	FC (WS / NS)	-0.6 (5.3 / 8.55)	-1.32 (0 / 1.49)	-0.04 (3.58 / 3.7)	-	-0.01 (-8.01 / -8.07)	0.06 (4 / 3.81)
+ 	Percentile (%)	78.096	83.305	72.465	-	48.513	46.04
+ATP-dependent peptidase activity	FC (WS / NS)	-0.62 (7.3 / 11.74)	-0.4 (4 / 5.58)	0.24 (10.82 / 9.04)	0.06 (7.92 / 7.58)	-0.28 (-7.51 / -8.91)	-0.36 (4.81 / 6.43)
+ 	Percentile (%)	78.143	66.097	22.271	40.159	74.184	81.303
+amino acid transmembrane transporter activity	FC (WS / NS)	-0.62 (5.57 / 9.1)	0.08 (5.78 / 5.43)	-0.38 (7.71 / 10.35)	0.05 (8.72 / 8.36)	-	0.03 (6.69 / 6.55)
+ 	Percentile (%)	78.283	36.139	84.161	41.079	-	52.607
+carbamoyl-phosphate synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	-0.62 (4.9 / 8.09)	-1.32 (0 / 1.49)	-0.04 (6.7 / 6.91)	-	-	-0.03 (6.07 / 6.23)
+ 	Percentile (%)	78.33	83.227	72.694	-	-	63.008
+nickel cation binding	FC (WS / NS)	-0.62 (7.26 / 11.72)	-0.1 (3.81 / 4.15)	0.13 (10.49 / 9.53)	0.15 (6.75 / 6)	0.26 (-9.39 / -8.03)	0.15 (6.88 / 6.11)
+ 	Percentile (%)	78.377	57.26	29.366	26.476	15.228	29.148
+glycerol dehydratase activity	FC (WS / NS)	-0.63 (5.14 / 8.49)	-	-0.24 (7.71 / 9.27)	-0.37 (5 / 6.75)	-	-0.32 (5.7 / 7.39)
+ 	Percentile (%)	78.424	-	81.483	76.19	-	80.652
+S-ribosylhomocysteine lyase activity	FC (WS / NS)	-0.64 (5.79 / 9.56)	-1.8 (0 / 2.49)	0.21 (3.81 / 3.17)	-	-	0.18 (4.09 / 3.49)
+ 	Percentile (%)	78.705	89.284	24.308	-	-	26.792
+organic acid transmembrane transporter activity	FC (WS / NS)	-0.64 (5.57 / 9.25)	0.01 (6.57 / 6.53)	-0.23 (10.05 / 11.97)	0.03 (9.14 / 8.93)	-	0.02 (6.86 / 6.75)
+ 	Percentile (%)	78.94	45.784	81.392	45.27	-	53.835
+carboxylic acid transmembrane transporter activity	FC (WS / NS)	-0.64 (5.57 / 9.25)	0 (6.27 / 6.28)	-0.25 (9.36 / 11.32)	0.03 (8.95 / 8.71)	-	0.02 (6.86 / 6.75)
+ 	Percentile (%)	78.987	52.322	81.849	44.762	-	53.86
+tryptophan-tRNA ligase activity	FC (WS / NS)	-0.67 (4.27 / 7.37)	-1.89 (0 / 2.71)	-0.16 (4.58 / 5.25)	-	-	-0.13 (4.81 / 5.36)
+ 	Percentile (%)	79.081	90.2	79.126	-	-	70.251
+phosphatase activity	FC (WS / NS)	-0.68 (6.32 / 10.74)	-0.06 (7.91 / 8.26)	0.02 (12.03 / 11.89)	-0.07 (7.61 / 8.04)	-0.01 (-9.4 / -9.43)	-0.07 (7.5 / 7.91)
+ 	Percentile (%)	79.174	55.925	46.899	58.19	46.773	65.564
+enzyme regulator activity	FC (WS / NS)	-0.68 (7.99 / 13.42)	-0.27 (7.98 / 9.83)	0.06 (11.61 / 11.09)	-0.32 (8.18 / 10.46)	-	-0.09 (7.18 / 7.71)
+ 	Percentile (%)	79.221	62.448	36.439	74.254	-	67.519
+molecular function regulator	FC (WS / NS)	-0.68 (7.99 / 13.42)	-0.28 (7.99 / 9.89)	0.06 (11.61 / 11.09)	-0.3 (8.56 / 10.77)	-	-0.1 (7.22 / 7.79)
+ 	Percentile (%)	79.268	62.572	36.461	73.492	-	68.17
+metalloexopeptidase activity	FC (WS / NS)	-0.68 (8.21 / 13.8)	-2.75 (0 / 5.74)	-0.1 (9.66 / 10.44)	-0.4 (6.21 / 8.54)	0.01 (-10.33 / -10.28)	-0.24 (6.48 / 7.82)
+ 	Percentile (%)	79.315	97.173	76.677	76.825	44.888	75.163
+phenylalanine-tRNA ligase activity	FC (WS / NS)	-0.69 (8.02 / 13.56)	0 (6.86 / 6.87)	0.02 (8.53 / 8.39)	-	-	0.08 (7.79 / 7.34)
+ 	Percentile (%)	79.362	52.275	45.502	-	-	41.253
+branched-chain-amino-acid transaminase activity	FC (WS / NS)	-0.69 (7.17 / 12.2)	-2.46 (0 / 4.49)	0.21 (8.75 / 7.46)	0.16 (8.26 / 7.27)	-	0.21 (8.25 / 6.97)
+ 	Percentile (%)	79.456	93.415	24.193	25.587	-	24.211
+phosphoric ester hydrolase activity	FC (WS / NS)	-0.7 (6.35 / 10.96)	-0.07 (8.79 / 9.29)	-0.02 (13.8 / 14.01)	-0.09 (8.89 / 9.54)	-0.06 (-5.04 / -5.2)	-0.14 (7.97 / 8.91)
+ 	Percentile (%)	79.55	56.608	70.359	60.984	51.994	70.652
+metalloaminopeptidase activity	FC (WS / NS)	-0.71 (8.04 / 13.77)	0.14 (0 / -0.09)	-	-0.48 (4.32 / 6.41)	-	-0.51 (4.25 / 6.49)
+ 	Percentile (%)	79.597	31.977	-	78.73	-	84.762
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, disulfide as acceptor	FC (WS / NS)	-0.72 (5.02 / 8.89)	-0.69 (3.32 / 5.95)	0.04 (9.62 / 9.35)	-0.1 (3.91 / 4.25)	-	0.14 (6.85 / 6.11)
+ 	Percentile (%)	79.644	71.486	40.948	61.873	-	34.837
+ferredoxin-NADP+ reductase activity	FC (WS / NS)	-0.73 (0.81 / 2)	-	0.14 (7.01 / 6.29)	0.58 (5 / 3)	-	0.52 (4 / 2.49)
+ 	Percentile (%)	79.69	-	28.473	11.46	-	12.456
+ferredoxin-NAD(P) reductase activity	FC (WS / NS)	-0.73 (0.81 / 2)	-	0.14 (7.01 / 6.29)	0.58 (5 / 3)	-	0.52 (4 / 2.49)
+ 	Percentile (%)	79.737	-	28.496	11.492	-	12.481
+oxidoreductase activity, acting on iron-sulfur proteins as donors	FC (WS / NS)	-0.73 (0.81 / 2)	0 (0 / 0)	0.12 (10.72 / 9.76)	0.44 (6.6 / 4.58)	-0.13 (-7.76 / -8.39)	0.45 (4.09 / 2.71)
+ 	Percentile (%)	79.784	48.346	29.503	13.206	59.318	14.261
+oxidoreductase activity, acting on iron-sulfur proteins as donors, NAD or NADP as acceptor	FC (WS / NS)	-0.73 (0.81 / 2)	-	0.12 (8.01 / 7.29)	0.49 (6 / 4)	-	0.52 (4 / 2.49)
+ 	Percentile (%)	79.831	-	29.732	12.54	-	12.506
+double-stranded DNA binding	FC (WS / NS)	-0.78 (6.02 / 11.09)	-0.25 (5.73 / 7)	-0.12 (8.24 / 9.01)	0.08 (7.92 / 7.41)	-	-0.01 (6.3 / 6.35)
+ 	Percentile (%)	79.972	62.075	77.249	35.111	-	60.05
+mismatched DNA binding	FC (WS / NS)	-0.78 (6.02 / 11.09)	-1.69 (0 / 2.23)	-0.35 (5.17 / 6.87)	-0.43 (3.81 / 5.46)	-	-0.2 (5 / 5.88)
+ 	Percentile (%)	80.066	88.492	83.474	77.683	-	73.684
+amine-lyase activity	FC (WS / NS)	-0.8 (6.67 / 12.39)	-0.58 (3.81 / 6.21)	0.77 (5.49 / 2.81)	-0.37 (5.09 / 6.86)	-	-0.48 (4.25 / 6.33)
+ 	Percentile (%)	80.113	70.151	13.344	76.159	-	84.06
+pyridoxal 5'-phosphate synthase (glutamine hydrolysing) activity	FC (WS / NS)	-0.8 (6.67 / 12.39)	-	-	-0.43 (4.09 / 5.86)	-	-0.48 (4.25 / 6.33)
+ 	Percentile (%)	80.159	-	-	77.778	-	84.085
+tyrosine phenol-lyase activity	FC (WS / NS)	-0.83 (7.62 / 14.34)	-	-2.28 (1 / 8.74)	-2.07 (1 / 7.42)	-	-2.14 (1 / 7.83)
+ 	Percentile (%)	80.535	-	97.665	90.667	-	99.023
+carbohydrate derivative transmembrane transporter activity	FC (WS / NS)	-0.86 (4.57 / 9.13)	-0.15 (3.91 / 4.43)	-0.13 (7.59 / 8.4)	-0.94 (3.32 / 7.29)	-0.01 (-7.39 / -7.45)	0.03 (6.07 / 5.91)
+ 	Percentile (%)	80.582	59.077	77.958	84.159	49.021	50.677
+tRNA dihydrouridine synthase activity	FC (WS / NS)	-0.86 (3.27 / 6.78)	0.91 (2.58 / 0.91)	0.73 (2.32 / 1)	-	-	0.37 (3.81 / 2.71)
+ 	Percentile (%)	80.629	12.285	13.642	-	-	17.118
+L-serine ammonia-lyase activity	FC (WS / NS)	-0.91 (4.51 / 9.34)	-1.32 (0 / 1.49)	-0.23 (3.46 / 4.25)	-0.41 (3.81 / 5.39)	-	-0.16 (3.91 / 4.49)
+ 	Percentile (%)	80.722	83.196	81.437	77.143	-	71.88
+biotin carboxylase activity	FC (WS / NS)	-0.91 (2.81 / 6.17)	-2.34 (0 / 4.08)	-0.01 (11.44 / 11.54)	-	-0.24 (-4.9 / -5.61)	0.47 (7.81 / 5.36)
+ 	Percentile (%)	80.769	92.965	68.322	-	68.891	13.91
+hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in cyclic amides	FC (WS / NS)	-0.96 (5.81 / 12.27)	-0.45 (4.09 / 5.95)	-0.05 (8.34 / 8.68)	-0.1 (7.68 / 8.29)	-	-0.15 (5.83 / 6.61)
+ 	Percentile (%)	80.816	67.324	73.495	61.937	-	71.103
+3-hydroxybutyryl-CoA dehydratase activity	FC (WS / NS)	-1 (0 / 1)	-	-	-	-	-
+ 	Percentile (%)	81.051	-	-	-	-	-
+5S rRNA binding	FC (WS / NS)	-1 (0 / 1)	-	-0.27 (5 / 6.25)	-0.44 (3.91 / 5.64)	0.12 (-8.33 / -7.74)	-2.41 (0 / 4.3)
+ 	Percentile (%)	81.098	-	82.376	77.905	30.674	99.373
+lactaldehyde dehydrogenase activity	FC (WS / NS)	-1 (0 / 1)	0.14 (0 / -0.09)	-	-	-	-0.01 (4.86 / 4.91)
+ 	Percentile (%)	81.144	27.287	-	-	-	60.501
+iron-chelate-transporting ATPase activity	FC (WS / NS)	-1 (0 / 1)	-	0 (0 / 0)	-	-	0.69 (3.7 / 1.91)
+ 	Percentile (%)	81.191	-	58	-	-	9.85
+O-acetyltransferase activity	FC (WS / NS)	-1 (0 / 1)	-0.93 (0 / 0.91)	-1.84 (0 / 2.58)	-	-	-1.89 (0 / 2.71)
+ 	Percentile (%)	81.238	76.192	95.926	-	-	98.271
+phosphopantetheine binding	FC (WS / NS)	-1 (0 / 1)	0.14 (0 / -0.09)	0.31 (6.46 / 5)	-1.51 (1 / 4.7)	-	-0.35 (4.52 / 6.06)
+ 	Percentile (%)	81.285	29.042	19.432	88.508	-	81.228
+beta-alanyl-CoA ammonia-lyase activity	FC (WS / NS)	-1 (0 / 1)	-	-	-	-	-
+ 	Percentile (%)	81.426	-	-	-	-	-
+ferric dicitrate transporter activity	FC (WS / NS)	-1 (0 / 1)	-	-	-	-	0.69 (3.7 / 1.91)
+ 	Percentile (%)	81.473	-	-	-	-	9.875
+transferase activity, transferring sulfur-containing groups	FC (WS / NS)	-1 (7.14 / 15.29)	-0.07 (9.76 / 10.3)	-0.29 (11.28 / 14.05)	-0.4 (7.96 / 10.85)	-	-0.38 (7.26 / 9.77)
+ 	Percentile (%)	81.52	56.593	82.742	76.794	-	81.679
+L-leucine transaminase activity	FC (WS / NS)	-1.05 (4.62 / 10.61)	-	0.26 (6.75 / 5.46)	0.21 (6.21 / 5.25)	-	0.22 (6.41 / 5.36)
+ 	Percentile (%)	81.614	-	21.332	23.238	-	23.684
+L-valine transaminase activity	FC (WS / NS)	-1.05 (4.62 / 10.61)	-	0.26 (6.75 / 5.46)	0.21 (6.21 / 5.25)	-	0.22 (6.41 / 5.36)
+ 	Percentile (%)	81.66	-	21.355	23.27	-	23.709
+L-isoleucine transaminase activity	FC (WS / NS)	-1.05 (4.62 / 10.61)	-	0.26 (6.75 / 5.46)	0.21 (6.21 / 5.25)	-	0.22 (6.41 / 5.36)
+ 	Percentile (%)	81.707	-	21.378	23.302	-	23.734
+carbon-sulfur lyase activity	FC (WS / NS)	-1.06 (5.79 / 13.12)	-1.38 (2.58 / 8.34)	-0.12 (10.08 / 11.05)	-0.4 (7.02 / 9.57)	-	-0.23 (6.39 / 7.67)
+ 	Percentile (%)	81.848	84.811	77.478	76.667	-	74.762
+ATP-dependent DNA helicase activity	FC (WS / NS)	-1.1 (4.9 / 11.69)	-0.04 (4 / 4.15)	-0.11 (7.71 / 8.41)	-	-	-0.05 (5.67 / 5.91)
+ 	Percentile (%)	81.895	55.257	77.043	-	-	64.185
+cob(I)yrinic acid a,c-diamide adenosyltransferase activity	FC (WS / NS)	-1.14 (0.81 / 3)	-	0.23 (3.46 / 2.81)	-	-0.01 (-7.66 / -7.72)	0.14 (5.78 / 5.15)
+ 	Percentile (%)	81.942	-	23.026	-	49.166	34.912
+enzyme inhibitor activity	FC (WS / NS)	-1.15 (5.37 / 13.11)	-0.33 (6.77 / 8.74)	-0.74 (1.58 / 3.32)	-1.1 (3.81 / 9.3)	-	-0.33 (5.52 / 7.18)
+ 	Percentile (%)	81.989	64.731	87.388	85.524	-	80.802
+endopeptidase inhibitor activity	FC (WS / NS)	-1.15 (5.37 / 13.11)	-2.94 (0 / 6.69)	-1 (0 / 1)	-2.98 (0 / 6.88)	-	-0.34 (5.46 / 7.17)
+ 	Percentile (%)	82.036	98.928	88.762	99.302	-	80.952
+peptidase inhibitor activity	FC (WS / NS)	-1.15 (5.37 / 13.11)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-2.15 (1 / 7.88)	-	-0.34 (5.46 / 7.17)
+ 	Percentile (%)	82.083	99.596	92.973	91.048	-	80.977
+peptidase regulator activity	FC (WS / NS)	-1.15 (5.37 / 13.11)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.72 (2 / 8.88)	-	-0.34 (5.49 / 7.2)
+ 	Percentile (%)	82.129	99.907	95.216	89.397	-	80.902
+endopeptidase regulator activity	FC (WS / NS)	-1.15 (5.37 / 13.11)	-3.12 (0 / 7.68)	-1.37 (0 / 1.58)	-2.15 (1 / 7.88)	-	-0.34 (5.46 / 7.17)
+ 	Percentile (%)	82.176	99.612	93.202	91.079	-	81.003
+oxo-acid-lyase activity	FC (WS / NS)	-1.21 (4.77 / 12.37)	0.26 (6.19 / 4.99)	0 (10.81 / 10.83)	-0.32 (6.29 / 8.08)	0.08 (-9.85 / -9.38)	-0.35 (5.61 / 7.45)
+ 	Percentile (%)	82.27	21.618	65.484	74.19	34.518	81.253
+mRNA 5'-UTR binding	FC (WS / NS)	-1.3 (-0.19 / 1)	-0.87 (2.32 / 5.08)	-	-0.23 (5.32 / 6.43)	-	-
+ 	Percentile (%)	82.411	73.567	-	70.095	-	-
+aldehyde dehydrogenase (NAD) activity	FC (WS / NS)	-1.37 (0 / 1.58)	-1.69 (0 / 2.23)	-0.1 (6.83 / 7.39)	-	-	-0.09 (5.39 / 5.81)
+ 	Percentile (%)	82.458	88.181	76.516	-	-	67.744
+aldehyde dehydrogenase [NAD(P)+] activity	FC (WS / NS)	-1.37 (0 / 1.58)	0.45 (4.09 / 2.71)	-0.09 (7.84 / 8.39)	-	-	-0.1 (5.43 / 5.88)
+ 	Percentile (%)	82.505	16.416	75.898	-	-	68.271
+cystathionine gamma-lyase activity	FC (WS / NS)	-1.37 (0 / 1.58)	-1.54 (0 / 1.91)	-1.7 (1.58 / 7.39)	-1.39 (1 / 4.25)	-	-
+ 	Percentile (%)	82.552	85.557	94.919	87.841	-	-
+exopolyphosphatase activity	FC (WS / NS)	-1.37 (0 / 1.58)	0 (0 / 0)	1.37 (1.58 / 0)	0.67 (5.64 / 3.17)	-	-
+ 	Percentile (%)	82.598	46.871	6.134	10.159	-	-
+mannose-6-phosphate isomerase activity	FC (WS / NS)	-1.37 (0 / 1.58)	0.14 (0 / -0.09)	0.15 (9.08 / 8.08)	1.37 (4.17 / 1)	-	-0.14 (4.32 / 4.86)
+ 	Percentile (%)	82.645	26.044	27.535	5.46	-	70.451
+hydrogenase (acceptor) activity	FC (WS / NS)	-1.41 (1.81 / 6.46)	-	0.12 (7.07 / 6.43)	-	0.2 (-11.39 / -10.03)	0.08 (6.09 / 5.71)
+ 	Percentile (%)	83.255	-	29.892	-	20.522	40.551
+oxidoreductase activity, acting on the CH-NH group of donors, NAD or NADP as acceptor	FC (WS / NS)	-1.57 (2.98 / 10.85)	0.02 (7.63 / 7.52)	-0.13 (11.06 / 12.2)	-0.17 (7.58 / 8.63)	-	0.12 (6.49 / 5.88)
+ 	Percentile (%)	83.302	44.479	77.981	67.397	-	36.216
+methylated-DNA-[protein]-cysteine S-methyltransferase activity	FC (WS / NS)	-1.58 (0 / 2)	-	-1.58 (0 / 2)	-	-	0.26 (3.46 / 2.71)
+ 	Percentile (%)	83.349	-	93.66	-	-	21.579
+biotin synthase activity	FC (WS / NS)	-1.58 (0 / 2)	0.14 (0 / -0.09)	-1.2 (1 / 3.58)	-1 (1.58 / 4.17)	-	-1.05 (1.58 / 4.36)
+ 	Percentile (%)	83.396	25.936	91.897	84.667	-	93.985
+glycogen debranching enzyme activity	FC (WS / NS)	-1.58 (0 / 2)	0.24 (4.91 / 3.99)	0.24 (6.36 / 5.21)	-	-	0.08 (3.32 / 3.08)
+ 	Percentile (%)	83.443	22.441	21.996	-	-	39.749
+4-alpha-glucanotransferase activity	FC (WS / NS)	-1.58 (0 / 2)	0.3 (3.58 / 2.71)	0.27 (4.81 / 3.81)	-	-	0.08 (3.32 / 3.08)
+ 	Percentile (%)	83.49	20.158	20.897	-	-	39.774
+pyridoxamine-phosphate oxidase activity	FC (WS / NS)	-1.58 (0 / 2)	-	-	-	-	-
+ 	Percentile (%)	83.537	-	-	-	-	-
+NAD(P)+ transhydrogenase activity	FC (WS / NS)	-1.58 (0 / 2)	-0.89 (2.58 / 5.66)	-0.83 (3 / 6.09)	-1.04 (2 / 5.17)	-	-1 (1.58 / 4.15)
+ 	Percentile (%)	83.583	73.878	87.64	85.016	-	93.684
+NAD(P)+ transhydrogenase (AB-specific) activity	FC (WS / NS)	-1.58 (0 / 2)	-1.29 (1 / 3.91)	-1.02 (2 / 5.09)	-1.37 (1 / 4.17)	-	-1 (1.58 / 4.15)
+ 	Percentile (%)	83.63	82.109	91.554	87.746	-	93.709
+iron chelate transmembrane transporter activity	FC (WS / NS)	-1.58 (0 / 2)	-	-0.22 (4.58 / 5.49)	-	-	0.55 (4.7 / 2.91)
+ 	Percentile (%)	83.677	-	81.003	-	-	11.905
+oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor	FC (WS / NS)	-1.58 (0 / 2)	2.52 (4.75 / 0)	2.11 (3.32 / 0)	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	83.724	0.202	2.014	-	-	25.789
+oxidoreductase activity, acting on NAD(P)H, NAD(P) as acceptor	FC (WS / NS)	-1.58 (0 / 2)	-0.83 (3 / 6.1)	-0.74 (3.58 / 6.67)	-0.91 (2.58 / 5.75)	-	-1 (1.58 / 4.15)
+ 	Percentile (%)	83.771	73.179	87.457	83.905	-	93.734
+alpha-L-arabinofuranosidase activity	FC (WS / NS)	-1.58 (0 / 2)	-	-1.73 (0 / 2.32)	-	-	-1.69 (0 / 2.23)
+ 	Percentile (%)	84.053	-	95.125	-	-	97.444
+D-proline reductase (dithiol) activity	FC (WS / NS)	-1.58 (0 / 2)	-	-	-1.4 (1.58 / 5.83)	-	-1.76 (1 / 5.79)
+ 	Percentile (%)	84.146	-	-	88.095	-	97.619
+oleate hydratase activity	FC (WS / NS)	-1.58 (0 / 2)	-1.54 (0 / 1.91)	-	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	84.193	86.939	-	-	-	96.817
+FAD binding	FC (WS / NS)	-1.58 (0 / 2)	-1.8 (0 / 2.49)	-	-0.3 (6.46 / 8.18)	-	0 (4.17 / 4.15)
+ 	Percentile (%)	84.24	89.455	-	73.46	-	56.967
+oxidoreductase activity, acting on the CH-NH group of donors	FC (WS / NS)	-1.66 (2.98 / 11.63)	0 (8.2 / 8.2)	-0.12 (12.25 / 13.36)	-0.18 (8.17 / 9.37)	-	0.06 (6.54 / 6.25)
+ 	Percentile (%)	84.287	46.42	77.295	67.778	-	45.789
+methylglyoxal reductase (NADPH-dependent) activity	FC (WS / NS)	-1.67 (-0.19 / 1.58)	-	-	-	-	-
+ 	Percentile (%)	84.334	-	-	-	-	-
+morphine 6-dehydrogenase activity	FC (WS / NS)	-1.67 (-0.19 / 1.58)	-	-	-	-	0.62 (3.46 / 1.91)
+ 	Percentile (%)	84.381	-	-	-	-	11.103
+GMP synthase activity	FC (WS / NS)	-1.84 (0 / 2.58)	-2.72 (0 / 5.61)	-	-	-	-
+ 	Percentile (%)	84.522	97.08	-	-	-	-
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	-1.84 (0 / 2.58)	2.68 (5.39 / 0)	1 (1 / 0)	-	-	-
+ 	Percentile (%)	84.568	0.124	8.927	-	-	-
+L-erythro-3,5-diaminohexanoate dehydrogenase activity	FC (WS / NS)	-1.84 (0 / 2.58)	-	-	-3.04 (0 / 7.21)	-	-
+ 	Percentile (%)	84.662	-	-	99.492	-	-
+sodium ion transmembrane transporter activity	FC (WS / NS)	-1.9 (1.81 / 9.5)	-0.15 (3.58 / 4.08)	-0.68 (6.21 / 10.56)	-1.13 (3.17 / 8.14)	-	-1.03 (2.32 / 5.76)
+ 	Percentile (%)	84.709	59.14	87.022	86.19	-	93.784
+3-oxoadipate CoA-transferase activity	FC (WS / NS)	-1.93 (0 / 2.81)	-3.05 (0 / 7.3)	-3.51 (0 / 10.37)	-	-	-
+ 	Percentile (%)	84.756	99.394	99.931	-	-	-
+cystathionine gamma-synthase activity	FC (WS / NS)	-2 (0 / 3)	-	-1.7 (1.58 / 7.39)	-0.92 (1.58 / 3.91)	-	-0.4 (3.17 / 4.49)
+ 	Percentile (%)	84.803	-	94.896	84.032	-	82.13
+lysine decarboxylase activity	FC (WS / NS)	-2 (0 / 3)	-2.24 (0 / 3.71)	-0.21 (7.59 / 8.93)	-1.7 (1.58 / 7.4)	0.71 (-7.24 / -4.82)	-1.67 (1.58 / 7.24)
+ 	Percentile (%)	84.85	92.483	80.705	89.333	4.714	97.118
+calcium ion binding	FC (WS / NS)	-2.06 (0 / 3.17)	-0.26 (5.36 / 6.63)	-0.16 (9.13 / 10.29)	-0.12 (8.32 / 9.12)	-	-0.16 (5.91 / 6.73)
+ 	Percentile (%)	84.944	62.277	78.851	64.286	-	71.83
+polyphosphate kinase activity	FC (WS / NS)	-2.06 (0 / 3.17)	-	0.47 (2.58 / 1.58)	-	-	0.37 (3.17 / 2.23)
+ 	Percentile (%)	85.131	-	15.93	-	-	17.343
+4-hydroxythreonine-4-phosphate dehydrogenase activity	FC (WS / NS)	-2.06 (0 / 3.17)	-	-2.11 (0 / 3.32)	-	-	-
+ 	Percentile (%)	85.319	-	96.979	-	-	-
+rRNA methyltransferase activity	FC (WS / NS)	-2.13 (0.81 / 6.92)	0.65 (6.95 / 4.08)	0.23 (9.68 / 8.09)	0.48 (7.58 / 5.13)	-	0.24 (6.38 / 5.26)
+ 	Percentile (%)	85.553	14.63	22.683	12.762	-	22.882
+rRNA (adenine) methyltransferase activity	FC (WS / NS)	-2.13 (0.81 / 6.92)	0.73 (4.81 / 2.49)	0.47 (6.48 / 4.39)	0.54 (6 / 3.81)	-	0.17 (5.32 / 4.61)
+ 	Percentile (%)	85.6	13.418	16.068	11.873	-	27.143
+catalytic activity, acting on a rRNA	FC (WS / NS)	-2.13 (0.81 / 6.92)	0.65 (6.95 / 4.08)	0.23 (9.68 / 8.09)	0.43 (8.03 / 5.73)	-	0.24 (6.38 / 5.26)
+ 	Percentile (%)	85.647	14.645	22.705	13.778	-	22.907
+copper ion binding	FC (WS / NS)	-2.2 (0 / 3.58)	0.15 (5.78 / 5.11)	0.02 (9.99 / 9.81)	-	-0.21 (-8.17 / -9.31)	-0.46 (3.46 / 5.15)
+ 	Percentile (%)	85.694	25.097	44.312	-	65.772	83.684
+RNA methyltransferase activity	FC (WS / NS)	-2.3 (0.81 / 7.95)	0.61 (8.26 / 5.08)	0.15 (11.5 / 10.25)	0.34 (8.15 / 6.25)	-	0.16 (7.18 / 6.33)
+ 	Percentile (%)	85.741	15.002	27.512	16.571	-	28.095
+glycerophosphodiester phosphodiesterase activity	FC (WS / NS)	-2.32 (0 / 4)	-0.35 (4.46 / 5.95)	-0.47 (4.46 / 6.58)	-0.46 (4.46 / 6.49)	-	-0.52 (4.39 / 6.75)
+ 	Percentile (%)	85.882	65.165	85.008	78.19	-	84.862
+mannosyl-glycoprotein endo-beta-N-acetylglucosaminidase activity	FC (WS / NS)	-2.32 (0 / 4)	-	0.16 (5.25 / 4.58)	-	-	0.19 (4.25 / 3.61)
+ 	Percentile (%)	86.116	-	26.574	-	-	26.09
+phosphoric diester hydrolase activity	FC (WS / NS)	-2.33 (0.81 / 8.11)	-0.34 (5.52 / 7.26)	-0.09 (10.47 / 11.17)	-0.33 (6.04 / 7.83)	-0.05 (-6.1 / -6.28)	-0.36 (5.91 / 7.88)
+ 	Percentile (%)	86.538	65.01	75.647	74.571	51.632	81.378
+D-lysine 5,6-aminomutase activity	FC (WS / NS)	-2.37 (0 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	86.585	-	-	-	-	-
+glutamine-tRNA ligase activity	FC (WS / NS)	-2.5 (0 / 4.64)	0.27 (4.09 / 3.23)	-0.01 (6.77 / 6.81)	-	-	0.12 (4.52 / 4.08)
+ 	Percentile (%)	86.726	21.478	66.812	-	-	36.241
+2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase activity	FC (WS / NS)	-2.5 (0 / 4.64)	-0.8 (1 / 2.49)	0.41 (4.52 / 3.17)	-	-0.57 (-7.17 / -10.19)	-1.8 (0 / 2.49)
+ 	Percentile (%)	86.82	72.853	16.8	-	86.584	97.794
+N-succinyltransferase activity	FC (WS / NS)	-2.5 (0 / 4.64)	-0.58 (2 / 3.49)	0.13 (6.11 / 5.49)	-	-0.66 (-6.17 / -9.19)	-1.8 (0 / 2.49)
+ 	Percentile (%)	86.914	70.057	29	-	89.268	97.895
+pyroglutamyl-peptidase activity	FC (WS / NS)	-2.5 (0 / 4.64)	-	-0.03 (3.7 / 3.81)	-	-	0 (3.7 / 3.71)
+ 	Percentile (%)	86.961	-	72.19	-	-	59.073
+ADP-dependent NAD(P)H-hydrate dehydratase activity	FC (WS / NS)	-2.5 (0 / 4.64)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-0.69 (1 / 2.23)
+ 	Percentile (%)	87.008	31.62	63.859	-	-	88.546
+homocysteine desulfhydrase activity	FC (WS / NS)	-2.51 (0 / 4.7)	-	-	-3.05 (0 / 7.29)	-	-
+ 	Percentile (%)	87.054	-	-	99.556	-	-
+glutamate:sodium symporter activity	FC (WS / NS)	-2.58 (0 / 5)	-	-1.93 (0 / 2.81)	-2.47 (0 / 4.52)	-	-
+ 	Percentile (%)	87.242	-	96.452	94.857	-	-
+sodium:dicarboxylate symporter activity	FC (WS / NS)	-2.58 (0 / 5)	-	-1.29 (1 / 3.91)	-2.64 (0 / 5.25)	-	-
+ 	Percentile (%)	87.477	-	92.195	96.984	-	-
+protein transmembrane transporter activity	FC (WS / NS)	-2.63 (0 / 5.17)	-	-0.17 (7.92 / 9.02)	-	-	-0.16 (4.95 / 5.63)
+ 	Percentile (%)	87.57	-	79.377	-	-	71.178
+P-P-bond-hydrolysis-driven protein transmembrane transporter activity	FC (WS / NS)	-2.63 (0 / 5.17)	-	-0.23 (6.49 / 7.79)	-	-	-0.2 (4.7 / 5.55)
+ 	Percentile (%)	87.617	-	81.369	-	-	73.759
+RNA strand annealing activity	FC (WS / NS)	-2.63 (0 / 5.17)	-2.08 (0 / 3.23)	-	-2 (0 / 3)	-	-
+ 	Percentile (%)	87.664	91.489	-	90.095	-	-
+RNA strand-exchange activity	FC (WS / NS)	-2.63 (0 / 5.17)	-2.08 (0 / 3.23)	-	-2 (0 / 3)	-	-
+ 	Percentile (%)	87.711	91.52	-	90.127	-	-
+annealing activity	FC (WS / NS)	-2.63 (0 / 5.17)	-2.13 (0 / 3.36)	-	-2.32 (0 / 4)	-	-
+ 	Percentile (%)	87.758	91.738	-	92.794	-	-
+macromolecule transmembrane transporter activity	FC (WS / NS)	-2.63 (0 / 5.21)	-0.03 (3.81 / 3.91)	-0.14 (8.73 / 9.75)	-	-	-0.15 (5 / 5.66)
+ 	Percentile (%)	87.852	54.325	78.393	-	-	70.827
+succinate dehydrogenase (ubiquinone) activity	FC (WS / NS)	-2.72 (0 / 5.58)	1.58 (2 / 0)	-0.02 (9.12 / 9.29)	-0.92 (2.32 / 5.29)	-0.42 (-5.41 / -6.88)	-0.65 (3.91 / 6.69)
+ 	Percentile (%)	87.946	3.743	71	83.937	82.016	87.644
+glycerol-3-phosphate dehydrogenase (quinone) activity	FC (WS / NS)	-2.73 (0 / 5.61)	-2.08 (0 / 3.23)	-1.2 (2.58 / 7.23)	-1.76 (1 / 5.78)	-	-1.24 (1 / 3.71)
+ 	Percentile (%)	88.274	91.334	91.943	89.46	-	94.486
+methylmalonate-semialdehyde dehydrogenase (acylating) activity	FC (WS / NS)	-2.73 (0 / 5.61)	-	-0.1 (6.83 / 7.39)	-	-	-
+ 	Percentile (%)	88.321	-	76.539	-	-	-
+oxidoreductase activity, acting on the CH-OH group of donors, quinone or similar compound as acceptor	FC (WS / NS)	-2.73 (0 / 5.61)	-2.39 (0 / 4.23)	-1.3 (3.17 / 9.26)	-1.27 (2 / 6.23)	-	-1.24 (1 / 3.71)
+ 	Percentile (%)	88.415	93.244	92.241	87.206	-	94.536
+sn-glycerol-3-phosphate:ubiquinone oxidoreductase activity	FC (WS / NS)	-2.73 (0 / 5.61)	-	-1.35 (2 / 6.64)	-2.63 (0 / 5.17)	-	-
+ 	Percentile (%)	88.555	-	92.515	96.921	-	-
+sn-glycerol-3-phosphate:ubiquinone-8 oxidoreductase activity	FC (WS / NS)	-2.73 (0 / 5.61)	-	-1.73 (1 / 5.64)	-2.37 (0 / 4.17)	-	-
+ 	Percentile (%)	88.602	-	95.193	93.46	-	-
+secondary active p-aminobenzoyl-glutamate transmembrane transporter activity	FC (WS / NS)	-2.79 (0 / 5.91)	-	-	-2.32 (0 / 4)	-	-
+ 	Percentile (%)	88.884	-	-	92.508	-	-
+oligopeptide transmembrane transporter activity	FC (WS / NS)	-2.79 (0 / 5.91)	-0.44 (2 / 3.08)	-	-2.18 (1 / 8.07)	-	-
+ 	Percentile (%)	89.071	67.169	-	91.238	-	-
+dipeptide transmembrane transporter activity	FC (WS / NS)	-2.79 (0 / 5.91)	-	-	-3.03 (0 / 7.15)	-	-
+ 	Percentile (%)	89.165	-	-	99.429	-	-
+modified amino acid transmembrane transporter activity	FC (WS / NS)	-2.79 (0 / 5.91)	-	-1 (0 / 1)	-0.07 (4 / 4.25)	-	-
+ 	Percentile (%)	89.259	-	91.119	58.063	-	-
+3'-5'-exoribonuclease activity	FC (WS / NS)	-2.81 (0 / 6)	-0.15 (6.46 / 7.25)	-0.15 (6.49 / 7.34)	-	0.01 (-11.77 / -11.72)	-
+ 	Percentile (%)	89.353	59.093	78.737	-	45.25	-
+butyryl-CoA dehydrogenase activity	FC (WS / NS)	-2.81 (0 / 6)	-	-	-1.62 (2 / 8.2)	-	-1.69 (2 / 8.68)
+ 	Percentile (%)	89.4	-	-	89.079	-	97.569
+2',3'-cyclic-nucleotide 2'-phosphodiesterase activity	FC (WS / NS)	-2.81 (0 / 6)	-2.08 (0 / 3.23)	-0.17 (3.58 / 4.17)	-1.2 (1 / 3.58)	-0.1 (-10.65 / -11.36)	-1.17 (1 / 3.49)
+ 	Percentile (%)	89.447	91.412	79.515	86.54	57.143	94.311
+tRNA nucleotidyltransferase activity	FC (WS / NS)	-2.81 (0 / 6)	-0.32 (2.58 / 3.49)	-0.35 (2.58 / 3.58)	-	-	-0.31 (2.81 / 3.71)
+ 	Percentile (%)	89.493	64.513	83.566	-	-	77.043
+oxidoreductase activity, acting on the CH-CH group of donors, with a flavin as acceptor	FC (WS / NS)	-2.81 (0 / 6)	-	-	-1.35 (3 / 9.21)	-	-1.69 (2 / 8.68)
+ 	Percentile (%)	89.634	-	-	87.683	-	97.594
+double-stranded RNA binding	FC (WS / NS)	-2.84 (0 / 6.17)	-2.54 (0 / 4.81)	0.06 (4.81 / 4.58)	-1.55 (1 / 4.86)	-	0.42 (5.17 / 3.61)
+ 	Percentile (%)	89.681	93.757	37.24	88.635	-	15.439
+single-stranded RNA binding	FC (WS / NS)	-2.84 (0 / 6.17)	-2.54 (0 / 4.81)	0 (2.32 / 2.32)	-0.14 (7.77 / 8.68)	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	89.728	93.772	53.742	66.032	-	91.579
+3 iron, 4 sulfur cluster binding	FC (WS / NS)	-2.87 (0 / 6.32)	-0.05 (4.52 / 4.71)	-0.06 (8.2 / 8.56)	-	-0.13 (-7.32 / -7.93)	-0.29 (4.17 / 5.33)
+ 	Percentile (%)	89.822	55.459	74.067	-	59.971	76.291
+phosphoprotein phosphatase activity	FC (WS / NS)	-2.88 (0 / 6.34)	-1.08 (1 / 3.23)	0.4 (8.19 / 5.95)	0.57 (6.27 / 3.91)	-	0.21 (5.61 / 4.71)
+ 	Percentile (%)	89.869	80.898	16.915	11.651	-	24.286
+protein serine/threonine phosphatase activity	FC (WS / NS)	-2.88 (0 / 6.34)	-	0.79 (4.75 / 2.32)	0.62 (5.64 / 3.32)	-	0.47 (4.86 / 3.23)
+ 	Percentile (%)	89.916	-	13.207	10.952	-	13.784
+galactose transmembrane transporter activity	FC (WS / NS)	-2.88 (0 / 6.34)	-2.66 (0 / 5.33)	-	-2.71 (0 / 5.55)	-	-1.42 (1.58 / 5.93)
+ 	Percentile (%)	89.962	96.894	-	97.683	-	96.09
+hexose transmembrane transporter activity	FC (WS / NS)	-2.88 (0 / 6.34)	0.12 (8.27 / 7.55)	-2.63 (0 / 5.17)	0.09 (7.34 / 6.85)	-	-0.12 (5.67 / 6.23)
+ 	Percentile (%)	90.009	33.794	98.878	34.698	-	69.499
+glycine reductase activity	FC (WS / NS)	-2.88 (0 / 6.34)	-1.97 (0 / 2.91)	-1.37 (0 / 1.58)	-2.81 (0 / 6.02)	-	-2.77 (0 / 5.81)
+ 	Percentile (%)	90.056	90.651	92.996	98.762	-	99.825
+copper-exporting ATPase activity	FC (WS / NS)	-2.91 (0 / 6.51)	-	-0.02 (6.09 / 6.19)	-	-	0.16 (5.78 / 5.08)
+ 	Percentile (%)	90.197	-	70.451	-	-	28.02
+copper ion transmembrane transporter activity	FC (WS / NS)	-2.91 (0 / 6.51)	-1.32 (0 / 1.49)	0.02 (8.81 / 8.68)	0.37 (6.63 / 4.91)	-	0.16 (5.78 / 5.08)
+ 	Percentile (%)	90.244	83.398	45.937	15.429	-	28.045
+divalent inorganic cation transmembrane transporter activity	FC (WS / NS)	-2.91 (0 / 6.51)	-1.17 (1 / 3.49)	0.06 (10.46 / 9.98)	0.43 (5.61 / 3.91)	-	0.15 (5.93 / 5.26)
+ 	Percentile (%)	90.291	81.441	36.255	13.683	-	29.975
+dicarboxylic acid transmembrane transporter activity	FC (WS / NS)	-2.91 (0 / 6.52)	-0.49 (2 / 3.23)	-0.9 (2.58 / 5.7)	-1.56 (1.58 / 6.63)	-	-0.6 (1.58 / 2.91)
+ 	Percentile (%)	90.338	68.101	87.915	88.667	-	87.143
+ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism	FC (WS / NS)	-2.91 (0 / 6.52)	0.65 (2 / 0.91)	0.03 (11.83 / 11.59)	0 (8.33 / 8.31)	0.62 (-4.27 / -3.12)	0.2 (7.06 / 6.01)
+ 	Percentile (%)	90.432	14.303	43.145	51.206	5.801	24.762
+amide transmembrane transporter activity	FC (WS / NS)	-2.92 (0 / 6.58)	-0.41 (3.58 / 5.08)	-0.2 (8.71 / 10.19)	-2.18 (1 / 8.07)	-	-0.19 (5.13 / 5.99)
+ 	Percentile (%)	90.619	66.221	80.522	91.27	-	73.434
+peptide transmembrane transporter activity	FC (WS / NS)	-2.92 (0 / 6.58)	-0.42 (3 / 4.36)	-0.17 (7.93 / 9.02)	-2.18 (1 / 8.07)	-	-0.16 (4.95 / 5.63)
+ 	Percentile (%)	90.666	66.392	79.309	91.302	-	71.228
+porin activity	FC (WS / NS)	-2.93 (0 / 6.63)	-0.76 (3.46 / 6.55)	-0.34 (6.32 / 8.25)	-0.15 (8.13 / 9.13)	-	-0.73 (3.46 / 6.38)
+ 	Percentile (%)	90.994	72.325	83.314	66.571	-	88.972
+wide pore channel activity	FC (WS / NS)	-2.93 (0 / 6.63)	-0.65 (4.46 / 7.55)	-0.3 (7.32 / 9.25)	-0.14 (9.13 / 10.13)	-	-0.73 (3.46 / 6.38)
+ 	Percentile (%)	91.041	71.114	82.811	65.619	-	88.997
+regulatory region nucleic acid binding	FC (WS / NS)	-2.93 (0 / 6.64)	-0.71 (4.25 / 7.58)	-0.04 (5.58 / 5.75)	0.11 (8.4 / 7.73)	-	0.28 (4.46 / 3.49)
+ 	Percentile (%)	91.088	71.843	72.625	31.587	-	20.251
+aldose 1-epimerase activity	FC (WS / NS)	-2.93 (0 / 6.64)	-	-0.2 (2.32 / 2.81)	-	-	-0.8 (1 / 2.49)
+ 	Percentile (%)	91.135	-	80.27	-	-	89.424
+phosphoenolpyruvate carboxykinase (GTP) activity	FC (WS / NS)	-2.93 (0 / 6.64)	-	-2.27 (0 / 3.81)	-2.23 (0 / 3.7)	-	-2.24 (0 / 3.71)
+ 	Percentile (%)	91.182	-	97.459	91.746	-	99.223
+L-malate dehydrogenase activity	FC (WS / NS)	-2.93 (0 / 6.64)	-0.5 (3.58 / 5.49)	0.19 (10.17 / 8.79)	0.11 (7.92 / 7.28)	-0.84 (-3.5 / -5.47)	-0.04 (6.36 / 6.55)
+ 	Percentile (%)	91.229	68.271	25.223	31.333	92.023	63.484
+transcription regulatory region DNA binding	FC (WS / NS)	-2.93 (0 / 6.64)	-0.8 (3.7 / 7.19)	-0.02 (5 / 5.09)	0.11 (7.77 / 7.1)	-	0.28 (4.46 / 3.49)
+ 	Percentile (%)	91.276	72.791	70.611	30.286	-	20.276
+butyrate-acetoacetate CoA-transferase activity	FC (WS / NS)	-2.94 (0 / 6.67)	-	-	-2.97 (0 / 6.83)	-	-
+ 	Percentile (%)	91.323	-	-	99.206	-	-
+UDP-galactopyranose mutase activity	FC (WS / NS)	-2.98 (0 / 6.89)	0.07 (1 / 0.91)	0.42 (3 / 2)	-	-	0.37 (3.17 / 2.23)
+ 	Percentile (%)	91.37	36.947	16.571	-	-	17.318
+tRNA (adenine-C2-)-methyltransferase activity	FC (WS / NS)	-2.99 (0 / 6.92)	1 (1 / 0)	1 (3 / 1)	-	-	1.07 (3 / 0.91)
+ 	Percentile (%)	91.51	8.231	8.629	-	-	6.967
+tRNA (adenine) methyltransferase activity	FC (WS / NS)	-2.99 (0 / 6.92)	1.58 (2 / 0)	0.74 (4 / 2)	-	-	1.07 (3 / 0.91)
+ 	Percentile (%)	91.557	3.991	13.504	-	-	6.992
+oxidoreductase activity, acting on X-H and Y-H to form an X-Y bond	FC (WS / NS)	-2.99 (0 / 6.92)	-2.46 (0 / 4.49)	-2.29 (0 / 3.91)	-1.05 (3.58 / 8.52)	-	-1.52 (2 / 7.58)
+ 	Percentile (%)	91.651	93.508	97.734	85.111	-	96.19
+oxidoreductase activity, acting on X-H and Y-H to form an X-Y bond, with a disulfide as acceptor	FC (WS / NS)	-2.99 (0 / 6.92)	-2.29 (0 / 3.91)	-2.2 (0 / 3.58)	-1.16 (3 / 7.93)	-	-1.52 (2 / 7.58)
+ 	Percentile (%)	91.698	92.825	97.345	86.317	-	96.216
+rRNA (adenine-C2-)-methyltransferase activity	FC (WS / NS)	-2.99 (0 / 6.92)	1 (1 / 0)	1 (3 / 1)	-	-	1.07 (3 / 0.91)
+ 	Percentile (%)	91.745	11.135	11.765	-	-	7.143
+tRNA methyltransferase activity	FC (WS / NS)	-3 (0 / 6.99)	0.83 (6.54 / 3.23)	0.14 (9.52 / 8.52)	-	-	0.11 (4.91 / 4.49)
+ 	Percentile (%)	91.932	12.704	28.038	-	-	38.045
+acetolactate synthase activity	FC (WS / NS)	-3.07 (0 / 7.4)	0.14 (0 / -0.09)	1.29 (7.79 / 2.58)	1.52 (4.75 / 1)	-	0.6 (4.91 / 2.91)
+ 	Percentile (%)	92.12	25.92	7.691	5.048	-	11.404
+3-deoxy-manno-octulosonate cytidylyltransferase activity	FC (WS / NS)	-3.07 (0 / 7.4)	0.14 (0 / -0.09)	0.16 (3 / 2.58)	-	-	-0.08 (3 / 3.23)
+ 	Percentile (%)	92.167	27.132	26.871	-	-	66.591
+methionine synthase activity	FC (WS / NS)	-3.07 (0 / 7.4)	-2.27 (0 / 3.81)	-1.61 (1 / 5.09)	-1.17 (1.58 / 4.81)	-	-0.26 (3.17 / 3.99)
+ 	Percentile (%)	92.214	92.639	94.759	86.413	-	75.539
+5-methyltetrahydrofolate-dependent methyltransferase activity	FC (WS / NS)	-3.07 (0 / 7.4)	-2.54 (0 / 4.81)	-1.24 (2 / 6.09)	-0.93 (2.58 / 5.81)	-	-0.26 (3.17 / 3.99)
+ 	Percentile (%)	92.355	93.741	91.989	84.063	-	75.564
+cytidylyltransferase activity	FC (WS / NS)	-3.07 (0 / 7.41)	-0.93 (0 / 0.91)	0.16 (8.85 / 7.79)	2.11 (3.32 / 0)	-0.34 (-8.95 / -11.05)	0.2 (4.75 / 3.99)
+ 	Percentile (%)	92.402	78.77	26.505	3.302	77.592	24.461
+S-methyltransferase activity	FC (WS / NS)	-3.08 (0 / 7.43)	-2.69 (0 / 5.46)	-0.56 (5.36 / 8.38)	-0.74 (3.17 / 5.95)	-	-0.17 (4.58 / 5.3)
+ 	Percentile (%)	92.448	97.003	85.992	82.127	-	72.982
+tryptophanase activity	FC (WS / NS)	-3.1 (0 / 7.55)	-	-2.28 (1 / 8.74)	-3.07 (0 / 7.4)	-	-3.1 (0 / 7.59)
+ 	Percentile (%)	92.636	-	97.642	99.619	-	99.975
+cyclic-nucleotide phosphodiesterase activity	FC (WS / NS)	-3.11 (-0.19 / 6)	-2.39 (0 / 4.23)	-0.04 (5.91 / 6.09)	-0.9 (2 / 4.58)	-0.11 (-9.65 / -10.36)	-0.47 (2.32 / 3.61)
+ 	Percentile (%)	92.683	93.213	72.671	83.492	58.086	83.709
+dethiobiotin synthase activity	FC (WS / NS)	-3.11 (0 / 7.61)	-1.69 (0 / 2.23)	-1.84 (0 / 2.58)	-	-	-
+ 	Percentile (%)	92.73	88.212	95.399	-	-	-
+hydroxymethylbilane synthase activity	FC (WS / NS)	-3.14 (0 / 7.81)	0.8 (3.32 / 1.49)	0.79 (3.46 / 1.58)	-	-	0.17 (3.58 / 3.08)
+ 	Percentile (%)	92.777	13.201	13.252	-	-	27.318
+glutaconate CoA-transferase activity	FC (WS / NS)	-3.14 (0 / 7.85)	-	-	-3.19 (0 / 8.12)	-	-
+ 	Percentile (%)	93.011	-	-	99.841	-	-
+adenosylmethionine-8-amino-7-oxononanoate transaminase activity	FC (WS / NS)	-3.17 (0 / 8.02)	-2.17 (0 / 3.49)	-0.48 (2.58 / 4)	-0.98 (1.58 / 4.09)	-	-1.37 (1 / 4.15)
+ 	Percentile (%)	93.34	91.893	85.122	84.413	-	95.965
+oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	FC (WS / NS)	-3.18 (0 / 8.09)	0.21 (8.55 / 7.26)	0.02 (10.59 / 10.44)	-1.23 (1 / 3.7)	0.35 (-6.21 / -5.08)	-0.29 (4.52 / 5.74)
+ 	Percentile (%)	93.386	23.451	46.212	86.984	10.66	76.216
+phosphoribosylformylglycinamidine cyclo-ligase activity	FC (WS / NS)	-3.2 (0 / 8.17)	0.42 (3.32 / 2.23)	-0.05 (4.7 / 4.91)	-	-	0.12 (3.58 / 3.23)
+ 	Percentile (%)	93.433	17.332	73.61	-	-	36.692
+DNA ligase (NAD+) activity	FC (WS / NS)	-3.2 (0 / 8.17)	-0.32 (3.46 / 4.55)	-0.38 (3.46 / 4.81)	-0.33 (3.7 / 4.91)	-	-0.33 (4 / 5.3)
+ 	Percentile (%)	93.48	63.581	84.138	74.698	-	80.852
+dihydrolipoyllysine-residue acetyltransferase activity	FC (WS / NS)	-3.2 (0 / 8.17)	-0.44 (2 / 3.08)	-0.01 (5.21 / 5.25)	-	-	-0.1 (4.39 / 4.76)
+ 	Percentile (%)	93.527	67.138	67.407	-	-	67.995
+S-acetyltransferase activity	FC (WS / NS)	-3.2 (0 / 8.17)	0.09 (4.39 / 4.08)	-0.01 (6.21 / 6.25)	-	-	-0.1 (4.39 / 4.76)
+ 	Percentile (%)	93.574	35.223	67.041	-	-	68.02
+dihydrolipoamide S-acyltransferase activity	FC (WS / NS)	-3.2 (0 / 8.17)	-0.34 (3 / 4.08)	-0.01 (6.21 / 6.25)	-	-	-0.1 (4.39 / 4.76)
+ 	Percentile (%)	93.621	65.057	67.086	-	-	68.045
+NADH dehydrogenase (ubiquinone) activity	FC (WS / NS)	-3.21 (0 / 8.23)	-0.89 (2 / 4.55)	0.11 (10.03 / 9.24)	-1.13 (1.58 / 4.64)	-0.3 (-9.01 / -10.88)	-0.31 (4.17 / 5.43)
+ 	Percentile (%)	93.715	73.723	31.037	86.127	75.635	77.118
+quinone binding	FC (WS / NS)	-3.21 (0 / 8.23)	-	-0.22 (6.39 / 7.63)	-1.06 (1.58 / 4.39)	-0.21 (-8.17 / -9.31)	-1.05 (2 / 5.19)
+ 	Percentile (%)	93.762	-	81.231	85.206	65.845	93.96
+NADH dehydrogenase (quinone) activity	FC (WS / NS)	-3.21 (0 / 8.23)	-0.71 (3 / 5.55)	0.1 (11.03 / 10.24)	-0.89 (2.58 / 5.64)	-0.34 (-8.01 / -9.88)	-0.31 (4.25 / 5.49)
+ 	Percentile (%)	93.809	71.952	31.907	83.429	77.81	76.642
+dihydrolipoyllysine-residue succinyltransferase activity	FC (WS / NS)	-3.22 (0 / 8.34)	-1.8 (0 / 2.49)	-0.01 (5.21 / 5.25)	-2.57 (0 / 4.95)	-	-
+ 	Percentile (%)	93.856	88.865	67.384	96.063	-	-
+S-succinyltransferase activity	FC (WS / NS)	-3.22 (0 / 8.34)	-2.17 (0 / 3.49)	-0.01 (6.21 / 6.25)	-1.8 (1 / 5.95)	-	-
+ 	Percentile (%)	93.902	91.971	67.063	89.714	-	-
+aminomethyltransferase activity	FC (WS / NS)	-3.23 (0 / 8.4)	-1.8 (0 / 2.49)	-1.93 (0 / 2.81)	-	-	-2.03 (0 / 3.08)
+ 	Percentile (%)	94.137	88.849	96.338	-	-	98.772
+succinyltransferase activity	FC (WS / NS)	-3.24 (0 / 8.45)	-0.64 (3.17 / 5.49)	0.02 (8.6 / 8.5)	-1.02 (2.81 / 6.7)	-0.73 (-5.59 / -8.61)	-0.62 (2 / 3.61)
+ 	Percentile (%)	94.325	70.927	47.173	84.889	90.355	87.368
+thioredoxin-disulfide reductase activity	FC (WS / NS)	-3.26 (0 / 8.56)	-1.32 (0 / 1.49)	0.26 (5.17 / 4.17)	-0.32 (4.75 / 6.19)	-	-0.22 (4.91 / 5.86)
+ 	Percentile (%)	94.794	83.32	21.744	74.286	-	74.236
+uridine phosphorylase activity	FC (WS / NS)	-3.27 (0 / 8.66)	-1.8 (0 / 2.49)	-2.06 (0 / 3.17)	-	-	-2.56 (0 / 4.91)
+ 	Percentile (%)	94.934	88.911	96.91	-	-	99.499
+oxoglutarate dehydrogenase (succinyl-transferring) activity	FC (WS / NS)	-3.29 (0 / 8.78)	-2.32 (0 / 3.99)	-2.35 (0 / 4.09)	-2.39 (0 / 4.25)	-	-0.44 (3 / 4.43)
+ 	Percentile (%)	94.981	92.918	97.871	93.556	-	83.283
+mechanosensitive ion channel activity	FC (WS / NS)	-3.29 (0 / 8.81)	-0.71 (1.58 / 3.23)	-	-	-	-0.3 (3.46 / 4.49)
+ 	Percentile (%)	95.028	71.875	-	-	-	76.516
+porphobilinogen synthase activity	FC (WS / NS)	-3.3 (0 / 8.87)	-1.8 (0 / 2.49)	0.35 (4.32 / 3.17)	-	-	0.29 (4.32 / 3.36)
+ 	Percentile (%)	95.122	88.88	18.563	-	-	20.05
+cyclo-ligase activity	FC (WS / NS)	-3.31 (0 / 8.92)	0.03 (4.32 / 4.23)	-0.14 (6.29 / 7.02)	-0.21 (6.58 / 7.75)	-	0.09 (3.91 / 3.61)
+ 	Percentile (%)	95.169	43.454	78.164	68.984	-	39.173
+neutral amino acid transmembrane transporter activity	FC (WS / NS)	-3.32 (0 / 9)	-1.32 (0 / 1.49)	-1.4 (2.32 / 7.77)	-0.03 (5.95 / 6.11)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.216	82.373	93.454	55.46	-	99.724
+alanine:sodium symporter activity	FC (WS / NS)	-3.32 (0 / 9)	-	-2.68 (0 / 5.43)	-2.58 (0 / 5)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.263	-	99.153	96.19	-	99.749
+alanine transmembrane transporter activity	FC (WS / NS)	-3.32 (0 / 9)	-	-1.89 (1 / 6.43)	-1.81 (1 / 6)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.31	-	96.246	89.746	-	99.774
+methylenetetrahydrofolate reductase (NAD(P)H) activity	FC (WS / NS)	-3.33 (0 / 9.05)	-2.2 (0 / 3.61)	-1.29 (1 / 3.91)	-1.32 (1 / 4)	-	-1.39 (1 / 4.23)
+ 	Percentile (%)	95.356	92.266	92.172	87.492	-	96.015
+amino acid:sodium symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	-	-1.45 (2.32 / 8.08)	-1.57 (1.58 / 6.69)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.403	-	93.477	88.921	-	99.649
+organic acid:sodium symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	-	-0.9 (4.46 / 9.21)	-1.33 (2.32 / 7.38)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.45	-	87.938	87.619	-	99.674
+amino acid:cation symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	-	-1.25 (3.17 / 8.94)	-1.31 (2.32 / 7.24)	-	-2.68 (0 / 5.4)
+ 	Percentile (%)	95.497	-	92.012	87.46	-	99.699
+symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	0.24 (7.47 / 6.15)	0.04 (15.38 / 14.93)	-0.18 (7.52 / 8.68)	-0.17 (-4.43 / -4.85)	-0.07 (5.93 / 6.26)
+ 	Percentile (%)	95.544	22.395	40.627	68.095	62.654	65.614
+solute:cation symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	0.28 (7.13 / 5.69)	0.04 (14.97 / 14.5)	-0.21 (7.08 / 8.35)	-0.16 (-4.75 / -5.18)	-0.05 (5.7 / 5.95)
+ 	Percentile (%)	95.591	20.904	39.895	69.079	61.711	64.461
+solute:sodium symporter activity	FC (WS / NS)	-3.33 (0 / 9.09)	0.03 (3 / 2.91)	-0.78 (5.36 / 9.94)	-1.22 (2.81 / 7.85)	-	-1.33 (1.58 / 5.52)
+ 	Percentile (%)	95.638	42.444	87.594	86.825	-	95.915
+N-acetylglucosamine transmembrane transporter activity	FC (WS / NS)	-3.34 (0 / 9.1)	-	-2.37 (0 / 4.17)	-2.43 (0 / 4.39)	-	-2.42 (0 / 4.36)
+ 	Percentile (%)	95.685	-	98.123	94.54	-	99.398
+oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor	FC (WS / NS)	-3.35 (0 / 9.2)	-0.43 (4.32 / 6.17)	0.06 (11.81 / 11.26)	-0.31 (5.58 / 7.15)	-0.37 (-7.43 / -9.3)	-0.34 (4.75 / 6.3)
+ 	Percentile (%)	95.826	66.579	36.027	73.873	79.333	81.128
+phosphoribosylaminoimidazolesuccinocarboxamide synthase activity	FC (WS / NS)	-3.35 (0 / 9.21)	0.1 (5 / 4.61)	0.05 (5.29 / 5.09)	-	-	0.03 (5.7 / 5.55)
+ 	Percentile (%)	95.872	34.508	39.3	-	-	50.852
+lysine 2,3-aminomutase activity	FC (WS / NS)	-3.36 (0 / 9.27)	-	-3.21 (0 / 8.28)	-3.13 (0 / 7.73)	-	-3.19 (0 / 8.13)
+ 	Percentile (%)	95.919	-	99.794	99.714	-	100
+putrescine transmembrane transporter activity	FC (WS / NS)	-3.36 (0 / 9.29)	-1.46 (1 / 4.49)	-0.5 (4 / 6.09)	-	-	-0.68 (2.58 / 4.76)
+ 	Percentile (%)	95.966	85.06	85.443	-	-	87.895
+putrescine-importing ATPase activity	FC (WS / NS)	-3.36 (0 / 9.29)	-2.13 (0 / 3.36)	-0.61 (3 / 5.09)	-	-	-0.72 (2.32 / 4.49)
+ 	Percentile (%)	96.013	91.831	86.564	-	-	88.897
+spermidine-importing ATPase activity	FC (WS / NS)	-3.36 (0 / 9.29)	-	-0.61 (3 / 5.09)	-	-	-0.72 (2.32 / 4.49)
+ 	Percentile (%)	96.06	-	86.587	-	-	88.922
+spermidine transmembrane transporter activity	FC (WS / NS)	-3.36 (0 / 9.29)	-	-0.5 (4 / 6.09)	-	-	-0.72 (2.32 / 4.49)
+ 	Percentile (%)	96.107	-	85.466	-	-	88.947
+RNA-dependent ATPase activity	FC (WS / NS)	-3.4 (0 / 9.54)	0.01 (4.86 / 4.81)	-2.61 (0 / 5.09)	-2.58 (0 / 5)	-	-0.63 (3 / 5.19)
+ 	Percentile (%)	96.154	45.318	98.856	96.127	-	87.444
+ribonuclease E activity	FC (WS / NS)	-3.4 (0 / 9.56)	-2.29 (0 / 3.91)	-	-2.41 (0 / 4.32)	-	-1.09 (1.58 / 4.49)
+ 	Percentile (%)	96.201	92.903	-	94.19	-	94.16
+superoxide dismutase activity	FC (WS / NS)	-3.41 (0 / 9.6)	-1.32 (1 / 3.99)	0.21 (8.72 / 7.39)	0.23 (7 / 5.83)	-	0.24 (7.26 / 5.97)
+ 	Percentile (%)	96.248	84.718	23.919	21.841	-	22.306
+oxidoreductase activity, acting on superoxide radicals as acceptor	FC (WS / NS)	-3.41 (0 / 9.6)	-1.01 (2 / 5.03)	0.19 (9.8 / 8.44)	0.22 (8.3 / 6.99)	-	0.23 (7.44 / 6.19)
+ 	Percentile (%)	96.295	80.292	25.132	22.413	-	23.158
+hydrolase activity, acting on acid carbon-carbon bonds	FC (WS / NS)	-3.42 (0 / 9.71)	-2.29 (0 / 3.91)	-0.89 (2.32 / 5.17)	-2.64 (0 / 5.25)	-	-0.76 (1.58 / 3.36)
+ 	Percentile (%)	96.576	92.809	87.869	96.952	-	89.098
+hydrolase activity, acting on acid carbon-carbon bonds, in ketonic substances	FC (WS / NS)	-3.42 (0 / 9.71)	-1.97 (0 / 2.91)	-1 (1.58 / 4.17)	-2.48 (0 / 4.58)	-	-0.76 (1.58 / 3.36)
+ 	Percentile (%)	96.623	90.604	89.815	95.111	-	89.123
+1-deoxy-D-xylulose-5-phosphate reductoisomerase activity	FC (WS / NS)	-3.43 (0 / 9.81)	-0.04 (2.81 / 2.91)	-0.1 (3.17 / 3.46)	-	-	0.07 (3.58 / 3.36)
+ 	Percentile (%)	96.811	54.822	76.356	-	-	41.729
+NADPH binding	FC (WS / NS)	-3.43 (0 / 9.81)	0.32 (6.32 / 4.86)	0.26 (5.7 / 4.58)	-	-	0.11 (3.7 / 3.36)
+ 	Percentile (%)	96.857	19.568	21.424	-	-	37.895
+orotidine-5'-phosphate decarboxylase activity	FC (WS / NS)	-3.48 (0 / 10.18)	-1.05 (1.58 / 4.36)	0 (6.36 / 6.36)	-0.72 (2.32 / 4.46)	-	-0.54 (3 / 4.81)
+ 	Percentile (%)	97.045	80.773	54.406	81.873	-	86.366
+DNA ligase activity	FC (WS / NS)	-3.5 (-0.19 / 8.17)	-0.26 (4.46 / 5.55)	-0.26 (5.58 / 6.91)	-0.28 (4.7 / 5.91)	-	-0.34 (4.52 / 5.97)
+ 	Percentile (%)	97.373	62.261	82.216	72.159	-	80.877
+ligase activity, forming phosphoric ester bonds	FC (WS / NS)	-3.5 (-0.19 / 8.17)	-0.24 (5.04 / 6.13)	-0.24 (6.32 / 7.64)	-0.25 (5.29 / 6.49)	-	-0.28 (4.81 / 6.03)
+ 	Percentile (%)	97.42	61.904	81.598	70.921	-	75.99
+organic cation transmembrane transporter activity	FC (WS / NS)	-3.5 (0 / 10.29)	-1.46 (1 / 4.49)	-0.36 (5.32 / 7.09)	2 (3 / 0)	-	-0.57 (3.46 / 5.63)
+ 	Percentile (%)	97.467	85.044	83.658	3.905	-	87.018
+polyamine transmembrane transporter activity	FC (WS / NS)	-3.5 (0 / 10.29)	-0.63 (3.91 / 6.62)	-0.4 (5.58 / 7.67)	-	-	-0.54 (3.81 / 5.97)
+ 	Percentile (%)	97.514	70.881	84.253	-	-	84.912
+polyamine-transporting ATPase activity	FC (WS / NS)	-3.5 (0 / 10.29)	-0.88 (2.58 / 5.58)	-0.46 (4.58 / 6.67)	-	-	-0.55 (3.7 / 5.86)
+ 	Percentile (%)	97.561	73.614	84.825	-	-	86.541
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, cytochrome as acceptor	FC (WS / NS)	-3.5 (0 / 10.31)	-	-	-2.83 (0 / 6.09)	-	-
+ 	Percentile (%)	97.608	-	-	98.825	-	-
+formate dehydrogenase (cytochrome-c-553) activity	FC (WS / NS)	-3.5 (0 / 10.31)	-	-	-2.61 (0 / 5.09)	-	-
+ 	Percentile (%)	97.655	-	-	96.73	-	-
+argininosuccinate synthase activity	FC (WS / NS)	-3.5 (0 / 10.34)	0.66 (4.52 / 2.49)	0.31 (4.81 / 3.7)	0.39 (4.86 / 3.46)	-	0.37 (4.95 / 3.61)
+ 	Percentile (%)	97.702	13.931	19.799	14.476	-	17.243
+1-pyrroline-5-carboxylate dehydrogenase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-2.37 (0 / 4.15)	-2.47 (0 / 4.52)	-2.47 (0 / 4.52)	-	-
+ 	Percentile (%)	97.749	93.105	98.444	94.698	-	-
+proline dehydrogenase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-2.37 (0 / 4.15)	-2.47 (0 / 4.52)	-2.47 (0 / 4.52)	-	-
+ 	Percentile (%)	97.795	93.136	98.489	94.73	-	-
+carbohydrate phosphatase activity	FC (WS / NS)	-3.54 (0 / 10.64)	-0.13 (6.64 / 7.39)	-0.1 (8.93 / 9.61)	-0.17 (6.78 / 7.73)	-	-0.23 (5.36 / 6.46)
+ 	Percentile (%)	98.03	58.72	76.287	67.46	-	74.787
+fructose 1,6-bisphosphate 1-phosphatase activity	FC (WS / NS)	-3.54 (0 / 10.64)	-0.19 (4.91 / 5.74)	-0.19 (6.58 / 7.65)	-0.22 (5.09 / 6.07)	-	-0.23 (5.36 / 6.46)
+ 	Percentile (%)	98.077	60.491	79.858	69.238	-	74.812
+sugar-phosphatase activity	FC (WS / NS)	-3.54 (0 / 10.64)	-0.15 (6.02 / 6.8)	-0.11 (8.22 / 8.95)	-0.18 (6.17 / 7.13)	-	-0.23 (5.36 / 6.46)
+ 	Percentile (%)	98.124	59.264	76.951	68.032	-	74.837
+3-hydroxybutyryl-CoA dehydrogenase activity	FC (WS / NS)	-3.58 (0 / 10.96)	-2.78 (0 / 5.88)	-2.82 (0 / 6.04)	-2.74 (0 / 5.7)	-	-
+ 	Percentile (%)	98.171	97.344	99.611	98.222	-	-
+asparagine-tRNA ligase activity	FC (WS / NS)	-3.64 (0 / 11.49)	-0.3 (4.39 / 5.66)	-0.34 (4.52 / 6)	-0.26 (5 / 6.21)	-	-0.21 (5.29 / 6.28)
+ 	Percentile (%)	98.265	63.286	83.383	71.524	-	74.185
+formate dehydrogenase (NAD+) activity	FC (WS / NS)	-3.65 (0 / 11.54)	-2.24 (0 / 3.71)	-0.69 (4.75 / 8.3)	-1.4 (1.58 / 5.81)	0.1 (-12.03 / -11.27)	-0.81 (3 / 6.01)
+ 	Percentile (%)	98.358	92.468	87.137	87.905	31.98	89.749
+alkyl hydroperoxide reductase activity	FC (WS / NS)	-3.65 (0 / 11.59)	-1.54 (0 / 1.91)	-	-	-	-
+ 	Percentile (%)	98.452	85.914	-	-	-	-
+imidazolonepropionase activity	FC (WS / NS)	-3.73 (0 / 12.27)	-	-0.43 (4.25 / 6.09)	-0.45 (4 / 5.83)	-	-0.5 (4.09 / 6.19)
+ 	Percentile (%)	98.593	-	84.688	78.159	-	84.361
+3-hydroxyacyl-CoA dehydrogenase activity	FC (WS / NS)	-3.74 (0 / 12.32)	-	-0.24 (6.29 / 7.6)	-2.74 (0 / 5.7)	-0.19 (-9.1 / -10.24)	-0.8 (3.17 / 6.28)
+ 	Percentile (%)	98.64	-	81.552	98.19	64.249	89.724
+NAD+ binding	FC (WS / NS)	-3.74 (0 / 12.32)	1.35 (5.36 / 1.49)	-2.03 (1 / 7.17)	-0.34 (4.81 / 6.38)	-	-1.33 (2 / 6.52)
+ 	Percentile (%)	98.687	6.523	96.864	75.683	-	95.89
+citrate (pro-3S)-lyase activity	FC (WS / NS)	-3.74 (0 / 12.36)	1.46 (4.25 / 0.91)	-0.48 (5.25 / 7.7)	-0.47 (4.52 / 6.66)	-	-0.46 (4.64 / 6.74)
+ 	Percentile (%)	98.734	5.296	85.077	78.508	-	83.559
+citrate CoA-transferase activity	FC (WS / NS)	-3.75 (0 / 12.47)	-	-0.53 (3.7 / 5.81)	-0.49 (3.81 / 5.75)	-	-0.51 (3.81 / 5.86)
+ 	Percentile (%)	98.78	-	85.763	78.952	-	84.737
+methionine gamma-lyase activity	FC (WS / NS)	-3.81 (0 / 12.98)	-3.03 (0 / 7.19)	-1.7 (1.58 / 7.39)	-3.03 (0 / 7.17)	-	-3.05 (0 / 7.3)
+ 	Percentile (%)	99.578	99.363	94.942	99.46	-	99.95
+glycerol kinase activity	FC (WS / NS)	-3.83 (0 / 13.18)	-1.32 (0 / 1.49)	-1.88 (1 / 6.36)	-1.89 (1 / 6.41)	-	-1.92 (1 / 6.58)
+ 	Percentile (%)	99.625	83.258	96.223	89.841	-	98.496
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.32)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.23 (0 / 8.37)	-	-
+ 	Percentile (%)	99.765	99.876	99.817	99.873	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.33)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.37)	-	-
+ 	Percentile (%)	99.812	99.984	99.84	99.937	-	-
+acyl-CoA dehydrogenase activity	FC (WS / NS)	-3.85 (0 / 13.42)	-0.69 (1 / 2.23)	-1.01 (4.58 / 10.29)	-1.41 (2.58 / 8.54)	-	-1.1 (3.58 / 8.81)
+ 	Percentile (%)	99.906	71.533	91.531	88.127	-	94.185
+pyruvate, phosphate dikinase activity	FC (WS / NS)	-3.9 (0 / 13.88)	-	-0.23 (6.15 / 7.39)	-1.16 (2.58 / 6.99)	0.07 (-7.82 / -7.49)	-0.98 (3.17 / 7.23)
+ 	Percentile (%)	99.953	-	81.346	86.286	35.533	93.584
+CoA-transferase activity	FC (WS / NS)	-4.02 (0 / 15.26)	-0.09 (9.02 / 9.69)	-0.95 (6.13 / 12.75)	-0.93 (4.86 / 10.15)	-	-0.91 (4.64 / 9.63)
+ 	Percentile (%)	100	57.167	88.075	84.095	-	91.303

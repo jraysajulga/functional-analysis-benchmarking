@@ -1,4 +1,4 @@
-GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	-	-	-	-
  	Percentile (%)	0.098	-	-	-	-	-
 negative regulation of purine nucleobase metabolic process	FC (WS / NS)	2.43 (4.39 / 0)	-	0.1 (5.75 / 5.29)	-	-	-
@@ -19,3 +19,2289 @@ leucine import across plasma membrane	FC (WS / NS)	2.27 (3.81 / 0)	-	-	-	-	-
  	Percentile (%)	2.213	-	-	-	-	-
 pyruvate catabolic process	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
  	Percentile (%)	2.312	-	-	-	-	-
+L-proline biosynthetic process	FC (WS / NS)	2.23 (3.7 / 0)	-	1.15 (4.75 / 1.58)	0 (0 / 0)	-	0.68 (4.17 / 2.23)
+ 	Percentile (%)	2.558	-	7.088	45.461	-	9.169
+poly(ribitol phosphate) teichoic acid biosynthetic process	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
+ 	Percentile (%)	2.656	-	-	-	-	-
+glycine betaine transport	FC (WS / NS)	2.2 (3.58 / 0)	-	0.63 (5.17 / 3)	-	-	0.35 (3.46 / 2.49)
+ 	Percentile (%)	2.902	-	12.404	-	-	16.397
+hexitol metabolic process	FC (WS / NS)	2.11 (3.32 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.197	-	-	-	-	-
+urea catabolic process	FC (WS / NS)	2.11 (3.32 / 0)	1.18 (3.32 / 0.91)	2.56 (4.91 / 0)	-	-	-
+ 	Percentile (%)	3.345	5.684	0.334	-	-	-
+acetoin biosynthetic process	FC (WS / NS)	2.11 (3.32 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.394	-	-	-	-	-
+defense response to oomycetes	FC (WS / NS)	2.06 (3.17 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.542	-	-	-	-	-
+S-adenosylmethioninamine biosynthetic process	FC (WS / NS)	2.06 (3.17 / 0)	-	2.06 (3.17 / 0)	-	-	1.36 (3.91 / 0.91)
+ 	Percentile (%)	3.738	-	2.34	-	-	3.524
+lactate biosynthetic process	FC (WS / NS)	2.06 (3.17 / 0)	-	-	-	-	-
+ 	Percentile (%)	3.935	-	-	-	-	-
+positive regulation of apoptotic process	FC (WS / NS)	2.06 (3.17 / 0)	-	-1.84 (0 / 2.58)	-	-	-
+ 	Percentile (%)	4.083	-	96.255	-	-	-
+cellular response to redox state	FC (WS / NS)	2.06 (3.17 / 0)	-	-	-	-	-
+ 	Percentile (%)	4.181	-	-	-	-	-
+lysine biosynthetic process via diaminopimelate, diaminopimelate-aminotransferase pathway	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
+ 	Percentile (%)	4.476	-	-	-	-	-
+D-methionine transport	FC (WS / NS)	2 (3 / 0)	2.07 (2.81 / -0.09)	0.03 (4 / 3.91)	-	-	-
+ 	Percentile (%)	4.525	1.314	40.622	-	-	-
+organic phosphonate transport	FC (WS / NS)	1.93 (2.81 / 0)	0 (0 / 0)	-2.45 (0 / 4.46)	-	-	-
+ 	Percentile (%)	4.624	49.606	98.529	-	-	-
+stringent response	FC (WS / NS)	1.93 (2.81 / 0)	0.27 (3.7 / 2.91)	-	-	-	-
+ 	Percentile (%)	4.673	17.602	-	-	-	-
+activation of protein kinase activity	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
+ 	Percentile (%)	4.771	-	-	-	-	-
+xylan metabolic process	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
+ 	Percentile (%)	4.82	-	-	-	-	-
+positive regulation of reactive oxygen species metabolic process	FC (WS / NS)	1.93 (2.81 / 0)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	5.116	9.386	-	-	-	-
+enzyme-directed rRNA pseudouridine synthesis	FC (WS / NS)	1.58 (5 / 1)	1.51 (1.58 / -0.09)	-	-	-	-
+ 	Percentile (%)	5.558	4.418	-	-	-	-
+phenylalanine transport	FC (WS / NS)	1.47 (4.52 / 1)	-	-	-	-	-
+ 	Percentile (%)	5.853	-	-	-	-	-
+DNA replication initiation	FC (WS / NS)	1.45 (4.46 / 1)	0.88 (4.95 / 2.23)	2.32 (4 / 0)	-	-	0.26 (4.52 / 3.61)
+ 	Percentile (%)	5.952	9.649	1.07	-	-	20.209
+pantothenate biosynthetic process from valine	FC (WS / NS)	1.37 (4.17 / 1)	-	-	-	-	-
+ 	Percentile (%)	6.247	-	-	-	-	-
+D-tagatose 6-phosphate catabolic process	FC (WS / NS)	1.33 (5.49 / 1.58)	-	1.3 (5.36 / 1.58)	2.9 (6.46 / 0)	-	1.36 (6.44 / 1.91)
+ 	Percentile (%)	6.345	-	6.854	2.469	-	3.596
+inorganic anion transport	FC (WS / NS)	1.29 (3.91 / 1)	-0.42 (2.58 / 3.81)	0.13 (9.06 / 8.22)	-	-0.2 (-4.72 / -5.26)	0.13 (4.81 / 4.3)
+ 	Percentile (%)	6.493	70.647	26.747	-	65.764	33.873
+peptidyl-tyrosine phosphorylation	FC (WS / NS)	1.29 (3.91 / 1)	-2.59 (0 / 5.03)	-	-	-	-
+ 	Percentile (%)	6.542	94.722	-	-	-	-
+phosphate ion transmembrane transport	FC (WS / NS)	1.29 (3.91 / 1)	-0.69 (1 / 2.23)	0.3 (5.17 / 4)	-	-	0.8 (2.32 / 0.91)
+ 	Percentile (%)	6.591	75.137	17.92	-	-	7.983
+sulfur utilization	FC (WS / NS)	1.27 (3.81 / 1)	-	-	-	-	-
+ 	Percentile (%)	6.69	-	-	-	-	-
+septin ring assembly	FC (WS / NS)	1.23 (6.02 / 2)	-	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
+ 	Percentile (%)	6.788	-	7.255	2.106	-	8.342
+lactose catabolic process via tagatose-6-phosphate	FC (WS / NS)	1.2 (5.91 / 2)	-	1.02 (7.09 / 3)	2.84 (6.15 / 0)	-	1.12 (6 / 2.23)
+ 	Percentile (%)	6.886	-	7.523	3.123	-	6.401
+lactate catabolic process	FC (WS / NS)	1.18 (5.78 / 2)	-	-	-	-	-
+ 	Percentile (%)	7.034	-	-	-	-	-
+pantothenate biosynthetic process	FC (WS / NS)	1.11 (4.58 / 1.58)	-0.07 (3.17 / 3.36)	0.92 (3.91 / 1.58)	-	-	0.3 (3.58 / 2.71)
+ 	Percentile (%)	7.182	60.091	10.598	-	-	17.799
+6-sulfoquinovose(1-) catabolic process	FC (WS / NS)	1.1 (4.52 / 1.58)	-	-	-	-	-
+ 	Percentile (%)	7.28	-	-	-	-	-
+guanine salvage	FC (WS / NS)	1.08 (5.32 / 2)	0.22 (5.17 / 4.3)	-	-	-	-
+ 	Percentile (%)	7.378	19.131	-	-	-	-
+calcium ion transmembrane transport	FC (WS / NS)	1.04 (4.32 / 1.58)	-0.93 (0 / 0.91)	1.43 (4.39 / 1)	-	-	-
+ 	Percentile (%)	7.526	81.251	5.416	-	-	-
+carbon fixation	FC (WS / NS)	1.04 (5.83 / 2.32)	-0.78 (2 / 4.15)	0.05 (7.87 / 7.56)	3.4 (9.56 / 0)	-	0.64 (5.98 / 3.49)
+ 	Percentile (%)	7.575	76.069	35.139	0.363	-	10.104
+prostaglandin biosynthetic process	FC (WS / NS)	0.98 (5.55 / 2.32)	-	-	-	-	-
+ 	Percentile (%)	7.723	-	-	-	-	-
+L-cystine transport	FC (WS / NS)	0.95 (4 / 1.58)	-	-	-	-	-
+ 	Percentile (%)	7.969	-	-	-	-	-
+enzyme-directed rRNA 2'-O-methylation	FC (WS / NS)	0.92 (3.91 / 1.58)	1.14 (1 / -0.09)	-	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	8.067	5.804	-	-	-	23.912
+guanine catabolic process	FC (WS / NS)	0.92 (3.91 / 1.58)	-	0.23 (5.25 / 4.32)	2.45 (4.46 / 0)	-	0.78 (4 / 1.91)
+ 	Percentile (%)	8.116	-	20.729	5.084	-	8.091
+lipoteichoic acid biosynthetic process	FC (WS / NS)	0.9 (6.09 / 2.81)	-	-	3.17 (7.99 / 0)	-	0.72 (5.73 / 3.08)
+ 	Percentile (%)	8.362	-	-	1.452	-	8.738
+viral RNA genome packaging	FC (WS / NS)	0.89 (7.01 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	8.559	-	-	-	-	-
+positive regulation by host of viral release from host cell	FC (WS / NS)	0.89 (7.01 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	8.608	-	-	-	-	-
+positive regulation of phospholipid biosynthetic process	FC (WS / NS)	0.89 (7.01 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	8.657	-	-	-	-	-
+GMP salvage	FC (WS / NS)	0.82 (5.32 / 2.58)	0.22 (5.17 / 4.3)	-	-	-	-
+ 	Percentile (%)	8.903	19.155	-	-	-	-
+L-homocysteine biosynthetic process	FC (WS / NS)	0.82 (5.32 / 2.58)	-	-	-	-	-
+ 	Percentile (%)	8.952	-	-	-	-	-
+GDP metabolic process	FC (WS / NS)	0.81 (4.25 / 2)	-	-	-	-	-
+ 	Percentile (%)	9.051	-	-	-	-	-
+methylglyoxal catabolic process to lactate	FC (WS / NS)	0.81 (4.25 / 2)	-	-	-	-	-
+ 	Percentile (%)	9.1	-	-	-	-	-
+anaerobic glycerol catabolic process	FC (WS / NS)	0.81 (4.81 / 2.32)	-	-	-	-	-
+ 	Percentile (%)	9.149	-	-	-	-	-
+regulation of translational termination	FC (WS / NS)	0.79 (4.75 / 2.32)	0.14 (0 / -0.09)	-	3.18 (8.04 / 0)	-	0.91 (5.04 / 2.23)
+ 	Percentile (%)	9.198	22.952	-	1.089	-	7.407
+glutathione metabolic process	FC (WS / NS)	0.79 (5.21 / 2.58)	-	-	-	-	-
+ 	Percentile (%)	9.247	-	-	-	-	-
+purine nucleoside triphosphate catabolic process	FC (WS / NS)	0.78 (4.7 / 2.32)	-	-	-2.89 (0 / 6.41)	-	0.13 (4.46 / 3.99)
+ 	Percentile (%)	9.395	-	-	90.777	-	34.16
+peptidoglycan turnover	FC (WS / NS)	0.73 (4.52 / 2.32)	-1.8 (0 / 2.49)	-	0.43 (5.98 / 4.17)	-0.05 (-9.22 / -9.54)	0.56 (4.46 / 2.71)
+ 	Percentile (%)	9.69	89.993	-	11.547	52.763	11.219
+intein-mediated protein splicing	FC (WS / NS)	0.73 (4.52 / 2.32)	-	0.56 (5.36 / 3.32)	-	-	-0.54 (1 / 1.91)
+ 	Percentile (%)	9.739	-	13.106	-	-	87.019
+teichoic acid biosynthetic process	FC (WS / NS)	0.7 (7.42 / 4.17)	-	0 (0 / 0)	-	-	-
+ 	Percentile (%)	9.936	-	59.947	-	-	-
+prostanoid metabolic process	FC (WS / NS)	0.68 (7.55 / 4.32)	-	-	-	-	-
+ 	Percentile (%)	9.985	-	-	-	-	-
+polyphosphate catabolic process	FC (WS / NS)	0.67 (5.64 / 3.17)	-	1.37 (1.58 / 0)	-	-	-
+ 	Percentile (%)	10.133	-	5.951	-	-	-
+guanine metabolic process	FC (WS / NS)	0.67 (7.23 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	10.182	-	-	-	-	-
+modulation by host of viral process	FC (WS / NS)	0.66 (9.01 / 5.32)	-	-	-	-	-
+ 	Percentile (%)	10.28	-	-	-	-	-
+positive regulation of lipid metabolic process	FC (WS / NS)	0.66 (9.01 / 5.32)	2 (3 / 0)	-	-	-	0.15 (3.32 / 2.91)
+ 	Percentile (%)	10.33	1.648	-	-	-	28.587
+regulation of viral release from host cell	FC (WS / NS)	0.66 (9.01 / 5.32)	-	-	-	-	-
+ 	Percentile (%)	10.379	-	-	-	-	-
+regulation of phospholipid metabolic process	FC (WS / NS)	0.66 (9.01 / 5.32)	-	-	-	-	-
+ 	Percentile (%)	10.428	-	-	-	-	-
+mature ribosome assembly	FC (WS / NS)	0.66 (4.25 / 2.32)	-	-	2.27 (3.81 / 0)	-	0.74 (4.39 / 2.23)
+ 	Percentile (%)	10.477	-	-	6.028	-	8.594
+negative regulation of ribosome biogenesis	FC (WS / NS)	0.66 (4.25 / 2.32)	0.7 (4.25 / 2.23)	-	2.27 (3.81 / 0)	-	0.72 (4.32 / 2.23)
+ 	Percentile (%)	10.526	10.891	-	6.173	-	8.846
+positive regulation of viral process	FC (WS / NS)	0.64 (9.33 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	10.576	-	-	-	-	-
+icosanoid metabolic process	FC (WS / NS)	0.63 (8.14 / 4.91)	-	0.53 (8.7 / 5.7)	-	-	-
+ 	Percentile (%)	10.674	-	13.273	-	-	-
+positive regulation of sporulation resulting in formation of a cellular spore	FC (WS / NS)	0.63 (5.67 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	10.772	-	-	-	-	-
+rRNA base methylation	FC (WS / NS)	0.63 (5.17 / 3)	-	-	-2.99 (0 / 6.92)	-	0.91 (4.46 / 1.91)
+ 	Percentile (%)	10.821	-	-	92.157	-	7.371
+unsaturated fatty acid metabolic process	FC (WS / NS)	0.62 (8.38 / 5.09)	-	-	-	-	-
+ 	Percentile (%)	10.871	-	-	-	-	-
+asymmetric cell division	FC (WS / NS)	0.62 (5.43 / 3.17)	0.66 (5.67 / 3.23)	-	-	-	-
+ 	Percentile (%)	10.92	11.201	-	-	-	-
+regulation of phosphorelay signal transduction system	FC (WS / NS)	0.62 (5.43 / 3.17)	0.66 (5.67 / 3.23)	-	-	-	-
+ 	Percentile (%)	10.969	11.225	-	-	-	-
+regulation of viral life cycle	FC (WS / NS)	0.62 (9.6 / 5.91)	-	-	-	-	-
+ 	Percentile (%)	11.067	-	-	-	-	-
+chorismate biosynthetic process	FC (WS / NS)	0.61 (6.77 / 4.09)	1.14 (5.39 / 1.91)	0.33 (9.83 / 7.63)	2.73 (5.62 / 0)	-	0.52 (6.93 / 4.55)
+ 	Percentile (%)	11.117	6.616	17.252	4.067	-	11.938
+teichoic acid metabolic process	FC (WS / NS)	0.61 (8.42 / 5.17)	-	-	3.17 (7.99 / 0)	-	0.73 (6.02 / 3.23)
+ 	Percentile (%)	11.166	-	-	1.307	-	8.63
+peptidyl-histidine phosphorylation	FC (WS / NS)	0.61 (4.46 / 2.58)	-	-	-	-	-
+ 	Percentile (%)	11.313	-	-	-	-	-
+fatty acid derivative metabolic process	FC (WS / NS)	0.6 (8.55 / 5.32)	-2.6 (0 / 5.08)	-0.16 (9.29 / 10.45)	-	-	-
+ 	Percentile (%)	11.363	97.182	80.809	-	-	-
+regulation of viral process	FC (WS / NS)	0.58 (10.18 / 6.49)	-1.54 (0 / 1.91)	-	-	-	-
+ 	Percentile (%)	11.51	87.987	-	-	-	-
+tRNA wobble position uridine thiolation	FC (WS / NS)	0.56 (5.13 / 3.17)	2.68 (5.39 / 0)	-	-	-	-
+ 	Percentile (%)	11.658	0.096	-	-	-	-
+manganese ion transmembrane transport	FC (WS / NS)	0.52 (5.21 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	11.904	-	-	-	-	-
+glutamine biosynthetic process	FC (WS / NS)	0.51 (7.27 / 4.81)	-2.08 (0 / 3.23)	0.52 (7.31 / 4.81)	0.28 (12.36 / 9.98)	-0.45 (-8.32 / -11.01)	0.51 (6.98 / 4.61)
+ 	Percentile (%)	11.953	91.617	13.708	12.999	82.232	11.974
+histidine biosynthetic process	FC (WS / NS)	0.5 (4.09 / 2.58)	-0.29 (3.58 / 4.61)	0.21 (7.09 / 6)	-0.3 (-0.19 / 0)	-	0.19 (5.61 / 4.81)
+ 	Percentile (%)	12.002	67.136	21.765	72.113	-	25.135
+drug export	FC (WS / NS)	0.5 (6.07 / 4)	-	-	-	-	-
+ 	Percentile (%)	12.051	-	-	-	-	-
+positive regulation of response to salt stress	FC (WS / NS)	0.49 (5.09 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	12.15	-	-	-	-	-
+positive regulation of response to water deprivation	FC (WS / NS)	0.49 (5.09 / 3.32)	-	-	-	-	-
+ 	Percentile (%)	12.199	-	-	-	-	-
+nitrate catabolic process	FC (WS / NS)	0.48 (5.73 / 3.81)	0.41 (5.64 / 3.99)	-	-	-	-
+ 	Percentile (%)	12.248	14.354	-	-	-	-
+cellular response to nitrate	FC (WS / NS)	0.48 (5.73 / 3.81)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	12.346	31.455	-	-	-	-
+siderophore transmembrane transport	FC (WS / NS)	0.46 (4.25 / 2.81)	-	-0.19 (4.17 / 4.91)	-	-	-
+ 	Percentile (%)	12.543	-	82.113	-	-	-
+protein secretion by the type II secretion system	FC (WS / NS)	0.46 (6.51 / 4.46)	-2.2 (0 / 3.61)	-2.69 (0 / 5.46)	-	-	-0.97 (1 / 2.91)
+ 	Percentile (%)	12.592	92.333	99.198	-	-	93.707
+sucrose metabolic process	FC (WS / NS)	0.45 (4.7 / 3.17)	-	-	-	-	1.03 (4.09 / 1.49)
+ 	Percentile (%)	12.691	-	-	-	-	6.76
+regulation of sporulation	FC (WS / NS)	0.45 (7.77 / 5.43)	0.49 (7.72 / 5.23)	1.5 (4.64 / 1)	0.86 (0.81 / 0)	-	-
+ 	Percentile (%)	12.838	12.778	5.182	9.368	-	-
+NADH oxidation	FC (WS / NS)	0.44 (8.26 / 5.81)	2.16 (3.46 / 0)	-	-	-	-
+ 	Percentile (%)	12.887	1.027	-	-	-	-
+DNA replication, synthesis of RNA primer	FC (WS / NS)	0.44 (5.39 / 3.7)	2.44 (3.91 / -0.09)	-0.25 (3.81 / 4.7)	0.07 (3.81 / 3.58)	-	0.06 (4.86 / 4.61)
+ 	Percentile (%)	12.937	0.334	83.985	28.395	-	43.15
+rRNA modification	FC (WS / NS)	0.44 (8.26 / 5.81)	0.4 (7.43 / 5.4)	-	-	-	-
+ 	Percentile (%)	12.986	14.832	-	-	-	-
+acetoin catabolic process	FC (WS / NS)	0.44 (6.57 / 4.58)	1.23 (4.86 / 1.49)	-	0.24 (8.49 / 7.04)	-	0.4 (6.07 / 4.36)
+ 	Percentile (%)	13.035	5.613	-	14.524	-	15.067
+copper ion transmembrane transport	FC (WS / NS)	0.44 (5.64 / 3.91)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	13.084	85.574	-	-	-	-
+rRNA methylation	FC (WS / NS)	0.43 (7.11 / 5)	0.67 (6.51 / 3.71)	0.26 (9.46 / 7.74)	-	-	0.56 (4.75 / 2.91)
+ 	Percentile (%)	13.232	11.034	19.626	-	-	11.147
+cellular response to decreased oxygen levels	FC (WS / NS)	0.43 (5.75 / 4)	-	-	-	-	-
+ 	Percentile (%)	13.281	-	-	-	-	-
+conversion of methionyl-tRNA to N-formyl-methionyl-tRNA	FC (WS / NS)	0.43 (4.39 / 3)	-	0.22 (3.17 / 2.58)	-	-	-
+ 	Percentile (%)	13.379	-	21.398	-	-	-
+D-arabinose catabolic process	FC (WS / NS)	0.42 (5.81 / 4.09)	0.12 (3.58 / 3.23)	-	-	-	-
+ 	Percentile (%)	13.625	32.959	-	-	-	-
+thiamine diphosphate biosynthetic process	FC (WS / NS)	0.41 (5.25 / 3.7)	1 (1 / 0)	0.87 (6.32 / 3)	2.27 (3.81 / 0)	-	0.55 (4.7 / 2.91)
+ 	Percentile (%)	13.773	7.69	10.699	5.882	-	11.255
+ribosomal small subunit biogenesis	FC (WS / NS)	0.4 (5.49 / 3.91)	0.01 (8.07 / 7.99)	0.02 (9.14 / 9.01)	2.89 (6.4 / 0)	-	0.37 (6.09 / 4.49)
+ 	Percentile (%)	13.822	45.426	43.43	2.542	-	16.073
+signal transduction by protein phosphorylation	FC (WS / NS)	0.4 (5.21 / 3.7)	-	-0.01 (9.4 / 9.49)	-	0.06 (-10.25 / -9.86)	-
+ 	Percentile (%)	13.871	-	70.311	-	39.762	-
+post-translational protein modification	FC (WS / NS)	0.4 (5.81 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	14.019	-	-	-	-	-
+platelet degranulation	FC (WS / NS)	0.39 (5.78 / 4.17)	0.4 (5.7 / 4.08)	-	-	-	-
+ 	Percentile (%)	14.314	14.497	-	-	-	-
+negative regulation of protein oligomerization	FC (WS / NS)	0.39 (5.78 / 4.17)	-2.46 (0 / 4.49)	-	-	-	-
+ 	Percentile (%)	14.511	93.456	-	-	-	-
+high-density lipoprotein particle remodeling	FC (WS / NS)	0.39 (5.78 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	14.56	-	-	-	-	-
+extracellular structure organization	FC (WS / NS)	0.39 (5.78 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	14.609	-	-	-	-	-
+positive regulation of circadian sleep/wake cycle, non-REM sleep	FC (WS / NS)	0.39 (5.78 / 4.17)	0.4 (5.7 / 4.08)	-	-	-	-
+ 	Percentile (%)	14.658	14.736	-	-	-	-
+maintenance of mitochondrion location	FC (WS / NS)	0.39 (5.78 / 4.17)	0.4 (5.7 / 4.08)	0.39 (5.78 / 4.17)	-	-	0.42 (5.78 / 4.08)
+ 	Percentile (%)	14.707	14.784	15.848	-	-	14.383
+response to platinum ion	FC (WS / NS)	0.39 (5.78 / 4.17)	0.4 (5.7 / 4.08)	-	-	-	-
+ 	Percentile (%)	14.757	14.808	-	-	-	-
+tryptophan biosynthetic process	FC (WS / NS)	0.39 (4.64 / 3.32)	0.33 (5.04 / 3.81)	0.24 (7.13 / 5.91)	-	-	-0.45 (2.58 / 3.91)
+ 	Percentile (%)	14.953	16.05	20.361	-	-	85.077
+adenine salvage	FC (WS / NS)	0.38 (5.91 / 4.32)	0.12 (5.67 / 5.15)	0.1 (5.75 / 5.29)	3.23 (8.4 / 0)	-0.26 (-8.73 / -10.25)	0.11 (4.64 / 4.23)
+ 	Percentile (%)	15.347	33.007	28.552	0.871	72.373	35.85
+positive regulation of developmental process	FC (WS / NS)	0.38 (7.69 / 5.7)	-0.12 (7.88 / 8.66)	-1.58 (0 / 2)	-	-	-
+ 	Percentile (%)	15.396	62.288	94.483	-	-	-
+ketone catabolic process	FC (WS / NS)	0.37 (7.95 / 5.91)	-	-	-	-	0.4 (6.15 / 4.43)
+ 	Percentile (%)	15.445	-	-	-	-	15.102
+UDP-glucose metabolic process	FC (WS / NS)	0.37 (5.55 / 4.09)	0.33 (5.04 / 3.81)	0.22 (6.29 / 5.25)	0.11 (9.66 / 8.85)	-0.06 (-8.24 / -8.52)	0.29 (5.83 / 4.61)
+ 	Percentile (%)	15.642	16.074	21.097	22.222	52.871	18.77
+regulation of cell differentiation	FC (WS / NS)	0.37 (7.83 / 5.86)	-0.33 (8.03 / 10.35)	0.54 (5.29 / 3.32)	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	15.691	69.19	13.24	-	-	74.685
+diaminopimelate biosynthetic process	FC (WS / NS)	0.36 (8 / 6)	0.25 (4.46 / 3.61)	0.02 (10.27 / 10.12)	0.03 (11.39 / 11.16)	-0.46 (-6 / -7.88)	0.45 (7.69 / 5.36)
+ 	Percentile (%)	15.74	18.223	43.932	37.691	82.665	13.376
+positive regulation of fibrinolysis	FC (WS / NS)	0.36 (8.06 / 6.07)	-	-	-	-	-
+ 	Percentile (%)	15.839	-	-	-	-	-
+iron chelate transport	FC (WS / NS)	0.35 (5.98 / 4.46)	-	-0.21 (4.58 / 5.46)	-	-	-
+ 	Percentile (%)	15.937	-	82.882	-	-	-
+iron assimilation	FC (WS / NS)	0.35 (5.98 / 4.46)	-	-	-	-	-
+ 	Percentile (%)	15.986	-	-	-	-	-
+valine biosynthetic process	FC (WS / NS)	0.35 (8.63 / 6.55)	0.34 (7.67 / 5.86)	0.33 (11.01 / 8.57)	0.12 (14.69 / 13.46)	-0.47 (-6.57 / -8.69)	0.31 (8.58 / 6.75)
+ 	Percentile (%)	16.085	15.93	17.185	21.641	82.774	17.727
+fructose transmembrane transport	FC (WS / NS)	0.35 (5.36 / 4)	1.37 (1.58 / 0)	-	-	-	-
+ 	Percentile (%)	16.134	5.087	-	-	-	-
+nitrogen utilization	FC (WS / NS)	0.34 (5.75 / 4.32)	-	-	-	-	-
+ 	Percentile (%)	16.331	-	-	-	-	-
+enterobactin transport	FC (WS / NS)	0.34 (5.91 / 4.46)	-	-	-	-	-
+ 	Percentile (%)	16.478	-	-	-	-	-
+mRNA processing	FC (WS / NS)	0.34 (6.94 / 5.29)	-0.12 (6.81 / 7.48)	-	-	-	0.03 (4.17 / 4.08)
+ 	Percentile (%)	16.527	62.193	-	-	-	51.888
+protein dephosphorylation	FC (WS / NS)	0.34 (5.98 / 4.52)	-	-	0.16 (10.11 / 8.92)	-	0.29 (5.32 / 4.15)
+ 	Percentile (%)	16.626	-	-	17.502	-	18.195
+leucine biosynthetic process	FC (WS / NS)	0.34 (7.07 / 5.39)	0.24 (7.73 / 6.36)	0.26 (9.63 / 7.88)	-1.05 (4.57 / 10.54)	-	0.25 (6.7 / 5.49)
+ 	Percentile (%)	16.675	18.247	19.525	83.515	-	20.712
+menaquinone biosynthetic process	FC (WS / NS)	0.33 (4.91 / 3.7)	0.19 (3.81 / 3.23)	0.33 (6.44 / 4.91)	-0.11 (4.72 / 5.17)	-	0.16 (4.25 / 3.71)
+ 	Percentile (%)	16.773	20.062	17.085	62.963	-	27.256
+regulation of lipid biosynthetic process	FC (WS / NS)	0.33 (9.03 / 7)	-0.36 (4.58 / 6.17)	-	-	-	0.15 (3.32 / 2.91)
+ 	Percentile (%)	16.822	69.716	-	-	-	28.767
+protein maturation	FC (WS / NS)	0.32 (5.91 / 4.52)	-	0.22 (13.18 / 11.2)	-	-	-0.16 (5.88 / 6.7)
+ 	Percentile (%)	16.872	-	21.431	-	-	73.822
+SRP-dependent cotranslational protein targeting to membrane	FC (WS / NS)	0.31 (6.51 / 5.04)	0.21 (5.04 / 4.23)	0.26 (8.08 / 6.58)	0.37 (10.35 / 7.81)	-0.09 (-10.26 / -10.87)	0.23 (6.7 / 5.55)
+ 	Percentile (%)	16.921	19.561	19.559	11.983	56.771	21.719
+oxaloacetate metabolic process	FC (WS / NS)	0.31 (7.59 / 5.93)	-	1.34 (5.52 / 1.58)	3.4 (9.56 / 0)	-	0.5 (5.95 / 3.91)
+ 	Percentile (%)	16.97	-	6.754	0.218	-	12.262
+diaminopimelate metabolic process	FC (WS / NS)	0.31 (9.65 / 7.61)	0.27 (6.91 / 5.58)	0.05 (13.31 / 12.79)	0.03 (12.85 / 12.58)	-0.73 (-3.72 / -5.52)	0.26 (8.86 / 7.22)
+ 	Percentile (%)	17.068	17.698	34.437	37.545	89.816	20.137
+arabinose metabolic process	FC (WS / NS)	0.3 (7.81 / 6.13)	0.08 (5.58 / 5.23)	-	-	-	-0.38 (2 / 2.91)
+ 	Percentile (%)	17.118	35.18	-	-	-	83.459
+positive regulation of multi-organism process	FC (WS / NS)	0.3 (7.06 / 5.52)	-	-	-	-	-
+ 	Percentile (%)	17.167	-	-	-	-	-
+regulation of lipid metabolic process	FC (WS / NS)	0.29 (10.03 / 8)	-0.06 (7.64 / 7.99)	-	-	-	0.15 (3.32 / 2.91)
+ 	Percentile (%)	17.364	59.589	-	-	-	28.407
+quinone metabolic process	FC (WS / NS)	0.29 (7.21 / 5.7)	0.07 (7.46 / 7.09)	0.12 (8.71 / 7.93)	-0.11 (4.72 / 5.17)	-	0.07 (4.7 / 4.43)
+ 	Percentile (%)	17.413	37.115	27.148	63.036	-	40.741
+regulation of circadian sleep/wake cycle, sleep	FC (WS / NS)	0.29 (7.78 / 6.17)	0.3 (7.7 / 6.08)	-	-	-	-
+ 	Percentile (%)	17.462	16.838	-	-	-	-
+mannose transmembrane transport	FC (WS / NS)	0.29 (5.32 / 4.17)	0.32 (6.69 / 5.15)	-	-	-	-
+ 	Percentile (%)	17.56	16.312	-	-	-	-
+glucose import across plasma membrane	FC (WS / NS)	0.29 (5.32 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	17.659	-	-	-	-	-
+siderophore transport	FC (WS / NS)	0.29 (7.15 / 5.67)	-	-	-0.3 (-0.19 / 0)	-	0.11 (4.86 / 4.43)
+ 	Percentile (%)	17.708	-	-	73.638	-	35.994
+capsule polysaccharide biosynthetic process	FC (WS / NS)	0.29 (6.63 / 5.25)	-	0.33 (6.29 / 4.81)	-	-	-
+ 	Percentile (%)	17.806	-	17.319	-	-	-
+GTP biosynthetic process	FC (WS / NS)	0.29 (7.21 / 5.73)	-	0.71 (5.21 / 2.81)	0.03 (4.72 / 4.58)	-	0.39 (5.32 / 3.81)
+ 	Percentile (%)	17.954	-	11.969	35.294	-	15.174
+2'-deoxyribonucleotide biosynthetic process	FC (WS / NS)	0.28 (6.25 / 4.95)	-	-	-	-	-
+ 	Percentile (%)	18.101	-	-	-	-	-
+protein-lipid complex subunit organization	FC (WS / NS)	0.28 (8.1 / 6.49)	-1.97 (0 / 2.91)	-	-	-	-
+ 	Percentile (%)	18.151	91.259	-	-	-	-
+chromosome segregation	FC (WS / NS)	0.28 (6.81 / 5.43)	-	-	0.17 (8.74 / 7.63)	-	0.09 (5.7 / 5.3)
+ 	Percentile (%)	18.2	-	-	16.848	-	38.008
+lactate metabolic process	FC (WS / NS)	0.27 (8.13 / 6.55)	-	-	-	-	0.11 (6.41 / 5.88)
+ 	Percentile (%)	18.298	-	-	-	-	36.606
+regulation of circadian rhythm	FC (WS / NS)	0.27 (8.59 / 6.98)	0.27 (8.51 / 6.88)	-	-	-	-
+ 	Percentile (%)	18.396	17.435	-	-	-	-
+regulation of behavior	FC (WS / NS)	0.27 (8.59 / 6.98)	0.27 (8.51 / 6.89)	-	-	-	-
+ 	Percentile (%)	18.446	17.53	-	-	-	-
+cellular ketone metabolic process	FC (WS / NS)	0.26 (9.48 / 7.72)	0.07 (8.61 / 8.14)	0.13 (10 / 9.03)	0.19 (8.59 / 7.39)	-	0.24 (6.63 / 5.46)
+ 	Percentile (%)	18.495	35.849	26.212	15.541	-	21.179
+thiamine biosynthetic process	FC (WS / NS)	0.26 (5.46 / 4.39)	-0.19 (3.91 / 4.61)	0.23 (8.75 / 7.34)	2.84 (6.15 / 0)	-	0.03 (5.32 / 5.19)
+ 	Percentile (%)	18.692	64.796	20.996	3.05	-	50.773
+negative regulation of blood coagulation	FC (WS / NS)	0.26 (9.09 / 7.43)	-	-	-	-	-
+ 	Percentile (%)	18.741	-	-	-	-	-
+choline catabolic process	FC (WS / NS)	0.26 (5.09 / 4.09)	-	-	2.36 (4.14 / 0)	-	0.31 (5.39 / 4.15)
+ 	Percentile (%)	18.839	-	-	5.737	-	17.368
+purine nucleobase catabolic process	FC (WS / NS)	0.26 (6.64 / 5.39)	1.51 (1.58 / -0.09)	-	-	-	-
+ 	Percentile (%)	18.888	4.586	-	-	-	-
+D-gluconate catabolic process	FC (WS / NS)	0.26 (6.55 / 5.32)	-	-	-	-	-
+ 	Percentile (%)	18.987	-	-	-	-	-
+nucleobase-containing small molecule interconversion	FC (WS / NS)	0.25 (6.95 / 5.67)	-0.18 (7.26 / 8.32)	-	-	-	-
+ 	Percentile (%)	19.233	64.199	-	-	-	-
+response to mercury ion	FC (WS / NS)	0.25 (6.29 / 5.13)	0.4 (5.7 / 4.08)	0.37 (4.75 / 3.46)	-	-	-
+ 	Percentile (%)	19.331	14.76	16.717	-	-	-
+regulation of blood coagulation	FC (WS / NS)	0.25 (10.08 / 8.34)	-	-	-	-	-
+ 	Percentile (%)	19.577	-	-	-	-	-
+hypoxanthine catabolic process	FC (WS / NS)	0.25 (5.13 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	19.675	-	-	-	-	-
+threonine biosynthetic process	FC (WS / NS)	0.24 (7.21 / 5.93)	0.43 (3.7 / 2.49)	0.23 (9.81 / 8.23)	-0.1 (8.36 / 9.04)	0.08 (-10.11 / -9.63)	0.26 (7.38 / 5.99)
+ 	Percentile (%)	19.725	14.043	20.863	62.092	37.27	20.245
+isoleucine biosynthetic process	FC (WS / NS)	0.24 (9.01 / 7.47)	0.38 (7.83 / 5.79)	0.21 (12.17 / 10.36)	0.1 (14.86 / 13.83)	-0.27 (-4.7 / -5.46)	0.28 (9.01 / 7.23)
+ 	Percentile (%)	19.823	15.285	21.632	24.546	73.456	18.878
+glycine biosynthetic process from serine	FC (WS / NS)	0.24 (6.67 / 5.49)	-2.2 (0 / 3.61)	0.2 (6.46 / 5.49)	-0.01 (11.81 / 11.94)	0.04 (-7.72 / -7.53)	0.26 (6.83 / 5.52)
+ 	Percentile (%)	19.921	92.405	22.367	49.891	43.337	20.029
+cysteinyl-tRNA aminoacylation	FC (WS / NS)	0.24 (5.52 / 4.52)	0.38 (5 / 3.61)	0.27 (5.52 / 4.39)	2.73 (5.62 / 0)	-	0.22 (5.64 / 4.71)
+ 	Percentile (%)	20.02	15.214	18.623	3.994	-	22.654
+L-alanine transport	FC (WS / NS)	0.24 (6.85 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	20.069	-	-	-	-	-
+D-alanine transport	FC (WS / NS)	0.24 (6.85 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	20.118	-	-	-	-	-
+L-methylmalonyl-CoA metabolic process	FC (WS / NS)	0.24 (6.83 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	20.266	-	-	-	-	-
+L-valine import across plasma membrane	FC (WS / NS)	0.24 (6.83 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	20.364	-	-	-	-	-
+L-isoleucine import across plasma membrane	FC (WS / NS)	0.24 (6.83 / 5.64)	-	-	-	-	-
+ 	Percentile (%)	20.413	-	-	-	-	-
+pentose metabolic process	FC (WS / NS)	0.24 (8.47 / 7.04)	0.05 (6.99 / 6.7)	0 (8.09 / 8.11)	-	-0.09 (-6.34 / -6.7)	-0.29 (2.32 / 3.08)
+ 	Percentile (%)	20.512	38.978	67.67	-	57.421	78.533
+NADH metabolic process	FC (WS / NS)	0.23 (10.53 / 8.8)	-	-	-	-	-
+ 	Percentile (%)	20.561	-	-	-	-	-
+negative regulation of apoptotic process	FC (WS / NS)	0.23 (6.25 / 5.17)	-	0.39 (5.78 / 4.17)	-	-	0.33 (5.91 / 4.49)
+ 	Percentile (%)	20.61	-	15.68	-	-	16.864
+NADH regeneration	FC (WS / NS)	0.23 (8.76 / 7.31)	-	-	-	-	-
+ 	Percentile (%)	20.659	-	-	-	-	-
+branched-chain amino acid biosynthetic process	FC (WS / NS)	0.23 (10.66 / 8.95)	0.23 (9.91 / 8.27)	0.2 (13.97 / 12.05)	0.09 (15.78 / 14.75)	-0.43 (-3.52 / -4.38)	0.25 (10.03 / 8.31)
+ 	Percentile (%)	20.708	18.677	22.434	24.764	81.473	20.784
+cellular response to tetrahydrofolate	FC (WS / NS)	0.23 (6.32 / 5.25)	-	-	-	-	-
+ 	Percentile (%)	20.758	-	-	-	-	-
+regulation of coagulation	FC (WS / NS)	0.23 (10.67 / 8.96)	-0.55 (3.91 / 6.19)	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	20.807	73.322	-	-	-	90.867
+regulation of wound healing	FC (WS / NS)	0.23 (10.67 / 8.96)	-0.59 (3.58 / 5.88)	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	20.856	73.776	-	-	-	90.903
+regulation of hemostasis	FC (WS / NS)	0.23 (10.67 / 8.96)	-0.55 (3.91 / 6.19)	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	20.905	73.346	-	-	-	90.939
+positive regulation of transcription regulatory region DNA binding	FC (WS / NS)	0.23 (8.13 / 6.81)	-	-	-	-	-
+ 	Percentile (%)	21.003	-	-	-	-	-
+UDP-N-acetylgalactosamine biosynthetic process	FC (WS / NS)	0.23 (5.73 / 4.75)	-	0.13 (6.88 / 6.21)	0.12 (8.78 / 8.02)	0.16 (-11.4 / -10.28)	0.17 (5.88 / 5.11)
+ 	Percentile (%)	21.102	-	26.513	21.932	25.027	26.178
+NAD metabolic process	FC (WS / NS)	0.22 (10.61 / 8.96)	-	0.1 (8.87 / 8.2)	-	-	0.04 (2.32 / 2.23)
+ 	Percentile (%)	21.2	-	28.82	-	-	47.86
+digestion	FC (WS / NS)	0.22 (5.36 / 4.46)	-	-	-	-	0.25 (5.46 / 4.43)
+ 	Percentile (%)	21.299	-	-	-	-	20.604
+regulation of response to wounding	FC (WS / NS)	0.22 (11.08 / 9.39)	-0.9 (3.58 / 7.58)	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	21.446	77.191	-	-	-	90.974
+regulation of apoptotic process	FC (WS / NS)	0.22 (7.38 / 6.21)	-0.1 (7.15 / 7.71)	-	-	-	0.33 (5.95 / 4.55)
+ 	Percentile (%)	21.495	61.07	-	-	-	17.044
+positive regulation of GTPase activity	FC (WS / NS)	0.22 (6.54 / 5.49)	-1.1 (2.81 / 7.13)	-0.22 (2.58 / 3.17)	-	-	-
+ 	Percentile (%)	21.545	82.565	83.216	-	-	-
+aromatic amino acid family biosynthetic process	FC (WS / NS)	0.21 (7.7 / 6.51)	-0.06 (7.45 / 7.83)	0.23 (11.67 / 9.8)	-	-	0.25 (7.63 / 6.26)
+ 	Percentile (%)	21.594	59.924	20.829	-	-	20.64
+RNA phosphodiester bond hydrolysis, endonucleolytic	FC (WS / NS)	0.21 (7.33 / 6.19)	-	-	-	-	-
+ 	Percentile (%)	21.643	-	-	-	-	-
+branched-chain amino acid metabolic process	FC (WS / NS)	0.21 (11.69 / 9.99)	0.21 (10.91 / 9.28)	0.18 (15.02 / 13.1)	0.09 (15.78 / 14.75)	-0.65 (-2.52 / -3.38)	0.24 (10.1 / 8.41)
+ 	Percentile (%)	21.938	19.465	23.17	24.691	88.516	21.467
+purine nucleobase salvage	FC (WS / NS)	0.21 (7.32 / 6.21)	0.11 (7.11 / 6.51)	-	-	-	-
+ 	Percentile (%)	22.036	33.174	-	-	-	-
+regulation of protein phosphorylation	FC (WS / NS)	0.21 (3.81 / 3.17)	-0.82 (4.91 / 9.45)	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	22.282	76.499	-	-	-	40.992
+regulation of protein modification process	FC (WS / NS)	0.21 (3.81 / 3.17)	-0.25 (8.08 / 9.77)	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	22.332	66.133	-	-	-	41.855
+regulation of protein complex assembly	FC (WS / NS)	0.2 (8.07 / 6.87)	-0.78 (3 / 5.86)	-	-	-	-
+ 	Percentile (%)	22.381	76.045	-	-	-	-
+negative regulation of response to external stimulus	FC (WS / NS)	0.2 (10.1 / 8.67)	-	-	-	-	-0.48 (3.46 / 5.23)
+ 	Percentile (%)	22.577	-	-	-	-	85.653
+regulation of programmed cell death	FC (WS / NS)	0.2 (8.42 / 7.21)	-0.05 (8.01 / 8.31)	0.19 (8.37 / 7.23)	-	-	0.27 (6.04 / 4.86)
+ 	Percentile (%)	22.676	58.992	23.036	-	-	19.957
+thiamine-containing compound metabolic process	FC (WS / NS)	0.19 (7.46 / 6.39)	-0.14 (5.91 / 6.61)	0.19 (10.85 / 9.42)	2.84 (6.15 / 0)	-	0.03 (5.32 / 5.19)
+ 	Percentile (%)	22.823	62.909	23.103	3.195	-	50.809
+amino sugar metabolic process	FC (WS / NS)	0.19 (6.73 / 5.75)	-0.13 (9.18 / 10.11)	0.05 (11.68 / 11.27)	0.13 (13.02 / 11.81)	-0.28 (-4.59 / -5.36)	0 (7.34 / 7.35)
+ 	Percentile (%)	22.873	62.527	35.874	19.971	74.431	59.187
+regulation of body fluid levels	FC (WS / NS)	0.19 (10.95 / 9.45)	0.02 (7.58 / 7.46)	-	-	-	-0.48 (3.32 / 5.03)
+ 	Percentile (%)	22.922	44.065	-	-	-	85.545
+regulation of cell death	FC (WS / NS)	0.19 (9.04 / 7.79)	-0.06 (8.57 / 8.96)	0.18 (8.95 / 7.79)	-	-	0.27 (6.04 / 4.86)
+ 	Percentile (%)	23.02	59.637	23.47	-	-	19.921
+response to hypochlorite	FC (WS / NS)	0.19 (7.23 / 6.21)	-	-	-	-	-
+ 	Percentile (%)	23.069	-	-	-	-	-
+aldonic acid metabolic process	FC (WS / NS)	0.19 (8.59 / 7.43)	-	-	-	-	-
+ 	Percentile (%)	23.266	-	-	-	-	-
+regulation of DNA-templated transcription, elongation	FC (WS / NS)	0.19 (6.94 / 5.98)	0.61 (5.83 / 3.49)	0.06 (9.12 / 8.68)	0.13 (12.41 / 11.25)	-0.25 (-6.29 / -7.29)	0.18 (7.21 / 6.26)
+ 	Percentile (%)	23.315	12.061	32.832	19.898	71.506	25.782
+siroheme biosynthetic process	FC (WS / NS)	0.19 (5.36 / 4.58)	-	-	2.68 (5.43 / 0)	-	0.25 (5.04 / 4.08)
+ 	Percentile (%)	23.364	-	-	4.285	-	20.568
+branched-chain amino acid transport	FC (WS / NS)	0.19 (9.79 / 8.48)	-	-	-	-	-
+ 	Percentile (%)	23.463	-	-	-	-	-
+regulation of response to external stimulus	FC (WS / NS)	0.18 (10.91 / 9.48)	-0.65 (4.86 / 8.18)	2.64 (5.25 / 0)	-	-	-0.48 (3.46 / 5.23)
+ 	Percentile (%)	23.512	74.588	0.1	-	-	85.617
+regulation of DNA binding	FC (WS / NS)	0.18 (10.14 / 8.81)	-	-	-	-	-
+ 	Percentile (%)	23.61	-	-	-	-	-
+D-alanine biosynthetic process	FC (WS / NS)	0.18 (5.46 / 4.7)	0.63 (5.29 / 3.08)	-0.95 (1.58 / 4)	-	-	-0.63 (2.32 / 4.15)
+ 	Percentile (%)	23.66	11.846	90.271	-	-	88.421
+amino acid import across plasma membrane	FC (WS / NS)	0.18 (8.48 / 7.38)	-0.93 (0 / 0.91)	-	-	-	-
+ 	Percentile (%)	23.807	81.419	-	-	-	-
+S-adenosylmethionine biosynthetic process	FC (WS / NS)	0.18 (6.71 / 5.83)	-0.05 (2.58 / 2.71)	0.22 (6.52 / 5.46)	0.01 (13.03 / 12.97)	-0.21 (-7.48 / -8.49)	0.2 (6.87 / 5.86)
+ 	Percentile (%)	23.955	59.231	21.297	41.83	66.847	23.697
+response to iron ion starvation	FC (WS / NS)	0.17 (8.91 / 7.78)	-	-	-	-	-
+ 	Percentile (%)	24.004	-	-	-	-	-
+regulation of binding	FC (WS / NS)	0.17 (10.72 / 9.4)	-1.25 (2 / 6.11)	-	-	-	-
+ 	Percentile (%)	24.102	83.282	-	-	-	-
+deoxyribose phosphate metabolic process	FC (WS / NS)	0.17 (8.48 / 7.41)	0.01 (8.42 / 8.37)	0.05 (10.44 / 10.03)	-	-	0.14 (6.39 / 5.69)
+ 	Percentile (%)	24.201	46.286	34.47	-	-	29.126
+threonyl-tRNA aminoacylation	FC (WS / NS)	0.17 (7.08 / 6.17)	-1.8 (0 / 2.49)	0.15 (6.94 / 6.15)	0.26 (12.8 / 10.5)	-	0.15 (7.43 / 6.58)
+ 	Percentile (%)	24.299	89.873	25.276	13.29	-	27.508
+protein polymerization	FC (WS / NS)	0.17 (7.79 / 6.81)	0.29 (7.83 / 6.21)	0.17 (7.83 / 6.82)	0.11 (16.54 / 15.28)	-0.61 (-4.53 / -6.37)	0.15 (7.88 / 6.98)
+ 	Percentile (%)	24.348	16.957	23.604	22.948	87.216	27.616
+fructose 1,6-bisphosphate metabolic process	FC (WS / NS)	0.17 (8.61 / 7.56)	0.14 (0 / -0.09)	0.02 (9.6 / 9.42)	0.14 (13.87 / 12.46)	-0.52 (-6.16 / -8.41)	0.24 (8.62 / 7.14)
+ 	Percentile (%)	24.496	26.511	41.658	18.809	84.615	21.072
+pentose-phosphate shunt, oxidative branch	FC (WS / NS)	0.16 (7.12 / 6.25)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	24.643	24.433	-	-	-	-
+import across plasma membrane	FC (WS / NS)	0.16 (9.21 / 8.12)	-	-	-	-	-
+ 	Percentile (%)	24.742	-	-	-	-	-
+FtsZ-dependent cytokinesis	FC (WS / NS)	0.16 (8.4 / 7.41)	-0.16 (6.13 / 6.99)	0.15 (8.83 / 7.83)	0.11 (16.83 / 15.55)	-0.63 (-4 / -5.64)	0.16 (8.57 / 7.55)
+ 	Percentile (%)	24.84	63.888	25.109	23.021	88.299	26.681
+aspartate family amino acid biosynthetic process	FC (WS / NS)	0.16 (10.41 / 9.22)	0.04 (8.48 / 8.24)	0.05 (15.24 / 14.68)	-0.01 (12.37 / 12.46)	-0.87 (-2.95 / -4.56)	0.14 (9.29 / 8.35)
+ 	Percentile (%)	24.939	41.486	35.272	48.148	91.549	33.477
+negative regulation of response to stimulus	FC (WS / NS)	0.15 (10.7 / 9.52)	-0.66 (4.95 / 8.4)	-	-	-	-0.43 (3.7 / 5.33)
+ 	Percentile (%)	25.086	74.755	-	-	-	84.322
+retina homeostasis	FC (WS / NS)	0.15 (5.91 / 5.21)	-	-	-	-	-0.87 (1.58 / 3.71)
+ 	Percentile (%)	25.135	-	-	-	-	91.154
+neutral amino acid transport	FC (WS / NS)	0.15 (10.12 / 9.01)	-	-	-	-	-
+ 	Percentile (%)	25.184	-	-	-	-	-
+aggregation of unicellular organisms	FC (WS / NS)	0.15 (10.1 / 9)	-	-	-	-	-
+ 	Percentile (%)	25.234	-	-	-	-	-
+L-alpha-amino acid transmembrane transport	FC (WS / NS)	0.15 (8.9 / 7.92)	-	-	-	-	-
+ 	Percentile (%)	25.283	-	-	-	-	-
+alanine transport	FC (WS / NS)	0.15 (8.43 / 7.51)	-	-2.68 (0 / 5.43)	-	-	-
+ 	Percentile (%)	25.332	-	99.131	-	-	-
+cellular response to acidic pH	FC (WS / NS)	0.15 (9.29 / 8.28)	-	-	-	-	-
+ 	Percentile (%)	25.381	-	-	-	-	-
+cellular hyperosmotic salinity response	FC (WS / NS)	0.15 (9.29 / 8.28)	-	-	-	-	-
+ 	Percentile (%)	25.43	-	-	-	-	-
+amino acid transmembrane transport	FC (WS / NS)	0.15 (9.85 / 8.8)	-	-0.33 (7.06 / 9.13)	-	-	0.91 (2.58 / 0.91)
+ 	Percentile (%)	25.578	-	85.456	-	-	7.192
+hemolysis in other organism	FC (WS / NS)	0.15 (5.78 / 5.13)	-	-	-	-	-
+ 	Percentile (%)	25.775	-	-	-	-	-
+disruption of cells of other organism	FC (WS / NS)	0.15 (5.78 / 5.13)	-	-	-	-	-
+ 	Percentile (%)	25.824	-	-	-	-	-
+phosphoenolpyruvate-dependent sugar phosphotransferase system	FC (WS / NS)	0.15 (9.24 / 8.26)	0.13 (8.09 / 7.3)	0.09 (13.62 / 12.77)	0.04 (16.96 / 16.5)	0.24 (-3.69 / -3.28)	0.15 (9.39 / 8.37)
+ 	Percentile (%)	25.873	32.505	30.124	34.568	16.468	27.976
+stress response to copper ion	FC (WS / NS)	0.14 (7.17 / 6.39)	-	-	-	-	-
+ 	Percentile (%)	25.922	-	-	-	-	-
+stress response to cadmium ion	FC (WS / NS)	0.14 (7.17 / 6.39)	-1.54 (0 / 1.91)	-	-	-	-
+ 	Percentile (%)	25.971	88.249	-	-	-	-
+regulation of response to stress	FC (WS / NS)	0.14 (11.4 / 10.23)	-0.43 (6.58 / 9.18)	-	-	-	-0.22 (4.39 / 5.26)
+ 	Percentile (%)	26.021	70.671	-	-	-	76.268
+division septum assembly	FC (WS / NS)	0.14 (8.83 / 7.9)	0.19 (8.12 / 6.98)	0.08 (10.79 / 10.17)	-	-0.63 (-4 / -5.64)	-
+ 	Percentile (%)	26.07	19.871	30.859	-	87.974	-
+L-amino acid transport	FC (WS / NS)	0.14 (9.55 / 8.55)	-1.89 (0 / 2.71)	-	-	-	-
+ 	Percentile (%)	26.119	90.59	-	-	-	-
+carbohydrate utilization	FC (WS / NS)	0.14 (6.3 / 5.61)	-	1.93 (2.81 / 0)	-	-	-
+ 	Percentile (%)	26.168	-	3.31	-	-	-
+D-amino acid metabolic process	FC (WS / NS)	0.14 (7.75 / 6.94)	0.33 (7.82 / 6.03)	-0.4 (5.39 / 7.41)	-	-	-0.09 (4.32 / 4.66)
+ 	Percentile (%)	26.267	16.169	86.76	-	-	69.399
+regulation of cellular component biogenesis	FC (WS / NS)	0.14 (8.72 / 7.82)	-0.23 (8.73 / 10.43)	-	-	-	0.34 (4.52 / 3.36)
+ 	Percentile (%)	26.316	65.703	-	-	-	16.649
+folic acid metabolic process	FC (WS / NS)	0.14 (6.71 / 6)	0.34 (5.32 / 3.99)	-	-	-	-
+ 	Percentile (%)	26.365	15.835	-	-	-	-
+positive regulation of phosphate metabolic process	FC (WS / NS)	0.14 (10.89 / 9.8)	-0.57 (5.39 / 8.48)	-	-	-	-
+ 	Percentile (%)	26.414	73.561	-	-	-	-
+viral process	FC (WS / NS)	0.14 (8.91 / 8)	0.14 (11.83 / 10.61)	-	-	-	-0.08 (5.21 / 5.58)
+ 	Percentile (%)	26.463	32.123	-	-	-	68.896
+protein phosphorylation	FC (WS / NS)	0.14 (8.12 / 7.29)	0.01 (8.57 / 8.51)	-	-	-	0.24 (2.81 / 2.23)
+ 	Percentile (%)	26.66	45.88	-	-	-	21.215
+nucleotide-sugar biosynthetic process	FC (WS / NS)	0.14 (7.03 / 6.3)	-0.07 (8.67 / 9.12)	0.03 (10.61 / 10.39)	0.12 (13.09 / 11.95)	-0.2 (-7.12 / -8.03)	0.03 (7.76 / 7.58)
+ 	Percentile (%)	26.709	60.019	40.187	21.206	66.522	50.521
+DNA duplex unwinding	FC (WS / NS)	0.14 (5.78 / 5.17)	-	-	-	0.02 (-10.9 / -10.77)	-
+ 	Percentile (%)	26.808	-	-	-	45.179	-
+carbon utilization	FC (WS / NS)	0.14 (7.37 / 6.61)	-2.2 (0 / 3.61)	0.1 (8.47 / 7.83)	0.12 (14.03 / 12.86)	-0.26 (-7.28 / -8.54)	0.22 (7.22 / 6.08)
+ 	Percentile (%)	26.906	92.381	29.087	21.714	72.914	22.762
+RNA modification	FC (WS / NS)	0.14 (10.49 / 9.46)	0.26 (9.7 / 7.91)	0.06 (14.46 / 13.79)	-0.4 (8.08 / 11)	-	0.15 (7.75 / 6.89)
+ 	Percentile (%)	26.955	17.722	32.698	77.996	-	28.155
+D-alanine family amino acid metabolic process	FC (WS / NS)	0.14 (7.46 / 6.7)	0.41 (7.39 / 5.3)	-0.39 (4.81 / 6.58)	-	-	-0.63 (2.32 / 4.15)
+ 	Percentile (%)	27.004	14.306	86.693	-	-	88.457
+positive regulation of molecular function	FC (WS / NS)	0.14 (10.65 / 9.6)	-0.51 (6.36 / 9.51)	-	-	-	-
+ 	Percentile (%)	27.054	72.63	-	-	-	-
+mitotic cytokinetic process	FC (WS / NS)	0.13 (8.83 / 7.95)	-	-	-	-	-
+ 	Percentile (%)	27.152	-	-	-	-	-
+nucleotide-sugar metabolic process	FC (WS / NS)	0.13 (8.27 / 7.45)	-0.05 (9.78 / 10.16)	0.03 (12.32 / 12)	0.12 (13.21 / 12.12)	-0.26 (-4.49 / -5.18)	0.06 (8.26 / 7.89)
+ 	Percentile (%)	27.25	59.088	38.549	22.004	72.698	44.157
+positive regulation of plasminogen activation	FC (WS / NS)	0.13 (8.41 / 7.58)	-	-	-	-	-
+ 	Percentile (%)	27.349	-	-	-	-	-
+establishment of protein localization to organelle	FC (WS / NS)	0.13 (9.26 / 8.35)	0.03 (7.26 / 7.1)	0.2 (10.38 / 8.94)	-	-	-
+ 	Percentile (%)	27.398	43.014	22.701	-	-	-
+deoxyribonucleotide metabolic process	FC (WS / NS)	0.13 (9.72 / 8.78)	0.01 (8.42 / 8.36)	0.07 (11.7 / 11.13)	0.14 (14.34 / 12.95)	-	0.13 (7.95 / 7.16)
+ 	Percentile (%)	27.447	45.904	32.13	19.245	-	33.837
+positive regulation of purine nucleotide metabolic process	FC (WS / NS)	0.13 (8.2 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	27.693	-	-	-	-	-
+positive regulation of oxidative phosphorylation	FC (WS / NS)	0.13 (8.2 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	27.742	-	-	-	-	-
+regulation of response to stimulus	FC (WS / NS)	0.13 (12 / 10.89)	-0.2 (9.29 / 10.86)	-	-	-	-0.17 (5.32 / 6.1)
+ 	Percentile (%)	27.791	65.035	-	-	-	74.038
+purine-containing compound salvage	FC (WS / NS)	0.13 (9.11 / 8.25)	0.16 (9.53 / 8.4)	0.05 (11.73 / 11.31)	0.06 (13.53 / 12.92)	-0.63 (-3.71 / -5.2)	0.12 (8.52 / 7.79)
+ 	Percentile (%)	27.841	20.635	35.507	29.412	88.407	35.527
+cytosolic valyl-tRNA aminoacylation	FC (WS / NS)	0.13 (6.6 / 5.95)	-	-	-	-	-
+ 	Percentile (%)	27.89	-	-	-	-	-
+vasodilation	FC (WS / NS)	0.12 (6.73 / 6.09)	0.4 (5.7 / 4.08)	-	-	-	-
+ 	Percentile (%)	28.037	14.664	-	-	-	-
+pathogenesis	FC (WS / NS)	0.12 (10.95 / 9.96)	0.22 (7.42 / 6.21)	0.03 (11.48 / 11.26)	-0.04 (15 / 15.47)	-0.4 (-3.84 / -4.75)	0.05 (9.13 / 8.8)
+ 	Percentile (%)	28.087	18.963	41.157	55.265	80.498	46.422
+positive regulation of interleukin-8 secretion	FC (WS / NS)	0.12 (9.97 / 9.07)	-	-	-	-	-
+ 	Percentile (%)	28.185	-	-	-	-	-
+hyperosmotic response	FC (WS / NS)	0.12 (11.76 / 10.72)	-	-	-	-	-
+ 	Percentile (%)	28.234	-	-	-	-	-
+cellular response to osmotic stress	FC (WS / NS)	0.12 (11.29 / 10.3)	-0.29 (3.58 / 4.61)	-	-	-	-
+ 	Percentile (%)	28.382	67.16	-	-	-	-
+response to pH	FC (WS / NS)	0.12 (11.76 / 10.73)	-	-	-	-	-
+ 	Percentile (%)	28.431	-	-	-	-	-
+protein localization to organelle	FC (WS / NS)	0.12 (9.85 / 8.98)	0.04 (7.94 / 7.71)	0.18 (11.11 / 9.71)	0.37 (10.35 / 7.81)	-0.13 (-7.67 / -8.28)	0.23 (6.7 / 5.55)
+ 	Percentile (%)	28.529	41.247	23.504	12.055	59.48	21.755
+modification of morphology or physiology of other organism involved in symbiotic interaction	FC (WS / NS)	0.12 (11.22 / 10.24)	0.23 (7.85 / 6.55)	0.08 (8.78 / 8.26)	-	-	-0.2 (3 / 3.61)
+ 	Percentile (%)	28.578	18.796	30.659	-	-	75.908
+dTDP-rhamnose biosynthetic process	FC (WS / NS)	0.12 (6.29 / 5.7)	0.26 (5.88 / 4.76)	-	0.06 (8.27 / 7.92)	-	0.1 (5 / 4.61)
+ 	Percentile (%)	28.628	18.056	-	30.065	-	37.217
+anion transmembrane transport	FC (WS / NS)	0.12 (10.42 / 9.5)	-0.14 (4.32 / 4.86)	-0.18 (8.29 / 9.51)	-	-	0.39 (3.58 / 2.49)
+ 	Percentile (%)	28.726	62.885	81.478	-	-	15.21
+UTP biosynthetic process	FC (WS / NS)	0.12 (6.43 / 5.83)	-	0.71 (5.21 / 2.81)	2.45 (4.46 / 0)	-	0.69 (5.32 / 2.91)
+ 	Percentile (%)	28.775	-	12.003	5.156	-	8.918
+stress response to metal ion	FC (WS / NS)	0.12 (8.75 / 7.98)	-	-	-	-	-
+ 	Percentile (%)	28.824	-	-	-	-	-
+tRNA modification	FC (WS / NS)	0.12 (9.19 / 8.39)	0.35 (8.43 / 6.38)	0.05 (12.97 / 12.49)	-	-	0.12 (7.15 / 6.49)
+ 	Percentile (%)	28.923	15.596	35.306	-	-	34.88
+response to salt stress	FC (WS / NS)	0.12 (11.78 / 10.77)	-	2.11 (3.32 / 0)	-	-	-
+ 	Percentile (%)	28.972	-	1.973	-	-	-
+amino acid transport	FC (WS / NS)	0.12 (11.31 / 10.36)	-0.01 (6.02 / 6.06)	-0.02 (11.04 / 11.22)	-	-	0.19 (7.54 / 6.48)
+ 	Percentile (%)	29.169	55.553	72.584	-	-	24.524
+DNA-templated transcription, elongation	FC (WS / NS)	0.11 (6.34 / 5.78)	-	-	0.18 (11.89 / 10.37)	-	0.08 (6.02 / 5.63)
+ 	Percentile (%)	29.267	-	-	16.485	-	38.871
+cellular response to abiotic stimulus	FC (WS / NS)	0.11 (12.1 / 11.11)	-	-	-	-	-
+ 	Percentile (%)	29.316	-	-	-	-	-
+cellular response to acid chemical	FC (WS / NS)	0.11 (8.31 / 7.61)	-	-	-	-	-
+ 	Percentile (%)	29.415	-	-	-	-	-
+porphyrin-containing compound metabolic process	FC (WS / NS)	0.11 (7.67 / 7.02)	0.22 (10.35 / 8.74)	0.06 (12.26 / 11.75)	-0.36 (8.7 / 11.46)	-	0 (6.74 / 6.76)
+ 	Percentile (%)	29.513	19.083	33.801	76.906	-	60.05
+heme metabolic process	FC (WS / NS)	0.11 (7.67 / 7.02)	-	-	-	-	0.24 (5.09 / 4.15)
+ 	Percentile (%)	29.562	-	-	-	-	21.143
+uracil salvage	FC (WS / NS)	0.11 (6.83 / 6.25)	-	0.11 (6.87 / 6.3)	0.38 (11.01 / 8.21)	-	0.16 (7.23 / 6.35)
+ 	Percentile (%)	29.611	-	28.318	11.837	-	26.573
+drug transport	FC (WS / NS)	0.11 (9.42 / 8.64)	-0.21 (3.46 / 4.15)	0.14 (8.24 / 7.38)	-	-	-
+ 	Percentile (%)	29.661	65.13	25.677	-	-	-
+drug transmembrane transport	FC (WS / NS)	0.11 (8.53 / 7.82)	-	-	-	-	-
+ 	Percentile (%)	29.71	-	-	-	-	-
+'de novo' UMP biosynthetic process	FC (WS / NS)	0.11 (7.67 / 7.02)	-	0.07 (10.59 / 10.08)	0.01 (12.36 / 12.29)	0.04 (-10.88 / -10.6)	0.07 (7.8 / 7.4)
+ 	Percentile (%)	29.759	-	32.263	41.612	42.687	42.575
+regulation of phosphorus metabolic process	FC (WS / NS)	0.11 (12.2 / 11.24)	-0.36 (7.91 / 10.47)	-	-2.39 (0 / 4.25)	-	0.27 (4.25 / 3.36)
+ 	Percentile (%)	30.103	69.811	-	88.017	-	19.885
+response to starvation	FC (WS / NS)	0.11 (10.09 / 9.28)	0.01 (9.69 / 9.62)	-	-	-	-
+ 	Percentile (%)	30.152	45.928	-	-	-	-
+response to osmotic stress	FC (WS / NS)	0.11 (12.78 / 11.78)	0.1 (6.48 / 5.99)	-	-	-	-
+ 	Percentile (%)	30.251	33.914	-	-	-	-
+regulation of protein processing	FC (WS / NS)	0.11 (10.41 / 9.58)	-1.54 (0 / 1.91)	-	-	-	-
+ 	Percentile (%)	30.3	88.058	-	-	-	-
+cytokinetic process	FC (WS / NS)	0.11 (10.9 / 10.03)	0.14 (9.74 / 8.75)	-	-	-	-
+ 	Percentile (%)	30.349	32.243	-	-	-	-
+regulation of phosphate metabolic process	FC (WS / NS)	0.11 (11.9 / 10.97)	-0.43 (7.42 / 10.31)	0.22 (8.16 / 6.85)	-2.39 (0 / 4.25)	-	0.27 (4.25 / 3.36)
+ 	Percentile (%)	30.398	70.743	21.03	87.945	-	19.849
+nucleoside salvage	FC (WS / NS)	0.11 (9.09 / 8.37)	-	-	-	-	-
+ 	Percentile (%)	30.448	-	-	-	-	-
+modification of morphology or physiology of other organism	FC (WS / NS)	0.11 (11.64 / 10.75)	0.23 (8.41 / 7.03)	0.12 (9.38 / 8.56)	-	-	-0.2 (3 / 3.61)
+ 	Percentile (%)	30.497	18.82	27.482	-	-	75.8
+cell wall macromolecule metabolic process	FC (WS / NS)	0.11 (11.03 / 10.18)	-	0.03 (14.6 / 14.3)	-	-	0.09 (9.11 / 8.52)
+ 	Percentile (%)	30.546	-	39.953	-	-	38.296
+cell cycle process	FC (WS / NS)	0.11 (11.82 / 10.92)	0.1 (11.06 / 10.27)	0.05 (13.82 / 13.29)	0.08 (18.08 / 17.02)	NaN (-0.37 / -1.98)	0.1 (9.65 / 8.92)
+ 	Percentile (%)	30.595	33.771	34.57	25.563	97.4	37.001
+regulation of protein maturation	FC (WS / NS)	0.1 (10.99 / 10.16)	-1.54 (0 / 1.91)	-	-	-	-
+ 	Percentile (%)	30.694	88.202	-	-	-	-
+positive regulation of cytokine production	FC (WS / NS)	0.1 (11.97 / 11.07)	-	-	-	-	-
+ 	Percentile (%)	30.743	-	-	-	-	-
+regulation of interleukin-8 production	FC (WS / NS)	0.1 (11.97 / 11.07)	-	-	-	-	-
+ 	Percentile (%)	30.792	-	-	-	-	-
+regulation of cytokine secretion	FC (WS / NS)	0.1 (11.97 / 11.07)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	30.841	8.885	-	-	-	-
+cell wall macromolecule biosynthetic process	FC (WS / NS)	0.1 (10.35 / 9.57)	0.02 (8.98 / 8.85)	-	-	-	0.08 (8.99 / 8.44)
+ 	Percentile (%)	30.89	44.28	-	-	-	38.907
+import into cell	FC (WS / NS)	0.1 (9.73 / 9)	-	-	-	-	-
+ 	Percentile (%)	30.989	-	-	-	-	-
+modulation by symbiont of host cellular process	FC (WS / NS)	0.1 (9.04 / 8.37)	-	-	-	-	-0.2 (3 / 3.61)
+ 	Percentile (%)	31.136	-	-	-	-	75.872
+glucose 6-phosphate metabolic process	FC (WS / NS)	0.1 (9.67 / 8.95)	0.18 (7.52 / 6.55)	-	-	-	-
+ 	Percentile (%)	31.185	20.325	-	-	-	-
+adhesion of symbiont to host epithelial cell	FC (WS / NS)	0.1 (9.04 / 8.37)	-	-	-	-	-
+ 	Percentile (%)	31.284	-	-	-	-	-
+regulation of protein secretion	FC (WS / NS)	0.1 (12.56 / 11.67)	-	-	-	-	-
+ 	Percentile (%)	31.333	-	-	-	-	-
+positive regulation of secretion	FC (WS / NS)	0.1 (12.56 / 11.67)	-3.02 (0 / 7.13)	-	-	-	-
+ 	Percentile (%)	31.431	99.236	-	-	-	-
+hexose transmembrane transport	FC (WS / NS)	0.1 (7.66 / 7.1)	0.02 (7.85 / 7.75)	-	-	-	-
+ 	Percentile (%)	31.53	44.901	-	-	-	-
+guanosine-containing compound biosynthetic process	FC (WS / NS)	0.1 (9.07 / 8.43)	-	0.06 (9.41 / 8.97)	-0.01 (15.96 / 16.12)	-	0 (8.01 / 8.01)
+ 	Percentile (%)	31.628	-	33.133	49.383	-	58.756
+regulation of cytokine production	FC (WS / NS)	0.1 (12.97 / 12.07)	0.08 (3.32 / 3.08)	-	-	-	-
+ 	Percentile (%)	31.677	34.822	-	-	-	-
+regulation of cell communication	FC (WS / NS)	0.1 (12.02 / 11.19)	-0.33 (8.31 / 10.7)	-	-	-	0.05 (4.32 / 4.15)
+ 	Percentile (%)	31.727	69.214	-	-	-	46.638
+regulation of signaling	FC (WS / NS)	0.1 (12.02 / 11.19)	-0.33 (8.31 / 10.7)	-	-	-	0.05 (4.32 / 4.15)
+ 	Percentile (%)	31.776	69.166	-	-	-	46.674
+protein targeting	FC (WS / NS)	0.1 (9.78 / 9.09)	0.06 (8.69 / 8.28)	0.05 (12.08 / 11.59)	-0.03 (13.7 / 14.04)	-0.12 (-7.93 / -8.55)	0.02 (8.34 / 8.19)
+ 	Percentile (%)	31.825	37.64	34.102	52.36	59.155	52.967
+regulation of peptide secretion	FC (WS / NS)	0.09 (12.97 / 12.08)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	31.923	-	-	-	-	29.809
+regulation of protein transport	FC (WS / NS)	0.09 (12.97 / 12.08)	-0.16 (6.78 / 7.67)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	31.972	63.554	-	-	-	32.65
+regulation of secretion by cell	FC (WS / NS)	0.09 (12.97 / 12.08)	-	-	-	-	0.13 (3.46 / 3.08)
+ 	Percentile (%)	32.022	-	-	-	-	34.088
+monosaccharide catabolic process	FC (WS / NS)	0.09 (7.48 / 6.94)	-0.01 (11 / 11.1)	0.06 (18.48 / 17.75)	-	-	0.27 (5.7 / 4.55)
+ 	Percentile (%)	32.169	55.911	34.069	-	-	19.346
+CTP biosynthetic process	FC (WS / NS)	0.09 (7.29 / 6.77)	0.36 (5.91 / 4.36)	0.05 (10.78 / 10.37)	-	-	0.1 (7.58 / 6.98)
+ 	Percentile (%)	32.218	15.476	35.038	-	-	36.893
+regulation of establishment of protein localization	FC (WS / NS)	0.09 (13.3 / 12.41)	-0.14 (7.26 / 8.11)	0.05 (3.32 / 3.17)	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	32.317	62.957	34.905	-	-	32.758
+glycolytic process through fructose-6-phosphate	FC (WS / NS)	0.09 (6.55 / 6.09)	-	-	-	-	-
+ 	Percentile (%)	32.366	-	-	-	-	-
+L-alanine catabolic process	FC (WS / NS)	0.09 (6.41 / 5.95)	-	0.05 (6.27 / 6.02)	0.19 (13.79 / 11.98)	-0.24 (-8.36 / -9.7)	0.05 (6.43 / 6.15)
+ 	Percentile (%)	32.464	-	35.44	15.977	69.881	44.948
+regulation of peptide transport	FC (WS / NS)	0.09 (13.43 / 12.55)	-0.32 (6.85 / 8.79)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	32.514	68.641	-	-	-	32.83
+5-phosphoribose 1-diphosphate biosynthetic process	FC (WS / NS)	0.09 (7.88 / 7.34)	-	0.16 (9.6 / 8.49)	0.07 (15.28 / 14.46)	-0.36 (-7.14 / -8.88)	0.18 (8.05 / 6.96)
+ 	Percentile (%)	32.612	-	24.473	26.434	78.548	25.279
+alanine metabolic process	FC (WS / NS)	0.09 (9.03 / 8.42)	0.21 (9.04 / 7.67)	0.01 (9.8 / 9.71)	0.19 (13.79 / 11.98)	-0.32 (-6.36 / -7.7)	-0.02 (6.58 / 6.69)
+ 	Percentile (%)	32.661	19.537	46.239	15.832	76.273	62.675
+positive regulation of transport	FC (WS / NS)	0.09 (12.98 / 12.12)	-3.09 (0 / 7.51)	-	-	-	0.15 (3.32 / 2.91)
+ 	Percentile (%)	32.71	99.427	-	-	-	28.839
+oligosaccharide metabolic process	FC (WS / NS)	0.09 (9.13 / 8.51)	0.01 (8.14 / 8.07)	0.03 (13.57 / 13.23)	0.16 (13.79 / 12.24)	-0.86 (-3.06 / -4.74)	0.11 (8.03 / 7.36)
+ 	Percentile (%)	32.759	45.57	38.783	17.647	91.333	35.778
+regulation of secretion	FC (WS / NS)	0.09 (13.56 / 12.67)	-0.47 (6.32 / 9.11)	-	-	-	0.13 (3.46 / 3.08)
+ 	Percentile (%)	32.809	71.746	-	-	-	34.017
+regulation of chlorophyll biosynthetic process	FC (WS / NS)	0.09 (6.85 / 6.38)	-	-	-	-	-
+ 	Percentile (%)	33.153	-	-	-	-	-
+protein import into chloroplast stroma	FC (WS / NS)	0.09 (6.85 / 6.38)	-	-	-	-	-
+ 	Percentile (%)	33.251	-	-	-	-	-
+regulation of nucleotide metabolic process	FC (WS / NS)	0.09 (10.21 / 9.54)	-0.48 (5.13 / 7.53)	0 (5.58 / 5.58)	-	-	-
+ 	Percentile (%)	33.301	71.889	55.333	-	-	-
+dicarboxylic acid biosynthetic process	FC (WS / NS)	0.09 (10.08 / 9.42)	0.14 (8.92 / 7.99)	0.05 (13.63 / 13.1)	-	-	0.34 (8.46 / 6.46)
+ 	Percentile (%)	33.35	32.147	34.37	-	-	16.613
+carbohydrate phosphorylation	FC (WS / NS)	0.09 (7.43 / 6.93)	0.22 (7.4 / 6.23)	0.1 (11.65 / 10.83)	-	0.07 (-6.79 / -6.51)	-
+ 	Percentile (%)	33.399	19.322	29.254	-	38.137	-
+pentose-phosphate shunt	FC (WS / NS)	0.09 (7.88 / 7.35)	0.18 (7.52 / 6.53)	0.05 (11.86 / 11.46)	0.04 (16.66 / 16.18)	-0.37 (-2.31 / -2.69)	0.06 (8.2 / 7.81)
+ 	Percentile (%)	33.448	20.229	36.376	33.188	79.09	43.186
+response to nutrient levels	FC (WS / NS)	0.09 (10.75 / 10.07)	0.02 (10.79 / 10.63)	0.12 (9.49 / 8.67)	-	-	0.19 (5.95 / 5.11)
+ 	Percentile (%)	33.645	44.352	27.516	-	-	25.207
+carbohydrate transmembrane transport	FC (WS / NS)	0.09 (9.33 / 8.73)	-	0.04 (14.3 / 13.89)	-	0.18 (-4.14 / -3.77)	-
+ 	Percentile (%)	33.792	-	37.646	-	22.86	-
+carboxylic acid transport	FC (WS / NS)	0.09 (11.63 / 10.9)	0.04 (7.94 / 7.68)	0 (12.38 / 12.34)	-	-	0.19 (7.54 / 6.48)
+ 	Percentile (%)	33.891	40.745	50.384	-	-	24.595
+regulation of transport	FC (WS / NS)	0.09 (14.06 / 13.2)	-0.19 (8.46 / 9.79)	0.14 (7.3 / 6.55)	-	-	0.2 (4.64 / 3.91)
+ 	Percentile (%)	33.94	64.724	26.078	-	-	23.481
+carbohydrate transport	FC (WS / NS)	0.08 (10.32 / 9.67)	0.06 (10.57 / 10.12)	0.02 (16.14 / 15.95)	-	0.48 (-2.36 / -1.98)	0.11 (9.59 / 8.78)
+ 	Percentile (%)	33.989	38.428	44.801	-	7.476	35.563
+pyrimidine nucleobase biosynthetic process	FC (WS / NS)	0.08 (9.45 / 8.85)	-	-0.01 (12.61 / 12.71)	-0.02 (12.67 / 12.83)	-	0.06 (8.38 / 7.98)
+ 	Percentile (%)	34.088	-	69.876	50.617	-	43.294
+embryo development ending in seed dormancy	FC (WS / NS)	0.08 (7.21 / 6.74)	-0.11 (2 / 2.23)	-	-	-	-
+ 	Percentile (%)	34.137	61.357	-	-	-	-
+pyruvate family amino acid metabolic process	FC (WS / NS)	0.08 (9.62 / 9.02)	0.17 (9.6 / 8.43)	0.02 (10.65 / 10.5)	0.19 (13.79 / 11.98)	-0.36 (-5.78 / -7.11)	-0.02 (6.58 / 6.69)
+ 	Percentile (%)	34.235	20.54	44.233	15.904	78.332	62.711
+alpha-amino acid biosynthetic process	FC (WS / NS)	0.08 (12.53 / 11.78)	0.09 (11.41 / 10.7)	0.02 (18.35 / 18.09)	0.02 (16.2 / 15.92)	0.84 (0.13 / -0.37)	0.09 (11.18 / 10.41)
+ 	Percentile (%)	34.333	34.798	43.664	38.272	3.684	37.397
+pyrimidine ribonucleoside biosynthetic process	FC (WS / NS)	0.08 (8.89 / 8.34)	-	0.05 (12.64 / 12.16)	-	0.04 (-10.88 / -10.6)	-
+ 	Percentile (%)	34.383	-	34.804	-	42.795	-
+pyrimidine nucleobase metabolic process	FC (WS / NS)	0.08 (10.17 / 9.55)	-0.33 (5.67 / 7.36)	0 (13.58 / 13.59)	-0.02 (12.67 / 12.83)	-	0.06 (8.4 / 8)
+ 	Percentile (%)	34.432	68.952	66.7	50.545	-	43.474
+regulation of oxidative phosphorylation	FC (WS / NS)	0.08 (9.21 / 8.65)	-	-	-	-	-
+ 	Percentile (%)	34.481	-	-	-	-	-
+cellular response to unfolded protein	FC (WS / NS)	0.08 (9.36 / 8.79)	-	-	-	-	-
+ 	Percentile (%)	34.53	-	-	-	-	-
+regulation of ATP metabolic process	FC (WS / NS)	0.08 (10.21 / 9.6)	-	-	-	-	-
+ 	Percentile (%)	34.579	-	-	-	-	-
+regulation of multicellular organismal process	FC (WS / NS)	0.08 (13.73 / 12.92)	-0.28 (8.89 / 10.98)	0.07 (4.64 / 4.39)	-	-	-0.32 (3.81 / 4.99)
+ 	Percentile (%)	34.629	66.778	32.23	-	-	81.805
+glycerol ether metabolic process	FC (WS / NS)	0.08 (7.02 / 6.58)	-0.93 (0 / 0.91)	0.02 (7.69 / 7.55)	-0.25 (3.14 / 3.91)	-	0.06 (7.41 / 7.07)
+ 	Percentile (%)	34.678	78.266	41.892	71.242	-	43.797
+DNA topological change	FC (WS / NS)	0.08 (7.26 / 6.81)	0.08 (6.85 / 6.43)	0.07 (9.99 / 9.5)	0.18 (14.67 / 12.85)	-0.22 (-10.36 / -11.88)	0.07 (7.8 / 7.36)
+ 	Percentile (%)	34.727	35.371	32.197	16.558	67.931	40.273
+protein refolding	FC (WS / NS)	0.08 (10.33 / 9.71)	0.06 (6.17 / 5.86)	0.15 (9.29 / 8.29)	0.03 (19.5 / 19.09)	-0.93 (-4.15 / -7.02)	0.09 (9.46 / 8.82)
+ 	Percentile (%)	34.776	37.378	25.476	37.11	92.091	37.756
+regulation of phosphorylation	FC (WS / NS)	0.08 (10.26 / 9.65)	-0.77 (5.36 / 9.85)	0.62 (6.67 / 4)	-	-	-0.11 (2 / 2.23)
+ 	Percentile (%)	34.825	76.021	12.437	-	-	70.73
+response to decreased oxygen levels	FC (WS / NS)	0.08 (9.73 / 9.16)	0.02 (11.96 / 11.83)	-	-	-	-
+ 	Percentile (%)	34.973	45.116	-	-	-	-
+positive regulation of gene expression	FC (WS / NS)	0.08 (10.14 / 9.55)	-0.03 (8.38 / 8.59)	0.01 (9.41 / 9.35)	-	-	-0.11 (4.86 / 5.33)
+ 	Percentile (%)	35.022	57.846	48.646	-	-	71.233
+organic anion transport	FC (WS / NS)	0.08 (11.86 / 11.18)	0.07 (8.56 / 8.13)	0.02 (13.64 / 13.4)	-	-0.05 (-5.56 / -5.71)	0.19 (7.55 / 6.51)
+ 	Percentile (%)	35.071	37.067	41.792	-	51.679	24.955
+mitochondrial ATP synthesis coupled proton transport	FC (WS / NS)	0.08 (8.07 / 7.59)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	35.219	85.694	-	-	-	-
+organic acid transport	FC (WS / NS)	0.08 (11.89 / 11.21)	0.05 (8.31 / 7.99)	0.01 (13.05 / 12.95)	-	-	0.19 (7.54 / 6.48)
+ 	Percentile (%)	35.268	39.551	46.974	-	-	24.56
+UMP biosynthetic process	FC (WS / NS)	0.08 (9.34 / 8.81)	-1.27 (1 / 3.81)	0.06 (12.35 / 11.82)	0.04 (13.04 / 12.67)	-	0.08 (8.55 / 8.03)
+ 	Percentile (%)	35.317	83.425	33.668	34.06	-	39.051
+response to oxygen levels	FC (WS / NS)	0.08 (10.38 / 9.79)	0.01 (12.54 / 12.41)	1.73 (2.32 / 0)	-	-	-
+ 	Percentile (%)	35.366	45.235	4.313	-	-	-
+'de novo' AMP biosynthetic process	FC (WS / NS)	0.08 (7.32 / 6.89)	-0.93 (0 / 0.91)	0.06 (6.71 / 6.38)	0 (13.42 / 13.37)	0.07 (-11.38 / -10.91)	0.07 (7.53 / 7.11)
+ 	Percentile (%)	35.465	80.511	32.33	42.048	39.112	40.093
+positive regulation of multicellular organismal process	FC (WS / NS)	0.08 (12.46 / 11.77)	-0.14 (7.41 / 8.27)	-	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	35.514	62.933	-	-	-	24.056
+peptidoglycan biosynthetic process	FC (WS / NS)	0.08 (9.03 / 8.51)	-0.02 (7.62 / 7.74)	0.04 (12.46 / 12.13)	0.05 (15.29 / 14.78)	-0.22 (-5.72 / -6.51)	0.06 (8.79 / 8.4)
+ 	Percentile (%)	35.563	56.652	38.248	31.518	68.689	44.085
+cellular amino acid biosynthetic process	FC (WS / NS)	0.07 (13.17 / 12.46)	0.08 (11.99 / 11.29)	0.02 (19.47 / 19.22)	0.02 (16.25 / 15.97)	0.38 (1.14 / 0.65)	0.11 (11.41 / 10.5)
+ 	Percentile (%)	35.809	35.276	44.333	38.344	9.967	36.174
+symbiont process	FC (WS / NS)	0.07 (12.41 / 11.74)	0.08 (13.55 / 12.76)	-	0.54 (4.81 / 3)	-	0.08 (6.66 / 6.25)
+ 	Percentile (%)	35.858	35.156	-	10.821	-	39.159
+ethanol biosynthetic process	FC (WS / NS)	0.07 (7.77 / 7.34)	-	-	-	-	-
+ 	Percentile (%)	35.908	-	-	-	-	-
+cobalamin biosynthetic process	FC (WS / NS)	0.07 (8.3 / 7.84)	-	-	-	-	-
+ 	Percentile (%)	35.957	-	-	-	-	-
+purine nucleobase metabolic process	FC (WS / NS)	0.07 (9.43 / 8.92)	0.12 (9.25 / 8.46)	0.04 (10.74 / 10.39)	3.25 (8.49 / 0)	-0.26 (-8.73 / -10.25)	0.02 (6.09 / 5.99)
+ 	Percentile (%)	36.006	33.079	36.677	0.726	72.156	53.794
+anion transport	FC (WS / NS)	0.07 (12.13 / 11.5)	0.06 (8.84 / 8.45)	0.03 (14.63 / 14.29)	0.03 (10.51 / 10.28)	-0.28 (-2.8 / -3.19)	0.17 (7.75 / 6.79)
+ 	Percentile (%)	36.055	37.951	39.418	37.182	74.756	26.465
+intracellular protein transport	FC (WS / NS)	0.07 (10.33 / 9.78)	0.04 (9.73 / 9.46)	0.03 (13.1 / 12.77)	-0.04 (14.58 / 15.01)	-	0 (9.12 / 9.13)
+ 	Percentile (%)	36.104	41.82	39.05	53.45	-	59.115
+ribonucleoprotein complex biogenesis	FC (WS / NS)	0.07 (9.38 / 8.88)	0.03 (11.2 / 10.95)	0.03 (14.31 / 13.99)	-	NaN (-0.08 / -1.39)	0.09 (8.41 / 7.83)
+ 	Percentile (%)	36.153	42.942	39.552	-	97.616	37.864
+'de novo' pyrimidine nucleobase biosynthetic process	FC (WS / NS)	0.07 (7.08 / 6.69)	-1.05 (1.58 / 4.36)	-0.01 (11.58 / 11.7)	-0.08 (12.03 / 12.77)	0.01 (-6.98 / -6.92)	0 (7.34 / 7.35)
+ 	Percentile (%)	36.252	82.446	70.445	59.985	45.395	59.223
+ribosome biogenesis	FC (WS / NS)	0.07 (8.28 / 7.83)	0.04 (9.92 / 9.65)	0.03 (13.26 / 12.94)	0.07 (15.3 / 14.49)	NaN (-0.53 / -1.86)	0.07 (8.08 / 7.68)
+ 	Percentile (%)	36.301	41.605	39.117	26.725	98.7	42.97
+enterobacterial common antigen biosynthetic process	FC (WS / NS)	0.07 (7.39 / 6.99)	-	1 (1 / 0)	-	-	-0.22 (2 / 2.49)
+ 	Percentile (%)	36.35	-	8.826	-	-	76.375
+purine ribonucleoside biosynthetic process	FC (WS / NS)	0.07 (10.14 / 9.61)	0.06 (10.26 / 9.82)	0.02 (15.65 / 15.39)	-0.01 (15.98 / 16.12)	NaN (-0.4 / -1.06)	0.04 (8.57 / 8.29)
+ 	Percentile (%)	36.399	38.214	41.959	49.02	99.242	47.645
+external encapsulating structure organization	FC (WS / NS)	0.07 (10.43 / 9.89)	0.04 (7.95 / 7.72)	-0.05 (12.35 / 12.85)	-	-	-
+ 	Percentile (%)	36.449	41.366	75.593	-	-	-
+response to hypoxia	FC (WS / NS)	0.07 (8.54 / 8.08)	-	-	-	-	-
+ 	Percentile (%)	36.498	-	-	-	-	-
+regulation of tetrapyrrole metabolic process	FC (WS / NS)	0.07 (8.85 / 8.38)	-	-	-	-	-
+ 	Percentile (%)	36.547	-	-	-	-	-
+pyrimidine nucleoside biosynthetic process	FC (WS / NS)	0.07 (10.06 / 9.54)	-	-	-	-	-
+ 	Percentile (%)	36.596	-	-	-	-	-
+pyrimidine ribonucleoside triphosphate biosynthetic process	FC (WS / NS)	0.07 (8.81 / 8.34)	-	0.05 (11.6 / 11.16)	-	-	0.13 (7.85 / 7.07)
+ 	Percentile (%)	36.645	-	34.771	-	-	33.693
+pyrimidine nucleoside salvage	FC (WS / NS)	0.07 (6.93 / 6.55)	-	-	-	-	-
+ 	Percentile (%)	36.695	-	-	-	-	-
+UMP salvage	FC (WS / NS)	0.07 (6.93 / 6.55)	-	0.09 (7.88 / 7.32)	0.12 (11.61 / 10.57)	-	0.13 (7.25 / 6.55)
+ 	Percentile (%)	36.744	-	29.522	20.625	-	34.268
+response to cytokinin	FC (WS / NS)	0.07 (6.98 / 6.6)	-	-	-	-	-
+ 	Percentile (%)	36.793	-	-	-	-	-
+glutamine family amino acid biosynthetic process	FC (WS / NS)	0.07 (9.69 / 9.19)	0.13 (8.41 / 7.61)	-0.01 (14.15 / 14.21)	0 (12.75 / 12.76)	-0.05 (-3.64 / -3.73)	0.12 (8.2 / 7.48)
+ 	Percentile (%)	36.99	32.601	68.205	45.824	51.896	35.131
+guanosine-containing compound metabolic process	FC (WS / NS)	0.07 (10.44 / 9.91)	0.1 (11.12 / 10.28)	-0.01 (16.5 / 16.66)	-0.01 (15.96 / 16.14)	0.74 (1.7 / 0.62)	0 (8.12 / 8.13)
+ 	Percentile (%)	37.039	33.485	70.545	49.964	4.225	58.936
+NADPH regeneration	FC (WS / NS)	0.07 (8.55 / 8.11)	0.13 (8.53 / 7.68)	-	-	-	-
+ 	Percentile (%)	37.088	32.338	-	-	-	-
+pyrimidine ribonucleoside monophosphate metabolic process	FC (WS / NS)	0.07 (10.67 / 10.13)	-0.77 (3 / 5.81)	0.05 (13.92 / 13.39)	0.04 (13.04 / 12.67)	0.06 (-8.56 / -8.27)	0.08 (8.55 / 8.03)
+ 	Percentile (%)	37.334	75.997	34.671	34.132	40.845	39.087
+regulation of protein complex disassembly	FC (WS / NS)	0.07 (8.95 / 8.5)	-	0.05 (10.62 / 10.26)	-	-	0.14 (7.64 / 6.85)
+ 	Percentile (%)	37.383	-	36.443	-	-	33.261
+interspecies interaction between organisms	FC (WS / NS)	0.07 (13.75 / 13.08)	0.07 (13.84 / 13.1)	0.05 (12.06 / 11.59)	-0.04 (15 / 15.48)	-	0.04 (9.41 / 9.15)
+ 	Percentile (%)	37.432	35.754	34.403	55.192	-	49.047
+pyrimidine nucleoside metabolic process	FC (WS / NS)	0.07 (10.99 / 10.44)	0.15 (8.43 / 7.49)	0.04 (14.72 / 14.24)	-	0.05 (-8.88 / -8.6)	0.27 (2 / 1.49)
+ 	Percentile (%)	37.531	20.874	36.643	-	41.495	19.489
+NAD biosynthetic process	FC (WS / NS)	0.07 (6.94 / 6.58)	0.54 (7.85 / 5.08)	0.1 (8.51 / 7.88)	-0.08 (8.43 / 8.98)	-	0.03 (6.55 / 6.4)
+ 	Percentile (%)	37.58	12.276	29.154	60.349	-	50.701
+tetrapyrrole biosynthetic process	FC (WS / NS)	0.07 (9.62 / 9.14)	0.18 (10.37 / 9.04)	0.06 (13.77 / 13.19)	-0.01 (12.8 / 12.9)	-	0.08 (8.78 / 8.28)
+ 	Percentile (%)	37.629	20.158	33.634	48.439	-	39.986
+disaccharide metabolic process	FC (WS / NS)	0.07 (8.94 / 8.5)	0.31 (5.46 / 4.23)	0.17 (10.82 / 9.47)	2.84 (6.17 / 0)	-	0.7 (6.64 / 3.71)
+ 	Percentile (%)	37.678	16.623	23.638	2.832	-	8.882
+regulation of localization	FC (WS / NS)	0.07 (14.47 / 13.78)	-0.22 (9.12 / 10.77)	-0.03 (8.09 / 8.27)	-	-	0.18 (4.75 / 4.08)
+ 	Percentile (%)	37.727	65.297	73.654	-	-	25.602
+positive regulation of protein metabolic process	FC (WS / NS)	0.06 (11.31 / 10.77)	-	-	-	-	-0.05 (5 / 5.23)
+ 	Percentile (%)	37.924	-	-	-	-	66.091
+pyrimidine ribonucleoside triphosphate metabolic process	FC (WS / NS)	0.06 (9.81 / 9.34)	0.27 (7.91 / 6.36)	0.05 (12.49 / 12.04)	-0.26 (12.11 / 14.73)	-	0.13 (7.85 / 7.07)
+ 	Percentile (%)	38.023	17.339	35.339	71.532	-	33.657
+pyrimidine nucleoside monophosphate metabolic process	FC (WS / NS)	0.06 (11.19 / 10.67)	-0.44 (4.46 / 6.4)	0.05 (14.66 / 14.14)	0.03 (13.04 / 12.75)	0.06 (-8.08 / -7.79)	0.08 (8.58 / 8.07)
+ 	Percentile (%)	38.121	71.292	35.54	36.964	40.303	38.979
+chloroplast organization	FC (WS / NS)	0.06 (7.91 / 7.53)	-	-	-	-	-
+ 	Percentile (%)	38.17	-	-	-	-	-
+cellular metabolic compound salvage	FC (WS / NS)	0.06 (11.28 / 10.76)	0.13 (10.27 / 9.32)	0.05 (13.88 / 13.37)	0.12 (15.3 / 14.03)	-0.99 (-2.53 / -4.05)	0.1 (9.74 / 9)
+ 	Percentile (%)	38.269	32.673	35.105	21.786	92.416	36.857
+tetrapyrrole metabolic process	FC (WS / NS)	0.06 (10.78 / 10.29)	0.16 (11.2 / 9.89)	0.05 (14.77 / 14.18)	-0.01 (12.8 / 12.9)	-0.78 (-1.77 / -2.31)	0.08 (8.78 / 8.28)
+ 	Percentile (%)	38.318	20.611	34.136	48.366	90.466	40.022
+response to abiotic stimulus	FC (WS / NS)	0.06 (14.2 / 13.57)	0.02 (13.52 / 13.3)	0.2 (13.56 / 11.69)	-	-	0.02 (7.12 / 7.01)
+ 	Percentile (%)	38.367	43.802	22.467	-	-	53.973
+pyruvate biosynthetic process	FC (WS / NS)	0.06 (11.54 / 11.03)	-	-	-	-	-
+ 	Percentile (%)	38.465	-	-	-	-	-
+regulation of kinase activity	FC (WS / NS)	0.06 (4.39 / 4.17)	-0.88 (4.32 / 8.82)	-	-	-	-0.11 (2 / 2.23)
+ 	Percentile (%)	38.515	76.976	-	-	-	70.802
+nucleobase metabolic process	FC (WS / NS)	0.06 (11.26 / 10.75)	0.05 (9.89 / 9.54)	0 (14.97 / 14.92)	-0.01 (12.74 / 12.83)	0 (-4.57 / -4.57)	0.05 (8.66 / 8.32)
+ 	Percentile (%)	38.564	40.029	50.284	48.076	46.912	46.17
+ribonucleoside biosynthetic process	FC (WS / NS)	0.06 (11.27 / 10.76)	0.06 (11.15 / 10.65)	0.02 (17.24 / 16.95)	-	0.7 (0.55 / -0.05)	0.03 (8.68 / 8.46)
+ 	Percentile (%)	38.613	37.76	41.993	-	4.659	49.946
+lipopolysaccharide biosynthetic process	FC (WS / NS)	0.06 (7.6 / 7.25)	0.05 (7.46 / 7.16)	0.03 (11.36 / 11.07)	0.1 (13.26 / 12.27)	-0.34 (-7.31 / -8.97)	0 (6.48 / 6.48)
+ 	Percentile (%)	38.711	39.217	38.683	23.602	76.815	58.54
+regulation of cellular component organization	FC (WS / NS)	0.06 (10.75 / 10.28)	-0.18 (10 / 11.42)	0.04 (14.3 / 13.87)	-	-	0.13 (7.73 / 7)
+ 	Percentile (%)	38.76	64.223	37.446	-	-	34.628
+cell cycle	FC (WS / NS)	0.06 (10.3 / 9.84)	0.12 (9.21 / 8.37)	0.04 (15.29 / 14.87)	0.03 (16.74 / 16.36)	-0.67 (-2.57 / -3.49)	-
+ 	Percentile (%)	38.81	32.864	38.081	36.674	88.732	-
+transcription antitermination	FC (WS / NS)	0.06 (7.2 / 6.87)	-0.04 (7.13 / 7.36)	0.07 (5.91 / 5.58)	0.24 (13.51 / 11.28)	-0.19 (-8.29 / -9.29)	0.09 (7.29 / 6.78)
+ 	Percentile (%)	38.908	58.491	31.829	14.452	64.789	37.648
+pyrimidine-containing compound salvage	FC (WS / NS)	0.06 (9.71 / 9.28)	-	0.07 (10.47 / 9.9)	0.17 (12.34 / 10.82)	-	0.11 (8.25 / 7.56)
+ 	Percentile (%)	38.957	-	31.561	16.921	-	35.814
+pyrimidine-containing compound biosynthetic process	FC (WS / NS)	0.06 (12.16 / 11.64)	0.05 (9.14 / 8.78)	0.03 (16.05 / 15.73)	-0.1 (14.24 / 15.34)	0.03 (-5.21 / -5.13)	0.04 (10.06 / 9.73)
+ 	Percentile (%)	39.006	39.049	40.388	61.874	44.204	47.609
+interaction with host	FC (WS / NS)	0.06 (11.09 / 10.61)	0.05 (12.44 / 11.96)	0.27 (8.37 / 6.75)	0.68 (3.81 / 2)	-	0.17 (6.07 / 5.26)
+ 	Percentile (%)	39.056	39.097	18.823	10.24	-	25.998
+intracellular transport	FC (WS / NS)	0.06 (11.13 / 10.65)	0.04 (10.31 / 10.02)	0.03 (13.74 / 13.41)	-	-0.13 (-7.26 / -7.87)	0 (9.15 / 9.15)
+ 	Percentile (%)	39.105	41.557	39.218	-	60.888	58.972
+biological adhesion	FC (WS / NS)	0.06 (12.08 / 11.57)	0.12 (11.13 / 10.13)	-	0.01 (10.93 / 10.82)	-	0.06 (7.49 / 7.13)
+ 	Percentile (%)	39.154	32.84	-	40.16	-	43.33
+pyrimidine ribonucleotide biosynthetic process	FC (WS / NS)	0.06 (10.54 / 10.09)	0.12 (7.38 / 6.73)	0.05 (13.78 / 13.29)	-0.13 (13.65 / 15.04)	-	0.09 (9.24 / 8.63)
+ 	Percentile (%)	39.302	33.031	35.573	65.214	-	38.08
+purine ribonucleoside metabolic process	FC (WS / NS)	0.06 (11.28 / 10.8)	0.07 (13.08 / 12.44)	0.01 (20.62 / 20.48)	-0.01 (15.98 / 16.14)	0.29 (3.48 / 2.65)	0.05 (8.75 / 8.41)
+ 	Percentile (%)	39.351	36.9	48.445	49.601	12.568	46.099
+positive regulation of biological process	FC (WS / NS)	0.06 (14.66 / 14.05)	-0.08 (11.79 / 12.56)	0.01 (14.17 / 14.09)	-0.36 (7.26 / 9.59)	-0.36 (-4.58 / -5.59)	-0.08 (6.11 / 6.51)
+ 	Percentile (%)	39.498	60.712	48.78	76.761	78.44	68.393
+nucleoside phosphate catabolic process	FC (WS / NS)	0.06 (12.67 / 12.14)	0.05 (14.97 / 14.37)	0.01 (22.7 / 22.51)	-	0.16 (4.71 / 4.1)	0.03 (7.65 / 7.47)
+ 	Percentile (%)	39.547	38.524	46.406	-	25.244	50.449
+pyrimidine nucleotide biosynthetic process	FC (WS / NS)	0.06 (11.05 / 10.59)	-	0.04 (14.57 / 14.09)	-0.13 (13.65 / 15.06)	-	0.04 (9.38 / 9.11)
+ 	Percentile (%)	39.646	-	36.576	65.795	-	48.867
+sporulation resulting in formation of a cellular spore	FC (WS / NS)	0.06 (9.3 / 8.9)	-	-0.57 (5.32 / 8.37)	-3.78 (0 / 12.69)	-	-0.99 (2.58 / 6.13)
+ 	Percentile (%)	39.695	-	88.098	99.201	-	93.923
+nucleotide salvage	FC (WS / NS)	0.06 (9.53 / 9.13)	0.25 (9.25 / 7.62)	0.04 (12.06 / 11.71)	0.06 (13.79 / 13.21)	-	0.1 (8.76 / 8.13)
+ 	Percentile (%)	39.744	18.175	37.747	29.775	-	37.289
+cell wall organization	FC (WS / NS)	0.06 (9.08 / 8.7)	0.03 (3.58 / 3.49)	0.07 (6.86 / 6.49)	0.04 (15.27 / 14.78)	-	0.07 (8.92 / 8.48)
+ 	Percentile (%)	39.793	42.799	31.896	31.881	-	42.682
+pyrimidine-containing compound metabolic process	FC (WS / NS)	0.05 (13.02 / 12.5)	0.03 (10.38 / 10.12)	0.03 (17.09 / 16.74)	-0.1 (14.25 / 15.35)	0.04 (-4.46 / -4.37)	0.05 (10.14 / 9.78)
+ 	Percentile (%)	39.843	42.202	40.087	62.019	43.662	46.53
+positive regulation of cellular metabolic process	FC (WS / NS)	0.05 (12.23 / 11.74)	-0.09 (10.15 / 10.89)	0.01 (12.42 / 12.31)	-0.36 (7.26 / 9.59)	-0.28 (-5.7 / -6.71)	-0.06 (5.64 / 5.93)
+ 	Percentile (%)	39.941	61.022	46.54	76.688	74.323	66.81
+negative regulation of transcription, DNA-templated	FC (WS / NS)	0.05 (7.95 / 7.61)	0.12 (7.69 / 7.01)	0.09 (11.18 / 10.47)	-0.06 (6.79 / 7.13)	-	0.16 (6.67 / 5.88)
+ 	Percentile (%)	39.99	33.055	30.023	58.606	-	27.184
+nucleobase biosynthetic process	FC (WS / NS)	0.05 (10.09 / 9.68)	0.04 (8.49 / 8.25)	-0.01 (13.69 / 13.77)	-	-0.01 (-5.26 / -5.29)	0.05 (8.54 / 8.25)
+ 	Percentile (%)	40.039	41.772	69.107	-	49.404	47.213
+organophosphate catabolic process	FC (WS / NS)	0.05 (13.27 / 12.74)	0.05 (15.09 / 14.5)	0.01 (22.84 / 22.65)	0.15 (14.39 / 12.86)	0.16 (4.88 / 4.27)	0.1 (8.58 / 7.92)
+ 	Percentile (%)	40.089	38.691	46.573	18.228	26.111	36.965
+nucleoside biosynthetic process	FC (WS / NS)	0.05 (12.17 / 11.69)	0.06 (12.05 / 11.53)	0.02 (18.25 / 17.96)	-0.01 (15.98 / 16.12)	0.37 (1.51 / 0.94)	0.03 (8.68 / 8.46)
+ 	Percentile (%)	40.187	38.046	42.594	48.947	10.293	49.91
+peptidoglycan metabolic process	FC (WS / NS)	0.05 (10.12 / 9.72)	-	0.02 (13.97 / 13.74)	0.04 (15.31 / 14.82)	-0.16 (-3.68 / -4)	0.04 (8.99 / 8.73)
+ 	Percentile (%)	40.236	-	42.427	31.954	62.839	48.364
+ribonucleoside metabolic process	FC (WS / NS)	0.05 (12.34 / 11.86)	0.06 (13.91 / 13.28)	0.01 (21.68 / 21.53)	-0.01 (15.98 / 16.14)	0.23 (4.27 / 3.48)	0.04 (8.85 / 8.56)
+ 	Percentile (%)	40.334	37.712	47.643	49.528	16.793	47.681
+response to extracellular stimulus	FC (WS / NS)	0.05 (11.44 / 10.99)	0.01 (11.48 / 11.35)	0.03 (12.5 / 12.18)	-	-	0.02 (7.75 / 7.62)
+ 	Percentile (%)	40.384	45.164	38.85	-	-	53.003
+positive regulation of small molecule metabolic process	FC (WS / NS)	0.05 (9.82 / 9.43)	1.73 (2.32 / 0)	-	-	-	0.15 (3.32 / 2.91)
+ 	Percentile (%)	40.433	3.129	-	-	-	28.875
+pyrimidine ribonucleotide metabolic process	FC (WS / NS)	0.05 (11.3 / 10.86)	0.1 (8.38 / 7.73)	0.05 (14.65 / 14.16)	-0.13 (13.65 / 15.04)	0.06 (-8.56 / -8.27)	0.09 (9.24 / 8.63)
+ 	Percentile (%)	40.482	33.461	36.275	65.142	40.953	38.044
+purine ribonucleoside diphosphate metabolic process	FC (WS / NS)	0.05 (13.56 / 13.04)	-0.12 (8.58 / 9.43)	-	-	-	0.08 (11.22 / 10.59)
+ 	Percentile (%)	40.531	62.407	-	-	-	39.518
+cellular response to topologically incorrect protein	FC (WS / NS)	0.05 (10.43 / 10.03)	-	-	-	-	-
+ 	Percentile (%)	40.679	-	-	-	-	-
+pyrimidine nucleotide metabolic process	FC (WS / NS)	0.05 (11.86 / 11.42)	0.09 (9.25 / 8.65)	0.04 (15.52 / 15.03)	-0.13 (13.66 / 15.08)	0.06 (-8.08 / -7.79)	0.04 (9.49 / 9.17)
+ 	Percentile (%)	40.777	34.679	36.877	65.868	40.195	47.429
+pyridine nucleotide metabolic process	FC (WS / NS)	0.05 (13.65 / 13.14)	0.22 (9.96 / 8.44)	0.04 (14.03 / 13.57)	-0.1 (9 / 9.68)	-	0.04 (7.19 / 6.99)
+ 	Percentile (%)	40.826	19.369	36.777	61.293	-	49.263
+nucleobase-containing small molecule biosynthetic process	FC (WS / NS)	0.05 (13.89 / 13.38)	0.05 (15.15 / 14.56)	0.01 (22.77 / 22.57)	0.01 (16.36 / 16.25)	0.16 (4.86 / 4.26)	0.03 (9.25 / 9.04)
+ 	Percentile (%)	40.876	38.93	46.306	41.176	26.652	50.953
+purine nucleoside metabolic process	FC (WS / NS)	0.05 (11.75 / 11.32)	0.06 (13.87 / 13.27)	0.01 (21.58 / 21.44)	-0.01 (16.03 / 16.16)	0.23 (4.28 / 3.49)	0.04 (8.85 / 8.58)
+ 	Percentile (%)	40.925	37.879	48.144	48.584	16.685	48.256
+pyridine-containing compound biosynthetic process	FC (WS / NS)	0.05 (13.2 / 12.73)	0.25 (9.07 / 7.48)	0.05 (12.39 / 11.92)	-0.42 (9.27 / 12.75)	-	-0.07 (7.38 / 7.78)
+ 	Percentile (%)	41.023	18.199	35.072	78.359	-	67.35
+carboxylic acid biosynthetic process	FC (WS / NS)	0.05 (14.53 / 14.02)	0.05 (12.83 / 12.36)	0.01 (20.41 / 20.24)	0.05 (17.66 / 17.08)	0.26 (2.69 / 2.08)	0.08 (11.76 / 11.04)
+ 	Percentile (%)	41.121	39.408	46.774	31.445	13.759	38.655
+positive regulation of metabolic process	FC (WS / NS)	0.05 (12.76 / 12.31)	-0.07 (11.02 / 11.63)	0.01 (13.69 / 13.6)	-0.36 (7.26 / 9.59)	-0.34 (-4.83 / -5.83)	-0.06 (5.64 / 5.93)
+ 	Percentile (%)	41.22	60.306	47.81	76.543	76.923	66.775
+nucleobase-containing compound catabolic process	FC (WS / NS)	0.05 (13.29 / 12.83)	0.05 (15.49 / 14.9)	0.01 (23.25 / 23.07)	-0.04 (15.13 / 15.59)	0.15 (5.35 / 4.72)	0 (8.86 / 8.85)
+ 	Percentile (%)	41.269	39.121	46.874	53.74	27.411	58.145
+nucleoside metabolic process	FC (WS / NS)	0.05 (13.22 / 12.75)	0.06 (14.8 / 14.2)	0.01 (22.68 / 22.53)	-0.01 (16.2 / 16.32)	0.19 (5.17 / 4.41)	0.02 (9.65 / 9.5)
+ 	Percentile (%)	41.318	38.452	47.877	48.656	21.885	53.722
+glycosaminoglycan metabolic process	FC (WS / NS)	0.05 (11.11 / 10.71)	-0.02 (9.64 / 9.76)	0.02 (14.97 / 14.74)	0.04 (15.31 / 14.82)	-0.25 (-2.7 / -3.02)	0.04 (8.99 / 8.73)
+ 	Percentile (%)	41.367	56.413	42.996	32.099	71.398	48.436
+establishment of localization in cell	FC (WS / NS)	0.05 (11.59 / 11.18)	0.03 (10.71 / 10.45)	0.02 (14.56 / 14.32)	-	-	0 (9.16 / 9.19)
+ 	Percentile (%)	41.417	42.465	42.528	-	-	59.763
+carbohydrate catabolic process	FC (WS / NS)	0.05 (12.89 / 12.44)	-0.02 (11.79 / 11.93)	0.05 (19.3 / 18.58)	0.08 (23.33 / 21.95)	0.33 (3.7 / 2.73)	0.07 (11.35 / 10.75)
+ 	Percentile (%)	41.466	56.246	34.704	25.2	10.834	40.453
+positive regulation of cellular process	FC (WS / NS)	0.05 (13.52 / 13.05)	-0.13 (10.7 / 11.79)	0.01 (12.96 / 12.87)	-	-	-0.04 (5.98 / 6.15)
+ 	Percentile (%)	41.564	62.575	48.479	-	-	64.833
+pyrimidine nucleoside triphosphate metabolic process	FC (WS / NS)	0.05 (10.41 / 10.04)	0.24 (8.78 / 7.3)	0.05 (13.41 / 12.96)	-0.26 (12.14 / 14.76)	-	0.11 (7.99 / 7.31)
+ 	Percentile (%)	41.613	18.605	36.409	71.46	-	35.707
+phosphorylation	FC (WS / NS)	0.05 (14.12 / 13.64)	0.03 (10.97 / 10.75)	0.03 (18.96 / 18.48)	-	0.53 (1.95 / 1.04)	0.08 (11.28 / 10.62)
+ 	Percentile (%)	41.663	43.253	38.582	-	6.501	39.23
+peptidyl-amino acid modification	FC (WS / NS)	0.05 (9.71 / 9.36)	-0.03 (9.98 / 10.22)	-0.01 (13.92 / 14.05)	-	0.22 (-3.15 / -2.85)	0.29 (5.21 / 4.08)
+ 	Percentile (%)	41.712	57.822	70.177	-	18.743	18.519
+glycosyl compound metabolic process	FC (WS / NS)	0.05 (13.49 / 13.03)	0.05 (15.1 / 14.5)	0.01 (23.03 / 22.87)	-0.01 (16.2 / 16.32)	0.18 (5.47 / 4.72)	0.02 (9.65 / 9.5)
+ 	Percentile (%)	41.81	38.667	47.743	48.729	23.619	53.758
+cellular response to chemical stimulus	FC (WS / NS)	0.05 (12.53 / 12.1)	-0.05 (9.91 / 10.25)	0.04 (11.01 / 10.68)	-	-	-
+ 	Percentile (%)	41.859	58.825	37.546	-	-	-
+purine ribonucleoside triphosphate metabolic process	FC (WS / NS)	0.05 (13.58 / 13.12)	0.06 (12.81 / 12.21)	0.01 (20.32 / 20.18)	-0.04 (18.71 / 19.27)	0.25 (2.7 / 2.12)	0.03 (9.65 / 9.4)
+ 	Percentile (%)	41.909	37.21	47.543	53.885	15.385	49.622
+purine ribonucleoside triphosphate biosynthetic process	FC (WS / NS)	0.05 (13.03 / 12.59)	-	0.02 (15.47 / 15.2)	-0.04 (18.71 / 19.27)	-	0.03 (9.65 / 9.4)
+ 	Percentile (%)	41.958	-	41.759	53.958	-	49.658
+monocarboxylic acid biosynthetic process	FC (WS / NS)	0.05 (12.9 / 12.46)	-0.04 (10.08 / 10.39)	-0.02 (15.37 / 15.62)	0.07 (16.98 / 16.19)	2.06 (0.11 / -0.74)	-0.01 (9.14 / 9.21)
+ 	Percentile (%)	42.007	58.395	72.785	29.121	0.433	61.201
+organic acid biosynthetic process	FC (WS / NS)	0.05 (14.86 / 14.36)	-	-	-	-	0.09 (11.78 / 11.05)
+ 	Percentile (%)	42.056	-	-	-	-	38.439
+cellular oxidant detoxification	FC (WS / NS)	0.05 (8.86 / 8.55)	-	-	-	-	-
+ 	Percentile (%)	42.105	-	-	-	-	-
+ATP metabolic process	FC (WS / NS)	0.05 (13.81 / 13.35)	0.05 (11.91 / 11.47)	0.03 (18.71 / 18.25)	0.07 (23.39 / 22.15)	0.34 (1.49 / 0.97)	0.06 (11.64 / 11.12)
+ 	Percentile (%)	42.154	39.455	38.816	26.507	10.726	43.761
+ribonucleoside triphosphate biosynthetic process	FC (WS / NS)	0.04 (13.63 / 13.19)	0.07 (11.12 / 10.58)	0.02 (16.08 / 15.79)	-0.04 (18.72 / 19.33)	-	0.05 (10.01 / 9.66)
+ 	Percentile (%)	42.204	37.091	41.391	55.701	-	46.602
+purine nucleoside triphosphate metabolic process	FC (WS / NS)	0.04 (14.27 / 13.8)	0.06 (13.65 / 13.04)	0.01 (21.29 / 21.14)	-0.04 (18.71 / 19.27)	0.2 (3.57 / 2.98)	0.03 (9.69 / 9.43)
+ 	Percentile (%)	42.253	37.831	47.944	54.031	20.91	49.515
+aminoglycan metabolic process	FC (WS / NS)	0.04 (11.69 / 11.3)	-0.02 (10.22 / 10.37)	0.02 (15.59 / 15.36)	0.04 (15.31 / 14.82)	-0.37 (-2.12 / -2.44)	0.04 (8.99 / 8.73)
+ 	Percentile (%)	42.302	56.675	43.464	32.026	78.873	48.4
+modified amino acid transport	FC (WS / NS)	0.04 (5.32 / 5.13)	-	-	-	-	-
+ 	Percentile (%)	42.351	-	-	-	-	-
+nucleoside diphosphate metabolic process	FC (WS / NS)	0.04 (14.56 / 14.09)	-0.03 (9.96 / 10.2)	0.06 (16.05 / 15.32)	0.08 (23.33 / 21.94)	1.31 (0.87 / -0.25)	0.08 (11.23 / 10.59)
+ 	Percentile (%)	42.4	57.75	32.899	25.127	1.733	39.41
+pyridine-containing compound metabolic process	FC (WS / NS)	0.04 (14.24 / 13.78)	0.14 (10.44 / 9.35)	0.04 (15 / 14.56)	-0.42 (9.27 / 12.76)	NaN (-0.61 / -1.04)	-0.07 (7.4 / 7.81)
+ 	Percentile (%)	42.45	21.161	37.68	78.504	99.458	67.638
+ribonucleoside triphosphate metabolic process	FC (WS / NS)	0.04 (14.36 / 13.9)	0.06 (13.69 / 13.07)	0.01 (21.32 / 21.17)	-0.04 (18.72 / 19.33)	0.2 (3.57 / 2.98)	0.05 (10.01 / 9.66)
+ 	Percentile (%)	42.499	37.664	47.71	55.628	21.018	46.566
+response to topologically incorrect protein	FC (WS / NS)	0.04 (11.46 / 11.09)	-0.39 (4.58 / 6.33)	-	-	-	-
+ 	Percentile (%)	42.548	70.241	-	-	-	-
+cellular polysaccharide biosynthetic process	FC (WS / NS)	0.04 (10.43 / 10.09)	0.07 (9.2 / 8.73)	0.01 (13.8 / 13.69)	0 (15.55 / 15.6)	0.05 (-3.31 / -3.24)	-0.02 (8.03 / 8.18)
+ 	Percentile (%)	42.646	36.876	46.907	46.768	42.145	63.466
+nucleoside triphosphate biosynthetic process	FC (WS / NS)	0.04 (14.33 / 13.88)	0.06 (11.72 / 11.17)	0.02 (16.74 / 16.43)	-0.04 (18.72 / 19.33)	-2.12 (-0.81 / -0.18)	0.05 (10.03 / 9.67)
+ 	Percentile (%)	42.696	37.497	41.324	55.556	95.016	46.386
+purine ribonucleoside monophosphate biosynthetic process	FC (WS / NS)	0.04 (12.22 / 11.84)	0.09 (10.55 / 9.83)	0.02 (15.65 / 15.44)	-0.02 (16.45 / 16.63)	NaN (-0.68 / -1.29)	0.03 (9.68 / 9.45)
+ 	Percentile (%)	42.745	34.129	44.132	50.327	96.75	50.593
+chaperone cofactor-dependent protein refolding	FC (WS / NS)	0.04 (9.6 / 9.29)	-0.33 (3.32 / 4.43)	-0.03 (6.58 / 6.75)	-	-	-
+ 	Percentile (%)	42.892	69.143	74.055	-	-	-
+nucleoside triphosphate metabolic process	FC (WS / NS)	0.04 (15.17 / 14.71)	0.06 (14.61 / 13.98)	0.01 (22.32 / 22.17)	-0.04 (18.72 / 19.33)	0.17 (4.5 / 3.9)	0.05 (10.08 / 9.73)
+ 	Percentile (%)	42.941	37.975	48.078	55.773	24.81	47.105
+ribonucleoside monophosphate biosynthetic process	FC (WS / NS)	0.04 (13.35 / 12.95)	0.07 (11.19 / 10.58)	0.02 (17.12 / 16.83)	-0.01 (16.6 / 16.78)	0.82 (0.26 / -0.29)	0.04 (10.39 / 10.05)
+ 	Percentile (%)	43.04	35.73	42.026	49.746	3.792	47.357
+regulation of anatomical structure morphogenesis	FC (WS / NS)	0.04 (10.99 / 10.65)	-0.28 (7.73 / 9.59)	-	-	-	0.05 (8.82 / 8.47)
+ 	Percentile (%)	43.089	66.826	-	-	-	45.847
+regulation of cofactor metabolic process	FC (WS / NS)	0.04 (7.86 / 7.61)	-	-	-	-	-
+ 	Percentile (%)	43.138	-	-	-	-	-
+small molecule biosynthetic process	FC (WS / NS)	0.04 (15.81 / 15.35)	0.05 (15.57 / 15.05)	0.01 (23.26 / 23.08)	0.02 (19.69 / 19.37)	0.14 (5.46 / 4.86)	0.05 (12.38 / 11.9)
+ 	Percentile (%)	43.187	40.244	46.941	38.635	28.169	45.919
+regulation of developmental process	FC (WS / NS)	0.04 (11.57 / 11.24)	-0.24 (9.33 / 11.17)	0.06 (15.25 / 14.55)	-	-	0.05 (8.84 / 8.49)
+ 	Percentile (%)	43.237	65.918	32.798	-	-	45.955
+ncRNA processing	FC (WS / NS)	0.04 (11.01 / 10.68)	0.17 (10.18 / 8.93)	0.04 (15.56 / 15.12)	0.02 (13.96 / 13.72)	-	0.14 (8.97 / 8.05)
+ 	Percentile (%)	43.286	20.396	37.88	38.489	-	33.082
+regulation of transcription, DNA-templated	FC (WS / NS)	0.04 (10.91 / 10.6)	0.02 (10.44 / 10.27)	0.01 (17.2 / 17.12)	0.07 (16.45 / 15.6)	-0.47 (-2.37 / -2.91)	0.03 (10.26 / 10.03)
+ 	Percentile (%)	43.335	44.089	49.381	27.451	82.99	51.061
+cell redox homeostasis	FC (WS / NS)	0.04 (9.26 / 8.99)	0.39 (6.51 / 4.71)	0.04 (13.11 / 12.76)	-0.01 (16.63 / 16.78)	0.26 (-5.03 / -4.37)	0.05 (9.75 / 9.39)
+ 	Percentile (%)	43.384	14.856	38.348	49.165	14.193	46.242
+purine ribonucleoside monophosphate metabolic process	FC (WS / NS)	0.04 (13.24 / 12.87)	0.07 (12.68 / 12.08)	0.03 (19.69 / 19.3)	-0.02 (16.45 / 16.63)	0.4 (1.26 / 0.71)	0.03 (9.68 / 9.46)
+ 	Percentile (%)	43.483	37.139	40.288	50.254	8.451	50.665
+regulation of cell shape	FC (WS / NS)	0.04 (9.27 / 9)	-	0.07 (13.07 / 12.38)	0.04 (15.28 / 14.78)	-0.21 (-4.67 / -5.25)	0.06 (8.81 / 8.41)
+ 	Percentile (%)	43.532	-	31.528	31.663	66.956	43.905
+nucleoside monophosphate biosynthetic process	FC (WS / NS)	0.04 (14.28 / 13.88)	0.06 (11.98 / 11.41)	0.02 (18.13 / 17.84)	-0.02 (16.6 / 16.78)	0.38 (1.2 / 0.68)	0.04 (10.4 / 10.06)
+ 	Percentile (%)	43.581	37.258	42.494	50.472	9.426	47.285
+cellular carbohydrate biosynthetic process	FC (WS / NS)	0.04 (11.01 / 10.69)	-	0.01 (14.55 / 14.44)	-	-	-
+ 	Percentile (%)	43.63	-	47.141	-	-	-
+positive regulation of nitrogen compound metabolic process	FC (WS / NS)	0.04 (11.96 / 11.62)	-0.09 (9.98 / 10.71)	0.02 (11.44 / 11.26)	-0.36 (7.26 / 9.59)	-	-0.09 (5.09 / 5.49)
+ 	Percentile (%)	43.679	60.974	42.962	76.834	-	69.867
+ribonucleoside monophosphate metabolic process	FC (WS / NS)	0.04 (14.34 / 13.94)	0.06 (13.54 / 12.98)	0.03 (20.82 / 20.41)	-0.01 (16.6 / 16.78)	0.25 (2.24 / 1.73)	0.04 (10.4 / 10.05)
+ 	Percentile (%)	43.728	38.357	40.789	49.818	15.276	47.393
+response to metal ion	FC (WS / NS)	0.04 (9.87 / 9.59)	-0.03 (11.31 / 11.56)	0.19 (6.99 / 6.02)	-	-	-
+ 	Percentile (%)	43.778	57.535	23.069	-	-	-
+purine nucleoside monophosphate metabolic process	FC (WS / NS)	0.04 (14.16 / 13.78)	0.06 (13.53 / 12.97)	0.03 (20.68 / 20.29)	-0.02 (16.45 / 16.63)	0.26 (2.21 / 1.69)	0.03 (9.68 / 9.46)
+ 	Percentile (%)	43.925	38.261	40.889	50.182	14.518	50.629
+protein folding	FC (WS / NS)	0.04 (12.69 / 12.35)	0.04 (11.06 / 10.75)	0.05 (15.36 / 14.82)	-	-	0.07 (11.3 / 10.69)
+ 	Percentile (%)	44.024	41.462	35.774	-	-	40.165
+nucleoside monophosphate metabolic process	FC (WS / NS)	0.04 (15.28 / 14.88)	0.05 (14.46 / 13.92)	0.03 (21.83 / 21.42)	-0.02 (16.6 / 16.78)	0.18 (3.21 / 2.71)	0.04 (10.41 / 10.06)
+ 	Percentile (%)	44.171	39.336	41.123	50.399	22.427	47.321
+response to heat	FC (WS / NS)	0.03 (11.17 / 10.88)	0.09 (10.27 / 9.6)	-	-0.33 (12.59 / 16.04)	0.07 (-12.15 / -11.63)	-
+ 	Percentile (%)	44.27	34.273	-	75.672	38.678	-
+RNA processing	FC (WS / NS)	0.03 (11.54 / 11.25)	0.09 (10.98 / 10.28)	0.02 (16.44 / 16.21)	-	-	0.06 (9.4 / 8.97)
+ 	Percentile (%)	44.319	34.535	43.765	-	-	43.689
+response to inorganic substance	FC (WS / NS)	0.03 (11.04 / 10.76)	-0.03 (11.92 / 12.23)	0.13 (10.31 / 9.36)	-	-	-
+ 	Percentile (%)	44.368	58.061	26.647	-	-	-
+polysaccharide metabolic process	FC (WS / NS)	0.03 (12.16 / 11.86)	0.02 (10.87 / 10.72)	0.02 (16.12 / 15.91)	0 (15.55 / 15.6)	0.11 (-1.62 / -1.58)	-0.01 (8.29 / 8.39)
+ 	Percentile (%)	44.417	44.567	44.433	46.914	33.911	61.992
+transition metal ion homeostasis	FC (WS / NS)	0.03 (10.87 / 10.61)	-0.33 (6.82 / 8.82)	0.06 (13.48 / 12.87)	0.25 (15.98 / 13.26)	0.33 (-0.41 / -0.53)	0.06 (8.9 / 8.51)
+ 	Percentile (%)	44.466	69.119	33.032	13.943	11.376	44.049
+'de novo' protein folding	FC (WS / NS)	0.03 (11.62 / 11.34)	-0.01 (9.28 / 9.36)	-	-	-	-
+ 	Percentile (%)	44.515	55.863	-	-	-	-
+cation transmembrane transport	FC (WS / NS)	0.03 (11.92 / 11.63)	-	-	-	-	-
+ 	Percentile (%)	44.565	-	-	-	-	-
+proteolysis	FC (WS / NS)	0.03 (10.74 / 10.49)	-0.06 (8.65 / 9.07)	0.05 (16.85 / 16.26)	-	-	-0.1 (7.43 / 8.03)
+ 	Percentile (%)	44.614	59.78	35.473	-	-	70.227
+ion transmembrane transport	FC (WS / NS)	0.03 (12.75 / 12.45)	0.04 (11.43 / 11.12)	0.02 (18.01 / 17.75)	-0.04 (18.71 / 19.27)	-0.76 (-0.21 / 0.34)	0.01 (9.7 / 9.59)
+ 	Percentile (%)	44.663	41.677	43.33	54.176	90.358	55.232
+cellular metal ion homeostasis	FC (WS / NS)	0.03 (9.91 / 9.68)	-	-	-	-	-
+ 	Percentile (%)	44.712	-	-	-	-	-
+iron ion transport	FC (WS / NS)	0.03 (8.29 / 8.09)	-0.75 (3 / 5.71)	-0.26 (9.07 / 11.09)	-	0.43 (-6.43 / -5.02)	-
+ 	Percentile (%)	44.761	75.758	84.487	-	8.126	-
+system process	FC (WS / NS)	0.03 (9.52 / 9.3)	-0.06 (8.49 / 8.88)	-	-	-	-
+ 	Percentile (%)	44.811	59.661	-	-	-	-
+primary alcohol biosynthetic process	FC (WS / NS)	0.03 (8.89 / 8.69)	-	-	-	-	-
+ 	Percentile (%)	45.007	-	-	-	-	-
+response to temperature stimulus	FC (WS / NS)	0.03 (12.01 / 11.76)	0.07 (11.47 / 10.9)	-	-	-	-
+ 	Percentile (%)	45.057	36.852	-	-	-	-
+cellular polysaccharide metabolic process	FC (WS / NS)	0.03 (11.5 / 11.26)	0.02 (10.29 / 10.12)	0.02 (15.21 / 14.97)	0 (15.55 / 15.6)	0.08 (-2.31 / -2.24)	-0.01 (8.19 / 8.24)
+ 	Percentile (%)	45.155	43.778	42.762	46.841	36.945	60.985
+L-methionine biosynthetic process	FC (WS / NS)	0.03 (7.71 / 7.55)	-	0.06 (10.66 / 10.15)	-	-	0.14 (6.34 / 5.66)
+ 	Percentile (%)	45.352	-	32.497	-	-	33.19
+vitamin metabolic process	FC (WS / NS)	0.03 (11.52 / 11.29)	0.01 (10.57 / 10.47)	0.01 (16.47 / 16.31)	-0.08 (12.76 / 13.55)	-3.94 (-1.04 / -1.66)	-0.02 (8.76 / 8.91)
+ 	Percentile (%)	45.401	45.355	45.503	60.058	95.666	63.143
+regulation of nucleic acid-templated transcription	FC (WS / NS)	0.03 (11.66 / 11.44)	0.02 (10.44 / 10.27)	0.01 (17.2 / 17.12)	0.07 (16.45 / 15.6)	-0.47 (-2.37 / -2.91)	0.03 (10.26 / 10.03)
+ 	Percentile (%)	45.45	44.113	49.415	27.596	83.099	51.097
+mRNA metabolic process	FC (WS / NS)	0.03 (7.98 / 7.83)	-0.12 (8.51 / 9.31)	-0.13 (10.2 / 11.22)	-	-	-0.08 (7.47 / 7.97)
+ 	Percentile (%)	45.548	62.121	79.873	-	-	68.968
+cellular response to stress	FC (WS / NS)	0.03 (12.61 / 12.38)	-0.02 (11.57 / 11.77)	-0.01 (16.24 / 16.37)	-	-	-0.06 (9.28 / 9.7)
+ 	Percentile (%)	45.647	56.914	69.843	-	-	66.451
+RNA biosynthetic process	FC (WS / NS)	0.02 (11.53 / 11.31)	-0.01 (10.59 / 10.63)	0.01 (17.94 / 17.8)	0.01 (20.58 / 20.5)	NaN (-0.92 / -1.43)	0.02 (11.31 / 11.17)
+ 	Percentile (%)	45.696	55.481	47.008	41.903	98.158	54.153
+inorganic cation transmembrane transport	FC (WS / NS)	0.02 (11.24 / 11.03)	0.04 (11.07 / 10.71)	0.02 (17.06 / 16.81)	-	-	-
+ 	Percentile (%)	45.745	40.578	43.363	-	-	-
+transcription, DNA-templated	FC (WS / NS)	0.02 (9.69 / 9.51)	-0.02 (8.98 / 9.09)	-	0 (20.56 / 20.49)	-0.56 (-2.12 / -2.65)	-
+ 	Percentile (%)	45.844	56.269	-	42.121	85.807	-
+pyruvate metabolic process	FC (WS / NS)	0.02 (13.36 / 13.12)	0.03 (9.76 / 9.55)	0.05 (16.17 / 15.56)	0.08 (23.33 / 21.96)	1.24 (0.9 / -0.19)	0.06 (11.48 / 10.95)
+ 	Percentile (%)	45.991	43.038	34.637	25.345	2.167	43.402
+metal ion homeostasis	FC (WS / NS)	0.02 (10.88 / 10.69)	-0.3 (7.42 / 9.38)	0.06 (14.1 / 13.49)	0.25 (15.98 / 13.26)	0.16 (0.18 / 0.06)	0.06 (8.9 / 8.51)
+ 	Percentile (%)	46.139	67.495	33.501	13.871	26.761	44.013
+carbohydrate derivative catabolic process	FC (WS / NS)	0.02 (9.14 / 8.98)	0.06 (14.39 / 13.78)	0.01 (22.26 / 22.12)	0.16 (14.43 / 12.83)	0.18 (4.52 / 3.88)	0.13 (8.72 / 7.86)
+ 	Percentile (%)	46.188	38.142	48.378	18.083	23.402	33.729
+inorganic ion transmembrane transport	FC (WS / NS)	0.02 (11.67 / 11.47)	0.04 (11.07 / 10.71)	0.02 (17.06 / 16.81)	-	-	0.01 (9.68 / 9.58)
+ 	Percentile (%)	46.237	40.65	43.297	-	-	55.376
+regulation of nucleobase-containing compound metabolic process	FC (WS / NS)	0.02 (13.17 / 12.94)	-0.01 (12.18 / 12.3)	0 (19.25 / 19.19)	0.07 (16.45 / 15.63)	NaN (-0.51 / -1)	0.03 (10.29 / 10.07)
+ 	Percentile (%)	46.335	56.078	50.184	28.686	97.291	51.42
+response to acid chemical	FC (WS / NS)	0.02 (10.39 / 10.21)	-0.18 (6.54 / 7.56)	1.73 (2.32 / 0)	-	-	-
+ 	Percentile (%)	46.385	64.39	3.945	-	-	-
+anatomical structure formation involved in morphogenesis	FC (WS / NS)	0.02 (10.53 / 10.35)	-0.12 (7.79 / 8.55)	-	-	-	-
+ 	Percentile (%)	46.532	62.24	-	-	-	-
+regulation of biological process	FC (WS / NS)	0.02 (16.56 / 16.29)	-0.05 (15.2 / 15.72)	0 (22.3 / 22.23)	0 (18.03 / 18.04)	0.13 (2.27 / 1.98)	0.02 (11.8 / 11.67)
+ 	Percentile (%)	46.581	58.801	50.05	46.042	29.252	54.836
+nucleobase-containing small molecule metabolic process	FC (WS / NS)	0.02 (17.72 / 17.44)	0.04 (16.87 / 16.32)	0.01 (24.73 / 24.53)	0.07 (23.41 / 22.23)	0.13 (6.97 / 6.28)	0.03 (12.84 / 12.53)
+ 	Percentile (%)	46.631	40.363	46.807	27.814	30.661	50.126
+cellular response to stimulus	FC (WS / NS)	0.02 (13.62 / 13.4)	-0.02 (12.48 / 12.71)	0 (17.39 / 17.43)	-0.05 (14.12 / 14.62)	-0.2 (-3.54 / -3.91)	-0.06 (9.28 / 9.7)
+ 	Percentile (%)	46.68	57.058	67.202	56.572	66.197	66.487
+nucleobase-containing compound biosynthetic process	FC (WS / NS)	0.02 (16.72 / 16.46)	0.04 (15.74 / 15.24)	0.01 (23.14 / 22.93)	-0.01 (21.03 / 21.14)	0.14 (5.25 / 4.69)	0.01 (12.64 / 12.5)
+ 	Percentile (%)	46.729	40.506	46.138	47.712	29.036	55.196
+regulation of small molecule metabolic process	FC (WS / NS)	0.02 (10.61 / 10.44)	-0.15 (7.75 / 8.72)	0.04 (7.39 / 7.17)	-	-	0.13 (3.46 / 3.08)
+ 	Percentile (%)	46.827	63.363	37.78	-	-	34.052
+nucleoside phosphate metabolic process	FC (WS / NS)	0.02 (17.56 / 17.29)	0.05 (16.4 / 15.84)	0.01 (24.19 / 23.98)	0.07 (23.41 / 22.22)	0.14 (6.33 / 5.68)	0.03 (12.58 / 12.27)
+ 	Percentile (%)	46.877	39.981	46.439	27.378	28.927	49.694
+regulation of RNA biosynthetic process	FC (WS / NS)	0.02 (12.16 / 11.96)	0.02 (10.92 / 10.72)	0.01 (18.18 / 18.11)	0.07 (16.45 / 15.6)	-1.05 (-1.47 / -1.98)	0.03 (10.26 / 10.03)
+ 	Percentile (%)	46.926	43.516	49.716	27.669	92.524	51.133
+water-soluble vitamin metabolic process	FC (WS / NS)	0.02 (11.08 / 10.9)	0.01 (10.04 / 10)	0.02 (15.69 / 15.48)	-0.08 (12.76 / 13.55)	-1.12 (-1.54 / -2.18)	-0.02 (8.75 / 8.91)
+ 	Percentile (%)	47.024	46.429	44.266	60.131	92.849	63.323
+carbohydrate biosynthetic process	FC (WS / NS)	0.02 (12.97 / 12.77)	-0.02 (11.24 / 11.4)	-0.01 (16.74 / 16.83)	0.02 (19.22 / 18.95)	0.28 (1 / 0.65)	0 (10.25 / 10.28)
+ 	Percentile (%)	47.122	56.604	69.174	39.143	13.218	59.907
+response to stress	FC (WS / NS)	0.02 (14.37 / 14.16)	0 (13.5 / 13.5)	0.04 (18.83 / 18.26)	-0.03 (16.27 / 16.59)	NaN (0.23 / -1.25)	0.01 (10.56 / 10.47)
+ 	Percentile (%)	47.172	54.645	37.078	51.271	96.425	55.627
+phosphate-containing compound metabolic process	FC (WS / NS)	0.02 (17.78 / 17.52)	0.04 (16.56 / 16.03)	0.01 (24.6 / 24.38)	0.07 (23.44 / 22.27)	0.13 (6.77 / 6.09)	0.03 (13.03 / 12.7)
+ 	Percentile (%)	47.221	40.435	45.971	28.105	29.361	49.335
+macromolecule modification	FC (WS / NS)	0.02 (12.75 / 12.56)	0.03 (12.04 / 11.77)	0.01 (18.4 / 18.25)	-0.11 (10.61 / 11.52)	-1.96 (-0.95 / -0.79)	0.06 (8.69 / 8.3)
+ 	Percentile (%)	47.27	42.895	46.841	62.745	94.8	44.193
+regulation of biological quality	FC (WS / NS)	0.02 (13.64 / 13.43)	-0.12 (11.13 / 12.17)	0.03 (17.83 / 17.42)	0.03 (17.67 / 17.24)	0.03 (1.94 / 1.88)	0.05 (11.07 / 10.64)
+ 	Percentile (%)	47.319	62.216	39.351	35.657	44.42	46.134
+organic cyclic compound biosynthetic process	FC (WS / NS)	0.02 (16.97 / 16.72)	0.04 (15.89 / 15.39)	0.01 (23.38 / 23.18)	-0.01 (21.04 / 21.16)	0.13 (5.41 / 4.86)	0.01 (12.86 / 12.73)
+ 	Percentile (%)	47.418	40.769	46.606	47.858	30.553	55.268
+nucleobase-containing compound metabolic process	FC (WS / NS)	0.02 (17.99 / 17.73)	0.04 (17.17 / 16.7)	0.01 (25.18 / 25)	0.06 (23.62 / 22.66)	0.13 (7.28 / 6.59)	0.02 (13.79 / 13.6)
+ 	Percentile (%)	47.467	41.39	47.442	29.847	31.528	54.009
+heterocycle biosynthetic process	FC (WS / NS)	0.02 (16.97 / 16.72)	0.04 (15.88 / 15.38)	0.01 (23.36 / 23.16)	-0.01 (21.04 / 21.16)	0.13 (5.4 / 4.85)	0.01 (12.84 / 12.72)
+ 	Percentile (%)	47.516	40.626	46.473	47.93	30.444	55.592
+organophosphate metabolic process	FC (WS / NS)	0.02 (17.79 / 17.53)	0.04 (16.59 / 16.06)	0.01 (24.55 / 24.33)	0.07 (23.44 / 22.27)	0.13 (6.69 / 6.03)	0.03 (13.01 / 12.69)
+ 	Percentile (%)	47.565	40.411	46.272	28.032	30.119	49.838
+aromatic compound biosynthetic process	FC (WS / NS)	0.02 (16.92 / 16.68)	0.04 (15.88 / 15.38)	0.01 (23.35 / 23.14)	-0.01 (21.04 / 21.15)	0.13 (5.4 / 4.84)	0.02 (12.81 / 12.65)
+ 	Percentile (%)	47.614	40.674	46.205	47.785	29.794	54.117
+gluconeogenesis	FC (WS / NS)	0.02 (10.1 / 9.95)	-0.13 (7.72 / 8.56)	-0.02 (12.6 / 12.83)	0.02 (19.07 / 18.78)	-1.4 (-1.21 / -1.56)	0.01 (9.58 / 9.54)
+ 	Percentile (%)	47.664	62.646	73.086	39.07	93.824	56.778
+phosphorus metabolic process	FC (WS / NS)	0.02 (17.94 / 17.68)	0.04 (16.74 / 16.23)	0.01 (25.04 / 24.8)	0.07 (23.44 / 22.27)	0.13 (7.23 / 6.54)	0.03 (13.08 / 12.74)
+ 	Percentile (%)	47.713	40.793	45.704	28.177	31.094	49.479
+purine nucleobase biosynthetic process	FC (WS / NS)	0.02 (8.62 / 8.49)	0.09 (8.16 / 7.58)	0.03 (9.32 / 9.09)	3.23 (8.4 / 0)	-0.26 (-8.73 / -10.25)	-0.08 (5.29 / 5.66)
+ 	Percentile (%)	47.762	34.01	39.318	0.944	72.481	69.004
+tRNA metabolic process	FC (WS / NS)	0.02 (11.78 / 11.61)	0.01 (12.13 / 12.04)	0 (17.76 / 17.73)	-0.05 (16.52 / 17.16)	NaN (-0.73 / -1.52)	0.01 (11.41 / 11.29)
+ 	Percentile (%)	47.811	45.761	50.886	57.444	96.1	55.088
+DNA replication	FC (WS / NS)	0.02 (9.33 / 9.19)	-	-	-	-	-
+ 	Percentile (%)	47.86	-	-	-	-	-
+biological regulation	FC (WS / NS)	0.02 (16.82 / 16.58)	-0.05 (15.36 / 15.92)	0.01 (22.63 / 22.52)	0.02 (18.36 / 18.12)	0.06 (3.4 / 3.23)	0.02 (12.1 / 11.9)
+ 	Percentile (%)	47.909	59.064	49.214	39.288	40.737	53.218
+nucleotide metabolic process	FC (WS / NS)	0.02 (16.45 / 16.22)	0.05 (15.04 / 14.48)	0.01 (22.88 / 22.71)	0.07 (23.41 / 22.22)	0.18 (5.27 / 4.55)	0.03 (12.54 / 12.24)
+ 	Percentile (%)	48.008	39.264	47.275	27.233	23.944	50.162
+carbohydrate metabolic process	FC (WS / NS)	0.02 (14.97 / 14.76)	0 (13.69 / 13.7)	0.03 (21.33 / 20.86)	0.07 (23.59 / 22.45)	0.21 (5.17 / 4.33)	0.03 (12.74 / 12.44)
+ 	Percentile (%)	48.057	54.789	39.519	28.54	19.502	50.306
+nucleoside phosphate biosynthetic process	FC (WS / NS)	0.02 (16.32 / 16.09)	0.05 (13.78 / 13.32)	0.02 (20.08 / 19.83)	-0.04 (19.05 / 19.64)	0.15 (2.63 / 2.26)	0.01 (11.58 / 11.51)
+ 	Percentile (%)	48.106	40.196	44.534	55.338	26.977	56.275
+carbohydrate derivative metabolic process	FC (WS / NS)	0.02 (16.48 / 16.26)	0.04 (16.03 / 15.53)	0.01 (24.01 / 23.84)	0.07 (23.45 / 22.28)	0.15 (6.38 / 5.64)	0.04 (13.1 / 12.74)
+ 	Percentile (%)	48.254	40.697	47.476	28.25	27.086	48.939
+regulation of RNA metabolic process	FC (WS / NS)	0.02 (12.52 / 12.35)	0 (11.71 / 11.73)	0.01 (18.77 / 18.7)	0.07 (16.45 / 15.6)	NaN (-0.91 / -1.41)	0.03 (10.26 / 10.04)
+ 	Percentile (%)	48.303	55.027	49.783	27.524	99.35	51.169
+organophosphate biosynthetic process	FC (WS / NS)	0.02 (16.53 / 16.32)	0.04 (14.02 / 13.6)	0.02 (20.78 / 20.51)	-0.04 (19.23 / 19.74)	0.16 (3.14 / 2.69)	0.01 (12.01 / 11.95)
+ 	Percentile (%)	48.401	40.936	44.3	52.651	25.135	56.455
+heterocycle metabolic process	FC (WS / NS)	0.02 (18.24 / 18.02)	0.04 (17.38 / 16.91)	0.01 (25.56 / 25.41)	0.05 (23.62 / 22.72)	0.12 (7.61 / 6.92)	0.01 (13.91 / 13.84)
+ 	Percentile (%)	48.5	41.533	48.679	30.428	32.719	56.706
+carbohydrate derivative biosynthetic process	FC (WS / NS)	0.02 (15.32 / 15.13)	0.03 (13.65 / 13.31)	0.02 (20.17 / 19.88)	-0.03 (19.38 / 19.79)	0.21 (2.95 / 2.42)	0.02 (12 / 11.8)
+ 	Percentile (%)	48.549	42.321	43.698	51.707	19.61	52.859
+positive regulation of macromolecule metabolic process	FC (WS / NS)	0.02 (11.7 / 11.56)	-0.09 (9.88 / 10.58)	0.01 (12.28 / 12.2)	-0.36 (7.26 / 9.59)	-0.27 (-5.96 / -6.97)	-0.09 (5.09 / 5.49)
+ 	Percentile (%)	48.598	60.831	48.278	76.616	73.348	69.831
+organic cyclic compound metabolic process	FC (WS / NS)	0.02 (18.24 / 18.03)	0.04 (17.38 / 16.92)	0.01 (25.58 / 25.43)	0.05 (23.62 / 22.73)	0.12 (7.61 / 6.92)	0.01 (13.92 / 13.87)
+ 	Percentile (%)	48.746	41.629	48.813	30.574	32.828	56.922
+RNA metabolic process	FC (WS / NS)	0.02 (13.93 / 13.77)	0.01 (13.54 / 13.43)	0 (20.32 / 20.25)	0 (20.7 / 20.7)	0.51 (1.24 / 0.58)	0.01 (12.51 / 12.37)
+ 	Percentile (%)	48.795	45.737	50.017	45.606	6.609	54.908
+regulation of proteolysis	FC (WS / NS)	0.02 (10.76 / 10.63)	-0.89 (4.46 / 9.13)	-	-	-	0.05 (2 / 1.91)
+ 	Percentile (%)	48.844	77.048	-	-	-	46.854
+cellular aromatic compound metabolic process	FC (WS / NS)	0.02 (18.21 / 18)	0.04 (17.37 / 16.91)	0.01 (25.56 / 25.41)	0.05 (23.62 / 22.73)	0.12 (7.6 / 6.91)	0.01 (13.92 / 13.85)
+ 	Percentile (%)	48.893	41.653	48.546	30.501	32.611	56.67
+nucleotide biosynthetic process	FC (WS / NS)	0.02 (15.23 / 15.06)	0.05 (12.76 / 12.27)	0.02 (19.03 / 18.81)	-0.04 (19.05 / 19.64)	0.25 (1.57 / 1.16)	0.01 (11.51 / 11.46)
+ 	Percentile (%)	48.992	39.145	44.734	55.12	15.168	56.958
+monosaccharide biosynthetic process	FC (WS / NS)	0.01 (11.7 / 11.57)	-0.11 (9.39 / 10.19)	-0.02 (14.29 / 14.52)	-	-	0 (9.6 / 9.59)
+ 	Percentile (%)	49.09	61.548	72.651	-	-	58.073
+organic substance biosynthetic process	FC (WS / NS)	0.01 (17.97 / 17.79)	0.02 (16.96 / 16.69)	0 (25.12 / 25.05)	0.03 (24.1 / 23.58)	0.15 (9.5 / 8.44)	0.02 (14.35 / 14.19)
+ 	Percentile (%)	49.188	43.874	50.351	36.819	26.869	54.657
+regulation of generation of precursor metabolites and energy	FC (WS / NS)	0.01 (9.85 / 9.74)	-	-	-	-	-
+ 	Percentile (%)	49.238	-	-	-	-	-
+cellular nitrogen compound catabolic process	FC (WS / NS)	0.01 (13.83 / 13.68)	0.05 (15.66 / 15.08)	0.01 (23.44 / 23.28)	-0.22 (15.58 / 18.24)	0.15 (5.55 / 4.92)	-0.16 (9.51 / 10.75)
+ 	Percentile (%)	49.287	39.384	47.777	69.789	27.952	73.714
+cellular localization	FC (WS / NS)	0.01 (11.87 / 11.75)	0.03 (11.63 / 11.33)	-0.01 (15.72 / 15.82)	-0.04 (14.58 / 15.05)	-0.16 (-6.35 / -6.96)	0 (9.35 / 9.33)
+ 	Percentile (%)	49.336	42.13	69.274	55.41	62.08	57.857
+cellular response to organic substance	FC (WS / NS)	0.01 (11.54 / 11.42)	-0.19 (7.07 / 8.18)	2.2 (3.58 / 0)	-	-	-
+ 	Percentile (%)	49.385	64.581	1.739	-	-	-
+ncRNA metabolic process	FC (WS / NS)	0.01 (12.77 / 12.65)	0.02 (12.69 / 12.47)	0.01 (18.53 / 18.46)	-0.04 (16.74 / 17.25)	NaN (-0.3 / -1.1)	0.02 (11.53 / 11.34)
+ 	Percentile (%)	49.484	43.731	49.816	54.394	98.592	53.29
+alcohol biosynthetic process	FC (WS / NS)	0.01 (8.96 / 8.87)	-0.1 (6.41 / 6.96)	-	-	-	-
+ 	Percentile (%)	49.533	61.213	-	-	-	-
+ribose phosphate metabolic process	FC (WS / NS)	0.01 (15.8 / 15.65)	0.05 (14.38 / 13.83)	0.01 (22.19 / 22.03)	0.07 (23.41 / 22.22)	0.21 (4.61 / 3.85)	0.04 (12.39 / 12.02)
+ 	Percentile (%)	49.631	39.073	47.208	27.306	19.827	48.112
+heterocycle catabolic process	FC (WS / NS)	0.01 (13.81 / 13.68)	0.05 (15.65 / 15.09)	0.01 (23.44 / 23.28)	-0.22 (15.58 / 18.25)	0.15 (5.55 / 4.91)	-0.16 (9.51 / 10.75)
+ 	Percentile (%)	49.729	39.503	47.844	69.862	27.844	73.75
+regulation of cellular process	FC (WS / NS)	0.01 (15.42 / 15.28)	-0.06 (14.2 / 14.81)	0.01 (21.1 / 21.01)	0.01 (17.69 / 17.61)	0.2 (1.25 / 0.96)	0.02 (11.51 / 11.34)
+ 	Percentile (%)	49.779	59.541	49.515	41.685	21.127	53.506
+ribonucleotide metabolic process	FC (WS / NS)	0.01 (15.44 / 15.3)	0.05 (14.09 / 13.54)	0.01 (21.75 / 21.6)	0.07 (23.4 / 22.21)	0.22 (4.24 / 3.5)	0.04 (12.32 / 11.97)
+ 	Percentile (%)	49.828	38.858	47.509	27.16	18.418	48.795
+cellular biosynthetic process	FC (WS / NS)	0.01 (17.96 / 17.81)	0.03 (16.79 / 16.48)	0.01 (24.95 / 24.85)	0.03 (24.05 / 23.52)	0.16 (9.12 / 8.07)	0.02 (14.28 / 14.11)
+ 	Percentile (%)	49.926	43.42	49.85	36.601	25.677	54.297
+nucleic acid metabolic process	FC (WS / NS)	0.01 (14.32 / 14.19)	0.01 (13.99 / 13.88)	0 (21.43 / 21.39)	0 (20.74 / 20.72)	0.38 (2.21 / 1.46)	0.01 (12.73 / 12.66)
+ 	Percentile (%)	49.975	45.808	51.02	43.282	9.642	56.311
+response to chemical	FC (WS / NS)	0.01 (14.13 / 14.01)	-0.03 (13.09 / 13.35)	-0.01 (15.43 / 15.58)	-3.65 (0 / 11.59)	-	-0.05 (5.98 / 6.25)
+ 	Percentile (%)	50.025	57.225	70.344	98.693	-	66.199
+biosynthetic process	FC (WS / NS)	0.01 (18.48 / 18.34)	0.02 (17.34 / 17.1)	0 (26 / 25.93)	0.03 (24.1 / 23.58)	0.14 (10.3 / 9.24)	0.02 (14.39 / 14.21)
+ 	Percentile (%)	50.467	44.543	50.585	36.747	28.061	54.225
+purine nucleotide metabolic process	FC (WS / NS)	0.01 (15.33 / 15.21)	0.05 (14.06 / 13.52)	0.01 (21.67 / 21.52)	0.07 (23.4 / 22.2)	0.22 (4.24 / 3.5)	0.03 (12.16 / 11.85)
+ 	Percentile (%)	50.566	39.026	48.044	27.088	18.31	49.551
+organic substance transport	FC (WS / NS)	0.01 (13.34 / 13.23)	0.02 (12.16 / 11.97)	0 (18.56 / 18.58)	0.02 (17.64 / 17.42)	-4.51 (-0.99 / -0.78)	0.02 (11.17 / 11.03)
+ 	Percentile (%)	50.615	43.969	66.867	39.579	95.775	54.513
+cellular nitrogen compound biosynthetic process	FC (WS / NS)	0.01 (17.35 / 17.23)	0.03 (16.09 / 15.69)	0.01 (23.5 / 23.33)	0.03 (24.02 / 23.48)	0.18 (7.25 / 6.26)	0.01 (13.75 / 13.7)
+ 	Percentile (%)	50.713	41.939	47.375	36.529	22.319	56.994
+monosaccharide metabolic process	FC (WS / NS)	0.01 (13.33 / 13.23)	-0.01 (12.54 / 12.66)	0.04 (19.97 / 19.39)	0.03 (19.3 / 18.9)	0.26 (4.29 / 3.41)	0.04 (10.76 / 10.46)
+ 	Percentile (%)	50.762	55.983	37.479	37.328	14.085	49.083
+response to stimulus	FC (WS / NS)	0.01 (15.69 / 15.58)	0 (15.33 / 15.33)	0.03 (20.46 / 20.06)	-0.03 (16.28 / 16.66)	1.02 (1.61 / 0.28)	0 (10.68 / 10.68)
+ 	Percentile (%)	50.812	47.265	40.722	52.142	2.925	58.648
+purine ribonucleotide metabolic process	FC (WS / NS)	0.01 (14.88 / 14.77)	0.05 (13.36 / 12.82)	0.01 (20.72 / 20.57)	0.07 (23.4 / 22.2)	0.27 (3.5 / 2.74)	0.03 (12.14 / 11.82)
+ 	Percentile (%)	50.861	38.596	47.342	27.015	13.326	49.299
+cellular nitrogen compound metabolic process	FC (WS / NS)	0.01 (18.53 / 18.4)	0.03 (17.46 / 17.04)	0.01 (25.6 / 25.46)	0.04 (24.73 / 23.96)	0.14 (8.25 / 7.4)	0 (14.43 / 14.39)
+ 	Percentile (%)	50.959	42.345	48.713	32.244	28.602	57.605
+cellular protein modification process	FC (WS / NS)	0.01 (11.38 / 11.31)	-0.01 (10.96 / 11.03)	0.01 (16.54 / 16.47)	0.07 (10.34 / 9.79)	0.32 (-1.97 / -1.78)	0.07 (7.32 / 6.91)
+ 	Percentile (%)	51.058	55.648	49.749	27.741	11.593	40.058
+ribose phosphate biosynthetic process	FC (WS / NS)	0.01 (14.65 / 14.55)	-	0.02 (18.51 / 18.27)	-0.04 (19.14 / 19.66)	0.28 (1.29 / 0.88)	0.02 (11.39 / 11.22)
+ 	Percentile (%)	51.107	-	44.467	52.723	13.109	53.434
+transmembrane transport	FC (WS / NS)	0.01 (13.52 / 13.44)	0.02 (12.38 / 12.18)	0.02 (19.33 / 19.07)	-0.05 (18.83 / 19.57)	-0.4 (0.53 / 1.02)	-0.05 (10.77 / 11.21)
+ 	Percentile (%)	51.205	43.754	43.898	57.662	80.39	65.912
+cofactor metabolic process	FC (WS / NS)	0.01 (15.42 / 15.32)	0.08 (12.63 / 11.92)	0.01 (19.55 / 19.36)	-0.07 (15.73 / 16.62)	0.28 (2.51 / 1.88)	0.01 (10.85 / 10.76)
+ 	Percentile (%)	51.254	35.419	45.47	59.622	13.001	55.843
+purine-containing compound metabolic process	FC (WS / NS)	0.01 (15.83 / 15.74)	0.05 (15.24 / 14.67)	0.01 (22.96 / 22.81)	0.07 (23.4 / 22.2)	0.18 (5.52 / 4.77)	0.04 (12.24 / 11.91)
+ 	Percentile (%)	51.303	39.312	48.345	26.943	23.835	49.191
+organonitrogen compound biosynthetic process	FC (WS / NS)	0.01 (16.5 / 16.4)	0.03 (14.81 / 14.49)	0.01 (21.95 / 21.81)	0.03 (23.88 / 23.3)	0.22 (6.93 / 5.83)	0.02 (13.73 / 13.56)
+ 	Percentile (%)	51.353	42.919	48.312	35.149	18.852	54.261
+hexose metabolic process	FC (WS / NS)	0.01 (12.67 / 12.59)	-0.02 (11.92 / 12.06)	0.04 (19.25 / 18.67)	0.03 (19.3 / 18.9)	0.3 (3.71 / 2.84)	0.04 (10.74 / 10.43)
+ 	Percentile (%)	51.402	56.293	37.044	37.255	12.459	48.508
+coenzyme metabolic process	FC (WS / NS)	0.01 (14.96 / 14.88)	0.07 (11.78 / 11.17)	0.01 (18.37 / 18.2)	-0.08 (15.51 / 16.48)	0.36 (1.8 / 1.19)	-0.04 (10.12 / 10.42)
+ 	Percentile (%)	51.451	36.016	45.804	60.566	10.401	65.192
+negative regulation of nucleobase-containing compound metabolic process	FC (WS / NS)	0.01 (8.29 / 8.24)	0.03 (9.24 / 9.01)	0.08 (12.87 / 12.1)	-	-	0.09 (6.83 / 6.36)
+ 	Percentile (%)	51.5	42.513	30.491	-	-	38.152
+ribonucleotide biosynthetic process	FC (WS / NS)	0.01 (14.26 / 14.19)	0.05 (11.87 / 11.45)	0.02 (17.85 / 17.65)	-0.04 (19.04 / 19.62)	0.3 (0.79 / 0.45)	0.01 (11.24 / 11.14)
+ 	Percentile (%)	51.697	39.694	45.035	54.902	12.134	55.556
+lipid biosynthetic process	FC (WS / NS)	0.01 (11.46 / 11.42)	-0.04 (10.55 / 10.88)	0 (17.33 / 17.34)	0.05 (17.43 / 16.82)	0.97 (0.76 / -0.1)	0 (10.58 / 10.61)
+ 	Percentile (%)	51.795	58.562	66.8	30.937	3.25	60.338
+cofactor biosynthetic process	FC (WS / NS)	0.01 (14.17 / 14.12)	0.09 (11.31 / 10.58)	0.01 (18 / 17.83)	-0.12 (14.65 / 16.05)	1.61 (0.27 / -0.59)	0 (10.34 / 10.31)
+ 	Percentile (%)	51.894	34.488	46.038	64.27	1.3	57.03
+positive regulation of nucleobase-containing compound metabolic process	FC (WS / NS)	0 (10.49 / 10.45)	-0.06 (9.44 / 9.85)	-	-	-	-
+ 	Percentile (%)	51.943	59.422	-	-	-	-
+cell differentiation	FC (WS / NS)	0 (10.59 / 10.55)	-0.22 (8.21 / 9.72)	-0.35 (8.11 / 10.61)	-	-	-0.85 (3 / 6.21)
+ 	Percentile (%)	51.992	65.465	85.724	-	-	91.082
+cellular carbohydrate metabolic process	FC (WS / NS)	0 (12.4 / 12.36)	0.04 (11.28 / 10.91)	0.02 (16.98 / 16.69)	0 (16.33 / 16.37)	1.61 (-0.73 / -0.91)	0 (9.42 / 9.4)
+ 	Percentile (%)	52.041	40.53	41.825	46.478	1.192	58.037
+regulation of gene expression	FC (WS / NS)	0 (13.05 / 13)	-0.04 (12.47 / 12.84)	0 (18.8 / 18.79)	0 (16.92 / 16.92)	-1.18 (-1.34 / -1.77)	0.01 (10.8 / 10.68)
+ 	Percentile (%)	52.091	58.371	51.922	43.428	93.174	55.016
+cellular homeostasis	FC (WS / NS)	0 (11.58 / 11.54)	-0.19 (8.63 / 9.98)	0.04 (15.59 / 15.1)	0.03 (17.34 / 16.9)	0.05 (0.63 / 0.58)	0.05 (10.4 / 9.99)
+ 	Percentile (%)	52.14	64.676	36.944	34.786	42.362	45.991
+response to external stimulus	FC (WS / NS)	0 (12.27 / 12.24)	0.02 (13.1 / 12.89)	0.01 (13.6 / 13.53)	-0.05 (13.11 / 13.56)	0.13 (-7.69 / -7.11)	-0.06 (8.2 / 8.59)
+ 	Percentile (%)	52.189	44.017	49.081	55.991	29.902	66.595
+aromatic compound catabolic process	FC (WS / NS)	0 (13.82 / 13.78)	0.05 (15.65 / 15.09)	0.01 (23.45 / 23.28)	-0.22 (15.58 / 18.24)	0.15 (5.55 / 4.92)	-0.16 (9.51 / 10.75)
+ 	Percentile (%)	52.238	39.599	47.609	69.717	27.736	73.247
+purine nucleotide biosynthetic process	FC (WS / NS)	0 (14.12 / 14.09)	0.05 (11.84 / 11.41)	0.01 (17.45 / 17.29)	-0.04 (19 / 19.56)	0.32 (0.77 / 0.42)	0 (10.88 / 10.91)
+ 	Percentile (%)	52.484	39.575	46.105	53.595	11.809	60.086
+primary metabolic process	FC (WS / NS)	0 (18.55 / 18.5)	0.02 (17.83 / 17.56)	0.01 (26.31 / 26.2)	0.04 (24.85 / 24.16)	0.14 (9.99 / 8.97)	0 (14.97 / 14.95)
+ 	Percentile (%)	52.533	44.16	49.649	33.043	28.277	58.109
+macromolecule metabolic process	FC (WS / NS)	0 (16.21 / 16.17)	0.01 (16.79 / 16.72)	0 (25.22 / 25.2)	0.03 (24 / 23.43)	0.16 (10.18 / 9.01)	0 (13.91 / 13.86)
+ 	Percentile (%)	52.582	46.525	51.856	35.73	25.569	57.102
+purine-containing compound biosynthetic process	FC (WS / NS)	0 (14.67 / 14.64)	0.05 (12.77 / 12.31)	0.02 (18.47 / 18.27)	-0.04 (19.01 / 19.56)	0.26 (1.94 / 1.46)	0 (11 / 10.99)
+ 	Percentile (%)	52.632	39.647	45.135	53.377	14.41	58.36
+organic cyclic compound catabolic process	FC (WS / NS)	0 (13.83 / 13.8)	0.05 (15.65 / 15.09)	0.01 (23.44 / 23.28)	-0.22 (15.58 / 18.25)	0.15 (5.55 / 4.92)	-0.16 (9.51 / 10.75)
+ 	Percentile (%)	52.681	39.479	47.91	69.935	27.627	73.607
+ion transport	FC (WS / NS)	0 (14.04 / 14.01)	0.02 (12.31 / 12.09)	0.01 (19.71 / 19.54)	-0.04 (18.73 / 19.29)	-0.09 (1.92 / 2.1)	0 (10.47 / 10.47)
+ 	Percentile (%)	52.73	43.563	46.506	54.248	56.446	58.612
+neurotransmitter metabolic process	FC (WS / NS)	0 (8.8 / 8.78)	-0.53 (5.36 / 8.18)	0.02 (10.39 / 10.21)	-0.03 (11.81 / 12.06)	0.05 (-6.13 / -5.95)	0.15 (7.48 / 6.62)
+ 	Percentile (%)	52.779	72.845	42.394	51.489	41.603	27.364
+cellular response to nitrogen compound	FC (WS / NS)	0 (8.19 / 8.17)	-	-	-	-	-
+ 	Percentile (%)	52.927	-	-	-	-	-
+macromolecule biosynthetic process	FC (WS / NS)	0 (14.28 / 14.26)	0 (15.11 / 15.08)	0 (23 / 23.06)	0.03 (23.98 / 23.39)	0.19 (8.61 / 7.44)	0 (13.35 / 13.31)
+ 	Percentile (%)	53.074	46.812	67.436	34.931	22.102	57.246
+coenzyme biosynthetic process	FC (WS / NS)	0 (13.69 / 13.68)	0.04 (9.95 / 9.65)	0.01 (16.72 / 16.6)	-0.15 (14.14 / 15.85)	NaN (-0.47 / -1.33)	-0.07 (9.34 / 9.82)
+ 	Percentile (%)	53.173	41.032	47.576	67.03	96.641	67.098
+regulation of cellular metabolic process	FC (WS / NS)	0 (14.47 / 14.45)	-0.04 (13.75 / 14.16)	0 (20.47 / 20.45)	0.03 (16.72 / 16.33)	0.54 (0.38 / -0.05)	0.03 (10.73 / 10.51)
+ 	Percentile (%)	53.222	58.443	51.622	36.166	6.392	51.744
+regulation of primary metabolic process	FC (WS / NS)	0 (14.04 / 14.02)	-0.05 (13.34 / 13.81)	0 (19.85 / 19.82)	0.03 (16.72 / 16.33)	1.1 (-0.15 / -0.6)	0.03 (10.71 / 10.5)
+ 	Percentile (%)	53.32	58.968	51.254	36.093	2.709	51.96
+tRNA aminoacylation for protein translation	FC (WS / NS)	0 (9.31 / 9.31)	0 (10.94 / 10.96)	0 (15.38 / 15.44)	-0.05 (16.48 / 17.07)	-0.7 (-2.24 / -3.01)	0.01 (11.17 / 11.11)
+ 	Percentile (%)	53.369	55.075	67.904	56.718	89.274	56.49
+nitrogen compound metabolic process	FC (WS / NS)	0 (18.86 / 18.85)	0.02 (17.88 / 17.56)	0 (26.28 / 26.19)	0.04 (24.74 / 24.01)	0.13 (9.4 / 8.47)	0 (14.76 / 14.72)
+ 	Percentile (%)	53.468	43.492	49.983	32.68	29.144	57.713
+homeostatic process	FC (WS / NS)	0 (12.48 / 12.48)	-0.19 (9.67 / 11.15)	0.04 (16.64 / 16.18)	0.03 (17.34 / 16.9)	0.03 (1.62 / 1.56)	0.04 (10.42 / 10.08)
+ 	Percentile (%)	53.615	64.605	37.981	35.076	43.77	47.501
+purine ribonucleotide biosynthetic process	FC (WS / NS)	0 (13.61 / 13.61)	0.05 (11.36 / 10.97)	0.01 (16.74 / 16.59)	-0.04 (19 / 19.56)	0.37 (0.21 / -0.06)	0 (10.83 / 10.86)
+ 	Percentile (%)	53.714	39.909	46.005	53.522	10.184	59.799
+organic substance metabolic process	FC (WS / NS)	0 (19.3 / 19.31)	0.02 (18.59 / 18.38)	0 (27.36 / 27.29)	0.04 (24.87 / 24.18)	0.13 (11.16 / 10.14)	0.01 (15.19 / 15.11)
+ 	Percentile (%)	53.763	44.925	50.752	33.115	31.203	56.634
+biological_process	FC (WS / NS)	0 (20.35 / 20.36)	0.01 (19.6 / 19.49)	0 (28.79 / 28.77)	0.03 (25.05 / 24.51)	0.11 (12.37 / 11.38)	0.01 (15.84 / 15.76)
+ 	Percentile (%)	53.812	46.071	51.688	36.892	33.694	56.562
+cellular process	FC (WS / NS)	0 (19.63 / 19.65)	0.02 (18.68 / 18.46)	0 (27.63 / 27.59)	0.04 (24.9 / 24.21)	0.12 (11.08 / 10.1)	0.01 (15.45 / 15.36)
+ 	Percentile (%)	53.96	44.829	51.187	33.479	32.394	56.347
+cellular metabolic process	FC (WS / NS)	0 (19.44 / 19.46)	0.02 (18.41 / 18.17)	0 (27.26 / 27.21)	0.04 (24.78 / 24.07)	0.13 (10.7 / 9.71)	0 (15.05 / 15)
+ 	Percentile (%)	54.009	44.614	50.819	32.825	31.311	57.641
+glycine metabolic process	FC (WS / NS)	0 (7.8 / 7.81)	-0.66 (4.52 / 7.74)	0.05 (10.12 / 9.73)	-	-	0.15 (7.04 / 6.26)
+ 	Percentile (%)	54.058	74.803	35.005	-	-	28.227
+small molecule metabolic process	FC (WS / NS)	0 (18.48 / 18.51)	0.02 (17.41 / 17.1)	0 (25.59 / 25.55)	0.06 (23.56 / 22.64)	0.1 (8.05 / 7.43)	0 (14.24 / 14.19)
+ 	Percentile (%)	54.107	43.468	51.22	30.138	34.67	57.066
+metabolic process	FC (WS / NS)	0 (19.9 / 19.94)	0.01 (19.12 / 18.94)	0 (28.52 / 28.49)	0.03 (24.92 / 24.37)	0.11 (12.18 / 11.18)	0 (15.35 / 15.32)
+ 	Percentile (%)	54.156	45.379	51.321	36.383	33.369	57.965
+protein transport	FC (WS / NS)	0 (11.65 / 11.67)	0 (10.65 / 10.63)	0 (15.46 / 15.42)	0 (16.17 / 16.21)	-	-0.01 (10.3 / 10.38)
+ 	Percentile (%)	54.206	46.788	50.451	46.55	-	61.165
+regulation of cellular biosynthetic process	FC (WS / NS)	0 (13.33 / 13.36)	-0.03 (12.8 / 13.08)	0 (19.67 / 19.64)	0.03 (16.72 / 16.31)	1.78 (-0.4 / -0.82)	0.03 (10.68 / 10.46)
+ 	Percentile (%)	54.255	57.559	51.488	35.512	0.975	51.528
+pigment biosynthetic process	FC (WS / NS)	0 (9.41 / 9.43)	0.08 (8.53 / 7.99)	0.02 (11.49 / 11.3)	-	-	0.03 (6.32 / 6.15)
+ 	Percentile (%)	54.304	34.918	42.661	-	-	49.73
+response to organic substance	FC (WS / NS)	0 (12.88 / 12.91)	-0.12 (9.3 / 10.22)	-	-	-	0.12 (4.95 / 4.49)
+ 	Percentile (%)	54.402	62.36	-	-	-	35.419
+cation transport	FC (WS / NS)	0 (13.18 / 13.22)	0.03 (11.72 / 11.49)	0.01 (18.78 / 18.65)	-0.04 (18.72 / 19.29)	-0.16 (1.11 / 1.36)	-0.01 (10.25 / 10.35)
+ 	Percentile (%)	54.599	43.229	47.309	54.321	62.73	61.848
+cellular macromolecule metabolic process	FC (WS / NS)	0 (14.96 / 15.01)	0 (15.65 / 15.6)	0 (23.89 / 23.9)	0.03 (23.98 / 23.39)	0.18 (9.13 / 7.95)	0 (13.48 / 13.46)
+ 	Percentile (%)	54.648	46.62	66.6	35.221	23.294	58.001
+cellular macromolecule biosynthetic process	FC (WS / NS)	0 (13.97 / 14.01)	0 (14.51 / 14.48)	0 (22.18 / 22.24)	0.03 (23.98 / 23.38)	0.2 (7.97 / 6.79)	0 (13.28 / 13.24)
+ 	Percentile (%)	54.697	46.859	67.636	35.004	20.477	57.533
+regulation of metabolic process	FC (WS / NS)	-0.01 (15.13 / 15.2)	-0.03 (14.77 / 15.16)	0 (21.71 / 21.7)	0 (16.92 / 16.93)	0.26 (1.42 / 1.02)	0.02 (10.87 / 10.74)
+ 	Percentile (%)	54.943	58.085	51.956	45.969	13.543	54.333
+regulation of biosynthetic process	FC (WS / NS)	-0.01 (13.74 / 13.8)	-0.03 (13.39 / 13.66)	0 (20.37 / 20.36)	0.03 (16.72 / 16.31)	0.59 (0.22 / -0.19)	0.03 (10.68 / 10.46)
+ 	Percentile (%)	54.993	57.32	51.889	35.367	5.959	51.492
+regulation of nitrogen compound metabolic process	FC (WS / NS)	-0.01 (14.08 / 14.15)	-0.05 (13.29 / 13.76)	0 (19.67 / 19.63)	0.03 (16.72 / 16.33)	1.31 (-0.19 / -0.67)	0.03 (10.68 / 10.48)
+ 	Percentile (%)	55.042	58.92	50.786	36.02	1.842	52.283
+cellular protein localization	FC (WS / NS)	-0.01 (10.62 / 10.68)	0.05 (9.78 / 9.41)	-0.01 (13.52 / 13.62)	0.05 (10.35 / 9.97)	-0.14 (-7.09 / -7.7)	0.05 (6.91 / 6.62)
+ 	Percentile (%)	55.091	39.36	69.676	31.009	60.997	45.631
+transport	FC (WS / NS)	-0.01 (15.15 / 15.25)	0.02 (13.69 / 13.51)	0 (21.41 / 21.43)	-0.04 (19.34 / 19.85)	-0.07 (2.87 / 3.05)	-0.02 (12.05 / 12.2)
+ 	Percentile (%)	55.14	44.686	66.901	52.433	54.388	62.388
+nitrogen compound transport	FC (WS / NS)	-0.01 (13.28 / 13.37)	0 (10.94 / 10.97)	-0.01 (15.79 / 15.89)	-0.01 (16.23 / 16.33)	-0.08 (-4.9 / -5.1)	-0.01 (10.62 / 10.7)
+ 	Percentile (%)	55.189	55.219	69.208	48.003	55.255	61.417
+protein metabolic process	FC (WS / NS)	-0.01 (14.63 / 14.73)	0 (15.04 / 14.99)	0 (22.86 / 22.84)	0.04 (23.82 / 23.17)	0.19 (8.6 / 7.41)	0 (12.77 / 12.79)
+ 	Percentile (%)	55.239	46.597	51.454	33.769	21.56	59.331
+protein transmembrane transport	FC (WS / NS)	-0.01 (9.45 / 9.53)	-0.03 (8.86 / 9.08)	-0.02 (11.63 / 11.85)	-	-	-0.07 (8 / 8.43)
+ 	Percentile (%)	55.386	57.726	73.153	-	-	67.242
+regulation of macromolecule biosynthetic process	FC (WS / NS)	-0.01 (13 / 13.1)	-0.03 (12.79 / 13.05)	0 (19.66 / 19.64)	0.03 (16.72 / 16.31)	1.78 (-0.4 / -0.82)	0.03 (10.67 / 10.45)
+ 	Percentile (%)	55.435	57.249	51.521	35.439	0.867	51.6
+pigment metabolic process	FC (WS / NS)	-0.01 (9.92 / 10)	0 (8.84 / 8.81)	0.02 (12.25 / 12.07)	3.26 (8.57 / 0)	-	0.03 (6.34 / 6.17)
+ 	Percentile (%)	55.485	46.668	43.731	0.654	-	49.802
+ion homeostasis	FC (WS / NS)	-0.01 (11.25 / 11.34)	-0.25 (8.46 / 10.22)	0.06 (14.9 / 14.29)	0.25 (15.98 / 13.26)	0.09 (0.91 / 0.79)	0.06 (8.96 / 8.53)
+ 	Percentile (%)	55.534	66.109	33.902	14.161	36.511	43.222
+cation homeostasis	FC (WS / NS)	-0.01 (11.25 / 11.34)	-0.26 (8.1 / 9.91)	0.06 (14.56 / 13.95)	0.25 (15.98 / 13.26)	0.11 (0.59 / 0.47)	0.06 (8.91 / 8.51)
+ 	Percentile (%)	55.583	66.324	33.701	14.016	33.478	43.869
+inorganic ion homeostasis	FC (WS / NS)	-0.01 (11.25 / 11.34)	-0.27 (7.69 / 9.5)	-	-	-	0.06 (8.96 / 8.53)
+ 	Percentile (%)	55.632	66.587	-	-	-	43.258
+organonitrogen compound metabolic process	FC (WS / NS)	-0.01 (17.75 / 17.9)	0.02 (16.89 / 16.66)	0 (24.91 / 24.85)	0.04 (24.65 / 23.87)	0.16 (8.97 / 7.93)	0 (14.42 / 14.41)
+ 	Percentile (%)	55.78	44.399	50.719	31.736	25.785	58.324
+cellular cation homeostasis	FC (WS / NS)	-0.01 (10.33 / 10.43)	-0.32 (6.91 / 8.89)	-	-	-	-
+ 	Percentile (%)	55.829	68.832	-	-	-	-
+cellular protein metabolic process	FC (WS / NS)	-0.01 (14.45 / 14.58)	0 (14.4 / 14.36)	0 (21.83 / 21.87)	0.04 (23.82 / 23.16)	0.21 (7.93 / 6.73)	0 (12.69 / 12.71)
+ 	Percentile (%)	55.927	46.835	66.934	33.333	19.718	59.475
+regulation of cellular macromolecule biosynthetic process	FC (WS / NS)	-0.01 (12.23 / 12.34)	-0.03 (12.22 / 12.53)	0 (18.69 / 18.67)	0.03 (16.72 / 16.31)	-1.17 (-1.35 / -1.79)	0.03 (10.67 / 10.45)
+ 	Percentile (%)	55.976	57.989	51.588	35.585	93.066	51.636
+establishment of localization	FC (WS / NS)	-0.01 (15.39 / 15.53)	0.02 (14.05 / 13.89)	0 (22.17 / 22.24)	-0.04 (19.34 / 19.85)	-0.05 (3.55 / 3.71)	-0.02 (12.06 / 12.22)
+ 	Percentile (%)	56.026	44.949	67.77	52.578	52.329	62.46
+rRNA processing	FC (WS / NS)	-0.01 (8.78 / 8.87)	0.23 (8.57 / 7.18)	-	-	-	0.21 (7.89 / 6.69)
+ 	Percentile (%)	56.124	18.844	-	-	-	23.121
+regulation of macromolecule metabolic process	FC (WS / NS)	-0.01 (14.26 / 14.41)	-0.04 (13.94 / 14.36)	0 (20.62 / 20.61)	0 (16.92 / 16.93)	0.49 (0.42 / 0.01)	0.02 (10.84 / 10.71)
+ 	Percentile (%)	56.173	58.514	52.023	45.897	7.151	54.621
+cellular chemical homeostasis	FC (WS / NS)	-0.01 (10.34 / 10.45)	-0.33 (7.49 / 9.64)	-	-	-	0.07 (8.93 / 8.45)
+ 	Percentile (%)	56.222	68.904	-	-	-	40.381
+peptide metabolic process	FC (WS / NS)	-0.01 (14.77 / 14.94)	0 (13.14 / 13.15)	-0.01 (20.11 / 20.22)	0.04 (23.82 / 23.16)	0.24 (6.77 / 5.57)	0 (12.7 / 12.71)
+ 	Percentile (%)	56.272	54.765	68.84	33.406	15.818	59.079
+regulation of molecular function	FC (WS / NS)	-0.02 (11.54 / 11.67)	-0.34 (8.99 / 11.64)	0.04 (13.44 / 13.08)	-	-	0.03 (3.91 / 3.81)
+ 	Percentile (%)	56.321	69.31	38.449	-	-	51.456
+cellular developmental process	FC (WS / NS)	-0.02 (10.67 / 10.79)	-0.24 (9 / 10.78)	-0.19 (10.98 / 12.68)	-	-	-0.71 (3.46 / 6.28)
+ 	Percentile (%)	56.37	65.847	81.879	-	-	89.5
+monovalent inorganic cation transport	FC (WS / NS)	-0.02 (11.58 / 11.72)	0.04 (11.42 / 11.07)	0.02 (17.87 / 17.63)	-0.04 (18.71 / 19.27)	-0.28 (0.29 / 0.56)	0 (9.8 / 9.84)
+ 	Percentile (%)	56.419	40.912	43.999	54.103	74.215	60.41
+localization	FC (WS / NS)	-0.02 (15.64 / 15.83)	0.01 (14.39 / 14.26)	-0.01 (22.55 / 22.66)	-0.04 (19.34 / 19.85)	-0.04 (3.84 / 3.99)	-0.02 (12.09 / 12.23)
+ 	Percentile (%)	56.468	45.474	68.606	52.505	51.571	62.28
+positive regulation of biosynthetic process	FC (WS / NS)	-0.02 (9.86 / 9.99)	0.09 (8.44 / 7.9)	0.01 (12.43 / 12.37)	-0.36 (7.26 / 9.59)	-0.27 (-5.96 / -6.97)	-0.07 (5.29 / 5.58)
+ 	Percentile (%)	56.567	34.727	49.114	76.471	73.239	67.026
+organic hydroxy compound biosynthetic process	FC (WS / NS)	-0.02 (9.09 / 9.23)	-0.18 (7.03 / 8.12)	0.05 (11.71 / 11.25)	-	-	-0.46 (4.52 / 6.61)
+ 	Percentile (%)	56.911	64.366	34.504	-	-	85.293
+water-soluble vitamin biosynthetic process	FC (WS / NS)	-0.02 (9.07 / 9.22)	0.01 (9.1 / 9.04)	0.02 (14.66 / 14.45)	-0.08 (12.76 / 13.55)	-0.5 (-2.5 / -3.12)	-0.02 (8.74 / 8.87)
+ 	Percentile (%)	56.96	46.119	43.798	60.203	83.965	62.639
+cellular carbohydrate catabolic process	FC (WS / NS)	-0.02 (9.25 / 9.41)	0 (7.91 / 7.9)	0.02 (11.09 / 10.9)	-	-	-0.08 (6.58 / 7.01)
+ 	Percentile (%)	57.059	47.074	42.193	-	-	68.465
+chemical homeostasis	FC (WS / NS)	-0.02 (11.28 / 11.47)	-0.26 (8.78 / 10.69)	0.05 (15.22 / 14.62)	0.25 (15.98 / 13.26)	0.08 (1.18 / 1.06)	0.05 (8.98 / 8.62)
+ 	Percentile (%)	57.157	66.253	34.203	14.089	37.053	45.883
+establishment of protein localization	FC (WS / NS)	-0.02 (12.22 / 12.43)	0 (11.03 / 10.99)	0 (16.29 / 16.26)	0 (16.17 / 16.22)	-0.07 (-4.32 / -4.48)	-0.01 (10.32 / 10.43)
+ 	Percentile (%)	57.206	46.74	51.053	47.131	54.713	61.956
+amide biosynthetic process	FC (WS / NS)	-0.02 (14.94 / 15.19)	0 (13.19 / 13.18)	-0.01 (20.12 / 20.23)	0.04 (23.82 / 23.17)	0.24 (6.77 / 5.57)	-0.01 (12.73 / 12.8)
+ 	Percentile (%)	57.304	47.241	68.907	33.696	15.926	60.913
+cellular amide metabolic process	FC (WS / NS)	-0.02 (15.76 / 16.04)	0 (13.38 / 13.34)	-0.01 (20.17 / 20.29)	0.04 (23.82 / 23.19)	0.24 (6.78 / 5.58)	-0.01 (12.88 / 13)
+ 	Percentile (%)	57.403	46.692	69.074	34.423	16.143	61.704
+cellular component organization or biogenesis	FC (WS / NS)	-0.02 (13.9 / 14.15)	0.04 (14.86 / 14.44)	0.02 (19.68 / 19.46)	0.07 (18.49 / 17.56)	0.54 (2.3 / 1.27)	0.06 (11.37 / 10.85)
+ 	Percentile (%)	57.55	41.199	44.968	27.959	6.284	43.51
+monocarboxylic acid metabolic process	FC (WS / NS)	-0.02 (14.51 / 14.78)	-0.01 (12.49 / 12.62)	-0.04 (17.96 / 18.49)	0.08 (23.35 / 22.04)	0.39 (2.37 / 1.57)	0.02 (11.88 / 11.73)
+ 	Percentile (%)	57.649	56.126	74.758	25.708	9.209	54.189
+multicellular organismal process	FC (WS / NS)	-0.03 (10.6 / 10.81)	-0.15 (9.82 / 11.03)	0.05 (11.6 / 11.15)	-	-	-0.05 (5.91 / 6.17)
+ 	Percentile (%)	57.698	63.411	34.537	-	-	66.235
+regulation of protein metabolic process	FC (WS / NS)	-0.03 (12.67 / 12.92)	-0.09 (12.04 / 12.88)	-0.02 (15.18 / 15.38)	-0.07 (14.17 / 14.94)	-	0.02 (8.62 / 8.46)
+ 	Percentile (%)	57.747	60.855	71.581	59.332	-	52.607
+organelle organization	FC (WS / NS)	-0.03 (11.06 / 11.29)	0 (11.12 / 11.13)	0 (15.2 / 15.21)	-	-0.26 (-4.85 / -5.62)	0.06 (9.33 / 8.93)
+ 	Percentile (%)	57.846	54.621	66.566	-	73.131	44.301
+cellular component organization	FC (WS / NS)	-0.03 (13.8 / 14.09)	0.04 (14.26 / 13.84)	0.01 (18.37 / 18.17)	0.07 (18.33 / 17.38)	1.03 (0.75 / -0.14)	0.06 (11.17 / 10.66)
+ 	Percentile (%)	57.944	41.056	45.303	26.87	2.817	43.545
+protein localization	FC (WS / NS)	-0.03 (12.69 / 12.96)	0.01 (11.54 / 11.45)	-0.01 (17.02 / 17.09)	0 (16.17 / 16.22)	-0.08 (-3.75 / -3.91)	-0.01 (10.32 / 10.43)
+ 	Percentile (%)	58.091	45.713	68.004	46.986	55.905	61.884
+response to oxygen-containing compound	FC (WS / NS)	-0.03 (10.91 / 11.18)	-0.16 (9.16 / 10.39)	0.12 (10.95 / 9.98)	-	-	0.18 (4.91 / 4.23)
+ 	Percentile (%)	58.239	63.864	26.948	-	-	25.89
+cellular response to oxygen-containing compound	FC (WS / NS)	-0.03 (8.21 / 8.41)	-0.34 (6.78 / 8.85)	-	-	-	-
+ 	Percentile (%)	58.387	69.334	-	-	-	-
+positive regulation of cellular biosynthetic process	FC (WS / NS)	-0.03 (8.84 / 9.06)	0.1 (7.6 / 7)	0.01 (11.11 / 11.05)	-	-	-0.07 (5.29 / 5.58)
+ 	Percentile (%)	58.485	33.437	49.047	-	-	67.062
+cellular response to organonitrogen compound	FC (WS / NS)	-0.03 (7.9 / 8.1)	-	-	-	-	-
+ 	Percentile (%)	58.583	-	-	-	-	-
+DNA conformation change	FC (WS / NS)	-0.03 (9.3 / 9.54)	-0.02 (8.73 / 8.87)	0 (13.94 / 13.99)	0.17 (14.68 / 12.89)	-0.1 (-7.84 / -8.34)	0.04 (8.84 / 8.56)
+ 	Percentile (%)	58.633	56.843	67.937	16.776	57.963	47.717
+macromolecule localization	FC (WS / NS)	-0.03 (12.96 / 13.28)	0.01 (11.89 / 11.78)	-0.01 (17.53 / 17.63)	0 (16.17 / 16.22)	-0.09 (-3.37 / -3.52)	-0.01 (10.32 / 10.43)
+ 	Percentile (%)	58.682	45.498	69.04	47.059	56.555	61.92
+transition metal ion transport	FC (WS / NS)	-0.03 (9.35 / 9.6)	-0.57 (4.09 / 6.56)	-0.08 (12.12 / 12.92)	-	-	-0.31 (5.98 / 7.67)
+ 	Percentile (%)	58.731	73.609	77.365	-	-	79.18
+response to organic cyclic compound	FC (WS / NS)	-0.03 (9.3 / 9.54)	-0.29 (3.32 / 4.3)	-	-	-	0.19 (4.58 / 3.91)
+ 	Percentile (%)	58.78	67.256	-	-	-	24.991
+peptide transport	FC (WS / NS)	-0.03 (12.15 / 12.47)	0 (10.67 / 10.68)	0 (15.47 / 15.44)	-	-	-0.02 (10.36 / 10.55)
+ 	Percentile (%)	58.928	54.813	50.919	-	-	63.43
+organelle assembly	FC (WS / NS)	-0.04 (7.4 / 7.61)	0.03 (9.77 / 9.55)	0.04 (11.23 / 10.89)	3.1 (7.57 / 0)	-	0.28 (6.78 / 5.43)
+ 	Percentile (%)	58.977	42.871	37.513	2.033	-	19.202
+polysaccharide catabolic process	FC (WS / NS)	-0.04 (7.61 / 7.82)	-0.31 (5.98 / 7.63)	0.01 (7.14 / 7.08)	-	-	0.2 (5.17 / 4.36)
+ 	Percentile (%)	59.026	67.614	46.74	-	-	23.553
+cellular component assembly	FC (WS / NS)	-0.04 (12.82 / 13.17)	0.06 (13.37 / 12.75)	0.02 (16.37 / 16.08)	0.08 (17.98 / 16.96)	NaN (-0.27 / -1.4)	0.09 (10.14 / 9.43)
+ 	Percentile (%)	59.075	37.401	41.458	25.781	97.508	37.361
+organic acid metabolic process	FC (WS / NS)	-0.04 (16.72 / 17.17)	-0.01 (15.19 / 15.34)	-0.01 (23.42 / 23.63)	0.07 (23.4 / 22.29)	0.1 (6.06 / 5.58)	0 (13.5 / 13.52)
+ 	Percentile (%)	59.174	56.054	70.043	28.976	34.886	59.367
+developmental process	FC (WS / NS)	-0.04 (12.36 / 12.72)	-0.22 (10.97 / 12.94)	-0.09 (13.57 / 14.55)	-	-0.74 (-5.02 / -7.73)	-0.28 (6.58 / 8.22)
+ 	Percentile (%)	59.223	65.488	78.034	-	90.141	78.101
+response to endogenous stimulus	FC (WS / NS)	-0.04 (9.22 / 9.5)	0.04 (6.93 / 6.74)	2.27 (3.81 / 0)	-	-	-
+ 	Percentile (%)	59.321	41.844	1.404	-	-	-
+oxoacid metabolic process	FC (WS / NS)	-0.04 (16.44 / 16.93)	-0.01 (14.97 / 15.1)	-0.01 (22.97 / 23.17)	0.07 (23.4 / 22.28)	0.11 (5.6 / 5.13)	0 (13.47 / 13.48)
+ 	Percentile (%)	59.37	55.887	70.01	28.831	34.02	59.008
+protein-containing complex disassembly	FC (WS / NS)	-0.04 (9.48 / 9.77)	0.06 (8.95 / 8.55)	-	-	-	-
+ 	Percentile (%)	59.42	37.927	-	-	-	-
+carboxylic acid metabolic process	FC (WS / NS)	-0.04 (16.24 / 16.75)	-0.01 (14.81 / 14.92)	-0.01 (22.5 / 22.68)	0.07 (23.4 / 22.28)	0.12 (5.1 / 4.63)	0 (13.46 / 13.47)
+ 	Percentile (%)	59.518	55.696	69.809	28.758	33.153	59.044
+negative regulation of biological process	FC (WS / NS)	-0.04 (13.4 / 13.83)	-0.06 (13.14 / 13.76)	0.07 (15.45 / 14.64)	-0.13 (14 / 15.44)	-	0 (8.72 / 8.71)
+ 	Percentile (%)	59.616	59.828	31.595	65.432	-	58.216
+protein-containing complex subunit organization	FC (WS / NS)	-0.04 (12.84 / 13.26)	0.05 (13.09 / 12.57)	0.04 (15.71 / 15.21)	0.09 (16.62 / 15.55)	NaN (-0.38 / -1.29)	0.1 (9.23 / 8.56)
+ 	Percentile (%)	59.666	38.643	36.844	24.837	98.917	37.181
+response to nitrogen compound	FC (WS / NS)	-0.04 (10.34 / 10.68)	0.35 (7.09 / 5.33)	-	-	-	-
+ 	Percentile (%)	59.715	15.62	-	-	-	-
+regulation of cellular protein metabolic process	FC (WS / NS)	-0.04 (11.78 / 12.17)	-0.09 (11.58 / 12.41)	-0.02 (14.6 / 14.79)	-0.07 (14.17 / 14.94)	-	0.02 (8.61 / 8.45)
+ 	Percentile (%)	59.764	60.951	71.749	59.259	-	52.571
+multicellular organism development	FC (WS / NS)	-0.04 (9.04 / 9.35)	-0.23 (7.5 / 8.94)	-	-	-	-1.69 (0 / 2.23)
+ 	Percentile (%)	59.813	65.608	-	-	-	97.231
+metal ion transport	FC (WS / NS)	-0.04 (11.16 / 11.54)	-0.24 (6.3 / 7.61)	-0.02 (15.46 / 15.72)	-0.1 (12.12 / 13.06)	0.17 (-1.82 / -1.73)	-0.07 (8.52 / 9.01)
+ 	Percentile (%)	59.862	65.894	72.852	61.946	24.16	67.961
+catabolic process	FC (WS / NS)	-0.05 (16.04 / 16.6)	0.03 (16.5 / 16.17)	0 (24.55 / 24.48)	0.08 (23.34 / 22.07)	0.12 (6.99 / 6.34)	0 (12.11 / 12.13)
+ 	Percentile (%)	60.059	43.205	50.619	26.071	32.286	59.439
+primary alcohol metabolic process	FC (WS / NS)	-0.05 (9.69 / 10.04)	0.08 (6.77 / 6.35)	-0.21 (5.52 / 6.52)	-0.16 (6.08 / 6.92)	0.16 (-10.01 / -9.08)	-0.28 (3.58 / 4.55)
+ 	Percentile (%)	60.108	35.228	82.581	67.248	26.327	77.922
+cellular protein-containing complex assembly	FC (WS / NS)	-0.05 (11.16 / 11.56)	0.06 (10.86 / 10.37)	0.05 (13 / 12.56)	0.11 (16.55 / 15.3)	-0.88 (-2.63 / -4)	0.12 (8.73 / 7.94)
+ 	Percentile (%)	60.157	37.688	36.075	23.166	91.766	34.915
+serine family amino acid biosynthetic process	FC (WS / NS)	-0.05 (8.93 / 9.26)	-0.05 (7.79 / 8.08)	-0.06 (12.55 / 13.12)	-0.17 (12.7 / 14.42)	0.05 (-5.24 / -5.09)	-0.08 (8.37 / 8.9)
+ 	Percentile (%)	60.207	58.944	75.961	67.901	41.928	68.501
+translational elongation	FC (WS / NS)	-0.05 (10.86 / 11.26)	-	-0.02 (14.7 / 14.96)	-	1.55 (0.51 / -0.49)	-0.18 (3.17 / 3.71)
+ 	Percentile (%)	60.256	-	73.052	-	1.517	75.081
+response to hormone	FC (WS / NS)	-0.05 (8.48 / 8.81)	-0.12 (5.04 / 5.58)	-	-	-	0.12 (4.95 / 4.49)
+ 	Percentile (%)	60.354	62.336	-	-	-	35.383
+ribosomal large subunit assembly	FC (WS / NS)	-0.05 (8.4 / 8.73)	0.04 (6.99 / 6.75)	0.06 (6.07 / 5.78)	0.06 (9.3 / 8.87)	-0.2 (-6.63 / -7.45)	0.05 (6.34 / 6.08)
+ 	Percentile (%)	60.403	40.602	33.434	29.339	65.872	45.775
+cellular component disassembly	FC (WS / NS)	-0.05 (10.07 / 10.47)	0.05 (9.73 / 9.35)	-	-	-	-
+ 	Percentile (%)	60.453	39.288	-	-	-	-
+regulation of locomotion	FC (WS / NS)	-0.05 (10.73 / 11.17)	-	-2.9 (0 / 6.48)	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	60.551	-	99.733	-	-	42.071
+response to organonitrogen compound	FC (WS / NS)	-0.05 (10.21 / 10.64)	0.43 (6.54 / 4.61)	-	-	-	-
+ 	Percentile (%)	60.698	14.067	-	-	-	-
+protein-containing complex assembly	FC (WS / NS)	-0.05 (12.01 / 12.52)	0.06 (12.27 / 11.69)	0.05 (14.5 / 14)	0.11 (16.55 / 15.31)	-1.92 (-1.42 / -2.59)	0.11 (8.84 / 8.11)
+ 	Percentile (%)	60.748	37.187	35.975	23.312	94.691	35.743
+sulfur compound metabolic process	FC (WS / NS)	-0.06 (13.63 / 14.2)	0.02 (10.93 / 10.77)	-0.03 (16.56 / 16.92)	-0.1 (15.26 / 16.41)	1.19 (0.26 / -0.45)	-0.01 (10.26 / 10.32)
+ 	Percentile (%)	60.797	44.375	73.755	61.656	2.492	60.949
+organic substance catabolic process	FC (WS / NS)	-0.06 (15.38 / 16.04)	0.03 (16.2 / 15.84)	0.01 (24.1 / 23.97)	0.08 (23.34 / 22.07)	0.13 (6.56 / 5.9)	0 (12.09 / 12.12)
+ 	Percentile (%)	60.944	42.751	48.98	25.999	29.469	59.547
+cell adhesion	FC (WS / NS)	-0.06 (8.58 / 8.98)	-	-	0.01 (10.92 / 10.82)	-0.21 (-9.3 / -10.6)	-
+ 	Percentile (%)	61.043	-	-	40.378	66.739	-
+negative regulation of gene expression	FC (WS / NS)	-0.06 (10.2 / 10.68)	-0.07 (10.15 / 10.73)	0.06 (12.29 / 11.76)	-0.13 (14 / 15.4)	-	-0.02 (8.15 / 8.25)
+ 	Percentile (%)	61.141	60.449	33.567	64.924	-	62.244
+reproductive process	FC (WS / NS)	-0.06 (9.94 / 10.41)	-0.21 (8.65 / 10.17)	0.1 (11.31 / 10.51)	-	-	0.16 (8.59 / 7.59)
+ 	Percentile (%)	61.19	65.154	29.321	-	-	27.041
+cellular catabolic process	FC (WS / NS)	-0.06 (15.15 / 15.86)	0.03 (15.98 / 15.59)	0 (23.78 / 23.71)	-0.18 (16.24 / 18.48)	0.13 (5.9 / 5.3)	-0.09 (10.61 / 11.36)
+ 	Percentile (%)	61.24	42.274	50.418	68.264	30.011	69.543
+organic cation transport	FC (WS / NS)	-0.06 (5.88 / 6.19)	-0.97 (2.32 / 5.49)	0.06 (7.48 / 7.14)	-	-	0.23 (3.58 / 2.91)
+ 	Percentile (%)	61.289	81.801	33.601	-	-	21.827
+cellular macromolecule catabolic process	FC (WS / NS)	-0.06 (7.53 / 7.92)	-0.12 (8.74 / 9.55)	-0.11 (11.86 / 12.9)	-	-	0 (8.15 / 8.17)
+ 	Percentile (%)	61.338	62.097	79.004	-	-	59.511
+drug metabolic process	FC (WS / NS)	-0.06 (13.31 / 13.96)	0 (11.76 / 11.8)	0.01 (15.77 / 15.62)	-0.05 (18.87 / 19.63)	-0.05 (-0.75 / -0.74)	0 (11.16 / 11.19)
+ 	Percentile (%)	61.387	55.457	45.737	57.952	52.221	60.158
+secretion	FC (WS / NS)	-0.06 (10.36 / 10.88)	0.02 (9.63 / 9.51)	-0.05 (11.39 / 11.83)	-2.72 (0 / 5.58)	-	-0.15 (5.39 / 6.1)
+ 	Percentile (%)	61.436	44.805	75.393	89.179	-	72.744
+phospholipid metabolic process	FC (WS / NS)	-0.07 (9.49 / 9.99)	-0.14 (7.84 / 8.71)	0.03 (16.22 / 15.84)	0.03 (14.94 / 14.66)	-0.83 (-2.08 / -2.93)	-0.01 (9.47 / 9.53)
+ 	Percentile (%)	61.535	62.694	39.251	37.763	91.116	61.057
+nucleoside bisphosphate metabolic process	FC (WS / NS)	-0.07 (13.39 / 14.08)	0.06 (9.89 / 9.43)	-0.05 (14.13 / 14.62)	-0.1 (14.84 / 15.95)	NaN (-0.36 / -1.08)	-0.07 (8.91 / 9.39)
+ 	Percentile (%)	61.633	37.736	74.958	61.438	98.267	67.458
+cellular amino acid metabolic process	FC (WS / NS)	-0.07 (14.98 / 15.76)	-0.02 (13.94 / 14.1)	-0.01 (21.38 / 21.48)	-0.1 (18.45 / 19.8)	0.1 (3.44 / 3.15)	-0.02 (12.75 / 12.96)
+ 	Percentile (%)	61.682	56.317	68.572	61.365	35.32	63.215
+sodium ion transport	FC (WS / NS)	-0.07 (9.25 / 9.75)	-	-	-	-0.33 (-3.73 / -4.43)	-0.23 (5.83 / 6.99)
+ 	Percentile (%)	61.731	-	-	-	76.598	76.627
+sulfur amino acid biosynthetic process	FC (WS / NS)	-0.07 (9.61 / 10.14)	-0.11 (6.34 / 6.91)	-0.07 (13.31 / 14.01)	-0.46 (9.73 / 13.79)	-	-0.13 (7.92 / 8.73)
+ 	Percentile (%)	61.781	61.524	76.396	79.012	-	71.773
+phospholipid biosynthetic process	FC (WS / NS)	-0.07 (8.77 / 9.27)	-0.11 (6.61 / 7.22)	0.01 (14.49 / 14.42)	0.02 (14.86 / 14.61)	-0.55 (-2.97 / -3.89)	-0.01 (9.36 / 9.44)
+ 	Percentile (%)	61.928	61.786	49.181	38.562	85.374	61.633
+secretion by cell	FC (WS / NS)	-0.07 (9.56 / 10.09)	0.01 (8.94 / 8.89)	-0.05 (10.71 / 11.16)	-	-	-0.15 (5.36 / 6.08)
+ 	Percentile (%)	61.977	46.214	75.694	-	-	73.067
+generation of precursor metabolites and energy	FC (WS / NS)	-0.07 (13.91 / 14.67)	-0.01 (12.26 / 12.39)	0.01 (19.35 / 19.2)	0.08 (23.36 / 22.08)	0.34 (2.96 / 2.13)	0 (11.75 / 11.71)
+ 	Percentile (%)	62.027	56.102	47.041	25.926	10.618	57.389
+ribonucleoside bisphosphate metabolic process	FC (WS / NS)	-0.07 (12.68 / 13.4)	0.06 (9.79 / 9.37)	-0.03 (13.98 / 14.33)	-0.1 (14.84 / 15.95)	NaN (-0.36 / -1.08)	-0.07 (8.91 / 9.39)
+ 	Percentile (%)	62.125	38.07	74.156	61.511	98.375	67.494
+purine nucleoside bisphosphate metabolic process	FC (WS / NS)	-0.07 (12.68 / 13.4)	0.06 (9.79 / 9.37)	-0.03 (13.98 / 14.33)	-0.1 (14.84 / 15.95)	NaN (-0.36 / -1.08)	-0.07 (8.91 / 9.39)
+ 	Percentile (%)	62.174	38.094	74.189	61.583	98.483	67.53
+L-serine metabolic process	FC (WS / NS)	-0.07 (8.74 / 9.26)	-0.3 (5.04 / 6.43)	-0.11 (10.66 / 11.58)	-0.2 (12.09 / 14.08)	-	-0.13 (7.61 / 8.45)
+ 	Percentile (%)	62.223	67.399	78.87	69.354	-	72.276
+cellular biogenic amine biosynthetic process	FC (WS / NS)	-0.07 (10.03 / 10.6)	-0.15 (8.44 / 9.5)	0.22 (10.14 / 8.57)	-	-	0.11 (5.61 / 5.11)
+ 	Percentile (%)	62.273	63.387	21.331	-	-	35.671
+thioester metabolic process	FC (WS / NS)	-0.07 (12.67 / 13.39)	0.05 (10.1 / 9.76)	-0.01 (14.41 / 14.56)	-0.1 (14.84 / 15.93)	1.29 (0.21 / -0.51)	-0.07 (8.81 / 9.27)
+ 	Percentile (%)	62.322	40.339	70.411	61.22	2.059	67.314
+establishment of protein localization to membrane	FC (WS / NS)	-0.07 (8.61 / 9.12)	0.08 (8.11 / 7.61)	-0.02 (10.5 / 10.63)	-	-	0.05 (6.91 / 6.62)
+ 	Percentile (%)	62.371	35.037	71.08	-	-	45.667
+sulfur compound biosynthetic process	FC (WS / NS)	-0.07 (12.38 / 13.09)	-0.11 (8.76 / 9.5)	-0.05 (15.14 / 15.66)	-0.17 (14.14 / 15.99)	-2.54 (-1.15 / -1.9)	-0.09 (9.31 / 9.97)
+ 	Percentile (%)	62.42	61.452	74.925	67.611	95.341	69.364
+isoprenoid metabolic process	FC (WS / NS)	-0.07 (8.28 / 8.77)	-0.06 (5.73 / 5.99)	-0.01 (13.49 / 13.63)	-0.06 (13.05 / 13.61)	-	-0.02 (7.97 / 8.1)
+ 	Percentile (%)	62.469	59.47	70.612	58.17	-	63.035
+alpha-amino acid metabolic process	FC (WS / NS)	-0.07 (14.28 / 15.1)	-0.03 (12.81 / 13.08)	0 (19.93 / 19.99)	-0.13 (16.97 / 18.69)	0.12 (2.18 / 1.92)	-0.02 (11.77 / 11.95)
+ 	Percentile (%)	62.518	57.464	67.603	65.505	32.178	62.927
+protein secretion	FC (WS / NS)	-0.08 (8.5 / 9.01)	-0.05 (7.38 / 7.7)	-0.06 (9.64 / 10.08)	-2.72 (0 / 5.58)	-	-0.12 (5.25 / 5.79)
+ 	Percentile (%)	62.568	59.374	75.928	89.107	-	71.449
+organic hydroxy compound metabolic process	FC (WS / NS)	-0.08 (12.51 / 13.25)	-0.09 (9.82 / 10.52)	-0.05 (15.11 / 15.67)	-0.01 (15.24 / 15.4)	-0.42 (-2.77 / -3.36)	-0.03 (8.99 / 9.2)
+ 	Percentile (%)	62.666	60.807	75.226	49.673	80.932	64.437
+acyl-CoA metabolic process	FC (WS / NS)	-0.08 (12.14 / 12.87)	0.05 (9.67 / 9.28)	-0.01 (13.84 / 13.99)	-0.1 (14.84 / 15.93)	NaN (-0.36 / -1.08)	-0.07 (8.81 / 9.27)
+ 	Percentile (%)	62.715	38.906	70.812	61.147	96.316	67.278
+regulation of cellular component movement	FC (WS / NS)	-0.08 (10.5 / 11.15)	-	-2.9 (0 / 6.48)	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	62.814	-	99.766	-	-	42.251
+cellular response to peptide	FC (WS / NS)	-0.08 (7.31 / 7.79)	-	-	-	-	-
+ 	Percentile (%)	62.863	-	-	-	-	-
+cellular modified amino acid metabolic process	FC (WS / NS)	-0.08 (10.61 / 11.28)	0.05 (8.64 / 8.31)	0 (15.55 / 15.53)	-0.05 (13.02 / 13.54)	-	0.02 (8.47 / 8.34)
+ 	Percentile (%)	62.912	39.432	51.387	57.807	-	53.65
+negative regulation of macromolecule biosynthetic process	FC (WS / NS)	-0.08 (10.19 / 10.83)	-0.06 (11.02 / 11.54)	0.09 (12.94 / 12.13)	-0.33 (6.96 / 9.03)	-	0.18 (6.94 / 5.99)
+ 	Percentile (%)	62.961	59.756	30.157	75.89	-	25.351
+negative regulation of cellular macromolecule biosynthetic process	FC (WS / NS)	-0.08 (9.56 / 10.17)	-0.07 (10.51 / 11.06)	0.09 (12.32 / 11.53)	-0.33 (6.96 / 9.03)	-	0.18 (6.94 / 5.99)
+ 	Percentile (%)	63.06	60.139	29.957	76.035	-	25.423
+response to ketone	FC (WS / NS)	-0.08 (8.39 / 8.93)	-	-	-	-	0.2 (4.17 / 3.49)
+ 	Percentile (%)	63.109	-	-	-	-	23.373
+regulation of cell motility	FC (WS / NS)	-0.08 (10.23 / 10.88)	-3.21 (0 / 8.27)	-2.79 (0 / 5.91)	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	63.158	99.833	99.498	-	-	42.467
+negative regulation of biosynthetic process	FC (WS / NS)	-0.08 (10.96 / 11.66)	-0.06 (11.69 / 12.21)	0.08 (13.7 / 12.88)	-0.33 (6.96 / 9.03)	-	0.18 (6.94 / 5.99)
+ 	Percentile (%)	63.207	59.613	30.458	75.817	-	25.315
+polyamine metabolic process	FC (WS / NS)	-0.08 (10.4 / 11.07)	-0.21 (8.38 / 9.82)	0.31 (9.13 / 7.17)	-	-	0.28 (5.43 / 4.3)
+ 	Percentile (%)	63.256	65.059	17.72	-	-	19.058
+terpenoid biosynthetic process	FC (WS / NS)	-0.08 (7.28 / 7.77)	-0.04 (4 / 4.15)	-	-0.06 (13.05 / 13.61)	-	-0.04 (7.73 / 8)
+ 	Percentile (%)	63.305	58.706	-	58.243	-	65.552
+negative regulation of cellular biosynthetic process	FC (WS / NS)	-0.08 (10.19 / 10.86)	-0.06 (11.02 / 11.56)	0.09 (12.94 / 12.13)	-0.33 (6.96 / 9.03)	-	0.18 (6.94 / 5.99)
+ 	Percentile (%)	63.502	59.876	30.191	75.962	-	25.387
+regulation of cell migration	FC (WS / NS)	-0.08 (9.89 / 10.55)	-3.12 (0 / 7.67)	-2.57 (0 / 4.95)	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	63.551	99.522	98.93	-	-	41.819
+arginine deiminase pathway	FC (WS / NS)	-0.08 (7.28 / 7.77)	-	-0.06 (7.81 / 8.2)	-	0.21 (-8.24 / -7.25)	0.17 (3.91 / 3.36)
+ 	Percentile (%)	63.65	-	76.195	-	19.068	26.393
+positive regulation of response to stimulus	FC (WS / NS)	-0.09 (6.29 / 6.73)	-0.24 (7.09 / 8.57)	2.32 (4 / 0)	-	-	-0.32 (3.46 / 4.55)
+ 	Percentile (%)	63.797	66.038	1.204	-	-	79.288
+protein unfolding	FC (WS / NS)	-0.09 (7.86 / 8.4)	0 (7.54 / 7.54)	-1.58 (0 / 2)	-2.73 (0 / 5.61)	-	0.03 (3 / 2.91)
+ 	Percentile (%)	63.847	54.741	94.316	89.397	-	49.443
+nucleoside bisphosphate biosynthetic process	FC (WS / NS)	-0.09 (12.23 / 13.04)	-0.24 (6.51 / 7.89)	-0.08 (12.43 / 13.19)	-0.21 (13.1 / 15.36)	-0.98 (-1.78 / -2.54)	-0.19 (7.58 / 8.81)
+ 	Percentile (%)	63.945	66.086	76.998	69.572	92.308	75.369
+negative regulation of metabolic process	FC (WS / NS)	-0.09 (12.47 / 13.3)	-0.06 (12.8 / 13.36)	0.07 (14.98 / 14.21)	-0.13 (14 / 15.44)	-	-0.02 (8.29 / 8.39)
+ 	Percentile (%)	63.994	59.565	31.695	65.723	-	62.208
+'de novo' cotranslational protein folding	FC (WS / NS)	-0.09 (7.4 / 7.92)	0 (8.2 / 8.21)	-	-	-	0.44 (1.58 / 0.91)
+ 	Percentile (%)	64.092	54.932	-	-	-	13.7
+regulation of epithelial cell migration	FC (WS / NS)	-0.09 (9.48 / 10.13)	-	-	-	-	-
+ 	Percentile (%)	64.142	-	-	-	-	-
+polyamine biosynthetic process	FC (WS / NS)	-0.09 (9.57 / 10.24)	-	-	-	-	-
+ 	Percentile (%)	64.191	-	-	-	-	-
+ribonucleoprotein complex subunit organization	FC (WS / NS)	-0.09 (10.86 / 11.6)	0.01 (10.41 / 10.3)	-	-	-	-
+ 	Percentile (%)	64.24	45.211	-	-	-	-
+ribonucleoprotein complex assembly	FC (WS / NS)	-0.09 (10.11 / 10.82)	0.02 (9.67 / 9.54)	0.02 (10.01 / 9.85)	0.06 (9.31 / 8.88)	-	0.04 (6.38 / 6.17)
+ 	Percentile (%)	64.289	44.662	42.929	29.484	-	48.148
+negative regulation of cellular process	FC (WS / NS)	-0.09 (11.69 / 12.5)	-0.07 (12.22 / 12.88)	0.08 (14.38 / 13.55)	-	-	0.13 (7.94 / 7.14)
+ 	Percentile (%)	64.338	60.258	30.625	-	-	33.621
+sulfur amino acid metabolic process	FC (WS / NS)	-0.09 (10.8 / 11.56)	-0.09 (7.26 / 7.77)	-0.07 (14.28 / 15.04)	-0.46 (9.75 / 13.79)	0.11 (-7.53 / -7.04)	-0.11 (8.03 / 8.75)
+ 	Percentile (%)	64.388	60.783	76.496	78.867	33.586	71.125
+dicarboxylic acid metabolic process	FC (WS / NS)	-0.09 (12.07 / 12.92)	0.09 (11.2 / 10.43)	0.01 (16.46 / 16.36)	-0.31 (14.44 / 18.09)	5.58 (-0.04 / -0.98)	-0.06 (9.97 / 10.43)
+ 	Percentile (%)	64.437	34.034	48.88	75.091	0.217	66.703
+lipid metabolic process	FC (WS / NS)	-0.09 (13.06 / 13.98)	-0.03 (12.81 / 13.05)	-0.02 (19.26 / 19.51)	0.04 (17.45 / 16.9)	0.42 (2.2 / 1.39)	-0.02 (10.69 / 10.88)
+ 	Percentile (%)	64.486	57.153	71.648	32.389	8.234	63.359
+alcohol metabolic process	FC (WS / NS)	-0.09 (12.01 / 12.86)	-0.03 (9.3 / 9.55)	-0.1 (13.44 / 14.52)	0 (15.22 / 15.17)	-0.16 (-7.08 / -7.79)	-0.02 (8.64 / 8.76)
+ 	Percentile (%)	64.535	58.013	78.669	42.193	62.297	62.496
+DNA metabolic process	FC (WS / NS)	-0.09 (8.29 / 8.9)	0.01 (10.26 / 10.21)	-0.01 (17.23 / 17.38)	0.07 (15.29 / 14.47)	-0.74 (-2.78 / -3.97)	-0.03 (9.98 / 10.22)
+ 	Percentile (%)	64.584	46.501	69.977	26.652	90.033	64.365
+monovalent inorganic cation homeostasis	FC (WS / NS)	-0.09 (9.08 / 9.74)	-0.16 (5.17 / 5.88)	-	-	-	-
+ 	Percentile (%)	64.634	63.602	-	-	-	-
+pteridine-containing compound metabolic process	FC (WS / NS)	-0.09 (10.52 / 11.28)	0.3 (7.88 / 6.23)	-0.01 (14.3 / 14.36)	-	-	-0.02 (8.16 / 8.28)
+ 	Percentile (%)	64.683	16.862	68.238	-	-	62.891
+regulation of endothelial cell migration	FC (WS / NS)	-0.09 (8.88 / 9.54)	-	-	-	-	-
+ 	Percentile (%)	64.732	-	-	-	-	-
+mRNA catabolic process	FC (WS / NS)	-0.09 (7.02 / 7.55)	-	-	-0.13 (13.98 / 15.38)	-0.07 (-9.1 / -9.53)	-0.09 (7.3 / 7.87)
+ 	Percentile (%)	64.83	-	-	64.779	55.038	69.939
+dimethylallyl diphosphate biosynthetic process	FC (WS / NS)	-0.09 (7 / 7.54)	-	-0.07 (7.08 / 7.48)	-0.07 (11.78 / 12.37)	-0.13 (-7.32 / -7.93)	-0.05 (7.47 / 7.74)
+ 	Percentile (%)	64.879	-	76.53	58.969	60.563	65.588
+cellular response to inorganic substance	FC (WS / NS)	-0.09 (7.06 / 7.6)	-	-	-	-	-
+ 	Percentile (%)	64.978	-	-	-	-	-
+negative regulation of macromolecule metabolic process	FC (WS / NS)	-0.09 (11.52 / 12.37)	-0.06 (12.05 / 12.64)	0.07 (13.94 / 13.23)	-0.13 (14 / 15.44)	-	-0.02 (8.22 / 8.36)
+ 	Percentile (%)	65.076	59.947	31.729	65.577	-	63.287
+lysyl-tRNA aminoacylation	FC (WS / NS)	-0.1 (6.89 / 7.43)	-0.13 (6.58 / 7.27)	-0.12 (6.81 / 7.49)	0.01 (13.04 / 12.93)	-0.03 (-11.22 / -11.41)	-0.08 (7.2 / 7.68)
+ 	Percentile (%)	65.224	62.479	79.605	40.886	50.596	68.824
+anatomical structure development	FC (WS / NS)	-0.1 (10.62 / 11.42)	-0.29 (9.59 / 11.95)	-0.04 (12.41 / 12.81)	-	-0.34 (-8.95 / -11.05)	-0.59 (2.81 / 4.71)
+ 	Percentile (%)	65.273	67.184	74.858	-	77.465	87.99
+developmental process involved in reproduction	FC (WS / NS)	-0.1 (9.01 / 9.72)	-0.24 (7.6 / 9.17)	0.25 (8.78 / 7.23)	-	-	-
+ 	Percentile (%)	65.421	65.99	19.793	-	-	-
+putrescine biosynthetic process from ornithine	FC (WS / NS)	-0.1 (7.46 / 8.06)	-	-	-	-	-
+ 	Percentile (%)	65.519	-	-	-	-	-
+folic acid-containing compound metabolic process	FC (WS / NS)	-0.1 (10.11 / 10.9)	0.32 (7.43 / 5.76)	-0.01 (13.39 / 13.47)	-	-	-0.02 (8.04 / 8.19)
+ 	Percentile (%)	65.568	16.384	68.974	-	-	63.394
+maintenance of location in cell	FC (WS / NS)	-0.1 (7.15 / 7.73)	-0.02 (7.68 / 7.81)	-	-	-	0.29 (6.07 / 4.76)
+ 	Percentile (%)	65.667	56.866	-	-	-	18.267
+spermidine biosynthetic process	FC (WS / NS)	-0.1 (7.68 / 8.3)	-0.26 (6.38 / 7.82)	0.4 (7.13 / 5.17)	-	-	0.52 (5.25 / 3.36)
+ 	Percentile (%)	65.716	66.277	15.279	-	-	11.866
+mitochondrion organization	FC (WS / NS)	-0.1 (9.09 / 9.81)	-0.07 (6.88 / 7.29)	0.1 (8.74 / 8.09)	-	-	-
+ 	Percentile (%)	65.765	60.401	29.121	-	-	-
+chromosome condensation	FC (WS / NS)	-0.1 (7.52 / 8.12)	-	-	-0.01 (7.79 / 7.85)	-	-
+ 	Percentile (%)	65.814	-	-	48.221	-	-
+acyl-CoA biosynthetic process	FC (WS / NS)	-0.1 (11.08 / 11.94)	-	-0.03 (12.03 / 12.34)	-0.21 (13.1 / 15.36)	-	-0.19 (7.49 / 8.71)
+ 	Percentile (%)	65.863	-	74.256	69.644	-	75.476
+regulation of cellular amide metabolic process	FC (WS / NS)	-0.1 (10.56 / 11.39)	-0.08 (10.7 / 11.36)	-0.02 (13.67 / 13.86)	-0.07 (14.17 / 14.94)	-	0.02 (8.59 / 8.43)
+ 	Percentile (%)	65.912	60.568	71.849	59.405	-	52.427
+threonine metabolic process	FC (WS / NS)	-0.1 (9.69 / 10.46)	-0.16 (7.83 / 8.89)	0.1 (11.58 / 10.77)	-	0.13 (-6.49 / -6.01)	0.19 (7.41 / 6.4)
+ 	Percentile (%)	65.962	63.84	29.388	-	29.686	25.243
+macromolecule catabolic process	FC (WS / NS)	-0.1 (8.58 / 9.27)	-0.11 (9.63 / 10.45)	-0.07 (13.83 / 14.56)	-0.13 (14.25 / 15.66)	0.07 (-5.14 / -4.95)	0 (8.84 / 8.81)
+ 	Percentile (%)	66.011	61.572	76.429	64.706	38.57	57.425
+response to cytokine	FC (WS / NS)	-0.1 (8.87 / 9.59)	-2.66 (0 / 5.33)	-	-	-	-
+ 	Percentile (%)	66.06	97.683	-	-	-	-
+animal organ development	FC (WS / NS)	-0.1 (9.02 / 9.76)	-0.51 (6.48 / 9.67)	0.12 (9.58 / 8.77)	-	-	-
+ 	Percentile (%)	66.109	72.606	27.549	-	-	-
+glutamine family amino acid metabolic process	FC (WS / NS)	-0.11 (12.05 / 13.04)	0.03 (9.48 / 9.25)	-0.02 (16.62 / 16.9)	-0.23 (15.46 / 18.34)	-0.07 (-0.16 / -0.12)	-0.07 (10.28 / 10.82)
+ 	Percentile (%)	66.208	42.393	72.919	70.588	54.821	67.422
+oxidation-reduction process	FC (WS / NS)	-0.11 (13.56 / 14.68)	-0.02 (12.44 / 12.61)	-0.01 (21.15 / 21.29)	-0.04 (18.06 / 18.59)	0.21 (4.59 / 3.83)	-0.06 (10.61 / 11.13)
+ 	Percentile (%)	66.306	56.532	69.542	53.667	19.393	66.918
+liver development	FC (WS / NS)	-0.11 (7.31 / 7.95)	-	-	-	-	-
+ 	Percentile (%)	66.355	-	-	-	-	-
+response to other organism	FC (WS / NS)	-0.11 (9.75 / 10.58)	0.04 (12.24 / 11.89)	0.29 (7.93 / 6.29)	-	-	-0.27 (4.52 / 5.66)
+ 	Percentile (%)	66.404	41.175	18.121	-	-	77.814
+cellular modified amino acid biosynthetic process	FC (WS / NS)	-0.11 (8.69 / 9.46)	0.07 (7.94 / 7.53)	-0.01 (14.42 / 14.57)	-	0 (-3.4 / -3.4)	0.14 (6.51 / 5.84)
+ 	Percentile (%)	66.503	36.804	70.679	-	47.237	33.585
+cellular response to cytokine stimulus	FC (WS / NS)	-0.11 (7.87 / 8.59)	-	-	-	-	-
+ 	Percentile (%)	66.552	-	-	-	-	-
+cellular lipid metabolic process	FC (WS / NS)	-0.11 (12.42 / 13.52)	-0.02 (12.3 / 12.51)	-0.02 (18.3 / 18.56)	0.04 (17.45 / 16.9)	0.64 (1.32 / 0.48)	-0.01 (10.65 / 10.75)
+ 	Percentile (%)	66.65	56.962	72.016	32.171	5.417	61.74
+regulation of translation	FC (WS / NS)	-0.11 (9.7 / 10.57)	-0.08 (10.69 / 11.36)	-0.02 (13.67 / 13.86)	-0.07 (14.17 / 14.94)	0.22 (-10.29 / -8.99)	0.02 (8.59 / 8.43)
+ 	Percentile (%)	66.699	60.592	71.815	59.187	18.635	52.391
+cristae formation	FC (WS / NS)	-0.11 (6.86 / 7.51)	-	-	-	-	-
+ 	Percentile (%)	66.945	-	-	-	-	-
+positive regulation of blood vessel endothelial cell migration	FC (WS / NS)	-0.11 (6.86 / 7.51)	-	-	-	-	-
+ 	Percentile (%)	66.995	-	-	-	-	-
+protein N-linked glycosylation	FC (WS / NS)	-0.11 (6.64 / 7.28)	-	-	-	-	-
+ 	Percentile (%)	67.044	-	-	-	-	-
+cellular aldehyde metabolic process	FC (WS / NS)	-0.12 (8.38 / 9.17)	-0.04 (8.55 / 8.84)	0 (13.76 / 13.74)	-0.11 (13.07 / 14.18)	-0.46 (-3.87 / -4.95)	-0.07 (7.94 / 8.42)
+ 	Percentile (%)	67.093	58.658	51.087	63.108	82.557	68.105
+angiogenesis	FC (WS / NS)	-0.12 (6.75 / 7.42)	-2.59 (0 / 5.03)	-	-	-	-
+ 	Percentile (%)	67.142	94.125	-	-	-	-
+osteoblast differentiation	FC (WS / NS)	-0.12 (6.75 / 7.42)	-2.59 (0 / 5.03)	-1.84 (0 / 2.58)	-	-	-
+ 	Percentile (%)	67.191	94.172	95.319	-	-	-
+negative regulation of cell adhesion involved in substrate-bound cell migration	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.241	-	-	-	-	-
+cold acclimation	FC (WS / NS)	-0.12 (6.75 / 7.42)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	67.29	49.176	-	-	-	-
+response to manganese ion	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.339	-	-	-	-	-
+regulation of intracellular pH	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.437	-	-	-	-	-
+cellular response to interleukin-7	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.486	-	-	-	-	-
+response to curcumin	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.536	-	-	-	-	-
+response to 3,3',5-triiodo-L-thyronine	FC (WS / NS)	-0.12 (6.75 / 7.42)	-	-	-	-	-
+ 	Percentile (%)	67.585	-	-	-	-	-
+response to ether	FC (WS / NS)	-0.12 (7.81 / 8.56)	-	-	-	-	-
+ 	Percentile (%)	67.683	-	-	-	-	-
+amine metabolic process	FC (WS / NS)	-0.12 (11.62 / 12.71)	-0.13 (10.06 / 11.1)	-0.19 (13.05 / 15)	-0.1 (6.41 / 6.92)	-0.08 (-7.82 / -8.19)	0.08 (6.67 / 6.25)
+ 	Percentile (%)	67.732	62.599	81.678	61.075	55.471	38.835
+positive regulation of transcription, DNA-templated	FC (WS / NS)	-0.12 (6.78 / 7.45)	-	0.04 (7.94 / 7.73)	-	-0.21 (-7.29 / -8.29)	-0.97 (1 / 2.91)
+ 	Percentile (%)	67.831	-	38.482	-	67.497	93.779
+homocysteine metabolic process	FC (WS / NS)	-0.12 (8.09 / 8.87)	-	-	-	-	-
+ 	Percentile (%)	67.88	-	-	-	-	-
+protein complex oligomerization	FC (WS / NS)	-0.12 (9.28 / 10.17)	0.09 (10.33 / 9.66)	-	-	-0.02 (-7.05 / -7.13)	-
+ 	Percentile (%)	67.978	34.655	-	-	50.271	-
+immune response	FC (WS / NS)	-0.12 (7.23 / 7.94)	-0.56 (5 / 7.83)	-	-	-	-0.44 (3 / 4.43)
+ 	Percentile (%)	68.028	73.442	-	-	-	84.826
+negative regulation of cellular metabolic process	FC (WS / NS)	-0.12 (10.93 / 11.97)	-0.06 (11.86 / 12.45)	0.08 (13.94 / 13.13)	-0.57 (6.96 / 10.79)	-	0.13 (7.24 / 6.55)
+ 	Percentile (%)	68.077	59.995	30.592	79.884	-	34.448
+cellular biogenic amine metabolic process	FC (WS / NS)	-0.12 (11.12 / 12.19)	-0.14 (9.46 / 10.51)	-0.2 (11.98 / 13.93)	-0.1 (6.41 / 6.92)	0.16 (-10.01 / -9.08)	0.08 (6.67 / 6.25)
+ 	Percentile (%)	68.175	62.813	82.548	61.002	26.219	38.799
+isoleucyl-tRNA aminoacylation	FC (WS / NS)	-0.12 (6.63 / 7.3)	-2.13 (0 / 3.36)	-0.21 (6.19 / 7.3)	0.14 (9.88 / 8.86)	-	-0.12 (6.91 / 7.61)
+ 	Percentile (%)	68.273	92.047	82.648	18.954	-	71.593
+cytoplasmic translation	FC (WS / NS)	-0.12 (7.15 / 7.88)	0.14 (0 / -0.09)	-	-2.32 (0 / 4)	-	-0.62 (2 / 3.61)
+ 	Percentile (%)	68.372	21.949	-	87.001	-	88.278
+alditol metabolic process	FC (WS / NS)	-0.12 (9.64 / 10.6)	-	-0.29 (9.38 / 11.68)	-	-	-0.14 (7.33 / 8.2)
+ 	Percentile (%)	68.47	-	84.855	-	-	72.6
+regulated exocytosis	FC (WS / NS)	-0.13 (6.66 / 7.36)	-	-	-	-	-
+ 	Percentile (%)	68.667	-	-	-	-	-
+serine family amino acid metabolic process	FC (WS / NS)	-0.13 (10.43 / 11.48)	-0.12 (9.01 / 9.9)	-0.05 (14.09 / 14.65)	-0.17 (12.71 / 14.44)	0.07 (-4.24 / -4.09)	-0.08 (8.47 / 9.01)
+ 	Percentile (%)	68.765	62.312	75.56	68.046	39.003	68.752
+organic hydroxy compound catabolic process	FC (WS / NS)	-0.13 (10.62 / 11.69)	-	-0.26 (9.9 / 12.04)	-	-0.18 (-7.26 / -8.07)	-
+ 	Percentile (%)	68.815	-	84.32	-	63.922	-
+monocarboxylic acid catabolic process	FC (WS / NS)	-0.13 (9.68 / 10.66)	0.09 (9.42 / 8.81)	-0.3 (11.09 / 13.9)	-	-	-0.03 (4.39 / 4.49)
+ 	Percentile (%)	68.864	34.559	85.022	-	-	63.538
+tetrahydrofolate metabolic process	FC (WS / NS)	-0.13 (9.32 / 10.29)	0.48 (5.98 / 3.99)	-0.05 (10.8 / 11.25)	-	-	-0.03 (7.85 / 8.04)
+ 	Percentile (%)	69.061	12.825	75.627	-	-	64.401
+aspartate family amino acid metabolic process	FC (WS / NS)	-0.14 (11.81 / 13.07)	-0.16 (10.4 / 11.7)	0.04 (16.33 / 15.9)	-0.17 (12.45 / 14.14)	-1.83 (-1.26 / -1.93)	0.03 (9.41 / 9.23)
+ 	Percentile (%)	69.159	63.53	38.215	67.829	94.475	52.14
+glycerol metabolic process	FC (WS / NS)	-0.14 (8.65 / 9.62)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	69.356	84.595	-	-	-	-
+tetrahydrofolate interconversion	FC (WS / NS)	-0.14 (7.68 / 8.55)	-	-0.08 (9.16 / 9.75)	-0.06 (12.96 / 13.53)	0.04 (-7.72 / -7.53)	-0.06 (7.55 / 7.91)
+ 	Percentile (%)	69.405	-	77.065	58.533	43.445	66.559
+electron transport chain	FC (WS / NS)	-0.14 (10.18 / 11.32)	-	-	-0.1 (16.66 / 17.99)	-	-
+ 	Percentile (%)	69.454	-	-	62.164	-	-
+polyol metabolic process	FC (WS / NS)	-0.14 (10.87 / 12.09)	-0.09 (8.14 / 8.7)	-0.26 (10.66 / 12.98)	-	-	-0.15 (7.41 / 8.34)
+ 	Percentile (%)	69.503	60.759	84.353	-	-	72.816
+cellular glucan metabolic process	FC (WS / NS)	-0.14 (8.19 / 9.13)	-0.3 (6.38 / 8.07)	0.01 (12.58 / 12.49)	-0.03 (15.12 / 15.42)	0.23 (-3.54 / -3.16)	-0.08 (7 / 7.44)
+ 	Percentile (%)	69.552	67.423	48.512	51.344	17.01	68.285
+glucan metabolic process	FC (WS / NS)	-0.14 (8.19 / 9.13)	-0.27 (6.92 / 8.54)	-	-	-	-0.08 (7 / 7.44)
+ 	Percentile (%)	69.602	66.492	-	-	-	68.321
+glycogen biosynthetic process	FC (WS / NS)	-0.14 (6.74 / 7.54)	-0.44 (3 / 4.43)	-0.08 (8.74 / 9.33)	-0.03 (15.12 / 15.42)	0.12 (-5.54 / -5.16)	-0.09 (6.91 / 7.4)
+ 	Percentile (%)	69.651	71.316	77.332	51.416	31.853	69.256
+maintenance of location	FC (WS / NS)	-0.14 (7.94 / 8.87)	-0.06 (8.29 / 8.71)	-	-	-	0.29 (6.07 / 4.76)
+ 	Percentile (%)	69.749	59.9	-	-	-	18.231
+malonyl-CoA biosynthetic process	FC (WS / NS)	-0.15 (6.19 / 6.95)	-	-0.37 (5.81 / 7.78)	-0.15 (9.42 / 10.58)	-	-0.42 (5 / 7.01)
+ 	Percentile (%)	70.044	-	86.292	66.885	-	84.214
+glycogen metabolic process	FC (WS / NS)	-0.15 (7.93 / 8.88)	-0.29 (5.52 / 6.95)	-	-	-	-0.09 (6.94 / 7.43)
+ 	Percentile (%)	70.093	66.969	-	-	-	69.184
+acetyl-CoA biosynthetic process from pyruvate	FC (WS / NS)	-0.15 (8.88 / 9.94)	-0.67 (3.32 / 5.88)	0.11 (7.09 / 6.49)	-	-0.18 (-5.96 / -6.62)	-1.8 (0 / 2.49)
+ 	Percentile (%)	70.143	74.851	28.051	-	64.464	97.735
+alcohol catabolic process	FC (WS / NS)	-0.15 (10.16 / 11.37)	-0.11 (7.01 / 7.62)	-0.52 (7.58 / 11.26)	-0.56 (8.73 / 13.39)	-	-0.18 (6.44 / 7.41)
+ 	Percentile (%)	70.192	61.5	87.696	79.739	-	75.009
+fatty acid metabolic process	FC (WS / NS)	-0.15 (11.24 / 12.59)	0 (11.53 / 11.54)	-0.07 (15.4 / 16.25)	-	1.94 (0.13 / -0.71)	-0.02 (9.05 / 9.21)
+ 	Percentile (%)	70.29	55.004	76.663	-	0.758	63.179
+regulation of catalytic activity	FC (WS / NS)	-0.15 (9.75 / 10.97)	-0.39 (8.36 / 11.29)	0.03 (12.47 / 12.16)	-	-	0.07 (3.7 / 3.49)
+ 	Percentile (%)	70.438	70.265	39.151	-	-	42.862
+defense response to other organism	FC (WS / NS)	-0.15 (8.58 / 9.67)	-0.57 (4.52 / 7.21)	0.07 (6.46 / 6.09)	-	-	-0.28 (4.39 / 5.55)
+ 	Percentile (%)	70.487	73.585	31.428	-	-	78.065
+response to radiation	FC (WS / NS)	-0.16 (8.1 / 9.13)	-0.08 (6.11 / 6.51)	-	-	-	-
+ 	Percentile (%)	70.536	60.521	-	-	-	-
+negative regulation of nitrogen compound metabolic process	FC (WS / NS)	-0.16 (10.31 / 11.63)	-0.07 (11.25 / 11.84)	-	-0.56 (6.96 / 10.77)	-	0.12 (7.09 / 6.46)
+ 	Percentile (%)	70.831	60.162	-	79.811	-	35.455
+antibiotic metabolic process	FC (WS / NS)	-0.16 (11.27 / 12.71)	0.03 (9.9 / 9.67)	-0.24 (10.27 / 12.32)	-0.38 (12.88 / 17.07)	-0.03 (-4.79 / -4.88)	-0.25 (7.69 / 9.33)
+ 	Percentile (%)	70.88	42.608	83.818	77.633	50.921	77.31
+immune system process	FC (WS / NS)	-0.16 (9.14 / 10.33)	-0.33 (6.83 / 8.83)	0.94 (6.98 / 3.17)	-	-	-0.34 (4 / 5.33)
+ 	Percentile (%)	70.93	69.047	10.498	-	-	82.776
+small molecule catabolic process	FC (WS / NS)	-0.16 (13.5 / 15.23)	0 (13.99 / 13.97)	0 (21.52 / 21.49)	-0.24 (15.34 / 18.26)	0.2 (4.4 / 3.71)	-0.15 (9.83 / 11.04)
+ 	Percentile (%)	71.028	47.003	51.287	70.951	21.235	73.031
+response to cAMP	FC (WS / NS)	-0.16 (5.78 / 6.6)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	71.077	30.428	-	-	-	-
+anatomical structure morphogenesis	FC (WS / NS)	-0.17 (8.51 / 9.66)	-0.49 (7.48 / 10.91)	-0.17 (10.51 / 11.96)	-	-0.74 (-5.34 / -8.24)	-0.24 (6.32 / 7.63)
+ 	Percentile (%)	71.126	72.104	81.344	-	89.924	76.915
+regulation of hydrolase activity	FC (WS / NS)	-0.17 (8.86 / 10.09)	-0.5 (7.11 / 10.46)	-0.08 (8.81 / 9.39)	-	-	0.17 (3.17 / 2.71)
+ 	Percentile (%)	71.323	72.271	77.165	-	-	26.537
+protein homotetramerization	FC (WS / NS)	-0.17 (6.81 / 7.79)	0.17 (7.18 / 6.26)	-	-	-	-
+ 	Percentile (%)	71.372	20.373	-	-	-	-
+protein tetramerization	FC (WS / NS)	-0.18 (7.9 / 9.07)	-	-1.35 (1 / 4.09)	-0.77 (3.62 / 6.89)	-	-2.37 (0 / 4.15)
+ 	Percentile (%)	71.618	-	92.778	81.699	-	99.425
+cysteine biosynthetic process	FC (WS / NS)	-0.18 (7.85 / 9.02)	-	-0.2 (9.68 / 11.23)	-	-	-0.35 (6.25 / 8.27)
+ 	Percentile (%)	71.717	-	82.213	-	-	83.028
+polyol catabolic process	FC (WS / NS)	-0.18 (9.33 / 10.69)	-0.31 (5.55 / 7.11)	-0.62 (6.38 / 10.34)	-3.84 (0 / 13.35)	-	-0.84 (3.46 / 6.98)
+ 	Percentile (%)	71.766	67.638	89.101	99.782	-	91.046
+regulation of transferase activity	FC (WS / NS)	-0.18 (5.67 / 6.58)	-0.86 (4.58 / 9.14)	-	-	-	-0.11 (2 / 2.23)
+ 	Percentile (%)	71.913	76.785	-	-	-	70.874
+organic acid catabolic process	FC (WS / NS)	-0.19 (12.99 / 14.91)	-	-	-	-	-
+ 	Percentile (%)	71.963	-	-	-	-	-
+cellular respiration	FC (WS / NS)	-0.19 (9.13 / 10.56)	-0.04 (9.94 / 10.23)	0 (15.09 / 15.07)	-	NaN (-0.94 / -1.81)	-0.41 (4.25 / 5.99)
+ 	Percentile (%)	72.012	58.347	51.354	-	99.025	84.07
+ribosomal small subunit assembly	FC (WS / NS)	-0.19 (7.46 / 8.67)	0.01 (7.98 / 7.94)	0.02 (8.11 / 7.98)	-1.3 (-0.19 / 1)	-	-
+ 	Percentile (%)	72.11	46.143	43.029	83.878	-	-
+carboxylic acid catabolic process	FC (WS / NS)	-0.19 (12.72 / 14.7)	-0.12 (11.17 / 12.18)	-0.1 (16.35 / 17.65)	-	-0.51 (-0.41 / -0.16)	-0.17 (9.57 / 10.89)
+ 	Percentile (%)	72.209	62.073	78.602	-	84.182	74.757
+organonitrogen compound catabolic process	FC (WS / NS)	-0.2 (12.69 / 14.69)	0.03 (14.51 / 14.19)	0 (22.34 / 22.27)	-0.23 (15.43 / 18.26)	0.16 (4.6 / 4.02)	-0.13 (9.99 / 11.06)
+ 	Percentile (%)	72.258	42.847	49.95	70.37	26.002	72.204
+membrane organization	FC (WS / NS)	-0.2 (8.91 / 10.37)	0.01 (8.57 / 8.49)	-	-	-	-0.44 (4.17 / 6.03)
+ 	Percentile (%)	72.405	45.617	-	-	-	84.969
+cysteine biosynthetic process from serine	FC (WS / NS)	-0.2 (6.77 / 7.92)	-0.8 (1 / 2.49)	-0.31 (7.23 / 9.17)	-0.47 (9.62 / 13.71)	-	-0.35 (6.23 / 8.22)
+ 	Percentile (%)	72.504	76.284	85.155	79.303	-	82.884
+diol metabolic process	FC (WS / NS)	-0.2 (9.05 / 10.55)	0.03 (7.52 / 7.33)	0.04 (4.46 / 4.32)	-	-	-0.16 (2.32 / 2.71)
+ 	Percentile (%)	72.553	42.56	38.181	-	-	73.427
+nitrogen fixation	FC (WS / NS)	-0.2 (8.56 / 9.99)	-	-0.06 (10.77 / 11.3)	0.28 (12.36 / 9.98)	-0.45 (-8.32 / -11.01)	0.5 (6.98 / 4.66)
+ 	Percentile (%)	72.602	-	76.229	13.072	82.34	12.298
+antibiotic catabolic process	FC (WS / NS)	-0.2 (7.23 / 8.47)	0 (4.64 / 4.66)	-	-	-	-0.24 (3.7 / 4.55)
+ 	Percentile (%)	72.7	55.41	-	-	-	77.166
+cellular component morphogenesis	FC (WS / NS)	-0.21 (6.34 / 7.51)	-	-	-	-0.34 (-8.95 / -11.05)	-
+ 	Percentile (%)	72.848	-	-	-	77.248	-
+glycol metabolic process	FC (WS / NS)	-0.22 (8.43 / 9.95)	0.01 (6.63 / 6.59)	0 (3.32 / 3.32)	-	-	-0.16 (2.32 / 2.71)
+ 	Percentile (%)	72.946	46.167	62.487	-	-	73.499
+alpha-amino acid catabolic process	FC (WS / NS)	-0.22 (11.55 / 13.62)	-0.24 (9.37 / 11.27)	-0.09 (14.51 / 15.53)	-0.24 (15.32 / 18.21)	1.19 (-1.65 / -1.28)	-0.17 (9.52 / 10.85)
+ 	Percentile (%)	73.045	66.062	77.867	70.879	2.384	74.793
+cellular amino acid catabolic process	FC (WS / NS)	-0.22 (12.13 / 14.29)	-0.19 (10.15 / 11.69)	-0.09 (15.44 / 16.48)	-0.24 (15.32 / 18.21)	NaN (-1.08 / -0.75)	-0.17 (9.52 / 10.85)
+ 	Percentile (%)	73.094	64.557	77.733	70.806	96.533	74.829
+imidazole-containing compound metabolic process	FC (WS / NS)	-0.22 (9.78 / 11.58)	-0.22 (7.36 / 8.71)	-0.18 (12.47 / 14.26)	-0.37 (13.66 / 17.99)	0.01 (-5.03 / -4.99)	-0.3 (8.18 / 10.32)
+ 	Percentile (%)	73.192	65.202	81.511	77.269	45.504	78.749
+maturation of LSU-rRNA	FC (WS / NS)	-0.22 (5.67 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	73.242	-	-	-	-	-
+aromatic amino acid family metabolic process	FC (WS / NS)	-0.23 (10.31 / 12.22)	-0.09 (8.59 / 9.22)	-0.14 (13.46 / 14.98)	-0.38 (13.68 / 18.1)	0.01 (-5.02 / -4.99)	-0.24 (8.79 / 10.6)
+ 	Percentile (%)	73.291	60.879	80.374	77.56	45.612	77.238
+glutamine family amino acid catabolic process	FC (WS / NS)	-0.23 (9.45 / 11.22)	-	-0.02 (12.46 / 12.62)	-	-	0.02 (8.51 / 8.38)
+ 	Percentile (%)	73.389	-	71.615	-	-	53.83
+cysteine metabolic process	FC (WS / NS)	-0.23 (8.6 / 10.24)	-	-	-	-	-
+ 	Percentile (%)	73.438	-	-	-	-	-
+negative regulation of translational elongation	FC (WS / NS)	-0.23 (4.64 / 5.61)	-0.93 (0 / 0.91)	-	-3.26 (0 / 8.58)	-	-
+ 	Percentile (%)	73.635	80.607	-	94.989	-	-
+cell motility	FC (WS / NS)	-0.23 (9.1 / 10.83)	-0.29 (6.78 / 8.53)	-0.01 (8.46 / 8.52)	-	-	-0.28 (4.17 / 5.26)
+ 	Percentile (%)	73.684	67.208	69.141	-	-	78.029
+hydrogen peroxide catabolic process	FC (WS / NS)	-0.23 (5.91 / 7.1)	-0.43 (1.58 / 2.49)	-	0 (0 / 0)	-	1.99 (2.58 / -0.09)
+ 	Percentile (%)	73.783	71.053	-	45.243	-	1.294
+histidine metabolic process	FC (WS / NS)	-0.23 (9.19 / 10.99)	-0.24 (6.46 / 7.79)	-0.19 (11.65 / 13.48)	-	-	-0.3 (8.18 / 10.32)
+ 	Percentile (%)	73.881	65.871	82.18	-	-	78.713
+flavin-containing compound metabolic process	FC (WS / NS)	-0.24 (6.7 / 8.09)	-0.19 (3.58 / 4.23)	-0.13 (9.99 / 11.05)	-0.04 (5.46 / 5.64)	-	-0.38 (4.81 / 6.53)
+ 	Percentile (%)	73.979	64.652	80.04	54.684	-	83.279
+glutamate metabolic process	FC (WS / NS)	-0.24 (9.8 / 11.76)	-	-0.2 (11.32 / 13.13)	-0.37 (13.66 / 18)	-0.06 (-5.72 / -5.92)	-0.29 (7.91 / 9.86)
+ 	Percentile (%)	74.029	-	82.481	77.415	53.846	78.245
+cellular response to iron ion	FC (WS / NS)	-0.24 (5.32 / 6.49)	-	-	-	-	-
+ 	Percentile (%)	74.078	-	-	-	-	-
+behavior	FC (WS / NS)	-0.25 (8.08 / 9.76)	-0.05 (8.18 / 8.51)	-	-	-	-
+ 	Percentile (%)	74.127	59.135	-	-	-	-
+negative regulation of translation	FC (WS / NS)	-0.25 (7.31 / 8.85)	-0.12 (9.31 / 10.17)	-	-	-	0.74 (4.39 / 2.23)
+ 	Percentile (%)	74.176	62.049	-	-	-	8.558
+regulation of DNA metabolic process	FC (WS / NS)	-0.25 (5.95 / 7.26)	-0.19 (6.41 / 7.47)	-0.05 (8.72 / 9.07)	-3.49 (0 / 10.26)	-	-0.04 (4.46 / 4.61)
+ 	Percentile (%)	74.225	64.844	75.359	97.386	-	65.3
+cell activation	FC (WS / NS)	-0.25 (7.85 / 9.51)	0.24 (7.11 / 5.86)	-	-	-	-0.71 (2 / 3.91)
+ 	Percentile (%)	74.274	18.462	-	-	-	89.572
+histidine catabolic process	FC (WS / NS)	-0.26 (8.69 / 10.57)	-0.31 (5 / 6.43)	-0.25 (10.23 / 12.39)	-0.37 (13.66 / 17.99)	-0.04 (-5.57 / -5.7)	-0.34 (7.92 / 10.29)
+ 	Percentile (%)	74.373	67.733	84.152	77.342	51.138	82.74
+cell morphogenesis	FC (WS / NS)	-0.26 (6.07 / 7.43)	-0.95 (3.46 / 7.61)	-	0 (13.86 / 13.82)	-0.75 (-5.6 / -8.73)	-0.24 (6.3 / 7.61)
+ 	Percentile (%)	74.422	81.729	-	42.919	90.249	76.987
+immune effector process	FC (WS / NS)	-0.26 (7.47 / 9.11)	-0.71 (4 / 7.2)	-	-	-	-0.44 (3.58 / 5.23)
+ 	Percentile (%)	74.52	75.543	-	-	-	84.898
+leukocyte activation	FC (WS / NS)	-0.26 (7.52 / 9.19)	-	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	74.57	-	-	-	-	90.759
+signal transduction	FC (WS / NS)	-0.26 (5.43 / 6.69)	-0.28 (7.52 / 9.32)	0.01 (14.64 / 14.49)	-	-0.25 (-3.74 / -4.26)	-0.12 (7.85 / 8.59)
+ 	Percentile (%)	74.619	66.73	45.369	-	71.939	71.305
+energy derivation by oxidation of organic compounds	FC (WS / NS)	-0.26 (11.16 / 13.55)	-0.01 (11.45 / 11.55)	0.01 (16.39 / 16.29)	-0.06 (15.15 / 15.78)	1.23 (0.1 / -0.53)	-0.22 (7.19 / 8.57)
+ 	Percentile (%)	74.668	55.792	48.746	58.025	2.275	76.555
+lysine metabolic process	FC (WS / NS)	-0.26 (9.7 / 11.85)	-	-	-	-	0.02 (8.02 / 7.93)
+ 	Percentile (%)	74.717	-	-	-	-	54.729
+asparaginyl-tRNA aminoacylation	FC (WS / NS)	-0.26 (5 / 6.21)	-0.3 (4.39 / 5.66)	-0.34 (4.52 / 6)	-3.64 (0 / 11.49)	-	-0.21 (5.29 / 6.28)
+ 	Percentile (%)	74.816	67.566	85.69	98.402	-	76.196
+myeloid leukocyte activation	FC (WS / NS)	-0.27 (7.11 / 8.77)	-	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	74.963	-	-	-	-	90.615
+mitochondrial genome maintenance	FC (WS / NS)	-0.28 (5.04 / 6.32)	-0.1 (5.52 / 6.01)	-	-	-	-
+ 	Percentile (%)	75.258	61.285	-	-	-	-
+anaerobic respiration	FC (WS / NS)	-0.28 (6.48 / 8.07)	-0.22 (7.18 / 8.51)	-	-0.31 (9.57 / 12.1)	-	-
+ 	Percentile (%)	75.406	65.273	-	75.163	-	-
+neurotransmitter catabolic process	FC (WS / NS)	-0.28 (6.34 / 7.94)	-	-0.22 (6.98 / 8.31)	-	-	0.01 (5.58 / 5.55)
+ 	Percentile (%)	75.455	-	83.383	-	-	56.383
+fatty acid catabolic process	FC (WS / NS)	-0.29 (7.98 / 9.95)	-	-	-	-	0.31 (3.32 / 2.49)
+ 	Percentile (%)	75.504	-	-	-	-	17.62
+locomotion	FC (WS / NS)	-0.29 (9.42 / 11.71)	-0.25 (7.88 / 9.54)	-0.07 (9.43 / 9.93)	-	-	-0.12 (5.67 / 6.25)
+ 	Percentile (%)	75.553	66.157	76.329	-	-	71.413
+gonad development	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.603	-	-	-	-	-
+defecation	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.652	-	-	-	-	-
+dauer larval development	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.701	-	-	-	-	-
+inductive cell migration	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.75	-	-	-	-	-
+pharyngeal pumping	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.799	-	-	-	-	-
+embryonic morphogenesis	FC (WS / NS)	-0.29 (5.39 / 6.79)	-	-	-	-	-
+ 	Percentile (%)	75.848	-	-	-	-	-
+formate metabolic process	FC (WS / NS)	-0.29 (8.14 / 10.16)	-	-	-	-	-
+ 	Percentile (%)	75.947	-	-	-	-	-
+aromatic amino acid family catabolic process	FC (WS / NS)	-0.29 (9.12 / 11.36)	-	-0.28 (10.34 / 12.8)	-	-0.02 (-5.36 / -5.43)	-0.34 (7.93 / 10.29)
+ 	Percentile (%)	75.996	-	84.621	-	50.379	82.632
+glycerol-3-phosphate metabolic process	FC (WS / NS)	-0.29 (5.58 / 7.07)	-	-0.17 (8.01 / 9.14)	-0.19 (11.85 / 13.63)	0.12 (-6.47 / -6.02)	-0.16 (6.61 / 7.49)
+ 	Percentile (%)	76.094	-	81.377	68.7	31.961	73.211
+mating behavior	FC (WS / NS)	-0.29 (5.39 / 6.83)	-	-	-	-	-
+ 	Percentile (%)	76.193	-	-	-	-	-
+primary amino compound metabolic process	FC (WS / NS)	-0.29 (7.32 / 9.21)	-	-0.1 (6.52 / 7.09)	-0.16 (6.08 / 6.92)	0.16 (-10.01 / -9.08)	-0.4 (3.17 / 4.49)
+ 	Percentile (%)	76.242	-	78.636	67.393	26.544	83.963
+vitamin B6 metabolic process	FC (WS / NS)	-0.3 (6.88 / 8.67)	-0.46 (5 / 7.23)	0.05 (12.56 / 12.12)	-0.81 (6.77 / 12.58)	-0.48 (-4.33 / -5.65)	-0.46 (4.52 / 6.61)
+ 	Percentile (%)	76.291	71.626	36.008	82.062	83.424	85.221
+cellular heat acclimation	FC (WS / NS)	-0.3 (4.95 / 6.32)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	76.39	31.192	-	-	-	-
+cellular response to misfolded protein	FC (WS / NS)	-0.3 (4.95 / 6.32)	-	-	-	-	-
+ 	Percentile (%)	76.439	-	-	-	-	-
+aerobic respiration	FC (WS / NS)	-0.3 (4.25 / 5.46)	-	-0.01 (13.2 / 13.26)	-	-0.78 (-2.19 / -3.04)	-
+ 	Percentile (%)	76.488	-	68.138	-	90.899	-
+histidine catabolic process to glutamate and formamide	FC (WS / NS)	-0.3 (7.11 / 8.99)	-	-0.29 (8.64 / 10.8)	-0.4 (12.66 / 16.99)	-0.15 (-6.31 / -6.91)	-0.33 (6.85 / 8.84)
+ 	Percentile (%)	76.586	-	84.921	77.778	61.972	82.416
+histidine catabolic process to glutamate and formate	FC (WS / NS)	-0.3 (7.11 / 8.99)	-	-0.29 (8.64 / 10.8)	-0.4 (12.66 / 16.99)	0.07 (-8.29 / -7.94)	-0.33 (6.85 / 8.83)
+ 	Percentile (%)	76.636	-	84.955	77.85	38.462	82.309
+protein secretion by the type III secretion system	FC (WS / NS)	-0.3 (5.81 / 7.39)	-	-	-	-	-1.54 (0 / 1.91)
+ 	Percentile (%)	76.685	-	-	-	-	96.764
+bacterial-type flagellum-dependent swimming motility	FC (WS / NS)	-0.3 (5.81 / 7.39)	-	-	-	-	-
+ 	Percentile (%)	76.734	-	-	-	-	-
+cell migration	FC (WS / NS)	-0.31 (6.46 / 8.22)	-0.64 (4.17 / 7.04)	-	-	-	-
+ 	Percentile (%)	76.832	74.373	-	-	-	-
+type IV pilus-dependent motility	FC (WS / NS)	-0.31 (5.81 / 7.42)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	76.881	85.813	-	-	-	-
+10-formyltetrahydrofolate biosynthetic process	FC (WS / NS)	-0.31 (5.64 / 7.22)	2.34 (3.58 / -0.09)	-	-	-	-
+ 	Percentile (%)	76.98	0.573	-	-	-	-
+negative regulation of cellular protein metabolic process	FC (WS / NS)	-0.31 (8.11 / 10.31)	-0.11 (10.23 / 11.13)	-	-	-	0.65 (4.46 / 2.49)
+ 	Percentile (%)	77.029	61.834	-	-	-	10.032
+riboflavin biosynthetic process	FC (WS / NS)	-0.31 (4.7 / 6.09)	-0.32 (1.58 / 2.23)	-0.16 (7.89 / 8.94)	-0.04 (5.46 / 5.64)	-	-0.4 (4.58 / 6.35)
+ 	Percentile (%)	77.078	68.713	80.976	54.539	-	83.855
+propanediol catabolic process	FC (WS / NS)	-0.32 (6.07 / 7.8)	-	0 (2.32 / 2.32)	-	-	-0.16 (2.32 / 2.71)
+ 	Percentile (%)	77.177	-	65.129	-	-	73.535
+plant ovule development	FC (WS / NS)	-0.32 (5.55 / 7.17)	-0.43 (1.58 / 2.49)	-	-	-	-
+ 	Percentile (%)	77.226	71.125	-	-	-	-
+glucan catabolic process	FC (WS / NS)	-0.32 (5.04 / 6.54)	-0.37 (5.04 / 6.84)	2.35 (4.09 / 0)	-	-	0.24 (2.81 / 2.23)
+ 	Percentile (%)	77.324	70.002	0.836	-	-	21.251
+Mo-molybdopterin cofactor biosynthetic process	FC (WS / NS)	-0.32 (4.17 / 5.46)	1.58 (2 / 0)	0.43 (7.29 / 5.17)	-0.3 (8.14 / 10.25)	0.1 (-12.03 / -11.27)	-0.17 (4.81 / 5.55)
+ 	Percentile (%)	77.472	3.606	14.744	74.8	34.236	74.937
+base-excision repair, DNA ligation	FC (WS / NS)	-0.33 (3.7 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	77.816	-	-	-	-	-
+vitamin B6 biosynthetic process	FC (WS / NS)	-0.33 (5.88 / 7.67)	-	0.05 (11.56 / 11.12)	-	-	-0.46 (4.52 / 6.61)
+ 	Percentile (%)	77.964	-	35.206	-	-	85.257
+inheritance of oxidatively modified proteins involved in replicative cell aging	FC (WS / NS)	-0.33 (4.81 / 6.32)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	78.013	21.686	-	-	-	-
+protein folding in endoplasmic reticulum	FC (WS / NS)	-0.33 (4.81 / 6.32)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	78.111	27.968	-	-	-	-
+stress granule disassembly	FC (WS / NS)	-0.33 (4.81 / 6.32)	-	-	-	-	-
+ 	Percentile (%)	78.16	-	-	-	-	-
+trehalose metabolism in response to heat stress	FC (WS / NS)	-0.33 (4.81 / 6.32)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	78.21	31.24	-	-	-	-
+virion assembly	FC (WS / NS)	-0.34 (4.86 / 6.39)	0.18 (9.82 / 8.53)	-	-	-	-
+ 	Percentile (%)	78.308	20.11	-	-	-	-
+regulation of immune system process	FC (WS / NS)	-0.34 (6.55 / 8.54)	-0.02 (7.49 / 7.63)	0.67 (4.7 / 2.58)	-	-	-0.4 (3.32 / 4.71)
+ 	Percentile (%)	78.357	56.938	12.203	-	-	83.999
+short-chain fatty acid metabolic process	FC (WS / NS)	-0.34 (8.54 / 11.09)	0.07 (10.23 / 9.72)	-	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	78.455	36.924	-	-	-	5.681
+sulfur compound catabolic process	FC (WS / NS)	-0.34 (5.73 / 7.52)	2.16 (3.46 / 0)	-	0.08 (7.55 / 7.08)	-	0.46 (5 / 3.36)
+ 	Percentile (%)	78.505	1.123	-	25.49	-	13.341
+negative regulation of DNA recombination	FC (WS / NS)	-0.34 (4.17 / 5.55)	-	-	-3.49 (0 / 10.26)	-	-0.28 (3.58 / 4.55)
+ 	Percentile (%)	78.554	-	-	97.313	-	77.958
+defense response to Gram-negative bacterium	FC (WS / NS)	-0.34 (5.52 / 7.28)	-	-	-	-	-
+ 	Percentile (%)	78.603	-	-	-	-	-
+polyamine transport	FC (WS / NS)	-0.36 (5.39 / 7.19)	-0.6 (4.09 / 6.69)	-0.42 (5.7 / 7.99)	-	-	-0.56 (3.58 / 5.74)
+ 	Percentile (%)	78.8	74.063	86.927	-	-	87.738
+aspartate family amino acid catabolic process	FC (WS / NS)	-0.37 (9.06 / 12.02)	-	-	-	-	-1.47 (2 / 7.29)
+ 	Percentile (%)	79.046	-	-	-	-	96.26
+cell death	FC (WS / NS)	-0.37 (6.36 / 8.53)	-	-	-	-	-
+ 	Percentile (%)	79.095	-	-	-	-	-
+DNA catabolic process	FC (WS / NS)	-0.37 (3.91 / 5.36)	-	-	-	-	0.06 (4 / 3.81)
+ 	Percentile (%)	79.144	-	-	-	-	44.732
+cellular biogenic amine catabolic process	FC (WS / NS)	-0.37 (7.27 / 9.71)	-	-1.15 (4.32 / 10.77)	-	-	0.08 (5.73 / 5.36)
+ 	Percentile (%)	79.193	-	92.344	-	-	39.123
+ethanolamine catabolic process	FC (WS / NS)	-0.38 (5.32 / 7.21)	-	-0.68 (2 / 3.81)	-0.16 (6.08 / 6.92)	0.16 (-10.01 / -9.08)	-0.4 (3.17 / 4.49)
+ 	Percentile (%)	79.242	-	89.268	67.32	26.436	83.927
+neutrophil degranulation	FC (WS / NS)	-0.38 (4.52 / 6.19)	-	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	79.292	-	-	-	-	90.723
+malolactic fermentation	FC (WS / NS)	-0.4 (3.81 / 5.32)	-	-	-	-	-
+ 	Percentile (%)	79.39	-	-	-	-	-
+negative regulation of cytoplasmic translation	FC (WS / NS)	-0.4 (4.75 / 6.6)	-0.59 (4.81 / 7.76)	-	-	-	-
+ 	Percentile (%)	79.538	73.895	-	-	-	-
+determination of adult lifespan	FC (WS / NS)	-0.4 (5.58 / 7.7)	0.13 (3.91 / 3.49)	-	-	-	-
+ 	Percentile (%)	79.636	32.625	-	-	-	-
+protein deglycation, glyoxal removal	FC (WS / NS)	-0.41 (3.46 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	79.784	-	-	-	-	-
+negative regulation of translational initiation	FC (WS / NS)	-0.41 (3.46 / 4.91)	-0.06 (7.28 / 7.65)	-	-	-	-
+ 	Percentile (%)	79.833	59.971	-	-	-	-
+guanine deglycation, glyoxal removal	FC (WS / NS)	-0.41 (3.46 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	79.882	-	-	-	-	-
+response to X-ray	FC (WS / NS)	-0.41 (4.17 / 5.86)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	79.931	24.815	-	-	-	-
+fermentation	FC (WS / NS)	-0.41 (9.3 / 12.73)	-	-	-	-	-
+ 	Percentile (%)	80.03	-	-	-	-	-
+nickel cation transport	FC (WS / NS)	-0.41 (4.75 / 6.67)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	80.079	49.582	-	-	-	31.284
+pyridoxine biosynthetic process	FC (WS / NS)	-0.42 (4.25 / 6)	-	-0.33 (4.17 / 5.49)	-	-	-0.89 (1 / 2.71)
+ 	Percentile (%)	80.128	-	85.323	-	-	91.478
+indole-containing compound metabolic process	FC (WS / NS)	-0.42 (7.29 / 10.07)	0.22 (7.63 / 6.4)	-0.38 (9.92 / 13.19)	-	-	-0.32 (3 / 3.99)
+ 	Percentile (%)	80.177	19.035	86.56	-	-	82.021
+keto-3-deoxy-D-manno-octulosonic acid biosynthetic process	FC (WS / NS)	-0.42 (3.58 / 5.13)	0.05 (4.25 / 4.08)	-0.15 (5 / 5.64)	-	-	-0.26 (3.81 / 4.76)
+ 	Percentile (%)	80.226	39.718	80.508	-	-	77.67
+maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA)	FC (WS / NS)	-0.42 (5.13 / 7.2)	0.14 (0 / -0.09)	-	-1.82 (0.81 / 5.39)	-	-
+ 	Percentile (%)	80.275	21.423	-	85.694	-	-
+nucleoside catabolic process	FC (WS / NS)	-0.42 (3.17 / 4.58)	0.06 (13.4 / 12.78)	0.01 (21.23 / 21.09)	0.15 (7.46 / 6.64)	0.23 (3.52 / 2.86)	0.11 (5.32 / 4.86)
+ 	Percentile (%)	80.325	37.473	48.245	18.664	17.118	36.066
+L-methionine salvage from S-adenosylmethionine	FC (WS / NS)	-0.42 (3.17 / 4.58)	0.04 (2.81 / 2.71)	-0.33 (4.75 / 6.23)	-	-	2.14 (3 / -0.09)
+ 	Percentile (%)	80.374	41.724	85.356	-	-	0.791
+programmed cell death	FC (WS / NS)	-0.42 (5.55 / 7.79)	-	-2.48 (0 / 4.58)	-	-	-0.55 (3 / 4.86)
+ 	Percentile (%)	80.423	-	98.73	-	-	87.666
+propionate metabolic process	FC (WS / NS)	-0.42 (6.87 / 9.57)	0.08 (9.71 / 9.11)	-	-	0.18 (-10.72 / -9.59)	-
+ 	Percentile (%)	80.472	34.989	-	-	23.185	-
+protein quality control for misfolded or incompletely synthesized proteins	FC (WS / NS)	-0.43 (4.32 / 6.15)	-0.5 (3.91 / 5.95)	-0.59 (3.46 / 5.73)	-0.62 (7.3 / 11.74)	-	-0.6 (3.91 / 6.41)
+ 	Percentile (%)	80.521	72.367	88.566	80.32	-	88.026
+mismatch repair	FC (WS / NS)	-0.43 (3.81 / 5.49)	-0.53 (2.32 / 3.81)	-0.35 (5.17 / 6.87)	-0.78 (6.02 / 11.09)	-	-0.2 (5 / 5.91)
+ 	Percentile (%)	80.669	72.916	85.757	81.845	-	75.692
+pyridoxal phosphate biosynthetic process	FC (WS / NS)	-0.44 (4.25 / 6.11)	-0.53 (4 / 6.23)	-	-0.81 (6.77 / 12.58)	-0.38 (-5.33 / -6.65)	-
+ 	Percentile (%)	80.817	72.868	-	82.135	79.523	-
+indolalkylamine metabolic process	FC (WS / NS)	-0.45 (6.7 / 9.48)	0.24 (7.04 / 5.81)	-0.4 (9.33 / 12.61)	-	-	-0.32 (3 / 3.99)
+ 	Percentile (%)	80.866	18.486	86.827	-	-	81.985
+putrescine transport	FC (WS / NS)	-0.45 (3.58 / 5.25)	-1.39 (1 / 4.23)	-0.61 (3 / 5.09)	-	-	-
+ 	Percentile (%)	80.915	86.41	88.833	-	-	-
+spermidine transport	FC (WS / NS)	-0.46 (3.46 / 5.13)	-1.97 (0 / 2.91)	-0.61 (3 / 5.09)	-	-	-
+ 	Percentile (%)	81.062	91.02	88.867	-	-	-
+peptidoglycan catabolic process	FC (WS / NS)	-0.46 (3.81 / 5.61)	-0.93 (0 / 0.91)	-0.08 (8.43 / 8.93)	-0.06 (8.91 / 9.35)	0.16 (-8.52 / -7.72)	-0.17 (5.32 / 6.13)
+ 	Percentile (%)	81.161	78.911	76.764	58.751	25.352	74.973
+glutamate catabolic process via 2-hydroxyglutarate	FC (WS / NS)	-0.48 (6.69 / 9.68)	-	-	-	-	-
+ 	Percentile (%)	81.358	-	-	-	-	-
+glutamate catabolic process	FC (WS / NS)	-0.48 (6.69 / 9.69)	-	-1 (0 / 1)	-	-	-0.6 (1.58 / 2.91)
+ 	Percentile (%)	81.407	-	91.006	-	-	88.134
+regulation of immune response	FC (WS / NS)	-0.48 (5.36 / 7.88)	-0.18 (6.04 / 6.98)	2.37 (4.17 / 0)	-	-	-0.47 (3 / 4.55)
+ 	Percentile (%)	81.505	64.27	0.702	-	-	85.401
+malate metabolic process	FC (WS / NS)	-0.49 (4.7 / 6.99)	0.33 (6.64 / 5.08)	0.07 (10.68 / 10.09)	-3.48 (0 / 10.18)	-0.87 (-2.73 / -4.16)	-0.54 (4.09 / 6.4)
+ 	Percentile (%)	81.554	15.954	31.26	97.095	91.658	87.487
+drug catabolic process	FC (WS / NS)	-0.49 (8.1 / 11.81)	-0.45 (6.51 / 9.24)	-0.47 (7.51 / 10.76)	-3.79 (0 / 12.88)	-0.03 (-8.13 / -8.26)	-0.67 (4.39 / 7.59)
+ 	Percentile (%)	81.702	71.459	87.128	99.419	50.704	88.709
+L-threonine catabolic process to propionate	FC (WS / NS)	-0.49 (5.75 / 8.51)	-0.28 (5.75 / 7.22)	-	-	-	-
+ 	Percentile (%)	81.751	66.898	-	-	-	-
+viral entry into host cell	FC (WS / NS)	-0.5 (3 / 4.64)	-0.74 (3.17 / 5.97)	-	-	-	-
+ 	Percentile (%)	81.899	75.711	-	-	-	-
+maltose transmembrane transport	FC (WS / NS)	-0.5 (3 / 4.64)	-	-	-	-	-
+ 	Percentile (%)	81.948	-	-	-	-	-
+tryptophan metabolic process	FC (WS / NS)	-0.5 (5.7 / 8.48)	-	-0.43 (8.33 / 11.61)	-	-	-0.32 (3 / 3.99)
+ 	Percentile (%)	81.997	-	86.994	-	-	81.949
+2-oxoglutarate metabolic process	FC (WS / NS)	-0.5 (3.81 / 5.81)	-2.81 (0 / 6.01)	-	-	-	-
+ 	Percentile (%)	82.046	98.113	-	-	-	-
+regulation of defense response	FC (WS / NS)	-0.51 (5.52 / 8.29)	-0.19 (3.91 / 4.61)	2.2 (3.58 / 0)	-	-	-0.5 (3 / 4.66)
+ 	Percentile (%)	82.145	64.82	1.672	-	-	85.904
+cellular response to extracellular stimulus	FC (WS / NS)	-0.52 (4.52 / 6.94)	0.03 (10.53 / 10.33)	0.03 (11.7 / 11.43)	-	-	0.02 (7.75 / 7.62)
+ 	Percentile (%)	82.243	43.396	39.485	-	-	53.038
+negative regulation of inflammatory response	FC (WS / NS)	-0.55 (2.58 / 4.25)	-	-	-	-	-0.6 (2.58 / 4.43)
+ 	Percentile (%)	82.489	-	-	-	-	88.17
+cellular polysaccharide catabolic process	FC (WS / NS)	-0.55 (4.58 / 7.19)	-0.37 (5.04 / 6.82)	2.35 (4.09 / 0)	-	-	0.24 (2.81 / 2.23)
+ 	Percentile (%)	82.538	69.979	0.903	-	-	21.287
+peptide cross-linking	FC (WS / NS)	-0.55 (2.81 / 4.58)	0.14 (0 / -0.09)	-	-	-	-0.5 (3 / 4.66)
+ 	Percentile (%)	82.636	25.699	-	-	-	86.012
+protein heterotetramerization	FC (WS / NS)	-0.55 (2.81 / 4.58)	-	-	-	-	-
+ 	Percentile (%)	82.784	-	-	-	-	-
+lipid storage	FC (WS / NS)	-0.56 (3 / 4.91)	0.07 (1 / 0.91)	-	-	-	-
+ 	Percentile (%)	82.833	36.327	-	-	-	-
+regulation of choline O-acetyltransferase activity	FC (WS / NS)	-0.56 (3 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	82.882	-	-	-	-	-
+regulation of catabolic process	FC (WS / NS)	-0.57 (5.46 / 8.56)	-0.37 (5.93 / 7.97)	-	-1.37 (0 / 1.58)	-	-0.11 (3.17 / 3.49)
+ 	Percentile (%)	82.932	69.955	-	84.386	-	71.018
+response to UV	FC (WS / NS)	-0.57 (3 / 4.95)	-	-	-	-	0.07 (1 / 0.91)
+ 	Percentile (%)	82.981	-	-	-	-	41.604
+keratinization	FC (WS / NS)	-0.57 (3 / 4.95)	-0.93 (0 / 0.91)	-0.58 (1 / 2)	-	-	-0.64 (2.58 / 4.61)
+ 	Percentile (%)	83.03	79.914	88.365	-	-	88.493
+cornification	FC (WS / NS)	-0.57 (3 / 4.95)	-	-	-	-	-0.74 (2.32 / 4.55)
+ 	Percentile (%)	83.079	-	-	-	-	89.86
+intracellular sequestering of iron ion	FC (WS / NS)	-0.58 (4 / 6.46)	-0.48 (4.32 / 6.44)	-	-	-	0.8 (2.32 / 0.91)
+ 	Percentile (%)	83.128	72.08	-	-	-	7.875
+regulation of carbohydrate metabolic process	FC (WS / NS)	-0.58 (6 / 9.49)	0.54 (4.09 / 2.49)	0.46 (3.58 / 2.32)	-1.37 (0 / 1.58)	-	0.24 (4 / 3.23)
+ 	Percentile (%)	83.178	12.252	14.376	84.241	-	20.964
+negative regulation of defense response	FC (WS / NS)	-0.58 (4.32 / 6.98)	-	-	-	-	-0.5 (3 / 4.66)
+ 	Percentile (%)	83.227	-	-	-	-	85.94
+cellular response to nutrient levels	FC (WS / NS)	-0.6 (3.58 / 5.93)	0.04 (9.81 / 9.55)	-	-	-	-
+ 	Percentile (%)	83.325	41.892	-	-	-	-
+response to muscle activity	FC (WS / NS)	-0.63 (3 / 5.17)	-0.93 (0 / 0.91)	-	-	-	-
+ 	Percentile (%)	83.424	79.174	-	-	-	-
+regulation of cellular catabolic process	FC (WS / NS)	-0.64 (4.7 / 7.86)	-0.41 (5.39 / 7.49)	-	-	-	-0.15 (2.81 / 3.23)
+ 	Percentile (%)	83.473	70.528	-	-	-	72.887
+DNA protection	FC (WS / NS)	-0.64 (3.46 / 5.95)	1.14 (1 / -0.09)	-	-	-	-
+ 	Percentile (%)	83.571	6.234	-	-	-	-
+response to carbohydrate	FC (WS / NS)	-0.65 (4 / 6.86)	-	-	-	-	-
+ 	Percentile (%)	83.62	-	-	-	-	-
+fumarate metabolic process	FC (WS / NS)	-0.66 (3.32 / 5.81)	-0.93 (0 / 0.91)	-0.69 (3.81 / 6.75)	-0.3 (9.7 / 12.19)	-	-
+ 	Percentile (%)	83.719	78.051	89.335	74.873	-	-
+xenobiotic transport	FC (WS / NS)	-0.66 (2.81 / 5)	-1.32 (0 / 1.49)	-	-	-	-
+ 	Percentile (%)	83.866	85.718	-	-	-	-
+glycogen catabolic process	FC (WS / NS)	-0.66 (3.17 / 5.58)	-0.38 (3.91 / 5.36)	1.37 (1.58 / 0)	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	83.965	70.098	5.918	-	-	74.326
+complement activation, lectin pathway	FC (WS / NS)	-0.66 (2.32 / 4.25)	-0.87 (1.58 / 3.71)	-	-	-	-0.56 (2.58 / 4.3)
+ 	Percentile (%)	84.014	76.833	-	-	-	87.846
+fibrinolysis	FC (WS / NS)	-0.66 (2.32 / 4.25)	-0.87 (1.58 / 3.71)	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	84.063	76.881	-	-	-	90.687
+regulation of angiogenesis	FC (WS / NS)	-0.66 (2.32 / 4.25)	-	-	-	-	-0.83 (1.58 / 3.61)
+ 	Percentile (%)	84.112	-	-	-	-	90.795
+establishment of skin barrier	FC (WS / NS)	-0.66 (2.32 / 4.25)	-	-	-	-	-0.56 (2.58 / 4.3)
+ 	Percentile (%)	84.161	-	-	-	-	87.882
+protein activation cascade	FC (WS / NS)	-0.66 (2.32 / 4.25)	-0.9 (1.58 / 3.81)	-	-	-	-
+ 	Percentile (%)	84.211	77.12	-	-	-	-
+regulation of cellular carbohydrate metabolic process	FC (WS / NS)	-0.68 (5.17 / 8.9)	0.68 (3 / 1.49)	-	-	-	-
+ 	Percentile (%)	84.26	10.939	-	-	-	-
+response to monosaccharide	FC (WS / NS)	-0.7 (3.58 / 6.44)	-	-	-	-	-
+ 	Percentile (%)	84.358	-	-	-	-	-
+cell projection organization	FC (WS / NS)	-0.73 (4.58 / 8.25)	-0.76 (5.13 / 9.35)	-0.72 (4.09 / 7.36)	-	-	-0.1 (4.81 / 5.23)
+ 	Percentile (%)	84.456	75.854	89.502	-	-	70.334
+nervous system development	FC (WS / NS)	-0.74 (2 / 4)	-0.74 (3.46 / 6.46)	0 (1 / 1)	-	-	-
+ 	Percentile (%)	84.506	75.734	56.068	-	-	-
+regulation of glucose metabolic process	FC (WS / NS)	-0.74 (4.58 / 8.31)	-	-	-	-	-
+ 	Percentile (%)	84.555	-	-	-	-	-
+regulation of response to biotic stimulus	FC (WS / NS)	-0.74 (3.46 / 6.46)	-0.04 (4.32 / 4.49)	2 (3 / 0)	-	-	-0.54 (1 / 1.91)
+ 	Percentile (%)	84.653	58.777	2.641	-	-	86.659
+homoserine metabolic process	FC (WS / NS)	-0.75 (4.7 / 8.57)	-	-	-	-	-
+ 	Percentile (%)	84.702	-	-	-	-	-
+regulation of glycogen metabolic process	FC (WS / NS)	-0.76 (4 / 7.46)	-	-	-	-	-
+ 	Percentile (%)	84.801	-	-	-	-	-
+divalent inorganic cation homeostasis	FC (WS / NS)	-0.76 (4 / 7.46)	-	-	-	-	-
+ 	Percentile (%)	84.85	-	-	-	-	-
+DNA restriction-modification system	FC (WS / NS)	-0.78 (2.81 / 5.52)	-0.93 (0 / 0.91)	-0.16 (4.39 / 5.04)	-	-	-0.27 (3.46 / 4.36)
+ 	Percentile (%)	84.899	78.935	81.177	-	-	77.778
+response to hexose	FC (WS / NS)	-0.78 (3 / 5.86)	-1.12 (2.58 / 6.81)	-	-	-	-
+ 	Percentile (%)	84.948	82.78	-	-	-	-
+regulation of peptidase activity	FC (WS / NS)	-0.78 (4.81 / 8.97)	-0.89 (4.46 / 9.1)	-0.12 (6.46 / 7.1)	-	-	0.44 (1.58 / 0.91)
+ 	Percentile (%)	84.998	77.024	79.371	-	-	13.808
+biotin biosynthetic process	FC (WS / NS)	-0.78 (2.81 / 5.55)	0.01 (6.41 / 6.38)	-0.47 (5 / 7.32)	-3.46 (0 / 10.03)	-	-0.95 (2.32 / 5.43)
+ 	Percentile (%)	85.047	46.477	87.161	97.023	-	93.528
+response to differentiation-inducing factor 1	FC (WS / NS)	-0.79 (2 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	85.096	-	-	-	-	-
+response to ammonium ion	FC (WS / NS)	-0.86 (2 / 4.46)	0 (0 / 0)	0 (0 / 0)	-	-	-
+ 	Percentile (%)	85.391	53.881	65.797	-	-	-
+propionate catabolic process	FC (WS / NS)	-0.9 (1.58 / 3.81)	-	-	-	-	1.14 (1 / -0.09)
+ 	Percentile (%)	85.44	-	-	-	-	4.962
+regulation of fatty acid metabolic process	FC (WS / NS)	-0.9 (3 / 6.46)	-0.11 (6.36 / 6.96)	-1.37 (0 / 1.58)	-	-	-
+ 	Percentile (%)	85.489	61.954	93.146	-	-	-
+negative regulation of lipid metabolic process	FC (WS / NS)	-0.9 (3 / 6.46)	-1.24 (2 / 6.08)	-	-	-	-
+ 	Percentile (%)	85.539	83.186	-	-	-	-
+dicarboxylic acid transport	FC (WS / NS)	-0.92 (3.46 / 7.44)	-	-	-2.91 (0 / 6.52)	-	0.91 (2.58 / 0.91)
+ 	Percentile (%)	85.637	-	-	91.14	-	7.264
+C4-dicarboxylate transport	FC (WS / NS)	-0.96 (2.32 / 5.46)	-	-	-	-	-
+ 	Percentile (%)	85.883	-	-	-	-	-
+regulation of cell division	FC (WS / NS)	-0.98 (3.32 / 7.51)	0.44 (1.58 / 0.91)	-	-	-	-
+ 	Percentile (%)	86.08	13.781	-	-	-	-
+regulation of growth	FC (WS / NS)	-0.98 (3 / 6.91)	-0.51 (6.17 / 9.18)	-	-	-	-
+ 	Percentile (%)	86.129	72.51	-	-	-	-
+bacterial-type flagellum assembly	FC (WS / NS)	-1 (2.32 / 5.64)	-	-	-	-	-0.17 (3.58 / 4.15)
+ 	Percentile (%)	86.326	-	-	-	-	74.182
+tyrosine metabolic process	FC (WS / NS)	-1.02 (3.17 / 7.46)	-	-	-0.83 (7.62 / 14.34)	-	-
+ 	Percentile (%)	86.375	-	-	82.208	-	-
+positive regulation of single-species biofilm formation	FC (WS / NS)	-1.02 (2 / 5.09)	-	-	-	-	-
+ 	Percentile (%)	86.424	-	-	-	-	-
+locomotory behavior	FC (WS / NS)	-1.06 (2.58 / 6.49)	-0.95 (3 / 6.71)	-	-	-	-
+ 	Percentile (%)	86.522	81.705	-	-	-	-
+protein insertion into membrane	FC (WS / NS)	-1.07 (3.17 / 7.73)	-	-0.14 (9.32 / 10.34)	-3.41 (0 / 9.61)	-	-0.42 (4 / 5.69)
+ 	Percentile (%)	86.572	-	80.074	96.587	-	84.25
+modulation of chemical synaptic transmission	FC (WS / NS)	-1.08 (2.58 / 6.58)	-3.07 (0 / 7.4)	-	-	-	-
+ 	Percentile (%)	86.67	99.355	-	-	-	-
+detection of virus	FC (WS / NS)	-1.1 (1.58 / 4.52)	-0.74 (3.17 / 5.97)	-	-	-	-
+ 	Percentile (%)	86.719	75.687	-	-	-	-
+cellular calcium ion homeostasis	FC (WS / NS)	-1.11 (2 / 5.46)	-	-	-	-	-
+ 	Percentile (%)	86.916	-	-	-	-	-
+positive regulation of glycogen catabolic process	FC (WS / NS)	-1.11 (2 / 5.46)	-	-	-	-	-
+ 	Percentile (%)	87.113	-	-	-	-	-
+negative regulation of innate immune response	FC (WS / NS)	-1.11 (2 / 5.46)	-	-	-	-	-
+ 	Percentile (%)	87.162	-	-	-	-	-
+necroptotic process	FC (WS / NS)	-1.11 (2 / 5.46)	-	-	-	-	-
+ 	Percentile (%)	87.211	-	-	-	-	-
+conjugation	FC (WS / NS)	-1.11 (1.58 / 4.58)	-	-	-	-	-
+ 	Percentile (%)	87.309	-	-	-	-	-
+alpha-glucan catabolic process	FC (WS / NS)	-1.11 (2 / 5.49)	-1.2 (1.58 / 4.95)	-	-	-	-
+ 	Percentile (%)	87.359	82.995	-	-	-	-
+oligopeptide transport	FC (WS / NS)	-1.17 (3.58 / 9.3)	-0.47 (2.32 / 3.61)	-	-2.79 (0 / 5.91)	-	0.07 (1 / 0.91)
+ 	Percentile (%)	87.703	71.841	-	89.615	-	41.424
+photosynthesis	FC (WS / NS)	-1.18 (2.58 / 7.12)	-0.39 (3.32 / 4.66)	-0.14 (8.02 / 8.92)	-	-	0.84 (3.46 / 1.49)
+ 	Percentile (%)	87.801	70.217	80.207	-	-	7.659
+chemotaxis	FC (WS / NS)	-1.2 (3.17 / 8.6)	-0.85 (3.32 / 6.78)	-0.62 (3.58 / 6.04)	1.49 (1.81 / 0)	-	-0.04 (5.04 / 5.23)
+ 	Percentile (%)	87.949	76.714	89.067	7.117	-	65.516
+positive regulation of cell proliferation	FC (WS / NS)	-1.23 (1 / 3.7)	-	-	-	-	-
+ 	Percentile (%)	88.096	-	-	-	-	-
+homocysteine catabolic process	FC (WS / NS)	-1.23 (1 / 3.7)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	88.195	52.376	-	-	-	-
+negative regulation of endopeptidase activity	FC (WS / NS)	-1.26 (2.32 / 6.97)	-2.94 (0 / 6.67)	0 (0 / 0)	-	-	-
+ 	Percentile (%)	88.293	98.806	58.208	-	-	-
+cysteine biosynthetic process via cystathionine	FC (WS / NS)	-1.29 (1 / 3.91)	-	-0.34 (6.23 / 8.16)	-	-	-2.13 (0 / 3.36)
+ 	Percentile (%)	88.392	-	85.624	-	-	98.993
+cellular response to leukemia inhibitory factor	FC (WS / NS)	-1.32 (1 / 4)	-	-	-	-	-
+ 	Percentile (%)	88.539	-	-	-	-	-
+cytoplasmic translational termination	FC (WS / NS)	-1.33 (1.58 / 5.49)	-	-	-	-	-
+ 	Percentile (%)	88.588	-	-	-	-	-
+regulation of polyamine biosynthetic process	FC (WS / NS)	-1.37 (2 / 6.75)	-	-	-	-	-
+ 	Percentile (%)	88.785	-	-	-	-	-
+allose metabolic process	FC (WS / NS)	-1.4 (2 / 6.91)	0.78 (4 / 1.91)	-	-	-	-
+ 	Percentile (%)	89.031	10.556	-	-	-	-
+formate oxidation	FC (WS / NS)	-1.43 (1.58 / 5.98)	-2.2 (0 / 3.61)	-	-	-	-
+ 	Percentile (%)	89.179	92.357	-	-	-	-
+negative regulation of fatty acid biosynthetic process	FC (WS / NS)	-1.45 (1 / 4.46)	-2.34 (0 / 4.08)	-	-	-	-
+ 	Percentile (%)	89.277	93.098	-	-	-	-
+regulation of nitrogen utilization	FC (WS / NS)	-1.53 (1.58 / 6.48)	-2.29 (0 / 3.91)	-1.15 (3 / 7.89)	-	-0.1 (-6.75 / -7.18)	-1.8 (0 / 2.49)
+ 	Percentile (%)	89.523	92.954	92.377	-	58.397	97.771
+adult locomotory behavior	FC (WS / NS)	-1.56 (1 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	89.67	-	-	-	-	-
+larval locomotory behavior	FC (WS / NS)	-1.56 (1 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	89.72	-	-	-	-	-
+regulation of hydrogen peroxide metabolic process	FC (WS / NS)	-1.56 (1 / 4.91)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	89.769	7.929	-	-	-	-
+phosphatidylinositol 3-kinase signaling	FC (WS / NS)	-1.56 (1 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	89.818	-	-	-	-	-
+negative regulation of developmental growth	FC (WS / NS)	-1.56 (1 / 4.91)	-3.01 (0 / 7.03)	-	-	-	-
+ 	Percentile (%)	89.867	98.973	-	-	-	-
+regulation of neuromuscular synaptic transmission	FC (WS / NS)	-1.56 (1 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	89.916	-	-	-	-	-
+regulation of mitochondrial ATP synthesis coupled electron transport	FC (WS / NS)	-1.56 (1 / 4.91)	-	-	-	-	-
+ 	Percentile (%)	89.966	-	-	-	-	-
+regulation of synaptic plasticity	FC (WS / NS)	-1.58 (1 / 5)	-3.01 (0 / 7.06)	-	-	-	-
+ 	Percentile (%)	90.113	99.092	-	-	-	-
+butyrate metabolic process	FC (WS / NS)	-1.69 (2 / 8.67)	-	-	-	-	-
+ 	Percentile (%)	90.212	-	-	-	-	-
+acetate metabolic process	FC (WS / NS)	-1.77 (2.32 / 10.32)	-0.3 (5.7 / 7.23)	-	-	-	-2.02 (1 / 7.1)
+ 	Percentile (%)	90.359	67.351	-	-	-	98.634
+glycine decarboxylation via glycine cleavage system	FC (WS / NS)	-1.79 (1 / 5.93)	-1.67 (1 / 5.36)	-1.01 (2.58 / 6.23)	-3.23 (0 / 8.4)	-	-1.51 (1 / 4.71)
+ 	Percentile (%)	90.408	88.703	92.076	94.553	-	96.296
+protein flavinylation	FC (WS / NS)	-2 (0 / 3)	-	-	-	-	-
+ 	Percentile (%)	90.654	-	-	-	-	-
+1-deoxy-D-xylulose 5-phosphate biosynthetic process	FC (WS / NS)	-2 (0 / 3)	-	-0.63 (1.58 / 3)	-	-	-0.65 (2 / 3.71)
+ 	Percentile (%)	90.851	-	89.168	-	-	88.565
+L-glutamate import across plasma membrane	FC (WS / NS)	-2 (0 / 3)	-	-	-	-	-
+ 	Percentile (%)	90.9	-	-	-	-	-
+transsulfuration	FC (WS / NS)	-2.05 (1 / 7.29)	-	-	-	-	-
+ 	Percentile (%)	90.949	-	-	-	-	-
+negative regulation of protein kinase activity	FC (WS / NS)	-2.06 (0 / 3.17)	-	-	-	-	-
+ 	Percentile (%)	91.048	-	-	-	-	-
+acetyl-CoA biosynthetic process from acetate	FC (WS / NS)	-2.06 (0 / 3.17)	-0.14 (3.46 / 3.91)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	91.097	62.742	-	-	-	31.535
+regulation of division septum assembly	FC (WS / NS)	-2.06 (0 / 3.17)	-	-2.06 (0 / 3.17)	-	-	-
+ 	Percentile (%)	91.146	-	97.125	-	-	-
+acetate catabolic process	FC (WS / NS)	-2.06 (0 / 3.17)	-0.14 (3.46 / 3.91)	-	-	-	-
+ 	Percentile (%)	91.195	62.766	-	-	-	-
+isopentenyl diphosphate biosynthetic process, methylerythritol 4-phosphate pathway involved in terpenoid biosynthetic process	FC (WS / NS)	-2.06 (0 / 3.17)	-0.04 (2.81 / 2.91)	-	-	-	-
+ 	Percentile (%)	91.294	58.228	-	-	-	-
+regulation of mitotic cytokinetic process	FC (WS / NS)	-2.06 (0 / 3.17)	-	-	-	-	-
+ 	Percentile (%)	91.343	-	-	-	-	-
+Gram-negative-bacterium-type cell outer membrane assembly	FC (WS / NS)	-2.11 (1 / 7.62)	0.05 (6.87 / 6.58)	-0.09 (10.56 / 11.33)	-3.41 (0 / 9.61)	-	-1.35 (1.58 / 5.61)
+ 	Percentile (%)	91.441	38.572	77.967	96.514	-	96.045
+division septum site selection	FC (WS / NS)	-2.11 (0 / 3.32)	-2.63 (0 / 5.19)	-2.71 (0 / 5.52)	-	-	-
+ 	Percentile (%)	91.49	97.636	99.231	-	-	-
+histone deacetylation	FC (WS / NS)	-2.11 (0 / 3.32)	0 (0 / 0)	1.84 (2.58 / 0)	-	-	-
+ 	Percentile (%)	91.589	49.916	3.745	-	-	-
+[2Fe-2S] cluster assembly	FC (WS / NS)	-2.11 (0 / 3.32)	-	-	-	-	-0.8 (1 / 2.49)
+ 	Percentile (%)	91.786	-	-	-	-	90.435
+adenosine biosynthetic process	FC (WS / NS)	-2.11 (0 / 3.32)	-2.08 (0 / 3.23)	-	-	-	-
+ 	Percentile (%)	91.884	91.904	-	-	-	-
+cytokinin biosynthetic process	FC (WS / NS)	-2.16 (0 / 3.46)	-	-	-	-	-
+ 	Percentile (%)	92.081	-	-	-	-	-
+signal peptide processing	FC (WS / NS)	-2.2 (0 / 3.58)	-2.13 (0 / 3.36)	-0.21 (4.32 / 5.17)	0 (0 / 0)	-	-
+ 	Percentile (%)	92.13	92.071	82.949	44.372	-	-
+protein-chromophore linkage	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	92.327	-	-	-	-	74.506
+L-methionine biosynthetic process from homoserine via O-acetyl-L-homoserine and cystathionine	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-
+ 	Percentile (%)	92.376	-	-	-	-	-
+L-lysine catabolic process to acetyl-CoA via saccharopine	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-3.22 (0 / 8.34)	-	-
+ 	Percentile (%)	92.474	-	-	94.336	-	-
+induction by symbiont of host defense response	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-
+ 	Percentile (%)	92.523	-	-	-	-	-
+induction by organism of defense response of other organism involved in symbiotic interaction	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-
+ 	Percentile (%)	92.573	-	-	-	-	-
+positive regulation by symbiont of host defense response	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-
+ 	Percentile (%)	92.622	-	-	-	-	-
+positive regulation by organism of defense response of other organism involved in symbiotic interaction	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-	-	-
+ 	Percentile (%)	92.671	-	-	-	-	-
+glycerol biosynthetic process from pyruvate	FC (WS / NS)	-2.23 (0 / 3.7)	-	-	-	-	-
+ 	Percentile (%)	92.966	-	-	-	-	-
+cellular response to glucose stimulus	FC (WS / NS)	-2.23 (0 / 3.7)	-2.54 (0 / 4.81)	-	-	-	-
+ 	Percentile (%)	93.015	93.91	-	-	-	-
+response to methylamine	FC (WS / NS)	-2.29 (0 / 3.91)	-	-	-	-	-
+ 	Percentile (%)	93.261	-	-	-	-	-
+hypoxanthine salvage	FC (WS / NS)	-2.29 (0 / 3.91)	-	0 (0 / 0)	-	-	-
+ 	Percentile (%)	93.31	-	62.755	-	-	-
+dUTP catabolic process	FC (WS / NS)	-2.29 (0 / 3.91)	-	-	-	-	-
+ 	Percentile (%)	93.36	-	-	-	-	-
+base-excision repair, AP site formation via deaminated base removal	FC (WS / NS)	-2.29 (0 / 3.91)	-	-	-	-	-
+ 	Percentile (%)	93.458	-	-	-	-	-
+response to lipoic acid	FC (WS / NS)	-2.29 (0 / 3.91)	-	-	-	-	-
+ 	Percentile (%)	93.507	-	-	-	-	-
+axon regeneration	FC (WS / NS)	-2.32 (0 / 4)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	93.606	50.681	-	-	-	-
+positive regulation of ion transmembrane transporter activity	FC (WS / NS)	-2.32 (0 / 4)	-	-	-	-	-
+ 	Percentile (%)	93.655	-	-	-	-	-
+cellular response to methionine	FC (WS / NS)	-2.32 (0 / 4)	-	-	-	-	-
+ 	Percentile (%)	93.704	-	-	-	-	-
+p-aminobenzoyl-glutamate transmembrane transport	FC (WS / NS)	-2.32 (0 / 4)	-	-	-2.79 (0 / 5.91)	-	-
+ 	Percentile (%)	93.802	-	-	89.833	-	-
+negative regulation of phosphorylation	FC (WS / NS)	-2.37 (0 / 4.17)	-	-	-	-	-
+ 	Percentile (%)	94.393	-	-	-	-	-
+cerebellar cortex development	FC (WS / NS)	-2.39 (0 / 4.25)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	94.786	26.128	-	-	-	-
+striatum development	FC (WS / NS)	-2.39 (0 / 4.25)	-	-	-	-	-
+ 	Percentile (%)	94.835	-	-	-	-	-
+hippocampus development	FC (WS / NS)	-2.39 (0 / 4.25)	-2.59 (0 / 5.03)	-	-	-	-
+ 	Percentile (%)	94.884	94.841	-	-	-	-
+thalamus development	FC (WS / NS)	-2.39 (0 / 4.25)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	94.934	26.2	-	-	-	-
+pyramidal neuron development	FC (WS / NS)	-2.39 (0 / 4.25)	-	-	-	-	-
+ 	Percentile (%)	94.983	-	-	-	-	-
+tangential migration from the subventricular zone to the olfactory bulb	FC (WS / NS)	-2.39 (0 / 4.25)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	95.032	26.296	-	-	-	-
+olfactory bulb mitral cell layer development	FC (WS / NS)	-2.39 (0 / 4.25)	-	-	-	-	-
+ 	Percentile (%)	95.229	-	-	-	-	-
+histone succinylation	FC (WS / NS)	-2.39 (0 / 4.25)	-	-	-	-	-
+ 	Percentile (%)	95.278	-	-	-	-	-
+glutamine catabolic process	FC (WS / NS)	-2.41 (0 / 4.32)	-0.93 (0 / 0.91)	0.06 (8.11 / 7.71)	-	-	-
+ 	Percentile (%)	95.327	78.194	32.631	-	-	-
+inositol catabolic process	FC (WS / NS)	-2.41 (0 / 4.32)	-2.27 (0 / 3.81)	-2.41 (0 / 4.32)	-3.42 (0 / 9.71)	-	-0.95 (1.58 / 3.99)
+ 	Percentile (%)	95.475	92.787	98.429	96.732	-	93.492
+regulation of ATP-dependent RNA helicase activity	FC (WS / NS)	-2.41 (0 / 4.32)	-	-	-	-	-
+ 	Percentile (%)	95.671	-	-	-	-	-
+N-acetylglucosamine transport	FC (WS / NS)	-2.43 (0 / 4.39)	-	-	-	-	-
+ 	Percentile (%)	95.77	-	-	-	-	-
+cellular response to iron ion starvation	FC (WS / NS)	-2.47 (0 / 4.52)	-0.93 (0 / 0.91)	-	-	-	-
+ 	Percentile (%)	96.065	79.03	-	-	-	-
+proline catabolic process to glutamate	FC (WS / NS)	-2.47 (0 / 4.52)	-2.37 (0 / 4.15)	-2.47 (0 / 4.52)	-3.51 (0 / 10.37)	-	-
+ 	Percentile (%)	96.114	93.241	98.696	97.967	-	-
+proline transport	FC (WS / NS)	-2.48 (0 / 4.58)	-	-	-	-	-
+ 	Percentile (%)	96.262	-	-	-	-	-
+L-cysteine catabolic process to pyruvate	FC (WS / NS)	-2.51 (0 / 4.7)	-	-	-	-	-
+ 	Percentile (%)	96.409	-	-	-	-	-
+regulation of gluconeogenesis	FC (WS / NS)	-2.52 (0 / 4.75)	-	-	-	-	-
+ 	Percentile (%)	96.508	-	-	-	-	-
+carnitine metabolic process, CoA-linked	FC (WS / NS)	-2.52 (0 / 4.75)	-	-	-	-	-
+ 	Percentile (%)	96.606	-	-	-	-	-
+medium-chain fatty acid catabolic process	FC (WS / NS)	-2.52 (0 / 4.75)	-	-	-	-	-
+ 	Percentile (%)	96.655	-	-	-	-	-
+cardiac muscle cell differentiation	FC (WS / NS)	-2.52 (0 / 4.75)	-	-	-	-	-
+ 	Percentile (%)	96.704	-	-	-	-	-
+fatty acid beta-oxidation using acyl-CoA dehydrogenase	FC (WS / NS)	-2.55 (0 / 4.86)	-1.69 (0 / 2.23)	-	-	-	-
+ 	Percentile (%)	96.852	89.324	-	-	-	-
+deoxyribonucleoside triphosphate metabolic process	FC (WS / NS)	-2.56 (0 / 4.91)	-	0.08 (9.2 / 8.63)	-	-	-0.02 (4.58 / 4.66)
+ 	Percentile (%)	96.95	-	30.425	-	-	62.819
+pyrimidine deoxyribonucleoside triphosphate metabolic process	FC (WS / NS)	-2.56 (0 / 4.91)	-	0.05 (8.03 / 7.69)	-	-	-0.02 (4.58 / 4.66)
+ 	Percentile (%)	97	-	34.169	-	-	62.855
+pyrimidine deoxyribonucleotide metabolic process	FC (WS / NS)	-2.56 (0 / 4.91)	-	0.05 (9 / 8.69)	-	-	0.08 (5.32 / 4.99)
+ 	Percentile (%)	97.049	-	36.209	-	-	39.662
+D-allose catabolic process	FC (WS / NS)	-2.56 (0 / 4.91)	1.73 (2 / -0.09)	-	-	-	-
+ 	Percentile (%)	97.098	3.296	-	-	-	-
+L-glutamate biosynthetic process	FC (WS / NS)	-2.62 (0 / 5.13)	-	-	-	-	-
+ 	Percentile (%)	97.639	-	-	-	-	-
+succinyl-CoA metabolic process	FC (WS / NS)	-2.65 (0 / 5.29)	-	-	-	-	-
+ 	Percentile (%)	97.688	-	-	-	-	-
+long-chain fatty acid metabolic process	FC (WS / NS)	-2.68 (0 / 5.39)	-	-1.04 (2.58 / 6.36)	-	-	-
+ 	Percentile (%)	97.836	-	92.177	-	-	-
+contractile ring localization	FC (WS / NS)	-2.68 (0 / 5.43)	-	-	-	-	-
+ 	Percentile (%)	98.18	-	-	-	-	-
+regulation of cytokinetic process	FC (WS / NS)	-2.71 (0 / 5.52)	-	-	-	-	-
+ 	Percentile (%)	98.229	-	-	-	-	-
+bradykinin catabolic process	FC (WS / NS)	-2.73 (0 / 5.61)	-	-	-	-	-
+ 	Percentile (%)	98.377	-	-	-	-	-
+galactose transmembrane transport	FC (WS / NS)	-2.73 (0 / 5.61)	-2.66 (0 / 5.33)	-	-	-	-0.43 (1.58 / 2.49)
+ 	Percentile (%)	98.426	97.731	-	-	-	84.43
+methylgalactoside transport	FC (WS / NS)	-2.73 (0 / 5.61)	-	-	-	-	-
+ 	Percentile (%)	98.475	-	-	-	-	-
+negative regulation of cell division	FC (WS / NS)	-2.73 (0 / 5.61)	-	-	-	-	-
+ 	Percentile (%)	98.524	-	-	-	-	-
+regulation of ion transmembrane transport	FC (WS / NS)	-2.73 (0 / 5.64)	0.26 (5.09 / 4.08)	-	-	-	0.53 (2.58 / 1.49)
+ 	Percentile (%)	98.574	17.817	-	-	-	11.65
+poly-hydroxybutyrate biosynthetic process	FC (WS / NS)	-2.77 (0 / 5.81)	0 (0 / 0)	-	-	-	1.73 (2 / -0.09)
+ 	Percentile (%)	98.721	52.018	-	-	-	1.942
+UDP biosynthetic process	FC (WS / NS)	-2.78 (0 / 5.86)	0.5 (4.25 / 2.71)	-	-	-	-
+ 	Percentile (%)	98.819	12.658	-	-	-	-
+neuron projection development	FC (WS / NS)	-2.81 (0 / 6)	-1.16 (3 / 7.94)	-	-	-	-
+ 	Percentile (%)	98.869	82.852	-	-	-	-
+regulation of ion transport	FC (WS / NS)	-2.82 (0 / 6.04)	0.12 (6.17 / 5.58)	0.2 (6.02 / 5.13)	-	-	0.46 (3 / 1.91)
+ 	Percentile (%)	98.967	32.816	22.668	-	-	13.233
+regulation of cytokinesis	FC (WS / NS)	-2.83 (0 / 6.11)	-	-	-	-	-
+ 	Percentile (%)	99.016	-	-	-	-	-
+regulation of transmembrane transport	FC (WS / NS)	-2.89 (0 / 6.39)	0.19 (5.64 / 4.81)	0.3 (5.73 / 4.46)	-	-	-
+ 	Percentile (%)	99.065	19.847	17.987	-	-	-
+regulation of transporter activity	FC (WS / NS)	-2.89 (0 / 6.43)	-	-	-	-	-
+ 	Percentile (%)	99.115	-	-	-	-	-
+L-phenylalanine catabolic process	FC (WS / NS)	-3.01 (0 / 7.03)	-	-0.48 (4.95 / 7.33)	-	0.05 (-9.25 / -8.94)	-
+ 	Percentile (%)	99.311	-	87.496	-	41.062	-
+regulation of cell cycle	FC (WS / NS)	-3.04 (0 / 7.21)	-0.04 (7.27 / 7.52)	-	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	99.459	58.682	-	-	-	81.194
+tryptophan catabolic process	FC (WS / NS)	-3.07 (0 / 7.4)	-	-2.28 (1 / 8.74)	-	-	-
+ 	Percentile (%)	99.557	-	97.593	-	-	-
+poly(hydroxyalkanoate) metabolic process	FC (WS / NS)	-3.14 (0 / 7.81)	1.84 (2.58 / 0)	-	-	-	1.73 (2 / -0.09)
+ 	Percentile (%)	99.754	2.699	-	-	-	2.086
+pyrimidine ribonucleoside diphosphate metabolic process	FC (WS / NS)	-3.15 (0 / 7.86)	0.34 (6.25 / 4.71)	-	-	-	-
+ 	Percentile (%)	99.803	15.691	-	-	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.36 (0 / 9.29)	-	-	-3.78 (0 / 12.75)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.951	-	-	99.274	-	99.892
+L-lysine catabolic process	FC (WS / NS)	-3.5 (0 / 10.33)	-3.19 (0 / 8.12)	-	-3.79 (0 / 12.81)	-	-
+ 	Percentile (%)	100	99.761	-	99.346	-	-
