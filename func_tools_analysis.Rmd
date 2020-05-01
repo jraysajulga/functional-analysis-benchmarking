@@ -464,7 +464,8 @@ filter_ontology_df <- function(tool, ontology){
 }
 ```
 
-### Let's do some single GO analysis
+
+Let's do some single GO analysis
 
 Let's find the GO set that is common in all tools:
 ```{r}
@@ -472,7 +473,6 @@ tools_gos_mf <- sapply(tools_gos, function(tool){ filter_ontology_df(tool, "MF")
 intersect_all_gos <- Reduce(intersect, sapply(tools_gos_mf, function(tool) { tool$gos }))
 length(intersect_all_gos)
 ```
-
 
 Let's find the term with the highest average percentile:
 ```{r}
@@ -844,6 +844,51 @@ ggsave(paste0("results/single_go_blast/", gsub(' ', '_', Term(go_target)), ".png
 ```
 
 
+## Parallelel Coordinates Chart for Intersected GO Terms
+
+```{r}
+tools_intersected_gos <- lapply(tools_gos, function(tool){
+  tool %>%
+    filter(gos %in% intersect_all_gos) %>%
+    group_by(gos, name) %>%
+    select(gos, name, countNS, countWS) %>%
+    summarize_all(sum) %>%
+    mutate(log2ratio = log2((countWS + 1)/(countNS + 1))) %>%
+    arrange(-log2ratio) %>%
+    select(gos, log2ratio)
+})
+tools_intersected_gos <- tools_intersected_gos %>% reduce(full_join, by="gos")
+colnames(tools_intersected_gos)[2:7] <- labels
+tools_intersected_gos
+```
+
+```{r}
+# Libraries
+library(hrbrthemes)
+library(GGally)
+library(viridis)
+
+# Data set is provided by R natively
+data <- iris
+
+# Plot
+ggparcoord(tools_intersected_gos[,c(1,2,3,7,4,5,6)],
+           columns=2:7,
+    scale="uniminmax",
+    showPoints = TRUE, 
+    title = "Standardize to Min = 0 and Max = 1",
+    alphaLines = 0.3
+    ) + 
+  scale_color_viridis(discrete=TRUE) +
+  theme_ipsum()+
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=13)
+  ) +
+  xlab("")
+```
+
+
 ## Summary Tables
 
 ```{r}
@@ -1043,12 +1088,12 @@ for (i in 1:5){
 
 ```
 
-### How Unipept Ranks MetaGOmics' top 5
+#### How Unipept Ranks MetaGOmics' top 5
 ```{r echo=FALSE, results='asis'}
 kable(m2u)
 ```
 
-### How MetaGOmics ranks Unipept's top 5
+#### How MetaGOmics ranks Unipept's top 5
 ```{r echo=FALSE, results='asis'}
 kable(u2m)
 ```
@@ -1127,31 +1172,21 @@ rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
 ```
 
 ```{r}
-tool <- 'mpa'
+tool <- 'unipept'
 rank_table <- read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular'))
-#which(grepl('peptide deformylase', rank_table$GO.Term))
+which(grepl('peptide deformylase', rank_table$GO.Term))
 rank_table
-```
 
-```{r}
-which(grepl("GO:0009374", mpa$gos))
-```
-
-```{r}
-which(grepl('biotin binding', rank_table$GO.Term))
-which(grepl('biotin binding', rank_table_expanded$GO.Term))
 ```
 
 ```{r}
 rank_table_expanded <- read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
 rank_table_expanded
 ```
-```{r}
-read.delim(paste0('results/rank_tables/expanded/MF/', tool, '-rank_table.tabular'))
-```
 
 ```{r}
-read.delim(paste0('results/rank_tables/filtered/MF/', tool, '-rank_table.tabular'))
+rank_table_filtered <- read.delim(paste0('results/rank_tables/filtered/MF/', tool, '-rank_table.tabular'))
+rank_table_filtered
 ```
 
 
