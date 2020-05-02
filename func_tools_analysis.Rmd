@@ -116,23 +116,23 @@ kable(head(eggnog_w_counts, n), caption = paste("eggNOG-mapper: top", n, "fold c
 
 The <a href="http://pfam.xfam.org/family/PF05658">Pfam:YadA</a> refers to the YadA head domain in the trimeric autotransporter adhesin protein family. 
 
-## Blast
-# ```{r}
-# blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular',
-#                    stringsAsFactors = FALSE,
-#                     header = FALSE) %>%
-#     select(peptide = V1, protein = V2, desc = V25)
-# 
-# blast_counts <- left_join(blast, peptides_all, by = "peptide") %>%
-#     group_by(protein, desc) %>%
-#     filter(!is.na(countWS) & !is.na(countNS)) %>%
-#     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>%
-#     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>%
-#     arrange(-log2ratio)
-# ```
-# Print results:
-# ```{r echo=FALSE, results='asis'}
-# kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes"))
+<!-- ## Blast -->
+<!-- # ```{r} -->
+<!-- # blast <- read.delim('data/tool_outputs/blast_results/blastp_vs_nr_current.tabular', -->
+<!-- #                    stringsAsFactors = FALSE, -->
+<!-- #                     header = FALSE) %>% -->
+<!-- #     select(peptide = V1, protein = V2, desc = V25) -->
+<!-- # -->
+<!-- # blast_counts <- left_join(blast, peptides_all, by = "peptide") %>% -->
+<!-- #     group_by(protein, desc) %>% -->
+<!-- #     filter(!is.na(countWS) & !is.na(countNS)) %>% -->
+<!-- #     summarize(sumCountWS = sum(countWS) + 1, sumCountNS = sum(countNS) + 1) %>% -->
+<!-- #     mutate(log2ratio = log2(sumCountWS/sumCountNS)) %>% -->
+<!-- #     arrange(-log2ratio) -->
+<!-- # ``` -->
+<!-- # Print results: -->
+<!-- # ```{r echo=FALSE, results='asis'} -->
+<!-- # kable(head(blast_counts, n), caption = paste("BLAST: Top ", n, " fold changes")) -->
 
 ## metaGOmics
 
@@ -842,6 +842,10 @@ ggsave(paste0("results/single_go_blast/", gsub(' ', '_', Term(go_target)), ".png
 # write.table(paste0(unipept_pep$X.peptide, "\t1"), file=paste0('data/tool_inputs/metagomics/arginine_binding_peptides.txt'),
 #             row.names=FALSE, col.names=FALSE, quote=FALSE)
 ```
+```{r}
+gos <- megan[which(grepl('GO:0042586', megan$gos)),]$gos
+Term(split_gos(gos))
+```
 
 
 ## Parallelel Coordinates Chart for Intersected GO Terms
@@ -904,8 +908,8 @@ create_summary_df <- function(ontology){
   translations <- list("MF" = "molecular function", "BP" = "biological process", "CC" = "cellular component", "all" = "all")
   headers <- list('Type of functional annotation',
                   'Total number of annotation groups',
-                  'Total (or unique) number of translated GO terms for all ontologies',
-                  paste0('Total (or unique) number of translated ', translations[ontology], ' GO terms'),
+                  'Total (and unique) number of translated GO terms for all ontologies',
+                  paste0('Total (and unique) number of translated ', translations[ontology], ' GO terms'),
                   paste0('Total number of ', translations[ontology], ' GO terms exclusive to the tool'),
                   paste0('Total number of ', translations[ontology], ' expanded GO terms'),
                   paste0('Total number of ', translations[ontology], ' expanded GO terms exclusive to the tool')
@@ -949,9 +953,9 @@ create_summary_df('all')
 library(reshape2)
 library(ggplot2)
 
-generate_overlap_plot <- function(ontology){
+generate_overlap_plot <- function(tools1, tools2, ontology){
   
-  gos <- sapply(tools_gos, function(tool) {filter_ontology_df(tool, ontology)$gos})
+  gos <- sapply(tools1, function(tool) {unique(filter_ontology_df(tool, ontology)$gos)})
   
   jaccard <- function(vec1, vec2){
     c1 <- length(vec1)
@@ -969,8 +973,7 @@ generate_overlap_plot <- function(ontology){
   }
   dimnames(jacmat) <- list(labels, labels)
   
-  gos_filt <- sapply(tools_mqome, function(tool){ filter_ontology_df(tool, ontology)$gos })
-  
+  gos_filt <- sapply(tools2, function(tool){ filter_ontology_df(tool, ontology)$gos })
   
   jacslim <- matrix(0, nrow = 6, ncol = 6)
   for (i in 1:6){
@@ -991,8 +994,8 @@ generate_overlap_plot <- function(ontology){
   
   print(ontology)
   print(labels)
-  print(sapply(tools, function(tool){ nrow(tool)}))
-  print(sapply(tools_mqome, function(tool){ nrow(tool)}))
+  print(sapply(gos, function(go_set){ length(go_set)}))
+  print(sapply(gos_filt, function(go_set){ length(go_set)}))
   
   ggplot(jac_melt_all)+
     geom_tile(aes(x = Var1, y = Var2, fill = value), color = "black") +
@@ -1007,14 +1010,11 @@ generate_overlap_plot <- function(ontology){
          height = 5, width = 12, units = "in", dpi = 700)
 }
 
-generate_overlap_plot(c("MF", "BP", "CC"))
-generate_overlap_plot("MF")
-generate_overlap_plot("BP")
-generate_overlap_plot("CC")
+generate_overlap_plot(tools_gos, tools_expanded, c("MF", "BP", "CC"))
+generate_overlap_plot(tools_gos, tools_expanded, "MF")
+generate_overlap_plot(tools_gos, tools_expanded, "BP")
+generate_overlap_plot(tools_gos, tools_expanded, "CC")
 ```
-
-
-
 
 ## Unipept and MetaGOmics
 
@@ -1209,20 +1209,9 @@ for (i in 1:length(tools)){
 
 
 
-
-
-
-
+### Word cloud
 ```{r}
-eggnog
+sapply(1:6, function(i){
+  write.table(unique(tools_gos[[i]]$name), file=paste0('results/word_cloud/', tolower(labels[i]), '.tabular'), row.names=FALSE, quote=FALSE)
+})
 ```
-
-```{r}
-unipept_pep
-```
-
-```{r}
-all_results <- plyr::join_all(list(em, blast, mg, uni), by = "peptide")
-all_results
-```
-
