@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 Type of functional annotation	Proteins	eggNOG orthologous groups	GO terms	Proteins	Protein families, eggNOG orthologous groups	GO terms
 Total number of annotation groups	18440	1665	2829	23169	532	2036
@@ -6,3 +7,13 @@ Total (and unique) number of translated biological process GO terms	319904 (3964
 Total number of biological process GO terms exclusive to the tool	2149	283	325	9	2	86
 Total number of biological process expanded GO terms	4304	2332	1130	1063	779	2136
 Total number of biological process expanded GO terms exclusive to the tool	2097	199	25	5	2	248
+=======
+EggNOG MEGAN MetaGOmics MPA Prophane Unipept
+Type of functional annotation Proteins eggNOG orthologous groups GO terms Proteins Protein families, eggNOG orthologous groups GO terms
+Total number of annotation groups 18440 1665 1958 23169 532 2036
+Total (or unique) number of translated GO terms for all ontologies 533066 (6155) 76529 (4155) 1958 (1958) 77204 (1056) 43012 (1267) 2036 (2036)
+Total (or unique) number of translated biological process GO terms 319904 (3964) 44771 (2130) 945 (945) 21271 (364) 23732 (692) 737 (737)
+Total number of biological process GO terms exclusive to the tool 2149 283 55 9 2 86
+Total number of biological process expanded GO terms 4304 2332 1130 1063 779 2136
+Total number of biological process expanded GO terms exclusive to the tool 2097 199 25 5 2 248
+>>>>>>> c77cd68e509603ebec41de69d674bbc168a8c512
