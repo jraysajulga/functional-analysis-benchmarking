@@ -2,6 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-data/databases/gene_ontology/mqome/
-data/tool_outputs/func_tools/metaGOmics_results/go_compare_624_625.txt
-data/databases/search_database/Merged_2ndStep_FirstOnly_DB_combined_NS_WS.fasta
+data/*
