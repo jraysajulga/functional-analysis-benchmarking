@@ -997,10 +997,14 @@ generate_overlap_plot <- function(tools1, tools2, ontology){
   dimnames(jacslim) <- list(labels, labels)
   
   jac_melt <- melt(jacmat)
-  jac_melt$method <- "Full GO"
+  translations <- list("MF" = "molecular function",
+                       "BP" = "biological process",
+                       "CC" = "cellular component",
+                       "MF,BP,CC" = "all ontologies")
+  jac_melt$method <- paste0("GO (", translations[paste(ontology, collapse=",")], ")")
   
   jac_melt_slim <- melt(jacslim)
-  jac_melt_slim$method <- "Metaquantome-Expanded GO"
+  jac_melt_slim$method <- "metaQuantome-expanded GO"
   
   jac_melt_all <- rbind(jac_melt, jac_melt_slim)
   
