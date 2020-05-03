@@ -524,7 +524,7 @@ sapply(tools_gos, function(tool){
     length(hits[hits == TRUE])
 })
 min(total_hits)
-small_hits_go <- average_ranks[total_hits == min(total_hits)]
+# small_hits_go <- average_ranks[total_hits == min(total_hits)]
 small_hits_go <- 'GO:0004854'
 small_hits_go
 ```
@@ -541,6 +541,7 @@ go_target <- small_hits_go
 Term(go_target)
 ```
 
+#### Functions
 ```{r}
 get_go_rows <- function(go, tool) {tool[grepl(go, tool$gos),] }
 filterOntology <- function(gos, ontology){
@@ -558,14 +559,16 @@ split_gos <- function(go_list, delimiter=','){
 }
 ```
 
-
+#### EggNOG
 ```{r}
-rows <- get_go_rows(go_target, eggnog_w_counts)
+
+rows <- get_go_rows(go_target, eggnog)
 eggnog_hits <- filterOntology(split_gos(rows$gos), 'MF')
 rows
 paste(eggnog_hits, collapse=" ")
 ```
 
+#### MEGAN
 ```{r}
 rows <- get_go_rows(go_target, megan)
 megan_hits <- unique(filterOntology(split_gos(rows$gos), 'MF'))
@@ -573,7 +576,16 @@ rows
 paste(megan_hits, collapse=" ")
 ```
 
-Metagomics
+
+```{r}
+rows <- get_go_rows(go_target, megan)
+Term(setdiff(strsplit(rows$gos[[1]], ',')[[1]], strsplit(rows$gos[[2]], ',')[[1]]))
+Term(setdiff(strsplit(rows$gos[[2]], ',')[[1]], strsplit(rows$gos[[1]], ',')[[1]]))
+length(strsplit(rows$gos[[1]], ',')[[1]])
+length(strsplit(rows$gos[[2]], ',')[[1]])
+```
+
+#### Metagomics
 ```{r}
 target_row <- metagomics_filt[metagomics_filt$gos == go_target,]
 target_peptides <- unique(strsplit(as.character(target_row$peptidesNS), ',')[[1]],
@@ -1058,9 +1070,7 @@ results <- sapply(c("MF", "CC", "BP", "all"),
                   })
 
 ```
-```{r}
-unipept_all
-```
+
 
 ### Rank comparison
 
@@ -1111,7 +1121,7 @@ expand_gos <- function(go_lists){
     }
   })))
 }
-get_rank_table <- function(name, tools, folder, ontology){
+get_rank_table <- function(name, tools, folder, ontology, bottom=FALSE){
     n <- 10
     # if (name == "Unipept" && ontology == "MF"){
     #     n <- 15
@@ -1120,16 +1130,26 @@ get_rank_table <- function(name, tools, folder, ontology){
     tool_topn <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
     tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
     tool_topn <- tool_topn[!is.na(tool_topn)]
-    n <- length(tool_topn)
-    tool_topn <- tool_topn[1:n]
+    # n <- length(tool_topn)
+    #tool_topn <- tool_topn[1:n]
+    if (bottom){
+      tool_topn <- tool_topn[(length(tool_topn) - n + 1):length(tool_topn)]
+    } else {
+      tool_topn <- tool_topn[1:n]
+    }
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
     rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
     for (i in 1:length(tools)){
         output <- sapply(tool_topn, function(topn){
             tool <- tools[i][[1]]
-            rank <- which(grepl(topn, tool$gos, fixed=TRUE))
-            if (length(rank) > 0){
-                term <- tool[rank[[1]],]
+            ranks <- which(grepl(topn, tool$gos, fixed=TRUE))
+            if (bottom){
+              rank <- ranks[length(ranks)]
+            } else {
+              rank <- ranks[1]
+            }
+            if (length(ranks) > 0){
+                term <- tool[rank,]
                 list(paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
                                        paste0('(', round(as.numeric(term$log2ratio), digits=2), ')'),
                                        paste0(round(as.numeric(term$log2ratio), digits=2),
@@ -1171,10 +1191,11 @@ rank_tables <- sapply(c('MF', 'BP', 'CC', 'all'), function(ontology){
 })
 ```
 
+
 ```{r}
 tool <- 'unipept'
 rank_table <- read.delim(paste0('results/rank_tables/normal/MF/', tool, '-rank_table.tabular'))
-which(grepl('peptide deformylase', rank_table$GO.Term))
+#which(grepl('peptide deformylase', rank_table$GO.Term))
 rank_table
 
 ```

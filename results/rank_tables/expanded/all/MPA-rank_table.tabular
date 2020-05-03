@@ -1,4 +1,4 @@
-GO Term	Ranking	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
+GO Term	Fold Change	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
 biotin binding	FC (WS / NS)	3.58 (10.93 / 0)	-0.32 (1 / 1.49)	-	0.89 (7.02 / 3.32)	-	0.98 (7.37 / 3.23)
  	Percentile (%)	0.047	63.892	-	8.063	-	7.419
 heat shock protein binding	FC (WS / NS)	3.48 (10.12 / 0)	-0.32 (1 / 1.49)	-	0.06 (9.59 / 9.14)	-	0.32 (6.57 / 5.08)

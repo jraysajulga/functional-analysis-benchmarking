@@ -1,4 +1,4 @@
-GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	-
  	Percentile (%)	0.035	-	-	1.157	-	-
 pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-	-
