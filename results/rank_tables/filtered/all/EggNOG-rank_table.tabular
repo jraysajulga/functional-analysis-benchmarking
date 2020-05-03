@@ -1,4 +1,4 @@
-GO Term	Ranking	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
  	Percentile (%)	0.024	-	-	-	-	-
 3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)

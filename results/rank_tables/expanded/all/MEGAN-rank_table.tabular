@@ -1,4 +1,4 @@
-GO Term	Ranking	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
+GO Term	Fold Change	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 phosphatidylcholine biosynthetic process	FC (WS / NS)	3.02 (7.09 / 0)	-	-	-	-	-
  	Percentile (%)	0.023	-	-	-	-	-
 urea metabolic process	FC (WS / NS)	2.91 (6.49 / 0)	0.87 (4.32 / 1.91)	2.11 (3.32 / 0)	-	-	-

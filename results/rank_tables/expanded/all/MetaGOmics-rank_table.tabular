@@ -1,4 +1,4 @@
-GO Term	Ranking	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	3.02 (7.11 / 0)	-	-	-	-	-
  	Percentile (%)	0.032	-	-	-	-	-
 cell wall polysaccharide metabolic process	FC (WS / NS)	3.01 (7.07 / 0)	-	0.07 (5.91 / 5.58)	-	-	0.52 (4.58 / 2.91)

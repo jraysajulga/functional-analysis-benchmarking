@@ -1,8 +1,8 @@
 EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 Type of functional annotation	Proteins	eggNOG orthologous groups	GO terms	Proteins	Protein families, eggNOG orthologous groups	GO terms
 Total number of annotation groups	18440	1665	2829	23169	532	2036
-Total (or unique) number of translated GO terms for all ontologies	533066 (6155)	76529 (4155)	2829 (2829)	77204 (1056)	43012 (1267)	2036 (2036)
-Total (or unique) number of translated cellular component GO terms	106223 (640)	7118 (314)	241 (241)	13809 (56)	5072 (69)	178 (178)
+Total (and unique) number of translated GO terms for all ontologies	533066 (6155)	76529 (4155)	2829 (2829)	77204 (1056)	43012 (1267)	2036 (2036)
+Total (and unique) number of translated cellular component GO terms	106223 (640)	7118 (314)	241 (241)	13809 (56)	5072 (69)	178 (178)
 Total number of cellular component GO terms exclusive to the tool	368	55	71	0	2	40
 Total number of cellular component expanded GO terms	668	343	115	96	82	294
 Total number of cellular component expanded GO terms exclusive to the tool	349	58	3	0	2	47
