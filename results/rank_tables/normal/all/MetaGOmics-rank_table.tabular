@@ -9,13 +9,13 @@ glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	
  	Percentile (%)	0.141	-	-	-	-	-
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
  	Percentile (%)	0.177	-	-	-	-	-
-racemase and epimerase activity, acting on hydroxy acids and derivatives	FC (WS / NS)	5.58 (47 / 0)	-	-5.07 (1 / 66)	-	-	-
- 	Percentile (%)	0.212	-	98.559	-	-	-
-lactate racemase activity	FC (WS / NS)	5.58 (47 / 0)	-	-	-	-	-
- 	Percentile (%)	0.247	-	-	-	-	-
-transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	5.43 (42 / 0)	-	4.95 (30 / 0)	-	-	1.06 (5 / 1.87)
- 	Percentile (%)	0.283	-	0.18	-	-	19.99
-cell wall polysaccharide metabolic process	FC (WS / NS)	5.36 (40 / 0)	-	1 (1 / 0)	-	-	-
- 	Percentile (%)	0.318	-	31.051	-	-	-
-1-phosphofructokinase activity	FC (WS / NS)	5.21 (36 / 0)	-	3.81 (27 / 1)	0.91 (0.88 / 0)	-	4.44 (41 / 0.94)
- 	Percentile (%)	0.353	-	1.381	29.419	-	0.098
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	-	-
+ 	Percentile (%)	99.859	99.913	100	99.987	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	-	-
+ 	Percentile (%)	99.894	99.913	100	99.819	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	-	-6.1 (1 / 135.8)
+ 	Percentile (%)	99.929	-	-	99.707	-	99.656
+L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
+ 	Percentile (%)	99.965	99.978	-	-	-	-
+L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
+ 	Percentile (%)	100	99.978	-	-	-	-

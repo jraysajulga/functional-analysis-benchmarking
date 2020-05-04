@@ -565,6 +565,7 @@ split_gos <- function(go_list, delimiter=','){
 rows <- get_go_rows(go_target, eggnog)
 eggnog_hits <- filterOntology(split_gos(rows$gos), 'MF')
 rows
+eggnog_peptide <- rows$peptide
 paste(eggnog_hits, collapse=" ")
 ```
 
@@ -617,7 +618,6 @@ rows
 paste(prophane_hits, collapse=" ")
 ```
 
-
 #### Unipept Peptides
 ```{r}
 add_coverage <- function(gos_col, go_protein_counts_col, total_protein_count_col){
@@ -662,9 +662,12 @@ unipept_pep
 
 unipept_pep_refiltered <- unipept_pep %>%
   filter(str_detect(go_mf_filtered, go_target))
+unipept_hits_unfiltered <- as.character(unipept_pep_refiltered$go_terms)
+unipept_hits_unfiltered <- unique(unlist(strsplit(unipept_hits_unfiltered, ',')))
 unipept_hits <- unipept_pep_refiltered$go_mf_filtered
 unipept_hits <- unique(unlist(strsplit(unipept_hits, ',')))
 unipept_hits
+Term(setdiff(unipept_hits_unfiltered, unipept_hits))
 ```
 
 
@@ -742,12 +745,16 @@ tools_hits_filtered
 
 Let's write out the peptides associated with 
 eggNOG, metaGOmics, and unipept and see what BLAST2GO gives.
+```{r}
+peps_blast2go
+```
 
 ```{r}
 peps_blast2go <- unique(c(as.character(unipept_pep$X.peptide), target_peptides, eggnog_peptide))
 format_to_fasta <- function(peptides){
   unlist(sapply(peptides, function(peptide) {  list(paste0('>', peptide), peptide) }))
 }
+length(peps_blast2go)
 write.table(format_to_fasta(peps_blast2go),
                    file='data/tool_inputs/blast2go/xanthine_peps.fasta',
             quote=FALSE, row.names=FALSE,)
@@ -783,6 +790,9 @@ blast2go <- read.delim('data/tool_outputs/blast2go/blast2go_go_table.txt') %>%
   filter(length(strsplit(peptides, ',')[[1]]) > 1)
 
 blast2go
+```
+```{r}
+length(unique(unlist(strsplit(blast2go$peptides, ','))))
 ```
 
 ```{r}
@@ -1113,7 +1123,7 @@ kable(u2m)
 ```
 
 
-### Top Ten Tables
+### Top five upregulated and top five downregulated tables
 
 ```{r}
 expand_gos <- function(go_lists){
@@ -1125,8 +1135,8 @@ expand_gos <- function(go_lists){
     }
   })))
 }
-get_rank_table <- function(name, tools, folder, ontology, bottom=FALSE){
-    n <- 10
+get_rank_table <- function(name, tools, folder, ontology){
+    n <- 5
     # if (name == "Unipept" && ontology == "MF"){
     #     n <- 15
     # }
@@ -1134,23 +1144,20 @@ get_rank_table <- function(name, tools, folder, ontology, bottom=FALSE){
     tool_topn <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
     tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
     tool_topn <- tool_topn[!is.na(tool_topn)]
-    # n <- length(tool_topn)
-    #tool_topn <- tool_topn[1:n]
-    if (bottom){
-      tool_topn <- tool_topn[(length(tool_topn) - n + 1):length(tool_topn)]
-    } else {
-      tool_topn <- tool_topn[1:n]
-    }
+    
+    tool_topn <- c(tool_topn[1:n],
+                   tool_topn[(length(tool_topn) - n + 1):length(tool_topn)])
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
     rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
     for (i in 1:length(tools)){
-        output <- sapply(tool_topn, function(topn){
+        output <- sapply(1:length(tool_topn), function(j){
+            topn <- tool_topn[j]
             tool <- tools[i][[1]]
             ranks <- which(grepl(topn, tool$gos, fixed=TRUE))
-            if (bottom){
-              rank <- ranks[length(ranks)]
-            } else {
+            if (j <= n){
               rank <- ranks[1]
+            } else {
+              rank <- ranks[length(ranks)]
             }
             if (length(ranks) > 0){
                 term <- tool[rank,]

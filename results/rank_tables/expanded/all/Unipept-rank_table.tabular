@@ -9,13 +9,13 @@ glycerol dehydrogenase [NAD+] activity	FC (WS / NS)	2.68 (4.81 / -0.09)	-	1.52 (
  	Percentile (%)	0.1	-	5.631	4.921	-	-
 glycerol dehydrogenase [NAD(P)+] activity	FC (WS / NS)	2.68 (4.81 / -0.09)	-	1.52 (4.75 / 1)	1.54 (4.81 / 1)	-	-
  	Percentile (%)	0.125	-	5.676	5.016	-	-
-beta-fructofuranosidase activity	FC (WS / NS)	2.65 (4.7 / -0.09)	-	2.66 (5.32 / 0)	2.5 (4.64 / 0)	-	-
- 	Percentile (%)	0.15	-	0.114	1.048	-	-
-RNA secondary structure unwinding	FC (WS / NS)	2.51 (4.17 / -0.09)	0.27 (4.7 / 3.71)	-	-	0.86 (0.81 / 0)	-
- 	Percentile (%)	0.175	21.09	-	-	9.193	-
-galactose catabolic process	FC (WS / NS)	2.51 (4.17 / -0.09)	0.19 (7.28 / 6.26)	0 (4.91 / 4.91)	-	-	-
- 	Percentile (%)	0.201	24.041	59.052	-	-	-
-ADP-ribose diphosphatase activity	FC (WS / NS)	2.51 (4.17 / -0.09)	0.14 (0 / -0.09)	0 (0 / 0)	-	-	-
- 	Percentile (%)	0.226	30.905	62.669	-	-	-
-galactose-6-phosphate isomerase activity	FC (WS / NS)	2.51 (4.17 / -0.09)	-	0 (4.91 / 4.91)	2.29 (3.91 / 0)	-	-
- 	Percentile (%)	0.251	-	62.943	1.746	-	-
+L-lysine catabolic process	FC (WS / NS)	-3.02 (0 / 7.09)	-3.19 (0 / 8.12)	-	-3.5 (0 / 10.33)	-3.79 (0 / 12.81)	-
+ 	Percentile (%)	99.9	99.798	-	99.968	99.437	-
+L-lysine metabolic process	FC (WS / NS)	-3.02 (0 / 7.09)	-3.34 (0 / 9.12)	-	-3.57 (0 / 10.91)	-3.79 (0 / 12.81)	-
+ 	Percentile (%)	99.925	99.922	-	100	99.484	-
+methionine gamma-lyase activity	FC (WS / NS)	-3.05 (0 / 7.3)	-3.03 (0 / 7.19)	-1.7 (1.58 / 7.39)	-3.03 (0 / 7.17)	-3.81 (0 / 12.98)	-
+ 	Percentile (%)	99.95	99.363	94.942	99.46	99.578	-
+tryptophanase activity	FC (WS / NS)	-3.1 (0 / 7.59)	-	-2.28 (1 / 8.74)	-3.07 (0 / 7.4)	-3.1 (0 / 7.55)	-
+ 	Percentile (%)	99.975	-	97.642	99.619	92.636	-
+lysine 2,3-aminomutase activity	FC (WS / NS)	-3.19 (0 / 8.13)	-	-3.21 (0 / 8.28)	-3.13 (0 / 7.73)	-3.36 (0 / 9.27)	-
+ 	Percentile (%)	100	-	99.794	99.714	95.919	-

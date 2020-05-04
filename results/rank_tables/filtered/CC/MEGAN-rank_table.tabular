@@ -9,13 +9,13 @@ collagen trimer	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
  	Percentile (%)	3.243	-	-	-	-	-
 Holliday junction helicase complex	FC (WS / NS)	1.84 (2.58 / 0)	2.07 (2.81 / -0.09)	-	-	-	-0.61 (3 / 5.11)
  	Percentile (%)	3.644	1.29	-	-	-	88.206
-Holliday junction resolvase complex	FC (WS / NS)	1.84 (2.58 / 0)	0.95 (3.81 / 1.49)	-	-	-	-
- 	Percentile (%)	3.845	9.506	-	-	-	-
-RNA polymerase II transcription factor complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	0.15 (2.58 / 2.23)
- 	Percentile (%)	3.912	-	-	-	-	27.796
-host	FC (WS / NS)	1.73 (2.32 / 0)	0.5 (8.17 / 5.49)	-	-	-	-
- 	Percentile (%)	4.112	12.706	-	-	-	-
-beta-galactosidase complex	FC (WS / NS)	1.66 (5.32 / 1)	-	-	-	-	-0.08 (3 / 3.23)
- 	Percentile (%)	4.38	-	-	-	-	68.608
-molybdopterin synthase complex	FC (WS / NS)	1.58 (2 / 0)	-	-	-	-	-
- 	Percentile (%)	4.814	-	-	-	-	-
+axonemal dynein complex	FC (WS / NS)	-1.93 (0 / 2.81)	-	-	-	-	-
+ 	Percentile (%)	96.489	-	-	-	-	-
+axoneme	FC (WS / NS)	-1.93 (0 / 2.81)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	96.523	48.173	-	-	-	-
+HslUV protease complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-
+ 	Percentile (%)	97.325	-	-	89.325	-	-
+nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-
+ 	Percentile (%)	97.727	43.062	66.847	44.88	-	-
+type II protein secretion system complex	FC (WS / NS)	-2.69 (0 / 5.46)	-	0.47 (6.49 / 4.39)	-	-	-0.97 (1 / 2.91)
+ 	Percentile (%)	99.164	-	12.445	-	-	93.671

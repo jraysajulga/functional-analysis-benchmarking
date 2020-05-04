@@ -9,13 +9,13 @@ septin ring	FC (WS / NS)	3.72 (65 / 4)	1 (1 / 0)	3.52 (68 / 5)	2.17 (3.51 / 0)	-
  	Percentile (%)	2.545	30.19	1.802	4.817	-	2.014
 anchored component of membrane	FC (WS / NS)	3.32 (9 / 0)	1 (1 / 0)	-	-	-	-
  	Percentile (%)	4.666	38.286	-	-	-	-
-Gram-negative-bacterium-type cell wall	FC (WS / NS)	3.17 (8 / 0)	2.81 (6 / 0)	1 (1 / 0)	-1 (0 / 1)	-	-1.79 (2 / 9.37)
- 	Percentile (%)	5.338	3.465	32.492	50.598	-	90.766
-tertiary granule lumen	FC (WS / NS)	3 (7 / 0)	-	-	-	-	-
- 	Percentile (%)	6.433	-	-	-	-	-
-vacuole	FC (WS / NS)	2.22 (69 / 14)	1.58 (2 / 0)	3.46 (10 / 0)	-	-	-
- 	Percentile (%)	10.322	19.393	1.982	-	-	-
-cell septum	FC (WS / NS)	2.19 (72 / 15)	3.46 (10 / 0)	-	-	-	-
- 	Percentile (%)	10.498	1.464	-	-	-	-
-type II protein secretion system complex	FC (WS / NS)	2.05 (90 / 21)	-	-1 (0 / 1)	-	-	-1.5 (2 / 7.49)
- 	Percentile (%)	11.382	-	69.309	-	-	87.475
+glycine reductase complex	FC (WS / NS)	-4.75 (0 / 26)	-2.25 (0 / 3.75)	-	-	-	-
+ 	Percentile (%)	96.536	90.602	-	-	-	-
+nuclear body	FC (WS / NS)	-4.81 (0 / 27)	-1.93 (0 / 2.81)	-2.81 (0 / 6)	-	-	-
+ 	Percentile (%)	96.925	87.749	92.432	-	-	-
+nuclear speck	FC (WS / NS)	-4.81 (0 / 27)	-	-	-	-	-
+ 	Percentile (%)	96.96	-	-	-	-	-
+formate dehydrogenase complex	FC (WS / NS)	-5.13 (0 / 34)	-2.73 (0 / 5.62)	-	-	-	-
+ 	Percentile (%)	97.561	92.625	-	-	-	-
+Bam protein complex	FC (WS / NS)	-5.2 (2 / 109)	-	-	-	-	-
+ 	Percentile (%)	97.879	-	-	-	-	-

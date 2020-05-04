@@ -9,13 +9,13 @@ branched-chain-amino-acid transaminase activity	FC (WS / NS)	4.12 (49 / 1.87)	1 
  	Percentile (%)	0.295	28.243	20.601	24.496	5.417	-
 biotin binding	FC (WS / NS)	4 (165 / 9.37)	1 (1 / 0)	-	3.57 (130 / 10)	3.63 (11.42 / 0)	-
  	Percentile (%)	0.393	38.932	-	3.111	0.311	-
-glycerol dehydrogenase [NAD+] activity	FC (WS / NS)	3.9 (28 / 0.94)	-	3.22 (27 / 2)	3.27 (28 / 2)	-	-
- 	Percentile (%)	0.442	-	2.462	4.913	-	-
-beta-fructofuranosidase activity	FC (WS / NS)	3.8 (26 / 0.94)	-	4.39 (20 / 0)	4.7 (25 / 0)	-	-
- 	Percentile (%)	0.491	-	0.48	0.601	-	-
-threonine synthase activity	FC (WS / NS)	3.51 (53 / 3.75)	1 (1 / 0)	3 (39 / 4)	-	-	-
- 	Percentile (%)	0.639	39.214	3.604	-	-	-
-cytidylate kinase activity	FC (WS / NS)	3.32 (37 / 2.81)	3 (7 / 0)	3.37 (30 / 2)	3.27 (28 / 2)	1.86 (2.64 / 0)	-
- 	Percentile (%)	0.737	2.977	2.162	4.949	8.645	-
-galactose-6-phosphate isomerase activity	FC (WS / NS)	3.29 (18 / 0.94)	-	0 (30 / 30)	3 (15 / 1)	-	-
- 	Percentile (%)	0.884	-	52.132	6.822	-	-
+methionine gamma-lyase activity	FC (WS / NS)	-6.31 (1 / 157.34)	-5.79 (0 / 54.32)	-5.4 (3 / 168)	-7.18 (0 / 144)	-3.58 (0 / 11)	-
+ 	Percentile (%)	99.804	99.74	98.979	99.576	97.54	-
+butyryl-CoA dehydrogenase activity	FC (WS / NS)	-6.37 (4 / 411.15)	-	-	-5.89 (4 / 295)	-2.81 (0 / 6)	-
+ 	Percentile (%)	99.853	-	-	98.869	93.75	-
+tryptophanase activity	FC (WS / NS)	-6.6 (1 / 192.93)	-	-7.16 (2 / 427)	-7.41 (0 / 169)	-4.58 (0 / 23)	-
+ 	Percentile (%)	99.902	-	99.64	99.717	99.37	-
+lysine 2,3-aminomutase activity	FC (WS / NS)	-7.13 (1 / 280.03)	-	-7.29 (1 / 311)	-7.74 (0 / 213)	-5 (0 / 31)	-
+ 	Percentile (%)	99.951	-	99.7	99.788	99.81	-
+CoA-transferase activity	FC (WS / NS)	-7.84 (2 / 685.56)	-6.28 (0 / 76.8)	-8.56 (0 / 377)	-5.15 (15 / 568)	-4.52 (0 / 22)	-
+ 	Percentile (%)	100	99.881	99.94	97.702	99.236	-

@@ -9,13 +9,13 @@ ether hydrolase activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	-	-	-
  	Percentile (%)	0.206	-	-	-	-	-
 2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	-
  	Percentile (%)	0.229	-	0.667	-	-	-
-homocitrate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
- 	Percentile (%)	0.252	-	-	-	-	-
-hydroxymethylglutaryl-CoA lyase activity	FC (WS / NS)	2.56 (4.91 / 0)	1 (1 / 0)	-	-	-	-
- 	Percentile (%)	0.275	8.309	-	-	-	-
-4-hydroxy-2-oxovalerate aldolase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
- 	Percentile (%)	0.298	-	-	-	-	-
-urease activity	FC (WS / NS)	2.56 (4.91 / 0)	2.06 (3.17 / 0)	2.11 (3.32 / 0)	-	-	-
- 	Percentile (%)	0.32	1.475	3.079	-	-	-
-1-phosphofructokinase activity	FC (WS / NS)	2.52 (4.75 / 0)	-	2.63 (5.17 / 0)	-0.3 (-0.19 / 0)	-	2.81 (5.36 / -0.09)
- 	Percentile (%)	0.435	-	0.603	70.122	-	0.05
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.26 (0 / 8.58)	-3.24 (0 / 8.47)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.817	99.876	99.873	99.765	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.4 (0 / 9.58)	-3.39 (0 / 9.47)	-3.37 (0 / 9.37)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.84	99.984	99.937	99.812	-	-
+3-oxoacid CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.01 (0 / 7.04)	-	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	99.863	99.208	-	-	-	91.855
+acetate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	0.16 (8.02 / 7.1)	-2.98 (0 / 6.89)	-	-	-2.66 (0 / 5.33)
+ 	Percentile (%)	99.886	24.833	99.333	-	-	99.574
+3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.05 (0 / 7.3)	-	-1.93 (0 / 2.81)	-	-
+ 	Percentile (%)	99.931	99.394	-	84.756	-	-

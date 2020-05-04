@@ -9,13 +9,13 @@ regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0
  	Percentile (%)	0.742	-	41.682	-	-	-
 xyloglucan metabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
  	Percentile (%)	0.778	-	-	-	-	-
-symbiont process benefiting host	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
- 	Percentile (%)	0.813	-	-	-	-	-
-xyloglucan catabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
- 	Percentile (%)	0.848	-	-	-	-	-
-hemicellulose catabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
- 	Percentile (%)	0.884	-	-	-	-	-
-tRNA 4-thiouridine biosynthesis	FC (WS / NS)	4.09 (16 / 0)	-	-	-	-	-
- 	Percentile (%)	0.99	-	-	-	-	-
-thiazole metabolic process	FC (WS / NS)	4.09 (16 / 0)	-	3.09 (16 / 1)	-	-	-
- 	Percentile (%)	1.025	-	3.423	-	-	-
+L-phenylalanine catabolic process	FC (WS / NS)	-7.04 (0 / 131)	-	-2.34 (31 / 161)	-	0 (0 / 0)	-
+ 	Percentile (%)	99.54	-	90.571	-	75.564	-
+lysine catabolic process	FC (WS / NS)	-7.29 (4 / 783)	-7.14 (0 / 140.48)	-	-	-	-
+ 	Percentile (%)	99.647	99.978	-	-	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	-	-6.1 (1 / 135.8)
+ 	Percentile (%)	99.929	-	-	99.707	-	99.656
+L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
+ 	Percentile (%)	99.965	99.978	-	-	-	-
+L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
+ 	Percentile (%)	100	99.978	-	-	-	-

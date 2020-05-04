@@ -9,13 +9,13 @@ tRNA 3'-terminal CCA addition	FC (WS / NS)	2.25 (3.32 / -0.09)	-	0.27 (3.58 / 2.
  	Percentile (%)	0.351	-	21.012	-	-	-
 regulation of DNA repair	FC (WS / NS)	2.25 (3.32 / -0.09)	0.14 (0 / -0.09)	-	-	-	-
  	Percentile (%)	0.376	26.371	-	-	-	-
-tRNA 3'-end processing	FC (WS / NS)	2.25 (3.32 / -0.09)	-0.36 (2.58 / 3.61)	0.09 (5.25 / 4.86)	-	-	-
- 	Percentile (%)	0.426	65.367	32.616	-	-	-
-ncRNA 3'-end processing	FC (WS / NS)	2.25 (3.32 / -0.09)	0.16 (5.95 / 5.23)	0.07 (6 / 5.67)	-	-	-
- 	Percentile (%)	0.451	24.802	34.836	-	-	-
-regulation of cellular response to stress	FC (WS / NS)	2.25 (3.32 / -0.09)	-0.8 (4.58 / 8.71)	-	-	-	-
- 	Percentile (%)	0.576	72.76	-	-	-	-
-regulation of response to DNA damage stimulus	FC (WS / NS)	2.25 (3.32 / -0.09)	-0.93 (0 / 0.91)	-	-	-	-
- 	Percentile (%)	0.602	79.609	-	-	-	-
-rRNA catabolic process	FC (WS / NS)	2.14 (3 / -0.09)	-	1.73 (2.32 / 0)	-	-2.81 (0 / 6)	-
- 	Percentile (%)	0.652	-	3.96	-	89.54	-
+protein tetramerization	FC (WS / NS)	-2.37 (0 / 4.15)	0.13 (8.46 / 7.65)	-1.35 (1 / 4.09)	-0.18 (7.9 / 9.07)	-0.77 (3.62 / 6.89)	-
+ 	Percentile (%)	99.348	33.421	92.493	67.81	79.878	-
+lysine catabolic process	FC (WS / NS)	-3.02 (0 / 7.09)	-3.34 (0 / 9.16)	-	-2 (2 / 11.02)	-3.79 (0 / 12.81)	-
+ 	Percentile (%)	99.85	99.938	-	90.254	99.343	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.02 (0 / 7.09)	-	-	-3.36 (0 / 9.29)	-3.78 (0 / 12.75)	-
+ 	Percentile (%)	99.875	-	-	99.905	99.203	-
+L-lysine catabolic process	FC (WS / NS)	-3.02 (0 / 7.09)	-3.19 (0 / 8.12)	-	-3.5 (0 / 10.33)	-3.79 (0 / 12.81)	-
+ 	Percentile (%)	99.9	99.798	-	99.968	99.437	-
+L-lysine metabolic process	FC (WS / NS)	-3.02 (0 / 7.09)	-3.34 (0 / 9.12)	-	-3.57 (0 / 10.91)	-3.79 (0 / 12.81)	-
+ 	Percentile (%)	99.925	99.922	-	100	99.484	-

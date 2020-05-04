@@ -9,13 +9,13 @@ anaerobic ribonucleoside-triphosphate reductase complex	FC (WS / NS)	1.66 (5.32 
  	Percentile (%)	5.312	18.39	-	-	-	-
 septin ring	FC (WS / NS)	1.23 (6.02 / 2)	-	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
  	Percentile (%)	6.837	-	7.289	2.179	-	8.378
-organellar chromatophore	FC (WS / NS)	0.73 (4.52 / 2.32)	-	-	-	-	-
- 	Percentile (%)	9.788	-	-	-	-	-
-vacuole	FC (WS / NS)	0.56 (6.11 / 3.81)	-0.32 (5.36 / 6.94)	-	-	-	-
- 	Percentile (%)	11.608	68.808	-	-	-	-
-cell septum	FC (WS / NS)	0.55 (6.17 / 3.91)	0.3 (6.11 / 4.76)	-	-	-	-
- 	Percentile (%)	11.707	16.766	-	-	-	-
-NarGHI complex	FC (WS / NS)	0.48 (5.73 / 3.81)	-	-	-	-	-
- 	Percentile (%)	12.297	-	-	-	-	-
-type II protein secretion system complex	FC (WS / NS)	0.47 (6.49 / 4.39)	-	-2.69 (0 / 5.46)	-	-	-0.97 (1 / 2.91)
- 	Percentile (%)	12.445	-	99.164	-	-	93.671
+phosphoenolpyruvate-dependent sugar phosphotransferase complex	FC (WS / NS)	-2.5 (0 / 4.64)	0.26 (7.29 / 5.91)	-	-	-	-
+ 	Percentile (%)	96.311	17.769	-	-	-	-
+cytosolic pyruvate dehydrogenase complex	FC (WS / NS)	-2.5 (0 / 4.64)	-0.61 (3.32 / 5.61)	-	-	-	-
+ 	Percentile (%)	96.36	74.158	-	-	-	-
+glycine reductase complex	FC (WS / NS)	-2.51 (0 / 4.7)	-1.97 (0 / 2.91)	-	-	-	-
+ 	Percentile (%)	96.458	91.115	-	-	-	-
+nuclear speck	FC (WS / NS)	-2.52 (0 / 4.75)	-	-	-	-	-
+ 	Percentile (%)	96.557	-	-	-	-	-
+formate dehydrogenase complex	FC (WS / NS)	-2.61 (0 / 5.09)	-2.5 (0 / 4.66)	-	-	-	-
+ 	Percentile (%)	97.442	93.671	-	-	-	-

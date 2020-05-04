@@ -9,13 +9,13 @@ fatty acid metabolic process	FC (WS / NS)	1.94 (0.13 / -0.71)	0 (11.53 / 11.54)	
  	Percentile (%)	0.758	55.004	76.663	70.29	-	63.179
 regulation of macromolecule biosynthetic process	FC (WS / NS)	1.78 (-0.4 / -0.82)	-0.03 (12.79 / 13.05)	0 (19.66 / 19.64)	-0.01 (13 / 13.1)	0.03 (16.72 / 16.31)	0.03 (10.67 / 10.45)
  	Percentile (%)	0.867	57.249	51.521	55.435	35.439	51.6
-regulation of cellular biosynthetic process	FC (WS / NS)	1.78 (-0.4 / -0.82)	-0.03 (12.8 / 13.08)	0 (19.67 / 19.64)	0 (13.33 / 13.36)	0.03 (16.72 / 16.31)	0.03 (10.68 / 10.46)
- 	Percentile (%)	0.975	57.559	51.488	54.255	35.512	51.528
-cellular carbohydrate metabolic process	FC (WS / NS)	1.61 (-0.73 / -0.91)	0.04 (11.28 / 10.91)	0.02 (16.98 / 16.69)	0 (12.4 / 12.36)	0 (16.33 / 16.37)	0 (9.42 / 9.4)
- 	Percentile (%)	1.192	40.53	41.825	52.041	46.478	58.037
-cofactor biosynthetic process	FC (WS / NS)	1.61 (0.27 / -0.59)	0.09 (11.31 / 10.58)	0.01 (18 / 17.83)	0.01 (14.17 / 14.12)	-0.12 (14.65 / 16.05)	0 (10.34 / 10.31)
- 	Percentile (%)	1.3	34.488	46.038	51.894	64.27	57.03
-translational elongation	FC (WS / NS)	1.55 (0.51 / -0.49)	-	-0.02 (14.7 / 14.96)	-0.05 (10.86 / 11.26)	-	-0.18 (3.17 / 3.71)
- 	Percentile (%)	1.517	-	73.052	60.256	-	75.081
-glycolytic process	FC (WS / NS)	1.31 (0.87 / -0.25)	-0.08 (8.33 / 8.86)	0.06 (16.04 / 15.31)	-	0.08 (23.33 / 21.94)	0.08 (11.22 / 10.58)
- 	Percentile (%)	1.625	60.545	32.765	-	25.054	39.446
+GTP metabolic process	FC (WS / NS)	NaN (-0.17 / -1.18)	0.16 (9.08 / 8.01)	-	-	-	-
+ 	Percentile (%)	99.133	20.707	-	-	-	-
+purine ribonucleoside biosynthetic process	FC (WS / NS)	NaN (-0.4 / -1.06)	0.06 (10.26 / 9.82)	0.02 (15.65 / 15.39)	0.07 (10.14 / 9.61)	-0.01 (15.98 / 16.12)	0.04 (8.57 / 8.29)
+ 	Percentile (%)	99.242	38.214	41.959	36.399	49.02	47.645
+regulation of RNA metabolic process	FC (WS / NS)	NaN (-0.91 / -1.41)	0 (11.71 / 11.73)	0.01 (18.77 / 18.7)	0.02 (12.52 / 12.35)	0.07 (16.45 / 15.6)	0.03 (10.26 / 10.04)
+ 	Percentile (%)	99.35	55.027	49.783	48.303	27.524	51.169
+pyridine-containing compound metabolic process	FC (WS / NS)	NaN (-0.61 / -1.04)	0.14 (10.44 / 9.35)	0.04 (15 / 14.56)	0.04 (14.24 / 13.78)	-0.42 (9.27 / 12.76)	-0.07 (7.4 / 7.81)
+ 	Percentile (%)	99.458	21.161	37.68	42.45	78.504	67.638
+guanosine-containing compound catabolic process	FC (WS / NS)	NaN (-0.17 / -1.18)	-	-0.02 (14.57 / 14.76)	-	-	-
+ 	Percentile (%)	100	-	71.548	-	-	-

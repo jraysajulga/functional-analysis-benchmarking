@@ -9,13 +9,13 @@ carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-
  	Percentile (%)	0.143	-	-	-	-	-
 regulation of nucleocytoplasmic transport	FC (WS / NS)	2.58 (5 / 0)	-	-	-	-	-
  	Percentile (%)	0.167	-	-	-	-	-
-DNA replication, synthesis of RNA primer	FC (WS / NS)	2.44 (3.91 / -0.09)	-0.25 (3.81 / 4.7)	0.44 (5.39 / 3.7)	0.07 (3.81 / 3.58)	-	0.06 (4.86 / 4.61)
- 	Percentile (%)	0.334	83.985	12.937	28.395	-	43.15
-regulation of leukocyte proliferation	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-0.32 (1 / 1.49)
- 	Percentile (%)	0.358	-	-	-	-	81.41
-response to peptide	FC (WS / NS)	2.37 (4.17 / 0)	-	-	-	-	-
- 	Percentile (%)	0.406	-	-	-	-	-
-carbon catabolite repression of transcription	FC (WS / NS)	2.35 (4.09 / 0)	-	-	-	-	-
- 	Percentile (%)	0.502	-	-	-	-	-
-Notch signaling pathway	FC (WS / NS)	2.34 (3.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	0.549	-	-	-	-	-
+negative regulation of nervous system development	FC (WS / NS)	-3.23 (0 / 8.38)	-	-	-	-	-
+ 	Percentile (%)	99.857	-	-	-	-	-
+regulation of cell morphogenesis involved in differentiation	FC (WS / NS)	-3.27 (0 / 8.65)	-	-	-	-	-
+ 	Percentile (%)	99.904	-	-	-	-	-
+regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	99.952	58.241	-	-	-	-
+regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	-	-	-	-	-
+ 	Percentile (%)	99.976	-	-	-	-	-
+regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	-	-	-	-	-
+ 	Percentile (%)	100	-	-	-	-	-

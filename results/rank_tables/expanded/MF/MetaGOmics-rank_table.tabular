@@ -9,13 +9,13 @@ transferase activity, transferring acyl groups, acyl groups converted into alkyl
  	Percentile (%)	0.19	-	26.94	-	-	10.075
 pyruvate oxidase activity	FC (WS / NS)	2.83 (6.11 / 0)	-	-	-	-	-
  	Percentile (%)	0.222	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
- 	Percentile (%)	0.254	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
- 	Percentile (%)	0.286	-	-	-	-	-
-carbon-oxygen lyase activity, acting on phosphates	FC (WS / NS)	2.74 (5.7 / 0)	0.45 (4.32 / 2.91)	0.47 (9.79 / 6.78)	0.86 (0.81 / 0)	-	0.83 (6.27 / 3.08)
- 	Percentile (%)	0.317	16.555	16.045	9.334	-	8.221
-peptide deformylase activity	FC (WS / NS)	2.73 (5.61 / 0)	0.14 (0 / -0.09)	2.71 (5.52 / 0)	-	-	2.92 (5.86 / -0.09)
- 	Percentile (%)	0.349	30.175	0.092	-	-	0.025
-lactate racemase activity	FC (WS / NS)	2.71 (5.55 / 0)	-	-	-	-	-
- 	Percentile (%)	0.381	-	-	-	-	-
+beta-lysine 5,6-aminomutase activity	FC (WS / NS)	-3.09 (0 / 7.53)	-	-	-	-	-
+ 	Percentile (%)	99.683	-	-	-	-	-
+lysine 2,3-aminomutase activity	FC (WS / NS)	-3.13 (0 / 7.73)	-	-3.21 (0 / 8.28)	-3.36 (0 / 9.27)	-	-3.19 (0 / 8.13)
+ 	Percentile (%)	99.714	-	99.794	95.919	-	100
+glutaconate CoA-transferase activity	FC (WS / NS)	-3.19 (0 / 8.12)	-	-	-3.14 (0 / 7.85)	-	-
+ 	Percentile (%)	99.841	-	-	93.011	-	-
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.23 (0 / 8.37)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.873	99.876	99.817	99.765	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.37 (0 / 9.37)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.937	99.984	99.84	99.812	-	-

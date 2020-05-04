@@ -9,13 +9,13 @@ cellular metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-0.15 (2916
  	Percentile (%)	0.12	0.043	53.234	22.155	0.188	91.306
 small molecule metabolic process	FC (WS / NS)	5.16 (106 / 2)	4.75 (26 / 0)	-0.21 (16474 / 19000)	-	0 (0 / 0)	-
  	Percentile (%)	0.12	0.125	53.729	-	5.827	-
-cellular biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	0.05 (22087 / 21268)	-	0.03 (0.02 / 0)	-
- 	Percentile (%)	0.12	0.043	51.997	-	0.188	-
-biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	0.04 (22826 / 22151)	1.86 (2.64 / 0)	0.03 (0.02 / 0)	0.52 (296 / 206.04)
- 	Percentile (%)	0.12	0.043	52.351	7.501	0.188	35.56
-organic substance biosynthetic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	0.04 (22747 / 22091)	-	0.03 (0.02 / 0)	-
- 	Percentile (%)	0.12	0.043	52.386	-	0.188	-
-oxoacid metabolic process	FC (WS / NS)	5.16 (106 / 2)	4.7 (25 / 0)	-0.35 (11192 / 14285)	-	0 (0 / 0)	-
- 	Percentile (%)	0.12	0.146	55.32	-	5.827	-
-organic acid metabolic process	FC (WS / NS)	5.16 (106 / 2)	4.7 (25 / 0)	-0.35 (11411 / 14510)	1.46 (1.76 / 0)	0 (0 / 0)	-0.9 (143 / 267.86)
- 	Percentile (%)	0.12	0.146	55.214	13.721	5.827	77.701
+fatty acid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-	-
+ 	Percentile (%)	100	88.986	91.198	-	-	-
+lipid modification	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.1 (48 / 418)	-	-	-
+ 	Percentile (%)	100	88.986	84.906	-	-	-
+lipid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-	-
+ 	Percentile (%)	100	88.986	91.163	-	-	-
+fatty acid beta-oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-	0.66 (8 / 4.68)
+ 	Percentile (%)	100	88.986	91.128	-	-	29.42
+organic cyclic compound metabolic process	FC (WS / NS)	-8.59 (0 / 384)	-5.93 (0 / 59.94)	0.05 (13029 / 12611)	-	0 (0 / 0)	-
+ 	Percentile (%)	100	99.772	52.174	-	97.556	-

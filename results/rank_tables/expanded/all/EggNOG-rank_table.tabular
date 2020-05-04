@@ -9,13 +9,13 @@ NADH metabolic process	FC (WS / NS)	2.77 (5.81 / 0)	-	0.23 (10.53 / 8.8)	-	-	-
  	Percentile (%)	0.062	-	21.524	-	-	-
 3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)
  	Percentile (%)	0.078	14.168	8.984	-	-	8.571
-positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	0.04 (5.91 / 5.7)	-	-	-0.19 (-8.29 / -9.29)	-
- 	Percentile (%)	0.093	39.872	-	-	64.032	-
-tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
- 	Percentile (%)	0.109	-	11.714	-	-	-
-tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	-	-
- 	Percentile (%)	0.124	8.927	-	84.568	-	-
-carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-	-	-
- 	Percentile (%)	0.14	-	-	-	-	-
-aldo-keto reductase (NADP) activity	FC (WS / NS)	2.61 (5.09 / 0)	-	0.7 (6.25 / 3.46)	-	-	-
- 	Percentile (%)	0.155	-	9.905	-	-	-
+lysine catabolic process	FC (WS / NS)	-3.34 (0 / 9.16)	-	-2 (2 / 11.02)	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.938	-	90.254	99.343	-	99.85
+regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	99.953	57.588	-	-	-	32.155
+regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	99.969	64.775	-	-	-	34.461
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.37)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.984	99.84	99.937	99.812	-	-
+regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	1 (1 / 0)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	100	10.414	-	-	-	32.907

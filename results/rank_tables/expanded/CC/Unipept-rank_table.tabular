@@ -9,13 +9,13 @@ presynaptic active zone	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
  	Percentile (%)	1.98	-	-	-	-	-
 condensin complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-2.08 (0 / 3.23)	0.13 (5.25 / 4.7)	-	-	-
  	Percentile (%)	2.18	91.303	28.885	-	-	-
-bacterial-type flagellum basal body, MS ring	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.531	-	-	-	-	-
-CCAAT-binding factor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.682	-	-	-	-	-
-proteasome core complex, alpha-subunit complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.807	-	-	-	-	-
-AP-type membrane coat adaptor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.832	-	-	-	-	-
-clathrin adaptor complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.857	-	-	-	-	-
+spliceosomal complex	FC (WS / NS)	-1.69 (0 / 2.23)	1 (1 / 0)	-0.27 (2.32 / 3)	-	-	-
+ 	Percentile (%)	97.193	8.402	82.33	-	-	-
+pilus	FC (WS / NS)	-1.89 (0 / 2.71)	-0.66 (1.58 / 3.08)	-1.58 (0 / 2)	-	-	-
+ 	Percentile (%)	98.246	71.207	93.98	-	-	-
+apoplast	FC (WS / NS)	-1.97 (0 / 2.91)	0.23 (3.58 / 2.91)	2.45 (4.46 / 0)	-	-	-
+ 	Percentile (%)	98.622	22.705	0.549	-	-	-
+nuclear pore	FC (WS / NS)	-2.2 (0 / 3.61)	1 (2.81 / 0.91)	-1 (0 / 1)	-	-	-
+ 	Percentile (%)	99.148	11.943	88.876	-	-	-
+bacterial-type flagellum hook	FC (WS / NS)	-2.2 (0 / 3.61)	-	0 (0 / 0)	-	-	-
+ 	Percentile (%)	99.173	-	57.221	-	-	-

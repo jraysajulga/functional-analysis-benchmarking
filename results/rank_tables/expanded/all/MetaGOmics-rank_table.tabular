@@ -9,13 +9,13 @@ hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	0.07 (5.49 / 5.17
  	Percentile (%)	0.127	-	34.516	-	-	12.657
 racemase and epimerase activity, acting on hydroxy acids and derivatives	FC (WS / NS)	2.92 (6.55 / 0)	-	-2.01 (1 / 7.04)	-	-	-
  	Percentile (%)	0.159	-	96.841	-	-	-
-transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	2.89 (6.39 / 0)	-	0.16 (7.82 / 6.91)	-	-	0.68 (4.58 / 2.49)
- 	Percentile (%)	0.19	-	26.94	-	-	10.075
-pyruvate oxidase activity	FC (WS / NS)	2.83 (6.11 / 0)	-	-	-	-	-
- 	Percentile (%)	0.222	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
- 	Percentile (%)	0.254	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
- 	Percentile (%)	0.286	-	-	-	-	-
-carbon-oxygen lyase activity, acting on phosphates	FC (WS / NS)	2.74 (5.7 / 0)	0.45 (4.32 / 2.91)	0.47 (9.79 / 6.78)	0.86 (0.81 / 0)	-	0.83 (6.27 / 3.08)
- 	Percentile (%)	0.317	16.555	16.045	9.334	-	8.221
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.23 (0 / 8.37)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.873	99.876	99.817	99.765	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.36 (0 / 9.29)	-	-	-3.78 (0 / 12.75)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.905	-	-	99.203	-	99.875
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.37 (0 / 9.37)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.937	99.984	99.84	99.812	-	-
+L-lysine catabolic process	FC (WS / NS)	-3.5 (0 / 10.33)	-3.19 (0 / 8.12)	-	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.968	99.798	-	99.437	-	99.9
+L-lysine metabolic process	FC (WS / NS)	-3.57 (0 / 10.91)	-3.34 (0 / 9.12)	-	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	100	99.922	-	99.484	-	99.925

@@ -9,13 +9,13 @@ mediator complex	FC (WS / NS)	2.77 (25 / 2.81)	1 (1 / 0)	-	-	-	-
  	Percentile (%)	2.161	28.238	-	-	-	-
 polyhedral organelle	FC (WS / NS)	2.51 (10 / 0.94)	0.08 (4 / 3.75)	-	-0.86 (58 / 106)	-	-
  	Percentile (%)	3.389	51.453	-	64.97	-	-
-ribonucleoside-diphosphate reductase complex	FC (WS / NS)	2.33 (37 / 6.56)	0.05 (1 / 0.94)	1.93 (41 / 10)	0.87 (105 / 57)	1.86 (2.64 / 0)	0 (0 / 0)
- 	Percentile (%)	4.322	52.413	10.931	28.773	7.018	6.767
-nitrate reductase complex	FC (WS / NS)	1.66 (88 / 27.16)	1 (1 / 0)	1.89 (25 / 6)	0.46 (83 / 60)	1.46 (1.76 / 0)	0 (0 / 0)
- 	Percentile (%)	9.381	33.557	11.111	39.555	13.553	58.459
-actin cytoskeleton	FC (WS / NS)	1.66 (11 / 2.81)	1 (1 / 0)	-1 (0 / 1)	-	-	-
- 	Percentile (%)	9.627	30.19	70.33	-	-	-
-Smc5-Smc6 complex	FC (WS / NS)	1.63 (5 / 0.94)	-	0.44 (18 / 13)	-	-	-
- 	Percentile (%)	10.609	-	41.922	-	-	-
-mitochondrial proton-transporting ATP synthase, catalytic core	FC (WS / NS)	1.58 (16 / 4.68)	-1.93 (0 / 2.81)	-	0.47 (268 / 193)	-	-
- 	Percentile (%)	11.248	86.112	-	38.848	-	-
+nuclear pore	FC (WS / NS)	-2.72 (1 / 12.18)	-0.95 (0 / 0.94)	-1.58 (0 / 2)	-	-	-
+ 	Percentile (%)	96.906	72.359	81.922	-	-	-
+citrate lyase complex	FC (WS / NS)	-2.75 (15 / 106.77)	1 (1 / 0)	-2.81 (6 / 48)	-2.09 (23 / 101)	-3.7 (0 / 12)	-
+ 	Percentile (%)	97.004	32.435	92.673	79.745	97.665	-
+outer membrane-bounded periplasmic space	FC (WS / NS)	-3.08 (51 / 438.31)	-4.55 (0 / 22.48)	-5.79 (2 / 165)	-0.96 (424 / 823)	-3.32 (0 / 9)	0 (0 / 0)
+ 	Percentile (%)	97.741	98.682	99.219	66.066	96.387	71.992
+organelle inner membrane	FC (WS / NS)	-3.43 (1 / 20.6)	-1.93 (0 / 2.81)	-4.25 (0 / 18)	0.55 (583 / 398)	-1.58 (0 / 2)	-
+ 	Percentile (%)	98.183	86.784	97.237	35.949	81.16	-
+cytosolic large ribosomal subunit	FC (WS / NS)	-3.61 (2 / 35.59)	-4.72 (0 / 25.29)	-	-0.69 (1113 / 1796)	-4.17 (0 / 17)	-
+ 	Percentile (%)	98.281	98.921	-	62.354	98.632	-
