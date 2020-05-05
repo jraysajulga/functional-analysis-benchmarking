@@ -25,6 +25,7 @@ library(stringr)
 library(networkD3)
 library(tidyverse)
 library(reticulate)
+library(openxlsx)
 ```
 
 ## Directories
@@ -1223,19 +1224,33 @@ rank_table_filtered
 
 
 ### GO list exporting
+
 ```{r}
-for (i in 1:length(tools)){
-  write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
-              row.names=FALSE, quote=FALSE)
-  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/full/',
-                                          tolower(labels[i]), '.tabular'),
-              row.names=FALSE, col.names=FALSE, quote=FALSE)
-  write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/filtered/',
-                                          tolower(labels[i]), '.tabular'),
-              row.names=FALSE, col.names=FALSE, quote=FALSE)
-  write.table(filter_ontology_df(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
-                                          tolower(labels[i]), '.tabular'),
-              row.names=FALSE, col.names=FALSE, quote=FALSE)
+# for (i in 1:length(tools)){
+#   write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
+#               row.names=FALSE, quote=FALSE)
+#   write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/full/',
+#                                           tolower(labels[i]), '.tabular'),
+#               row.names=FALSE, col.names=FALSE, quote=FALSE)
+#   write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/filtered/',
+#                                           tolower(labels[i]), '.tabular'),
+#               row.names=FALSE, col.names=FALSE, quote=FALSE)
+#   write.table(filter_ontology_df(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
+#                                           tolower(labels[i]), '.tabular'),
+#               row.names=FALSE, col.names=FALSE, quote=FALSE)
+# } 
+modes <- list("normal" = tools,
+              "expanded" = tools_expanded,
+              "filtered" = tools_filtered)
+for (mode in c("normal", "expanded", "filtered")){
+  tools_selected <- modes[[mode]]
+  OUT <- createWorkbook()
+  for (i in 1:length(tools_selected)){
+    addWorksheet(OUT, labels[i])
+    writeData(OUT, sheet = labels[i], x = tools_selected[[i]], colNames = TRUE, rowNames = TRUE)
+  }
+  saveWorkbook(OUT, paste0('results/go_output/go_set_', mode, '.xlsx'))
+  
 }
 ```
 
