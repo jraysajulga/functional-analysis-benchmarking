@@ -1216,7 +1216,7 @@ for (mode in c("normal", "expanded", "filtered")){
 
 ### Venn Diagram
 ```{r}
-modes <- list("normal" = tools,
+modes <- list("normal" = tools_gos,
               "expanded" = tools_expanded)
 for (mode in c("normal", "expanded")){
   tools_selected <- modes[[mode]]
