@@ -1125,12 +1125,12 @@ get_rank_table <- function(name, tools, folder, ontology){
     n <- 5
     # tool_topn <- tool_topn[1:n]
     # n <- 5
-    # while (length(unique(tool_topn[(length(tool_topn) - n + 1):length(tool_topn)])) < 5){
-    #   n <- n + 1
-    # }
-    #tool_bottomn <- tool_topn[(length(tool_topn) - n + 1):length(tool_topn)]
+    while (length(unique(tool_gos[(length(tool_gos) - n + 1):length(tool_gos)])) < 5){
+      n <- n + 1
+    }
+    tool_bottomn <- unique(tool_gos[(length(tool_gos) - n + 1):length(tool_gos)])
     tool_topn <- c(tool_topn,
-                   tool_gos[(length(tool_gos) - n + 1):length(tool_gos)])
+                   tool_bottomn)
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
     n <- 5
     rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
