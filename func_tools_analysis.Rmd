@@ -1115,13 +1115,24 @@ get_rank_table <- function(name, tools, folder, ontology){
     #     n <- 15
     # }
     labels <- c("EggNOG", "MEGAN", "MetaGOmics", "MPA", "Prophane", "Unipept")
-    tool_topn <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
-    tool_topn <- tool_topn[tool_topn != "GO:0003674"] # filter out molecular_function
-    tool_topn <- tool_topn[!is.na(tool_topn)]
-    
-    tool_topn <- c(tool_topn[1:n],
-                   tool_topn[(length(tool_topn) - n + 1):length(tool_topn)])
+    tool_gos <- filterOntology(expand_gos(tools[which(labels == name)][[1]]$gos), ontology)
+    tool_gos <- tool_gos[tool_gos != "GO:0003674"] # filter out molecular_function
+    tool_gos <- tool_gos[!is.na(tool_gos)]
+    while (length(unique(tool_gos[1:n])) < 5){
+      n <- n + 1
+    }
+    tool_topn <- unique(tool_gos[1:n])
+    n <- 5
+    # tool_topn <- tool_topn[1:n]
+    # n <- 5
+    # while (length(unique(tool_topn[(length(tool_topn) - n + 1):length(tool_topn)])) < 5){
+    #   n <- n + 1
+    # }
+    #tool_bottomn <- tool_topn[(length(tool_topn) - n + 1):length(tool_topn)]
+    tool_topn <- c(tool_topn,
+                   tool_gos[(length(tool_gos) - n + 1):length(tool_gos)])
     rank_table <- data.frame(names = unlist(lapply(tool_topn, function(a) { c(Term(as.character(a)), ' ')})))
+    n <- 5
     rank_table[,"Fold Change"] <- rep(c('FC (WS / NS)', 'Percentile (%)'), n)
     for (i in 1:length(tools)){
         output <- sapply(1:length(tool_topn), function(j){

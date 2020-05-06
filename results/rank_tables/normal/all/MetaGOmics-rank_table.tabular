@@ -1,21 +1,21 @@
 GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
-dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	-
- 	Percentile (%)	0.035	-	-	1.157	-	-
-pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-	-
- 	Percentile (%)	0.071	-	-	-	-	-
-oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-	-
- 	Percentile (%)	0.106	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
- 	Percentile (%)	0.141	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
- 	Percentile (%)	0.177	-	-	-	-	-
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	-	-
- 	Percentile (%)	99.859	99.913	100	99.987	-	-
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	-	-
- 	Percentile (%)	99.894	99.913	100	99.819	-	-
-L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	-	-6.1 (1 / 135.8)
- 	Percentile (%)	99.929	-	-	99.707	-	99.656
-L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
- 	Percentile (%)	99.965	99.978	-	-	-	-
-L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
- 	Percentile (%)	100	99.978	-	-	-	-
+pyruvate oxidase activity	FC (WS / NS)	7.12 (138 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.051	-	-	-	-	-
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	7.12 (138 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.102	-	-	-	-	-
+response to wounding	FC (WS / NS)	6.64 (99 / 0)	2 (3 / 0)	-1 (0 / 1)	1.46 (1.76 / 0)	-	4.18 (34 / 0.94)
+ 	Percentile (%)	0.153	9.767	69.79	14.334	-	0.246
+serine-type endopeptidase inhibitor activity	FC (WS / NS)	6.64 (99 / 0)	-0.95 (0 / 0.94)	-1 (0 / 1)	1.46 (1.76 / 0)	-	3.2 (34 / 2.81)
+ 	Percentile (%)	0.204	73.839	68.348	14.334	-	1.277
+poly(ribitol phosphate) teichoic acid metabolic process	FC (WS / NS)	6.43 (85 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.255	-	-	-	-	-
+butyrate-acetoacetate CoA-transferase activity	FC (WS / NS)	-7.84 (0 / 228)	-	-	-4.52 (0 / 22)	-	-
+ 	Percentile (%)	99.796	-	-	99.258	-	-
+beta-lysine 5,6-aminomutase activity	FC (WS / NS)	-7.94 (0 / 245)	-	-	-	-	-
+ 	Percentile (%)	99.847	-	-	-	-	-
+glutaconate CoA-transferase activity	FC (WS / NS)	-8.15 (0 / 284)	-	-	-4 (0 / 15)	-	-
+ 	Percentile (%)	99.898	-	-	98.412	-	-
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.34 (0 / 323)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	-	-
+ 	Percentile (%)	99.949	99.913	100	99.987	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.34 (0 / 323)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	-	-
+ 	Percentile (%)	100	99.913	100	99.819	-	-

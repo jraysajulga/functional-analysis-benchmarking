@@ -1,21 +1,21 @@
 GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-tRNA wobble uridine modification	FC (WS / NS)	2.89 (6.39 / 0)	-0.08 (5.25 / 5.58)	0.22 (6.64 / 5.58)	1.99 (2.98 / 0)	-	-0.08 (3.81 / 4.08)
- 	Percentile (%)	0.016	75.166	22.635	6.66	-	66.416
-tRNA thio-modification	FC (WS / NS)	2.89 (6.39 / 0)	0.74 (5 / 2.58)	0.55 (6.67 / 4.25)	2.45 (4.46 / 0)	-	1.1 (4.32 / 1.49)
- 	Percentile (%)	0.031	13.481	11.81	5.441	-	6.917
-cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-1.06 (2 / 5.25)	-	-	-
- 	Percentile (%)	0.047	-	85.175	-	-	-
-NADH metabolic process	FC (WS / NS)	2.77 (5.81 / 0)	-	0.23 (10.53 / 8.8)	-	-	-
- 	Percentile (%)	0.062	-	21.524	-	-	-
-3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)
- 	Percentile (%)	0.078	14.168	8.984	-	-	8.571
-lysine catabolic process	FC (WS / NS)	-3.34 (0 / 9.16)	-	-2 (2 / 11.02)	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
- 	Percentile (%)	99.938	-	90.254	99.343	-	99.85
+tRNA wobble uridine modification	FC (WS / NS)	2.89 (6.39 / 0)	-0.08 (5.25 / 5.58)	-	1.99 (2.98 / 0)	-	-0.08 (3.81 / 4.08)
+ 	Percentile (%)	0.016	75.166	-	6.66	-	66.416
+tRNA thio-modification	FC (WS / NS)	2.89 (6.39 / 0)	0.74 (5 / 2.58)	1.32 (4 / 1)	2.45 (4.46 / 0)	-	1.1 (4.32 / 1.49)
+ 	Percentile (%)	0.031	13.481	8.103	5.441	-	6.917
+cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.047	-	-	-	-	-
+NADH metabolic process	FC (WS / NS)	2.77 (5.81 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.062	-	-	-	-	-
+3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.8 (5.64 / 2.81)	-	-	0.8 (5.78 / 2.91)
+ 	Percentile (%)	0.078	14.168	10.997	-	-	8.571
+lysine catabolic process	FC (WS / NS)	-3.34 (0 / 9.16)	-	-3.15 (0 / 7.85)	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.938	-	99.733	99.343	-	99.85
 regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
  	Percentile (%)	99.953	57.588	-	-	-	32.155
 regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
  	Percentile (%)	99.969	64.775	-	-	-	34.461
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.37)	-3.84 (0 / 13.33)	-	-
- 	Percentile (%)	99.984	99.84	99.937	99.812	-	-
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.34)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.984	99.84	100	99.812	-	-
 regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	1 (1 / 0)	-	-	-	0.14 (0 / -0.09)
  	Percentile (%)	100	10.414	-	-	-	32.907

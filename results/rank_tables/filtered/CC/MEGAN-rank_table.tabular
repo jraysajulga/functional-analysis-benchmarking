@@ -13,9 +13,9 @@ axonemal dynein complex	FC (WS / NS)	-1.93 (0 / 2.81)	-	-	-	-	-
  	Percentile (%)	96.489	-	-	-	-	-
 axoneme	FC (WS / NS)	-1.93 (0 / 2.81)	0 (0 / 0)	-	-	-	-
  	Percentile (%)	96.523	48.173	-	-	-	-
-HslUV protease complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-
- 	Percentile (%)	97.325	-	-	89.325	-	-
-nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-
- 	Percentile (%)	97.727	43.062	66.847	44.88	-	-
-type II protein secretion system complex	FC (WS / NS)	-2.69 (0 / 5.46)	-	0.47 (6.49 / 4.39)	-	-	-0.97 (1 / 2.91)
- 	Percentile (%)	99.164	-	12.445	-	-	93.671
+HslUV protease complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-2 (0 / 3)	-2.73 (0 / 5.61)	-	-
+ 	Percentile (%)	97.325	-	92.192	89.325	-	-
+nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.18 (5.67 / 6.55)	0 (0 / 0)	-	-
+ 	Percentile (%)	97.727	43.062	75.753	44.88	-	-
+type II protein secretion system complex	FC (WS / NS)	-2.69 (0 / 5.46)	-	-2.16 (0 / 3.46)	-	-	-0.97 (1 / 2.91)
+ 	Percentile (%)	99.164	-	93.562	-	-	93.671
