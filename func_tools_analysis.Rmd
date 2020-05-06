@@ -673,36 +673,36 @@ Term(setdiff(unipept_hits_unfiltered, unipept_hits))
 
 
 ```{r}
-
-print_mqome_cmds <- function(name, folder="full"){
-  func_colname <- 'gos'
-  cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
-                        " --int_file results/mqome/input/", folder, "/", name, "/", name, "_int.tab",
-                       " --pep_colname_int id",
-                       " --func_file results/mqome/input/", folder, "/", name, "/", name, "_func.tab",
-                       " --pep_colname_func id",
-                       " --func_colname ", func_colname," --ontology go",
-                       " --samps results/mqome/input/samples.tab",
-                       " --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab")
-  cmd_filt <- paste0("metaquantome filter",
-                     " --expand_file results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab",
-                     " --mode f --ontology go",
-                     " --samps results/mqome/input/samples.tab",
-                     " --min_peptides 2 --min_pep_nsamp 0 --min_children_non_leaf 2 --min_child_nsamp 1",
-                     " --qthreshold 0 --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_filtered.tab")
-  return(paste(cmd_expand, cmd_filt, sep='; '))
-}
-
-tool_hits <- list('EggNOG' = eggnog_hits,
-                    'MEGAN' = megan_hits,
-                    'MetaGOmics' = metagomics_hits,
-                    'MPA' = mpa_hits,
-                    'Prophane' = prophane_hits,
-                    'Unipept' = unipept_hits)
-paste(sapply(labels, function(label){
-  write_mqome_inputs(tool_hits[label], label, 'gos', 'gos', 'countNS', 'countWS', fill=TRUE, folder='hits')
-  print_mqome_cmds(label, folder="hits")
-}), collapse='; ')
+# 
+# print_mqome_cmds <- function(name, folder="full"){
+#   func_colname <- 'gos'
+#   cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
+#                         " --int_file results/mqome/input/", folder, "/", name, "/", name, "_int.tab",
+#                        " --pep_colname_int id",
+#                        " --func_file results/mqome/input/", folder, "/", name, "/", name, "_func.tab",
+#                        " --pep_colname_func id",
+#                        " --func_colname ", func_colname," --ontology go",
+#                        " --samps results/mqome/input/samples.tab",
+#                        " --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab")
+#   cmd_filt <- paste0("metaquantome filter",
+#                      " --expand_file results/mqome/output/", folder, "/",  name, "/", name, "_func_expanded.tab",
+#                      " --mode f --ontology go",
+#                      " --samps results/mqome/input/samples.tab",
+#                      " --min_peptides 2 --min_pep_nsamp 0 --min_children_non_leaf 2 --min_child_nsamp 1",
+#                      " --qthreshold 0 --outfile results/mqome/output/", folder, "/",  name, "/", name, "_func_filtered.tab")
+#   return(paste(cmd_expand, cmd_filt, sep='; '))
+# }
+# 
+# tool_hits <- list('EggNOG' = eggnog_hits,
+#                     'MEGAN' = megan_hits,
+#                     'MetaGOmics' = metagomics_hits,
+#                     'MPA' = mpa_hits,
+#                     'Prophane' = prophane_hits,
+#                     'Unipept' = unipept_hits)
+# paste(sapply(labels, function(label){
+#   write_mqome_inputs(tool_hits[label], label, 'gos', 'gos', 'countNS', 'countWS', fill=TRUE, folder='hits')
+#   print_mqome_cmds(label, folder="hits")
+# }), collapse='; ')
 ```
 
 ```{r}
@@ -720,35 +720,8 @@ unipept_hits_expanded <- import_mqome_output('unipept', 'expanded', folder="hits
 unipept_hits_filtered <- import_mqome_output('unipept', 'filtered', folder="hits")
 ```
 
-```{r}
-data.frame(gos = unipept_hits, name = Term(unipept_hits))
-```
-
-```{r}
-unipept_hits_expanded
-```
-```{r}
-unipept_hits_filtered[unipept_hits_filtered$countWS_n_samp_children != 0,]
-```
-```{r}
-tools_hits_filtered <- list(eggnog_hits_filtered,
-                            megan_hits_filtered,
-                            metagomics_hits_filtered,
-                            mpa_hits_filtered,
-                            prophane_hits_filtered,
-                            unipept_hits_filtered)
-tools_hits_filtered
-# sapply(tools_hits_filtered, function(tool){
-#   print(tool[tool$countWS_n_samp_children != 0,])
-# })
-```
-
-
 Let's write out the peptides associated with 
 eggNOG, metaGOmics, and unipept and see what BLAST2GO gives.
-```{r}
-peps_blast2go
-```
 
 ```{r}
 peps_blast2go <- unique(c(as.character(unipept_pep$X.peptide), target_peptides, eggnog_peptide))
@@ -951,10 +924,10 @@ create_summary_df <- function(ontology){
           get_exclusive(sapply(tools_gos, function(tool){
             filter_ontology_df(tool, ontology)$gos
           })),
-          sapply(tools_mqome, function(tool){
+          sapply(tools_expanded, function(tool){
             length(filter_ontology_df(tool, ontology)$gos)
           }),
-          get_exclusive(sapply(tools_mqome, function(tool){
+          get_exclusive(sapply(tools_expanded, function(tool){
             filter_ontology_df(tool, ontology)$gos
           }))
     )
@@ -1043,7 +1016,7 @@ generate_overlap_plot(tools_gos, tools_expanded, "BP")
 generate_overlap_plot(tools_gos, tools_expanded, "CC")
 ```
 
-## Unipept and MetaGOmics
+## Correlation Plots
 
 This is comparing the estimated fold changes for GO terms for the two tools that natively use GO terms, Unipept and MetaGOmics. 
 
@@ -1226,19 +1199,6 @@ rank_table_filtered
 ### GO list exporting
 
 ```{r}
-# for (i in 1:length(tools)){
-#   write.table(tools[i], file=paste0('results/go_output/full/', tolower(labels[i]), '.tabular'),
-#               row.names=FALSE, quote=FALSE)
-#   write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/full/',
-#                                           tolower(labels[i]), '.tabular'),
-#               row.names=FALSE, col.names=FALSE, quote=FALSE)
-#   write.table(tools[[i]]$gos, file=paste0('results/go_output/go_only/filtered/',
-#                                           tolower(labels[i]), '.tabular'),
-#               row.names=FALSE, col.names=FALSE, quote=FALSE)
-#   write.table(filter_ontology_df(tools[[i]], "MF")$gos, file=paste0('results/go_output/go_only/MF/',
-#                                           tolower(labels[i]), '.tabular'),
-#               row.names=FALSE, col.names=FALSE, quote=FALSE)
-# } 
 modes <- list("normal" = tools,
               "expanded" = tools_expanded,
               "filtered" = tools_filtered)
@@ -1254,6 +1214,22 @@ for (mode in c("normal", "expanded", "filtered")){
 }
 ```
 
+### Venn Diagram
+```{r}
+modes <- list("normal" = tools,
+              "expanded" = tools_expanded)
+for (mode in c("normal", "expanded")){
+  tools_selected <- modes[[mode]]
+  for (ontology in c("MF", "CC", "BP", "all")){
+    for (i in 1:length(tools_selected)){
+      write.table(filter_ontology_df(tools_selected[[i]], ontology)$gos,
+                  file=paste0('results/venn_diagram_input/', mode, '/',
+                              ontology, '/', tolower(labels[i]), '.tabular'),
+                  row.names=FALSE, col.names=FALSE, quote=FALSE)
+    }
+  }
+}
+```
 
 
 ### Word cloud
