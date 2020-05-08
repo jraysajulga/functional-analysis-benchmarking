@@ -1,0 +1,21 @@
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	3.02 (7.11 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.032	-	-	-	-	-
+cell wall polysaccharide metabolic process	FC (WS / NS)	3.01 (7.07 / 0)	-	0.07 (5.91 / 5.58)	-	-	0.52 (4.58 / 2.91)
+ 	Percentile (%)	0.063	-	34.859	-	-	12.632
+dextransucrase activity	FC (WS / NS)	2.94 (6.7 / 0)	-	-	1.93 (2.81 / 0)	-	-
+ 	Percentile (%)	0.095	-	-	6.895	-	-
+hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	0.07 (5.49 / 5.17)	-	-	0.52 (4.58 / 2.91)
+ 	Percentile (%)	0.127	-	34.516	-	-	12.657
+racemase and epimerase activity, acting on hydroxy acids and derivatives	FC (WS / NS)	2.92 (6.55 / 0)	-	-2.01 (1 / 7.04)	-	-	-
+ 	Percentile (%)	0.159	-	96.841	-	-	-
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.23 (0 / 8.37)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.873	99.876	99.817	99.765	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.36 (0 / 9.29)	-	-	-3.78 (0 / 12.75)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.905	-	-	99.203	-	99.875
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.37 (0 / 9.37)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.84 (0 / 13.33)	-	-
+ 	Percentile (%)	99.937	99.984	99.84	99.812	-	-
+L-lysine catabolic process	FC (WS / NS)	-3.5 (0 / 10.33)	-3.19 (0 / 8.12)	-	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.968	99.798	-	99.437	-	99.9
+L-lysine metabolic process	FC (WS / NS)	-3.57 (0 / 10.91)	-3.34 (0 / 9.12)	-	-3.79 (0 / 12.81)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	100	99.922	-	99.484	-	99.925

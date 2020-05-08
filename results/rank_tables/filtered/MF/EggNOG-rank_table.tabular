@@ -1,0 +1,21 @@
+GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)
+ 	Percentile (%)	0.048	12.304	9.297	-	-	8.019
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	-	-
+ 	Percentile (%)	0.119	8.225	-	85.839	-	-
+4-hydroxy-tetrahydrodipicolinate synthase	FC (WS / NS)	2.56 (4.32 / -0.09)	0.77 (5.49 / 2.81)	1.67 (5.36 / 1)	1.26 (1.4 / 0)	-	1.13 (5.36 / 1.91)
+ 	Percentile (%)	0.191	11.501	5.263	8.424	-	6.293
+oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor	FC (WS / NS)	2.52 (4.75 / 0)	2.11 (3.32 / 0)	-	-	-	0.19 (2.32 / 1.91)
+ 	Percentile (%)	0.215	2.106	-	-	-	24.488
+NAD+ synthase activity	FC (WS / NS)	2.5 (4.64 / 0)	0.23 (4.39 / 3.58)	-	0.03 (4.94 / 4.81)	-	0.18 (4.91 / 4.23)
+ 	Percentile (%)	0.239	20.562	-	35.875	-	25.854
+methionine gamma-lyase activity	FC (WS / NS)	-3.03 (0 / 7.19)	-1.7 (1.58 / 7.39)	-3.03 (0 / 7.17)	-3.81 (0 / 12.98)	-	-3.05 (0 / 7.3)
+ 	Percentile (%)	99.26	94.818	99.361	99.492	-	99.928
+3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.05 (0 / 7.3)	-3.51 (0 / 10.37)	-	-1.93 (0 / 2.81)	-	-
+ 	Percentile (%)	99.307	100	-	86.057	-	-
+transmembrane signaling receptor activity	FC (WS / NS)	-3.16 (0 / 7.96)	-	-	-	-	0.01 (6.98 / 6.92)
+ 	Percentile (%)	99.69	-	-	-	-	55.663
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.881	99.866	99.902	99.71	-	-
+peptidase regulator activity	FC (WS / NS)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.72 (2 / 8.88)	-1.15 (5.37 / 13.11)	-	-0.34 (5.49 / 7.2)
+ 	Percentile (%)	99.928	95.219	90.31	83.733	-	82.596

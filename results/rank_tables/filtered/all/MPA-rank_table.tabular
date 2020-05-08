@@ -1,0 +1,21 @@
+GO Term	Fold Change	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
+biotin binding	FC (WS / NS)	3.58 (10.93 / 0)	-0.32 (1 / 1.49)	-	0.89 (7.02 / 3.32)	-	0.98 (7.37 / 3.23)
+ 	Percentile (%)	0.073	68.068	-	8.51	-	6.904
+heat shock protein binding	FC (WS / NS)	3.48 (10.12 / 0)	-	-	0.06 (9.59 / 9.14)	-	0.32 (6.57 / 5.08)
+ 	Percentile (%)	0.145	-	-	38.219	-	17.224
+oxaloacetate metabolic process	FC (WS / NS)	3.4 (9.56 / 0)	-	1.34 (5.52 / 1.58)	0.31 (7.59 / 5.93)	-	0.5 (5.95 / 3.91)
+ 	Percentile (%)	0.218	-	6.754	16.97	-	12.262
+phosphoenolpyruvate carboxylase activity	FC (WS / NS)	3.4 (9.56 / 0)	1.38 (5.46 / 1.49)	1.34 (5.52 / 1.58)	1.18 (5.81 / 2)	-	0.72 (5.98 / 3.23)
+ 	Percentile (%)	0.29	4.848	6.787	6.985	-	8.81
+carbon fixation	FC (WS / NS)	3.4 (9.56 / 0)	-0.78 (2 / 4.15)	0.05 (7.87 / 7.56)	1.04 (5.83 / 2.32)	-	0.64 (5.98 / 3.49)
+ 	Percentile (%)	0.363	76.069	35.139	7.575	-	10.104
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.32)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.23 (0 / 8.37)	-	-
+ 	Percentile (%)	99.71	99.881	99.866	99.902	-	-
+polyol catabolic process	FC (WS / NS)	-3.84 (0 / 13.35)	-0.31 (5.55 / 7.11)	-0.62 (6.38 / 10.34)	-0.18 (9.33 / 10.69)	-	-0.84 (3.46 / 6.98)
+ 	Percentile (%)	99.782	67.638	89.101	71.766	-	91.046
+acyl-CoA dehydrogenase activity	FC (WS / NS)	-3.85 (0 / 13.42)	-0.69 (1 / 2.23)	-1.01 (4.58 / 10.29)	-	-	-1.1 (3.58 / 8.81)
+ 	Percentile (%)	99.855	75.042	92.11	-	-	94.391
+pyruvate, phosphate dikinase activity	FC (WS / NS)	-3.9 (0 / 13.88)	-	-0.23 (6.15 / 7.39)	-1.16 (2.58 / 6.99)	0.07 (-7.82 / -7.49)	-0.98 (3.17 / 7.23)
+ 	Percentile (%)	99.927	-	83.517	87.605	38.028	93.887
+CoA-transferase activity	FC (WS / NS)	-4.02 (0 / 15.26)	-	-0.95 (6.13 / 12.75)	-	-	-0.91 (4.64 / 9.63)
+ 	Percentile (%)	100	-	90.037	-	-	91.873

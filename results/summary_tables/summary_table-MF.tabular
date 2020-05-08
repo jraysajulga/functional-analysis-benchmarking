@@ -1,0 +1,8 @@
+EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+Type of functional annotation	Proteins	eggNOG orthologous groups	GO terms	Proteins	Protein families, eggNOG orthologous groups	GO terms
+Total number of annotation groups	18440	1665	2829	23169	532	2036
+Total (and unique) number of translated GO terms for all ontologies	533066 (6155)	76529 (4155)	2829 (2829)	77204 (1056)	43012 (1267)	2036 (2036)
+Total (and unique) number of translated molecular function GO terms	88582 (1411)	21212 (1613)	900 (900)	42084 (634)	12600 (474)	1109 (1109)
+Total number of molecular function GO terms exclusive to the tool	323	347	139	22	4	131
+Total number of molecular function expanded GO terms	1467	1694	1002	973	518	1560
+Total number of molecular function expanded GO terms exclusive to the tool	260	277	109	16	2	137

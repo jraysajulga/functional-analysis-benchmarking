@@ -1,0 +1,21 @@
+GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
+cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.024	-	-	-	-	-
+3-deoxy-7-phosphoheptulonate synthase activity	FC (WS / NS)	2.73 (5 / -0.09)	0.64 (6.49 / 3.81)	0.79 (5.58 / 2.81)	-	-	0.8 (5.78 / 2.91)
+ 	Percentile (%)	0.048	12.304	9.297	-	-	8.019
+positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	0.072	-	-	-	-	-
+tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
+ 	Percentile (%)	0.096	-	11.658	-	-	-
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	-	-
+ 	Percentile (%)	0.119	8.225	-	85.839	-	-
+regulation of cell morphogenesis involved in differentiation	FC (WS / NS)	-3.27 (0 / 8.65)	-	-	-	-	-
+ 	Percentile (%)	99.904	-	-	-	-	-
+peptidase regulator activity	FC (WS / NS)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.72 (2 / 8.88)	-1.15 (5.37 / 13.11)	-	-0.34 (5.49 / 7.2)
+ 	Percentile (%)	99.928	95.219	90.31	83.733	-	82.596
+regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	-
+ 	Percentile (%)	99.952	58.241	-	-	-	-
+regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	-	-	-	-	-
+ 	Percentile (%)	99.976	-	-	-	-	-
+regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	-	-	-	-	-
+ 	Percentile (%)	100	-	-	-	-	-

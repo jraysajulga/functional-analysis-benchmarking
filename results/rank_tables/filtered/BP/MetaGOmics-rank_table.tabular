@@ -1,0 +1,21 @@
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.098	-	-	-	-	-
+negative regulation of purine nucleobase metabolic process	FC (WS / NS)	2.43 (4.39 / 0)	-	0.1 (5.75 / 5.29)	-	-	-
+ 	Percentile (%)	1.033	-	28.619	-	-	-
+symbiont process benefiting host	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-
+ 	Percentile (%)	1.131	-	-	-	-	-
+xyloglucan catabolic process	FC (WS / NS)	2.41 (4.32 / 0)	-	-	-	-	-
+ 	Percentile (%)	1.181	-	-	-	-	-
+tRNA 4-thiouridine biosynthesis	FC (WS / NS)	2.32 (4 / 0)	-	-	-	-	-
+ 	Percentile (%)	1.279	-	-	-	-	-
+tryptophan catabolic process	FC (WS / NS)	-3.07 (0 / 7.4)	-	-2.28 (1 / 8.74)	-	-	-
+ 	Percentile (%)	99.557	-	97.593	-	-	-
+poly(hydroxyalkanoate) metabolic process	FC (WS / NS)	-3.14 (0 / 7.81)	1.84 (2.58 / 0)	-	-	-	1.73 (2 / -0.09)
+ 	Percentile (%)	99.754	2.699	-	-	-	2.086
+pyrimidine ribonucleoside diphosphate metabolic process	FC (WS / NS)	-3.15 (0 / 7.86)	0.34 (6.25 / 4.71)	-	-	-	-
+ 	Percentile (%)	99.803	15.691	-	-	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.36 (0 / 9.29)	-	-	-3.78 (0 / 12.75)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.951	-	-	99.274	-	99.892
+L-lysine catabolic process	FC (WS / NS)	-3.5 (0 / 10.33)	-3.19 (0 / 8.12)	-	-3.79 (0 / 12.81)	-	-
+ 	Percentile (%)	100	99.761	-	99.346	-	-

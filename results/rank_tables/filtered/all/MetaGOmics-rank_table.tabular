@@ -1,0 +1,21 @@
+GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
+dextransucrase activity	FC (WS / NS)	2.94 (6.7 / 0)	-	-	1.93 (2.81 / 0)	-	-
+ 	Percentile (%)	0.049	-	-	6.609	-	-
+hemicellulose metabolic process	FC (WS / NS)	2.92 (6.55 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.098	-	-	-	-	-
+transferase activity, transferring acyl groups, acyl groups converted into alkyl on transfer	FC (WS / NS)	2.89 (6.39 / 0)	-	-	-	-	0.68 (4.58 / 2.49)
+ 	Percentile (%)	0.148	-	-	-	-	9.205
+pyruvate oxidase activity	FC (WS / NS)	2.83 (6.11 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.197	-	-	-	-	-
+glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
+ 	Percentile (%)	0.246	-	-	-	-	-
+pyrimidine ribonucleoside diphosphate metabolic process	FC (WS / NS)	-3.15 (0 / 7.86)	0.34 (6.25 / 4.71)	-	-	-	-
+ 	Percentile (%)	99.803	15.691	-	-	-	-
+glutaconate CoA-transferase activity	FC (WS / NS)	-3.19 (0 / 8.12)	-	-	-3.14 (0 / 7.85)	-	-
+ 	Percentile (%)	99.852	-	-	93.464	-	-
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.23 (0 / 8.37)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.84 (0 / 13.32)	-	-
+ 	Percentile (%)	99.902	99.881	99.866	99.71	-	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.36 (0 / 9.29)	-	-	-3.78 (0 / 12.75)	-	-3.02 (0 / 7.09)
+ 	Percentile (%)	99.951	-	-	99.274	-	99.892
+L-lysine catabolic process	FC (WS / NS)	-3.5 (0 / 10.33)	-3.19 (0 / 8.12)	-	-3.79 (0 / 12.81)	-	-
+ 	Percentile (%)	100	99.761	-	99.346	-	-

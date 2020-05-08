@@ -1,0 +1,9 @@
+id	name	namespace	NS_mean	WS_mean	countNS	countWS	countNS_n_peptide	countWS_n_peptide	countNS_n_samp_children	countWS_n_samp_children
+GO:0003674	molecular_function	molecular_function	3.906890595608519	3.906890595608519	3.906890595608519	3.906890595608519	15.0	15.0	2.0	2.0
+GO:0004854	xanthine dehydrogenase activity	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0
+GO:0005488	binding	molecular_function	2.807354922057604	2.807354922057604	2.807354922057604	2.807354922057604	7.0	7.0	3.0	3.0
+GO:0009055	electron transfer activity	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0
+GO:0016491	oxidoreductase activity	molecular_function	2.807354922057604	2.807354922057604	2.807354922057604	2.807354922057604	7.0	7.0	3.0	3.0
+GO:0018492	carbon-monoxide dehydrogenase (acceptor) activity	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0
+GO:0046872	metal ion binding	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0
+GO:0051537	2 iron, 2 sulfur cluster binding	molecular_function	0.0	0.0	0.0	0.0	1.0	1.0	0.0	0.0

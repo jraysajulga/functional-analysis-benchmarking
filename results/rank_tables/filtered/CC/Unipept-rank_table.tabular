@@ -1,0 +1,21 @@
+GO Term	Fold Change	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
+Smc5-Smc6 complex	FC (WS / NS)	1.88 (2.32 / -0.09)	-	0.14 (4.17 / 3.7)	-	-	-
+ 	Percentile (%)	1.438	-	25.911	-	-	-
+exocyst	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	1.654	-	-	-	-	-
+presynaptic active zone	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	2.014	-	-	-	-	-
+condensin complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-2.08 (0 / 3.23)	0.13 (5.25 / 4.7)	-	-	-
+ 	Percentile (%)	2.157	91.521	26.312	-	-	-
+bacterial-type flagellum basal body, MS ring	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
+ 	Percentile (%)	2.553	-	-	-	-	-
+spliceosomal complex	FC (WS / NS)	-1.69 (0 / 2.23)	1 (1 / 0)	-	-	-	-
+ 	Percentile (%)	97.159	7.332	-	-	-	-
+pilus	FC (WS / NS)	-1.89 (0 / 2.71)	-0.66 (1.58 / 3.08)	-1.58 (0 / 2)	-	-	-
+ 	Percentile (%)	98.274	74.66	94.015	-	-	-
+apoplast	FC (WS / NS)	-1.97 (0 / 2.91)	0.23 (3.58 / 2.91)	2.45 (4.46 / 0)	-	-	-
+ 	Percentile (%)	98.562	18.725	0.535	-	-	-
+nuclear pore	FC (WS / NS)	-2.2 (0 / 3.61)	1 (2.81 / 0.91)	-1 (0 / 1)	-	-	-
+ 	Percentile (%)	99.209	9.41	90.806	-	-	-
+bacterial-type flagellum hook	FC (WS / NS)	-2.2 (0 / 3.61)	-	0 (0 / 0)	-	-	-
+ 	Percentile (%)	99.245	-	57.84	-	-	-
