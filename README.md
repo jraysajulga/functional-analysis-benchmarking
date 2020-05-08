@@ -1,4 +1,4 @@
-#Survey of metaproteomics software tools for functional microbiome analysis
+# Survey of metaproteomics software tools for functional microbiome analysis
 *R. Sajulga, C. Easterly, M. Riffle, B. Mesuere, T. Muth, S. Mehta, P. Kumar, J. Johnson, B. Gruening, H. Schiebenhoefer, C. A. Kolmeder, S. Fuchs, B. L. Nunn, J. Rudney, T. J. Griffin, P. D. Jagtap*
 
 This repository details the analysis performed for the functional tools survey manuscript.
