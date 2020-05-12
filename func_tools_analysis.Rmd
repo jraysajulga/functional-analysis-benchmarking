@@ -223,7 +223,7 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
     select(-X) %>%
     rename(peptides = X.peptides)
 
-unipept_all <- inner_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
+unipept_all <- full_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(countNS = peptides.x, countWS = peptides.y) %>%
     select(gos = GO.term, name = Name, countWS, countNS)
 unipept_all <- calculate_fold_change(unipept_all)
@@ -300,7 +300,7 @@ prophane_NS <- read.delim(paste0(tools_dir, "prophane_results/summary_NS.txt"),
          ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
          ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
          ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane <- data.table(inner_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
+prophane <- data.table(full_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
     mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=",")),
            ns = replace(ns, ns=='-', 0),
            ws = replace(ws, ws=='-', 0)) %>%
@@ -652,7 +652,7 @@ filter_go_mf <- function(go_list){
   go_processed[2,][Ontology(go_processed[2,]) == "MF"]
 }
 
-unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737ALL_Galaxy3-[Unipept_pept2go_on_data_1_tsv].tabular') %>%
+unipept_pep <- read.delim('data/tool_outputs/func_tools/unipept_results/737all-unipept-pept2go.tabular') %>%
   filter(str_detect(go_terms, go_target)) %>%
   mutate(go_coverage = add_coverage(go_terms, go_protein_counts, total_protein_count),
          filtered_gos = filter_coverages(go_coverage),
@@ -1084,16 +1084,6 @@ for (i in 1:5){
 #                   "rank_in_unipept" = 1:5,
 #                   "rank_in_metagomics" = u2m_ranks)
 
-```
-
-#### How Unipept Ranks MetaGOmics' top 5
-```{r echo=FALSE, results='asis'}
-kable(m2u)
-```
-
-#### How MetaGOmics ranks Unipept's top 5
-```{r echo=FALSE, results='asis'}
-kable(u2m)
 ```
 
 

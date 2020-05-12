@@ -1,21 +1,21 @@
 GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
-dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	-
- 	Percentile (%)	0.035	-	-	1.157	-	-
-pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-	-
- 	Percentile (%)	0.071	-	-	-	-	-
-oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-	-
- 	Percentile (%)	0.106	-	-	-	-	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
- 	Percentile (%)	0.141	-	-	-	-	-
+dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	NA (101 / NA)
+ 	Percentile (%)	0.035	-	-	1.157	-	92.02
+pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	NA (NA / 0)	NA (82 / NA)
+ 	Percentile (%)	0.071	-	-	-	24.006	92.048
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	6.13 (69 / 0)	-	-	-	NA (NA / 0)	-
+ 	Percentile (%)	0.106	-	-	-	24.006	-
+glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	NA (65 / NA)
+ 	Percentile (%)	0.141	-	-	-	-	92.077
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
  	Percentile (%)	0.177	-	-	-	-	-
-beta-lysine 5,6-aminomutase activity	FC (WS / NS)	-7.54 (0 / 185)	-	-	-	-	-
- 	Percentile (%)	99.753	-	-	-	-	-
-lysine 2,3-aminomutase activity	FC (WS / NS)	-7.74 (0 / 213)	-	-7.29 (1 / 311)	-5 (0 / 31)	-	-7.13 (1 / 280.03)
- 	Percentile (%)	99.788	-	99.7	99.81	-	99.951
-glutaconate CoA-transferase activity	FC (WS / NS)	-8.13 (0 / 279)	-	-	-4 (0 / 15)	-	-
- 	Percentile (%)	99.823	-	-	98.412	-	-
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	-	-
- 	Percentile (%)	99.859	99.913	100	99.987	-	-
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	-	-
- 	Percentile (%)	99.894	99.913	100	99.819	-	-
+beta-lysine 5,6-aminomutase activity	FC (WS / NS)	-7.54 (0 / 185)	-	-	-	NA (NA / 0)	NA (NA / 153.6)
+ 	Percentile (%)	99.753	-	-	-	59.065	73.207
+lysine 2,3-aminomutase activity	FC (WS / NS)	-7.74 (0 / 213)	-	-7.29 (1 / 311)	-5 (0 / 31)	NA (0 / NA)	-7.13 (1 / 280.03)
+ 	Percentile (%)	99.788	-	99.7	99.81	78.745	58.629
+glutaconate CoA-transferase activity	FC (WS / NS)	-8.13 (0 / 279)	-	-	-4 (0 / 15)	NA (NA / 0)	NA (NA / 339.03)
+ 	Percentile (%)	99.823	-	-	98.412	36.984	73.091
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	NA (NA / 0)	NA (NA / 369.94)
+ 	Percentile (%)	99.859	99.913	100	99.987	57.464	73.063
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	NA (NA / 0)	NA (NA / 240.7)
+ 	Percentile (%)	99.894	99.913	100	99.819	57.464	73.149

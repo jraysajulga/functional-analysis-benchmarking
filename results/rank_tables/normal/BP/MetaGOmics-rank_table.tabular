@@ -3,19 +3,19 @@ cell wall polysaccharide metabolic process	FC (WS / NS)	5.36 (40 / 0)	-	1 (1 / 0
  	Percentile (%)	0.318	-	31.051	-	-	-
 hemicellulose metabolic process	FC (WS / NS)	4.81 (27 / 0)	-	1 (1 / 0)	-	-	-
  	Percentile (%)	0.566	-	31.051	-	-	-
-negative regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0.46 (54 / 39)	-	-	-
- 	Percentile (%)	0.707	-	41.682	-	-	-
+negative regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0.46 (54 / 39)	-	-	NA (23 / NA)
+ 	Percentile (%)	0.707	-	41.682	-	-	82.944
 regulation of purine nucleobase metabolic process	FC (WS / NS)	4.46 (21 / 0)	-	0.46 (54 / 39)	-	-	-
  	Percentile (%)	0.742	-	41.682	-	-	-
-xyloglucan metabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	-
- 	Percentile (%)	0.778	-	-	-	-	-
-L-phenylalanine catabolic process	FC (WS / NS)	-7.04 (0 / 131)	-	-2.34 (31 / 161)	-	0 (0 / 0)	-
- 	Percentile (%)	99.54	-	90.571	-	75.564	-
-lysine catabolic process	FC (WS / NS)	-7.29 (4 / 783)	-7.14 (0 / 140.48)	-	-	-	-
- 	Percentile (%)	99.647	99.978	-	-	-	-
-L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	-	-6.1 (1 / 135.8)
- 	Percentile (%)	99.929	-	-	99.707	-	99.656
-L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
- 	Percentile (%)	99.965	99.978	-	-	-	-
-L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-	-
- 	Percentile (%)	100	99.978	-	-	-	-
+xyloglucan metabolic process	FC (WS / NS)	4.39 (20 / 0)	-	-	-	-	NA (NA / 4.68)
+ 	Percentile (%)	0.778	-	-	-	-	60.328
+L-phenylalanine catabolic process	FC (WS / NS)	-7.04 (0 / 131)	-	-2.34 (31 / 161)	-	NA (0 / NA)	NA (NA / 0.94)
+ 	Percentile (%)	99.54	-	90.571	-	70.643	68.799
+lysine catabolic process	FC (WS / NS)	-7.29 (4 / 783)	-7.14 (0 / 140.48)	-	-	NA (NA / 0)	-
+ 	Percentile (%)	99.647	99.978	-	-	50.363	-
+L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	NA (NA / 0)	-6.1 (1 / 135.8)
+ 	Percentile (%)	99.929	-	-	99.707	50.363	58.456
+L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	NA (NA / 0)	-
+ 	Percentile (%)	99.965	99.978	-	-	50.363	-
+L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	NA (NA / 0)	-
+ 	Percentile (%)	100	99.978	-	-	50.363	-
