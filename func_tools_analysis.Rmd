@@ -225,6 +225,7 @@ unipeptWS <- lapply(unipept_results_WS, function(i) {
 
 unipept_all <- full_join(unipeptNS, unipeptWS, by = c("GO.term", "Name")) %>%
     mutate(countNS = peptides.x, countWS = peptides.y) %>%
+    mutate_each(funs(replace(., which(is.na(.)), 0))) %>%
     select(gos = GO.term, name = Name, countWS, countNS)
 unipept_all <- calculate_fold_change(unipept_all)
 unipept_all$namespace <- Ontology(unipept_all$gos)
@@ -233,6 +234,10 @@ unipept_all
 # sum(unipeptNS$peptides) 
 # sum(unipeptWS$peptides) / sum(unipeptNS$peptides)
 ```
+```{r}
+unipept_all_old
+```
+
 
 Top *n*:
 ```{r echo=FALSE, results='asis'}
@@ -288,7 +293,7 @@ prophane_WS <- read.delim(paste0(tools_dir, "prophane_results/summary_WS.txt"),
                           sep = "\t", stringsAsFactors = FALSE) %>%
   filter(level == 'group') %>%
   select(members_identifier,
-         ws = quant..sample_737..mean.,
+         ws = raw_quant..sample_737..mean.,
          ws_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
          ws_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
          ws_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
@@ -296,14 +301,17 @@ prophane_NS <- read.delim(paste0(tools_dir, "prophane_results/summary_NS.txt"),
                           sep = "\t", stringsAsFactors = FALSE) %>% 
   filter(level == 'group') %>%
   select(members_identifier,
-         ns = quant..sample_737..mean.,
+         ns = raw_quant..sample_737..mean.,
          ns_go1 = task_6..fun_from_TIGRFAMs_15_cut_tc..tigrfam2GO,
          ns_go2 = task_7..fun_from_PFAMs_32..pfam2GO,
          ns_go3 = task_8..fun_from_eggNog_4.5.1..og2GO)
-prophane <- data.table(full_join(prophane_NS, prophane_WS, by = c("members_identifier")) %>%
-    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3, sep=",")),
+prophane <- data.table(full_join(prophane_NS, prophane_WS, 
+                                 by = c("members_identifier")) %>%
+    mutate(gos = gsub(" ","", paste(ns_go1, ws_go1, ns_go2, 
+                                    ws_go2, ns_go3, ws_go3, sep=",")),
            ns = replace(ns, ns=='-', 0),
            ws = replace(ws, ws=='-', 0)) %>%
+    mutate_each(funs(replace(., which(is.na(.)), 0))) %>%
     select(id = members_identifier, countWS = ws, countNS = ns, gos, ns_go1, ws_go1, ns_go2, ws_go2, ns_go3, ws_go3))
 prophane$gos <- sapply(strsplit(prophane$gos,","), function(terms) {
    paste(terms[terms != "-" & terms != ""], collapse = ",")
@@ -1137,10 +1145,14 @@ get_rank_table <- function(name, tools, folder, ontology){
             if (length(ranks) > 0){
                 term <- tool[rank,]
                 list(paste(ifelse(is.null(term$countWS) && is.null(term$countNS),
-                                       paste0('(', round(as.numeric(term$log2ratio), digits=2), ')'),
-                                       paste0(round(as.numeric(term$log2ratio), digits=2),
-                                              ' (', round(as.numeric(term$countWS), digits=2), ' / ',
-                                                    round(as.numeric(term$countNS), digits=2), ')'))),
+                                       paste0('(', round(as.numeric(term$log2ratio),
+                                                         digits=2), ')'),
+                                       paste0(round(as.numeric(term$log2ratio),
+                                                    digits=2),
+                                              ' (', round(as.numeric(term$countWS),
+                                                          digits=2), ' / ',
+                                                    round(as.numeric(term$countNS),
+                                                          digits=2), ')'))),
                      round(as.numeric(rank[[1]] / nrow(tool) * 100), digits=3))
             } else {
                 list('-','-')

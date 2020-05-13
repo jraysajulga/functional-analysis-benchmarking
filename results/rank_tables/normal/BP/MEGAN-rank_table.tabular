@@ -1,21 +1,21 @@
 GO Term	Fold Change	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
-metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.46 (43 / 0)	-	2.43 (4.39 / 0)	0.03 (0.02 / 0)	-0.74 (1529 / 2554.93)
- 	Percentile (%)	0.12	0.038	-	3.224	0.025	44.742
-organic substance metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-	-	0.03 (0.02 / 0)	-0.93 (1 / 2.81)
- 	Percentile (%)	0.12	0.043	-	-	0.025	46.961
-cellular process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-0.11 (32999 / 35687)	-	0.03 (0.02 / 0)	-
- 	Percentile (%)	0.12	0.043	53.093	-	0.025	-
-cellular metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-0.15 (29166 / 32341)	0.91 (0.88 / 0)	0.03 (0.02 / 0)	-1.85 (12 / 45.89)
- 	Percentile (%)	0.12	0.043	53.234	22.155	0.025	53.558
-small molecule metabolic process	FC (WS / NS)	5.16 (106 / 2)	4.75 (26 / 0)	-0.21 (16474 / 19000)	-	0 (0 / 0)	-
- 	Percentile (%)	0.12	0.125	53.729	-	0.775	-
-fatty acid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	NA (NA / 0)	-
- 	Percentile (%)	100	88.986	91.198	-	57.464	-
-lipid modification	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.1 (48 / 418)	-	NA (NA / 0)	-
- 	Percentile (%)	100	88.986	84.906	-	57.464	-
-lipid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	NA (NA / 0)	-
- 	Percentile (%)	100	88.986	91.163	-	57.464	-
-fatty acid beta-oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	NA (NA / 0)	0.66 (8 / 4.68)
- 	Percentile (%)	100	88.986	91.128	-	57.464	17.257
-organic cyclic compound metabolic process	FC (WS / NS)	-8.59 (0 / 384)	-5.93 (0 / 59.94)	0.05 (13029 / 12611)	-	NA (0 / NA)	-
- 	Percentile (%)	100	99.772	52.174	-	99.975	-
+metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.46 (43 / 0)	-	2.43 (4.39 / 0)	1.81 (3.69 / 0.33)	-0.74 (1529 / 2554.93)
+ 	Percentile (%)	0.12	0.038	-	3.224	0.05	61.884
+organic substance metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-	-	1.81 (3.69 / 0.33)	-0.93 (1 / 2.81)
+ 	Percentile (%)	0.12	0.043	-	-	0.05	64.103
+cellular process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-0.11 (32999 / 35687)	-	1.81 (3.69 / 0.33)	-
+ 	Percentile (%)	0.12	0.043	53.093	-	0.05	-
+cellular metabolic process	FC (WS / NS)	5.16 (106 / 2)	5.43 (42 / 0)	-0.15 (29166 / 32341)	0.91 (0.88 / 0)	1.81 (3.69 / 0.33)	-1.85 (12 / 45.89)
+ 	Percentile (%)	0.12	0.043	53.234	22.155	0.05	86.114
+small molecule metabolic process	FC (WS / NS)	5.16 (106 / 2)	4.75 (26 / 0)	-0.21 (16474 / 19000)	-	0.91 (0.88 / 0)	-
+ 	Percentile (%)	0.12	0.125	53.729	-	0.575	-
+fatty acid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-1.09 (0 / 1.13)	-
+ 	Percentile (%)	100	88.986	91.198	-	99.825	-
+lipid modification	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.1 (48 / 418)	-	-1.09 (0 / 1.13)	-
+ 	Percentile (%)	100	88.986	84.906	-	99.825	-
+lipid oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-1.09 (0 / 1.13)	-
+ 	Percentile (%)	100	88.986	91.163	-	99.825	-
+fatty acid beta-oxidation	FC (WS / NS)	-8.59 (0 / 384)	-2.25 (0 / 3.75)	-3.78 (28 / 398)	-	-1.09 (0 / 1.13)	0.66 (8 / 4.68)
+ 	Percentile (%)	100	88.986	91.128	-	99.825	34.399
+organic cyclic compound metabolic process	FC (WS / NS)	-8.59 (0 / 384)	-5.93 (0 / 59.94)	0.05 (13029 / 12611)	-	-1.09 (0 / 1.13)	-
+ 	Percentile (%)	100	99.772	52.174	-	99.825	-

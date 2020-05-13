@@ -1,21 +1,21 @@
 GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-biological_process	FC (WS / NS)	5.46 (43 / 0)	-	-0.1 (47877 / 51349)	-	NA (NA / 0)	-
- 	Percentile (%)	0.038	-	53.058	-	25.281	-
-metabolic process	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-	2.43 (4.39 / 0)	0.03 (0.02 / 0)	-0.74 (1529 / 2554.93)
- 	Percentile (%)	0.038	0.12	-	3.224	0.025	44.742
-translation	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-0.16 (9237 / 10315)	3.63 (11.42 / 0)	0.03 (0.02 / 0)	-0.03 (6423 / 6567.15)
- 	Percentile (%)	0.043	0.42	53.27	0.319	0.025	34.515
-biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	5.16 (106 / 2)	0.04 (22826 / 22151)	1.86 (2.64 / 0)	0.03 (0.02 / 0)	0.52 (296 / 206.04)
- 	Percentile (%)	0.043	0.12	52.351	7.501	0.025	20.859
-macromolecule biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-	-	0.03 (0.02 / 0)	-
- 	Percentile (%)	0.043	0.42	-	-	0.025	-
-primary metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.12 (28395 / 30938)	-3.58 (0 / 11)	NA (0 / NA)	0.67 (136 / 85.23)
- 	Percentile (%)	100	100	53.128	97.579	99.975	17.171
-small molecule metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.21 (16474 / 19000)	-	NA (0 / NA)	-
- 	Percentile (%)	100	100	53.729	-	99.975	-
-oxidation-reduction process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.42 (7414 / 9908)	-2.81 (0 / 6)	NA (0 / NA)	0.37 (465 / 358.7)
- 	Percentile (%)	100	100	56.451	92.235	100	23.653
-organic substance metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-	-	NA (0 / NA)	-0.93 (1 / 2.81)
- 	Percentile (%)	100	100	-	-	99.975	46.961
-organonitrogen compound metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-7.16 (2 / 427)	-0.14 (22967 / 25371)	-	NA (0 / NA)	-
- 	Percentile (%)	100	99.64	53.199	-	99.975	-
+biological_process	FC (WS / NS)	5.46 (43 / 0)	-	-0.1 (47877 / 51349)	-	-0.09 (0 / 0.07)	-
+ 	Percentile (%)	0.038	-	53.058	-	58.39	-
+metabolic process	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-	2.43 (4.39 / 0)	1.81 (3.69 / 0.33)	-0.74 (1529 / 2554.93)
+ 	Percentile (%)	0.038	0.12	-	3.224	0.05	61.884
+translation	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-0.16 (9237 / 10315)	3.63 (11.42 / 0)	1.81 (3.69 / 0.33)	-0.03 (6423 / 6567.15)
+ 	Percentile (%)	0.043	0.42	53.27	0.319	0.05	51.657
+biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	5.16 (106 / 2)	0.04 (22826 / 22151)	1.86 (2.64 / 0)	1.81 (3.69 / 0.33)	0.52 (296 / 206.04)
+ 	Percentile (%)	0.043	0.12	52.351	7.501	0.05	38.001
+macromolecule biosynthetic process	FC (WS / NS)	5.43 (42 / 0)	4.55 (46 / 1)	-	-	1.81 (3.69 / 0.33)	-
+ 	Percentile (%)	0.043	0.42	-	-	0.05	-
+primary metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.12 (28395 / 30938)	-3.58 (0 / 11)	-1.45 (0 / 1.73)	0.67 (136 / 85.23)
+ 	Percentile (%)	100	100	53.128	97.579	99.975	34.313
+small molecule metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.21 (16474 / 19000)	-	-1.3 (0 / 1.47)	-
+ 	Percentile (%)	100	100	53.729	-	99.925	-
+oxidation-reduction process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.42 (7414 / 9908)	-2.81 (0 / 6)	-1.09 (0 / 1.13)	0.37 (465 / 358.7)
+ 	Percentile (%)	100	100	56.451	92.235	99.825	40.795
+organic substance metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-	-	-1.45 (0 / 1.73)	-0.93 (1 / 2.81)
+ 	Percentile (%)	100	100	-	-	99.975	64.103
+organonitrogen compound metabolic process	FC (WS / NS)	-7.69 (0 / 206.04)	-7.16 (2 / 427)	-0.14 (22967 / 25371)	-	-1.25 (0.06 / 1.53)	-
+ 	Percentile (%)	100	99.64	53.199	-	99.9	-

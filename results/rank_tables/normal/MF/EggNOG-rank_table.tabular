@@ -1,21 +1,21 @@
 GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
-catalytic activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.05 (30275 / 31377)	1.67 (14.93 / 4)	0.01 (0.01 / 0)	-0.4 (1065 / 1407.65)
- 	Percentile (%)	0.038	0.12	52.987	10.1	0.1	40.133
-CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	1 (1 / 0)	-5.15 (15 / 568)	-1 (0 / 1)	NA (NA / 0)	-7.84 (2 / 685.56)
- 	Percentile (%)	0.038	28.949	97.702	65.622	15.754	58.657
-acetate CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	-8.16 (0 / 285)	-6.91 (0 / 119)	-	NA (NA / 0)	-4.37 (1 / 40.27)
- 	Percentile (%)	0.038	99.82	99.47	-	18.905	58.081
-transferase activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.01 (7648 / 7717)	3.63 (11.42 / 0)	0 (0 / 0)	0.01 (1789 / 1772.91)
- 	Percentile (%)	0.038	0.12	52.704	0.341	0.55	33.852
-transferase activity, transferring sulfur-containing groups	FC (WS / NS)	5.46 (43 / 0)	3.81 (13 / 0)	-2.49 (112 / 634)	-	NA (NA / 0)	-
- 	Percentile (%)	0.038	1.321	81.513	-	15.754	-
-catalytic activity	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.05 (30275 / 31377)	-5.29 (0 / 38)	NA (0 / NA)	-0.4 (1065 / 1407.65)
- 	Percentile (%)	100	100	52.987	99.961	100	40.133
+catalytic activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.05 (30275 / 31377)	1.67 (14.93 / 4)	1.81 (2.5 / 0)	-0.4 (1065 / 1407.65)
+ 	Percentile (%)	0.038	0.12	52.987	10.1	0.075	57.275
+CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	1 (1 / 0)	-5.15 (15 / 568)	-1 (0 / 1)	-0.09 (0 / 0.07)	-7.84 (2 / 685.56)
+ 	Percentile (%)	0.038	28.949	97.702	65.622	55.764	99.885
+acetate CoA-transferase activity	FC (WS / NS)	5.46 (43 / 0)	-8.16 (0 / 285)	-6.91 (0 / 119)	-	-0.18 (0 / 0.13)	-4.37 (1 / 40.27)
+ 	Percentile (%)	0.038	99.82	99.47	-	85.471	98.559
+transferase activity	FC (WS / NS)	5.46 (43 / 0)	5.16 (106 / 2)	-0.01 (7648 / 7717)	3.63 (11.42 / 0)	0.75 (0.69 / 0)	0.01 (1789 / 1772.91)
+ 	Percentile (%)	0.038	0.12	52.704	0.341	0.825	50.994
+transferase activity, transferring sulfur-containing groups	FC (WS / NS)	5.46 (43 / 0)	3.81 (13 / 0)	-2.49 (112 / 634)	-	0.09 (0.06 / 0)	-
+ 	Percentile (%)	0.038	1.321	81.513	-	20.38	-
+catalytic activity	FC (WS / NS)	-7.69 (0 / 206.04)	-8.59 (0 / 384)	-0.05 (30275 / 31377)	-5.29 (0 / 38)	-1.45 (0 / 1.73)	-0.4 (1065 / 1407.65)
+ 	Percentile (%)	100	100	52.987	99.961	99.975	57.275
 glutamate dehydrogenase (NAD+) activity	FC (WS / NS)	-7.69 (0 / 206.04)	-	-3.07 (65 / 553)	-	-	-0.34 (2 / 2.81)
- 	Percentile (%)	100	-	84.765	-	-	39.47
-oxidoreductase activity	FC (WS / NS)	-7.69 (0 / 206.04)	-6.41 (0 / 84)	-0.23 (6707 / 7880)	-3.17 (0 / 8)	NA (0 / NA)	0.24 (2070 / 1753.24)
- 	Percentile (%)	100	99.52	54.118	95.649	100	25.555
-oxidoreductase activity, acting on the CH-NH2 group of donors	FC (WS / NS)	-7.69 (0 / 206.04)	-3 (1 / 15)	-1.43 (321 / 866)	-	NA (0 / NA)	-
- 	Percentile (%)	100	93.393	71.792	-	99.25	-
-oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor	FC (WS / NS)	-7.69 (0 / 206.04)	-1.94 (202 / 777)	-1.76 (236 / 804)	-4.32 (0 / 19)	NA (0 / NA)	-1.81 (213 / 747.37)
- 	Percentile (%)	100	85.345	76.988	98.895	99.25	53.328
+ 	Percentile (%)	100	-	84.765	-	-	56.612
+oxidoreductase activity	FC (WS / NS)	-7.69 (0 / 206.04)	-6.41 (0 / 84)	-0.23 (6707 / 7880)	-3.17 (0 / 8)	-0.85 (0 / 0.8)	0.24 (2070 / 1753.24)
+ 	Percentile (%)	100	99.52	54.118	95.649	99.375	42.697
+oxidoreductase activity, acting on the CH-NH2 group of donors	FC (WS / NS)	-7.69 (0 / 206.04)	-3 (1 / 15)	-1.43 (321 / 866)	-	-0.74 (0 / 0.67)	-
+ 	Percentile (%)	100	93.393	71.792	-	99	-
+oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor	FC (WS / NS)	-7.69 (0 / 206.04)	-1.94 (202 / 777)	-1.76 (236 / 804)	-4.32 (0 / 19)	-0.74 (0 / 0.67)	-1.81 (213 / 747.37)
+ 	Percentile (%)	100	85.345	76.988	98.895	99	85.883

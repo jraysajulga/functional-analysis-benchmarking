@@ -1,21 +1,21 @@
 GO Term	Fold Change	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
-cell wall	FC (WS / NS)	3.22 (532 / 56.19)	6.09 (67 / 0)	5.58 (47 / 0)	0.77 (3807 / 2230)	2.84 (6.15 / 0)	0 (0 / 0)
- 	Percentile (%)	0.663	0.011	0.06	30.187	1.463	5.851
+cell wall	FC (WS / NS)	3.22 (532 / 56.19)	6.09 (67 / 0)	5.58 (47 / 0)	0.77 (3807 / 2230)	2.84 (6.15 / 0)	0.25 (0.19 / 0)
+ 	Percentile (%)	1.585	0.011	0.06	30.187	1.463	8.327
+voltage-gated sodium channel complex	FC (WS / NS)	2.81 (6 / 0)	-0.95 (0 / 0.94)	-	-	-	-
+ 	Percentile (%)	2.679	76.258	-	-	-	-
+photosystem II oxygen evolving complex	FC (WS / NS)	2.81 (6 / 0)	-	-	-	-	-
+ 	Percentile (%)	2.708	-	-	-	-	-
+extrinsic component of membrane	FC (WS / NS)	2.81 (6 / 0)	2.28 (13 / 1.87)	-	-	-	-
+ 	Percentile (%)	2.737	8.97	-	-	-	-
 postsynapse	FC (WS / NS)	2.8 (19 / 1.87)	-	-	-	-	-
- 	Percentile (%)	1.095	-	-	-	-	-
-septin ring	FC (WS / NS)	2.8 (71 / 9.37)	1 (1 / 0)	3.52 (68 / 5)	3.72 (65 / 4)	2.17 (3.51 / 0)	NA (0 / NA)
- 	Percentile (%)	1.181	30.19	1.802	2.545	4.817	74.969
-mediator complex	FC (WS / NS)	2.77 (25 / 2.81)	1 (1 / 0)	-	-	-	-
- 	Percentile (%)	1.268	28.238	-	-	-	-
-polyhedral organelle	FC (WS / NS)	2.51 (10 / 0.94)	0.08 (4 / 3.75)	-	-0.86 (58 / 106)	-	-
- 	Percentile (%)	1.988	51.453	-	64.97	-	-
-eukaryotic translation initiation factor 3 complex, eIF3e	FC (WS / NS)	NA (1 / NA)	-	-	-	-	-
- 	Percentile (%)	91.847	-	-	-	-	-
-plastid nucleoid	FC (WS / NS)	NA (1 / NA)	-	-	-1.2 (78 / 181)	-	-
- 	Percentile (%)	91.876	-	-	68.929	-	-
-glycolate oxidase complex	FC (WS / NS)	NA (1 / NA)	-	-	-	-	-
- 	Percentile (%)	91.904	-	-	-	-	-
-intrinsic component of the cytoplasmic side of the plasma membrane	FC (WS / NS)	NA (1 / NA)	-	-	1.75 (53 / 15)	-	-
- 	Percentile (%)	91.933	-	-	13.715	-	-
-transcription factor complex	FC (WS / NS)	NA (1 / NA)	-0.95 (0 / 0.94)	-1 (0 / 1)	-	-	-
- 	Percentile (%)	91.962	73.834	66.066	-	-	-
+ 	Percentile (%)	3.111	-	-	-	-	-
+organelle inner membrane	FC (WS / NS)	-3.43 (1 / 20.6)	-1.93 (0 / 2.81)	-4.25 (0 / 18)	0.55 (583 / 398)	-1.58 (0 / 2)	-0.09 (0 / 0.07)
+ 	Percentile (%)	96.946	86.784	97.237	35.949	81.16	80.395
+cytosolic large ribosomal subunit	FC (WS / NS)	-3.61 (2 / 35.59)	-4.72 (0 / 25.29)	-	-0.69 (1113 / 1796)	-4.17 (0 / 17)	-
+ 	Percentile (%)	97.177	98.921	-	62.354	98.632	-
+cytosolic small ribosomal subunit	FC (WS / NS)	-3.61 (0 / 11.24)	-5.46 (0 / 43.08)	0.13 (277 / 253)	-0.93 (649 / 1240)	-4.32 (0 / 19)	-0.26 (0 / 0.2)
+ 	Percentile (%)	97.263	99.528	47.327	65.783	98.943	90.448
+basement membrane	FC (WS / NS)	-3.82 (0 / 13.11)	-1.93 (0 / 2.81)	-	1.56 (55 / 18)	-	-0.09 (0 / 0.07)
+ 	Percentile (%)	97.724	85.624	-	16.72	-	78.22
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-4.08 (0 / 15.92)	-1.93 (0 / 2.81)	-0.04 (37 / 38)	-4 (1 / 31)	-1 (0 / 1)	-0.09 (0 / 0.07)
+ 	Percentile (%)	98.214	88.303	53.033	92.506	68.587	60.89

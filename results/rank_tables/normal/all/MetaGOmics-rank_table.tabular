@@ -1,21 +1,21 @@
 GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
-dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	NA (101 / NA)
- 	Percentile (%)	0.035	-	-	1.157	-	92.02
-pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	NA (NA / 0)	NA (82 / NA)
- 	Percentile (%)	0.071	-	-	-	24.006	92.048
-oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	6.13 (69 / 0)	-	-	-	NA (NA / 0)	-
- 	Percentile (%)	0.106	-	-	-	24.006	-
-glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	NA (65 / NA)
- 	Percentile (%)	0.141	-	-	-	-	92.077
+dextransucrase activity	FC (WS / NS)	6.71 (104 / 0)	-	-	3.01 (7.03 / 0)	-	6.67 (101 / 0)
+ 	Percentile (%)	0.035	-	-	1.157	-	0.086
+pyruvate oxidase activity	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-0.09 (0 / 0.07)	6.38 (82 / 0)
+ 	Percentile (%)	0.071	-	-	-	57.689	0.115
+oxidoreductase activity, acting on the aldehyde or oxo group of donors, oxygen as acceptor	FC (WS / NS)	6.13 (69 / 0)	-	-	-	-0.09 (0 / 0.07)	-
+ 	Percentile (%)	0.106	-	-	-	57.689	-
+glyceraldehyde-3-phosphate dehydrogenase (NADP+) (non-phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	6.04 (65 / 0)
+ 	Percentile (%)	0.141	-	-	-	-	0.144
 glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating) activity	FC (WS / NS)	6.02 (64 / 0)	-	-	-	-	-
  	Percentile (%)	0.177	-	-	-	-	-
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	NA (NA / 0)	NA (NA / 369.94)
- 	Percentile (%)	99.859	99.913	100	99.987	57.464	73.063
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	NA (NA / 0)	NA (NA / 240.7)
- 	Percentile (%)	99.894	99.913	100	99.819	57.464	73.149
-L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	NA (NA / 0)	-6.1 (1 / 135.8)
- 	Percentile (%)	99.929	-	-	99.707	50.363	58.456
-L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	NA (NA / 0)	-
- 	Percentile (%)	99.965	99.978	-	-	50.363	-
-L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	NA (NA / 0)	-
- 	Percentile (%)	100	99.978	-	-	50.363	-
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5.46 (0 / 43)	-1.09 (0 / 1.13)	-8.54 (0 / 369.94)
+ 	Percentile (%)	99.859	99.913	100	99.987	99.825	100
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-8.37 (0 / 330)	-6.45 (0 / 86.16)	-8.59 (0 / 384)	-5 (0 / 31)	-1.09 (0 / 1.13)	-7.92 (0 / 240.7)
+ 	Percentile (%)	99.894	99.913	100	99.819	99.825	99.914
+L-lysine catabolic process to acetate	FC (WS / NS)	-9.29 (0 / 626)	-	-	-4.91 (0 / 29)	-0.9 (0 / 0.87)	-6.1 (1 / 135.8)
+ 	Percentile (%)	99.929	-	-	99.707	99.45	99.539
+L-lysine metabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-0.9 (0 / 0.87)	-
+ 	Percentile (%)	99.965	99.978	-	-	99.45	-
+L-lysine catabolic process	FC (WS / NS)	-9.32 (0 / 638)	-7.14 (0 / 140.48)	-	-	-0.9 (0 / 0.87)	-
+ 	Percentile (%)	100	99.978	-	-	99.45	-
