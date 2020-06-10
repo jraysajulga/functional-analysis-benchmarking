@@ -326,17 +326,36 @@ prophane_gos
 Let's write a function to write out formatted input tabular files for metaquantome.
 
 ```{r}
+collapse_df <- function(df, mode){
+  if (mode == 'func'){
+    df %>% group_by(id) %>%
+      summarise(n = n()) %>%
+      select(id) %>%
+      mutate('gos.1' = id)
+  } else if (mode == 'int'){
+    df %>% group_by(id) %>%
+      summarise(n = n(),
+                countNS = sum(countNS),
+                countWS = sum(countWS)) %>%
+      select(id, countNS, countWS)
+  }
+}
 write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2, folder="full", fill=FALSE) {
   if (fill) {
     df <- data.frame(gos = df, countNS = 1, countWS = 1) 
   }
   int_df <- df[c(header, col_samp1, col_samp2)] 
   names(int_df)[1] <- 'id'
+  func_df <- df[c(header, col_gos)]
+  names(func_df) <- c('id', 'gos')
+  if (name == 'eggnog'){
+    int_df <- collapse_df(int_df, 'int')
+    func_df <- collapse_df(func_df, 'func')
+    print(int_df)
+  }
   write.table(int_df,
               file=paste0("results/mqome/input/", folder, "/", name, "/", name, "_int.tab"),
               quote=FALSE, row.names=FALSE, sep="\t")
-  func_df <- df[c(header, col_gos)]
-  names(func_df) <- c('id', 'gos')
   write.table(func_df,
               file=paste0("results/mqome/input/", folder, "/", name, "/", name, "_func.tab"),
               quote=FALSE, row.names=FALSE, sep="\t")
@@ -349,9 +368,17 @@ write_mqome_inputs(prophane_gos, 'prophane', 'gos', 'gos', 'countNS', 'countWS')
 write_mqome_inputs(unipept_all, 'unipept', 'gos', 'gos', 'countNS', 'countWS')
 ```
 
+```{r}
+metagomics_filt
+megan_gos
+mpa_gos
+prophane_gos
+unipept_all
+```
+
 Let's expand and filter using metaquantome
 ```{r}
-print_mqome_cmds <- function(name, func_colname){
+print_mqome_cmds <- function(name, func_colname, folder="full"){
   cmd_expand <- paste0("metaquantome expand --mode f --data_dir data/databases/gene_ontology/mqome",
                         " --int_file results/mqome/input/", name, "/", name, "_int.tab",
                        " --pep_colname_int peptide",
@@ -374,6 +401,9 @@ paste(print_mqome_cmds("eggnog", 'gos.1'),
       print_mqome_cmds("mpa", "gos.1"),
       print_mqome_cmds("prophane", "gos.1"),
       print_mqome_cmds("unipept", "gos.1"), sep='; ')
+```
+```{r}
+print_mqome_cmds("mpa", "gos.1")
 ```
 
 ```{r}
@@ -677,7 +707,7 @@ total_peptides <- unique(c(eggnog_peps, metagomics_peps, unipept_peps))
 length(total_peptides)
 ```
 ```{r}
-length(intersect(unipept_peps, twenty_peptides))
+#length(intersect(unipept_peps, twenty_peptides))
 ```
 
 
