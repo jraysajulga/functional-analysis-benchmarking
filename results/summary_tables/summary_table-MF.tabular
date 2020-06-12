@@ -4,5 +4,5 @@ Total number of annotation groups	18440	1665	2829	23169	3999	3471
 Total (and unique) number of translated GO terms for all ontologies	533066 (6155)	76529 (4155)	2829 (2829)	77204 (1056)	189054 (2598)	3471 (3471)
 Total (and unique) number of translated molecular function GO terms	88582 (1411)	21212 (1613)	900 (900)	42084 (634)	57208 (1057)	1726 (1726)
 Total number of molecular function GO terms exclusive to the tool	265	168	113	1	16	394
-Total number of molecular function expanded GO terms	1467	1694	1002	973	518	1560
-Total number of molecular function expanded GO terms exclusive to the tool	260	277	109	16	2	137
+Total number of molecular function expanded GO terms	1466	1693	1002	974	518	2249
+Total number of molecular function expanded GO terms exclusive to the tool	204	146	81	3	2	453

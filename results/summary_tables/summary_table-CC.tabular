@@ -4,5 +4,5 @@ Total number of annotation groups	18440	1665	2829	23169	3999	3471
 Total (and unique) number of translated GO terms for all ontologies	533066 (6155)	76529 (4155)	2829 (2829)	77204 (1056)	189054 (2598)	3471 (3471)
 Total (and unique) number of translated cellular component GO terms	106223 (640)	7118 (314)	241 (241)	13809 (56)	17854 (164)	389 (389)
 Total number of cellular component GO terms exclusive to the tool	310	31	64	0	6	145
-Total number of cellular component expanded GO terms	668	343	235	96	82	294
-Total number of cellular component expanded GO terms exclusive to the tool	311	56	43	0	2	47
+Total number of cellular component expanded GO terms	667	342	235	96	82	575
+Total number of cellular component expanded GO terms exclusive to the tool	247	30	33	0	2	168

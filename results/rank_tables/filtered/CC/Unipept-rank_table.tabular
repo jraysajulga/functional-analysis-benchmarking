@@ -1,21 +1,21 @@
 GO Term	Fold Change	Unipept	EggNOG	MEGAN	MetaGOmics	MPA	Prophane
+cation channel complex	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
+ 	Percentile (%)	1.917	-	-	-	-	-
 Smc5-Smc6 complex	FC (WS / NS)	1.88 (2.32 / -0.09)	-	0.14 (4.17 / 3.7)	-	-	-
- 	Percentile (%)	1.438	-	25.911	-	-	-
-exocyst	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
- 	Percentile (%)	1.654	-	-	-	-	-
-presynaptic active zone	FC (WS / NS)	1.73 (2 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.014	-	-	-	-	-
-condensin complex	FC (WS / NS)	1.51 (1.58 / -0.09)	-2.08 (0 / 3.23)	0.13 (5.25 / 4.7)	-	-	-
- 	Percentile (%)	2.157	91.521	26.312	-	-	-
-bacterial-type flagellum basal body, MS ring	FC (WS / NS)	1.51 (1.58 / -0.09)	-	-	-	-	-
- 	Percentile (%)	2.553	-	-	-	-	-
-spliceosomal complex	FC (WS / NS)	-1.69 (0 / 2.23)	1 (1 / 0)	-	-	-	-
- 	Percentile (%)	97.159	7.332	-	-	-	-
-pilus	FC (WS / NS)	-1.89 (0 / 2.71)	-0.66 (1.58 / 3.08)	-1.58 (0 / 2)	-	-	-
- 	Percentile (%)	98.274	74.66	94.015	-	-	-
-apoplast	FC (WS / NS)	-1.97 (0 / 2.91)	0.23 (3.58 / 2.91)	2.45 (4.46 / 0)	-	-	-
- 	Percentile (%)	98.562	18.725	0.535	-	-	-
+ 	Percentile (%)	2.04	-	25.878	-	-	-
+voltage-gated sodium channel complex	FC (WS / NS)	1.84 (2.58 / 0)	0.14 (0 / -0.09)	-	-	-	-
+ 	Percentile (%)	2.212	21.676	-	-	-	-
+photosystem II oxygen evolving complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-
+ 	Percentile (%)	2.286	-	-	-	-	-
+hemoglobin complex	FC (WS / NS)	1.73 (2.32 / 0)	1.73 (2.32 / 0)	-0.09 (2.58 / 2.81)	-	-	-
+ 	Percentile (%)	2.728	2.889	77.499	-	-	-
+cytosolic small ribosomal subunit	FC (WS / NS)	-2.17 (0 / 3.49)	0 (10.41 / 10.44)	0.02 (8.11 / 7.98)	-0.12 (9.34 / 10.28)	-1.38 (2.4 / 7.87)	-
+ 	Percentile (%)	98.058	55.24	43.096	68.535	84.398	-
 nuclear pore	FC (WS / NS)	-2.2 (0 / 3.61)	1 (2.81 / 0.91)	-1 (0 / 1)	-	-	-
- 	Percentile (%)	99.209	9.41	90.806	-	-	-
+ 	Percentile (%)	98.157	9.382	90.806	-	-	-
 bacterial-type flagellum hook	FC (WS / NS)	-2.2 (0 / 3.61)	-	0 (0 / 0)	-	-	-
- 	Percentile (%)	99.245	-	57.84	-	-	-
+ 	Percentile (%)	98.206	-	57.84	-	-	-
+basement membrane	FC (WS / NS)	-2.24 (0 / 3.71)	0.34 (5.73 / 4.3)	-	0.39 (5.78 / 4.17)	-	-
+ 	Percentile (%)	98.427	15.636	-	14.356	-	-
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-	-0.01 (5.21 / 5.25)	-	-3.22 (0 / 8.34)	-
+ 	Percentile (%)	98.82	-	69.442	-	94.412	-

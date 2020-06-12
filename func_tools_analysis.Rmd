@@ -401,7 +401,7 @@ print_mqome_cmds("mpa", "gos.1")
 
 ```{r}
 import_mqome_output <- function(name, type, folder="full"){
-  read.delim(paste0("results/mqome/output/", folder, "/", name, "/", name, "_func_", type, ".tab"),
+  read.delim(paste0("results/mqome/output/", name, "/", name, "_func_", type, ".tab"),
              stringsAsFactors = FALSE) %>%
     rename(gos = id) %>%
     mutate(

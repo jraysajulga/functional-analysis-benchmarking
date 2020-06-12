@@ -1,21 +1,21 @@
 GO Term	Fold Change	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 peptide deformylase activity	FC (WS / NS)	2.71 (5.52 / 0)	0.14 (0 / -0.09)	2.73 (5.61 / 0)	-	-	2.92 (5.86 / -0.09)
- 	Percentile (%)	0.067	28.517	0.394	-	-	0.036
+ 	Percentile (%)	0.067	28.479	0.393	-	-	0.049
 solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	1.49 (1.81 / 0)	-	-0.07 (3.17 / 3.36)
- 	Percentile (%)	0.134	-	-	7.335	-	67.134
-2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	-
- 	Percentile (%)	0.167	-	0.59	-	-	-
+ 	Percentile (%)	0.134	-	-	7.329	-	66.38
+2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	2.71 (5.52 / 0)
+ 	Percentile (%)	0.167	-	0.59	-	-	0.172
 homocitrate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	-	-	-	-
  	Percentile (%)	0.201	-	-	-	-	-
 hydroxymethylglutaryl-CoA lyase activity	FC (WS / NS)	2.56 (4.91 / 0)	1 (1 / 0)	-	-	-	-
- 	Percentile (%)	0.234	7.237	-	-	-	-
+ 	Percentile (%)	0.234	7.209	-	-	-	-
 lysine 2,3-aminomutase activity	FC (WS / NS)	-3.21 (0 / 8.28)	-	-3.13 (0 / 7.73)	-3.36 (0 / 9.27)	-	-3.19 (0 / 8.13)
- 	Percentile (%)	99.833	-	99.705	96.078	-	100
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.26 (0 / 8.58)	-3.24 (0 / 8.47)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-	-
- 	Percentile (%)	99.866	99.881	99.902	99.71	-	-
+ 	Percentile (%)	99.833	-	99.705	96.081	-	99.926
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.26 (0 / 8.58)	-3.24 (0 / 8.47)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-	-3.25 (0 / 8.53)
+ 	Percentile (%)	99.866	99.881	99.902	99.71	-	100
 3-oxoacid CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.01 (0 / 7.04)	-	-	-	-0.93 (0 / 0.91)
- 	Percentile (%)	99.9	99.069	-	-	-	92.377
+ 	Percentile (%)	99.9	99.069	-	-	-	84.984
 acetate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	0.16 (8.02 / 7.1)	-2.98 (0 / 6.89)	-	-	-2.66 (0 / 5.33)
- 	Percentile (%)	99.933	20.779	99.262	-	-	99.712
-3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.05 (0 / 7.3)	-	-1.93 (0 / 2.81)	-	-
- 	Percentile (%)	100	99.307	-	86.057	-	-
+ 	Percentile (%)	99.933	20.721	99.263	-	-	99.484
+3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.05 (0 / 7.3)	-	-1.93 (0 / 2.81)	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	100	99.308	-	85.922	-	87.368

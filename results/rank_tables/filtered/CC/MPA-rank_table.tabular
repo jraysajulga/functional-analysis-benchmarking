@@ -1,21 +1,21 @@
 GO Term	Fold Change	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
 ribonucleoside-diphosphate reductase complex	FC (WS / NS)	3.31 (8.94 / 0)	-2.49 (0 / 4.61)	0.06 (8.58 / 8.17)	0.18 (6.71 / 5.83)	-0.61 (-3.87 / -5.38)	0.74 (5.21 / 2.71)
- 	Percentile (%)	0.436	93.551	32.598	23.906	87.432	8.522
+ 	Percentile (%)	0.435	93.555	32.598	23.894	87.432	11.993
 septin ring	FC (WS / NS)	3.08 (7.46 / 0)	-	1.09 (6.09 / 2.32)	1.23 (6.02 / 2)	-	0.76 (6.15 / 3.23)
- 	Percentile (%)	2.179	-	7.289	6.837	-	8.378
+ 	Percentile (%)	2.177	-	7.289	6.834	-	11.846
 primosome complex	FC (WS / NS)	0.36 (6.59 / 4.91)	-	1 (1 / 0)	0.44 (5.36 / 3.7)	-	0.11 (5.21 / 4.76)
- 	Percentile (%)	12.128	-	10.398	13.133	-	36.354
-signal recognition particle	FC (WS / NS)	0.32 (9.23 / 7.17)	-	-	0.38 (5.73 / 4.17)	-	0.2 (5.91 / 4.99)
- 	Percentile (%)	12.491	-	-	15.248	-	23.265
+ 	Percentile (%)	12.119	-	10.398	13.127	-	38.142
+signal recognition particle	FC (WS / NS)	0.32 (9.23 / 7.17)	-	-	0.38 (5.73 / 4.17)	-	-
+ 	Percentile (%)	12.482	-	-	15.241	-	-
 DNA polymerase III complex	FC (WS / NS)	0.3 (10.22 / 8.11)	0.22 (6.04 / 5.03)	0 (7.71 / 7.73)	-	-0.19 (-9.4 / -10.6)	0.02 (6.52 / 6.4)
- 	Percentile (%)	12.854	18.987	67.302	-	65.655	52.643
-oxoglutarate dehydrogenase complex	FC (WS / NS)	-3.22 (0 / 8.34)	-	-0.01 (5.21 / 5.25)	-	-	-
- 	Percentile (%)	94.408	-	69.442	-	-	-
+ 	Percentile (%)	12.845	18.931	67.302	-	65.655	48.587
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-3.22 (0 / 8.34)	-	-0.01 (5.21 / 5.25)	-	-	-2.32 (0 / 3.99)
+ 	Percentile (%)	94.412	-	69.442	-	-	98.82
 integral component of plasma membrane	FC (WS / NS)	-3.3 (0 / 8.85)	-	-0.21 (7.42 / 8.72)	-	0 (-11 / -11.03)	-0.09 (6.49 / 6.98)
- 	Percentile (%)	95.28	-	82.681	-	47.454	69.687
+ 	Percentile (%)	95.283	-	82.681	-	47.454	68.1
 organelle inner membrane	FC (WS / NS)	-3.34 (0 / 9.1)	-	-	0.08 (10.32 / 9.74)	-	-
- 	Percentile (%)	95.933	-	-	35.711	-	-
+ 	Percentile (%)	95.936	-	-	35.742	-	-
 cytosol	FC (WS / NS)	-3.53 (0 / 10.58)	0.01 (13.27 / 13.21)	0.05 (15.03 / 14.46)	-0.03 (12.9 / 13.21)	-0.29 (-3.73 / -4.34)	-0.29 (5.86 / 7.41)
- 	Percentile (%)	98.039	46.238	34.972	58.534	74.973	78.389
+ 	Percentile (%)	98.041	46.216	34.972	58.555	74.973	74.736
 citrate lyase complex	FC (WS / NS)	-3.75 (0 / 12.47)	1.46 (4.25 / 0.91)	-0.48 (5.25 / 7.7)	-0.47 (4.52 / 6.66)	-	-0.66 (3.91 / 6.74)
- 	Percentile (%)	99.129	4.801	87.329	81.259	-	88.637
+ 	Percentile (%)	99.129	4.774	87.329	81.268	-	81.396

@@ -1,21 +1,21 @@
 GO Term	Fold Change	MPA	EggNOG	MEGAN	MetaGOmics	Prophane	Unipept
 biotin binding	FC (WS / NS)	3.58 (10.93 / 0)	-0.32 (1 / 1.49)	-	0.89 (7.02 / 3.32)	-	0.98 (7.37 / 3.23)
- 	Percentile (%)	0.047	63.892	-	8.063	-	7.419
-heat shock protein binding	FC (WS / NS)	3.48 (10.12 / 0)	-0.32 (1 / 1.49)	-	0.06 (9.59 / 9.14)	-	0.32 (6.57 / 5.08)
- 	Percentile (%)	0.094	63.674	-	39.175	-	18.546
+ 	Percentile (%)	0.047	63.837	-	8.061	-	11.024
+heat shock protein binding	FC (WS / NS)	3.48 (10.12 / 0)	-0.32 (1 / 1.49)	-	0.06 (9.59 / 9.14)	-	0.23 (6.57 / 5.46)
+ 	Percentile (%)	0.094	63.604	-	39.162	-	21.523
 phosphoenolpyruvate carboxylase activity	FC (WS / NS)	3.4 (9.56 / 0)	1.38 (5.46 / 1.49)	1.34 (5.52 / 1.58)	1.18 (5.81 / 2)	-	0.72 (5.98 / 3.23)
- 	Percentile (%)	0.188	5.358	7.622	6.381	-	9.649
-deaminase activity	FC (WS / NS)	3.29 (8.8 / 0)	-0.35 (4.39 / 5.86)	-0.05 (11 / 11.41)	0.86 (5.04 / 2.32)	-0.25 (-6.55 / -7.59)	0.28 (5.67 / 4.49)
- 	Percentile (%)	0.328	65.103	73.266	8.317	69.906	20.301
-potassium ion transmembrane transporter activity	FC (WS / NS)	3.27 (8.64 / 0)	0.03 (3.46 / 3.36)	0.11 (7.21 / 6.6)	-	-	0.07 (4.7 / 4.43)
- 	Percentile (%)	0.375	42.879	30.625	-	-	41.955
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.32)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.23 (0 / 8.37)	-	-
- 	Percentile (%)	99.765	99.876	99.817	99.873	-	-
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.33)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.37)	-	-
- 	Percentile (%)	99.812	99.984	99.84	99.937	-	-
+ 	Percentile (%)	0.188	5.308	7.602	6.379	-	12.711
+deaminase activity	FC (WS / NS)	3.29 (8.8 / 0)	-0.35 (4.39 / 5.86)	-0.05 (11 / 11.41)	0.86 (5.04 / 2.32)	-0.25 (-6.55 / -7.59)	0.18 (5.67 / 4.91)
+ 	Percentile (%)	0.328	65.063	73.231	8.315	69.906	23.948
+potassium ion transmembrane transporter activity	FC (WS / NS)	3.27 (8.64 / 0)	0.03 (3.46 / 3.36)	0.11 (7.21 / 6.6)	-	-	-0.2 (5.13 / 6.03)
+ 	Percentile (%)	0.375	42.837	30.593	-	-	70.581
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.32)	-3.24 (0 / 8.47)	-3.26 (0 / 8.58)	-3.23 (0 / 8.37)	-	-3.25 (0 / 8.53)
+ 	Percentile (%)	99.766	99.876	99.817	99.873	-	99.984
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.84 (0 / 13.33)	-3.39 (0 / 9.47)	-3.4 (0 / 9.58)	-3.37 (0 / 9.37)	-	-3.36 (0 / 9.25)
+ 	Percentile (%)	99.812	99.984	99.84	99.937	-	100
 acyl-CoA dehydrogenase activity	FC (WS / NS)	-3.85 (0 / 13.42)	-0.69 (1 / 2.23)	-1.01 (4.58 / 10.29)	-1.41 (2.58 / 8.54)	-	-1.1 (3.58 / 8.81)
- 	Percentile (%)	99.906	71.533	91.531	88.127	-	94.185
+ 	Percentile (%)	99.906	71.488	91.527	88.131	-	88.911
 pyruvate, phosphate dikinase activity	FC (WS / NS)	-3.9 (0 / 13.88)	-	-0.23 (6.15 / 7.39)	-1.16 (2.58 / 6.99)	0.07 (-7.82 / -7.49)	-0.98 (3.17 / 7.23)
- 	Percentile (%)	99.953	-	81.346	86.286	35.533	93.584
-CoA-transferase activity	FC (WS / NS)	-4.02 (0 / 15.26)	-0.09 (9.02 / 9.69)	-0.95 (6.13 / 12.75)	-0.93 (4.86 / 10.15)	-	-0.91 (4.64 / 9.63)
- 	Percentile (%)	100	57.167	88.075	84.095	-	91.303
+ 	Percentile (%)	99.953	-	81.337	86.29	35.533	88.534
+CoA-transferase activity	FC (WS / NS)	-4.02 (0 / 15.26)	-0.09 (9.02 / 9.69)	-0.95 (6.13 / 12.75)	-0.93 (4.86 / 10.15)	-	-1.03 (4.64 / 10.51)
+ 	Percentile (%)	100	57.116	88.07	84.1	-	88.681

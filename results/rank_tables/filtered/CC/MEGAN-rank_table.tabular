@@ -1,21 +1,21 @@
 GO Term	Fold Change	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 apoplast	FC (WS / NS)	2.45 (4.46 / 0)	0.23 (3.58 / 2.91)	-	-	-	-1.97 (0 / 2.91)
- 	Percentile (%)	0.535	18.725	-	-	-	98.562
+ 	Percentile (%)	0.535	18.668	-	-	-	97.075
 lysosome	FC (WS / NS)	2 (3 / 0)	-0.6 (1.58 / 2.91)	-	-	-	0.07 (1 / 0.91)
- 	Percentile (%)	2.842	73.991	-	-	-	41.316
+ 	Percentile (%)	2.842	73.932	-	-	-	41.165
 TAT protein transport complex	FC (WS / NS)	2 (3 / 0)	-	-	-	-	0.42 (2.32 / 1.49)
- 	Percentile (%)	2.942	-	-	-	-	14.707
+ 	Percentile (%)	2.942	-	-	-	-	16.171
 collagen trimer	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
  	Percentile (%)	3.243	-	-	-	-	-
 Holliday junction helicase complex	FC (WS / NS)	1.84 (2.58 / 0)	2.07 (2.81 / -0.09)	-	-	-	-0.61 (3 / 5.11)
- 	Percentile (%)	3.644	1.29	-	-	-	88.206
-axonemal dynein complex	FC (WS / NS)	-1.93 (0 / 2.81)	-	-	-	-	-
- 	Percentile (%)	96.489	-	-	-	-	-
-axoneme	FC (WS / NS)	-1.93 (0 / 2.81)	0 (0 / 0)	-	-	-	-
- 	Percentile (%)	96.523	48.173	-	-	-	-
-HslUV protease complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-
- 	Percentile (%)	97.325	-	-	89.325	-	-
-nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-
- 	Percentile (%)	97.727	43.062	66.847	44.88	-	-
+ 	Percentile (%)	3.644	1.289	-	-	-	81.052
+axonemal dynein complex	FC (WS / NS)	-1.93 (0 / 2.81)	-	-	-	-	-1.69 (0 / 2.23)
+ 	Percentile (%)	96.489	-	-	-	-	94.544
+axoneme	FC (WS / NS)	-1.93 (0 / 2.81)	0 (0 / 0)	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	96.523	48.15	-	-	-	28.017
+HslUV protease complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-2.03 (0 / 3.08)
+ 	Percentile (%)	97.325	-	-	89.187	-	97.37
+nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-0.08 (5.88 / 6.3)
+ 	Percentile (%)	97.727	43.041	66.863	44.848	-	67.707
 type II protein secretion system complex	FC (WS / NS)	-2.69 (0 / 5.46)	-	0.47 (6.49 / 4.39)	-	-	-0.97 (1 / 2.91)
- 	Percentile (%)	99.164	-	12.445	-	-	93.671
+ 	Percentile (%)	99.164	-	12.439	-	-	88.793

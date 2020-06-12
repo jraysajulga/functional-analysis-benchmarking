@@ -2,20 +2,20 @@ GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 striated muscle dense body	FC (WS / NS)	2.23 (3.7 / 0)	-	-	-	-	-
  	Percentile (%)	0.836	-	-	-	-	-
 Holliday junction helicase complex	FC (WS / NS)	2.07 (2.81 / -0.09)	1.84 (2.58 / 0)	-	-	-	-0.61 (3 / 5.11)
- 	Percentile (%)	1.29	3.644	-	-	-	88.206
+ 	Percentile (%)	1.289	3.644	-	-	-	81.052
 urease complex	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
- 	Percentile (%)	1.6	-	-	-	-	-
+ 	Percentile (%)	1.599	-	-	-	-	-
 trans-Golgi network	FC (WS / NS)	1.88 (2.32 / -0.09)	-1.58 (0 / 2)	-	-	-	-
- 	Percentile (%)	2.173	93.781	-	-	-	-
+ 	Percentile (%)	2.148	93.781	-	-	-	-
 myosin complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-0.16 (4.32 / 4.95)
- 	Percentile (%)	2.508	-	-	-	-	73.679
-ruffle	FC (WS / NS)	-2.6 (0 / 5.08)	-	-	-	-	-
- 	Percentile (%)	96.824	-	-	-	-	-
+ 	Percentile (%)	2.483	-	-	-	-	71.074
+ruffle	FC (WS / NS)	-2.6 (0 / 5.08)	-	-	-	-	0.14 (0 / -0.09)
+ 	Percentile (%)	96.825	-	-	-	-	26.296
 ruffle membrane	FC (WS / NS)	-2.6 (0 / 5.08)	-	-	-	-	-
- 	Percentile (%)	97.038	-	-	-	-	-
+ 	Percentile (%)	97.04	-	-	-	-	-
 postsynaptic membrane	FC (WS / NS)	-2.61 (0 / 5.11)	0 (0 / 0)	-	-	-	-0.93 (0 / 0.91)
- 	Percentile (%)	97.397	63.557	-	-	-	93.096
+ 	Percentile (%)	97.398	63.557	-	-	-	87.171
 neuromuscular junction	FC (WS / NS)	-2.62 (0 / 5.15)	-	-	-	-	-
- 	Percentile (%)	97.54	-	-	-	-	-
-perinuclear region of cytoplasm	FC (WS / NS)	-2.62 (0 / 5.15)	0 (0 / 0)	-	-	-	-
- 	Percentile (%)	97.588	64.427	-	-	-	-
+ 	Percentile (%)	97.541	-	-	-	-	-
+perinuclear region of cytoplasm	FC (WS / NS)	-2.62 (0 / 5.15)	0 (0 / 0)	-	-	-	-0.93 (0 / 0.91)
+ 	Percentile (%)	97.589	64.427	-	-	-	87.491

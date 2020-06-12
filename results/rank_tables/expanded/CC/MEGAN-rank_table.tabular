@@ -1,21 +1,21 @@
 GO Term	Fold Change	MEGAN	EggNOG	MetaGOmics	MPA	Prophane	Unipept
 apoplast	FC (WS / NS)	2.45 (4.46 / 0)	0.23 (3.58 / 2.91)	-	-	-	-1.97 (0 / 2.91)
- 	Percentile (%)	0.549	22.705	-	-	-	98.622
-lytic vacuole	FC (WS / NS)	2.32 (4 / 0)	-0.47 (4 / 5.91)	-	-	-	0.07 (1 / 0.91)
- 	Percentile (%)	0.961	67.635	-	-	-	42.256
+ 	Percentile (%)	0.55	22.645	-	-	-	97.002
+lytic vacuole	FC (WS / NS)	2.32 (4 / 0)	-0.47 (4 / 5.91)	-	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	0.962	67.608	-	-	-	72.924
 DNA helicase complex	FC (WS / NS)	2.2 (3.58 / 0)	0.07 (4.25 / 3.99)	-	-	-	-0.47 (3.58 / 5.36)
- 	Percentile (%)	1.602	36.434	-	-	-	83.759
-ion channel complex	FC (WS / NS)	2.2 (3.58 / 0)	-0.71 (1.58 / 3.23)	-	-	-	1.14 (1 / -0.09)
- 	Percentile (%)	1.625	71.937	-	-	-	5.489
-cation channel complex	FC (WS / NS)	2.06 (3.17 / 0)	-1.69 (0 / 2.23)	-	-	-	-
- 	Percentile (%)	2.449	88.104	-	-	-	-
-nuclear body	FC (WS / NS)	-2.2 (0 / 3.58)	-1.8 (0 / 2.49)	-2.76 (0 / 5.75)	-	-	-
- 	Percentile (%)	97.185	89.61	98.381	-	-	-
-cytosolic proteasome complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-
- 	Percentile (%)	97.23	-	-	88.462	-	-
-dynein complex	FC (WS / NS)	-2.27 (0 / 3.81)	-1.54 (0 / 1.91)	-	-	-	0.27 (2 / 1.49)
- 	Percentile (%)	97.551	86.333	-	-	-	21.153
-nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-0.08 (5.86 / 6.25)
- 	Percentile (%)	97.78	43.252	63.619	42.12	-	66.516
+ 	Percentile (%)	1.603	36.396	-	-	-	77.248
+ion channel complex	FC (WS / NS)	2.2 (3.58 / 0)	-0.71 (1.58 / 3.23)	-	-	-	2.2 (3.17 / -0.09)
+ 	Percentile (%)	1.626	71.892	-	-	-	0.819
+cation channel complex	FC (WS / NS)	2.06 (3.17 / 0)	-1.69 (0 / 2.23)	-	-	-	1.93 (2.81 / 0)
+ 	Percentile (%)	2.45	88.111	-	-	-	1.884
+nuclear body	FC (WS / NS)	-2.2 (0 / 3.58)	-1.8 (0 / 2.49)	-2.76 (0 / 5.75)	-	-	-0.97 (1 / 2.91)
+ 	Percentile (%)	97.183	89.586	98.381	-	-	88.501
+cytosolic proteasome complex	FC (WS / NS)	-2.2 (0 / 3.58)	-	-	-2.73 (0 / 5.61)	-	-2.03 (0 / 3.08)
+ 	Percentile (%)	97.229	-	-	88.42	-	97.363
+dynein complex	FC (WS / NS)	-2.27 (0 / 3.81)	-1.54 (0 / 1.91)	-	-	-	-0.44 (2 / 3.08)
+ 	Percentile (%)	97.55	86.342	-	-	-	76.871
+nucleoid	FC (WS / NS)	-2.32 (0 / 4)	0.03 (8.54 / 8.35)	-0.11 (9.38 / 10.24)	0 (0 / 0)	-	-0.08 (5.88 / 6.3)
+ 	Percentile (%)	97.779	43.21	63.599	42.1	-	65.831
 type II protein secretion system complex	FC (WS / NS)	-2.69 (0 / 5.46)	-	0.47 (6.49 / 4.39)	-	-	-0.97 (1 / 2.91)
- 	Percentile (%)	99.199	-	12.825	-	-	93.283
+ 	Percentile (%)	99.199	-	12.821	-	-	88.37

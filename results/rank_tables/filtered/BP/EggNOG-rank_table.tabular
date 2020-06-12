@@ -1,21 +1,21 @@
 GO Term	Fold Change	EggNOG	MEGAN	MetaGOmics	MPA	Prophane	Unipept
 cellular response to nutrient	FC (WS / NS)	2.77 (5.83 / 0)	-	-	-	-	-
  	Percentile (%)	0.024	-	-	-	-	-
-positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	-	-	-	-	-
- 	Percentile (%)	0.072	-	-	-	-	-
+positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.81 / -0.09)	-	-	-	-	1.93 (2.81 / 0)
+ 	Percentile (%)	0.072	-	-	-	-	1.966
 tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
- 	Percentile (%)	0.096	-	11.658	-	-	-
-carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-	-	-
- 	Percentile (%)	0.143	-	-	-	-	-
+ 	Percentile (%)	0.095	-	11.652	-	-	-
+carbon catabolite regulation of transcription	FC (WS / NS)	2.67 (5.36 / 0)	-	-	-	-	1.37 (1.58 / 0)
+ 	Percentile (%)	0.143	-	-	-	-	5.849
 regulation of nucleocytoplasmic transport	FC (WS / NS)	2.58 (5 / 0)	-	-	-	-	-
  	Percentile (%)	0.167	-	-	-	-	-
-negative regulation of nervous system development	FC (WS / NS)	-3.23 (0 / 8.38)	-	-	-	-	-
- 	Percentile (%)	99.857	-	-	-	-	-
+negative regulation of nervous system development	FC (WS / NS)	-3.23 (0 / 8.38)	-	-	-	-	1 (1 / 0)
+ 	Percentile (%)	99.857	-	-	-	-	10.199
 regulation of cell morphogenesis involved in differentiation	FC (WS / NS)	-3.27 (0 / 8.65)	-	-	-	-	-
- 	Percentile (%)	99.904	-	-	-	-	-
-regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	-
- 	Percentile (%)	99.952	58.241	-	-	-	-
+ 	Percentile (%)	99.905	-	-	-	-	-
+regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	-0.32 (1 / 1.49)
+ 	Percentile (%)	99.952	58.241	-	-	-	75.252
 regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	-	-	-	-	-
  	Percentile (%)	99.976	-	-	-	-	-
-regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	-	-	-	-	-
- 	Percentile (%)	100	-	-	-	-	-
+regulation of cell projection organization	FC (WS / NS)	-3.42 (0 / 9.72)	-	-	-	-	-0.54 (1 / 1.91)
+ 	Percentile (%)	100	-	-	-	-	80.265
