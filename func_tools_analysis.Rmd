@@ -1020,7 +1020,7 @@ get_exclusive <- function(gos){
   sapply(all, function(i){
     other_ind <- all[-i]
     others <- unique(c(unlist(gos[other_ind])))
-    length(setdiff(gos[[i]], others))
+    format(length(setdiff(gos[[i]], others)), big.mark=",")
   })
 }
 create_summary_df <- function(ontology){
@@ -1036,19 +1036,19 @@ create_summary_df <- function(ontology){
   summary_df <- data.frame(
     rbind(c('Proteins', 'eggNOG orthologous groups', 'GO terms',
             'Proteins', 'Protein families, eggNOG orthologous groups', 'GO terms'),
-          sapply(tools, function(tool) {nrow(tool)}),
+          sapply(tools, function(tool) {format(nrow(tool), big.mark=",")}),
           sapply(tools_gos, function(tool) {
-            paste0(length(tool$gos), ' (', length(unique(tool$gos)), ')')
+            paste0(format(length(tool$gos), big.mark=","), ' (', format(length(unique(tool$gos)), big.mark=","), ')')
           }),
           sapply(tools_gos, function(tool) {
             gos <- filter_ontology_df(tool, ontology)$gos
-            paste0(length(gos), ' (', length(unique(gos)), ')')
+            paste0(format(length(gos), big.mark=","), ' (', format(length(unique(gos)), big.mark=","), ')')
           }),
           get_exclusive(sapply(tools_gos, function(tool){
             filter_ontology_df(tool, ontology)$gos
           })),
           sapply(tools_expanded, function(tool){
-            length(filter_ontology_df(tool, ontology)$gos)
+            format(length(filter_ontology_df(tool, ontology)$gos), big.mark=",")
           }),
           get_exclusive(sapply(tools_expanded, function(tool){
             filter_ontology_df(tool, ontology)$gos
