@@ -348,7 +348,7 @@ write_mqome_inputs <- function(df, name, header, col_gos, col_samp1, col_samp2, 
   names(int_df)[1] <- 'peptide'
   func_df <- df[c(header, col_gos)]
   names(func_df) <- c('peptide', 'gos.1')
-  if (name == 'eggnog'){
+  if (name %in% c('eggnog', 'prophane')){
     int_df <- collapse_df(int_df, 'int')
     func_df <- collapse_df(func_df, 'func')
     print(int_df)
