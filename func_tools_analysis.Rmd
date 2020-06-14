@@ -400,7 +400,7 @@ print_mqome_cmds("mpa", "gos.1")
 ```
 
 ```{r}
-import_mqome_output <- function(name, type, folder="full"){
+import_mqome_output <- function(name, type){
   read.delim(paste0("results/mqome/output/", name, "/", name, "_func_", type, ".tab"),
              stringsAsFactors = FALSE) %>%
     rename(gos = id) %>%
@@ -1020,7 +1020,11 @@ get_exclusive <- function(gos){
   sapply(all, function(i){
     other_ind <- all[-i]
     others <- unique(c(unlist(gos[other_ind])))
-    format(length(setdiff(gos[[i]], others)), big.mark=",")
+    go_ex <- setdiff(gos[[i]], others)
+    if (length(go_ex) == 1){
+      print(Term(go_ex))
+    }
+    format(length(go_ex), big.mark=",")
   })
 }
 create_summary_df <- function(ontology){
