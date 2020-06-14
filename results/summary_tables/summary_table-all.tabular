@@ -4,5 +4,5 @@ Total number of annotation groups	18,440	1,665	2,829	23,169	3,999	3,471
 Total (and unique) number of translated GO terms for all ontologies	533,066 (6,155)	76,529 (4,155)	2,829 (2,829)	77,204 (1,056)	189,054 (2,598)	3,471 (3,471)
 Total (and unique) number of translated all GO terms	533,066 (6,155)	76,529 (4,155)	2,829 (2,829)	77,204 (1,056)	189,054 (2,598)	3,471 (3,471)
 Total number of all GO terms exclusive to the tool	2,612	401	485	8	50	901
-Total number of all expanded GO terms	6,443	4,367	3,151	2,133	1,379	6,105
-Total number of all expanded GO terms exclusive to the tool	2,074	315	326	6	6	1,328
+Total number of all expanded GO terms	6,443	4,367	3,151	2,133	2,767	6,105
+Total number of all expanded GO terms exclusive to the tool	2,043	262	325	4	39	1,315
