@@ -1,21 +1,21 @@
 GO Term	Fold Change	Prophane	EggNOG	MEGAN	MetaGOmics	MPA	Unipept
-GTPase activity	FC (WS / NS)	5.74 (0.01 / -0.98)	0.16 (9.08 / 8.01)	-0.02 (14.57 / 14.76)	-	0.04 (23.96 / 23.27)	-0.01 (11.38 / 11.48)
- 	Percentile (%)	0.108	20.625	71.515	-	32.874	62.374
-tetrapyrrole binding	FC (WS / NS)	2.01 (0.43 / -0.64)	-	0.08 (15.14 / 14.31)	-0.07 (10.2 / 10.78)	0 (17.63 / 17.65)	-0.01 (9.53 / 9.6)
- 	Percentile (%)	0.542	-	31.026	62.094	46.081	62.128
-phosphotransferase activity, carboxyl group as acceptor	FC (WS / NS)	1.96 (0.35 / -0.65)	-0.27 (5.32 / 6.61)	0.03 (12.59 / 12.34)	0.03 (9 / 8.83)	-0.01 (17.05 / 17.18)	0.02 (9.64 / 9.46)
- 	Percentile (%)	0.65	66.412	40.99	45.624	48.476	48.562
-intramolecular transferase activity	FC (WS / NS)	1.64 (0.48 / -0.53)	-0.01 (10.98 / 11.09)	0.02 (15.41 / 15.16)	-0.05 (10.4 / 10.83)	0.1 (16.46 / 15.32)	0 (10.87 / 10.85)
- 	Percentile (%)	1.083	56.004	42.227	60.619	24.456	52.617
-tRNA binding	FC (WS / NS)	1.57 (0.92 / -0.35)	-0.02 (6.51 / 6.63)	-0.01 (14.69 / 14.79)	-	-0.01 (19.88 / 20.1)	-0.01 (10.83 / 10.88)
- 	Percentile (%)	1.408	56.959	69.509	-	50.073	61.71
-cobalamin binding	FC (WS / NS)	NaN (-0.48 / -1.51)	-2.27 (0 / 3.81)	0.1 (13.02 / 12.1)	-0.07 (8.93 / 9.4)	0 (17.62 / 17.65)	-0.01 (9.31 / 9.38)
- 	Percentile (%)	98.05	92.815	29.154	61.603	46.154	62.079
-ATPase coupled ion transmembrane transporter activity	FC (WS / NS)	NaN (-1.48 / -0.83)	0.06 (10.88 / 10.43)	0.02 (15.65 / 15.44)	0.01 (11.43 / 11.31)	-0.42 (9.92 / 13.64)	0.06 (8.73 / 8.31)
- 	Percentile (%)	98.808	38.315	44.099	49.656	78.447	42.32
-catalytic activity, acting on a protein	FC (WS / NS)	NaN (-0.92 / -1.77)	-0.01 (11.06 / 11.15)	0.04 (18.29 / 17.78)	0.04 (13.23 / 12.87)	0.02 (17.72 / 17.44)	0.05 (12.14 / 11.74)
- 	Percentile (%)	99.675	55.717	37.847	43.953	38.824	45.146
-catalytic activity, acting on RNA	FC (WS / NS)	NaN (-0.91 / -1.71)	0.01 (12.3 / 12.26)	0 (16.79 / 16.81)	0.02 (13.19 / 12.95)	-0.01 (20 / 20.1)	0.03 (12.23 / 11.97)
- 	Percentile (%)	99.783	46.55	67.001	46.067	47.605	47.923
-catalytic activity, acting on a tRNA	FC (WS / NS)	NaN (-0.95 / -1.77)	0.01 (11.8 / 11.72)	0 (16.49 / 16.53)	0.02 (11.48 / 11.34)	-0.04 (17.38 / 17.92)	0.02 (11.66 / 11.48)
- 	Percentile (%)	99.892	45.978	67.369	48.722	54.935	49.029
+DNA topoisomerase type II (ATP-hydrolyzing) activity	FC (WS / NS)	4.24 (0.75 / -0.91)	0.09 (6.73 / 6.25)	0.03 (9.01 / 8.78)	0.09 (7.06 / 6.58)	0.18 (14.65 / 12.84)	0.06 (7.31 / 6.98)
+ 	Percentile (%)	0.164	34.042	38.95	33.825	16.618	42.861
+glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	3.83 (0.32 / -0.91)	0 (0 / 0)	0.1 (10.19 / 9.46)	0.18 (7.89 / 6.83)	0.02 (14.24 / 13.98)	0.17 (8.02 / 7.01)
+ 	Percentile (%)	0.274	53.235	29.254	23.55	37.881	23.372
+pyridoxamine-phosphate oxidase activity	FC (WS / NS)	3.42 (0 / -0.91)	-	-	-	-1.58 (0 / 2)	-2.32 (0 / 3.99)
+ 	Percentile (%)	0.438	-	-	-	84.761	98.747
+acyl-CoA dehydrogenase activity	FC (WS / NS)	3.42 (0 / -0.91)	-0.69 (1 / 2.23)	-1.01 (4.58 / 10.29)	-	-3.85 (0 / 13.42)	-1.1 (3.58 / 8.81)
+ 	Percentile (%)	0.602	74.982	92.11	-	99.855	89.334
+N6-(1,2-dicarboxyethyl)AMP AMP-lyase (fumarate-forming) activity	FC (WS / NS)	3.42 (0 / -0.91)	0.85 (5.67 / 2.71)	0.12 (5.75 / 5.21)	0.21 (5.88 / 4.95)	-0.13 (11.07 / 12.17)	0.16 (6.19 / 5.43)
+ 	Percentile (%)	0.657	9.835	26.981	21.78	64.514	23.765
+N-acylphosphatidylethanolamine-specific phospholipase D activity	FC (WS / NS)	NaN (-4 / 0)	-	0 (0 / 0)	-	-0.3 (-0.19 / 0)	-0.17 (1.58 / 1.91)
+ 	Percentile (%)	98.028	-	65.898	-	74.456	71.762
+(S)-2-(5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido)succinate AMP-lyase (fumarate-forming) activity	FC (WS / NS)	NaN (-0.54 / -1.58)	-0.93 (0 / 0.91)	0.12 (5.75 / 5.21)	0.21 (5.88 / 4.95)	-0.13 (11.07 / 12.17)	0.16 (6.19 / 5.43)
+ 	Percentile (%)	98.412	81.213	27.081	21.878	64.586	23.79
+FAD binding	FC (WS / NS)	NaN (-4 / 0)	-1.8 (0 / 2.49)	-	-0.3 (6.46 / 8.18)	-1.58 (0 / 2)	0 (4.17 / 4.15)
+ 	Percentile (%)	99.124	90.499	-	76.549	85.341	52.052
+L-glutamine:2-oxoglutarate aminotransferase activity	FC (WS / NS)	NaN (-4 / -0.32)	-	-0.17 (5.04 / 5.78)	-	-	-
+ 	Percentile (%)	99.288	-	81.277	-	-	-
+nitrite reductase activity	FC (WS / NS)	NaN (0 / -2.91)	-	-0.42 (4.52 / 6.41)	-	-	-0.42 (4 / 5.71)
+ 	Percentile (%)	99.562	-	86.894	-	-	78.176

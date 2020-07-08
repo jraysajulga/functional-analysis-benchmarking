@@ -1,21 +1,21 @@
 GO Term	Fold Change	Prophane	EggNOG	MEGAN	MetaGOmics	MPA	Unipept
-dicarboxylic acid metabolic process	FC (WS / NS)	5.58 (-0.04 / -0.98)	0.09 (11.2 / 10.43)	0.01 (16.46 / 16.36)	-0.09 (12.07 / 12.92)	-0.31 (14.44 / 18.09)	-0.06 (9.98 / 10.47)
- 	Percentile (%)	0.145	34.72	50.263	60.711	71.871	64.505
-proton transmembrane transport	FC (WS / NS)	3.94 (-1.74 / -1.05)	0.06 (10 / 9.54)	0.02 (15.16 / 14.95)	0.02 (10.54 / 10.36)	-0.04 (18.71 / 19.27)	0.03 (9.55 / 9.36)
- 	Percentile (%)	0.218	38.429	46.233	46.588	50.727	48.19
-hexose biosynthetic process	FC (WS / NS)	2.52 (-0.6 / -0.93)	-0.12 (8.72 / 9.57)	-0.02 (13.6 / 13.83)	0.02 (11.11 / 10.95)	0.02 (19.07 / 18.78)	0.01 (9.58 / 9.54)
- 	Percentile (%)	0.435	58.203	70.85	47.953	37.693	50.942
-monocarboxylic acid biosynthetic process	FC (WS / NS)	2.06 (0.11 / -0.74)	-0.04 (10.08 / 10.39)	-0.02 (15.37 / 15.62)	0.05 (12.9 / 12.46)	0.07 (16.98 / 16.19)	-0.01 (9.14 / 9.21)
- 	Percentile (%)	0.508	54.99	70.895	42.907	28.504	60.999
-fatty acid metabolic process	FC (WS / NS)	1.94 (0.13 / -0.71)	0 (11.53 / 11.54)	-0.07 (15.4 / 16.25)	-0.15 (11.24 / 12.59)	0.06 (16.98 / 16.26)	-0.03 (9.06 / 9.25)
- 	Percentile (%)	0.725	52.134	75.04	66.582	29.067	62.604
-GTP metabolic process	FC (WS / NS)	NaN (-0.17 / -1.18)	0.16 (9.08 / 8.01)	-0.02 (14.84 / 15.01)	0.25 (8.21 / 6.73)	0.03 (4.72 / 4.58)	0.39 (5.32 / 3.81)
- 	Percentile (%)	99.42	24.709	69.201	19.994	34.646	17.248
-purine ribonucleoside biosynthetic process	FC (WS / NS)	NaN (-0.4 / -1.06)	0.06 (10.26 / 9.82)	0.02 (15.65 / 15.39)	0.07 (10.14 / 9.61)	-0.01 (15.98 / 16.12)	0.04 (8.57 / 8.29)
- 	Percentile (%)	99.492	38.957	44.332	37.195	45.945	45.799
-regulation of RNA metabolic process	FC (WS / NS)	NaN (-0.91 / -1.41)	0 (11.71 / 11.73)	0.01 (18.77 / 18.7)	0.02 (12.52 / 12.35)	0.07 (16.45 / 15.6)	0.03 (10.28 / 10.07)
- 	Percentile (%)	99.565	52.15	51.019	47.985	27.286	47.813
-pyridine-containing compound metabolic process	FC (WS / NS)	NaN (-0.61 / -1.04)	0.14 (10.44 / 9.35)	0.04 (15 / 14.56)	0.04 (14.24 / 13.78)	-0.42 (9.27 / 12.76)	-0.07 (7.45 / 7.84)
- 	Percentile (%)	99.637	25.159	40.646	43.256	75.809	64.57
-guanosine-containing compound catabolic process	FC (WS / NS)	NaN (-0.17 / -1.18)	0.16 (9.08 / 8.01)	-0.02 (14.57 / 14.76)	-	-	-
- 	Percentile (%)	100	24.678	69.613	-	-	-
+toxin metabolic process	FC (WS / NS)	5.22 (2.46 / -0.91)	-0.24 (2.58 / 3.23)	0.65 (3.7 / 2)	-	0.46 (10.11 / 7.06)	0.59 (6.25 / 3.81)
+ 	Percentile (%)	0.036	61.757	14.106	-	11.064	14.169
+peptide antibiotic metabolic process	FC (WS / NS)	5.22 (2.46 / -0.91)	-1.54 (0 / 1.91)	-	-	0.46 (10.11 / 7.06)	1.13 (6.04 / 2.23)
+ 	Percentile (%)	0.072	86.357	-	-	11.252	8.436
+protein localization to endoplasmic reticulum	FC (WS / NS)	4.86 (1.7 / -0.91)	0.15 (7.04 / 6.25)	0.21 (10.08 / 8.58)	0.24 (8.51 / 7.04)	0.37 (10.35 / 7.81)	0.23 (6.7 / 5.55)
+ 	Percentile (%)	0.108	25.004	23.998	20.851	12.611	21.36
+establishment of protein localization to organelle	FC (WS / NS)	4.86 (1.7 / -0.91)	0.03 (7.26 / 7.1)	0.2 (10.38 / 8.94)	0.13 (9.26 / 8.35)	0.37 (10.35 / 7.81)	0.18 (6.71 / 5.79)
+ 	Percentile (%)	0.145	43.179	24.983	28.277	12.658	23.735
+S-adenosylmethionine metabolic process	FC (WS / NS)	4.42 (1 / -0.91)	0 (4.75 / 4.76)	0.06 (9.03 / 8.63)	0.15 (7.71 / 6.83)	0.01 (13.03 / 12.97)	0.2 (6.87 / 5.86)
+ 	Percentile (%)	0.217	52.196	36.684	26.055	39.897	22.572
+regulation of cell motility	FC (WS / NS)	NaN (0 / -2.91)	-3.21 (0 / 8.27)	-2.79 (0 / 5.91)	-0.08 (10.23 / 10.88)	-	0.05 (1.58 / 1.49)
+ 	Percentile (%)	99.855	99.845	99.519	59.473	-	44.062
+D-tagatose 6-phosphate metabolic process	FC (WS / NS)	NaN (-2 / 0)	-	1.04 (6.36 / 2.58)	1.06 (6.49 / 2.58)	2.9 (6.46 / 0)	1.36 (6.44 / 1.91)
+ 	Percentile (%)	99.892	-	8.267	6.95	2.532	6.503
+D-tagatose 6-phosphate catabolic process	FC (WS / NS)	NaN (-3 / 0)	-	1.3 (5.36 / 1.58)	1.33 (5.49 / 1.58)	2.9 (6.46 / 0)	1.36 (6.44 / 1.91)
+ 	Percentile (%)	99.928	-	7.648	5.649	2.579	6.519
+D-glycero-D-manno-heptose 7-phosphate metabolic process	FC (WS / NS)	NaN (-3 / 0)	-	-0.16 (4 / 4.58)	-	2.27 (3.81 / 0)	-0.32 (3 / 3.99)
+ 	Percentile (%)	99.964	-	79.002	-	6.423	74.447
+D-glycero-D-manno-heptose 7-phosphate biosynthetic process	FC (WS / NS)	NaN (-4 / 0)	-	-0.2 (3 / 3.58)	-	2.27 (3.81 / 0)	-0.32 (3 / 3.99)
+ 	Percentile (%)	100	-	80.33	-	6.47	74.464

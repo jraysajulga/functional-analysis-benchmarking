@@ -1,21 +1,21 @@
 GO Term	Fold Change	Prophane	EggNOG	MEGAN	MetaGOmics	MPA	Unipept
-GTPase activity	FC (WS / NS)	5.74 (0.01 / -0.98)	0.16 (9.08 / 8.01)	-0.02 (14.57 / 14.76)	-	0.04 (23.96 / 23.27)	-0.01 (11.38 / 11.48)
- 	Percentile (%)	0.108	20.625	71.515	-	32.874	62.374
-dicarboxylic acid metabolic process	FC (WS / NS)	5.58 (-0.04 / -0.98)	0.09 (11.2 / 10.43)	0.01 (16.46 / 16.36)	-0.09 (12.07 / 12.92)	-0.31 (14.44 / 18.09)	-0.06 (9.98 / 10.47)
- 	Percentile (%)	0.217	33.994	48.88	64.454	75.036	66.134
-proton transmembrane transport	FC (WS / NS)	3.94 (-1.74 / -1.05)	0.06 (10 / 9.54)	0.02 (15.16 / 14.95)	-	-	-
- 	Percentile (%)	0.325	37.598	44.066	-	-	-
-monocarboxylic acid biosynthetic process	FC (WS / NS)	2.06 (0.11 / -0.74)	-0.04 (10.08 / 10.39)	-0.02 (15.37 / 15.62)	0.05 (12.9 / 12.46)	0.07 (16.98 / 16.19)	-0.01 (9.14 / 9.21)
- 	Percentile (%)	0.433	58.367	72.752	42.085	29.1	62.104
-tetrapyrrole binding	FC (WS / NS)	2.01 (0.43 / -0.64)	-	0.08 (15.14 / 14.31)	-0.07 (10.2 / 10.78)	0 (17.63 / 17.65)	-0.01 (9.53 / 9.6)
- 	Percentile (%)	0.542	-	31.026	62.094	46.081	62.128
-membrane protein complex	FC (WS / NS)	NaN (-1.23 / -0.68)	0.05 (11.62 / 11.15)	0.02 (14.75 / 14.52)	-0.04 (12.78 / 13.19)	-0.05 (18.88 / 19.56)	-0.03 (10.35 / 10.61)
- 	Percentile (%)	99.567	38.601	42.862	59.587	57.112	64.414
-catalytic activity, acting on a protein	FC (WS / NS)	NaN (-0.92 / -1.77)	-0.01 (11.06 / 11.15)	0.04 (18.29 / 17.78)	0.04 (13.23 / 12.87)	0.02 (17.72 / 17.44)	0.05 (12.14 / 11.74)
- 	Percentile (%)	99.675	55.717	37.847	43.953	38.824	45.146
-catalytic activity, acting on RNA	FC (WS / NS)	NaN (-0.91 / -1.71)	0.01 (12.3 / 12.26)	0 (16.79 / 16.81)	0.02 (13.19 / 12.95)	-0.01 (20 / 20.1)	0.03 (12.23 / 11.97)
- 	Percentile (%)	99.783	46.55	67.001	46.067	47.605	47.923
-catalytic activity, acting on a tRNA	FC (WS / NS)	NaN (-0.95 / -1.77)	0.01 (11.8 / 11.72)	0 (16.49 / 16.53)	0.02 (11.48 / 11.34)	-0.04 (17.38 / 17.92)	0.02 (11.66 / 11.48)
- 	Percentile (%)	99.892	45.978	67.369	48.722	54.935	49.029
-guanosine-containing compound catabolic process	FC (WS / NS)	NaN (-0.17 / -1.18)	-	-0.02 (14.57 / 14.76)	-	-	-
- 	Percentile (%)	100	-	71.548	-	-	-
+toxin metabolic process	FC (WS / NS)	5.22 (2.46 / -0.91)	-0.24 (2.58 / 3.23)	0.65 (3.7 / 2)	-	0.46 (10.11 / 7.06)	0.59 (6.25 / 3.81)
+ 	Percentile (%)	0.055	65.911	12.27	-	11.103	13.541
+peptide antibiotic metabolic process	FC (WS / NS)	5.22 (2.46 / -0.91)	-1.54 (0 / 1.91)	-	-	0.46 (10.11 / 7.06)	1.13 (6.04 / 2.23)
+ 	Percentile (%)	0.11	87.563	-	-	11.321	8.11
+DNA topoisomerase type II (ATP-hydrolyzing) activity	FC (WS / NS)	4.24 (0.75 / -0.91)	0.09 (6.73 / 6.25)	0.03 (9.01 / 8.78)	0.09 (7.06 / 6.58)	0.18 (14.65 / 12.84)	0.06 (7.31 / 6.98)
+ 	Percentile (%)	0.164	34.042	38.95	33.825	16.618	42.861
+'de novo' IMP biosynthetic process	FC (WS / NS)	3.83 (-2.42 / -1.1)	-2.32 (0 / 3.99)	-0.02 (10.2 / 10.32)	-	-0.18 (11.79 / 13.53)	0.01 (7.49 / 7.41)
+ 	Percentile (%)	0.219	93.029	71.013	-	68.505	50.16
+glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity	FC (WS / NS)	3.83 (0.32 / -0.91)	0 (0 / 0)	0.1 (10.19 / 9.46)	0.18 (7.89 / 6.83)	0.02 (14.24 / 13.98)	0.17 (8.02 / 7.01)
+ 	Percentile (%)	0.274	53.235	29.254	23.55	37.881	23.372
+iron coordination entity transport	FC (WS / NS)	NaN (-1.68 / 0)	-	-0.15 (6.75 / 7.61)	-	-	-
+ 	Percentile (%)	99.781	-	80.575	-	-	-
+response to nitrogen compound	FC (WS / NS)	NaN (0 / -1.32)	0.35 (7.09 / 5.33)	-	-0.04 (10.34 / 10.68)	-	-0.27 (2.81 / 3.61)
+ 	Percentile (%)	99.836	15.588	-	59.735	-	74.269
+primosome complex	FC (WS / NS)	NaN (-4 / 0)	-	1 (1 / 0)	0.44 (5.36 / 3.7)	0.36 (6.59 / 4.91)	0.11 (5.21 / 4.76)
+ 	Percentile (%)	99.89	-	10.398	13.127	12.119	38.142
+D-tagatose 6-phosphate catabolic process	FC (WS / NS)	NaN (-3 / 0)	-	1.3 (5.36 / 1.58)	1.33 (5.49 / 1.58)	2.9 (6.46 / 0)	1.36 (6.44 / 1.91)
+ 	Percentile (%)	99.945	-	6.854	6.342	2.467	6.39
+D-glycero-D-manno-heptose 7-phosphate biosynthetic process	FC (WS / NS)	NaN (-4 / 0)	-	-0.2 (3 / 3.58)	-	2.27 (3.81 / 0)	-0.32 (3 / 3.99)
+ 	Percentile (%)	100	-	82.347	-	6.241	76.382

@@ -7,12 +7,12 @@ positive regulation of transcription by RNA polymerase II	FC (WS / NS)	2.68 (4.8
  	Percentile (%)	0.072	-	-	-	-	1.966
 tRNA wobble position uridine thiolation	FC (WS / NS)	2.68 (5.39 / 0)	-	0.56 (5.13 / 3.17)	-	-	-
  	Percentile (%)	0.095	-	11.652	-	-	-
-tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	-	-0.93 (0 / 0.91)
- 	Percentile (%)	0.119	8.225	-	85.704	-	84.247
+tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity	FC (WS / NS)	2.68 (5.39 / 0)	1 (1 / 0)	-	-1.84 (0 / 2.58)	NaN (0 / -2.32)	-0.93 (0 / 0.91)
+ 	Percentile (%)	0.119	8.225	-	85.704	71.139	84.247
 regulation of cell morphogenesis involved in differentiation	FC (WS / NS)	-3.27 (0 / 8.65)	-	-	-	-	-
  	Percentile (%)	99.905	-	-	-	-	-
-peptidase regulator activity	FC (WS / NS)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.72 (2 / 8.88)	-1.15 (5.37 / 13.11)	-	-0.34 (5.49 / 7.2)
- 	Percentile (%)	99.928	95.219	90.315	83.599	-	76.8
+peptidase regulator activity	FC (WS / NS)	-3.27 (0 / 8.68)	-1.73 (0 / 2.32)	-1.72 (2 / 8.88)	-1.15 (5.37 / 13.11)	NaN (-1.68 / -0.32)	-0.34 (5.49 / 7.2)
+ 	Percentile (%)	99.928	95.219	90.315	83.599	97.481	76.8
 regulation of neuron projection development	FC (WS / NS)	-3.38 (0 / 9.4)	0 (0 / 0)	-	-	-	-0.32 (1 / 1.49)
  	Percentile (%)	99.952	58.241	-	-	-	75.252
 regulation of plasma membrane bounded cell projection organization	FC (WS / NS)	-3.39 (0 / 9.47)	-	-	-	-	-

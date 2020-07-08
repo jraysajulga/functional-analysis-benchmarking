@@ -9,12 +9,12 @@ succinate dehydrogenase complex (ubiquinone)	FC (WS / NS)	2 (3 / 0)	-	-	-	-	-
  	Percentile (%)	1.769	-	-	-	-	-
 fumarate reductase complex	FC (WS / NS)	2 (3 / 0)	-	-0.76 (3.81 / 7.16)	-	-	-
  	Percentile (%)	1.785	-	82.513	-	-	-
-dihydrolipoyl dehydrogenase complex	FC (WS / NS)	-2.68 (0 / 5.4)	-0.01 (6.21 / 6.25)	-1.35 (2 / 6.64)	-3.22 (0 / 8.34)	-	-2.32 (0 / 3.99)
- 	Percentile (%)	96.989	67.094	87.655	94.046	-	98.771
-tricarboxylic acid cycle enzyme complex	FC (WS / NS)	-2.78 (0 / 5.86)	-0.11 (7.34 / 7.99)	-0.85 (4 / 8)	-0.31 (9.7 / 12.29)	-	-0.5 (4.17 / 6.31)
- 	Percentile (%)	97.346	76.872	83.212	72.011	-	77.625
-cell-substrate junction	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	0.05 (1.58 / 1.49)
- 	Percentile (%)	97.625	-	-	-	-	44.275
+dihydrolipoyl dehydrogenase complex	FC (WS / NS)	-2.68 (0 / 5.4)	-0.01 (6.21 / 6.25)	-1.35 (2 / 6.64)	-3.22 (0 / 8.34)	NaN (0 / -1.91)	-2.32 (0 / 3.99)
+ 	Percentile (%)	96.989	67.094	87.655	94.046	91.146	98.771
+tricarboxylic acid cycle enzyme complex	FC (WS / NS)	-2.78 (0 / 5.86)	-0.11 (7.34 / 7.99)	-0.85 (4 / 8)	-0.31 (9.7 / 12.29)	NaN (0 / -1.1)	-0.5 (4.17 / 6.31)
+ 	Percentile (%)	97.346	76.872	83.212	72.011	91.11	77.625
+cell-substrate junction	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	NaN (-3 / 0)	0.05 (1.58 / 1.49)
+ 	Percentile (%)	97.625	-	-	-	84.604	44.275
 growth cone	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	-0.93 (0 / 0.91)
  	Percentile (%)	97.641	-	-	-	-	85.209
 neuron projection terminus	FC (WS / NS)	-2.81 (0 / 6.03)	-	-	-	-	-

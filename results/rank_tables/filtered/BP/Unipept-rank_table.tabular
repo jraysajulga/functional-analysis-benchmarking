@@ -13,9 +13,9 @@ dipeptide transport	FC (WS / NS)	-2.39 (0 / 4.23)	-1.32 (0 / 1.49)	-	-	-2.79 (0 
  	Percentile (%)	98.943	85.796	-	-	89.623	-
 p-aminobenzoyl-glutamate transmembrane transport	FC (WS / NS)	-2.39 (0 / 4.23)	-	-	-2.32 (0 / 4)	-2.79 (0 / 5.91)	-
  	Percentile (%)	98.968	-	-	93.805	89.695	-
-dUMP biosynthetic process	FC (WS / NS)	-2.41 (0 / 4.3)	-	0.07 (5 / 4.7)	-	-3.26 (0 / 8.55)	-
- 	Percentile (%)	98.992	-	31.361	-	94.702	-
-proline catabolic process to glutamate	FC (WS / NS)	-2.51 (0 / 4.71)	-2.37 (0 / 4.15)	-2.47 (0 / 4.52)	-2.47 (0 / 4.52)	-3.51 (0 / 10.37)	-
- 	Percentile (%)	99.164	93.244	98.696	96.116	97.968	-
-L-lysine catabolic process to acetate	FC (WS / NS)	-3.02 (0 / 7.09)	-	-	-3.36 (0 / 9.29)	-3.78 (0 / 12.75)	-
- 	Percentile (%)	99.803	-	-	99.951	99.274	-
+dUMP biosynthetic process	FC (WS / NS)	-2.41 (0 / 4.3)	-	0.07 (5 / 4.7)	-	-3.26 (0 / 8.55)	NaN (0 / -2.91)
+ 	Percentile (%)	98.992	-	31.361	-	94.702	74.315
+proline catabolic process to glutamate	FC (WS / NS)	-2.51 (0 / 4.71)	-2.37 (0 / 4.15)	-2.47 (0 / 4.52)	-2.47 (0 / 4.52)	-3.51 (0 / 10.37)	NaN (-3 / 0.09)
+ 	Percentile (%)	99.164	93.244	98.696	96.116	97.968	82.037
+L-lysine catabolic process to acetate	FC (WS / NS)	-3.02 (0 / 7.09)	-	-	-3.36 (0 / 9.29)	-3.78 (0 / 12.75)	-0.96 (0 / 0.95)
+ 	Percentile (%)	99.803	-	-	99.951	99.274	57.996

@@ -9,13 +9,13 @@ SUMO ligase complex	FC (WS / NS)	1.88 (2.32 / -0.09)	-	0.14 (4.17 / 3.7)	-	-	-
  	Percentile (%)	2.08	-	28.418	-	-	-
 voltage-gated sodium channel complex	FC (WS / NS)	1.84 (2.58 / 0)	0.14 (0 / -0.09)	-	-	-	-
  	Percentile (%)	2.113	25.547	-	-	-	-
-collagen-containing extracellular matrix	FC (WS / NS)	-2.24 (0 / 3.71)	0.3 (5.75 / 4.49)	-	0.21 (6.87 / 5.78)	-	-
- 	Percentile (%)	98.395	20.472	-	22.723	-	-
-cytoplasmic vesicle	FC (WS / NS)	-2.29 (0 / 3.91)	-0.06 (7.84 / 8.19)	-0.88 (2.58 / 5.58)	0.27 (7.37 / 5.93)	-	-
- 	Percentile (%)	98.575	55.828	87.841	19.137	-	-
-intracellular vesicle	FC (WS / NS)	-2.29 (0 / 3.91)	-0.04 (8.24 / 8.53)	-0.91 (2.58 / 5.75)	0.24 (7.74 / 6.41)	-	-
- 	Percentile (%)	98.591	55.238	87.955	21.104	-	-
-dihydrolipoyl dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-2.68 (0 / 5.4)	-0.01 (6.21 / 6.25)	-1.35 (2 / 6.64)	-3.22 (0 / 8.34)	-
- 	Percentile (%)	98.771	96.989	67.094	87.655	94.046	-
-oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-2.51 (0 / 4.71)	-0.01 (5.21 / 5.25)	-1.73 (1 / 5.64)	-3.22 (0 / 8.34)	-
- 	Percentile (%)	98.788	93.73	67.438	89.432	94.093	-
+collagen-containing extracellular matrix	FC (WS / NS)	-2.24 (0 / 3.71)	0.3 (5.75 / 4.49)	-	0.21 (6.87 / 5.78)	-	NaN (0 / -2.32)
+ 	Percentile (%)	98.395	20.472	-	22.723	-	96.097
+cytoplasmic vesicle	FC (WS / NS)	-2.29 (0 / 3.91)	-0.06 (7.84 / 8.19)	-0.88 (2.58 / 5.58)	0.27 (7.37 / 5.93)	-	NaN (0 / -3.91)
+ 	Percentile (%)	98.575	55.828	87.841	19.137	-	85.616
+intracellular vesicle	FC (WS / NS)	-2.29 (0 / 3.91)	-0.04 (8.24 / 8.53)	-0.91 (2.58 / 5.75)	0.24 (7.74 / 6.41)	-	NaN (0 / -3.91)
+ 	Percentile (%)	98.591	55.238	87.955	21.104	-	98.338
+dihydrolipoyl dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-2.68 (0 / 5.4)	-0.01 (6.21 / 6.25)	-1.35 (2 / 6.64)	-3.22 (0 / 8.34)	NaN (0 / -1.91)
+ 	Percentile (%)	98.771	96.989	67.094	87.655	94.046	91.146
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-2.51 (0 / 4.71)	-0.01 (5.21 / 5.25)	-1.73 (1 / 5.64)	-3.22 (0 / 8.34)	NaN (0 / -2.91)
+ 	Percentile (%)	98.788	93.73	67.438	89.432	94.093	91.182

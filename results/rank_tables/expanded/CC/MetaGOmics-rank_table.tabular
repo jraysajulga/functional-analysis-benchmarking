@@ -1,21 +1,21 @@
 GO Term	Fold Change	MetaGOmics	EggNOG	MEGAN	MPA	Prophane	Unipept
 anchored component of membrane	FC (WS / NS)	2.06 (3.17 / 0)	-0.58 (2 / 3.49)	-	-	-	0.14 (0 / -0.09)
  	Percentile (%)	3.618	69.998	-	-	-	31.4
-Gram-negative-bacterium-type cell wall	FC (WS / NS)	2 (3 / 0)	-0.23 (6.09 / 7.34)	-0.03 (7.7 / 7.86)	-3.03 (0 / 7.17)	-	-1.08 (1 / 3.23)
- 	Percentile (%)	3.84	61.648	71.468	92.03	-	88.796
+Gram-negative-bacterium-type cell wall	FC (WS / NS)	2 (3 / 0)	-0.23 (6.09 / 7.34)	-0.03 (7.7 / 7.86)	-3.03 (0 / 7.17)	0.05 (-4 / -3.91)	-1.08 (1 / 3.23)
+ 	Percentile (%)	3.84	61.648	71.468	92.03	34.803	88.796
 tertiary granule lumen	FC (WS / NS)	1.93 (2.81 / 0)	-	-	-	-	-
  	Percentile (%)	4.443	-	-	-	-	-
 anaerobic ribonucleoside-triphosphate reductase complex	FC (WS / NS)	1.66 (5.32 / 1)	0.24 (5.43 / 4.43)	-	-	-	-
  	Percentile (%)	4.665	22.35	-	-	-	-
-septin ring	FC (WS / NS)	1.23 (6.02 / 2)	1 (1 / 0)	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	-	0.76 (6.15 / 3.23)
- 	Percentile (%)	6.189	8.459	8.038	1.969	-	12.318
-formate dehydrogenase complex	FC (WS / NS)	-2.61 (0 / 5.09)	-2.5 (0 / 4.66)	-	-	-	-
- 	Percentile (%)	96.604	93.637	-	-	-	-
+septin ring	FC (WS / NS)	1.23 (6.02 / 2)	1 (1 / 0)	1.09 (6.09 / 2.32)	3.08 (7.46 / 0)	NaN (-1.68 / 0)	0.76 (6.15 / 3.23)
+ 	Percentile (%)	6.189	8.459	8.038	1.969	70.51	12.318
+formate dehydrogenase complex	FC (WS / NS)	-2.61 (0 / 5.09)	-2.5 (0 / 4.66)	-	-	NaN (0 / -1.91)	-
+ 	Percentile (%)	96.604	93.637	-	-	77.412	-
 succinate-CoA ligase complex	FC (WS / NS)	-2.61 (0 / 5.09)	-	-	-	-	-
  	Percentile (%)	96.699	-	-	-	-	-
 spindle	FC (WS / NS)	-2.63 (0 / 5.17)	-0.1 (3.81 / 4.15)	0 (0 / 0)	-	-	-
  	Percentile (%)	96.826	57.194	55.141	-	-	-
-virion part	FC (WS / NS)	-2.68 (0 / 5.39)	-2.08 (0 / 3.23)	-	-	-	-0.1 (5.32 / 5.79)
- 	Percentile (%)	97.271	91.557	-	-	-	66.83
+virion part	FC (WS / NS)	-2.68 (0 / 5.39)	-2.08 (0 / 3.23)	-	-	NaN (0 / -2.91)	-0.1 (5.32 / 5.79)
+ 	Percentile (%)	97.271	91.557	-	-	90.712	66.83
 nuclear body	FC (WS / NS)	-2.76 (0 / 5.75)	-1.8 (0 / 2.49)	-2.2 (0 / 3.58)	-	-	-0.97 (1 / 2.91)
  	Percentile (%)	98.381	89.586	97.183	-	-	88.501

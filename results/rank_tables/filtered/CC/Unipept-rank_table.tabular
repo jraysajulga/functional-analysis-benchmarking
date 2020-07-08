@@ -9,13 +9,13 @@ photosystem II oxygen evolving complex	FC (WS / NS)	1.84 (2.58 / 0)	-	-	-	-	-
  	Percentile (%)	2.286	-	-	-	-	-
 hemoglobin complex	FC (WS / NS)	1.73 (2.32 / 0)	1.73 (2.32 / 0)	-0.09 (2.58 / 2.81)	-	-	-
  	Percentile (%)	2.728	2.889	77.499	-	-	-
-cytosolic small ribosomal subunit	FC (WS / NS)	-2.17 (0 / 3.49)	0 (10.41 / 10.44)	0.02 (8.11 / 7.98)	-0.12 (9.34 / 10.28)	-1.38 (2.4 / 7.87)	-
- 	Percentile (%)	98.058	55.24	43.096	68.535	84.398	-
+cytosolic small ribosomal subunit	FC (WS / NS)	-2.17 (0 / 3.49)	0 (10.41 / 10.44)	0.02 (8.11 / 7.98)	-0.12 (9.34 / 10.28)	-1.38 (2.4 / 7.87)	NaN (-0.54 / -1.58)
+ 	Percentile (%)	98.058	55.24	43.096	68.535	84.398	86.966
 nuclear pore	FC (WS / NS)	-2.2 (0 / 3.61)	1 (2.81 / 0.91)	-1 (0 / 1)	-	-	-
  	Percentile (%)	98.157	9.382	90.806	-	-	-
 bacterial-type flagellum hook	FC (WS / NS)	-2.2 (0 / 3.61)	-	0 (0 / 0)	-	-	-
  	Percentile (%)	98.206	-	57.84	-	-	-
-basement membrane	FC (WS / NS)	-2.24 (0 / 3.71)	0.34 (5.73 / 4.3)	-	0.39 (5.78 / 4.17)	-	-
- 	Percentile (%)	98.427	15.636	-	14.356	-	-
-oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-	-0.01 (5.21 / 5.25)	-	-3.22 (0 / 8.34)	-
- 	Percentile (%)	98.82	-	69.442	-	94.412	-
+basement membrane	FC (WS / NS)	-2.24 (0 / 3.71)	0.34 (5.73 / 4.3)	-	0.39 (5.78 / 4.17)	-	NaN (0 / -2.91)
+ 	Percentile (%)	98.427	15.636	-	14.356	-	72.673
+oxoglutarate dehydrogenase complex	FC (WS / NS)	-2.32 (0 / 3.99)	-	-0.01 (5.21 / 5.25)	-	-3.22 (0 / 8.34)	NaN (0 / -2.91)
+ 	Percentile (%)	98.82	-	69.442	-	94.412	92.826

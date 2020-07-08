@@ -3,19 +3,19 @@ peptide deformylase activity	FC (WS / NS)	2.71 (5.52 / 0)	0.14 (0 / -0.09)	2.73 
  	Percentile (%)	0.092	30.126	0.349	-	-	0.033
 beta-fructofuranosidase activity	FC (WS / NS)	2.66 (5.32 / 0)	-	2.5 (4.64 / 0)	-	-	2.65 (4.7 / -0.09)
  	Percentile (%)	0.114	-	1.047	-	-	0.197
-solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-1.8 (0 / 2.49)	-	1.49 (1.81 / 0)	-	-0.07 (3.17 / 3.36)
- 	Percentile (%)	0.183	89.151	-	7.736	-	64.668
+solute:cation antiporter activity	FC (WS / NS)	2.6 (5.04 / 0)	-1.8 (0 / 2.49)	-	1.49 (1.81 / 0)	NaN (-1.42 / 0)	-0.07 (3.17 / 3.36)
+ 	Percentile (%)	0.183	89.151	-	7.736	79.183	64.668
 ether hydrolase activity	FC (WS / NS)	2.6 (5.04 / 0)	-	-	-	-	-0.93 (0 / 0.91)
  	Percentile (%)	0.206	-	-	-	-	84.767
 2-isopropylmalate synthase activity	FC (WS / NS)	2.56 (4.91 / 0)	-	2.61 (5.09 / 0)	-	-	2.71 (5.52 / 0)
  	Percentile (%)	0.229	-	0.666	-	-	0.147
-acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.26 (0 / 8.58)	-3.24 (0 / 8.47)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-	-3.25 (0 / 8.53)
- 	Percentile (%)	99.817	99.876	99.873	99.766	-	99.984
-acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.4 (0 / 9.58)	-3.39 (0 / 9.47)	-3.37 (0 / 9.37)	-3.84 (0 / 13.33)	-	-3.36 (0 / 9.25)
- 	Percentile (%)	99.84	99.984	99.937	99.812	-	100
-3-oxoacid CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.01 (0 / 7.04)	-	-	-	-0.93 (0 / 0.91)
- 	Percentile (%)	99.863	99.208	-	-	-	84.046
-acetate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	0.16 (8.02 / 7.1)	-2.98 (0 / 6.89)	-	-	-2.66 (0 / 5.33)
- 	Percentile (%)	99.886	24.771	99.334	-	-	99.476
-3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.05 (0 / 7.3)	-	-1.93 (0 / 2.81)	-	-0.93 (0 / 0.91)
- 	Percentile (%)	99.931	99.395	-	84.716	-	86.536
+acetyl-CoA C-acetyltransferase activity	FC (WS / NS)	-3.26 (0 / 8.58)	-3.24 (0 / 8.47)	-3.23 (0 / 8.37)	-3.84 (0 / 13.32)	-2.11 (0 / 3.3)	-3.25 (0 / 8.53)
+ 	Percentile (%)	99.817	99.876	99.873	99.766	59.053	99.984
+acetyl-CoA C-acyltransferase activity	FC (WS / NS)	-3.4 (0 / 9.58)	-3.39 (0 / 9.47)	-3.37 (0 / 9.37)	-3.84 (0 / 13.33)	-2.29 (0 / 3.89)	-3.36 (0 / 9.25)
+ 	Percentile (%)	99.84	99.984	99.937	99.812	59.74	100
+3-oxoacid CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.01 (0 / 7.04)	-	-	-1.15 (0 / 1.22)	-0.93 (0 / 0.91)
+ 	Percentile (%)	99.863	99.208	-	-	56.162	84.046
+acetate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	0.16 (8.02 / 7.1)	-2.98 (0 / 6.89)	-	-1.15 (0 / 1.22)	-2.66 (0 / 5.33)
+ 	Percentile (%)	99.886	24.771	99.334	-	56.198	99.476
+3-oxoadipate CoA-transferase activity	FC (WS / NS)	-3.51 (0 / 10.37)	-3.05 (0 / 7.3)	-	-1.93 (0 / 2.81)	-1.15 (0 / 1.22)	-0.93 (0 / 0.91)
+ 	Percentile (%)	99.931	99.395	-	84.716	56.27	86.536
